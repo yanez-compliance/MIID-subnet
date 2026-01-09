@@ -100,6 +100,19 @@
         .spec-table tr:nth-child(even) {
             background-color: #f8f9fa;
         }
+        .diagram-title {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: 600;
+            border-bottom: 2px solid #e0e7ff;
+            padding-bottom: 8px;
+        }
+        .description h4 {
+            color: #4f46e5;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            border-bottom: 1px solid #e0e7ff;
+            padding-bottom: 5px;
+        }
     </style>
 </head>
 <body>
@@ -109,6 +122,7 @@
 
         <div class="toggle-buttons">
             <button id="overviewBtn" class="toggle-btn active" onclick="showOverview()">Overview</button>
+            <button id="architectureBtn" class="toggle-btn" onclick="showArchitecture()">Architecture</button>
             <button id="sandboxBtn" class="toggle-btn" onclick="showSandbox()">Sandbox</button>
             <button id="detailedBtn" class="toggle-btn" onclick="showDetailed()">Detailed Flow</button>
             <button id="protocolBtn" class="toggle-btn" onclick="showProtocol()">Protocol</button>
@@ -149,6 +163,117 @@ flowchart LR
     style S3UP fill:#fef3c7,stroke:#f59e0b
     style PV fill:#d1fae5,stroke:#10b981
     style REP fill:#d1fae5,stroke:#10b981
+        </div>
+
+        <!-- Architecture Diagram (End-to-End + Timeline) -->
+        <h4 id="archTitle1" class="diagram-title" style="display: none; text-align: center; color: #6366f1; margin-bottom: 10px;">Figure 1: End-to-End Architecture (Validator → Miner → Storage → Post-Validation)</h4>
+        <div id="architectureDiagram" class="mermaid" style="display: none;">
+flowchart TB
+    subgraph Validator["Validator (Online)"]
+        V1["Build Challenge:<br/>• Identities (name, DOB, address)<br/>• base_image + image_filename<br/>• variation_requests[] (type + intensity)<br/>• target_drand_round + reveal_timestamp"]
+        V2["Receive Responses:<br/>• Name/DOB/Address variations<br/>• s3_submissions[]"]
+        Vx["Online checks only:<br/>no download/decrypt/score images"]
+        V3["KAV Scoring (Online):<br/>• Phonetic/orthographic similarity<br/>• Rule compliance<br/>• Cheat detection<br/>• Address validation via LDS v1"]
+        V4["Get Previous Cycle Reputation<br/>(from post-validation)"]
+        V5["Calculate Online Weight:<br/>KAV + prev-cycle reputation"]
+        V6["SET WEIGHTS<br/>ON-CHAIN"]
+        V7["Store submission refs<br/>for YANEZ"]
+    end
+
+    subgraph Miner["Miner"]
+        M1["Generate KAV Variations:<br/>• Name <br/>• DOB<br/>• Address"]
+        M1b["Generate UAV:<br/>Unknown Attack Vectors"]
+        M2["Generate Image Variations<br/>(2-4 types × intensity)"]
+        M3["Hash + Sign images<br/>with wallet"]
+        M4["Encrypt images with<br/>drand timelock"]
+        M5["Commit metadata:<br/>• s3_key<br/>• image_hash<br/>• signature<br/>• path_signature<br/>• variation_type"]
+        M6["Return Response:<br/>KAV + UAV + s3_submissions[]"]
+    end
+
+    S3[("S3 Storage<br/>(yanez-miid-sn54)")]
+    DR["Drand beacon<br/>(timelock reveal)"]
+
+    subgraph PostVal["YANEZ Post-Validation (Offline)"]
+        P0["After reveal window<br/>(~1 epoch)"]
+        P1["Download from S3"]
+        P2["Decrypt batch<br/>(after drand reveal)"]
+        P3["Verify signature +<br/>hash + path_signature"]
+        P4["Image Scoring:<br/>• Face match <br/>• Type/intensity compliance<br/>• Quality + anti-cheat"]
+        P4b["UAV Validation:<br/>• Duplicate/recycling check<br/>• LDS v1 validation (API)<br/>• Semantic noise filter"]
+        P6["Update Reputation<br/>for NEXT cycle"]
+    end
+
+    V1 -->|"IdentitySynapse"| Miner
+    M1 --> M6
+    M1b --> M6
+    M2 --> M3 --> M4 -->|"Upload encrypted<br/>images"| S3
+    M4 --> M5 -->|"refs"| M6
+    M6 --> V2 --> Vx --> V3 --> V4 --> V5 --> V6
+    V2 --> V7
+
+    S3 -.->|"After reveal"| P0
+    DR -.-> P2
+    P0 --> P1 --> P2 --> P3 --> P4 --> P6
+    V7 -.->|"Stored UAV submissions"| P4b
+    P4b --> P6
+    P6 -.->|"Used in<br/>NEXT cycle"| V4
+
+    style V1 fill:#e0e7ff,stroke:#6366f1
+    style V2 fill:#e0e7ff,stroke:#6366f1
+    style Vx fill:#fef9c3,stroke:#ca8a04
+    style V3 fill:#fee2e2,stroke:#ef4444
+    style V4 fill:#fce7f3,stroke:#ec4899
+    style V5 fill:#fee2e2,stroke:#ef4444
+    style V6 fill:#fee2e2,stroke:#ef4444
+    style V7 fill:#e0e7ff,stroke:#6366f1
+    style M1 fill:#fef3c7,stroke:#f59e0b
+    style M1b fill:#fce7f3,stroke:#ec4899
+    style M2 fill:#fef3c7,stroke:#f59e0b
+    style M3 fill:#fef3c7,stroke:#f59e0b
+    style M4 fill:#fef3c7,stroke:#f59e0b
+    style M5 fill:#fef3c7,stroke:#f59e0b
+    style M6 fill:#fef3c7,stroke:#f59e0b
+    style S3 fill:#f0fdf4,stroke:#22c55e
+    style DR fill:#dbeafe,stroke:#3b82f6
+    style P0 fill:#dbeafe,stroke:#3b82f6
+    style P1 fill:#d1fae5,stroke:#10b981
+    style P2 fill:#d1fae5,stroke:#10b981
+    style P3 fill:#d1fae5,stroke:#10b981
+    style P4 fill:#d1fae5,stroke:#10b981
+    style P4b fill:#fce7f3,stroke:#ec4899
+    style P6 fill:#d1fae5,stroke:#10b981
+        </div>
+
+        <!-- Compact Architecture Diagram -->
+        <h4 id="archTitle2" class="diagram-title" style="display: none; text-align: center; color: #6366f1; margin-top: 40px; margin-bottom: 10px;">Figure 2: Compact End-to-End Flow</h4>
+        <div id="compactDiagram" class="mermaid" style="display: none;">
+flowchart LR
+    subgraph Online["ONLINE (Immediate)"]
+        V["Validator:<br/>Challenge"]
+        M["Miner:<br/>KAV + UAV + Images"]
+        S["KAV+UAV Score<br/>→ SET WEIGHTS"]
+    end
+
+    subgraph Offline["OFFLINE (After ~72 min)"]
+        I["Images:<br/>S3 → Decrypt →<br/>Face Score"]
+        U["UAV:<br/>JSON → Geo/Dup<br/>Validation"]
+        R["Update Reputation<br/>(Next Cycle)"]
+    end
+
+    V -->|"Synapse"| M
+    M -->|"Response"| S
+    S -.->|"S3 refs"| I
+    S -.->|"UAV data"| U
+    I --> R
+    U --> R
+    R -.->|"Feeds next"| S
+
+    style V fill:#e0e7ff,stroke:#6366f1
+    style M fill:#fef3c7,stroke:#f59e0b
+    style S fill:#fee2e2,stroke:#ef4444
+    style I fill:#d1fae5,stroke:#10b981
+    style U fill:#fce7f3,stroke:#ec4899
+    style R fill:#d1fae5,stroke:#10b981
         </div>
 
         <!-- Sandbox Diagram -->
@@ -257,7 +382,7 @@ flowchart TB
         DOWNLOAD["Download from S3"]
         DECRYPT["Decrypt with<br/>Drand Beacon"]
         VERIFY["Verify Signature"]
-        FACE["Face Matching<br/>(ArcFace >= 0.8)"]
+        FACE["Face Matching<br/>"]
         QUALITY["Quality Check"]
         CHEAT["Cheat Detection"]
     end
@@ -432,7 +557,7 @@ sequenceDiagram
     PV->>PV: Verify signatures + path_signature
 
     loop For each submission
-        PV->>PV: Face match (ArcFace >= 0.8)
+        PV->>PV: Face match 
         PV->>PV: Variation type compliance
         PV->>PV: Intensity compliance (light/medium/far)
         PV->>PV: Quality assessment
@@ -576,7 +701,7 @@ sequenceDiagram
     PV->>PV: Decrypt with drand beacon
     PV->>PV: verify_message(signature, hotkey)
     alt Valid
-        PV->>PV: Face matching (ArcFace)
+        PV->>PV: Face matching 
         PV->>PV: Type + intensity compliance
     else Invalid
         PV->>PV: Reject submission
@@ -665,6 +790,77 @@ flowchart LR
                 <li><strong>Post-Validation (After ~72 min = 1 Bittensor epoch):</strong> YANEZ decrypts images → Face matching, type/intensity compliance, quality, cheat detection → Update reputation for NEXT cycle</li>
             </ul>
             <p><strong>Key Security Features:</strong> <code>path_signature</code> prevents miners from overwriting others' submissions; drand timelock ensures fair reveal.</p>
+        </div>
+
+        <div id="architectureDesc" class="description" style="display: none;">
+            <h3>4.2 Phase 4 System Architecture and Data Flow</h3>
+            <p>Phase 4 adds a face-variation channel to MIID while preserving the subnet's core operating model from prior phases: <strong>validators stay lightweight and fast</strong>, and <strong>ground truth is established later via post-validation</strong>. The result is a pipeline that can run at subnet speed without turning validators into heavy image-processing nodes.</p>
+
+            <p>At a high level, Phase 4 introduces a new <strong>"commit → store → truth"</strong> loop:</p>
+            <ul>
+                <li><strong>Commit (online, fast):</strong> Validators issue constrained requests; miners generate and commit outputs using integrity primitives; validators only verify submission integrity and continue normal online scoring behavior.</li>
+                <li><strong>Truth (offline, authoritative):</strong> YANEZ post-validation decrypts, verifies, evaluates constraint adherence + anti-cheat, and updates reputation for the next cycle.</li>
+            </ul>
+
+            <h4>4.2.1 End-to-End Flow (Validator → Miner → Storage → Post-Validation)</h4>
+            <table class="spec-table">
+                <tr><th>Step</th><th>Actor</th><th>Actions</th></tr>
+                <tr>
+                    <td>1. Challenge Packaging</td>
+                    <td>Validator</td>
+                    <td>Select seed face image (identity anchor) + dynamic subset of variation families (2-4 from pose/lighting/expression/background) + intensity bins per family (Light/Medium/Far) + challenge identifiers</td>
+                </tr>
+                <tr>
+                    <td>2. Variation Generation</td>
+                    <td>Miner</td>
+                    <td>Generate requested images locally with constraints: preserve identity (subject remains recognizable) + follow transformation type + intensity intent</td>
+                </tr>
+                <tr>
+                    <td>3. Commit + Store</td>
+                    <td>Miner → S3</td>
+                    <td>Encrypt outputs (sandbox design) + upload encrypted artifacts to storage + return only storage references and integrity metadata</td>
+                </tr>
+                <tr>
+                    <td>4. Online Path</td>
+                    <td>Validator</td>
+                    <td>Lightweight validation only: ensure refs/metadata received + continue normal operation (including existing KAV workflow). <strong>NO download, decrypt, or image evaluation.</strong></td>
+                </tr>
+                <tr>
+                    <td>5. Offline Truthing</td>
+                    <td>YANEZ</td>
+                    <td>Download encrypted artifacts + decrypt (batch) + verify integrity/ownership + evaluate constraint adherence + anti-cheat signals + update reputation for next cycle</td>
+                </tr>
+            </table>
+
+            <h4>4.2.2 Online vs Offline Responsibilities</h4>
+            <p>Phase 4 makes the boundary explicit:</p>
+            <ul>
+                <li><strong>Online (Validator):</strong> Operates the subnet; keeps checks structural and non-gameable; avoids heavy compute; avoids revealing other miners' work during submission window.</li>
+                <li><strong>Offline (YANEZ Post-Validation):</strong> Establishes truth; performs image-based evaluation and anti-cheat at batch scale; updates reputation for the next cycle.</li>
+            </ul>
+            <p><em>This separation prevents a "race to exploit whatever validators can score instantly" and ensures incentives converge toward adversarial-resistant outcomes.</em></p>
+
+            <h4>4.2.3 Integrity and Fairness Primitives</h4>
+            <p>Phase 4 relies on a small set of primitives that keep the pipeline secure and economically fair:</p>
+            <table class="spec-table">
+                <tr><th>Primitive</th><th>Purpose</th></tr>
+                <tr>
+                    <td><strong>Reference-based submission</strong><br/>(S3 pointers, not image payloads)</td>
+                    <td>Keeps validators fast and makes batch truthing feasible</td>
+                </tr>
+                <tr>
+                    <td><strong>Ownership + integrity binding</strong><br/>(wallet signing + hashes)</td>
+                    <td>Binds each stored artifact to miner identity; prevents tampering/re-attribution</td>
+                </tr>
+                <tr>
+                    <td><strong>Delayed reveal via encryption</strong><br/>(sandbox design)</td>
+                    <td>Protects miner work during submission; reduces copy/relay behaviors; supports fair "all-at-once" batch comparison</td>
+                </tr>
+            </table>
+            <p><em>Note: Acceptance is expressed as constraint adherence rather than fixed published thresholds. Thresholds/metrics can be disclosed later once the system is stable and harder to game.</em></p>
+
+            <h4>Timed Reveal / Batch Truthing Concept</h4>
+            <p>The second diagram above shows the timeline from request to reputation update, highlighting how all miners commit before any reveal occurs.</p>
         </div>
 
         <div id="sandboxDesc" class="description" style="display: none;">
@@ -824,14 +1020,20 @@ flowchart LR
 
         renderMermaid('overviewDiagram');
 
-        const diagrams = ['overviewDiagram', 'sandboxDiagram', 'detailedDiagram', 'protocolDiagram', 'validationDiagram', 'databaseDiagram', 's3Diagram', 'drandDiagram'];
-        const descriptions = ['overviewDesc', 'sandboxDesc', 'detailedDesc', 'protocolDesc', 'validationDesc', 'databaseDesc', 's3Desc', 'drandDesc'];
-        const buttons = ['overviewBtn', 'sandboxBtn', 'detailedBtn', 'protocolBtn', 'validationBtn', 'databaseBtn', 's3Btn', 'drandBtn'];
+        const diagrams = ['overviewDiagram', 'architectureDiagram', 'sandboxDiagram', 'detailedDiagram', 'protocolDiagram', 'validationDiagram', 'databaseDiagram', 's3Diagram', 'drandDiagram'];
+        const descriptions = ['overviewDesc', 'architectureDesc', 'sandboxDesc', 'detailedDesc', 'protocolDesc', 'validationDesc', 'databaseDesc', 's3Desc', 'drandDesc'];
+        const buttons = ['overviewBtn', 'architectureBtn', 'sandboxBtn', 'detailedBtn', 'protocolBtn', 'validationBtn', 'databaseBtn', 's3Btn', 'drandBtn'];
+        // Also track the timeline diagram separately for architecture tab
+        const compactDiagram = 'compactDiagram';
 
         function hideAll() {
             diagrams.forEach(d => document.getElementById(d).style.display = 'none');
             descriptions.forEach(d => document.getElementById(d).style.display = 'none');
             buttons.forEach(b => document.getElementById(b).classList.remove('active'));
+            // Also hide the compact diagram and architecture titles
+            document.getElementById(compactDiagram).style.display = 'none';
+            document.getElementById('archTitle1').style.display = 'none';
+            document.getElementById('archTitle2').style.display = 'none';
         }
 
         async function showDiagram(index) {
@@ -842,14 +1044,27 @@ flowchart LR
             document.getElementById(buttons[index]).classList.add('active');
         }
 
+        async function showArchitecture() {
+            hideAll();
+            // Render and show both architecture diagrams with titles
+            await renderMermaid('architectureDiagram');
+            await renderMermaid('compactDiagram');
+            document.getElementById('archTitle1').style.display = 'block';
+            document.getElementById('architectureDiagram').style.display = 'block';
+            document.getElementById('archTitle2').style.display = 'block';
+            document.getElementById('compactDiagram').style.display = 'block';
+            document.getElementById('architectureDesc').style.display = 'block';
+            document.getElementById('architectureBtn').classList.add('active');
+        }
+
         async function showOverview() { await showDiagram(0); }
-        async function showSandbox() { await showDiagram(1); }
-        async function showDetailed() { await showDiagram(2); }
-        async function showProtocol() { await showDiagram(3); }
-        async function showValidation() { await showDiagram(4); }
-        async function showDatabase() { await showDiagram(5); }
-        async function showS3() { await showDiagram(6); }
-        async function showDrand() { await showDiagram(7); }
+        async function showSandbox() { await showDiagram(2); }
+        async function showDetailed() { await showDiagram(3); }
+        async function showProtocol() { await showDiagram(4); }
+        async function showValidation() { await showDiagram(5); }
+        async function showDatabase() { await showDiagram(6); }
+        async function showS3() { await showDiagram(7); }
+        async function showDrand() { await showDiagram(8); }
     </script>
 </body>
 </html>

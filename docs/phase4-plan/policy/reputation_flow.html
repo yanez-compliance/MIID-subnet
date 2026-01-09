@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Flowchart</title>
+
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+
+  <style>
+    body {
+      font-family: system-ui, sans-serif;
+      margin: 20px;
+      background: #f5f7fa;
+    }
+    .container {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    }
+  </style>
+</head>
+
+<body>
+<div class="container">
+<h2>Reputation Flow</h2>
+
+<div class="mermaid">
+    ---
+    config:
+      theme: mc
+      look: neo
+    ---
+    flowchart TB
+        A(["Start"]) --> B["Get scored UAVs from the database, and rep_processed_at IS NULL"]
+        B --> C["For each miner"]
+        C --> D{"Does the miner have a MINER REPUTATION row?"}
+        D --> E["NO"] & F["YES"]
+        E --> G["Create row
+            rep_before_score = 1.0
+            rep_tier = Neutral"]
+        F --> H["Get row"]
+        G --> I["delta_total = Sum all Δrep
+        rep_score_after = rep_score = max(0.10, min(rep_score_before + delta_total, 9999.0))"]
+        H --> I
+        I --> J["Update tier based on
+            Tier Boundaries (V1)"]
+        J --> K["Insert MINER_REPUTATION_HISTORY row"]
+        K --> L["Upsert MINER_REPUTATION"]
+        L --> M["Update processed UAVs
+        rep_processed_at = NOW()"]
+        M --> N
+        N(["End"])
+
+</div>
+
+</div>
+
+<script>
+mermaid.initialize({
+  startOnLoad: true,
+  securityLevel: 'loose'
+});
+</script>
+
+</body>
+</html>
