@@ -301,6 +301,7 @@ TIER_MULTIPLIERS = {
 
 > **NOTE**: Tier assignment is done by the database Reputation Engine, not by the validator.
 > The validator receives `rep_tier` from Flask and uses it for multiplier lookup and normalization.
+> **Watch tier**: Assigned when rep_score calculation goes negative, but stored value is clamped to 0.1 floor.
 
 | Tier | rep_score Range |
 |------|-----------------|
@@ -308,8 +309,8 @@ TIER_MULTIPLIERS = {
 | **Gold** | 30.0 – 49.999 |
 | **Silver** | 15.0 – 29.999 |
 | **Bronze** | >5.0 – 14.999 |
-| **Neutral** | 1.0 – 5.0 |
-| **Watch** | 0.10 – <1.0 |
+| **Neutral** | 0.1 – 5.0 (baseline miners) |
+| **Watch** | < 0.1 (penalized miners, clamped to 0.1) |
 
 ## rep_score Normalization (Critical)
 
@@ -339,10 +340,11 @@ We normalize `rep_score` to a **reward-friendly range (0.5 – 2.0)** before usi
 ```python
 # Normalization ranges per tier (must match TIER_BOUNDARIES in reputation-policy-v1.md)
 # NOTE: Tier assignment is done by database. Validator uses these for normalization only.
+# Watch miners: penalized (went negative), all clamped to 0.1, normalized to 0.50
 NORM_RANGES = {
     # tier: (rep_min, rep_max, norm_min, norm_max)
-    "Watch":   (0.10, 0.999,  0.50, 0.70),   # rep_score 0.10 - <1.0
-    "Neutral": (1.00, 5.00,   0.70, 1.00),   # rep_score 1.0 - 5.0
+    "Watch":   (0.10, 0.10,   0.50, 0.50),   # Penalized miners, all get 0.50 (floor)
+    "Neutral": (0.10, 5.00,   0.50, 1.00),   # rep_score 0.1 - 5.0 (baseline)
     "Bronze":  (5.001, 14.999, 1.00, 1.20),  # rep_score >5.0 - 14.999
     "Silver":  (15.0, 29.999, 1.20, 1.50),   # rep_score 15.0 - 29.999
     "Gold":    (30.0, 49.999, 1.50, 1.80),   # rep_score 30.0 - 49.999
@@ -389,10 +391,12 @@ def normalize_rep_score(rep_score: float, rep_tier: str) -> float:
 | Gold | 40.0 | 1.65 | 1.10 | 0.80 × 1.65 × 1.10 = **1.45** |
 | Silver | 22.0 | 1.34 | 1.05 | 0.80 × 1.34 × 1.05 = **1.13** |
 | Bronze | 10.0 | 1.10 | 1.02 | 0.80 × 1.10 × 1.02 = **0.90** |
-| Neutral | 3.0 | 0.85 | 1.00 | 0.80 × 0.85 × 1.00 = **0.68** |
-| Watch | 0.5 | 0.59 | 0.90 | 0.80 × 0.59 × 0.90 = **0.42** |
+| Neutral | 3.0 | 0.80 | 1.00 | 0.80 × 0.80 × 1.00 = **0.64** |
+| Watch | 0.1 (clamped) | 0.50 | 0.90 | 0.80 × 0.50 × 0.90 = **0.36** |
 
-**Max ratio: Diamond/Watch = 1.66/0.42 = 3.95x** (vs 57.5x without normalization)
+**Max ratio: Diamond/Watch = 1.66/0.36 = 4.6x** (vs 57.5x without normalization)
+
+> **Watch tier**: Miners who accumulated negative rep_score through penalties. Their score is clamped to 0.1 but they receive the lowest normalized value (0.50) plus Watch multiplier (0.90).
 
 This keeps reputation meaningful while preventing runaway dominance.
 
@@ -504,37 +508,39 @@ def calculate_reputation_reward(Q, rep_score, rep_tier):
 | Miner | Q | Raw rep_score | Tier | R_norm | T | KAV (20%) | UAV (80%) | Combined |
 |-------|---|---------------|------|--------|---|-----------|-----------|----------|
 | A | 0.90 | 55.0 | Diamond | 1.80 | 1.15 | 0.18 | 1.66 | **1.84** |
-| B | 0.85 | 3.0 | Neutral | 0.85 | 1.00 | 0.17 | 0.68 | **0.85** |
+| B | 0.85 | 3.0 | Neutral | 0.80 | 1.00 | 0.17 | 0.64 | **0.81** |
 | C | 0.70 | 10.0 | Bronze | 1.10 | 1.02 | 0.14 | 0.90 | **1.04** |
-| D | 0.95 | 0.40 | Watch | 0.57 | 0.90 | 0.19 | 0.41 | **0.60** |
+| D | 0.95 | 0.1 (neg→clamped) | Watch | 0.50 | 0.90 | 0.19 | 0.36 | **0.55** |
 | E | 0.80 | — | **New** | 0.00 | 0.00 | 0.16 | 0.00 | **0.16** |
-| **Total** | | | | | | | | **4.49** |
+| **Total** | | | | | | | | **4.40** |
 
 > **Note**: R_norm = `normalize_rep_score(raw_rep_score, tier)`. Tier is assigned by database based on reputation-policy-v1.md boundaries.
 > **New miners** (not in rep_data) get **zero UAV** - only KAV rewards until they build reputation.
+> **Watch miners** went negative through penalties - score clamped to 0.1, lowest normalized value.
 
 **Burn Applied (75% burn, 25% keep):**
 ```
-Total combined = 4.49
+Total combined = 4.40
 keep_fraction = 0.25
-rescale_factor = 0.25 / 4.49 = 0.0557
+rescale_factor = 0.25 / 4.40 = 0.0568
 
 Final weights:
-- Miner A (Diamond): 1.84 * 0.0557 = 0.102 (10.2% of emissions)
-- Miner B (Neutral): 0.85 * 0.0557 = 0.047 (4.7% of emissions)
-- Miner C (Bronze):  1.04 * 0.0557 = 0.058 (5.8% of emissions)
-- Miner D (Watch):   0.60 * 0.0557 = 0.033 (3.3% of emissions)
-- Miner E (New):     0.16 * 0.0557 = 0.009 (0.9% of emissions) ← KAV only!
+- Miner A (Diamond): 1.84 * 0.0568 = 0.104 (10.4% of emissions)
+- Miner B (Neutral): 0.81 * 0.0568 = 0.046 (4.6% of emissions)
+- Miner C (Bronze):  1.04 * 0.0568 = 0.059 (5.9% of emissions)
+- Miner D (Watch):   0.55 * 0.0568 = 0.031 (3.1% of emissions) ← Penalized!
+- Miner E (New):     0.16 * 0.0568 = 0.009 (0.9% of emissions) ← KAV only!
 - Burn UID 59: 0.75 (75% of emissions)
 - Sum: ~1.0
 ```
 
 **Key Insights**:
 1. **Normalization prevents runaway dominance** - Diamond miner A gets ~3x more than Watch miner D (not 50x+)
-2. **KAV still matters** - Miner D has excellent online quality (0.95) but Watch reputation tanks their reward
+2. **KAV still matters** - Miner D has excellent online quality (0.95) but Watch penalty tanks their reward
 3. **Tier progression is meaningful** - Each tier step up provides noticeable but fair advantage
 4. **Incentivizes long-term behavior** - Building reputation from Watch→Diamond takes sustained good UAVs
-5. **New miners must earn reputation** - Miner E only gets KAV (0.9% vs Diamond's 10.2%) until they contribute validated UAVs
+5. **New miners must earn reputation** - Miner E only gets KAV (0.9% vs Diamond's 10.4%) until they contribute validated UAVs
+6. **Watch tier penalizes bad actors** - Miners who accumulated negative scores get lowest rewards (3.1%)
 
 ---
 
@@ -1037,9 +1043,10 @@ TIER_MULTIPLIERS = {
 
 # Normalization ranges per tier (rep_min, rep_max, norm_min, norm_max)
 # NOTE: Must match tier boundaries in reputation-policy-v1.md
+# Watch miners: penalized (went negative), all clamped to 0.1, normalized to 0.50
 NORM_RANGES = {
-    "Watch":   (0.10, 0.999,  0.50, 0.70),   # rep_score 0.10 - <1.0
-    "Neutral": (1.00, 5.00,   0.70, 1.00),   # rep_score 1.0 - 5.0
+    "Watch":   (0.10, 0.10,   0.50, 0.50),   # Penalized miners, all get 0.50 (floor)
+    "Neutral": (0.10, 5.00,   0.50, 1.00),   # rep_score 0.1 - 5.0 (baseline)
     "Bronze":  (5.001, 14.999, 1.00, 1.20),  # rep_score >5.0 - 14.999
     "Silver":  (15.0, 29.999, 1.20, 1.50),   # rep_score 15.0 - 29.999
     "Gold":    (30.0, 49.999, 1.50, 1.80),   # rep_score 30.0 - 49.999
@@ -1529,18 +1536,18 @@ if __name__ == "__main__":
       - KAV: 0.20 * 0.80 = 0.16
       - UAV: 0.80 * 0 * 0 = **0.00** (zero UAV for new miners!)
       - Combined: 0.16 (KAV only until they build reputation)
-- [ ] Neutral miner (Q=1.0, rep_score=3.0, tier=Neutral, R_norm=0.85):
+- [ ] Neutral miner (Q=1.0, rep_score=3.0, tier=Neutral, R_norm=0.80):
       - KAV: 0.20 * 1.0 = 0.20
-      - UAV: 0.80 * 0.85 * 1.0 = 0.68
-      - Combined: 0.88
+      - UAV: 0.80 * 0.80 * 1.0 = 0.64
+      - Combined: 0.84
 - [ ] Diamond miner (Q=0.90, rep_score=55.0, tier=Diamond, R_norm=1.80):
       - KAV: 0.20 * 0.90 = 0.18
       - UAV: 0.80 * 1.80 * 1.15 = 1.66
       - Combined: 1.84
-- [ ] Watch miner (Q=0.70, rep_score=0.5, tier=Watch, R_norm=0.59):
-      - KAV: 0.20 * 0.70 = 0.14
-      - UAV: 0.80 * 0.59 * 0.90 = 0.42
-      - Combined: 0.56
+- [ ] **Watch miner** (Q=0.95, rep_score=0.1 clamped from negative, tier=Watch, R_norm=0.50):
+      - KAV: 0.20 * 0.95 = 0.19
+      - UAV: 0.80 * 0.50 * 0.90 = 0.36
+      - Combined: 0.55 (penalized for negative reputation!)
 - [ ] Burn applied at end: all combined values rescaled to `keep_fraction`, burn UID 59 gets `burn_fraction`
 
 ---

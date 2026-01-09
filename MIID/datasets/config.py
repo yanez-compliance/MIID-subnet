@@ -76,22 +76,24 @@ TIER_MULTIPLIERS = {
 # Tier boundaries (rep_score -> tier) from reputation-policy-v1.md
 # NOTE: Tier assignment is done by the database Reputation Engine, not this code.
 # These values are for reference only - must match reputation-policy-v1.md
+# Watch tier: assigned when rep_score goes negative, but DB clamps to 0.1 floor
 TIER_BOUNDARIES = {
     "Diamond": (50.0, 9999.0),   # rep_score >= 50.0
     "Gold":    (30.0, 49.999),   # rep_score 30.0 - 49.999
     "Silver":  (15.0, 29.999),   # rep_score 15.0 - 29.999
     "Bronze":  (5.001, 14.999),  # rep_score >5.0 - 14.999
-    "Neutral": (1.00, 5.00),     # rep_score 1.0 - 5.0
-    "Watch":   (0.10, 0.999),    # rep_score 0.10 - <1.0
+    "Neutral": (0.10, 5.00),     # rep_score 0.1 - 5.0 (baseline miners)
+    "Watch":   (-9999.0, 0.099), # rep_score < 0.1 (penalized, clamped to 0.1 in DB)
 }
 
 # Normalization ranges per tier (rep_min, rep_max, norm_min, norm_max)
 # Maps raw rep_score (0.10 - 9999.0) to reward-friendly range (0.5 - 2.0)
 # This prevents Diamond miners from dominating emissions
 # NOTE: rep_min/rep_max must match TIER_BOUNDARIES above
+# Watch miners: all clamped to 0.1, so normalized to 0.50 (penalty floor)
 NORM_RANGES = {
-    "Watch":   (0.10, 0.999,  0.50, 0.70),   # rep_score 0.10 - <1.0
-    "Neutral": (1.00, 5.00,   0.70, 1.00),   # rep_score 1.0 - 5.0
+    "Watch":   (0.10, 0.10,   0.50, 0.50),   # Penalized miners, all get 0.50 (floor)
+    "Neutral": (0.10, 5.00,   0.50, 1.00),   # rep_score 0.1 - 5.0 (baseline)
     "Bronze":  (5.001, 14.999, 1.00, 1.20),  # rep_score >5.0 - 14.999
     "Silver":  (15.0, 29.999, 1.20, 1.50),   # rep_score 15.0 - 29.999
     "Gold":    (30.0, 49.999, 1.50, 1.80),   # rep_score 30.0 - 49.999

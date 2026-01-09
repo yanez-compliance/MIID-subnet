@@ -159,14 +159,14 @@ Tiers provide a high-level trust classification for analytics and reward multipl
 | **Gold** | 30.0 – 49.999 |
 | **Silver** | 15.0 – 29.999 |
 | **Bronze** | >5.0 – 14.999 |
-| **Neutral** | 1 – 5.00 |
-| **Watch** | 0.10 – 1 |
+| **Neutral** | 0.1 – 5.00 (baseline miners) |
+| **Watch** | < 0.1 (negative scores, clamped to 0.1) |
 
 ### Notes
-- **Neutral is exactly baseline (1.0)**  
-- **Bronze is strictly above Neutral (rep_score > 1.0)**  
-- **Tiers are recomputed whenever rep_score changes**  
-- **Miners who repeatedly cheat drift toward 0.10 (floor)**  
+- **Neutral starts at 0.1** – new miners begin here with rep_score = 1.0 (baseline)
+- **Bronze is strictly above Neutral (rep_score > 5.0)**
+- **Tiers are recomputed whenever rep_score changes**
+- **Watch tier for penalized miners** – assigned when rep_score goes negative, but stored value is clamped to 0.1 floor
 - **No practical upper bound: rep_score can grow over many cycles**
 
 ### 5.2 Maturity and History Signals
