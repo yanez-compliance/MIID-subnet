@@ -2,6 +2,7 @@ import os
 import json
 import secrets
 import time
+import threading
 from flask import Flask, request, jsonify
 from datetime import datetime
 
@@ -11,13 +12,61 @@ from MIID.datasets.config import (
     PORT,
     DEBUG,
     DATA_DIR,
-    ALLOWED_HOTKEYS
+    ALLOWED_HOTKEYS,
+    REPUTATION_SNAPSHOT_PATH,
+    REWARDS_DIR,
 )
 
 # Import verify_message function
 from MIID.utils.verify_message import verify_message
 
 ## gunicorn MIID.datasets.app:app --bind 0.0.0.0:5000 --workers 4
+
+# =============================================================================
+# Reputation Snapshot Cache (Phase 3 - Cycle 2)
+# =============================================================================
+
+# Global reputation snapshot cache (thread-safe)
+CURRENT_REP_SNAPSHOT = {
+    "version": None,
+    "generated_at": None,
+    "miners": {}
+}
+_snapshot_lock = threading.Lock()
+
+
+def load_reputation_snapshot():
+    """
+    Load reputation snapshot from JSON file into memory.
+
+    Called at Flask startup and can be called to reload the snapshot.
+    Thread-safe using _snapshot_lock.
+    """
+    global CURRENT_REP_SNAPSHOT
+
+    if not os.path.exists(REPUTATION_SNAPSHOT_PATH):
+        print(f"[WARNING] Reputation snapshot not found at {REPUTATION_SNAPSHOT_PATH}. Using empty snapshot.")
+        return
+
+    try:
+        with open(REPUTATION_SNAPSHOT_PATH, 'r', encoding='utf-8') as f:
+            data = json.load(f)
+
+        with _snapshot_lock:
+            CURRENT_REP_SNAPSHOT = {
+                "version": data.get("version"),
+                "generated_at": data.get("generated_at"),
+                "miners": data.get("miners", {})
+            }
+        print(f"[INFO] Loaded reputation snapshot version: {CURRENT_REP_SNAPSHOT['version']} with {len(CURRENT_REP_SNAPSHOT['miners'])} miners")
+    except Exception as e:
+        print(f"[ERROR] Failed to load reputation snapshot: {e}")
+
+
+# Load snapshot on module import (Flask startup)
+load_reputation_snapshot()
+
+# =============================================================================
 
 app = Flask(__name__)
 
@@ -74,11 +123,60 @@ def upload_data(hotkey):
     # 10) Save the entire JSON data (including the signature) to disk.
     with open(filepath, 'w', encoding='utf-8') as f:
         json.dump(data, f, indent=2)
-    
-    # 11) Return a success response
+
+    # ==========================================================================
+    # 11) Extract and save reward_allocation if present (Phase 3 - Cycle 2)
+    # ==========================================================================
+    reward_allocation = data.get("reward_allocation")
+    if reward_allocation:
+        cycle_id = reward_allocation.get("cycle_id", "unknown")
+
+        # Handle allocations array (may contain multiple pending allocations)
+        allocations = reward_allocation.get("allocations", [])
+
+        # If no allocations array, check for legacy "miners" field (backwards compatibility)
+        if not allocations and reward_allocation.get("miners"):
+            allocations = [{
+                "timestamp": reward_allocation.get("rep_snapshot_version"),
+                "rep_snapshot_version": reward_allocation.get("rep_snapshot_version"),
+                "miners": reward_allocation.get("miners")
+            }]
+
+        # Save each allocation separately
+        saved_count = 0
+        for allocation in allocations:
+            # Save to REWARDS_DIR/<cycle_id>/<hotkey>/
+            rewards_dir = os.path.join(REWARDS_DIR, cycle_id, hotkey)
+            os.makedirs(rewards_dir, exist_ok=True)
+
+            reward_timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
+            reward_hex = secrets.token_hex(4)
+            reward_filename = f"reward_{reward_timestamp}.{reward_hex}.json"
+            reward_filepath = os.path.join(rewards_dir, reward_filename)
+
+            with open(reward_filepath, 'w', encoding='utf-8') as f:
+                json.dump(allocation, f, indent=2)
+
+            saved_count += 1
+
+        print(f"[INFO] Saved {saved_count} reward allocation(s) for validator {hotkey[:16]}...")
+
+    # ==========================================================================
+    # 12) Get rep_cache for response (Phase 3 - Cycle 2)
+    # ==========================================================================
+    with _snapshot_lock:
+        snapshot_version = CURRENT_REP_SNAPSHOT.get("version")
+        generated_at = CURRENT_REP_SNAPSHOT.get("generated_at")
+        rep_cache = CURRENT_REP_SNAPSHOT.get("miners", {})
+
+    # 13) Return a success response with rep_cache
     return jsonify({
         "message": "Data received and verified successfully",
-        "filename": final_filename
+        "filename": final_filename,
+        # Reputation cache for next forward pass (Phase 3 - Cycle 2)
+        "rep_snapshot_version": snapshot_version,
+        "generated_at": generated_at,
+        "rep_cache": rep_cache  # All miners: {hotkey: {rep_score, rep_tier}, ...}
     }), 200
 
 if __name__ == '__main__':

@@ -20,8 +20,9 @@
 import typing
 import bittensor as bt
 import json
-from typing import List, Dict, Optional
+from typing import List, Dict, Optional, Tuple
 from typing_extensions import TypedDict
+from pydantic import BaseModel, Field
 
 # TODO(developer): Rewrite with your protocol definition.
 
@@ -41,6 +42,82 @@ from typing_extensions import TypedDict
 #   dendrite = bt.dendrite()
 #   dummy_output = dendrite.query( Dummy( dummy_input = 1 ) )
 #   assert dummy_output == 2
+
+
+# =============================================================================
+# Phase 4: Image Variation Types
+# =============================================================================
+
+class VariationRequest(BaseModel):
+    """Phase 4: Single variation request with type and intensity.
+
+    Specifies what kind of variation to generate and at what intensity level.
+    Used as a guideline for miners; post-validation will judge compliance.
+    """
+    type: str  # Variation type: pose_edit, lighting_edit, expression_edit, background_edit
+    intensity: str  # Intensity level: light, medium, far
+    description: str = ""  # Human-readable description of the type
+    detail: str = ""  # Intensity-specific detail/guideline
+
+    class Config:
+        arbitrary_types_allowed = True
+
+
+class ImageRequest(BaseModel):
+    """Phase 4: Image variation request from validator to miner.
+
+    Contains the base image and parameters for generating variations.
+    The miner will generate variations, encrypt them with drand timelock,
+    upload to S3, and return S3 references.
+    """
+    base_image: str  # Base64 encoded image
+    image_filename: str  # Original filename for reference
+    variation_requests: List[VariationRequest] = Field(
+        default_factory=list
+    )  # Specific variation requests with type + intensity
+    target_drand_round: int  # Drand round when decryption becomes possible
+    reveal_timestamp: int  # Unix timestamp when reveal occurs
+    challenge_id: Optional[str] = None  # Unique identifier for this challenge
+
+    class Config:
+        # Allow arbitrary types for flexibility
+        arbitrary_types_allowed = True
+
+    @property
+    def requested_variations(self) -> int:
+        """Number of variations requested (derived from variation_requests)."""
+        return len(self.variation_requests)
+
+    @property
+    def variation_types(self) -> List[str]:
+        """List of variation type names (for backwards compatibility)."""
+        return [v.type for v in self.variation_requests]
+
+
+class S3Submission(BaseModel):
+    """Phase 4: Miner's S3 submission response.
+
+    Contains references to encrypted images uploaded to S3.
+    The actual images are NOT included - only S3 paths, hashes, and signatures.
+    Post-validation will download and decrypt after drand reveal.
+
+    SECURITY: path_signature prevents malicious miners from writing to other
+    miners' S3 paths. The path_signature is derived from the miner's private
+    key and can be verified during post-validation.
+    """
+    s3_key: str  # Path to encrypted file in S3 bucket
+    image_hash: str  # SHA256 hash of the original (unencrypted) image
+    signature: str  # Wallet signature proving ownership
+    variation_type: str  # Which variation type this submission addresses
+    path_signature: str  # Unique path component: sign(challenge_id:miner_hotkey)[:16]
+
+    class Config:
+        arbitrary_types_allowed = True
+
+
+# =============================================================================
+# End Phase 4 Types
+# =============================================================================
 
 
 class IdentitySynapse(bt.Synapse):
@@ -78,6 +155,16 @@ class IdentitySynapse(bt.Synapse):
 
     variations: Optional[Dict[str, typing.Union[List[List[str]], 'IdentitySynapse.SeedData']]] = None
     process_time: Optional[float] = None  # <-- add this
+
+    # ==========================================================================
+    # Phase 4: Image Variation Fields
+    # ==========================================================================
+    # Request: Validator → Miner (base image + parameters)
+    image_request: Optional[ImageRequest] = None
+
+    # Response: Miner → Validator (S3 references, NOT actual images)
+    s3_submissions: Optional[List[S3Submission]] = None
+    # ==========================================================================
     
     def deserialize(self) -> Dict[str, typing.Union[List[List[str]], 'IdentitySynapse.SeedData']]:
         """

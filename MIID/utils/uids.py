@@ -40,11 +40,12 @@ def get_random_uids(self, k: int, exclude: List[int] = None) -> np.ndarray:
     # Filter non serving axons.
     bt.logging.warning(f"#########################################Metagraph: {self.metagraph}#########################################")
     bt.logging.warning(f"#########################################Metagraph type: {type(self.metagraph)}#########################################")
-    bt.logging.warning(f"#########################################Metagraph n: {self.metagraph.n.item()}#########################################")
+    n_val = self.metagraph.n.item() if hasattr(self.metagraph.n, 'item') else self.metagraph.n
+    bt.logging.warning(f"#########################################Metagraph n: {n_val}#########################################")
     bt.logging.warning(f"#########################################Metagraph axons: {self.metagraph.axons}#########################################")
     bt.logging.warning(f"#########################################Metagraph axons type: {type(self.metagraph.axons)}#########################################")
 
-    for uid in range(self.metagraph.n.item()):
+    for uid in range(n_val):
         uid_is_available = check_uid_availability(
             self.metagraph, uid, self.config.neuron.vpermit_tao_limit
         )

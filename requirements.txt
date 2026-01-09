@@ -20,3 +20,7 @@ python-dotenv # Add dotenv for .env file handling
 requests
 unidecode
 geonamescache==3.0.0
+
+# Phase 4: Image Variation Sandbox
+Pillow>=9.0.0  # Image processing
+# timelock  # Drand timelock encryption (install separately: pip install timelock)

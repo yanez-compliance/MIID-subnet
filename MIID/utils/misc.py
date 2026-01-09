@@ -119,19 +119,23 @@ def ttl_get_block(self) -> int:
 def upload_data(endpoint_base: str, hotkey: str, payload: dict):
     """
     Upload the generated JSON data to the given Flask endpoint.
-    
+
     Args:
-        endpoint_base (str): Base URL of the upload endpoint (e.g., http://20.83.176.136:5000/upload_data).
+        endpoint_base (str): Base URL of the upload endpoint (e.g., http://52.44.186.20:5000/upload_data).
         hotkey (str): The hotkey or other unique identifier appended to the endpoint path.
         payload (dict): The JSON data to be posted to the endpoint.
+
+    Returns:
+        dict: Flask response JSON on success (includes rep_cache for reputation system)
+        None: If request fails
     """
     # Ensure endpoint_base doesn't end with a slash
     endpoint_base = endpoint_base.rstrip('/')
-    
+
     # Extract the hotkey address if it's a Keypair object
     if hasattr(hotkey, 'ss58_address'):
         hotkey = hotkey.ss58_address
-    
+
     full_url = f"{endpoint_base}/{hotkey}"
     bt.logging.info(f"Uploading results to {full_url} ...")
     print(f"Uploading results to {full_url} ...")
@@ -139,16 +143,20 @@ def upload_data(endpoint_base: str, hotkey: str, payload: dict):
         response = requests.post(full_url, json=payload)
         if response.status_code == 200:
             bt.logging.info(f"Successfully uploaded data. Server response.")
-            return True
-            # print(f"Successfully uploaded data. Server response: {response.json()}@@@@@@@@@@@@@@@@@@@@@@@@@@@")
+            # Return full response JSON instead of True (Phase 3 - Cycle 2)
+            result = response.json()
+            # Log rep_cache info if present
+            if result.get("rep_cache"):
+                bt.logging.info(
+                    f"Received rep_cache: version={result.get('rep_snapshot_version')}, "
+                    f"miners={len(result.get('rep_cache', {}))}"
+                )
+            return result  # Return full response for rep_cache extraction
         else:
             bt.logging.error(
                 f"Failed to upload data. Status code: {response.status_code})"
             )
-            return False
-            #print(f"Failed to upload data. Status code: {response.status_code}, "
-            #    f"Response: {response.text}@@@@@@@@@@@@@@@@@@@@@@@@@@@")
+            return None  # Changed from False to None
     except Exception as e:
         bt.logging.error(f"Exception occurred during upload: {e}")
-        #print(f"Exception occurred during upload: {e}@@@@@@@@@@@@@@@@@@@@@@@@@@@")
-        return False
+        return None  # Changed from False to None

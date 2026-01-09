@@ -45,19 +45,81 @@ import asyncio
 import numpy as np
 from typing import List, Dict, Any, Tuple, Optional
 from datetime import datetime
+from pathlib import Path
 
-from MIID.protocol import IdentitySynapse
-from MIID.validator.reward import get_name_variation_rewards, _cache_stats
+from MIID.protocol import IdentitySynapse, ImageRequest, VariationRequest
+from MIID.validator.reward import get_name_variation_rewards, apply_reputation_rewards
 from MIID.utils.uids import get_random_uids
 from MIID.utils.sign_message import sign_message
 from MIID.validator.query_generator import QueryGenerator, add_uav_requirements
+
+# Phase 4 imports
+from MIID.validator.base_images import load_random_base_image, validate_base_images_folder
+from MIID.validator.drand_utils import calculate_target_round, calculate_reveal_buffer
+from MIID.validator.image_variations import (
+    select_random_variations,
+    format_variation_requirements
+)
 
 
 # Import your new upload_data function here
 from MIID.utils.misc import upload_data
 
+# =============================================================================
+# Reputation Cache (Phase 3 - Cycle 2)
+# =============================================================================
+
+# Module-level cache for reputation data (persists across forward passes)
+_cached_rep_data: Dict[str, Dict] = {}
+_cached_rep_version: Optional[str] = None
+
+# Module-level pending queue for failed uploads (persists across forward passes)
+_pending_allocations: List[Dict] = []
+_pending_file_path: Optional[Path] = None
+
+
+def _load_pending_allocations(file_path: Path) -> List[Dict]:
+    """Load pending allocations from disk on startup."""
+    if file_path.exists():
+        try:
+            with open(file_path, 'r') as f:
+                return json.load(f)
+        except Exception:
+            return []
+    return []
+
+
+def _save_pending_allocations(file_path: Path, pending: List[Dict]):
+    """Save pending allocations to disk."""
+    file_path.parent.mkdir(parents=True, exist_ok=True)
+    with open(file_path, 'w') as f:
+        json.dump(pending, f, indent=2)
+
+
+def _clear_pending_allocations(file_path: Path):
+    """Clear pending after successful send (overwrite with empty array)."""
+    _save_pending_allocations(file_path, [])
+
+# =============================================================================
+
 EPOCH_MIN_TIME = 360  # seconds
 MIID_SERVER = "http://52.44.186.20:5000/upload_data" ## MIID server
+
+# =============================================================================
+# Phase 4: Image Variation Configuration
+# =============================================================================
+PHASE4_ENABLED = True  # Set to False to disable Phase 4 features
+# Variation types and counts are now dynamically selected per challenge
+# See: MIID/validator/image_variations.py for definitions
+# =============================================================================
+
+# =============================================================================
+# UAV Grading Configuration
+# =============================================================================
+# UAV_grading is controlled via config.neuron.UAV_grading (default: False)
+# When False: Uses KAV-only scoring with burn applied directly
+# When True: Uses reputation-weighted rewards (KAV + UAV) with burn applied after combination
+# =============================================================================
 
 async def dendrite_with_retries(dendrite: bt.Dendrite, axons: list, synapse: IdentitySynapse,
                                 deserialize: bool, timeout: float, cnt_attempts=3):
@@ -339,12 +401,82 @@ async def forward(self):
     adaptive_timeout = min(self.config.neuron.max_request_timeout, max(120, adaptive_timeout))  # clamp [120, max_request_timeout]
     bt.logging.info(f"Using adaptive timeout of {adaptive_timeout} seconds for {len(seed_names)} identities")
     
+    # ==========================================================================
+    # Phase 4: Create Image Request
+    # ==========================================================================
+    image_request = None
+    challenge_id = None
+    selected_variations = None  # Track what variations were requested
+
+    if PHASE4_ENABLED:
+        try:
+            # Validate base images folder
+            is_valid, validation_msg = validate_base_images_folder()
+            if not is_valid:
+                bt.logging.warning(f"Phase 4 disabled: {validation_msg}")
+            else:
+                # Load a random base image
+                image_filename, base64_image = load_random_base_image()
+
+                # Calculate drand round for reveal (after all miners respond)
+                reveal_delay = calculate_reveal_buffer(adaptive_timeout)
+                target_round, reveal_timestamp = calculate_target_round(reveal_delay)
+
+                # Generate unique challenge ID
+                challenge_id = f"challenge_{int(time.time())}_{self.wallet.hotkey.ss58_address[:8]}"
+
+                # Randomly select variation types with intensities (2-4 variations)
+                selected_variations = select_random_variations(min_variations=2, max_variations=4)
+
+                # Convert to VariationRequest objects
+                variation_requests = [
+                    VariationRequest(
+                        type=v["type"],
+                        intensity=v["intensity"],
+                        description=v["description"],
+                        detail=v["detail"]
+                    )
+                    for v in selected_variations
+                ]
+
+                # Create image request
+                image_request = ImageRequest(
+                    base_image=base64_image,
+                    image_filename=image_filename,
+                    variation_requests=variation_requests,
+                    target_drand_round=target_round,
+                    reveal_timestamp=reveal_timestamp,
+                    challenge_id=challenge_id
+                )
+
+                # Log what was selected
+                variation_summary = ", ".join(
+                    f"{v['type']}({v['intensity']})" for v in selected_variations
+                )
+                bt.logging.info(
+                    f"Phase 4: Created image request for '{image_filename}', "
+                    f"variations: [{variation_summary}], "
+                    f"drand round {target_round}, reveal at {reveal_timestamp}"
+                )
+        except Exception as e:
+            bt.logging.warning(f"Phase 4: Could not create image request: {e}")
+            image_request = None
+            selected_variations = None
+
+    # Add image variation requirements to query template (if Phase 4 enabled)
+    if selected_variations:
+        image_variation_text = format_variation_requirements(selected_variations)
+        query_template = query_template + image_variation_text
+        bt.logging.debug(f"Phase 4: Added image variation requirements to query template")
+    # ==========================================================================
+
     # 5) Prepare the synapse
     request_synapse = IdentitySynapse(
         identity=identity_list,
         query_template=query_template,
         variations={},
-        timeout=adaptive_timeout
+        timeout=adaptive_timeout,
+        image_request=image_request  # Phase 4: Add image request
     )
 
     if query_generator.use_default_query:  
@@ -448,19 +580,87 @@ async def forward(self):
     bt.logging.info(f"Received {valid_responses} valid responses out of {len(all_responses)}")
 
     seed_script = [item['script'] for item in seed_names_with_labels]
-    rewards, updated_uids, detailed_metrics = get_name_variation_rewards(
-        self, 
-        seed_names,
-        seed_dob,
-        seed_addresses,
-        seed_script,
-        all_responses, 
-        miner_uids,
-        variation_count=query_labels['variation_count'],
-        phonetic_similarity=query_labels['phonetic_similarity'],
-        orthographic_similarity=query_labels['orthographic_similarity'],
-        rule_based=query_labels.get('rule_based')  # Pass rule-based metadata
-    )
+    
+    # Check if UAV grading is enabled (default: False)
+    uav_grading_enabled = getattr(self.config.neuron, 'UAV_grading', False)
+    
+    if uav_grading_enabled:
+        # Phase 3: Get KAV rewards WITHOUT burn - burn will be applied after reputation weighting
+        kav_rewards, kav_uids, detailed_metrics = get_name_variation_rewards(
+            self,
+            seed_names,
+            seed_dob,
+            seed_addresses,
+            seed_script,
+            all_responses,
+            miner_uids,
+            variation_count=query_labels['variation_count'],
+            phonetic_similarity=query_labels['phonetic_similarity'],
+            orthographic_similarity=query_labels['orthographic_similarity'],
+            rule_based=query_labels.get('rule_based'),  # Pass rule-based metadata
+            skip_burn=True  # Phase 3: Skip burn here, apply after KAV+UAV in apply_reputation_rewards()
+        )
+
+        # ==========================================================================
+        # REPUTATION-WEIGHTED REWARDS (Phase 3 - Cycle 2)
+        # ==========================================================================
+        global _cached_rep_data, _cached_rep_version, _pending_allocations, _pending_file_path
+
+        # Initialize pending file path (once per validator session)
+        if _pending_file_path is None:
+            _pending_file_path = Path(self.config.logging.logging_dir) / "validator_results" / "pending_allocations.json"
+            _pending_allocations = _load_pending_allocations(_pending_file_path)
+            if _pending_allocations:
+                bt.logging.info(f"Loaded {len(_pending_allocations)} pending allocations from previous session")
+
+        # With skip_burn=True, kav_rewards/kav_uids contain only miners (no burn UID)
+        # Convert to list for apply_reputation_rewards
+        miner_uids_list = kav_uids.tolist() if hasattr(kav_uids, 'tolist') else list(kav_uids)
+
+        # Get config values (Phase 3 - Cycle 2)
+        burn_fraction = getattr(self.config.neuron, 'burn_fraction', 0.75)
+        kav_weight = getattr(self.config.neuron, 'kav_weight', 0.20)
+        uav_weight = getattr(self.config.neuron, 'uav_weight', 0.80)
+
+        # Apply reputation weighting (UAV + combine + burn in one call)
+        # Burn is applied ONCE here after KAV + UAV are combined
+        rewards, updated_uids, combined_metrics = apply_reputation_rewards(
+            kav_rewards=kav_rewards,  # Raw KAV quality scores (no burn applied yet)
+            uids=miner_uids_list,
+            rep_data=_cached_rep_data,  # From previous forward pass (may be empty on first run)
+            metagraph=self.metagraph,
+            burn_fraction=burn_fraction,
+            kav_weight=kav_weight,
+            uav_weight=uav_weight,
+            kav_metrics=detailed_metrics
+        )
+
+        bt.logging.info(
+            f"Applied reputation rewards: {len(miner_uids_list)} miners, "
+            f"using rep_snapshot_version={_cached_rep_version or 'None (first run)'}"
+        )
+        # ==========================================================================
+        # END REPUTATION-WEIGHTED REWARDS
+        # ==========================================================================
+    else:
+        # UAV grading disabled: Use KAV-only scoring with burn applied directly
+        bt.logging.info("UAV_grading disabled. Using KAV-only scoring with burn applied.")
+        rewards, updated_uids, detailed_metrics = get_name_variation_rewards(
+            self,
+            seed_names,
+            seed_dob,
+            seed_addresses,
+            seed_script,
+            all_responses,
+            miner_uids,
+            variation_count=query_labels['variation_count'],
+            phonetic_similarity=query_labels['phonetic_similarity'],
+            orthographic_similarity=query_labels['orthographic_similarity'],
+            rule_based=query_labels.get('rule_based'),  # Pass rule-based metadata
+            skip_burn=False  # Apply burn directly in get_name_variation_rewards
+        )
+        # Use detailed_metrics as combined_metrics for consistency
+        combined_metrics = detailed_metrics
 
     # Verify UID-reward mapping before updating scores
     bt.logging.info("=== UID-REWARD MAPPING VERIFICATION ===")
@@ -473,7 +673,7 @@ async def forward(self):
         else:
             bt.logging.info(f"UID {uid}: Reward={reward:.4f}, HasResponse={has_response}")
     bt.logging.info("=== END UID-REWARD MAPPING VERIFICATION ===")
-    
+
     self.update_scores(rewards, updated_uids)
     bt.logging.info(f"REWARDS: {rewards}  for UIDs: {updated_uids}")
 
@@ -534,6 +734,24 @@ async def forward(self):
             "note": "UAVs are collected and scored in Cycle 1 execution",
             "summary": uav_summary,
             "by_miner": uav_by_miner,
+        },
+        # Phase 4: Image variation data for YANEZ post-validation
+        "phase4_image_data": {
+            "cycle": "Phase4-C1-Sandbox",
+            "note": "Image variations with S3 uploads, post-validation scoring by YANEZ",
+            "enabled": PHASE4_ENABLED and image_request is not None,
+            "s3_bucket": "yanez-miid-sn54",
+            "challenge_id": challenge_id,
+            "base_image_filename": image_request.image_filename if image_request else None,
+            "target_drand_round": image_request.target_drand_round if image_request else None,
+            "reveal_timestamp": image_request.reveal_timestamp if image_request else None,
+            # Detailed variation requests with type + intensity for scoring
+            "requested_variations": selected_variations if selected_variations else [],
+            # Summary for quick reference
+            "variation_count": len(selected_variations) if selected_variations else 0,
+            "variation_types": [v["type"] for v in selected_variations] if selected_variations else [],
+            "variation_intensities": [v["intensity"] for v in selected_variations] if selected_variations else [],
+            "s3_submissions_by_miner": {},  # Populated below
         },
         "query_generation": {
             "use_default_query": self.query_generator.use_default_query,
@@ -619,6 +837,24 @@ async def forward(self):
                         "message": "Invalid response format",
                         "response_type": str(type(response))
                     }
+
+            # Phase 4: Collect S3 submissions
+            if PHASE4_ENABLED and hasattr(response, 's3_submissions') and response.s3_submissions:
+                miner_hotkey = str(self.metagraph.axons[uid].hotkey)
+                s3_data = []
+                for submission in response.s3_submissions:
+                    s3_data.append({
+                        "s3_key": submission.s3_key,
+                        "image_hash": submission.image_hash,
+                        "signature": submission.signature,
+                        "variation_type": submission.variation_type
+                    })
+                results["phase4_image_data"]["s3_submissions_by_miner"][str(uid)] = {
+                    "hotkey": miner_hotkey,
+                    "submissions": s3_data,
+                    "submission_count": len(s3_data)
+                }
+                bt.logging.info(f"Phase 4: Collected {len(s3_data)} S3 submissions from miner {uid}")
         else:
             # Handle case where no response was received for this UID
             bt.logging.warning(f"No response received for miner {uid}")
@@ -697,18 +933,6 @@ async def forward(self):
     else:
         bt.logging.info("Weights set successfully.")
 
-    # Get cache statistics once at the very end and add to results
-    cache_hits = _cache_stats["cache_hits"]
-    api_calls = _cache_stats["api_calls"]
-    total_cache_requests = cache_hits + api_calls
-    cache_hit_rate = (cache_hits / total_cache_requests * 100) if total_cache_requests > 0 else 0.0
-    results["nominatim_cache_stats"] = {
-        "cache_hits": cache_hits,
-        "api_calls": api_calls,
-        "total_requests": total_cache_requests,
-        "cache_hit_rate_percent": round(cache_hit_rate, 2)
-    }
-
     # Save the query and responses to a JSON file (now including weights)
     json_path = os.path.join(run_dir, f"results_{timestamp}.json")
     with open(json_path, 'w', encoding='utf-8') as f:
@@ -735,27 +959,91 @@ async def forward(self):
         #"json_results_path": json_path
     }
 
-    # 9) Upload to external endpoint (moved to a separate utils function)
+    # ==========================================================================
+    # 9) Add reward_allocation to results (Phase 3 - Cycle 2)
+    # ==========================================================================
+    if uav_grading_enabled:
+        # Create new allocation for this forward pass
+        new_allocation = {
+            "timestamp": timestamp,
+            "rep_snapshot_version": _cached_rep_version,
+            "miners": combined_metrics  # Full breakdown per miner from apply_reputation_rewards()
+        }
+
+        # Add to pending allocations and save to disk
+        _pending_allocations.append(new_allocation)
+        _save_pending_allocations(_pending_file_path, _pending_allocations)
+
+        # Build reward_allocation with ALL pending allocations (for retry on previous failures)
+        results["reward_allocation"] = {
+            "rep_snapshot_version": _cached_rep_version,
+            "cycle_id": f"cycle_{timestamp}",
+            "pending_count": len(_pending_allocations),
+            "allocations": _pending_allocations  # ALL pending allocations
+        }
+
+        bt.logging.info(
+            f"Added reward_allocation to results: {len(_pending_allocations)} pending allocation(s)"
+        )
+    else:
+        # UAV grading disabled: No reward allocation tracking
+        results["reward_allocation"] = {
+            "enabled": False,
+            "note": "UAV_grading disabled - using KAV-only scoring"
+        }
+    # ==========================================================================
+
+    # 10) Upload to external endpoint (moved to a separate utils function)
     # Adjust endpoint URL/hotkey if needed
     results_json_string = json.dumps(results, sort_keys=True)
-    
+
     hotkey = self.wallet.hotkey
     bt.logging.debug(f"🔑 Hotkey: {hotkey}")
     message_to_sign = f"Hotkey: {hotkey} \n timestamp: {timestamp} \n query_template: {query_template} \n query_labels: {query_labels}"
     signed_contents = sign_message(self.wallet, message_to_sign, output_file=None)
     results["signature"] = signed_contents
 
+    upload_response = None
     upload_success = False
-    #If for some reason uploading the data fails, we should just log it and continue. Server might go down but should not be a unique point of failure for the subnet
+    # If for some reason uploading the data fails, we should just log it and continue.
+    # Server might go down but should not be a unique point of failure for the subnet
     try:
         bt.logging.info(f"Uploading data to: {MIID_SERVER}")
-        upload_success = upload_data(MIID_SERVER, hotkey, results) 
+        upload_response = upload_data(MIID_SERVER, hotkey, results)
+        upload_success = upload_response is not None
+
         if upload_success:
             bt.logging.info("Data uploaded successfully to external server")
+
+            # ==========================================================================
+            # Cache rep_data from response for NEXT forward pass (Phase 3 - Cycle 2)
+            # ==========================================================================
+            if uav_grading_enabled:
+                if upload_response.get("rep_cache"):
+                    _cached_rep_version = upload_response.get("rep_snapshot_version")
+                    _cached_rep_data = upload_response.get("rep_cache", {})
+                    bt.logging.info(
+                        f"Updated rep cache: version={_cached_rep_version}, "
+                        f"miners={len(_cached_rep_data)}"
+                    )
+
+                # Clear pending allocations after successful upload
+                _pending_allocations.clear()
+                _clear_pending_allocations(_pending_file_path)
+                bt.logging.info("Cleared pending allocations after successful upload")
+            # ==========================================================================
         else:
             bt.logging.error("Failed to upload data to external server")
+            if uav_grading_enabled:
+                bt.logging.warning(
+                    f"Upload failed. {len(_pending_allocations)} allocation(s) pending for retry"
+                )
     except Exception as e:
         bt.logging.error(f"Uploading data failed: {str(e)}")
+        if uav_grading_enabled:
+            bt.logging.warning(
+                f"Upload failed. {len(_pending_allocations)} allocation(s) pending for retry"
+            )
         upload_success = False
     
     wandb_extra_data["upload_success"] = upload_success

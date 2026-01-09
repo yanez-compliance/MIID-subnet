@@ -37,4 +37,59 @@ ALLOWED_HOTKEYS: List[str] = [
 # Hugging Face configuration
 HF_REPO_ID = os.getenv("HF_REPO_ID", "username/my-dataset")
 HF_TOKEN = os.getenv("HF_TOKEN", "")
-HF_REPO_TYPE = os.getenv("HF_REPO_TYPE", "dataset") 
+HF_REPO_TYPE = os.getenv("HF_REPO_TYPE", "dataset")
+
+# =============================================================================
+# Reputation System Configuration (Phase 3 - Cycle 2)
+# =============================================================================
+
+# Reputation snapshot file path (loaded by Flask at startup)
+REPUTATION_SNAPSHOT_PATH = os.path.join(DATA_DIR, "reputation_snapshot.json")
+
+# Directory for storing reward allocations extracted from upload_data requests
+REWARDS_DIR = os.path.join(DATA_DIR, "rewards")
+
+# Reputation-weighted reward allocation weights
+# KAV = Known Attack Vector (online quality from validator evaluation)
+# UAV = Unknown Attack Vector (reputation-based from manual validation)
+KAV_WEIGHT = 0.20  # 20% allocated to online quality (Q)
+UAV_WEIGHT = 0.80  # 80% allocated to reputation-based rewards
+
+# Note: burn_fraction is configured via --neuron.burn_fraction (default 0.75 for Cycle 2)
+
+# Burn UID (hardcoded in existing codebase)
+BURN_UID = 59
+
+# Tier multipliers for reputation weighting
+# Higher tiers get bonus multipliers on their UAV portion
+TIER_MULTIPLIERS = {
+    "Diamond": 1.15,
+    "Gold": 1.10,
+    "Silver": 1.05,
+    "Bronze": 1.02,
+    "Neutral": 1.00,
+    "Watch": 0.90,
+}
+
+# Tier boundaries (rep_score -> tier) from reputation-policy-v1.md
+# Used for reference and tier determination
+TIER_BOUNDARIES = {
+    "Diamond": (50.0, 9999.0),   # rep_score >= 50.0
+    "Gold": (10.0, 49.999),      # rep_score 10.0 - 49.999
+    "Silver": (2.0, 9.999),      # rep_score 2.0 - 9.999
+    "Bronze": (1.001, 1.999),    # rep_score > 1.0 - 1.999
+    "Neutral": (0.70, 1.00),     # rep_score 0.70 - 1.00
+    "Watch": (0.10, 0.699),      # rep_score 0.10 - 0.699
+}
+
+# Normalization ranges per tier (rep_min, rep_max, norm_min, norm_max)
+# Maps raw rep_score (0.10 - 9999.0) to reward-friendly range (0.5 - 2.0)
+# This prevents Diamond miners from dominating emissions
+NORM_RANGES = {
+    "Watch": (0.10, 0.699, 0.50, 0.70),
+    "Neutral": (0.70, 1.00, 0.70, 1.00),
+    "Bronze": (1.00, 1.999, 1.00, 1.20),
+    "Silver": (2.00, 9.999, 1.20, 1.50),
+    "Gold": (10.0, 49.99, 1.50, 1.80),
+    "Diamond": (50.0, 9999.0, 1.80, 2.00),
+}
