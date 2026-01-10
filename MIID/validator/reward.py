@@ -17,7 +17,7 @@
 # OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 # DEALINGS IN THE SOFTWARE.
 import numpy as np
-from typing import List, Dict, Tuple, Any, Set, Union
+from typing import List, Dict, Tuple, Any, Set, Union, Optional
 import bittensor as bt
 import Levenshtein
 import jellyfish
@@ -3446,7 +3446,8 @@ def calculate_rule_compliance_score(
 #   - Passed to apply_reputation_rewards() from forward.py using getattr()
 #
 # Policy-based constants (hardcoded, rarely change):
-#   - TIER_MULTIPLIERS, NORM_RANGES, BURN_UID
+#   - TIER_MULTIPLIERS, BURN_UID
+#   - Normalization uses continuous function based on actual rep_score (no tier-based clamping)
 #
 # New Miner Behavior:
 #   - Miners not in rep_data (snapshot) get ZERO UAV rewards
@@ -3464,51 +3465,67 @@ TIER_MULTIPLIERS = {
     "Watch": 0.90,
 }
 
-# Normalization ranges per tier (rep_min, rep_max, norm_min, norm_max)
-# Maps raw rep_score (0.10 - 9999.0) to reward-friendly range (0.5 - 2.0)
-# NOTE: These ranges must match the tier boundaries in reputation-policy-v1.md
-# Tier assignment is done by the database, validator uses these for normalization only
-# Watch miners: penalized (went negative), all clamped to 0.1, normalized to 0.50
-NORM_RANGES = {
-    "Watch":   (0.10, 0.10,   0.50, 0.50),   # Penalized miners, all get 0.50 (floor)
-    "Neutral": (0.10, 5.00,   0.50, 1.00),   # rep_score 0.1 - 5.0 (baseline)
-    "Bronze":  (5.001, 14.999, 1.00, 1.20),  # rep_score >5.0 - 14.999
-    "Silver":  (15.0, 29.999, 1.20, 1.50),   # rep_score 15.0 - 29.999
-    "Gold":    (30.0, 49.999, 1.50, 1.80),   # rep_score 30.0 - 49.999
-    "Diamond": (50.0, 9999.0, 1.80, 2.00),   # rep_score >= 50.0
-}
+# Normalization ranges (for reference - actual normalization uses continuous function)
+# rep_score decays over time; normalization is based on actual score, not tier label
+# Score ranges and their normalized output:
+#   0.0  - 0.1   → 0.00 - 0.50  (decayed/Watch)
+#   0.1  - 5.0   → 0.50 - 1.00  (Neutral)
+#   5.0  - 15.0  → 1.00 - 1.20  (Bronze)
+#   15.0 - 30.0  → 1.20 - 1.50  (Silver)
+#   30.0 - 50.0  → 1.50 - 1.80  (Gold)
+#   50.0+        → 1.80 - 2.00  (Diamond)
 
 # Burn UID (hardcoded in existing codebase)
 BURN_UID = 59
 
 
-def normalize_rep_score(rep_score: float, rep_tier: str) -> float:
+def normalize_rep_score(rep_score: float, rep_tier: Optional[str] = None) -> float:
     """
-    Normalize rep_score to reward-friendly range (0.5 - 2.0).
+    Normalize rep_score to reward-friendly range (0.0 - 2.0).
 
-    Prevents extreme disparity when raw rep_score varies from 0.10 to 9999.0.
-    Each tier maps to a compressed normalized range.
+    Uses actual rep_score value for normalization - NO clamping to tier boundaries.
+    As rep_score decays, normalized value decreases proportionally.
+    When rep_score reaches 0, normalized value is 0 (zero UAV).
 
     Args:
-        rep_score: Raw reputation score from policy (0.10 - 9999.0)
-        rep_tier: Tier string (Diamond/Gold/Silver/Bronze/Neutral/Watch)
+        rep_score: Raw reputation score from DB (can decay from any value to 0)
+        rep_tier: Tier string (unused for normalization, kept for API compatibility)
 
     Returns:
-        Normalized rep_score in range 0.5 - 2.0
+        Normalized rep_score: 0.0 when score=0, up to 2.0 for high scores
     """
-    if rep_tier not in NORM_RANGES:
-        return 1.0  # Default to Neutral midpoint
+    # Zero or negative score = zero normalized (zero UAV)
+    if rep_score <= 0:
+        return 0.0
 
-    rep_min, rep_max, norm_min, norm_max = NORM_RANGES[rep_tier]
+    # Continuous normalization based on actual rep_score (no tier-based clamping)
+    # Score ranges map to normalized ranges:
+    #   0.0  - 0.1   → 0.00 - 0.50  (Watch range, but use actual score)
+    #   0.1  - 5.0   → 0.50 - 1.00  (Neutral range)
+    #   5.0  - 15.0  → 1.00 - 1.20  (Bronze range)
+    #   15.0 - 30.0  → 1.20 - 1.50  (Silver range)
+    #   30.0 - 50.0  → 1.50 - 1.80  (Gold range)
+    #   50.0+        → 1.80 - 2.00  (Diamond range)
 
-    if rep_max == rep_min:
-        return norm_min
-
-    # Clamp rep_score to tier boundaries
-    clamped = max(rep_min, min(rep_score, rep_max))
-
-    # Linear map: rep_score -> normalized
-    normalized = norm_min + (clamped - rep_min) * (norm_max - norm_min) / (rep_max - rep_min)
+    if rep_score < 0.1:
+        # Below Watch floor: linear from 0→0.1 maps to 0→0.50
+        normalized = rep_score * (0.50 / 0.1)
+    elif rep_score <= 5.0:
+        # Neutral range: 0.1→5.0 maps to 0.50→1.00
+        normalized = 0.50 + (rep_score - 0.1) * (1.00 - 0.50) / (5.0 - 0.1)
+    elif rep_score <= 15.0:
+        # Bronze range: 5.0→15.0 maps to 1.00→1.20
+        normalized = 1.00 + (rep_score - 5.0) * (1.20 - 1.00) / (15.0 - 5.0)
+    elif rep_score <= 30.0:
+        # Silver range: 15.0→30.0 maps to 1.20→1.50
+        normalized = 1.20 + (rep_score - 15.0) * (1.50 - 1.20) / (30.0 - 15.0)
+    elif rep_score <= 50.0:
+        # Gold range: 30.0→50.0 maps to 1.50→1.80
+        normalized = 1.50 + (rep_score - 30.0) * (1.80 - 1.50) / (50.0 - 30.0)
+    else:
+        # Diamond range: 50.0→9999.0 maps to 1.80→2.00
+        normalized = 1.80 + (rep_score - 50.0) * (2.00 - 1.80) / (9999.0 - 50.0)
+        normalized = min(2.00, normalized)  # Cap at 2.00
 
     return round(normalized, 3)
 
@@ -3571,13 +3588,22 @@ def apply_reputation_rewards(
         else:
             rep_score = rep.get("rep_score", 1.0)
             rep_tier = rep.get("rep_tier", "Neutral")
-            # Normalize rep_score to reward-friendly range (0.5 - 2.0)
-            # This prevents Diamond miners from dominating emissions
-            R_norm = normalize_rep_score(rep_score, rep_tier)
-            # Get tier multiplier
-            T = TIER_MULTIPLIERS.get(rep_tier, 1.0)
-            # UAV reward = R_norm × T (using NORMALIZED rep_score)
-            uav_reward = R_norm * T
+
+            # If rep_score has decayed to 0 or below, they get ZERO UAV
+            # Tier stays as-is (e.g., "Diamond") but no UAV rewards
+            # They only get KAV portion based on online quality
+            if rep_score <= 0:
+                R_norm = 0.0
+                T = 0.0
+                uav_reward = 0.0
+            else:
+                # Normalize rep_score to reward-friendly range (0.5 - 2.0)
+                # This prevents Diamond miners from dominating emissions
+                R_norm = normalize_rep_score(rep_score, rep_tier)
+                # Get tier multiplier
+                T = TIER_MULTIPLIERS.get(rep_tier, 1.0)
+                # UAV reward = R_norm × T (using NORMALIZED rep_score)
+                uav_reward = R_norm * T
 
         # Apply weights and combine
         kav_portion = kav_weight * Q

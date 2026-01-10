@@ -160,13 +160,16 @@ Tiers provide a high-level trust classification for analytics and reward multipl
 | **Silver** | 15.0 – 29.999 |
 | **Bronze** | >5.0 – 14.999 |
 | **Neutral** | 0.1 – 5.00 (baseline miners) |
-| **Watch** | < 0.1 (negative scores, clamped to 0.1) |
+| **Watch** | < 0.1 (penalized miners, clamped to 0.1 initially) |
 
 ### Notes
 - **Neutral starts at 0.1** – new miners begin here with rep_score = 1.0 (baseline)
 - **Bronze is strictly above Neutral (rep_score > 5.0)**
 - **Tiers are recomputed whenever rep_score changes**
-- **Watch tier for penalized miners** – assigned when rep_score goes negative, but stored value is clamped to 0.1 floor
+- **Watch tier for penalized miners** – assigned when calculated rep_score goes negative, stored value is clamped to 0.1 floor
+- **Decay mechanism** – each time a miner receives rewards, 0.01 is subtracted from their rep_score
+- **Decay can push Watch miners below 0.1** – after initial clamp to 0.1, decay continues and can push score toward 0
+- **No negative scores** – the absolute minimum rep_score is 0.0, not negative
 - **No practical upper bound: rep_score can grow over many cycles**
 
 ### 5.2 Maturity and History Signals
@@ -290,6 +293,36 @@ These maturity-based adjustments begin to influence miner weighting and bonuses 
 
 
 These examples are illustrative only; exact thresholds and multipliers live in the validator/reward specification, not in this policy. The key idea is that resetting to a new identity discards historical maturity, while staying and improving preserves it.
+
+### 8.1 Decay Mechanism
+
+Each time a miner receives rewards from a validator, **0.01 is subtracted from their rep_score** in the database. This decay ensures:
+
+1. **Continuous contribution required** - miners cannot coast on past achievements
+2. **Active miners outperform inactive ones** - regardless of tier labels
+3. **Fair reward distribution** - rewards reflect current contribution, not historical status
+
+### 8.2 Decay Dynamics: Tier Labels vs Actual Score
+
+**Important**: Tier labels are historical achievements assigned during reputation calculation. The **actual rep_score** (which decays over time) determines current rewards.
+
+Example showing how a Bronze miner can outperform a Diamond miner:
+
+| Miner | Tier Label | rep_score | Normalized | Tier Mult | UAV Reward |
+|-------|------------|-----------|------------|-----------|------------|
+| Diamond (decayed) | Diamond | 2.0 | 0.69 | 1.15 | **0.63** |
+| Bronze (active) | Bronze | 12.0 | 1.14 | 1.02 | **0.93** |
+
+**Result**: The active Bronze miner earns 47% more than the decayed Diamond miner.
+
+### 8.3 Zero Score = Zero UAV
+
+When a miner's rep_score decays to 0:
+- They receive **zero UAV rewards** (regardless of tier label)
+- They still receive **KAV rewards** based on online quality
+- To earn UAV rewards again, they must contribute new validated UAVs
+
+This prevents miners from accumulating rewards indefinitely without active contribution.
 
 ## 9. Versioning
 
