@@ -2,9 +2,10 @@ import time
 
 import asyncio
 import random
+import numpy as np
 import bittensor as bt
 
-from typing import List
+from typing import List, Optional
 
 
 class MockSubtensor(bt.MockSubtensor):
