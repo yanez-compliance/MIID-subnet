@@ -163,6 +163,8 @@ def upload_data(hotkey):
 
     # ==========================================================================
     # 12) Get rep_cache for response (Phase 3 - Cycle 2)
+    # NOTE: Decay (subtracting 0.01 from rep_score) is handled by the DB machine,
+    # not here. The DB processes saved reward allocations and updates rep_score.
     # ==========================================================================
     with _snapshot_lock:
         snapshot_version = CURRENT_REP_SNAPSHOT.get("version")
