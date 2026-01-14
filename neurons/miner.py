@@ -164,9 +164,6 @@ class Miner(BaseMinerNeuron):
         os.makedirs(self.output_path, exist_ok=True)
         bt.logging.info(f"Mining results will be saved to: {self.output_path}")
 
-        # Add local validators to whitelist in local_test mode
-        self._add_local_validators_to_whitelist()
-
         self.axon.verify_fns[IdentitySynapse.__name__] = self._verify_validator_request
 
     async def _verify_validator_request(self, synapse: IdentitySynapse) -> None:
