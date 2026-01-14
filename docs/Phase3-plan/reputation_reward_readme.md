@@ -299,14 +299,19 @@ TIER_MULTIPLIERS = {
 
 ## Tier Boundaries (from reputation-policy-v1.md)
 
+> **NOTE**: Tier assignment is done by the database Reputation Engine, not by the validator.
+> The validator receives `rep_tier` from Flask and uses it for multiplier lookup.
+> **Watch tier**: Assigned when rep_score calculation goes negative (initially clamped to 0.1).
+> **Decay**: 0.01 subtracted per reward can push score below 0.1, down to 0.
+
 | Tier | rep_score Range |
 |------|-----------------|
 | **Diamond** | ≥ 50.0 |
-| **Gold** | 10.0 – 49.999 |
-| **Silver** | 2.0 – 9.999 |
-| **Bronze** | >1.0 – 1.999 |
-| **Neutral** | 0.70 – 1.00 |
-| **Watch** | 0.10 – 0.699 |
+| **Gold** | 30.0 – 49.999 |
+| **Silver** | 15.0 – 29.999 |
+| **Bronze** | >5.0 – 14.999 |
+| **Neutral** | 0.1 – 5.0 (baseline miners) |
+| **Watch** | < 0.1 (penalized, decay can push to 0) |
 
 ## rep_score Normalization (Critical)
 
@@ -334,61 +339,74 @@ We normalize `rep_score` to a **reward-friendly range (0.5 – 2.0)** before usi
 - Makes both KAV and UAV meaningful contributors
 
 ```python
-# Normalization ranges per tier
-NORM_RANGES = {
-    # tier: (rep_min, rep_max, norm_min, norm_max)
-    "Watch":   (0.10, 0.699, 0.50, 0.70),
-    "Neutral": (0.70, 1.00,  0.70, 1.00),
-    "Bronze":  (1.00, 1.999, 1.00, 1.20),
-    "Silver":  (2.00, 9.999, 1.20, 1.50),
-    "Gold":    (10.0, 49.99, 1.50, 1.80),
-    "Diamond": (50.0, 9999., 1.80, 2.00),
-}
+# Normalization uses CONTINUOUS function based on actual rep_score
+# NO tier-based clamping - as rep_score decays, normalized value decreases
+# Score ranges and their normalized output:
+#   0.0  - 0.1   → 0.00 - 0.50  (decayed/Watch)
+#   0.1  - 5.0   → 0.50 - 1.00  (Neutral)
+#   5.0  - 15.0  → 1.00 - 1.20  (Bronze)
+#   15.0 - 30.0  → 1.20 - 1.50  (Silver)
+#   30.0 - 50.0  → 1.50 - 1.80  (Gold)
+#   50.0+        → 1.80 - 2.00  (Diamond)
 
-def normalize_rep_score(rep_score: float, rep_tier: str) -> float:
+def normalize_rep_score(rep_score: float, rep_tier: Optional[str] = None) -> float:
     """
-    Normalize rep_score to reward-friendly range (0.5 - 2.0).
+    Normalize rep_score to reward-friendly range (0.0 - 2.0).
 
-    This prevents extreme disparity when rep_score varies from 0.10 to 9999.0.
-    Each tier maps to a compressed normalized range.
+    Uses actual rep_score value - NO tier-based clamping.
+    As rep_score decays, normalized value decreases proportionally.
+    When rep_score = 0, normalized = 0 (zero UAV).
 
     Args:
-        rep_score: Raw reputation score from policy (0.10 - 9999.0)
-        rep_tier: Tier string (Diamond/Gold/Silver/Bronze/Neutral/Watch)
+        rep_score: Raw reputation score from DB (can decay to 0)
+        rep_tier: Unused (kept for API compatibility)
 
     Returns:
-        Normalized rep_score in range 0.5 - 2.0
+        Normalized rep_score: 0.0 when score=0, up to 2.0 for high scores
     """
-    if rep_tier not in NORM_RANGES:
-        return 1.0  # Default to Neutral midpoint
+    if rep_score <= 0:
+        return 0.0
 
-    rep_min, rep_max, norm_min, norm_max = NORM_RANGES[rep_tier]
-
-    # Linear interpolation within tier range
-    if rep_max == rep_min:
-        return norm_min
-
-    # Clamp rep_score to tier boundaries
-    clamped = max(rep_min, min(rep_score, rep_max))
-
-    # Linear map: rep_score -> normalized
-    normalized = norm_min + (clamped - rep_min) * (norm_max - norm_min) / (rep_max - rep_min)
-
-    return round(normalized, 3)
+    if rep_score < 0.1:
+        return rep_score * (0.50 / 0.1)
+    elif rep_score <= 5.0:
+        return 0.50 + (rep_score - 0.1) * (1.00 - 0.50) / (5.0 - 0.1)
+    elif rep_score <= 15.0:
+        return 1.00 + (rep_score - 5.0) * (1.20 - 1.00) / (15.0 - 5.0)
+    elif rep_score <= 30.0:
+        return 1.20 + (rep_score - 15.0) * (1.50 - 1.20) / (30.0 - 15.0)
+    elif rep_score <= 50.0:
+        return 1.50 + (rep_score - 30.0) * (1.80 - 1.50) / (50.0 - 30.0)
+    else:
+        return min(2.00, 1.80 + (rep_score - 50.0) * (2.00 - 1.80) / (9999.0 - 50.0))
 ```
 
-### Normalization Results
+### Normalization Results (Active Miners)
 
-| Tier | Raw rep_score | Normalized R | Tier Mult (T) | UAV Reward |
-|------|---------------|--------------|---------------|------------|
-| Diamond | 50.0 | 1.80 | 1.15 | 0.80 × 1.80 × 1.15 = **1.66** |
-| Gold | 25.0 | 1.65 | 1.10 | 0.80 × 1.65 × 1.10 = **1.45** |
-| Silver | 5.0 | 1.34 | 1.05 | 0.80 × 1.34 × 1.05 = **1.13** |
-| Bronze | 1.5 | 1.10 | 1.02 | 0.80 × 1.10 × 1.02 = **0.90** |
-| Neutral | 1.0 | 1.00 | 1.00 | 0.80 × 1.00 × 1.00 = **0.80** |
-| Watch | 0.5 | 0.63 | 0.90 | 0.80 × 0.63 × 0.90 = **0.45** |
+| Tier | rep_score | Normalized R | Tier Mult (T) | UAV Reward |
+|------|-----------|--------------|---------------|------------|
+| Diamond | 75.0 | 1.80 | 1.15 | 0.80 × 1.80 × 1.15 = **1.66** |
+| Gold | 40.0 | 1.65 | 1.10 | 0.80 × 1.65 × 1.10 = **1.45** |
+| Silver | 22.0 | 1.34 | 1.05 | 0.80 × 1.34 × 1.05 = **1.13** |
+| Bronze | 10.0 | 1.10 | 1.02 | 0.80 × 1.10 × 1.02 = **0.90** |
+| Neutral | 3.0 | 0.80 | 1.00 | 0.80 × 0.80 × 1.00 = **0.64** |
+| Watch | 0.05 | 0.25 | 0.90 | 0.80 × 0.25 × 0.90 = **0.18** |
+| Decayed | 0.0 | 0.00 | 0.00 | 0.80 × 0.00 × 0.00 = **0.00** |
 
-**Max ratio: Diamond/Watch = 1.66/0.45 = 3.7x** (vs 57.5x without normalization)
+### Decay Example (Gold Miner Over Time)
+
+| Stage | rep_score | Normalized R | UAV Reward |
+|-------|-----------|--------------|------------|
+| Initial | 40.0 | 1.65 | 1.45 |
+| Decayed to Silver range | 20.0 | 1.30 | 0.80 × 1.30 × 1.10 = 1.14 |
+| Decayed to Bronze range | 10.0 | 1.10 | 0.80 × 1.10 × 1.10 = 0.97 |
+| Decayed to Neutral range | 3.0 | 0.80 | 0.80 × 0.80 × 1.10 = 0.70 |
+| Decayed to Watch range | 0.05 | 0.25 | 0.80 × 0.25 × 1.10 = 0.22 |
+| Decayed to zero | 0.0 | 0.00 | **0.00** (KAV only) |
+
+**Key insight**: Tier label stays "Gold" but rewards decrease based on actual rep_score.
+
+> **Watch tier**: Miners who went negative through penalties (initially clamped to 0.1). Decay can push score below 0.1 toward 0. At rep_score=0, they get zero UAV.
 
 This keeps reputation meaningful while preventing runaway dominance.
 
@@ -499,34 +517,41 @@ def calculate_reputation_reward(Q, rep_score, rep_tier):
 
 | Miner | Q | Raw rep_score | Tier | R_norm | T | KAV (20%) | UAV (80%) | Combined |
 |-------|---|---------------|------|--------|---|-----------|-----------|----------|
-| A | 0.90 | 55.0 | Diamond | 1.81 | 1.15 | 0.18 | 1.67 | **1.85** |
-| B | 0.85 | 1.00 | Neutral | 1.00 | 1.00 | 0.17 | 0.80 | **0.97** |
-| C | 0.70 | 0.85 | Neutral | 0.85 | 1.00 | 0.14 | 0.68 | **0.82** |
-| D | 0.95 | 0.40 | Watch | 0.60 | 0.90 | 0.19 | 0.43 | **0.62** |
-| **Total** | | | | | | | | **4.26** |
+| A | 0.90 | 55.0 | Diamond | 1.80 | 1.15 | 0.18 | 1.66 | **1.84** |
+| B | 0.85 | 3.0 | Neutral | 0.80 | 1.00 | 0.17 | 0.64 | **0.81** |
+| C | 0.70 | 10.0 | Bronze | 1.10 | 1.02 | 0.14 | 0.90 | **1.04** |
+| D | 0.95 | 0.1 (neg→clamped) | Watch | 0.50 | 0.90 | 0.19 | 0.36 | **0.55** |
+| E | 0.80 | — | **New** | 0.00 | 0.00 | 0.16 | 0.00 | **0.16** |
+| **Total** | | | | | | | | **4.40** |
 
-> **Note**: R_norm = `normalize_rep_score(raw_rep_score, tier)`. See normalization section above.
+> **Note**: R_norm = `normalize_rep_score(rep_score)` - uses actual score, no tier-based clamping.
+> **New miners** (not in rep_data) get **zero UAV** - only KAV rewards until they build reputation.
+> **Watch miners** went negative (initially clamped to 0.1). Decay can push to 0 → zero UAV.
+> **Decayed miners** (any tier with rep_score=0) get **zero UAV** regardless of tier label.
 
 **Burn Applied (75% burn, 25% keep):**
 ```
-Total combined = 4.26
+Total combined = 4.40
 keep_fraction = 0.25
-rescale_factor = 0.25 / 4.26 = 0.0587
+rescale_factor = 0.25 / 4.40 = 0.0568
 
 Final weights:
-- Miner A (Diamond): 1.85 * 0.0587 = 0.109 (10.9% of emissions)
-- Miner B (Neutral): 0.97 * 0.0587 = 0.057 (5.7% of emissions)
-- Miner C (Neutral): 0.82 * 0.0587 = 0.048 (4.8% of emissions)
-- Miner D (Watch):   0.62 * 0.0587 = 0.036 (3.6% of emissions)
+- Miner A (Diamond): 1.84 * 0.0568 = 0.104 (10.4% of emissions)
+- Miner B (Neutral): 0.81 * 0.0568 = 0.046 (4.6% of emissions)
+- Miner C (Bronze):  1.04 * 0.0568 = 0.059 (5.9% of emissions)
+- Miner D (Watch):   0.55 * 0.0568 = 0.031 (3.1% of emissions) ← Penalized!
+- Miner E (New):     0.16 * 0.0568 = 0.009 (0.9% of emissions) ← KAV only!
 - Burn UID 59: 0.75 (75% of emissions)
 - Sum: ~1.0
 ```
 
 **Key Insights**:
 1. **Normalization prevents runaway dominance** - Diamond miner A gets ~3x more than Watch miner D (not 50x+)
-2. **KAV still matters** - Miner D has excellent online quality (0.95) but Watch reputation tanks their reward
+2. **KAV still matters** - Miner D has excellent online quality (0.95) but Watch penalty tanks their reward
 3. **Tier progression is meaningful** - Each tier step up provides noticeable but fair advantage
 4. **Incentivizes long-term behavior** - Building reputation from Watch→Diamond takes sustained good UAVs
+5. **New miners must earn reputation** - Miner E only gets KAV (0.9% vs Diamond's 10.4%) until they contribute validated UAVs
+6. **Watch tier penalizes bad actors** - Miners who accumulated negative scores get lowest rewards (3.1%)
 
 ---
 
@@ -727,8 +752,58 @@ else:
 - `/upload_data/<hotkey>` returns empty `rep_cache: {}` (validators use cached or default to Neutral).
 - Once snapshot file is created/updated, Flask can reload it (requires restart in V1).
 
-## Miner Not in Snapshot
-- `apply_reputation_rewards()` defaults to `{rep_score: 1.0, rep_tier: "Neutral"}` for miners not in cache.
+## New Miners (Not in Snapshot)
+- New miners (not in `rep_data`) receive **zero UAV rewards** - they only get KAV (online quality) rewards
+- They must first contribute validated UAVs to build reputation before receiving UAV-based rewards
+- In metrics: `is_new_miner: true`, `rep_tier: "New"`, `rep_score: 0`, `uav_portion: 0`
+- This incentivizes new miners to contribute quality UAVs to earn reputation
+
+## Decayed Miners (rep_score = 0)
+- **Decay mechanism**: 0.01 is subtracted from rep_score each time a miner receives rewards
+- If a miner's rep_score decays to 0 (or below), they receive **zero UAV rewards**
+- **Tier stays as-is** - a Diamond miner with rep_score = 0 is still labeled "Diamond" in the DB
+- They only receive KAV portion based on their online quality score
+- To earn UAV rewards again, they must contribute new validated UAVs to increase their rep_score
+- This prevents "coasting" - miners must actively contribute, not just stay online
+
+## Decay Dynamics: Bronze Can Outperform Diamond
+
+The decay mechanism means **tier labels don't guarantee higher rewards**. A freshly promoted Bronze miner can earn more than a decayed Diamond miner.
+
+### Example Scenario
+
+**Miner A (Diamond, decayed):**
+- Tier label: Diamond (earned long ago)
+- Current rep_score: 2.0 (heavily decayed from 55.0)
+- Has been collecting rewards without contributing new UAVs
+
+**Miner B (Bronze, fresh):**
+- Tier label: Bronze (just promoted)
+- Current rep_score: 12.0 (actively contributing)
+- Recently validated UAVs boosted their score
+
+### Reward Calculation
+
+| Miner | Tier | rep_score | R_norm | T | UAV Portion |
+|-------|------|-----------|--------|---|-------------|
+| A (Diamond, decayed) | Diamond | 2.0 | 0.69 | 1.15 | 0.80 × 0.69 × 1.15 = **0.63** |
+| B (Bronze, fresh) | Bronze | 12.0 | 1.14 | 1.02 | 0.80 × 1.14 × 1.02 = **0.93** |
+
+**Result: Bronze miner B earns 47% more UAV rewards than Diamond miner A!**
+
+### More Extreme Example
+
+| Miner | Tier | rep_score | R_norm | T | UAV Portion |
+|-------|------|-----------|--------|---|-------------|
+| Diamond (almost zero) | Diamond | 0.5 | 0.54 | 1.15 | 0.80 × 0.54 × 1.15 = **0.50** |
+| Watch (at floor) | Watch | 0.1 | 0.50 | 0.90 | 0.80 × 0.50 × 0.90 = **0.36** |
+| Bronze (active) | Bronze | 14.0 | 1.18 | 1.02 | 0.80 × 1.18 × 1.02 = **0.96** |
+| Neutral (active) | Neutral | 5.0 | 1.00 | 1.00 | 0.80 × 1.00 × 1.00 = **0.80** |
+
+**Key insight**:
+- An **active Neutral miner** (rep_score=5.0) earns **more** than a **decayed Diamond** (rep_score=0.5)
+- Tier labels are historical achievements; **actual rep_score determines current rewards**
+- This incentivizes continuous contribution, not coasting on past performance
 
 ---
 
@@ -1015,7 +1090,8 @@ parser.add_argument(
 #   - Passed to apply_reputation_rewards() from forward.py using getattr()
 #
 # Policy-based constants (hardcoded, rarely change):
-#   - TIER_MULTIPLIERS, NORM_RANGES, BURN_UID
+#   - TIER_MULTIPLIERS, BURN_UID
+#   - Normalization uses continuous function based on actual rep_score
 # =============================================================================
 
 # Tier multipliers for reputation weighting (policy-based, rarely change)
@@ -1024,15 +1100,16 @@ TIER_MULTIPLIERS = {
     "Bronze": 1.02, "Neutral": 1.00, "Watch": 0.90,
 }
 
-# Normalization ranges per tier (rep_min, rep_max, norm_min, norm_max)
-NORM_RANGES = {
-    "Watch": (0.10, 0.699, 0.50, 0.70),
-    "Neutral": (0.70, 1.00, 0.70, 1.00),
-    "Bronze": (1.00, 1.999, 1.00, 1.20),
-    "Silver": (2.00, 9.999, 1.20, 1.50),
-    "Gold": (10.0, 49.99, 1.50, 1.80),
-    "Diamond": (50.0, 9999.0, 1.80, 2.00),
-}
+# Normalization (for reference - uses continuous function based on actual rep_score)
+# NO tier-based clamping - as rep_score decays, normalized value decreases
+# Score ranges and their normalized output:
+#   0.0  - 0.1   → 0.00 - 0.50  (decayed/Watch)
+#   0.1  - 5.0   → 0.50 - 1.00  (Neutral)
+#   5.0  - 15.0  → 1.00 - 1.20  (Bronze)
+#   15.0 - 30.0  → 1.20 - 1.50  (Silver)
+#   30.0 - 50.0  → 1.50 - 1.80  (Gold)
+#   50.0+        → 1.80 - 2.00  (Diamond)
+# When rep_score = 0, miner gets zero UAV (only KAV)
 
 # Burn UID (hardcoded in existing codebase)
 BURN_UID = 59
@@ -1041,28 +1118,29 @@ BURN_UID = 59
 ### 4.3 normalize_rep_score() Function
 
 ```python
-def normalize_rep_score(rep_score: float, rep_tier: str) -> float:
+def normalize_rep_score(rep_score: float, rep_tier: Optional[str] = None) -> float:
     """
-    Normalize rep_score to reward-friendly range (0.5 - 2.0).
+    Normalize rep_score to reward-friendly range (0.0 - 2.0).
 
-    Prevents extreme disparity when raw rep_score varies from 0.10 to 9999.0.
-    Each tier maps to a compressed normalized range.
+    Uses actual rep_score value - NO tier-based clamping.
+    As rep_score decays, normalized value decreases proportionally.
+    When rep_score = 0, normalized = 0 (zero UAV).
     """
-    if rep_tier not in NORM_RANGES:
-        return 1.0  # Default to Neutral midpoint
+    if rep_score <= 0:
+        return 0.0
 
-    rep_min, rep_max, norm_min, norm_max = NORM_RANGES[rep_tier]
-
-    if rep_max == rep_min:
-        return norm_min
-
-    # Clamp rep_score to tier boundaries
-    clamped = max(rep_min, min(rep_score, rep_max))
-
-    # Linear map: rep_score -> normalized
-    normalized = norm_min + (clamped - rep_min) * (norm_max - norm_min) / (rep_max - rep_min)
-
-    return round(normalized, 3)
+    if rep_score < 0.1:
+        return rep_score * (0.50 / 0.1)
+    elif rep_score <= 5.0:
+        return 0.50 + (rep_score - 0.1) * (1.00 - 0.50) / (5.0 - 0.1)
+    elif rep_score <= 15.0:
+        return 1.00 + (rep_score - 5.0) * (1.20 - 1.00) / (15.0 - 5.0)
+    elif rep_score <= 30.0:
+        return 1.20 + (rep_score - 15.0) * (1.50 - 1.20) / (30.0 - 15.0)
+    elif rep_score <= 50.0:
+        return 1.50 + (rep_score - 30.0) * (1.80 - 1.50) / (50.0 - 30.0)
+    else:
+        return min(2.00, 1.80 + (rep_score - 50.0) * (2.00 - 1.80) / (9999.0 - 50.0))
 ```
 
 ### 4.4 apply_reputation_rewards() — Single function for UAV + combine + burn
@@ -1513,18 +1591,34 @@ if __name__ == "__main__":
 - [ ] Weighted rewards (including burn UID 59) are used for on-chain weight setting
 
 ## Math Verification (KAV + UAV, burn via existing mechanism)
-- [ ] Neutral miner (Q=1.0, R=1.0, tier=Neutral):
+- [ ] **New miner** (Q=0.80, not in rep_data):
+      - KAV: 0.20 * 0.80 = 0.16
+      - UAV: 0.80 * 0 * 0 = **0.00** (zero UAV for new miners!)
+      - Combined: 0.16 (KAV only until they build reputation)
+- [ ] Neutral miner (Q=1.0, rep_score=3.0, tier=Neutral, R_norm=0.80):
       - KAV: 0.20 * 1.0 = 0.20
-      - UAV: 0.80 * 1.0 * 1.0 = 0.80
-      - Combined: 1.00 (used as weight, burn applied proportionally later)
-- [ ] Diamond miner (Q=0.90, R=1.4, tier=Diamond):
+      - UAV: 0.80 * 0.80 * 1.0 = 0.64
+      - Combined: 0.84
+- [ ] Diamond miner (Q=0.90, rep_score=55.0, tier=Diamond, R_norm=1.80):
       - KAV: 0.20 * 0.90 = 0.18
-      - UAV: 0.80 * 1.4 * 1.15 = 1.288
-      - Combined: 1.468
-- [ ] Watch miner (Q=0.70, R=0.8, tier=Watch):
-      - KAV: 0.20 * 0.70 = 0.14
-      - UAV: 0.80 * 0.8 * 0.90 = 0.576
-      - Combined: 0.716
+      - UAV: 0.80 * 1.80 * 1.15 = 1.66
+      - Combined: 1.84
+- [ ] **Watch miner** (Q=0.95, rep_score=0.1, tier=Watch, R_norm=0.50):
+      - KAV: 0.20 * 0.95 = 0.19
+      - UAV: 0.80 * 0.50 * 0.90 = 0.36
+      - Combined: 0.55 (penalized for negative reputation!)
+- [ ] **Watch miner decayed** (Q=0.95, rep_score=0.03, tier=Watch, R_norm=0.15):
+      - KAV: 0.20 * 0.95 = 0.19
+      - UAV: 0.80 * 0.15 * 0.90 = 0.11
+      - Combined: 0.30 (heavily decayed!)
+- [ ] **Decayed to zero** (Q=0.90, rep_score=0.0, tier=Diamond, R_norm=0.0):
+      - KAV: 0.20 * 0.90 = 0.18
+      - UAV: 0.80 * 0.0 * 0.0 = **0.00** (zero UAV!)
+      - Combined: 0.18 (KAV only, same as new miner)
+- [ ] **Bronze outperforming decayed Diamond**:
+      - Diamond (rep_score=2.0): UAV = 0.80 * 0.69 * 1.15 = 0.63
+      - Bronze (rep_score=12.0): UAV = 0.80 * 1.14 * 1.02 = 0.93
+      - Bronze earns 47% more UAV than decayed Diamond!
 - [ ] Burn applied at end: all combined values rescaled to `keep_fraction`, burn UID 59 gets `burn_fraction`
 
 ---

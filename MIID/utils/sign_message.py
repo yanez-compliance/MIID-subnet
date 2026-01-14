@@ -14,7 +14,7 @@ def sign_message(wallet: bittensor.Wallet, message_text: str, output_file: str =
     Returns:
         str: The combined file contents (message + signature info).
     """
-    # Use the provided wallet's coldkey
+    # Use the provided wallet's coldkey/hotkey
     keypair = wallet.hotkey
 
     # Generate a timestamped message

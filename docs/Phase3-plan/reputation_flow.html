@@ -42,16 +42,19 @@
             rep_tier = Neutral"]
         F --> H["Get row"]
         G --> I["delta_total = Sum all Δrep
-        rep_score_after = rep_score = max(0.10, min(rep_score_before + delta_total, 9999.0))"]
+        rep_score_after = max(0.0, min(rep_score_before + delta_total, 9999.0))"]
         H --> I
         I --> J["Update tier based on
-            Tier Boundaries (V1)"]
+            Tier Boundaries (V1)
+            Note: Watch tier if rep_score < 0.1"]
         J --> K["Insert MINER_REPUTATION_HISTORY row"]
         K --> L["Upsert MINER_REPUTATION"]
         L --> M["Update processed UAVs
         rep_processed_at = NOW()"]
-        M --> N
-        N(["End"])
+        M --> N["Note: Decay (-0.01 per reward)
+        happens separately when miners
+        receive rewards from validators"]
+        N --> O(["End"])
 
 </div>
 
