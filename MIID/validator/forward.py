@@ -933,32 +933,6 @@ async def forward(self):
     else:
         bt.logging.info("Weights set successfully.")
 
-    # Save the query and responses to a JSON file (now including weights)
-    json_path = os.path.join(run_dir, f"results_{timestamp}.json")
-    with open(json_path, 'w', encoding='utf-8') as f:
-        json.dump(results, f, indent=4)
-    
-    bt.logging.info(f"Saved validator results to: {json_path}")
-    
-    # Prepare extra data for wandb logging
-    wandb_extra_data = {
-        "query_template": query_template,
-        "variation_count": query_labels.get('variation_count'),
-        "seed_names_count": len(seed_names_with_labels),
-        "query_generation_model": successful_model,
-        "query_generator_timeout": successful_timeout,
-        "judge_model": successful_judge_model,
-        "judge_timeout": successful_judge_timeout,
-        "judge_enabled": self.query_generator.use_judge_model,
-        "dendrite_timeout": adaptive_timeout,
-        #"valid_responses": valid_responses,
-        #"total_responses": len(all_responses),
-        # Include query labels directly
-        "query_labels": query_labels,
-        # Add the path to the saved JSON results
-        #"json_results_path": json_path
-    }
-
     # ==========================================================================
     # 9) Add reward_allocation to results (Phase 4 - Cycle 1)
     # ==========================================================================
@@ -992,6 +966,32 @@ async def forward(self):
             "note": "UAV_grading disabled - using KAV-only scoring"
         }
     # ==========================================================================
+
+    # Save the query and responses to a JSON file (now including weights and reward_allocation)
+    json_path = os.path.join(run_dir, f"results_{timestamp}.json")
+    with open(json_path, 'w', encoding='utf-8') as f:
+        json.dump(results, f, indent=4)
+    
+    bt.logging.info(f"Saved validator results to: {json_path}")
+    
+    # Prepare extra data for wandb logging
+    wandb_extra_data = {
+        "query_template": query_template,
+        "variation_count": query_labels.get('variation_count'),
+        "seed_names_count": len(seed_names_with_labels),
+        "query_generation_model": successful_model,
+        "query_generator_timeout": successful_timeout,
+        "judge_model": successful_judge_model,
+        "judge_timeout": successful_judge_timeout,
+        "judge_enabled": self.query_generator.use_judge_model,
+        "dendrite_timeout": adaptive_timeout,
+        #"valid_responses": valid_responses,
+        #"total_responses": len(all_responses),
+        # Include query labels directly
+        "query_labels": query_labels,
+        # Add the path to the saved JSON results
+        #"json_results_path": json_path
+    }
 
     # 10) Upload to external endpoint (moved to a separate utils function)
     # Adjust endpoint URL/hotkey if needed
