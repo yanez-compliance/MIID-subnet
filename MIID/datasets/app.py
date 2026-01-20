@@ -188,7 +188,8 @@ def upload_data(hotkey):
                 for allocation in allocations:
                     allocation_miners = allocation.get("miners", [])
                     for allocation_miner in allocation_miners:
-                        miner_hotkey = allocation_miner.get("hotkey")
+                        # Reward allocation uses "miner_hotkey" field, not "hotkey"
+                        miner_hotkey = allocation_miner.get("miner_hotkey")
                         if miner_hotkey:
                             rewarded_miner_hotkeys.add(miner_hotkey)
                 
