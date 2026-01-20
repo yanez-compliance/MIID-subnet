@@ -3639,9 +3639,9 @@ def apply_reputation_rewards(
             "uav_contribution": float(uav_contribution),
         }
 
-        # Merge KAV detailed metrics (variations, similarity scores, etc.) if available
-        if kav_info:
-            metric_entry["kav_details"] = kav_info
+        # # Merge KAV detailed metrics (variations, similarity scores, etc.) if available
+        # if kav_info:
+        #     metric_entry["kav_details"] = kav_info
 
         combined_metrics.append(metric_entry)
 
