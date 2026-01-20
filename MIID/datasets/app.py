@@ -17,6 +17,15 @@ from MIID.datasets.config import (
     REWARDS_DIR,
 )
 
+# Import methods from db_machine
+# import sys
+# sys.path.insert(0, '/home/ubuntu/YanezMIIDManage')
+# from db_machine import get_snapshot, reward_allocation
+
+# Use fake calls for testing (reads from JSON file instead of database)
+from MIID.datasets.fake_calls import get_snapshot, reward_allocation
+
+
 # Import verify_message function
 from MIID.utils.verify_message import verify_message
 
@@ -125,51 +134,90 @@ def upload_data(hotkey):
         json.dump(data, f, indent=2)
 
     # ==========================================================================
-    # 11) Extract and save reward_allocation if present (Phase 3 - Cycle 2)
+    # 11) Get current snapshot from database (used for both reward processing and response)
+    # Thread-safe: Lock to prevent race conditions when multiple requests process rewards
     # ==========================================================================
-    reward_allocation = data.get("reward_allocation")
-    if reward_allocation:
-        cycle_id = reward_allocation.get("cycle_id", "unknown")
-
-        # Handle allocations array (may contain multiple pending allocations)
-        allocations = reward_allocation.get("allocations", [])
-
-        # If no allocations array, check for legacy "miners" field (backwards compatibility)
-        if not allocations and reward_allocation.get("miners"):
-            allocations = [{
-                "timestamp": reward_allocation.get("rep_snapshot_version"),
-                "rep_snapshot_version": reward_allocation.get("rep_snapshot_version"),
-                "miners": reward_allocation.get("miners")
-            }]
-
-        # Save each allocation separately
-        saved_count = 0
-        for allocation in allocations:
-            # Save to REWARDS_DIR/<cycle_id>/<hotkey>/
-            rewards_dir = os.path.join(REWARDS_DIR, cycle_id, hotkey)
-            os.makedirs(rewards_dir, exist_ok=True)
-
-            reward_timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
-            reward_hex = secrets.token_hex(4)
-            reward_filename = f"reward_{reward_timestamp}.{reward_hex}.json"
-            reward_filepath = os.path.join(rewards_dir, reward_filename)
-
-            with open(reward_filepath, 'w', encoding='utf-8') as f:
-                json.dump(allocation, f, indent=2)
-
-            saved_count += 1
-
-        print(f"[INFO] Saved {saved_count} reward allocation(s) for validator {hotkey[:16]}...")
-
-    # ==========================================================================
-    # 12) Get rep_cache for response (Phase 3 - Cycle 2)
-    # NOTE: Decay (subtracting 0.01 from rep_score) is handled by the DB machine,
-    # not here. The DB processes saved reward allocations and updates rep_score.
-    # ==========================================================================
+    snapshot_version = None
+    generated_at = None
+    rep_cache = {}
+    current_snapshot = None
+    
     with _snapshot_lock:
-        snapshot_version = CURRENT_REP_SNAPSHOT.get("version")
-        generated_at = CURRENT_REP_SNAPSHOT.get("generated_at")
-        rep_cache = CURRENT_REP_SNAPSHOT.get("miners", {})
+        try:
+            current_snapshot = get_snapshot()
+            
+            snapshot_version = current_snapshot.get("version")
+            generated_at = current_snapshot.get("generated_at")
+            
+            # Convert miners list to dict keyed by hotkey for rep_cache response
+            # The JSON has miners as a list: [{hotkey, rep_score, rep_tier, ...}, ...]
+            miners_list = current_snapshot.get("miners", [])
+            for miner in miners_list:
+                hotkey_key = miner.get("hotkey")
+                if hotkey_key:
+                    rep_cache[hotkey_key] = {
+                        "rep_score": miner.get("rep_score", 0),
+                        "rep_tier": miner.get("rep_tier", "Unknown")
+                    }
+            
+            print(f"[INFO] Retrieved snapshot from get_snapshot(): version={snapshot_version}, miners={len(rep_cache)}")
+
+        except Exception as e:
+            print(f"[ERROR] Failed to get snapshot from get_snapshot(): {e}")
+
+        # ==========================================================================
+        # 12) Process reward_allocation if present (Phase 4 - Cycle 1)
+        # Update miners with rewards and send to database
+        # ==========================================================================
+        reward_allocation_data = data.get("reward_allocation")
+        if reward_allocation_data and current_snapshot:
+            try:
+                # Handle allocations array (may contain multiple pending allocations)
+                allocations = reward_allocation_data.get("allocations", [])
+
+                # If no allocations array, check for legacy "miners" field (backwards compatibility)
+                if not allocations and reward_allocation_data.get("miners"):
+                    allocations = [{
+                        "timestamp": reward_allocation_data.get("rep_snapshot_version"),
+                        "rep_snapshot_version": reward_allocation_data.get("rep_snapshot_version"),
+                        "miners": reward_allocation_data.get("miners")
+                    }]
+
+                # Collect all miners that received rewards (from all allocations)
+                rewarded_miner_hotkeys = set()
+                for allocation in allocations:
+                    allocation_miners = allocation.get("miners", [])
+                    for allocation_miner in allocation_miners:
+                        miner_hotkey = allocation_miner.get("hotkey")
+                        if miner_hotkey:
+                            rewarded_miner_hotkeys.add(miner_hotkey)
+                
+                # Create a dict of current snapshot miners keyed by hotkey for easy lookup
+                snapshot_miners_list = current_snapshot.get("miners", [])
+                snapshot_miners_dict = {miner.get("hotkey"): miner for miner in snapshot_miners_list}
+                
+                # For each miner that received rewards and exists in database, subtract 0.01 from rep_score
+                updated_miners_count = 0
+                for miner_hotkey in rewarded_miner_hotkeys:
+                    if miner_hotkey in snapshot_miners_dict:
+                        snapshot_miner = snapshot_miners_dict[miner_hotkey]
+                        current_score = snapshot_miner.get("rep_score", 0.0)
+                        # Subtract 0.01 from rep_score
+                        snapshot_miner["rep_score"] = max(0.0, current_score - 0.01)
+                        # Also update rep_cache to reflect the change
+                        if miner_hotkey in rep_cache:
+                            rep_cache[miner_hotkey]["rep_score"] = snapshot_miner["rep_score"]
+                        updated_miners_count += 1
+
+                # Send updated snapshot to database using reward_allocation
+                if updated_miners_count > 0:
+                    result = reward_allocation(current_snapshot)
+                    print(f"[INFO] Applied decay (-0.01) to {updated_miners_count} miner(s) and sent to database via reward_allocation()")
+                else:
+                    print(f"[INFO] No miners to update in reward allocation")
+
+            except Exception as e:
+                print(f"[ERROR] Failed to process reward_allocation: {e}")
 
     # 13) Return a success response with rep_cache
     return jsonify({
