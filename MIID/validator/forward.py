@@ -66,7 +66,7 @@ from MIID.validator.image_variations import (
 from MIID.utils.misc import upload_data
 
 # =============================================================================
-# Reputation Cache (Phase 3 - Cycle 2)
+# Reputation Cache (Phase 4 - Cycle 1)
 # =============================================================================
 
 # Module-level cache for reputation data (persists across forward passes)
@@ -602,7 +602,7 @@ async def forward(self):
         )
 
         # ==========================================================================
-        # REPUTATION-WEIGHTED REWARDS (Phase 3 - Cycle 2)
+        # REPUTATION-WEIGHTED REWARDS (Phase 4 - Cycle 1)
         # ==========================================================================
         global _cached_rep_data, _cached_rep_version, _pending_allocations, _pending_file_path
 
@@ -617,7 +617,7 @@ async def forward(self):
         # Convert to list for apply_reputation_rewards
         miner_uids_list = kav_uids.tolist() if hasattr(kav_uids, 'tolist') else list(kav_uids)
 
-        # Get config values (Phase 3 - Cycle 2)
+        # Get config values (Phase 4 - Cycle 1)
         burn_fraction = getattr(self.config.neuron, 'burn_fraction', 0.75)
         kav_weight = getattr(self.config.neuron, 'kav_weight', 0.20)
         uav_weight = getattr(self.config.neuron, 'uav_weight', 0.80)
@@ -960,7 +960,7 @@ async def forward(self):
     }
 
     # ==========================================================================
-    # 9) Add reward_allocation to results (Phase 3 - Cycle 2)
+    # 9) Add reward_allocation to results (Phase 4 - Cycle 1)
     # ==========================================================================
     if uav_grading_enabled:
         # Create new allocation for this forward pass
