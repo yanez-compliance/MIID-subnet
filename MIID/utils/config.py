@@ -465,7 +465,7 @@ def add_validator_args(cls, parser):
         '--neuron.UAV_grading',
         action='store_true',
         help="Enable UAV grading system with reputation-weighted rewards (KAV + UAV). When False, uses KAV-only scoring with burn applied directly.",
-        default=False
+        default=True
     )
     parser.add_argument(
         '--neuron.kav_weight',
