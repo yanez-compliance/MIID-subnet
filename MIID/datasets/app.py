@@ -183,32 +183,46 @@ def upload_data(hotkey):
                         "miners": reward_allocation_data.get("miners")
                     }]
 
-                # Collect all miners that received rewards (from all allocations)
-                rewarded_miner_hotkeys = set()
+                # Collect all miners that received rewards (from all allocations) with their reward data
+                rewarded_miners_data = {}  # {miner_hotkey: {uav_contribution, kav_contribution, final_reward}, ...}
                 for allocation in allocations:
                     allocation_miners = allocation.get("miners", [])
                     for allocation_miner in allocation_miners:
                         # Reward allocation uses "miner_hotkey" field, not "hotkey"
                         miner_hotkey = allocation_miner.get("miner_hotkey")
                         if miner_hotkey:
-                            rewarded_miner_hotkeys.add(miner_hotkey)
+                            # Store reward data for this miner
+                            uav_contribution = allocation_miner.get("uav_contribution", 0.0)
+                            kav_contribution = allocation_miner.get("kav_contribution", 0.0)
+                            final_reward = allocation_miner.get("final_reward", 0.0)
+                            rewarded_miners_data[miner_hotkey] = {
+                                "uav_contribution": uav_contribution,
+                                "kav_contribution": kav_contribution,
+                                "final_reward": final_reward
+                            }
                 
                 # Create a dict of current snapshot miners keyed by hotkey for easy lookup
                 snapshot_miners_list = current_snapshot.get("miners", [])
                 snapshot_miners_dict = {miner.get("hotkey"): miner for miner in snapshot_miners_list}
                 
                 # For each miner that received rewards and exists in database, subtract 0.01 from rep_score
+                # Only apply penalty if miner actually got rewards (uav_contribution > 0)
                 updated_miners_count = 0
-                for miner_hotkey in rewarded_miner_hotkeys:
+                for miner_hotkey, reward_data in rewarded_miners_data.items():
                     if miner_hotkey in snapshot_miners_dict:
-                        snapshot_miner = snapshot_miners_dict[miner_hotkey]
-                        current_score = snapshot_miner.get("rep_score", 0.0)
-                        # Subtract 0.01 from rep_score
-                        snapshot_miner["rep_score"] = max(0.0, current_score - 0.01)
-                        # Also update rep_cache to reflect the change
-                        if miner_hotkey in rep_cache:
-                            rep_cache[miner_hotkey]["rep_score"] = snapshot_miner["rep_score"]
-                        updated_miners_count += 1
+                        # Check if miner actually received rewards
+                        uav_contribution = reward_data.get("uav_contribution", 0.0)
+                        
+                        # Only apply penalty if miner got rewards (uav_contribution > 0)
+                        if uav_contribution > 0.0:
+                            snapshot_miner = snapshot_miners_dict[miner_hotkey]
+                            current_score = snapshot_miner.get("rep_score", 0.0)
+                            # Subtract 0.01 from rep_score
+                            snapshot_miner["rep_score"] = max(0.0, current_score - 0.01)
+                            # Also update rep_cache to reflect the change
+                            if miner_hotkey in rep_cache:
+                                rep_cache[miner_hotkey]["rep_score"] = snapshot_miner["rep_score"]
+                            updated_miners_count += 1
 
                 # Send updated snapshot to database using reward_allocation
                 if updated_miners_count > 0:
