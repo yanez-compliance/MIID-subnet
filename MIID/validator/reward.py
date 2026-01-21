@@ -2461,7 +2461,17 @@ def _grade_address_variations(variations: Dict[str, List[List[str]]], seed_addre
     }
 
 
-def _apply_blended_rank_cap_with_quality(rewards: np.ndarray, detailed_metrics: List[Dict], uids: List[int], top_miner_cap: int, quality_threshold: float, decay_rate: float, blend_factor: float, burn_uid: int) -> Tuple[np.ndarray, np.ndarray, List[Dict], bool]:
+def _apply_blended_rank_cap_with_quality(
+    rewards: np.ndarray,
+    detailed_metrics: List[Dict],
+    uids: List[int],
+    top_miner_cap: int,
+    quality_threshold: float,
+    decay_rate: float,
+    blend_factor: float,
+    burn_uid: int,
+    skip_burn: bool = False,
+) -> Tuple[np.ndarray, np.ndarray, List[Dict], bool]:
     """
     Applies a blended ranking model with a quality threshold.
     1. Ranks all miners based on their initial reward scores.
@@ -2473,6 +2483,7 @@ def _apply_blended_rank_cap_with_quality(rewards: np.ndarray, detailed_metrics: 
     
     Args:
         burn_uid: UID to receive burned emissions (always 59, hardcoded)
+        skip_burn: If True, do not append burn UID even in the 100% burn case.
     """    
     # Convert uids to numpy array for consistent return type
     uids = np.array(uids)
@@ -2533,8 +2544,18 @@ def _apply_blended_rank_cap_with_quality(rewards: np.ndarray, detailed_metrics: 
         # Return False to indicate 100% burn did not occur (miners qualified)
         return final_rewards, uids, detailed_metrics, False
     else:
-        # No miners qualified - burn all emissions
+        # No miners qualified - normally burn all emissions.
+        # If skip_burn=True (reputation-weighted pipeline), defer burn until after KAV+UAV are combined.
         bt.logging.warning("🔥 BURN EVENT: No miners qualified after applying top cap and quality threshold")
+        if skip_burn:
+            bt.logging.warning(
+                f"Deferring 100% burn to reputation-weighted stage (skip_burn=True). "
+                f"Not appending burn UID {burn_uid} in KAV stage."
+            )
+            # Return True to indicate the 100% burn condition occurred (no miners qualified),
+            # but do NOT modify uids/rewards here.
+            return final_rewards, uids, detailed_metrics, True
+
         bt.logging.warning(f"All emissions will be burned to UID {burn_uid}")
         
         # Extend arrays to include burn UID
@@ -3200,6 +3221,7 @@ def get_name_variation_rewards(
         decay_rate=self.config.neuron.decay_rate,
         blend_factor=self.config.neuron.blend_factor,
         burn_uid=burn_uid,
+        skip_burn=skip_burn,
     )
 
     # ==========================================================================
@@ -3656,23 +3678,32 @@ def apply_reputation_rewards(
         # Rescale all miners proportionally to keep_fraction
         rescale_factor = keep_fraction / total_reward_sum
         final_rewards = combined_rewards * rescale_factor
+        applied_burn = burn_fraction
+        burn_mode = "configured"
     else:
-        final_rewards = combined_rewards
+        # No miner received any KAV+UAV reward. Mirror the KAV stage behavior:
+        # burn 100% so the final distribution sums to 1.0.
+        final_rewards = np.zeros_like(combined_rewards)
+        applied_burn = 1.0
+        burn_mode = "100_percent"
 
-    # Add burn UID with burn_fraction weight
-    final_rewards = np.append(final_rewards, burn_fraction)
+    # Add burn UID with applied burn weight
+    final_rewards = np.append(final_rewards, applied_burn)
     final_uids = np.append(np.array(uids), BURN_UID)
 
     # Update metrics with final (post-burn) rewards
     for i, metric in enumerate(combined_metrics):
         metric["final_reward"] = float(final_rewards[i])
+        # Keep original configured burn_fraction for reference; also record what was applied.
         metric["burn_fraction"] = float(burn_fraction)
+        metric["burn_fraction_applied"] = float(applied_burn)
+        metric["burn_mode"] = burn_mode
 
     bt.logging.info(
         f"Applied reputation rewards for {len(uids)} miners ({new_miner_count} new, KAV-only). "
         f"KAV: {kav_weight}, UAV: {uav_weight}, Burn: {burn_fraction}. "
         f"Total before burn: {total_reward_sum:.4f}, "
-        f"Miners keep: {keep_fraction:.2%}, Burn UID {BURN_UID}: {burn_fraction:.2%}"
+        f"Miners keep: {keep_fraction:.2%}, Burn UID {BURN_UID}: {applied_burn:.2%} (mode={burn_mode})"
     )
 
     return final_rewards, final_uids, combined_metrics
