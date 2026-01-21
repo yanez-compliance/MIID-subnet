@@ -399,6 +399,12 @@ async def forward(self):
     # More generous allocation - especially for LLM operations
     adaptive_timeout = base_timeout + (len(seed_names) * 20) + (query_labels['variation_count'] * 10)
     adaptive_timeout = min(self.config.neuron.max_request_timeout, max(120, adaptive_timeout))  # clamp [120, max_request_timeout]
+    
+    # Phase 4: Increase timeout by 15 minutes (900 seconds) when Phase 4 is enabled
+    if PHASE4_ENABLED:
+        adaptive_timeout += 900  # Add 15 minutes
+        bt.logging.info(f"Phase 4 enabled: Increased adaptive timeout by 15 minutes (900 seconds)")
+    
     bt.logging.info(f"Using adaptive timeout of {adaptive_timeout} seconds for {len(seed_names)} identities")
     
     # ==========================================================================
