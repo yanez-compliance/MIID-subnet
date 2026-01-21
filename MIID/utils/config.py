@@ -456,7 +456,7 @@ def add_validator_args(cls, parser):
         '--neuron.burn_fraction',
         type=float,
         help="Fraction of emissions to burn to the burn UID when miners qualify.",
-        default=0.75
+        default=0.70
     )
     # Note: burn_uid is hardcoded to 59 and not configurable
     

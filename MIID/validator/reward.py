@@ -3184,7 +3184,7 @@ def get_name_variation_rewards(
         # detailed_metrics would remain as calculated before the penalty step
     
     # Get burn configuration from config with defaults
-    burn_fraction = getattr(self.config.neuron, 'burn_fraction', 0.75)
+    burn_fraction = getattr(self.config.neuron, 'burn_fraction', 0.70)
     burn_uid = 59  # Hardcoded: burn UID is always 59 and never configurable
     keep_fraction = 1.0 - burn_fraction
 
@@ -3219,12 +3219,12 @@ def get_name_variation_rewards(
             total_reward_sum = np.sum(rewards)
             
             if total_reward_sum > 0:
-                # Rescale miner rewards to keep_fraction (default 60%)
+                # Rescale miner rewards to keep_fraction (default 30%)
                 # This ensures miners receive keep_fraction of emissions, with burn_fraction going to burn
                 rescale_factor = keep_fraction / total_reward_sum
                 rewards = rewards * rescale_factor
                 
-                # Add burn UID with configured burn_fraction weight (default 40%)
+                # Add burn UID with configured burn_fraction weight (default 70%)
                 uids = np.append(uids, burn_uid)
                 rewards = np.append(rewards, burn_fraction)
                 
@@ -3535,7 +3535,7 @@ def apply_reputation_rewards(
     uids: List[int],
     rep_data: Dict[str, Dict],
     metagraph,
-    burn_fraction: float = 0.75,
+    burn_fraction: float = 0.70,
     kav_weight: float = 0.20,
     uav_weight: float = 0.80,
     kav_metrics: List[Dict] = None
@@ -3553,7 +3553,7 @@ def apply_reputation_rewards(
         uids: List of miner UIDs
         rep_data: Dict mapping hotkey -> {rep_score, rep_tier} from Flask
         metagraph: Bittensor metagraph for hotkey lookup
-        burn_fraction: Fraction to burn (default 0.75 for Cycle 2)
+        burn_fraction: Fraction to burn (default 0.0 for Cycle 2)
         kav_weight: Weight for KAV online quality (default 0.20 = 20%)
         uav_weight: Weight for UAV reputation-based (default 0.80 = 80%)
         kav_metrics: Optional detailed metrics from KAV calculation
@@ -3610,6 +3610,9 @@ def apply_reputation_rewards(
         uav_portion = uav_weight * uav_reward
         combined = kav_portion + uav_portion
         combined_rewards[i] = combined
+        bt.logging.info(f"Combined reward for miner {uid}: {combined:.4f}")
+        bt.logging.info(f"KAV portion for miner {uid}: {kav_portion:.4f}")
+        bt.logging.info(f"UAV portion for miner {uid}: {uav_portion:.4f}")
 
         # Calculate contributions (avoid division by zero)
         kav_contribution = kav_portion / combined if combined > 0 else 0

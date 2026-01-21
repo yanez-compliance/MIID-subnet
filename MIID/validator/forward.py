@@ -618,7 +618,7 @@ async def forward(self):
         miner_uids_list = kav_uids.tolist() if hasattr(kav_uids, 'tolist') else list(kav_uids)
 
         # Get config values (Phase 4 - Cycle 1)
-        burn_fraction = getattr(self.config.neuron, 'burn_fraction', 0.75)
+        burn_fraction = getattr(self.config.neuron, 'burn_fraction', 0.70)
         kav_weight = getattr(self.config.neuron, 'kav_weight', 0.20)
         uav_weight = getattr(self.config.neuron, 'uav_weight', 0.80)
 
