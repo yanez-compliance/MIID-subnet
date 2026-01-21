@@ -31,7 +31,7 @@ def get_snapshot():
     return result
 
 def reward_allocation(snapshot):
-    """Reward allocation to the miners (fake implementation - just returns success).
+    """Reward allocation to the miners (fake implementation - writes to JSON file).
 
     Args:
         snapshot: dict: The snapshot with the miners and their reputation updated.
@@ -53,11 +53,15 @@ def reward_allocation(snapshot):
     }
     
     Returns:
-        dict: A fake success response.
+        dict: A success response (mirrors the real API response).
     """
-    # For testing purposes, just return a success message
+    # Write the snapshot to the JSON file (like the real database would update)
+    with open(FAKE_DB_PATH, 'w', encoding='utf-8') as f:
+        json.dump(snapshot, f, indent=4)
+    
+    # Return a success response similar to what the real API would return
     return {
         "status": "success",
-        "message": "Reward allocation processed (fake)",
+        "message": "Reward allocation processed",
         "snapshot_version": snapshot.get("version")
     }
