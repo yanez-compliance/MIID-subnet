@@ -3575,7 +3575,7 @@ def apply_reputation_rewards(
         uids: List of miner UIDs
         rep_data: Dict mapping hotkey -> {rep_score, rep_tier} from Flask
         metagraph: Bittensor metagraph for hotkey lookup
-        burn_fraction: Fraction to burn (default 0.0 for Cycle 2)
+        burn_fraction: Fraction to burn (default 0.70 for Cycle 2)
         kav_weight: Weight for KAV online quality (default 0.20 = 20%)
         uav_weight: Weight for UAV reputation-based (default 0.80 = 80%)
         kav_metrics: Optional detailed metrics from KAV calculation
@@ -3632,9 +3632,9 @@ def apply_reputation_rewards(
         uav_portion = uav_weight * uav_reward
         combined = kav_portion + uav_portion
         combined_rewards[i] = combined
-        bt.logging.info(f"Combined reward for miner {uid}: {combined:.4f}")
-        bt.logging.info(f"KAV portion for miner {uid}: {kav_portion:.4f}")
-        bt.logging.info(f"UAV portion for miner {uid}: {uav_portion:.4f}")
+        # bt.logging.info(f"Combined reward for miner {uid}: {combined:.4f}")
+        # bt.logging.info(f"KAV portion for miner {uid}: {kav_portion:.4f}")
+        # bt.logging.info(f"UAV portion for miner {uid}: {uav_portion:.4f}")
 
         # Calculate contributions (avoid division by zero)
         kav_contribution = kav_portion / combined if combined > 0 else 0
