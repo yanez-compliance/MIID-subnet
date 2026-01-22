@@ -66,7 +66,7 @@ from MIID.validator.image_variations import (
 from MIID.utils.misc import upload_data
 
 # =============================================================================
-# Reputation Cache (Phase 3 - Cycle 2)
+# Reputation Cache (Phase 4 - Cycle 1)
 # =============================================================================
 
 # Module-level cache for reputation data (persists across forward passes)
@@ -399,6 +399,12 @@ async def forward(self):
     # More generous allocation - especially for LLM operations
     adaptive_timeout = base_timeout + (len(seed_names) * 20) + (query_labels['variation_count'] * 10)
     adaptive_timeout = min(self.config.neuron.max_request_timeout, max(120, adaptive_timeout))  # clamp [120, max_request_timeout]
+    
+    # Phase 4: Increase timeout by 15 minutes (900 seconds) when Phase 4 is enabled
+    if PHASE4_ENABLED:
+        adaptive_timeout += 900  # Add 15 minutes
+        bt.logging.info(f"Phase 4 enabled: Increased adaptive timeout by 15 minutes (900 seconds)")
+    
     bt.logging.info(f"Using adaptive timeout of {adaptive_timeout} seconds for {len(seed_names)} identities")
     
     # ==========================================================================
@@ -602,7 +608,7 @@ async def forward(self):
         )
 
         # ==========================================================================
-        # REPUTATION-WEIGHTED REWARDS (Phase 3 - Cycle 2)
+        # REPUTATION-WEIGHTED REWARDS (Phase 4 - Cycle 1)
         # ==========================================================================
         global _cached_rep_data, _cached_rep_version, _pending_allocations, _pending_file_path
 
@@ -617,8 +623,8 @@ async def forward(self):
         # Convert to list for apply_reputation_rewards
         miner_uids_list = kav_uids.tolist() if hasattr(kav_uids, 'tolist') else list(kav_uids)
 
-        # Get config values (Phase 3 - Cycle 2)
-        burn_fraction = getattr(self.config.neuron, 'burn_fraction', 0.75)
+        # Get config values (Phase 4 - Cycle 1)
+        burn_fraction = getattr(self.config.neuron, 'burn_fraction', 0.70)
         kav_weight = getattr(self.config.neuron, 'kav_weight', 0.20)
         uav_weight = getattr(self.config.neuron, 'uav_weight', 0.80)
 
@@ -730,14 +736,14 @@ async def forward(self):
         },
         # Phase 3 UAV data (collected and scored in Cycle 1 execution)
         "uav_data": {
-            "cycle": "Phase4-C1-Sandbox",
+            "cycle": "Phase4-C1-Exec",
             "note": "UAVs are collected and scored in Cycle 1 execution",
             "summary": uav_summary,
             "by_miner": uav_by_miner,
         },
         # Phase 4: Image variation data for YANEZ post-validation
         "phase4_image_data": {
-            "cycle": "Phase4-C1-Sandbox",
+            "cycle": "Phase4-C1-Exec",
             "note": "Image variations with S3 uploads, post-validation scoring by YANEZ",
             "enabled": PHASE4_ENABLED and image_request is not None,
             "s3_bucket": "yanez-miid-sn54",
@@ -933,34 +939,8 @@ async def forward(self):
     else:
         bt.logging.info("Weights set successfully.")
 
-    # Save the query and responses to a JSON file (now including weights)
-    json_path = os.path.join(run_dir, f"results_{timestamp}.json")
-    with open(json_path, 'w', encoding='utf-8') as f:
-        json.dump(results, f, indent=4)
-    
-    bt.logging.info(f"Saved validator results to: {json_path}")
-    
-    # Prepare extra data for wandb logging
-    wandb_extra_data = {
-        "query_template": query_template,
-        "variation_count": query_labels.get('variation_count'),
-        "seed_names_count": len(seed_names_with_labels),
-        "query_generation_model": successful_model,
-        "query_generator_timeout": successful_timeout,
-        "judge_model": successful_judge_model,
-        "judge_timeout": successful_judge_timeout,
-        "judge_enabled": self.query_generator.use_judge_model,
-        "dendrite_timeout": adaptive_timeout,
-        #"valid_responses": valid_responses,
-        #"total_responses": len(all_responses),
-        # Include query labels directly
-        "query_labels": query_labels,
-        # Add the path to the saved JSON results
-        #"json_results_path": json_path
-    }
-
     # ==========================================================================
-    # 9) Add reward_allocation to results (Phase 3 - Cycle 2)
+    # 9) Add reward_allocation to results (Phase 4 - Cycle 1)
     # ==========================================================================
     if uav_grading_enabled:
         # Create new allocation for this forward pass
@@ -992,6 +972,32 @@ async def forward(self):
             "note": "UAV_grading disabled - using KAV-only scoring"
         }
     # ==========================================================================
+
+    # Save the query and responses to a JSON file (now including weights and reward_allocation)
+    json_path = os.path.join(run_dir, f"results_{timestamp}.json")
+    with open(json_path, 'w', encoding='utf-8') as f:
+        json.dump(results, f, indent=4)
+    
+    bt.logging.info(f"Saved validator results to: {json_path}")
+    
+    # Prepare extra data for wandb logging
+    wandb_extra_data = {
+        "query_template": query_template,
+        "variation_count": query_labels.get('variation_count'),
+        "seed_names_count": len(seed_names_with_labels),
+        "query_generation_model": successful_model,
+        "query_generator_timeout": successful_timeout,
+        "judge_model": successful_judge_model,
+        "judge_timeout": successful_judge_timeout,
+        "judge_enabled": self.query_generator.use_judge_model,
+        "dendrite_timeout": adaptive_timeout,
+        #"valid_responses": valid_responses,
+        #"total_responses": len(all_responses),
+        # Include query labels directly
+        "query_labels": query_labels,
+        # Add the path to the saved JSON results
+        #"json_results_path": json_path
+    }
 
     # 10) Upload to external endpoint (moved to a separate utils function)
     # Adjust endpoint URL/hotkey if needed

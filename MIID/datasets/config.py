@@ -32,6 +32,7 @@ ALLOWED_HOTKEYS: List[str] = [
     "5GQqAhLKVHRLpdTqRg1yc3xu7y47DicJykSpggE2GuDbfs54", #Rizzo new HK June30th
     "5EZpnZASr7E13pjbQJVtk2JVQsnB1E9juEw2VuNxDyo54MUV", #MUV validator
     "5E2LP6EnZ54m3wS8s1yPvD5c3xo71kQroBw7aUVK32TKeZ5u", #Tao.bot
+    # "5CnkkjPdfsA6jJDHv2U6QuiKiivDuvQpECC13ffdmSDbkgtt",  # testnet validator
 ]
 
 # Hugging Face configuration
