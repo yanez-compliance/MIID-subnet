@@ -736,14 +736,14 @@ async def forward(self):
         },
         # Phase 3 UAV data (collected and scored in Cycle 1 execution)
         "uav_data": {
-            "cycle": "Phase4-C1-Sandbox",
+            "cycle": "Phase4-C1-Exec",
             "note": "UAVs are collected and scored in Cycle 1 execution",
             "summary": uav_summary,
             "by_miner": uav_by_miner,
         },
         # Phase 4: Image variation data for YANEZ post-validation
         "phase4_image_data": {
-            "cycle": "Phase4-C1-Sandbox",
+            "cycle": "Phase4-C1-Exec",
             "note": "Image variations with S3 uploads, post-validation scoring by YANEZ",
             "enabled": PHASE4_ENABLED and image_request is not None,
             "s3_bucket": "yanez-miid-sn54",
