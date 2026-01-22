@@ -18,12 +18,12 @@ from MIID.datasets.config import (
 )
 
 # Import methods from db_machine
-# import sys
-# sys.path.insert(0, '/home/ubuntu/YanezMIIDManage')
-# from db_machine import get_snapshot, reward_allocation
+import sys
+sys.path.insert(0, '/home/ubuntu/YanezMIIDManage')
+from db_machine import get_snapshot, reward_allocation
 
 # Use fake calls for testing (reads from JSON file instead of database)
-from MIID.datasets.fake_calls import get_snapshot, reward_allocation
+# from MIID.datasets.fake_calls import get_snapshot, reward_allocation
 
 
 # Import verify_message function
@@ -32,7 +32,7 @@ from MIID.utils.verify_message import verify_message
 ## gunicorn MIID.datasets.app:app --bind 0.0.0.0:5000 --workers 4
 
 # =============================================================================
-# Reputation Snapshot Cache (Phase 3 - Cycle 2)
+# Reputation Snapshot Cache (Phase 4 - Cycle 1)
 # =============================================================================
 
 # Global reputation snapshot cache (thread-safe)
@@ -238,7 +238,7 @@ def upload_data(hotkey):
     return jsonify({
         "message": "Data received and verified successfully",
         "filename": final_filename,
-        # Reputation cache for next forward pass (Phase 3 - Cycle 2)
+        # Reputation cache for next forward pass (Phase 4 - Cycle 1)
         "rep_snapshot_version": snapshot_version,
         "generated_at": generated_at,
         "rep_cache": rep_cache  # All miners: {hotkey: {rep_score, rep_tier}, ...}
