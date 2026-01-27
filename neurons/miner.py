@@ -410,6 +410,13 @@ class Miner(BaseMinerNeuron):
             bt.logging.info(f"Phase 4: Decoding base image: {image_request.image_filename}")
             base_image = decode_base_image(image_request.base_image)
 
+            # Extract seed image name from filename (remove .png extension if present)
+            seed_image_name = image_request.image_filename
+            if seed_image_name.endswith('.png'):
+                seed_image_name = seed_image_name[:-4]  # Remove .png extension
+            elif seed_image_name.endswith('.jpg') or seed_image_name.endswith('.jpeg'):
+                seed_image_name = seed_image_name.rsplit('.', 1)[0]  # Remove extension
+
             # 2. Generate variations (SANDBOX: returns copies)
             bt.logging.info(f"Phase 4: Generating {image_request.requested_variations} variations")
             variations = generate_variations(
@@ -465,7 +472,8 @@ class Miner(BaseMinerNeuron):
                         target_round=target_round,
                         challenge_id=challenge_id,
                         variation_type=var["variation_type"],
-                        path_signature=path_signature
+                        path_signature=path_signature,
+                        seed_image_name=seed_image_name
                     )
 
                     if s3_key:

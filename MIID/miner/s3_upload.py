@@ -112,7 +112,8 @@ def upload_to_s3(
     target_round: int,
     challenge_id: str,
     variation_type: str,
-    path_signature: str
+    path_signature: str,
+    seed_image_name: str
 ) -> Optional[str]:
     """Upload encrypted image to S3 (or local storage as fallback).
 
@@ -133,13 +134,14 @@ def upload_to_s3(
         variation_type: Type of variation (pose, expression, etc.)
         path_signature: Unique path component derived from miner's signature
                        Format: sign(challenge_id:miner_hotkey)[:16]
+        seed_image_name: Name of the base image (e.g., "0ad9417fe84e_m_doc")
 
     Returns:
         S3 key (path) if successful, None if failed
     """
     # Generate S3 key path with path_signature for security
     timestamp = int(time.time())
-    s3_key = f"submissions/{challenge_id}/{miner_hotkey}/{path_signature}/{variation_type}_{timestamp}.png.tlock"
+    s3_key = f"submissions/{challenge_id}/{miner_hotkey}/{path_signature}/{seed_image_name}/{variation_type}_{timestamp}.png.tlock"
 
     # Prepare metadata
     metadata = {
@@ -150,6 +152,7 @@ def upload_to_s3(
         "challenge_id": challenge_id,
         "variation_type": variation_type,
         "path_signature": path_signature,
+        "seed_image_name": seed_image_name,
         "timestamp": str(timestamp),
         "size_bytes": str(len(encrypted_data))
     }
@@ -285,7 +288,7 @@ def validate_s3_key(s3_key: str) -> bool:
     """Validate S3 key format.
 
     Expected format:
-    submissions/{challenge_id}/{miner_hotkey}/{path_signature}/{variation_type}_{timestamp}.png.tlock
+    submissions/{challenge_id}/{miner_hotkey}/{path_signature}/{seed_image_name}/{variation_type}_{timestamp}.png.tlock
 
     Args:
         s3_key: S3 key to validate
@@ -300,8 +303,8 @@ def validate_s3_key(s3_key: str) -> bool:
         return False
 
     parts = s3_key.split("/")
-    # Expected: submissions / challenge_id / miner_hotkey / path_signature / filename
-    if len(parts) < 5:
+    # Expected: submissions / challenge_id / miner_hotkey / path_signature / seed_image_name / filename
+    if len(parts) < 6:
         return False
 
     if not s3_key.endswith(".tlock"):
@@ -315,6 +318,7 @@ def generate_s3_key(
     miner_hotkey: str,
     variation_type: str,
     path_signature: str,
+    seed_image_name: str,
     timestamp: Optional[int] = None
 ) -> str:
     """Generate a valid S3 key for an image submission.
@@ -324,6 +328,7 @@ def generate_s3_key(
         miner_hotkey: Miner's hotkey address
         variation_type: Type of variation
         path_signature: Unique path component from miner's signature
+        seed_image_name: Name of the base image (e.g., "0ad9417fe84e_m_doc")
         timestamp: Optional timestamp (defaults to current time)
 
     Returns:
@@ -332,7 +337,7 @@ def generate_s3_key(
     if timestamp is None:
         timestamp = int(time.time())
 
-    return f"submissions/{challenge_id}/{miner_hotkey}/{path_signature}/{variation_type}_{timestamp}.png.tlock"
+    return f"submissions/{challenge_id}/{miner_hotkey}/{path_signature}/{seed_image_name}/{variation_type}_{timestamp}.png.tlock"
 
 
 def list_local_submissions(challenge_id: Optional[str] = None) -> list:
