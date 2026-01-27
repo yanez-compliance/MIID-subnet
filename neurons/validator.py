@@ -51,6 +51,12 @@ import os
 import shutil
 import copy
 from dotenv import load_dotenv
+from pathlib import Path
+try:
+    import requests
+    REQUESTS_AVAILABLE = True
+except ImportError:
+    REQUESTS_AVAILABLE = False
 
 # Load environment variables from .env file (e.g., vali.env)
 # This will load WANDB_API_KEY if set in the file
@@ -104,6 +110,10 @@ class Validator(BaseValidatorNeuron):
     # but you can try other models and see which one performs better for your use case
     
     DEFAULT_LLM_MODEL = "llama3.1:latest" # llama3.1:latest is the default model for the validator
+    
+    # S3 Configuration for base images download
+    S3_BUCKET_NAME = os.environ.get("MIID_S3_BUCKET", "yanez-miid-sn54")
+    S3_REGION = os.environ.get("MIID_S3_REGION", "us-east-1")
 
     def __init__(self, config=None):
         """
@@ -187,11 +197,81 @@ class Validator(BaseValidatorNeuron):
         # Initialize the query generator
         self.query_generator = QueryGenerator(self.config)
         
+        # Download base images from S3 using validator's hotkey
+        self._download_base_images_from_s3()
+        
         bt.logging.info("Ollama initialized")
         bt.logging.info(f"Using LLM model: {self.model_name}")
         bt.logging.info("Finished initializing Validator")
         bt.logging.info("----------------------------------")
         time.sleep(1)
+
+    def _download_base_images_from_s3(self):
+        """Download base images from S3 bucket using validator's hotkey address.
+        
+        Downloads images from S3 where the filename is the validator's hotkey address.
+        Images are saved to MIID/validator/base_images directory.
+        This only runs during initialization.
+        """
+        if not REQUESTS_AVAILABLE:
+            bt.logging.warning("requests library not available. Skipping S3 base images download.")
+            return
+        
+        try:
+            # Get the base images directory path (relative to repo root)
+            # This will be MIID/validator/base_images
+            repo_root = Path(__file__).parent.parent  # Go up from neurons/ to repo root
+            base_images_dir = repo_root / "MIID" / "validator" / "base_images"
+            
+            # Ensure the directory exists
+            base_images_dir.mkdir(parents=True, exist_ok=True)
+            bt.logging.info(f"Base images directory: {base_images_dir}")
+            
+            # Get validator's hotkey address
+            hotkey_address = self.wallet.hotkey.ss58_address
+            bt.logging.info(f"Downloading base images for hotkey: {hotkey_address}")
+            
+            # Try downloading image files
+            image_extensions = ['.png', '.jpg', '.jpeg']
+            s3_key_prefixes = [
+                f"base_images/{hotkey_address}",
+                f"{hotkey_address}"
+            ]
+            
+            downloaded_count = 0
+            
+            for prefix in s3_key_prefixes:
+                for ext in image_extensions:
+                    s3_key = f"{prefix}{ext}"
+                    url = f"https://{self.S3_BUCKET_NAME}.s3.{self.S3_REGION}.amazonaws.com/{s3_key}"
+                    
+                    try:
+                        response = requests.get(url, timeout=30)
+                        if response.status_code == 200:
+                            # Save the image
+                            image_path = base_images_dir / f"{hotkey_address}{ext}"
+                            with open(image_path, 'wb') as f:
+                                f.write(response.content)
+                            bt.logging.info(f"Downloaded base image: {image_path.name} ({len(response.content)} bytes)")
+                            downloaded_count += 1
+                            break  # Found the file, no need to try other extensions
+                    except requests.exceptions.RequestException as e:
+                        bt.logging.debug(f"Failed to download {s3_key}: {e}")
+                        continue
+                
+                if downloaded_count > 0:
+                    break  # Found file with this prefix
+            
+            if downloaded_count > 0:
+                bt.logging.info(f"Successfully downloaded {downloaded_count} base image(s) from S3")
+            else:
+                bt.logging.warning(f"No base images found in S3 for hotkey: {hotkey_address}")
+                bt.logging.warning("Validator will continue with existing base images in the directory")
+                
+        except Exception as e:
+            bt.logging.error(f"Error downloading base images from S3: {e}")
+            bt.logging.error(traceback.format_exc())
+            bt.logging.warning("Validator will continue with existing base images in the directory")
 
     def _get_model_name_from_response(self, model_data: any) -> str:
         """Safely extract model name from ollama list response item."""
