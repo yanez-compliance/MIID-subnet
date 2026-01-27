@@ -3566,9 +3566,14 @@ def apply_reputation_rewards(
     Apply reputation weighting to KAV rewards, combine with UAV, and apply burn.
 
     This single function handles the entire reputation reward pipeline:
-    1. Calculate UAV rewards (R × T) from rep_data
-    2. Combine KAV + UAV: (kav_weight × Q) + (uav_weight × R × T)
-    3. Apply burn: rescale all to keep_fraction, add burn UID 59
+    1. Calculate UAV rewards (R × T) from rep_data and KAV portions (Q) separately
+    2. Rescale KAV and UAV portions separately to guarantee exact proportions:
+       - KAV portions scaled to sum to keep_fraction * kav_weight (e.g., 0.3 * 0.2 = 0.06)
+       - UAV portions scaled to sum to keep_fraction * uav_weight (e.g., 0.3 * 0.8 = 0.24)
+    3. Combine rescaled portions per miner and add burn UID 59
+
+    This ensures that after burn, exactly kav_weight% of kept rewards go to KAV
+    and uav_weight% go to UAV, regardless of the raw score distributions.
 
     Args:
         kav_rewards: KAV quality scores (Q) from get_name_variation_rewards()
@@ -3586,10 +3591,12 @@ def apply_reputation_rewards(
             - final_uids: np.ndarray including burn UID
             - combined_metrics: List of dicts with full breakdown per miner
     """
-    combined_rewards = np.zeros(len(uids))
+    # Separate arrays for KAV and UAV portions
+    kav_portions = np.zeros(len(uids))
+    uav_portions = np.zeros(len(uids))
     combined_metrics = []
 
-    # --- Step 1 & 2: Calculate UAV and combine with KAV ---
+    # --- Step 1: Calculate KAV and UAV portions separately ---
     new_miner_count = 0
     for i, uid in enumerate(uids):
         hotkey = metagraph.hotkeys[uid]
@@ -3627,18 +3634,11 @@ def apply_reputation_rewards(
                 # UAV reward = R_norm × T (using NORMALIZED rep_score)
                 uav_reward = R_norm * T
 
-        # Apply weights and combine
-        kav_portion = kav_weight * Q
-        uav_portion = uav_weight * uav_reward
-        combined = kav_portion + uav_portion
-        combined_rewards[i] = combined
-        # bt.logging.info(f"Combined reward for miner {uid}: {combined:.4f}")
-        # bt.logging.info(f"KAV portion for miner {uid}: {kav_portion:.4f}")
-        # bt.logging.info(f"UAV portion for miner {uid}: {uav_portion:.4f}")
-
-        # Calculate contributions (avoid division by zero)
-        kav_contribution = kav_portion / combined if combined > 0 else 0
-        uav_contribution = uav_portion / combined if combined > 0 else 0
+        # Calculate portions separately (before rescaling)
+        kav_portion_raw = kav_weight * Q
+        uav_portion_raw = uav_weight * uav_reward
+        kav_portions[i] = kav_portion_raw
+        uav_portions[i] = uav_portion_raw
 
         # Build metrics - merge KAV details with reputation metrics
         kav_info = kav_metrics[i] if kav_metrics and i < len(kav_metrics) else {}
@@ -3650,18 +3650,14 @@ def apply_reputation_rewards(
             "is_new_miner": is_new_miner,  # True if miner not in rep_data (zero UAV)
             # KAV details
             "quality_score": float(Q),
-            "kav_portion": float(kav_portion),
+            "kav_portion_raw": float(kav_portion_raw),
             # UAV details (raw + normalized)
             "rep_score": float(rep_score),           # Raw score from policy (0.10 - 9999.0), 0 for new miners
             "rep_score_normalized": float(R_norm),   # Normalized for rewards (0.5 - 2.0), 0 for new miners
             "rep_tier": rep_tier,                    # "New" for new miners
             "tier_multiplier": float(T),
             "uav_reward": float(uav_reward),
-            "uav_portion": float(uav_portion),
-            # Combined (before burn)
-            "combined_reward": float(combined),
-            "kav_contribution": float(kav_contribution),
-            "uav_contribution": float(uav_contribution),
+            "uav_portion_raw": float(uav_portion_raw),
         }
 
         # # Merge KAV detailed metrics (variations, similarity scores, etc.) if available
@@ -3670,40 +3666,88 @@ def apply_reputation_rewards(
 
         combined_metrics.append(metric_entry)
 
-    # --- Step 3: Apply burn (proportional rescaling + burn UID) ---
-    total_reward_sum = np.sum(combined_rewards)
+    # --- Step 2: Calculate totals and rescale separately to guarantee proportions ---
     keep_fraction = 1.0 - burn_fraction
+    total_kav = np.sum(kav_portions)
+    total_uav = np.sum(uav_portions)
 
-    if total_reward_sum > 0:
-        # Rescale all miners proportionally to keep_fraction
-        rescale_factor = keep_fraction / total_reward_sum
-        final_rewards = combined_rewards * rescale_factor
-        applied_burn = burn_fraction
-        burn_mode = "configured"
-    else:
-        # No miner received any KAV+UAV reward. Mirror the KAV stage behavior:
-        # burn 100% so the final distribution sums to 1.0.
-        final_rewards = np.zeros_like(combined_rewards)
-        applied_burn = 1.0
+    # Determine burn mode and target totals based on what's available
+    # Edge cases: burn unused portions
+    # 1. No KAV and no UAV -> burn 100%
+    # 2. No UAV -> burn = burn_fraction + (uav_weight * keep_fraction) = 0.7 + 0.24 = 0.94
+    # 3. No KAV -> burn = burn_fraction + (kav_weight * keep_fraction) = 0.7 + 0.06 = 0.76
+    # 4. Both present -> normal burn = burn_fraction = 0.7
+
+    if total_kav == 0 and total_uav == 0:
         burn_mode = "100_percent"
+        target_kav_total = 0.0
+        target_uav_total = 0.0
+        applied_burn = 1.0
+    elif total_uav == 0:
+        burn_mode = "no_uav"
+        target_kav_total = keep_fraction * kav_weight  # e.g., 0.3 * 0.2 = 0.06
+        target_uav_total = 0.0
+        applied_burn = burn_fraction + (uav_weight * keep_fraction)  # 0.7 + 0.24 = 0.94
+    elif total_kav == 0:
+        burn_mode = "no_kav"
+        target_kav_total = 0.0
+        target_uav_total = keep_fraction * uav_weight  # e.g., 0.3 * 0.8 = 0.24
+        applied_burn = burn_fraction + (kav_weight * keep_fraction)  # 0.7 + 0.06 = 0.76
+    else:
+        burn_mode = "configured"
+        target_kav_total = keep_fraction * kav_weight  # e.g., 0.3 * 0.2 = 0.06
+        target_uav_total = keep_fraction * uav_weight  # e.g., 0.3 * 0.8 = 0.24
+        applied_burn = burn_fraction
 
-    # Add burn UID with applied burn weight
-    final_rewards = np.append(final_rewards, applied_burn)
-    final_uids = np.append(np.array(uids), BURN_UID)
+    # Rescale KAV and UAV portions separately to their target totals
+    if total_kav > 0 and target_kav_total > 0:
+        final_kav_portions = kav_portions * (target_kav_total / total_kav)
+    else:
+        final_kav_portions = np.zeros_like(kav_portions)
 
-    # Update metrics with final (post-burn) rewards
+    if total_uav > 0 and target_uav_total > 0:
+        final_uav_portions = uav_portions * (target_uav_total / total_uav)
+    else:
+        final_uav_portions = np.zeros_like(uav_portions)
+
+    # Combine rescaled portions per miner
+    final_rewards = final_kav_portions + final_uav_portions
+
+    # Update metrics with final (post-burn) values
     for i, metric in enumerate(combined_metrics):
-        metric["final_reward"] = float(final_rewards[i])
-        # Keep original configured burn_fraction for reference; also record what was applied.
+        final_kav = float(final_kav_portions[i])
+        final_uav = float(final_uav_portions[i])
+        combined = float(final_rewards[i])
+        
+        metric["kav_portion"] = final_kav
+        metric["uav_portion"] = final_uav
+        metric["combined_reward"] = combined
+        # final_reward will be set after burn UID is added to ensure it matches final_rewards array
+        
+        # Calculate contributions (avoid division by zero)
+        kav_contribution = final_kav / combined if combined > 0 else 0
+        uav_contribution = final_uav / combined if combined > 0 else 0
+        metric["kav_contribution"] = float(kav_contribution)
+        metric["uav_contribution"] = float(uav_contribution)
+        
+        # Burn info (set after burn_mode is determined)
         metric["burn_fraction"] = float(burn_fraction)
         metric["burn_fraction_applied"] = float(applied_burn)
         metric["burn_mode"] = burn_mode
 
+    # --- Step 3: Add burn UID ---
+    final_rewards = np.append(final_rewards, applied_burn)
+    final_uids = np.append(np.array(uids), BURN_UID)
+
+    # Update metrics with final_reward values from final_rewards array (after burn UID added)
+    # This ensures metrics match exactly what's in the final_rewards array
+    for i, metric in enumerate(combined_metrics):
+        metric["final_reward"] = float(final_rewards[i])
+
     bt.logging.info(
         f"Applied reputation rewards for {len(uids)} miners ({new_miner_count} new, KAV-only). "
         f"KAV: {kav_weight}, UAV: {uav_weight}, Burn: {burn_fraction}. "
-        f"Total before burn: {total_reward_sum:.4f}, "
-        f"Miners keep: {keep_fraction:.2%}, Burn UID {BURN_UID}: {applied_burn:.2%} (mode={burn_mode})"
+        f"Burn UID {BURN_UID}: {applied_burn:.2%} (mode={burn_mode})"
     )
 
     return final_rewards, final_uids, combined_metrics
