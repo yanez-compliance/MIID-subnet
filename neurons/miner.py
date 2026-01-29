@@ -49,6 +49,7 @@ different runs and facilitate analysis of results over time.
 
 import time
 import typing
+import io
 import bittensor as bt
 import ollama
 import pandas as pd
@@ -56,6 +57,7 @@ import os
 import numpy as np
 from typing import List, Dict, Tuple, Any, Optional
 from tqdm import tqdm
+from PIL import Image
 
 # Bittensor Miner Template:
 from MIID.protocol import IdentitySynapse, S3Submission
@@ -339,54 +341,24 @@ class Miner(BaseMinerNeuron):
 
         return synapse
 
-    def validate_png_image(self, image_bytes: bytes) -> bool:
-        """Quick validation that image bytes represent a valid PNG file.
-        
-        This method performs lightweight metadata checks without fully loading the image:
-        1. Verifies PNG magic bytes (file signature)
-        2. Checks for required PNG chunks (IHDR and IEND) in the structure
-        
+    def is_valid_image_bytes(self, image_bytes: bytes) -> bool:
+        """
+        Validate whether raw bytes represent a valid image of any supported format.
+
+        This uses Pillow's image decoder to verify integrity without fully loading
+        pixel data.
+
         Args:
-            image_bytes: Raw image bytes to validate
-            
+            image_bytes: Raw image bytes
+
         Returns:
-            True if the image has valid PNG metadata, False otherwise
+            True if the bytes represent a valid image, False otherwise
         """
         try:
-            # Check 1: Verify PNG magic bytes (file signature)
-            # PNG files start with: 89 50 4E 47 0D 0A 1A 0A
-            png_signature = b'\x89\x50\x4E\x47\x0D\x0A\x1A\x0A'
-            if len(image_bytes) < 8:
-                bt.logging.warning("Phase 4: Image bytes too short to be a valid PNG")
-                return False
-            
-            if image_bytes[:8] != png_signature:
-                bt.logging.warning("Phase 4: Image bytes do not have PNG signature")
-                return False
-            
-            # Check 2: Verify PNG structure has required chunks
-            # PNG files must have IHDR (header) and IEND (end) chunks
-            # IHDR should appear right after the signature (at position 8)
-            # IEND should appear near the end
-            if len(image_bytes) < 24:  # Need at least signature + IHDR chunk header
-                bt.logging.warning("Phase 4: Image bytes too short for PNG structure")
-                return False
-            
-            # Check for IHDR chunk (should be at position 8-12)
-            if b'IHDR' not in image_bytes[8:16]:
-                bt.logging.warning("Phase 4: PNG missing IHDR chunk")
-                return False
-            
-            # Check for IEND chunk (should be in the last 12 bytes)
-            if b'IEND' not in image_bytes[-12:]:
-                bt.logging.warning("Phase 4: PNG missing IEND chunk")
-                return False
-            
-            bt.logging.debug("Phase 4: PNG metadata validation passed")
+            with Image.open(io.BytesIO(image_bytes)) as img:
+                img.verify()  # Verifies file integrity without decoding pixels
             return True
-                
-        except Exception as e:
-            bt.logging.error(f"Phase 4: Error during PNG validation: {e}")
+        except Exception:
             return False
 
     def process_image_request(self, synapse: IdentitySynapse) -> List[S3Submission]:
@@ -438,10 +410,10 @@ class Miner(BaseMinerNeuron):
 
             for var in variations:
                 try:
-                    # Validate PNG before processing
-                    if not self.validate_png_image(var["image_bytes"]):
+                    # Validate image before processing
+                    if not self.is_valid_image_bytes(var["image_bytes"]):
                         bt.logging.warning(
-                            f"Phase 4: Skipping invalid/corrupt PNG for {var['variation_type']}"
+                            f"Phase 4: Skipping invalid/corrupt image for {var['variation_type']}"
                         )
                         continue
                     
