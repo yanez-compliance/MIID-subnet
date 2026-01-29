@@ -68,7 +68,7 @@ from MIID.base.miner import BaseMinerNeuron
 from bittensor.core.errors import NotVerifiedException
 
 # Phase 4 imports
-from MIID.miner.image_generator import decode_base_image, generate_variations
+from MIID.miner.image_generator import decode_base_image, generate_variations, validate_variation
 from MIID.miner.drand_encrypt import encrypt_image_for_drand, is_timelock_available
 from MIID.miner.s3_upload import upload_to_s3
 
@@ -389,12 +389,15 @@ class Miner(BaseMinerNeuron):
             elif seed_image_name.endswith('.jpg') or seed_image_name.endswith('.jpeg'):
                 seed_image_name = seed_image_name.rsplit('.', 1)[0]  # Remove extension
 
-            # 2. Generate variations (SANDBOX: returns copies)
-            bt.logging.info(f"Phase 4: Generating {image_request.requested_variations} variations")
+            # 2. Generate variations via FLUX: pass full variation_requests (type + intensity per variation)
+            #    so the model gets the correct prompt for each (pose_edit/light, expression_edit/medium, etc.)
+            bt.logging.info(
+                f"Phase 4: Generating {image_request.requested_variations} variations "
+                f"(from validator: {[f'{v.type}({v.intensity})' for v in image_request.variation_requests]})"
+            )
             variations = generate_variations(
                 base_image,
-                image_request.variation_types,
-                image_request.requested_variations
+                image_request.variation_requests
             )
 
             # 3. Process each variation
@@ -414,6 +417,13 @@ class Miner(BaseMinerNeuron):
                     if not self.is_valid_image_bytes(var["image_bytes"]):
                         bt.logging.warning(
                             f"Phase 4: Skipping invalid/corrupt image for {var['variation_type']}"
+                        )
+                        continue
+
+                    # Validate face identity preserved (AdaFace, threshold 0.7)
+                    if not validate_variation(var, base_image, min_similarity=0.7):
+                        bt.logging.warning(
+                            f"Phase 4: Skipping {var['variation_type']} - face identity not preserved"
                         )
                         continue
                     
