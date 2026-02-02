@@ -266,11 +266,12 @@ def upload_data(hotkey):
 def get_validator_images(hotkey):
     """
     Return all base images for this validator (that hotkey's folder under base_images).
+    Only hotkeys in HOTKEY_TO_FOLDER can call this endpoint (validators with image folders).
     Request body: JSON with "signature" (signed message from that hotkey).
     Response: { "validator_folder", "verified_by", "images": [{ "filename", "data_base64" }, ...], "count" }.
     """
-    if hotkey not in ALLOWED_HOTKEYS:
-        return jsonify({"error": "Unauthorized hotkey"}), 403
+    if hotkey not in HOTKEY_TO_FOLDER:
+        return jsonify({"error": "Unauthorized hotkey or no image folder for this validator"}), 403
 
     if not request.is_json:
         return jsonify({"error": "Request body must be JSON"}), 400
