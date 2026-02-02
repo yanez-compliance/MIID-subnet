@@ -54,11 +54,18 @@ from MIID.utils.sign_message import sign_message
 from MIID.validator.query_generator import QueryGenerator, add_uav_requirements
 
 # Phase 4 imports
-from MIID.validator.base_images import load_random_base_image, validate_base_images_folder
+from MIID.validator.base_images import (
+    load_random_base_image,
+    validate_base_images_folder,
+    get_sorted_image_files,
+    load_image_by_index
+)
 from MIID.validator.drand_utils import calculate_target_round, calculate_reveal_buffer
 from MIID.validator.image_variations import (
     select_random_variations,
-    format_variation_requirements
+    format_variation_requirements,
+    get_variation_by_index,
+    get_total_variation_combinations
 )
 
 
@@ -76,6 +83,67 @@ _cached_rep_version: Optional[str] = None
 # Module-level pending queue for failed uploads (persists across forward passes)
 _pending_allocations: List[Dict] = []
 _pending_file_path: Optional[Path] = None
+
+# =============================================================================
+# Phase 4: Sequential Image/Variation Cycling State
+# =============================================================================
+# Tracks the current position in the image × variation cycle.
+# Global index = (image_index × variations_per_image) + variation_index
+# This ensures we cycle through: image1/var1, image1/var2, ..., image2/var1, ...
+
+_phase4_global_index: int = 0
+_phase4_state_file_path: Optional[Path] = None
+
+
+def _load_phase4_state(file_path: Path) -> int:
+    """Load the Phase 4 global index from disk on startup."""
+    if file_path.exists():
+        try:
+            with open(file_path, 'r') as f:
+                data = json.load(f)
+                return data.get("global_index", 0)
+        except Exception:
+            return 0
+    return 0
+
+
+def _save_phase4_state(file_path: Path, global_index: int):
+    """Save the Phase 4 global index to disk."""
+    file_path.parent.mkdir(parents=True, exist_ok=True)
+    with open(file_path, 'w') as f:
+        json.dump({"global_index": global_index}, f)
+
+
+def _get_next_image_and_variation(num_images: int) -> Tuple[int, int, int]:
+    """Get the next image index and variation index in the cycle.
+
+    Args:
+        num_images: Total number of available images
+
+    Returns:
+        Tuple of (image_index, variation_index, new_global_index)
+    """
+    global _phase4_global_index
+
+    if num_images == 0:
+        return 0, 0, 0
+
+    variations_per_image = get_total_variation_combinations()
+    total_combinations = num_images * variations_per_image
+
+    # Wrap around if we've completed a full cycle
+    current_index = _phase4_global_index % total_combinations
+
+    # Calculate image and variation indices
+    image_index = current_index // variations_per_image
+    variation_index = current_index % variations_per_image
+
+    # Increment for next call
+    new_global_index = _phase4_global_index + 1
+
+    return image_index, variation_index, new_global_index
+
+# =============================================================================
 
 
 def _load_pending_allocations(file_path: Path) -> List[Dict]:
@@ -408,64 +476,104 @@ async def forward(self):
     bt.logging.info(f"Using adaptive timeout of {adaptive_timeout} seconds for {len(seed_names)} identities")
     
     # ==========================================================================
-    # Phase 4: Create Image Request
+    # Phase 4: Create Image Request (Sequential Cycling)
+    # ==========================================================================
+    # Instead of random selection, we cycle through all images and all variations
+    # sequentially: image1/variation1, image1/variation2, ..., image2/variation1, ...
+    # Only ONE variation is sent per request_synapse.
+    # When all combinations are exhausted, we restart from the beginning.
     # ==========================================================================
     image_request = None
     challenge_id = None
     selected_variations = None  # Track what variations were requested
 
     if PHASE4_ENABLED:
+        global _phase4_global_index, _phase4_state_file_path
+
         try:
             # Validate base images folder
             is_valid, validation_msg = validate_base_images_folder()
             if not is_valid:
                 bt.logging.warning(f"Phase 4 disabled: {validation_msg}")
             else:
-                # Load a random base image
-                image_filename, base64_image = load_random_base_image()
+                # Initialize state file path (once per validator session)
+                if _phase4_state_file_path is None:
+                    _phase4_state_file_path = Path(self.config.logging.logging_dir) / "validator_results" / "phase4_state.json"
+                    _phase4_global_index = _load_phase4_state(_phase4_state_file_path)
+                    bt.logging.info(f"Phase 4: Loaded state, global_index={_phase4_global_index}")
 
-                # Calculate drand round for reveal (after all miners respond)
-                reveal_delay = calculate_reveal_buffer(adaptive_timeout)
-                target_round, reveal_timestamp = calculate_target_round(reveal_delay)
+                # Get sorted list of images for consistent ordering
+                image_files = get_sorted_image_files()
+                num_images = len(image_files)
 
-                # Generate unique challenge ID
-                challenge_id = f"challenge_{int(time.time())}_{self.wallet.hotkey.ss58_address[:8]}"
+                if num_images == 0:
+                    bt.logging.warning("Phase 4 disabled: No images found in base_images folder")
+                else:
+                    # Get next image and variation indices
+                    image_index, variation_index, new_global_index = _get_next_image_and_variation(num_images)
 
-                # Randomly select variation types with intensities (2-4 variations)
-                selected_variations = select_random_variations(min_variations=2, max_variations=4)
+                    # Load the specific image by index
+                    image_result = load_image_by_index(image_index)
+                    if image_result is None:
+                        bt.logging.warning(f"Phase 4: Failed to load image at index {image_index}")
+                    else:
+                        image_filename, base64_image, actual_image_index = image_result
 
-                # Convert to VariationRequest objects
-                variation_requests = [
-                    VariationRequest(
-                        type=v["type"],
-                        intensity=v["intensity"],
-                        description=v["description"],
-                        detail=v["detail"]
-                    )
-                    for v in selected_variations
-                ]
+                        # Get the specific variation by index (ONE variation only)
+                        single_variation = get_variation_by_index(variation_index)
+                        selected_variations = [single_variation]  # Wrap in list for compatibility
 
-                # Create image request
-                image_request = ImageRequest(
-                    base_image=base64_image,
-                    image_filename=image_filename,
-                    variation_requests=variation_requests,
-                    target_drand_round=target_round,
-                    reveal_timestamp=reveal_timestamp,
-                    challenge_id=challenge_id
-                )
+                        # Calculate drand round for reveal (after all miners respond)
+                        reveal_delay = calculate_reveal_buffer(adaptive_timeout)
+                        target_round, reveal_timestamp = calculate_target_round(reveal_delay)
 
-                # Log what was selected
-                variation_summary = ", ".join(
-                    f"{v['type']}({v['intensity']})" for v in selected_variations
-                )
-                bt.logging.info(
-                    f"Phase 4: Created image request for '{image_filename}', "
-                    f"variations: [{variation_summary}], "
-                    f"drand round {target_round}, reveal at {reveal_timestamp}"
-                )
+                        # Generate unique challenge ID
+                        challenge_id = f"challenge_{int(time.time())}_{self.wallet.hotkey.ss58_address[:8]}"
+
+                        # Convert to VariationRequest objects
+                        variation_requests = [
+                            VariationRequest(
+                                type=v["type"],
+                                intensity=v["intensity"],
+                                description=v["description"],
+                                detail=v["detail"]
+                            )
+                            for v in selected_variations
+                        ]
+
+                        # Create image request
+                        image_request = ImageRequest(
+                            base_image=base64_image,
+                            image_filename=image_filename,
+                            variation_requests=variation_requests,
+                            target_drand_round=target_round,
+                            reveal_timestamp=reveal_timestamp,
+                            challenge_id=challenge_id
+                        )
+
+                        # Update and save state for next forward pass
+                        _phase4_global_index = new_global_index
+                        _save_phase4_state(_phase4_state_file_path, _phase4_global_index)
+
+                        # Calculate cycle info for logging
+                        variations_per_image = get_total_variation_combinations()
+                        total_combinations = num_images * variations_per_image
+                        cycle_position = (new_global_index - 1) % total_combinations
+
+                        # Log what was selected
+                        bt.logging.info(
+                            f"Phase 4: Sequential selection - "
+                            f"Image {image_index + 1}/{num_images} ('{image_filename}'), "
+                            f"Variation {variation_index + 1}/{variations_per_image} "
+                            f"({single_variation['type']}/{single_variation['intensity']}), "
+                            f"Cycle position {cycle_position + 1}/{total_combinations}, "
+                            f"drand round {target_round}"
+                        )
+
         except Exception as e:
             bt.logging.warning(f"Phase 4: Could not create image request: {e}")
+            import traceback
+            bt.logging.debug(f"Phase 4 error traceback: {traceback.format_exc()}")
             image_request = None
             selected_variations = None
 
