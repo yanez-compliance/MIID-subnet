@@ -1,8 +1,10 @@
 import os
+import base64
 import json
 import secrets
 import time
 import threading
+from pathlib import Path
 from flask import Flask, request, jsonify
 from datetime import datetime
 
@@ -30,6 +32,21 @@ from db_machine import get_snapshot, reward_allocation
 from MIID.utils.verify_message import verify_message
 
 ## gunicorn MIID.datasets.app:app --bind 0.0.0.0:5000 --workers 4
+
+# =============================================================================
+# Validator base images (hotkey -> folder under base_images)
+# =============================================================================
+BASE_IMAGES_DIR = Path("/home/ubuntu/YanezMIIDManage/api_image/base_images")
+HOTKEY_TO_FOLDER = {
+    "5DUB7kNLvvx8Dj7D8tn54N1C7Xok6GodNPQE2WECCaL9Wgpr": "miid",
+    "5GWzXSra6cBM337nuUU7YTjZQ6ewT2VakDpMj8Pw2i8v8PVs": "yuma",
+    "5C4qiYkqKjqGDSvzpf6YXCcnBgM6punh8BQJRP78bqMGsn54": "rt21",
+    "5HK5tp6t2S59DywmHRWPBVJeJ86T61KjurYqeooqj8sREpeN": "tensora",
+    "5HbUFHW4XVhbQvMbSy7WDjvhHb62nuYgP1XBsmmz9E2E2K6p": "otf",
+    "5GQqAhLKVHRLpdTqRg1yc3xu7y47DicJykSpggE2GuDbfs54": "rizzo",
+    "5CnkkjPdfsA6jJDHv2U6QuiKiivDuvQpECC13ffdmSDbkgtt": "testnet",
+}
+
 
 # =============================================================================
 # Reputation Snapshot Cache (Phase 4 - Cycle 1)
@@ -243,6 +260,64 @@ def upload_data(hotkey):
         "generated_at": generated_at,
         "rep_cache": rep_cache  # All miners: {hotkey: {rep_score, rep_tier}, ...}
     }), 200
+
+
+@app.route('/images/<hotkey>', methods=['POST'])
+def get_validator_images(hotkey):
+    """
+    Return all base images for this validator (that hotkey's folder under base_images).
+    Only hotkeys in HOTKEY_TO_FOLDER can call this endpoint (validators with image folders).
+    Request body: JSON with "signature" (signed message from that hotkey).
+    Response: { "validator_folder", "verified_by", "images": [{ "filename", "data_base64" }, ...], "count" }.
+    """
+    if hotkey not in HOTKEY_TO_FOLDER:
+        return jsonify({"error": "Unauthorized hotkey or no image folder for this validator"}), 403
+
+    if not request.is_json:
+        return jsonify({"error": "Request body must be JSON"}), 400
+
+    data = request.get_json()
+    signature_text = data.get("signature")
+    if not signature_text:
+        return jsonify({"error": "Missing 'signature' in JSON payload"}), 400
+
+    tmp_signature_filename = os.path.join(DATA_DIR, f"tmp_signature_images_{time.time()}.txt")
+    with open(tmp_signature_filename, 'w', encoding='utf-8') as tmp_file:
+        tmp_file.write(signature_text)
+
+    try:
+        verify_message(tmp_signature_filename)
+    except ValueError as e:
+        os.remove(tmp_signature_filename)
+        return jsonify({"error": f"Signature verification failed: {str(e)}"}), 400
+
+    os.remove(tmp_signature_filename)
+
+    folder_name = HOTKEY_TO_FOLDER.get(hotkey)
+    if not folder_name:
+        return jsonify({"error": "No image folder configured for this validator"}), 404
+
+    images_dir = BASE_IMAGES_DIR / folder_name
+    if not images_dir.is_dir():
+        return jsonify({"error": f"Image folder not found: {folder_name}"}), 404
+
+    images = []
+    allowed_ext = ('.png', '.jpg', '.jpeg', '.gif', '.webp')
+    for f in sorted(images_dir.iterdir()):
+        if f.is_file() and f.suffix.lower() in allowed_ext:
+            try:
+                b64 = base64.standard_b64encode(f.read_bytes()).decode('ascii')
+                images.append({"filename": f.name, "data_base64": b64})
+            except Exception:
+                pass
+
+    return jsonify({
+        "validator_folder": folder_name,
+        "verified_by": hotkey,
+        "images": images,
+        "count": len(images),
+    }), 200
+
 
 if __name__ == '__main__':
     app.run(host=HOST, port=PORT, debug=DEBUG)

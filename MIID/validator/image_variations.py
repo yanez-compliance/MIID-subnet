@@ -233,3 +233,70 @@ def validate_variation_request(variations: List[Dict[str, str]]) -> bool:
             return False
 
     return True
+
+
+def get_total_variation_combinations() -> int:
+    """Get the total number of variation type + intensity combinations.
+
+    Returns:
+        Total number of combinations (types × intensities)
+    """
+    return len(ALL_VARIATION_TYPES) * len(ALL_INTENSITIES)
+
+
+def get_variation_by_index(index: int) -> Dict[str, str]:
+    """Get a single variation type + intensity by index.
+
+    Cycles through all variation types, then all intensities for each type.
+    Order: pose_edit/light, pose_edit/medium, pose_edit/far,
+           lighting_edit/light, lighting_edit/medium, ...
+
+    Supports wrapping around when index exceeds total combinations.
+
+    Args:
+        index: The index of the variation to get (will wrap around)
+
+    Returns:
+        Dict with type, intensity, description, and detail
+    """
+    total_combinations = get_total_variation_combinations()
+    actual_index = index % total_combinations
+
+    # Calculate which type and intensity
+    type_index = actual_index // len(ALL_INTENSITIES)
+    intensity_index = actual_index % len(ALL_INTENSITIES)
+
+    var_type = ALL_VARIATION_TYPES[type_index]
+    intensity = ALL_INTENSITIES[intensity_index]
+
+    type_info = IMAGE_VARIATION_TYPES[var_type]
+    intensity_info = type_info["intensities"][intensity]
+
+    return {
+        "type": var_type,
+        "intensity": intensity,
+        "description": type_info["description"],
+        "detail": intensity_info["detail"]
+    }
+
+
+def get_all_variation_combinations() -> List[Dict[str, str]]:
+    """Get all possible variation type + intensity combinations in order.
+
+    Useful for debugging or understanding the full cycle.
+
+    Returns:
+        List of all variation dicts in sequential order
+    """
+    combinations = []
+    for var_type in ALL_VARIATION_TYPES:
+        type_info = IMAGE_VARIATION_TYPES[var_type]
+        for intensity in ALL_INTENSITIES:
+            intensity_info = type_info["intensities"][intensity]
+            combinations.append({
+                "type": var_type,
+                "intensity": intensity,
+                "description": type_info["description"],
+                "detail": intensity_info["detail"]
+            })
+    return combinations

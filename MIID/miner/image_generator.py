@@ -1,8 +1,8 @@
 # MIID/miner/image_generator.py
 #
 # Phase 4: Image variation generator for miners.
-# SANDBOX: Returns copies of the original image.
-# TODO: Replace with actual model call (FLUX, SD, etc.)
+# Uses FLUX-based generation from generate_variations.py when configured
+# (HF token + model). See MIID.miner.generate_variations module docstring for setup.
 
 import base64
 import hashlib
@@ -10,6 +10,9 @@ import io
 import bittensor as bt
 from typing import List, Dict
 from PIL import Image
+
+from MIID.miner.generate_variations import generate_variations as generate_variations_flux
+from MIID.miner.ada_face_compare import validate_single_variation
 
 
 def decode_base_image(base64_image: str) -> Image.Image:
@@ -54,61 +57,42 @@ def calculate_image_hash(image_bytes: bytes) -> str:
 
 def generate_variations(
     base_image: Image.Image,
-    variation_types: List[str],
-    num_variations: int = 3
+    variation_requests: List,
 ) -> List[Dict]:
-    """Generate image variations from a base image.
+    """Generate image variations from a base image using FLUX (see generate_variations.py).
 
-    SANDBOX IMPLEMENTATION:
-    Returns copies of the original image. This is a placeholder
-    for the actual model-based generation.
-
-    TODO: Replace with actual model call:
-        - FLUX for high-quality variations
-        - Stable Diffusion for fast generation
-        - Custom model for specific variation types
+    Flow: validator sends image_request with variation_requests (each has type + intensity)
+    -> miner passes base_image + variation_requests here -> FLUX gets base image and
+    the correct prompt per request (type + intensity from IMAGE_VARIATION_PROMPTS)
+    -> one variation image per request. We add image_bytes and image_hash for S3/submission.
 
     Args:
-        base_image: PIL Image of the base face
-        variation_types: List of variation types to generate
-            Options: ["pose", "expression", "lighting", "background"]
-        num_variations: Number of variations to generate (default: 3)
+        base_image: PIL Image of the base face (decoded from image_request.base_image).
+        variation_requests: List of validator variation requests; each has .type and .intensity
+            (e.g. protocol.VariationRequest, or dict with "type"/"intensity").
+            Order is preserved: first request -> first result.
 
     Returns:
         List of dicts, each containing:
             - image: PIL Image object
-            - variation_type: str - which type this is
+            - variation_type: str - which type this is (matches request order)
             - image_bytes: bytes - raw image data
             - image_hash: str - SHA256 hash for verification
     """
+    if not variation_requests:
+        return []
+
+    # FLUX-based generation: one (type, intensity) per request -> one prompt -> one image
+    raw_results = generate_variations_flux(
+        base_image,
+        variation_requests,
+    )
+
     variations = []
-
-    for i in range(num_variations):
-        # Select variation type (cycle through requested types)
-        var_type = variation_types[i % len(variation_types)]
-
-        # ============================================
-        # SANDBOX: Just return copies of original
-        # TODO: Replace with actual model call:
-        #
-        # if var_type == "pose":
-        #     variation_image = model.generate_pose_variation(base_image)
-        # elif var_type == "expression":
-        #     variation_image = model.generate_expression_variation(base_image)
-        # elif var_type == "lighting":
-        #     variation_image = model.generate_lighting_variation(base_image)
-        # elif var_type == "background":
-        #     variation_image = model.generate_background_variation(base_image)
-        # else:
-        #     variation_image = model.generate_variation(base_image, var_type)
-        #
-        # ============================================
-        variation_image = base_image.copy()
-
-        # Convert to bytes
+    for item in raw_results:
+        variation_image = item["image"]
+        var_type = item["variation_type"]
         image_bytes = encode_image_to_bytes(variation_image)
-
-        # Calculate hash for verification
         image_hash = calculate_image_hash(image_bytes)
 
         variations.append({
@@ -119,8 +103,7 @@ def generate_variations(
         })
 
         bt.logging.debug(
-            f"Generated {var_type} variation {i + 1}/{num_variations}, "
-            f"hash: {image_hash[:16]}..."
+            f"Generated {var_type} variation, hash: {image_hash[:16]}..."
         )
 
     bt.logging.info(f"Generated {len(variations)} variations")
@@ -130,25 +113,20 @@ def generate_variations(
 def validate_variation(
     variation: Dict,
     base_image: Image.Image,
-    min_similarity: float = 0.8
+    min_similarity: float = 0.7
 ) -> bool:
-    """Validate that a variation maintains face identity.
-
-    SANDBOX: Always returns True.
-    TODO: Implement actual face matching validation.
+    """Validate that a variation maintains face identity using AdaFace.
 
     Args:
-        variation: Variation dict from generate_variations
-        base_image: Original base image
-        min_similarity: Minimum ArcFace similarity threshold
+        variation: Variation dict from generate_variations (must have "image" key).
+        base_image: Original base image (PIL Image).
+        min_similarity: Minimum AdaFace cosine similarity threshold (default 0.7).
 
     Returns:
-        True if variation maintains face identity
+        True if variation maintains face identity, False otherwise.
     """
-    # SANDBOX: Skip validation
-    # TODO: Implement face embedding comparison
-    # base_embedding = arcface.get_embedding(base_image)
-    # var_embedding = arcface.get_embedding(variation["image"])
-    # similarity = cosine_similarity(base_embedding, var_embedding)
-    # return similarity >= min_similarity
-    return True
+    return validate_single_variation(
+        base_image,
+        variation["image"],
+        min_similarity=min_similarity,
+    )

@@ -146,3 +146,52 @@ def load_specific_image(filename: str) -> Optional[Tuple[str, str]]:
     except Exception as e:
         bt.logging.error(f"Failed to load image {filename}: {e}")
         return None
+
+
+def get_sorted_image_files() -> List[str]:
+    """Get all image filenames in sorted order for consistent cycling.
+
+    Returns a sorted list of image filenames to ensure deterministic
+    iteration order across validator restarts.
+
+    Returns:
+        Sorted list of image filenames
+    """
+    if not BASE_IMAGES_DIR.exists():
+        return []
+
+    image_files = []
+    for ext in SUPPORTED_EXTENSIONS:
+        for img_path in BASE_IMAGES_DIR.glob(ext):
+            image_files.append(img_path.name)
+
+    # Sort for consistent ordering
+    return sorted(image_files)
+
+
+def load_image_by_index(index: int) -> Optional[Tuple[str, str, int]]:
+    """Load an image by its index in the sorted list.
+
+    Supports wrapping around when index exceeds available images.
+
+    Args:
+        index: The index of the image to load (will wrap around if > num images)
+
+    Returns:
+        Tuple of (filename, base64_encoded_image, actual_index) or None if no images
+    """
+    image_files = get_sorted_image_files()
+
+    if not image_files:
+        bt.logging.warning("No base images available")
+        return None
+
+    # Wrap around if index exceeds number of images
+    actual_index = index % len(image_files)
+    filename = image_files[actual_index]
+
+    result = load_specific_image(filename)
+    if result:
+        return result[0], result[1], actual_index
+
+    return None

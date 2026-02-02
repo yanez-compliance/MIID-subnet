@@ -49,6 +49,7 @@ different runs and facilitate analysis of results over time.
 
 import time
 import typing
+import io
 import bittensor as bt
 import ollama
 import pandas as pd
@@ -56,6 +57,7 @@ import os
 import numpy as np
 from typing import List, Dict, Tuple, Any, Optional
 from tqdm import tqdm
+from PIL import Image
 
 # Bittensor Miner Template:
 from MIID.protocol import IdentitySynapse, S3Submission
@@ -66,7 +68,7 @@ from MIID.base.miner import BaseMinerNeuron
 from bittensor.core.errors import NotVerifiedException
 
 # Phase 4 imports
-from MIID.miner.image_generator import decode_base_image, generate_variations
+from MIID.miner.image_generator import decode_base_image, generate_variations, validate_variation
 from MIID.miner.drand_encrypt import encrypt_image_for_drand, is_timelock_available
 from MIID.miner.s3_upload import upload_to_s3
 
@@ -339,6 +341,26 @@ class Miner(BaseMinerNeuron):
 
         return synapse
 
+    def is_valid_image_bytes(self, image_bytes: bytes) -> bool:
+        """
+        Validate whether raw bytes represent a valid image of any supported format.
+
+        This uses Pillow's image decoder to verify integrity without fully loading
+        pixel data.
+
+        Args:
+            image_bytes: Raw image bytes
+
+        Returns:
+            True if the bytes represent a valid image, False otherwise
+        """
+        try:
+            with Image.open(io.BytesIO(image_bytes)) as img:
+                img.verify()  # Verifies file integrity without decoding pixels
+            return True
+        except Exception:
+            return False
+
     def process_image_request(self, synapse: IdentitySynapse) -> List[S3Submission]:
         """Process Phase 4 image variation request.
 
@@ -360,12 +382,22 @@ class Miner(BaseMinerNeuron):
             bt.logging.info(f"Phase 4: Decoding base image: {image_request.image_filename}")
             base_image = decode_base_image(image_request.base_image)
 
-            # 2. Generate variations (SANDBOX: returns copies)
-            bt.logging.info(f"Phase 4: Generating {image_request.requested_variations} variations")
+            # Extract seed image name from filename (remove .png extension if present)
+            seed_image_name = image_request.image_filename
+            if seed_image_name.endswith('.png'):
+                seed_image_name = seed_image_name[:-4]  # Remove .png extension
+            elif seed_image_name.endswith('.jpg') or seed_image_name.endswith('.jpeg'):
+                seed_image_name = seed_image_name.rsplit('.', 1)[0]  # Remove extension
+
+            # 2. Generate variations via FLUX: pass full variation_requests (type + intensity per variation)
+            #    so the model gets the correct prompt for each (pose_edit/light, expression_edit/medium, etc.)
+            bt.logging.info(
+                f"Phase 4: Generating {image_request.requested_variations} variations "
+                f"(from validator: {[f'{v.type}({v.intensity})' for v in image_request.variation_requests]})"
+            )
             variations = generate_variations(
                 base_image,
-                image_request.variation_types,
-                image_request.requested_variations
+                image_request.variation_requests
             )
 
             # 3. Process each variation
@@ -381,6 +413,20 @@ class Miner(BaseMinerNeuron):
 
             for var in variations:
                 try:
+                    # Validate image before processing
+                    if not self.is_valid_image_bytes(var["image_bytes"]):
+                        bt.logging.warning(
+                            f"Phase 4: Skipping invalid/corrupt image for {var['variation_type']}"
+                        )
+                        continue
+
+                    # Validate face identity preserved (AdaFace, threshold 0.7)
+                    if not validate_variation(var, base_image, min_similarity=0.7):
+                        bt.logging.warning(
+                            f"Phase 4: Skipping {var['variation_type']} - face identity not preserved"
+                        )
+                        continue
+                    
                     # Sign the image hash
                     message = f"challenge:{challenge_id}:hash:{var['image_hash']}"
                     signature = self.wallet.hotkey.sign(message.encode()).hex()
@@ -408,7 +454,8 @@ class Miner(BaseMinerNeuron):
                         target_round=target_round,
                         challenge_id=challenge_id,
                         variation_type=var["variation_type"],
-                        path_signature=path_signature
+                        path_signature=path_signature,
+                        seed_image_name=seed_image_name
                     )
 
                     if s3_key:
