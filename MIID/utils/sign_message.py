@@ -20,6 +20,9 @@ def sign_message(wallet: bittensor.Wallet, message_text: str, output_file: str =
     # Generate a timestamped message
     timestamp = datetime.now()
     timezone_name = timestamp.astimezone().tzname()
+    # Handle case where tzname() returns None (can happen in some environments)
+    if timezone_name is None:
+        timezone_name = "UTC"
     signed_message = f"<Bytes>On {timestamp} {timezone_name} {message_text}</Bytes>"
 
     # Sign the message
