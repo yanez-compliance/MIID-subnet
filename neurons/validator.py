@@ -46,6 +46,7 @@ import time
 import traceback
 import datetime as dt
 import json
+import base64
 import wandb
 import os
 import shutil
@@ -82,6 +83,7 @@ from MIID.validator import forward
 from MIID.validator.reward import get_name_variation_rewards
 import ollama
 from MIID.validator.query_generator import QueryGenerator
+from MIID.utils.sign_message import sign_message
 
 
 class Validator(BaseValidatorNeuron):
@@ -110,10 +112,9 @@ class Validator(BaseValidatorNeuron):
     # but you can try other models and see which one performs better for your use case
     
     DEFAULT_LLM_MODEL = "llama3.1:latest" # llama3.1:latest is the default model for the validator
-    
-    # S3 Configuration for base images download
-    S3_BUCKET_NAME = os.environ.get("MIID_S3_BUCKET", "yanez-miid-sn54")
-    S3_REGION = os.environ.get("MIID_S3_REGION", "us-east-1")
+
+    # Base URL for Flask app (same host as upload_data in forward.py)
+    MIID_IMAGES_SERVER = os.environ.get("MIID_IMAGES_SERVER", "http://52.44.186.20:5000")
 
     def __init__(self, config=None):
         """
@@ -197,8 +198,8 @@ class Validator(BaseValidatorNeuron):
         # Initialize the query generator
         self.query_generator = QueryGenerator(self.config)
         
-        # Download base images from S3 using validator's hotkey
-        self._download_base_images_from_s3()
+        # Download base images from Flask API using validator's hotkey (signed request)
+        self._download_base_images_from_api()
         
         bt.logging.info("Ollama initialized")
         bt.logging.info(f"Using LLM model: {self.model_name}")
@@ -206,70 +207,76 @@ class Validator(BaseValidatorNeuron):
         bt.logging.info("----------------------------------")
         time.sleep(1)
 
-    def _download_base_images_from_s3(self):
-        """Download base images from S3 bucket using validator's hotkey address.
+    def _download_base_images_from_api(self):
+        """Download base images from Flask API using validator's hotkey (signed request).
         
-        Downloads images from S3 where the filename is the validator's hotkey address.
+        Calls POST /images/<hotkey> with a signed message (same pattern as forward.py upload).
         Images are saved to MIID/validator/base_images directory.
         This only runs during initialization.
         """
         if not REQUESTS_AVAILABLE:
-            bt.logging.warning("requests library not available. Skipping S3 base images download.")
+            bt.logging.warning("requests library not available. Skipping base images download.")
             return
-        
+
         try:
             # Get the base images directory path (relative to repo root)
-            # This will be MIID/validator/base_images
             repo_root = Path(__file__).parent.parent  # Go up from neurons/ to repo root
             base_images_dir = repo_root / "MIID" / "validator" / "base_images"
-            
-            # Ensure the directory exists
             base_images_dir.mkdir(parents=True, exist_ok=True)
             bt.logging.info(f"Base images directory: {base_images_dir}")
-            
-            # Get validator's hotkey address
-            hotkey_address = self.wallet.hotkey.ss58_address
-            bt.logging.info(f"Downloading base images for hotkey: {hotkey_address}")
-            
-            # Try downloading image files
-            image_extensions = ['.png', '.jpg', '.jpeg']
-            s3_key_prefixes = [
-                f"base_images/{hotkey_address}",
-                f"{hotkey_address}"
-            ]
-            
-            downloaded_count = 0
-            
-            for prefix in s3_key_prefixes:
-                for ext in image_extensions:
-                    s3_key = f"{prefix}{ext}"
-                    url = f"https://{self.S3_BUCKET_NAME}.s3.{self.S3_REGION}.amazonaws.com/{s3_key}"
-                    
-                    try:
-                        response = requests.get(url, timeout=30)
-                        if response.status_code == 200:
-                            # Save the image
-                            image_path = base_images_dir / f"{hotkey_address}{ext}"
-                            with open(image_path, 'wb') as f:
-                                f.write(response.content)
-                            bt.logging.info(f"Downloaded base image: {image_path.name} ({len(response.content)} bytes)")
-                            downloaded_count += 1
-                            break  # Found the file, no need to try other extensions
-                    except requests.exceptions.RequestException as e:
-                        bt.logging.debug(f"Failed to download {s3_key}: {e}")
-                        continue
-                
-                if downloaded_count > 0:
-                    break  # Found file with this prefix
-            
-            if downloaded_count > 0:
-                bt.logging.info(f"Successfully downloaded {downloaded_count} base image(s) from S3")
-            else:
-                bt.logging.warning(f"No base images found in S3 for hotkey: {hotkey_address}")
+
+            hotkey = self.wallet.hotkey
+            hotkey_address = hotkey.ss58_address
+            bt.logging.info(f"Requesting base images for hotkey: {hotkey_address}")
+
+            # Sign message the same way as in forward.py for upload_data
+            message_to_sign = (
+                f"Hotkey: {hotkey} \n timestamp: {time.time()} \n request: base_images"
+            )
+            signed_contents = sign_message(self.wallet, message_to_sign, output_file=None)
+
+            base_url = self.MIID_IMAGES_SERVER.rstrip("/")
+            url = f"{base_url}/images/{hotkey_address}"
+            payload = {"signature": signed_contents}
+
+            response = requests.post(url, json=payload, timeout=30)
+            if response.status_code != 200:
+                bt.logging.warning(
+                    f"Base images API returned {response.status_code}: {response.text[:200]}"
+                )
                 bt.logging.warning("Validator will continue with existing base images in the directory")
-                
+                return
+
+            data = response.json()
+            images = data.get("images") or []
+            if not images:
+                bt.logging.warning("No base images returned for this hotkey")
+                bt.logging.warning("Validator will continue with existing base images in the directory")
+                return
+
+            downloaded_count = 0
+            for item in images:
+                filename = item.get("filename")
+                b64 = item.get("data_base64")
+                if not filename or not b64:
+                    continue
+                try:
+                    raw = base64.standard_b64decode(b64)
+                    image_path = base_images_dir / filename
+                    image_path.write_bytes(raw)
+                    bt.logging.info(f"Downloaded base image: {filename} ({len(raw)} bytes)")
+                    downloaded_count += 1
+                except Exception as e:
+                    bt.logging.debug(f"Failed to save image {filename}: {e}")
+
+            if downloaded_count > 0:
+                bt.logging.info(f"Successfully downloaded {downloaded_count} base image(s) from API")
+            else:
+                bt.logging.warning("No images could be saved from API response")
+                bt.logging.warning("Validator will continue with existing base images in the directory")
+
         except Exception as e:
-            bt.logging.error(f"Error downloading base images from S3: {e}")
+            bt.logging.error(f"Error downloading base images from API: {e}")
             bt.logging.error(traceback.format_exc())
             bt.logging.warning("Validator will continue with existing base images in the directory")
 
