@@ -844,7 +844,7 @@ async def forward(self):
         },
         # Phase 3 UAV data (collected and scored in Cycle 1 execution)
         "uav_data": {
-            "cycle": "Phase4-C1-Exec",
+            "cycle": "Phase4-C1-End",
             "note": "UAVs are collected and scored in Cycle 1 execution",
             "summary": uav_summary,
             "by_miner": uav_by_miner,
