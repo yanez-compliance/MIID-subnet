@@ -248,7 +248,7 @@ def format_variation_requirements(variations: List[Dict[str, str]]) -> str:
         "[IMAGE VARIATION REQUIREMENTS]",
         "Professional passport-style portrait, 3:4 aspect ratio, head and shoulders composition from chest up.",
         "",
-        "For the face image provided, generate the following variations while preserving identity:",
+        "Generate one single image with all of the following variations applied simultaneously to the face image, while preserving identity:",
         ""
     ]
 
@@ -265,9 +265,10 @@ def format_variation_requirements(variations: List[Dict[str, str]]) -> str:
 
     lines.extend([
         "",
-        "IMPORTANT: The subject's face must remain recognizable across all variations.",
-        "Each variation should clearly address the specified type and intensity level.",
-        "All images must maintain professional passport-style composition.",
+        "Generate one image with all variations applied together, not separate images for each variation.",
+        "The subject's face must remain recognizable (identity preserved) with all modifications applied simultaneously.",
+        "Each variation should be clearly visible in the single combined output image.",
+        "Maintain professional passport-style composition (3:4 ratio, chest up, face centered).",
         ""
     ])
 
