@@ -389,18 +389,27 @@ class Miner(BaseMinerNeuron):
             elif seed_image_name.endswith('.jpg') or seed_image_name.endswith('.jpeg'):
                 seed_image_name = seed_image_name.rsplit('.', 1)[0]  # Remove extension
 
-            # 2. Generate variations via FLUX: pass full variation_requests (type + intensity per variation)
-            #    so the model gets the correct prompt for each (pose_edit/light, expression_edit/medium, etc.)
+            # 2. Generate ONE combined image with ALL variations applied
+            #    IMPORTANT: We generate ONE image with all variations, not separate images
+            variation_summary = [f'{v.type}({v.intensity})' for v in image_request.variation_requests]
             bt.logging.info(
-                f"Phase 4: Generating {image_request.requested_variations} variations "
-                f"(from validator: {[f'{v.type}({v.intensity})' for v in image_request.variation_requests]})"
+                f"Phase 4: Generating ONE combined image with {len(image_request.variation_requests)} variations: "
+                f"{', '.join(variation_summary)}"
             )
             variations = generate_variations(
                 base_image,
                 image_request.variation_requests
             )
+            
+            if len(variations) != 1:
+                bt.logging.warning(
+                    f"Phase 4: Expected 1 combined variation, got {len(variations)}. "
+                    f"Using first one only."
+                )
+                variations = variations[:1]  # Take only first one
 
-            # 3. Process each variation
+            # 3. Process the combined variation
+            #    NOTE: variations list should contain ONE element (the combined image)
             s3_submissions = []
             target_round = image_request.target_drand_round
             challenge_id = image_request.challenge_id or "sandbox_test"
@@ -411,6 +420,7 @@ class Miner(BaseMinerNeuron):
             path_signature = self.wallet.hotkey.sign(path_message.encode()).hex()[:16]
             bt.logging.debug(f"Phase 4: Generated path_signature: {path_signature}")
 
+            # Process the variation (should be only ONE combined image)
             for var in variations:
                 try:
                     # Validate image before processing
@@ -472,7 +482,17 @@ class Miner(BaseMinerNeuron):
                     bt.logging.error(f"Phase 4: Error processing variation {var['variation_type']}: {e}")
                     continue
 
-            bt.logging.info(f"Phase 4: Successfully created {len(s3_submissions)} S3 submissions")
+            bt.logging.info(
+                f"Phase 4: Successfully created {len(s3_submissions)} S3 submission(s). "
+                f"Expected: 1 (combined image with all variations)"
+            )
+            
+            if len(s3_submissions) != 1:
+                bt.logging.warning(
+                    f"Phase 4: Created {len(s3_submissions)} submissions instead of 1. "
+                    f"Validators expect ONE submission with variation_type='combined'"
+                )
+            
             return s3_submissions
 
         except Exception as e:

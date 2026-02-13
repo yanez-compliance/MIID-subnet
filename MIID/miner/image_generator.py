@@ -59,55 +59,70 @@ def generate_variations(
     base_image: Image.Image,
     variation_requests: List,
 ) -> List[Dict]:
-    """Generate image variations from a base image using FLUX (see generate_variations.py).
+    """Generate ONE combined image with ALL variations applied using FLUX.
+
+    IMPORTANT: This function now generates ONE SINGLE IMAGE with all variation_requests
+    applied simultaneously (e.g., background changed + accessory added + pose modified),
+    NOT separate images for each variation type.
 
     Flow: validator sends image_request with variation_requests (each has type + intensity)
     -> miner passes base_image + variation_requests here -> FLUX gets base image and
-    the correct prompt per request (type + intensity from IMAGE_VARIATION_PROMPTS)
-    -> one variation image per request. We add image_bytes and image_hash for S3/submission.
+    a COMBINED prompt with ALL variations -> ONE output image with all modifications.
 
     Args:
         base_image: PIL Image of the base face (decoded from image_request.base_image).
         variation_requests: List of validator variation requests; each has .type and .intensity
             (e.g. protocol.VariationRequest, or dict with "type"/"intensity").
-            Order is preserved: first request -> first result.
+            ALL variations will be applied to ONE output image.
 
     Returns:
-        List of dicts, each containing:
-            - image: PIL Image object
-            - variation_type: str - which type this is (matches request order)
+        List with ONE dict containing:
+            - image: PIL Image object (with ALL variations applied)
+            - variation_type: "combined" (indicates all variations in one image)
             - image_bytes: bytes - raw image data
             - image_hash: str - SHA256 hash for verification
     """
     if not variation_requests:
         return []
 
-    # FLUX-based generation: one (type, intensity) per request -> one prompt -> one image
+    # FLUX-based generation: ALL requests combined -> one prompt -> ONE image
+    # The generate_variations_flux function should combine all prompts
     raw_results = generate_variations_flux(
         base_image,
         variation_requests,
     )
 
-    variations = []
-    for item in raw_results:
-        variation_image = item["image"]
-        var_type = item["variation_type"]
-        image_bytes = encode_image_to_bytes(variation_image)
-        image_hash = calculate_image_hash(image_bytes)
+    # Take only the first result (should be the combined image)
+    # If generate_variations_flux returns multiple images, we need to update it
+    if not raw_results:
+        return []
+    
+    # Use the first (and should be only) result
+    combined_result = raw_results[0] if isinstance(raw_results, list) else raw_results
+    variation_image = combined_result["image"]
+    
+    image_bytes = encode_image_to_bytes(variation_image)
+    image_hash = calculate_image_hash(image_bytes)
 
-        variations.append({
-            "image": variation_image,
-            "variation_type": var_type,
-            "image_bytes": image_bytes,
-            "image_hash": image_hash
-        })
+    # Create variation_type string that describes all variations
+    variation_types = [req.type if hasattr(req, 'type') else req.get('type', 'unknown') 
+                      for req in variation_requests]
+    combined_type = "combined"  # Simple label, or could be: "+".join(variation_types)
 
-        bt.logging.debug(
-            f"Generated {var_type} variation, hash: {image_hash[:16]}..."
-        )
+    result = {
+        "image": variation_image,
+        "variation_type": combined_type,
+        "image_bytes": image_bytes,
+        "image_hash": image_hash
+    }
 
-    bt.logging.info(f"Generated {len(variations)} variations")
-    return variations
+    bt.logging.info(
+        f"Generated ONE combined image with {len(variation_requests)} variations applied: "
+        f"{', '.join(variation_types)}, hash: {image_hash[:16]}..."
+    )
+
+    # Return list with ONE element (for compatibility with existing code)
+    return [result]
 
 
 def validate_variation(

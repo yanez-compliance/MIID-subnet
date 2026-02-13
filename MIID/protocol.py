@@ -67,14 +67,19 @@ class ImageRequest(BaseModel):
     """Phase 4: Image variation request from validator to miner.
 
     Contains the base image and parameters for generating variations.
-    The miner will generate variations, encrypt them with drand timelock,
-    upload to S3, and return S3 references.
+    
+    IMPORTANT: The miner should generate ONE SINGLE IMAGE with ALL variation_requests
+    applied simultaneously (e.g., background changed + accessory added + pose modified),
+    NOT separate images for each variation type.
+    
+    The miner will generate the combined variation, encrypt it with drand timelock,
+    upload to S3, and return ONE S3 reference.
     """
     base_image: str  # Base64 encoded image
     image_filename: str  # Original filename for reference
     variation_requests: List[VariationRequest] = Field(
         default_factory=list
-    )  # Specific variation requests with type + intensity
+    )  # ALL variations to apply to ONE single output image
     target_drand_round: int  # Drand round when decryption becomes possible
     reveal_timestamp: int  # Unix timestamp when reveal occurs
     challenge_id: Optional[str] = None  # Unique identifier for this challenge
@@ -100,6 +105,12 @@ class S3Submission(BaseModel):
     Contains references to encrypted images uploaded to S3.
     The actual images are NOT included - only S3 paths, hashes, and signatures.
     Post-validation will download and decrypt after drand reveal.
+    
+    IMPORTANT: Each ImageRequest should result in ONE S3Submission with ALL
+    variations applied to a single image. The variation_type should be "combined"
+    or a descriptive string indicating all variations (e.g., "background+accessory+pose").
+    
+    DO NOT submit separate S3Submissions for each variation type - that is incorrect.
 
     SECURITY: path_signature prevents malicious miners from writing to other
     miners' S3 paths. The path_signature is derived from the miner's private
@@ -108,7 +119,7 @@ class S3Submission(BaseModel):
     s3_key: str  # Path to encrypted file in S3 bucket
     image_hash: str  # SHA256 hash of the original (unencrypted) image
     signature: str  # Wallet signature proving ownership
-    variation_type: str  # Which variation type this submission addresses
+    variation_type: str  # Should be "combined" or describe all variations (e.g., "background+accessory+pose")
     path_signature: str  # Unique path component: sign(challenge_id:miner_hotkey)[:16]
 
     class Config:
