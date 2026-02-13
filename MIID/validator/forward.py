@@ -519,9 +519,8 @@ async def forward(self):
                     else:
                         image_filename, base64_image, actual_image_index = image_result
 
-                        # Get the specific variation by index (ONE variation only)
-                        single_variation = get_variation_by_index(variation_index)
-                        selected_variations = [single_variation]  # Wrap in list for compatibility
+                        # Get the specific variation combination by index (returns list of 3 variations)
+                        selected_variations = get_variation_by_index(variation_index)
 
                         # Calculate drand round for reveal (after all miners respond)
                         reveal_delay = calculate_reveal_buffer(adaptive_timeout)
@@ -556,17 +555,28 @@ async def forward(self):
                         _save_phase4_state(_phase4_state_file_path, _phase4_global_index)
 
                         # Calculate cycle info for logging
-                        variations_per_image = get_total_variation_combinations()
+                        variations_per_image = get_total_variation_combinations()  # 18 positions
                         total_combinations = num_images * variations_per_image
                         cycle_position = (new_global_index - 1) % total_combinations
+
+                        # Format variation summary for logging
+                        # Identify which variation is deterministic (the additional one)
+                        from MIID.validator.image_variations import OPTIONAL_VARIATION_TYPES
+                        deterministic_var = next((v for v in selected_variations if v['type'] in OPTIONAL_VARIATION_TYPES), None)
+                        
+                        variation_summary = ", ".join(
+                            f"{v['type']}({v['intensity'] or 'N/A'})" for v in selected_variations
+                        )
+                        
+                        deterministic_info = f"{deterministic_var['type']}({deterministic_var['intensity']})" if deterministic_var else "unknown"
 
                         # Log what was selected
                         bt.logging.info(
                             f"Phase 4: Sequential selection - "
                             f"Image {image_index + 1}/{num_images} ('{image_filename}'), "
-                            f"Variation {variation_index + 1}/{variations_per_image} "
-                            f"({single_variation['type']}/{single_variation['intensity']}), "
-                            f"Cycle position {cycle_position + 1}/{total_combinations}, "
+                            f"Cycle {variation_index + 1}/{variations_per_image} [{deterministic_info}], "
+                            f"Variations: [{variation_summary}] (bg/acc random), "
+                            f"Position {cycle_position + 1}/{total_combinations}, "
                             f"drand round {target_round}"
                         )
 

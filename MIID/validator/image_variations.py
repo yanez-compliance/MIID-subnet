@@ -82,62 +82,140 @@ IMAGE_VARIATION_TYPES = {
     }
 }
 
-# All available variation type keys
-ALL_VARIATION_TYPES = list(IMAGE_VARIATION_TYPES.keys())
+# Accessory types with weighted selection
+ACCESSORY_TYPES = {
+    "religious_head_covering": {
+        "description": "Add religious head covering",
+        "detail": "Religious head covering (hijab, turban, kippah, taqiyah, etc.) appropriate to subject",
+        "weight": 50
+    },
+    "brim_hat": {
+        "description": "Add brim hat (not baseball)",
+        "detail": "Brim hat such as fedora, wide-brim hat, sun hat, or similar (not baseball cap)",
+        "weight": 20
+    },
+    "knit_winter_hat": {
+        "description": "Add knit or winter hat",
+        "detail": "Knit hat, beanie, or winter hat",
+        "weight": 20
+    },
+    "bandana": {
+        "description": "Add bandana",
+        "detail": "Bandana worn on head",
+        "weight": 5
+    },
+    "baseball_cap": {
+        "description": "Add baseball cap",
+        "detail": "Baseball cap or similar sports cap",
+        "weight": 5
+    }
+}
+
+# All available variation type keys (excluding background which is always included)
+OPTIONAL_VARIATION_TYPES = ["pose_edit", "lighting_edit", "expression_edit"]
 
 # All available intensity levels
 ALL_INTENSITIES = ["light", "medium", "far"]
+
+
+def select_random_accessory() -> Dict[str, str]:
+    """Select a random accessory based on weighted distribution.
+    
+    Weights:
+    - 50% religious head coverings
+    - 20% Brim hats (not baseball)
+    - 20% Knit/winter hats
+    - 5% Bandanas
+    - 5% Baseball caps
+    
+    Returns:
+        Dict containing:
+            - type: str - accessory type key
+            - description: str - accessory description
+            - detail: str - specific accessory detail
+    """
+    # Create weighted list
+    accessory_keys = list(ACCESSORY_TYPES.keys())
+    weights = [ACCESSORY_TYPES[key]["weight"] for key in accessory_keys]
+    
+    # Select based on weights
+    selected_key = random.choices(accessory_keys, weights=weights, k=1)[0]
+    accessory_info = ACCESSORY_TYPES[selected_key]
+    
+    return {
+        "type": selected_key,
+        "description": accessory_info["description"],
+        "detail": accessory_info["detail"]
+    }
 
 
 def select_random_variations(
     min_variations: int = 2,
     max_variations: int = 4
 ) -> List[Dict[str, str]]:
-    """Randomly select variation types with random intensities.
+    """Select variation types with new fixed structure.
 
-    Each challenge gets a random subset of variation types, each with
-    a randomly assigned intensity level. This prevents miners from
-    gaming the system with fixed responses.
+    Each challenge now includes:
+    1. Background change (always included, random intensity)
+    2. Accessory (always included, weighted random selection)
+    3. One additional variation from: lighting, pose, or expression (random intensity)
 
     Args:
-        min_variations: Minimum number of variation types to select (default: 2)
-        max_variations: Maximum number of variation types to select (default: 4)
+        min_variations: Ignored - kept for backward compatibility
+        max_variations: Ignored - kept for backward compatibility
 
     Returns:
         List of dicts, each containing:
-            - type: str - variation type key (e.g., "pose_edit")
-            - intensity: str - intensity level (e.g., "medium")
+            - type: str - variation type key (e.g., "pose_edit", "accessory")
+            - intensity: str - intensity level (e.g., "medium") or None for accessory
             - description: str - type description
-            - detail: str - intensity-specific detail
+            - detail: str - intensity-specific or accessory-specific detail
 
     Example:
         >>> variations = select_random_variations()
         >>> print(variations)
         [
-            {"type": "pose_edit", "intensity": "medium", "description": "...", "detail": "..."},
-            {"type": "expression_edit", "intensity": "light", "description": "...", "detail": "..."},
+            {"type": "background_edit", "intensity": "medium", "description": "...", "detail": "..."},
+            {"type": "religious_head_covering", "intensity": None, "description": "...", "detail": "..."},
+            {"type": "lighting_edit", "intensity": "light", "description": "...", "detail": "..."},
         ]
     """
-    # Determine how many variations to request (2-4)
-    num_variations = random.randint(min_variations, max_variations)
-
-    # Randomly select which types to include
-    selected_types = random.sample(ALL_VARIATION_TYPES, num_variations)
-
-    # Assign random intensity to each selected type
     variations = []
-    for var_type in selected_types:
-        intensity = random.choice(ALL_INTENSITIES)
-        type_info = IMAGE_VARIATION_TYPES[var_type]
-        intensity_info = type_info["intensities"][intensity]
-
-        variations.append({
-            "type": var_type,
-            "intensity": intensity,
-            "description": type_info["description"],
-            "detail": intensity_info["detail"]
-        })
-
+    
+    # 1. Always include background change with random intensity
+    bg_intensity = random.choice(ALL_INTENSITIES)
+    bg_info = IMAGE_VARIATION_TYPES["background_edit"]
+    bg_intensity_info = bg_info["intensities"][bg_intensity]
+    
+    variations.append({
+        "type": "background_edit",
+        "intensity": bg_intensity,
+        "description": bg_info["description"],
+        "detail": bg_intensity_info["detail"]
+    })
+    
+    # 2. Always include accessory with weighted selection
+    accessory = select_random_accessory()
+    variations.append({
+        "type": accessory["type"],
+        "intensity": None,  # Accessories don't have intensity
+        "description": accessory["description"],
+        "detail": accessory["detail"]
+    })
+    
+    # 3. Select one random variation from lighting, pose, or expression
+    additional_type = random.choice(OPTIONAL_VARIATION_TYPES)
+    additional_intensity = random.choice(ALL_INTENSITIES)
+    additional_info = IMAGE_VARIATION_TYPES[additional_type]
+    additional_intensity_info = additional_info["intensities"][additional_intensity]
+    
+    variations.append({
+        "type": additional_type,
+        "intensity": additional_intensity,
+        "description": additional_info["description"],
+        "detail": additional_intensity_info["detail"]
+    })
+    
     return variations
 
 
@@ -155,30 +233,41 @@ def format_variation_requirements(variations: List[Dict[str, str]]) -> str:
 
     Example output:
         [IMAGE VARIATION REQUIREMENTS]
+        Professional passport-style portrait, 3:4 aspect ratio, head and shoulders composition from chest up.
+        
         For the face image provided, generate the following variations while preserving identity:
 
-        1. pose_edit (medium): ±30° rotation (clear head turn, profile partially visible)
-        2. expression_edit (light): Neutral to slight smile, minor brow movement
-        3. background_edit (far): Unusual or contrasting environment, complex scene
+        1. background_edit (medium): Change environment type (office to outdoor, solid color to gradient)
+        2. accessory (religious_head_covering): Religious head covering (hijab, turban, kippah, taqiyah, etc.) appropriate to subject
+        3. lighting_edit (light): Subtle brightness or contrast change, soft shadows
 
         IMPORTANT: The subject's face must remain recognizable across all variations.
     """
     lines = [
         "",
         "[IMAGE VARIATION REQUIREMENTS]",
+        "Professional passport-style portrait, 3:4 aspect ratio, head and shoulders composition from chest up.",
+        "",
         "For the face image provided, generate the following variations while preserving identity:",
         ""
     ]
 
     for i, var in enumerate(variations, 1):
-        lines.append(
-            f"{i}. {var['type']} ({var['intensity']}): {var['detail']}"
-        )
+        # Format differently for accessories (which don't have intensity)
+        if var.get('intensity') is None:
+            lines.append(
+                f"{i}. accessory ({var['type']}): {var['detail']}"
+            )
+        else:
+            lines.append(
+                f"{i}. {var['type']} ({var['intensity']}): {var['detail']}"
+            )
 
     lines.extend([
         "",
         "IMPORTANT: The subject's face must remain recognizable across all variations.",
         "Each variation should clearly address the specified type and intensity level.",
+        "All images must maintain professional passport-style composition.",
         ""
     ])
 
@@ -225,78 +314,162 @@ def validate_variation_request(variations: List[Dict[str, str]]) -> bool:
     for var in variations:
         if not isinstance(var, dict):
             return False
-        if "type" not in var or "intensity" not in var:
+        if "type" not in var:
             return False
-        if var["type"] not in ALL_VARIATION_TYPES:
-            return False
-        if var["intensity"] not in ALL_INTENSITIES:
-            return False
+        
+        # Check if it's an accessory type
+        if var["type"] in ACCESSORY_TYPES:
+            # Accessories should not have intensity or it should be None
+            if var.get("intensity") is not None and var.get("intensity") != "":
+                return False
+        else:
+            # Regular variations must have valid type and intensity
+            if var["type"] not in IMAGE_VARIATION_TYPES:
+                return False
+            if "intensity" not in var or var["intensity"] not in ALL_INTENSITIES:
+                return False
 
     return True
 
 
 def get_total_variation_combinations() -> int:
-    """Get the total number of variation type + intensity combinations.
+    """Get the total number of variation combinations in the cycle.
+    
+    With the new sequential cycling:
+    - Background: Random (not part of cycle)
+    - Accessory: Random (not part of cycle)
+    - Additional: 3 types × 3 intensities = 9 variations
+    - Each variation is done 2 times
+    
+    Total cycle length: 9 × 2 = 18
 
     Returns:
-        Total number of combinations (types × intensities)
+        Total number of combinations in cycle (18)
     """
-    return len(ALL_VARIATION_TYPES) * len(ALL_INTENSITIES)
+    # 9 additional variations (3 types × 3 intensities), each done twice
+    num_additional_variations = len(OPTIONAL_VARIATION_TYPES) * len(ALL_INTENSITIES)  # 9
+    repetitions_per_variation = 2
+    
+    return num_additional_variations * repetitions_per_variation  # 18
 
 
-def get_variation_by_index(index: int) -> Dict[str, str]:
-    """Get a single variation type + intensity by index.
-
-    Cycles through all variation types, then all intensities for each type.
-    Order: pose_edit/light, pose_edit/medium, pose_edit/far,
-           lighting_edit/light, lighting_edit/medium, ...
-
-    Supports wrapping around when index exceeds total combinations.
-
+def get_variation_by_index(index: int) -> List[Dict[str, str]]:
+    """Get a specific variation combination by index for sequential cycling.
+    
+    Sequential cycling logic:
+    - Cycles through 9 additional variations (pose/lighting/expression × light/medium/far)
+    - Each variation is done 2 times before moving to the next
+    - Background: Random intensity (different each time)
+    - Accessory: Random weighted selection (different each time)
+    - Total cycle length: 18 (9 variations × 2 repetitions)
+    
+    Example sequence:
+    - Index 0-1: pose(light) with random bg/accessory
+    - Index 2-3: pose(medium) with random bg/accessory
+    - Index 4-5: pose(far) with random bg/accessory
+    - Index 6-7: lighting(light) with random bg/accessory
+    - ...
+    - Index 18: wraps back to index 0
+    
     Args:
-        index: The index of the variation to get (will wrap around)
+        index: The index of the variation combination to get (will wrap around)
 
     Returns:
-        Dict with type, intensity, description, and detail
+        List of 3 variation dicts (background + accessory + additional)
     """
-    total_combinations = get_total_variation_combinations()
+    total_combinations = get_total_variation_combinations()  # 18
     actual_index = index % total_combinations
-
-    # Calculate which type and intensity
-    type_index = actual_index // len(ALL_INTENSITIES)
-    intensity_index = actual_index % len(ALL_INTENSITIES)
-
-    var_type = ALL_VARIATION_TYPES[type_index]
-    intensity = ALL_INTENSITIES[intensity_index]
-
-    type_info = IMAGE_VARIATION_TYPES[var_type]
-    intensity_info = type_info["intensities"][intensity]
-
-    return {
-        "type": var_type,
-        "intensity": intensity,
-        "description": type_info["description"],
-        "detail": intensity_info["detail"]
+    
+    # Determine which of the 9 additional variations to use
+    # Each variation appears twice, so divide by 2
+    variation_index = actual_index // 2
+    
+    # Calculate which type and intensity for the additional variation
+    additional_type_index = variation_index // len(ALL_INTENSITIES)
+    additional_intensity_index = variation_index % len(ALL_INTENSITIES)
+    
+    additional_type = OPTIONAL_VARIATION_TYPES[additional_type_index]
+    additional_intensity = ALL_INTENSITIES[additional_intensity_index]
+    
+    # Get RANDOM background variation (different each time)
+    bg_intensity = random.choice(ALL_INTENSITIES)
+    bg_info = IMAGE_VARIATION_TYPES["background_edit"]
+    bg_intensity_info = bg_info["intensities"][bg_intensity]
+    background_var = {
+        "type": "background_edit",
+        "intensity": bg_intensity,
+        "description": bg_info["description"],
+        "detail": bg_intensity_info["detail"]
     }
+    
+    # Get RANDOM accessory (weighted, different each time)
+    accessory = select_random_accessory()
+    accessory_var = {
+        "type": accessory["type"],
+        "intensity": None,
+        "description": accessory["description"],
+        "detail": accessory["detail"]
+    }
+    
+    # Get deterministic additional variation (based on cycle position)
+    additional_info = IMAGE_VARIATION_TYPES[additional_type]
+    additional_intensity_info = additional_info["intensities"][additional_intensity]
+    additional_var = {
+        "type": additional_type,
+        "intensity": additional_intensity,
+        "description": additional_info["description"],
+        "detail": additional_intensity_info["detail"]
+    }
+    
+    # Return as list of 3 variations
+    return [background_var, accessory_var, additional_var]
 
 
-def get_all_variation_combinations() -> List[Dict[str, str]]:
-    """Get all possible variation type + intensity combinations in order.
+def get_all_variation_combinations() -> List[List[Dict[str, str]]]:
+    """Get all variation combinations in the sequential cycle.
 
-    Useful for debugging or understanding the full cycle.
+    NOTE: Since background and accessory are now random, this function
+    returns only the deterministic additional variations. Each is shown
+    twice to represent the 18-position cycle.
+    
+    The actual background and accessory will be random when called.
 
     Returns:
-        List of all variation dicts in sequential order
+        List of all 18 cycle positions (9 variations × 2 repetitions)
     """
-    combinations = []
-    for var_type in ALL_VARIATION_TYPES:
-        type_info = IMAGE_VARIATION_TYPES[var_type]
-        for intensity in ALL_INTENSITIES:
-            intensity_info = type_info["intensities"][intensity]
-            combinations.append({
-                "type": var_type,
-                "intensity": intensity,
-                "description": type_info["description"],
-                "detail": intensity_info["detail"]
-            })
-    return combinations
+    all_combinations = []
+    
+    # Iterate through all additional variation types and intensities
+    for additional_type in OPTIONAL_VARIATION_TYPES:
+        additional_info = IMAGE_VARIATION_TYPES[additional_type]
+        
+        for additional_intensity in ALL_INTENSITIES:
+            additional_intensity_info = additional_info["intensities"][additional_intensity]
+            
+            # Each variation appears twice in the cycle
+            for repetition in range(2):
+                # Create a sample combination (bg and accessory are random in actual use)
+                combination = [
+                    {
+                        "type": "background_edit",
+                        "intensity": "random",  # Placeholder - will be random in actual use
+                        "description": IMAGE_VARIATION_TYPES["background_edit"]["description"],
+                        "detail": "(Random - light/medium/far)"
+                    },
+                    {
+                        "type": "random_accessory",  # Placeholder - will be weighted random in actual use
+                        "intensity": None,
+                        "description": "Random accessory (weighted)",
+                        "detail": "(50% religious, 20% brim, 20% knit, 5% bandana, 5% baseball)"
+                    },
+                    {
+                        "type": additional_type,
+                        "intensity": additional_intensity,
+                        "description": additional_info["description"],
+                        "detail": additional_intensity_info["detail"]
+                    }
+                ]
+                
+                all_combinations.append(combination)
+    
+    return all_combinations
