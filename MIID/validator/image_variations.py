@@ -198,7 +198,7 @@ def select_random_variations(
     accessory = select_random_accessory()
     variations.append({
         "type": accessory["type"],
-        "intensity": None,  # Accessories don't have intensity
+        "intensity": "",  # Empty string for accessories (Pydantic requires string, not None)
         "description": accessory["description"],
         "detail": accessory["detail"]
     })
@@ -253,8 +253,8 @@ def format_variation_requirements(variations: List[Dict[str, str]]) -> str:
     ]
 
     for i, var in enumerate(variations, 1):
-        # Format differently for accessories (which don't have intensity)
-        if var.get('intensity') is None:
+        # Format differently for accessories (which have empty intensity)
+        if var.get('intensity') == "":
             lines.append(
                 f"{i}. accessory ({var['type']}): {var['detail']}"
             )
@@ -319,8 +319,8 @@ def validate_variation_request(variations: List[Dict[str, str]]) -> bool:
         
         # Check if it's an accessory type
         if var["type"] in ACCESSORY_TYPES:
-            # Accessories should not have intensity or it should be None
-            if var.get("intensity") is not None and var.get("intensity") != "":
+            # Accessories should have empty string intensity
+            if var.get("intensity") != "":
                 return False
         else:
             # Regular variations must have valid type and intensity
@@ -406,7 +406,7 @@ def get_variation_by_index(index: int) -> List[Dict[str, str]]:
     accessory = select_random_accessory()
     accessory_var = {
         "type": accessory["type"],
-        "intensity": None,
+        "intensity": "",  # Empty string for accessories (Pydantic requires string, not None)
         "description": accessory["description"],
         "detail": accessory["detail"]
     }
@@ -458,7 +458,7 @@ def get_all_variation_combinations() -> List[List[Dict[str, str]]]:
                     },
                     {
                         "type": "random_accessory",  # Placeholder - will be weighted random in actual use
-                        "intensity": None,
+                        "intensity": "",  # Empty string for accessories (Pydantic requires string, not None)
                         "description": "Random accessory (weighted)",
                         "detail": "(50% religious, 20% brim, 20% knit, 5% bandana, 5% baseball)"
                     },
