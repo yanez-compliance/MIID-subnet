@@ -224,7 +224,7 @@ def format_variation_requirements(variations: List[Dict[str, str]]) -> str:
 
         1. pose_edit (medium): ±30° rotation (clear head turn, profile partially visible)
         2. expression_edit (light): Neutral to slight smile, minor brow movement
-        3. background_edit (far): Unusual or contrasting environment, complex scene. Also add: Religious head covering (hijab, turban, kippah, taqiyah, etc.) appropriate to subject
+        3. background_edit (far): Unusual or contrasting environment, complex scene. Additionally, include: Religious head covering (hijab, turban, kippah, taqiyah, etc.) appropriate to subject
 
         IMPORTANT: The subject's face must remain recognizable across all variations.
     """
@@ -248,7 +248,7 @@ def format_variation_requirements(variations: List[Dict[str, str]]) -> str:
         
         # If this is background_edit, append accessory information
         if var['type'] == 'background_edit' and accessory:
-            detail = f"{detail}. Also add: {accessory['detail']}"
+            detail = f"{detail}. Additionally, include: {accessory['detail']}"
         
         lines.append(
             f"{i}. {var['type']} ({var['intensity']}): {detail}"
@@ -330,6 +330,9 @@ def get_variation_by_index(index: int) -> Dict[str, str]:
     Order: pose_edit/light, pose_edit/medium, pose_edit/far,
            lighting_edit/light, lighting_edit/medium, ...
 
+    When the variation is background_edit, a random accessory (weighted selection)
+    is included in both description and detail (e.g. description "Change background... Add religious head covering").
+
     Supports wrapping around when index exceeds total combinations.
 
     Args:
@@ -351,11 +354,20 @@ def get_variation_by_index(index: int) -> Dict[str, str]:
     type_info = IMAGE_VARIATION_TYPES[var_type]
     intensity_info = type_info["intensities"][intensity]
 
+    detail = intensity_info["detail"]
+    description = type_info["description"]
+
+    # For background_edit only: append a random accessory (weighted) to description and detail
+    if var_type == "background_edit":
+        accessory = select_random_accessory()
+        description = f"{description}. {accessory['description']}"
+        detail = f"{detail}. Additionally, include: {accessory['detail']}"
+
     return {
         "type": var_type,
         "intensity": intensity,
-        "description": type_info["description"],
-        "detail": intensity_info["detail"]
+        "description": description,
+        "detail": detail
     }
 
 
