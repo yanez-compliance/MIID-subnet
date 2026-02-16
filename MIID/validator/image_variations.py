@@ -245,11 +245,9 @@ def format_variation_requirements(variations: List[Dict[str, str]]) -> str:
 
     for i, var in enumerate(variations, 1):
         detail = var['detail']
-        
-        # If this is background_edit, append accessory information
-        if var['type'] == 'background_edit' and accessory:
+        # If this is background_edit and detail doesn't already include accessory (e.g. from get_variation_by_index), add it once
+        if var['type'] == 'background_edit' and accessory and "Additionally, include:" not in detail:
             detail = f"{detail}. Additionally, include: {accessory['detail']}"
-        
         lines.append(
             f"{i}. {var['type']} ({var['intensity']}): {detail}"
         )
@@ -326,9 +324,11 @@ def get_total_variation_combinations() -> int:
 def get_variation_by_index(index: int) -> Dict[str, str]:
     """Get a single variation type + intensity by index.
 
-    Cycles through all variation types, then all intensities for each type.
-    Order: pose_edit/light, pose_edit/medium, pose_edit/far,
-           lighting_edit/light, lighting_edit/medium, ...
+    Cycles through variation types in order: background, pose, lighting, expression;
+    for each type, cycles through intensities: light, medium, far.
+    Order: background_edit/light, background_edit/medium, background_edit/far,
+           pose_edit/light, pose_edit/medium, pose_edit/far,
+           lighting_edit/light, ..., expression_edit/far.
 
     When the variation is background_edit, a random accessory (weighted selection)
     is included in both description and detail (e.g. description "Change background... Add religious head covering").

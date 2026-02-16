@@ -78,6 +78,7 @@ from MIID.base.validator import BaseValidatorNeuron
 
 # Bittensor Validator Template:
 from MIID.validator import forward
+from MIID.validator.forward import reset_phase4_state
 # Import only what's needed from the validator module
 # Import reward function if needed for metrics (or maybe just pass rewards to log_step)
 from MIID.validator.reward import get_name_variation_rewards
@@ -200,7 +201,11 @@ class Validator(BaseValidatorNeuron):
         
         # Download base images from Flask API using validator's hotkey (signed request)
         self._download_base_images_from_api()
-        
+
+        # Reset Phase 4 state on startup so each run starts from the beginning of the image/variation cycle
+        phase4_state_path = Path(self.config.logging.logging_dir) / "validator_results" / "phase4_state.json"
+        reset_phase4_state(phase4_state_path)
+
         bt.logging.info("Ollama initialized")
         bt.logging.info(f"Using LLM model: {self.model_name}")
         bt.logging.info("Finished initializing Validator")
