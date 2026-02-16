@@ -82,11 +82,71 @@ IMAGE_VARIATION_TYPES = {
     }
 }
 
+# Accessory types with weighted selection
+ACCESSORY_TYPES = {
+    "religious_head_covering": {
+        "description": "Add religious head covering",
+        "detail": "Religious head covering (hijab, turban, kippah, taqiyah, etc.) appropriate to subject",
+        "weight": 50
+    },
+    "brim_hat": {
+        "description": "Add brim hat (not baseball)",
+        "detail": "Brim hat such as fedora, wide-brim hat, sun hat, or similar (not baseball cap)",
+        "weight": 20
+    },
+    "knit_winter_hat": {
+        "description": "Add knit or winter hat",
+        "detail": "Knit hat, beanie, or winter hat",
+        "weight": 20
+    },
+    "bandana": {
+        "description": "Add bandana",
+        "detail": "Bandana worn on head",
+        "weight": 5
+    },
+    "baseball_cap": {
+        "description": "Add baseball cap",
+        "detail": "Baseball cap or similar sports cap",
+        "weight": 5
+    }
+}
+
 # All available variation type keys
 ALL_VARIATION_TYPES = list(IMAGE_VARIATION_TYPES.keys())
 
 # All available intensity levels
 ALL_INTENSITIES = ["light", "medium", "far"]
+
+
+def select_random_accessory() -> Dict[str, str]:
+    """Select a random accessory based on weighted distribution.
+    
+    Weights:
+    - 50% religious head coverings
+    - 20% Brim hats (not baseball)
+    - 20% Knit/winter hats
+    - 5% Bandanas
+    - 5% Baseball caps
+    
+    Returns:
+        Dict containing:
+            - type: str - accessory type key
+            - description: str - accessory description
+            - detail: str - specific accessory detail
+    """
+    # Create weighted list
+    accessory_keys = list(ACCESSORY_TYPES.keys())
+    weights = [ACCESSORY_TYPES[key]["weight"] for key in accessory_keys]
+    
+    # Select based on weights
+    selected_key = random.choices(accessory_keys, weights=weights, k=1)[0]
+    accessory_info = ACCESSORY_TYPES[selected_key]
+    
+    return {
+        "type": selected_key,
+        "description": accessory_info["description"],
+        "detail": accessory_info["detail"]
+    }
 
 
 def select_random_variations(
@@ -146,6 +206,9 @@ def format_variation_requirements(variations: List[Dict[str, str]]) -> str:
 
     Creates a human-readable description of the requested variations
     to be appended to the query template sent to miners.
+    
+    If background_edit is included, automatically adds a random accessory
+    to the background variation prompt.
 
     Args:
         variations: List of variation dicts from select_random_variations()
@@ -155,24 +218,40 @@ def format_variation_requirements(variations: List[Dict[str, str]]) -> str:
 
     Example output:
         [IMAGE VARIATION REQUIREMENTS]
+        Professional passport-style portrait, 3:4 aspect ratio, head and shoulders composition from chest up.
+        
         For the face image provided, generate the following variations while preserving identity:
 
         1. pose_edit (medium): ±30° rotation (clear head turn, profile partially visible)
         2. expression_edit (light): Neutral to slight smile, minor brow movement
-        3. background_edit (far): Unusual or contrasting environment, complex scene
+        3. background_edit (far): Unusual or contrasting environment, complex scene. Also add: Religious head covering (hijab, turban, kippah, taqiyah, etc.) appropriate to subject
 
         IMPORTANT: The subject's face must remain recognizable across all variations.
     """
     lines = [
         "",
         "[IMAGE VARIATION REQUIREMENTS]",
+        "Professional passport-style portrait, 3:4 aspect ratio, head and shoulders composition from chest up.",
+        "",
         "For the face image provided, generate the following variations while preserving identity:",
         ""
     ]
 
+    # Check if background_edit is in the variations
+    has_background = any(var['type'] == 'background_edit' for var in variations)
+    accessory = None
+    if has_background:
+        accessory = select_random_accessory()
+
     for i, var in enumerate(variations, 1):
+        detail = var['detail']
+        
+        # If this is background_edit, append accessory information
+        if var['type'] == 'background_edit' and accessory:
+            detail = f"{detail}. Also add: {accessory['detail']}"
+        
         lines.append(
-            f"{i}. {var['type']} ({var['intensity']}): {var['detail']}"
+            f"{i}. {var['type']} ({var['intensity']}): {detail}"
         )
 
     lines.extend([
