@@ -114,6 +114,16 @@ def _save_phase4_state(file_path: Path, global_index: int):
         json.dump({"global_index": global_index}, f)
 
 
+def reset_phase4_state(file_path: Path) -> None:
+    """Reset Phase 4 cycle state to 0 so the next forward starts with variation index 0 (background first).
+    Call this on validator startup so each run starts from the beginning of the image/variation cycle."""
+    file_path = Path(file_path)
+    file_path.parent.mkdir(parents=True, exist_ok=True)
+    with open(file_path, 'w') as f:
+        json.dump({"global_index": 0}, f)
+    bt.logging.info("Phase 4: Reset state to global_index=0 (cycle starts with background variation)")
+
+
 def _get_next_image_and_variation(num_images: int) -> Tuple[int, int, int]:
     """Get the next image index and variation index in the cycle.
 
