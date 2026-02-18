@@ -204,7 +204,7 @@ class Validator(BaseValidatorNeuron):
 
         # Reset Phase 4 state on startup so each run starts from the beginning of the image/variation cycle
         phase4_state_path = Path(self.config.logging.logging_dir) / "validator_results" / "phase4_state.json"
-        reset_phase4_state(phase4_state_path)
+        # reset_phase4_state(phase4_state_path)
 
         bt.logging.info("Ollama initialized")
         bt.logging.info(f"Using LLM model: {self.model_name}")
