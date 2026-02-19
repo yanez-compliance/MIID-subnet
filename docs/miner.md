@@ -262,6 +262,8 @@ Rewards combine:
 - **KAV** (online quality score)
 - **UAV** (reputation-based component)
 
+You can view your live scores, cycle rewards, and reputation on the [Yanez Dashboard & Leaderboard](https://tao-ui-dashboard.yanez.ai/).
+
 **KAV quality score breakdown:**
 
 | Component | Weight | What It Measures |
@@ -386,6 +388,7 @@ Understanding why submissions get rejected helps you improve quality:
 
 These documents provide detailed information about the reward system, validation pipeline, and subnet architecture:
 
+- [Yanez Dashboard & Leaderboard](https://tao-ui-dashboard.yanez.ai/) -- Live miner scores, cycle rewards, online KAV scores, and UAV reputation leaderboard
 - [Yanez Identity Generation Bittensor Subnet (PDF)](Yanez%20Identity%20Generation%20Bittensor%20Subnet.pdf) -- Full subnet architecture, roadmap, and phase descriptions
 - [Unknown Attack Vectors (UAV) Reward System (PDF)](Unknown%20Attack%20Vectors%20(UAV)%20Reward%20System-updates.pdf) -- UAV scoring rules, reputation mechanics, and worked examples
 - [Face Variation Reward System (PDF)](Face%20Variation%20Reward%20System.pdf) -- Face variation validation pipeline, scoring, and examples of accepted/rejected submissions
