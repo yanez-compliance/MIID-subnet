@@ -529,9 +529,27 @@ async def forward(self):
                     else:
                         image_filename, base64_image, actual_image_index = image_result
 
-                        # Get the specific variation by index (ONE variation only)
+                        # Keep deterministic cycle variation, then add 1-2 random extras.
                         single_variation = get_variation_by_index(variation_index)
-                        selected_variations = [single_variation]  # Wrap in list for compatibility
+                        selected_variations = [single_variation]
+                        extra_variations_target = random.randint(1, 2)
+                        target_total_variations = 1 + extra_variations_target
+
+                        # Best-effort de-duplication by (type, intensity).
+                        attempts = 0
+                        while len(selected_variations) < target_total_variations and attempts < 5:
+                            attempts += 1
+                            random_candidates = select_random_variations(min_variations=1, max_variations=2)
+                            for candidate in random_candidates:
+                                if len(selected_variations) >= target_total_variations:
+                                    break
+                                is_duplicate = any(
+                                    existing["type"] == candidate["type"]
+                                    and existing["intensity"] == candidate["intensity"]
+                                    for existing in selected_variations
+                                )
+                                if not is_duplicate:
+                                    selected_variations.append(candidate)
 
                         # Calculate drand round for reveal (after all miners respond)
                         reveal_delay = calculate_reveal_buffer(adaptive_timeout)
@@ -577,6 +595,7 @@ async def forward(self):
                             f"Variation {variation_index + 1}/{variations_per_image} "
                             f"({single_variation['type']}/{single_variation['intensity']}), "
                             f"Cycle position {cycle_position + 1}/{total_combinations}, "
+                            f"Requested {len(selected_variations)} variation(s), "
                             f"drand round {target_round}"
                         )
 
@@ -850,7 +869,8 @@ async def forward(self):
         "request_synapse": {
             "identity": identity_list,
             "query_template": query_template,
-            "dendrite_timeout": adaptive_timeout
+            "dendrite_timeout": adaptive_timeout,
+            "image_request_count": len(image_requests)
         },
         # Phase 3 UAV data (collected and scored in Cycle 1 execution)
         "uav_data": {
@@ -863,12 +883,25 @@ async def forward(self):
         "phase4_image_data": {
             "cycle": "Phase4-C1-Exec",
             "note": "Image variations with S3 uploads, post-validation scoring by YANEZ",
-            "enabled": PHASE4_ENABLED and image_request is not None,
+            "enabled": PHASE4_ENABLED and len(image_requests) > 0,
             "s3_bucket": "yanez-miid-sn54",
             "challenge_id": challenge_id,
             "base_image_filename": image_request.image_filename if image_request else None,
             "target_drand_round": image_request.target_drand_round if image_request else None,
             "reveal_timestamp": image_request.reveal_timestamp if image_request else None,
+            "requested_image_count": len(image_requests),
+            "random_extra_image_count": max(0, len(image_requests) - 1),
+            "requested_image_requests": [
+                {
+                    "challenge_id": req.challenge_id,
+                    "image_filename": req.image_filename,
+                    "target_drand_round": req.target_drand_round,
+                    "reveal_timestamp": req.reveal_timestamp,
+                    "variation_types": [v.type for v in req.variation_requests],
+                    "variation_intensities": [v.intensity for v in req.variation_requests],
+                }
+                for req in image_requests
+            ],
             # Detailed variation requests with type + intensity for scoring
             "requested_variations": selected_variations if selected_variations else [],
             # Summary for quick reference
