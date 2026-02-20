@@ -869,8 +869,7 @@ async def forward(self):
         "request_synapse": {
             "identity": identity_list,
             "query_template": query_template,
-            "dendrite_timeout": adaptive_timeout,
-            "image_request_count": len(image_requests)
+            "dendrite_timeout": adaptive_timeout
         },
         # Phase 3 UAV data (collected and scored in Cycle 1 execution)
         "uav_data": {
@@ -883,25 +882,12 @@ async def forward(self):
         "phase4_image_data": {
             "cycle": "Phase4-C1-Exec",
             "note": "Image variations with S3 uploads, post-validation scoring by YANEZ",
-            "enabled": PHASE4_ENABLED and len(image_requests) > 0,
+            "enabled": PHASE4_ENABLED and image_request is not None,
             "s3_bucket": "yanez-miid-sn54",
             "challenge_id": challenge_id,
             "base_image_filename": image_request.image_filename if image_request else None,
             "target_drand_round": image_request.target_drand_round if image_request else None,
             "reveal_timestamp": image_request.reveal_timestamp if image_request else None,
-            "requested_image_count": len(image_requests),
-            "random_extra_image_count": max(0, len(image_requests) - 1),
-            "requested_image_requests": [
-                {
-                    "challenge_id": req.challenge_id,
-                    "image_filename": req.image_filename,
-                    "target_drand_round": req.target_drand_round,
-                    "reveal_timestamp": req.reveal_timestamp,
-                    "variation_types": [v.type for v in req.variation_requests],
-                    "variation_intensities": [v.intensity for v in req.variation_requests],
-                }
-                for req in image_requests
-            ],
             # Detailed variation requests with type + intensity for scoring
             "requested_variations": selected_variations if selected_variations else [],
             # Summary for quick reference
