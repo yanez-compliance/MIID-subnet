@@ -230,6 +230,14 @@ class Validator(BaseValidatorNeuron):
             base_images_dir.mkdir(parents=True, exist_ok=True)
             bt.logging.info(f"Base images directory: {base_images_dir}")
 
+            # Ensure the folder is empty before requesting fresh images from API.
+            for path in base_images_dir.iterdir():
+                if path.is_file() or path.is_symlink():
+                    path.unlink()
+                elif path.is_dir():
+                    shutil.rmtree(path)
+            bt.logging.info("Cleared existing base images before API download")
+
             hotkey = self.wallet.hotkey
             hotkey_address = hotkey.ss58_address
             bt.logging.info(f"Requesting base images for hotkey: {hotkey_address}")
