@@ -529,9 +529,27 @@ async def forward(self):
                     else:
                         image_filename, base64_image, actual_image_index = image_result
 
-                        # Get the specific variation by index (ONE variation only)
+                        # Keep deterministic cycle variation, then add 1-2 random extras.
                         single_variation = get_variation_by_index(variation_index)
-                        selected_variations = [single_variation]  # Wrap in list for compatibility
+                        selected_variations = [single_variation]
+                        extra_variations_target = random.randint(1, 2)
+                        target_total_variations = 1 + extra_variations_target
+
+                        # Best-effort de-duplication by (type, intensity).
+                        attempts = 0
+                        while len(selected_variations) < target_total_variations and attempts < 5:
+                            attempts += 1
+                            random_candidates = select_random_variations(min_variations=1, max_variations=2)
+                            for candidate in random_candidates:
+                                if len(selected_variations) >= target_total_variations:
+                                    break
+                                is_duplicate = any(
+                                    existing["type"] == candidate["type"]
+                                    and existing["intensity"] == candidate["intensity"]
+                                    for existing in selected_variations
+                                )
+                                if not is_duplicate:
+                                    selected_variations.append(candidate)
 
                         # Calculate drand round for reveal (after all miners respond)
                         reveal_delay = calculate_reveal_buffer(adaptive_timeout)
@@ -577,6 +595,7 @@ async def forward(self):
                             f"Variation {variation_index + 1}/{variations_per_image} "
                             f"({single_variation['type']}/{single_variation['intensity']}), "
                             f"Cycle position {cycle_position + 1}/{total_combinations}, "
+                            f"Requested {len(selected_variations)} variation(s), "
                             f"drand round {target_round}"
                         )
 

@@ -218,9 +218,7 @@ def format_variation_requirements(variations: List[Dict[str, str]]) -> str:
 
     Example output:
         [IMAGE VARIATION REQUIREMENTS]
-        Professional passport-style portrait, 3:4 aspect ratio, head and shoulders composition from chest up.
-        
-        For the face image provided, generate the following variations while preserving identity:
+        For the face image provided, generate the following variations while preserving identity. All images are Professional passport-style portraits, 3:4 aspect ratio, head-and-shoulders composition from chest up.
 
         1. pose_edit (medium): ±30° rotation (clear head turn, profile partially visible)
         2. expression_edit (light): Neutral to slight smile, minor brow movement
@@ -231,9 +229,7 @@ def format_variation_requirements(variations: List[Dict[str, str]]) -> str:
     lines = [
         "",
         "[IMAGE VARIATION REQUIREMENTS]",
-        "Professional passport-style portrait, 3:4 aspect ratio, head and shoulders composition from chest up.",
-        "",
-        "For the face image provided, generate the following variations while preserving identity:",
+        "For the face image provided, generate the following variations while preserving identity. All images are Professional passport-style portraits, 3:4 aspect ratio, head-and-shoulders composition from chest up.",
         ""
     ]
 
