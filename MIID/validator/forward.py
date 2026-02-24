@@ -62,7 +62,6 @@ from MIID.validator.base_images import (
 )
 from MIID.validator.drand_utils import calculate_target_round, calculate_reveal_buffer
 from MIID.validator.image_variations import (
-    select_random_variations,
     format_variation_requirements,
     get_variation_by_index,
     get_total_variation_combinations
@@ -519,8 +518,13 @@ async def forward(self):
                 if num_images == 0:
                     bt.logging.warning("Phase 4 disabled: No images found in base_images folder")
                 else:
-                    # Get next image and variation indices
-                    image_index, variation_index, new_global_index = _get_next_image_and_variation(num_images)
+                    # Determine current image and starting variation index from global cycle index
+                    variations_per_image = get_total_variation_combinations()
+                    total_combinations = num_images * variations_per_image
+
+                    current_index = _phase4_global_index % total_combinations
+                    image_index = current_index // variations_per_image
+                    variation_index = current_index % variations_per_image
 
                     # Load the specific image by index
                     image_result = load_image_by_index(image_index)
@@ -529,27 +533,20 @@ async def forward(self):
                     else:
                         image_filename, base64_image, actual_image_index = image_result
 
-                        # Keep deterministic cycle variation, then add 1-2 random extras.
-                        single_variation = get_variation_by_index(variation_index)
-                        selected_variations = [single_variation]
-                        extra_variations_target = random.randint(1, 2)
-                        target_total_variations = 1 + extra_variations_target
+                        # Request 2–3 sequential variations from this image, so that
+                        # all 12 type×intensity combinations are exhausted in ~3–6 queries.
+                        extra_variations_target = random.randint(1, 2)  # 1–2 extras
+                        target_total_variations = 1 + extra_variations_target  # 2–3 total
 
-                        # Best-effort de-duplication by (type, intensity).
-                        attempts = 0
-                        while len(selected_variations) < target_total_variations and attempts < 5:
-                            attempts += 1
-                            random_candidates = select_random_variations(min_variations=1, max_variations=2)
-                            for candidate in random_candidates:
-                                if len(selected_variations) >= target_total_variations:
-                                    break
-                                is_duplicate = any(
-                                    existing["type"] == candidate["type"]
-                                    and existing["intensity"] == candidate["intensity"]
-                                    for existing in selected_variations
-                                )
-                                if not is_duplicate:
-                                    selected_variations.append(candidate)
+                        remaining_in_image = variations_per_image - variation_index
+                        actual_total_variations = min(target_total_variations, remaining_in_image)
+
+                        selected_variations = []
+                        for offset in range(actual_total_variations):
+                            v_index = variation_index + offset
+                            selected_variations.append(get_variation_by_index(v_index))
+
+                        primary_variation = selected_variations[0]
 
                         # Calculate drand round for reveal (after all miners respond)
                         reveal_delay = calculate_reveal_buffer(adaptive_timeout)
@@ -580,20 +577,18 @@ async def forward(self):
                         )
 
                         # Update and save state for next forward pass
-                        _phase4_global_index = new_global_index
+                        _phase4_global_index += actual_total_variations
                         _save_phase4_state(_phase4_state_file_path, _phase4_global_index)
 
                         # Calculate cycle info for logging
-                        variations_per_image = get_total_variation_combinations()
-                        total_combinations = num_images * variations_per_image
-                        cycle_position = (new_global_index - 1) % total_combinations
+                        cycle_position = (_phase4_global_index - 1) % total_combinations
 
                         # Log what was selected
                         bt.logging.info(
                             f"Phase 4: Sequential selection - "
                             f"Image {image_index + 1}/{num_images} ('{image_filename}'), "
-                            f"Variation {variation_index + 1}/{variations_per_image} "
-                            f"({single_variation['type']}/{single_variation['intensity']}), "
+                            f"Starting variation {variation_index + 1}/{variations_per_image} "
+                            f"({primary_variation['type']}/{primary_variation['intensity']}), "
                             f"Cycle position {cycle_position + 1}/{total_combinations}, "
                             f"Requested {len(selected_variations)} variation(s), "
                             f"drand round {target_round}"
