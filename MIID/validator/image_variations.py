@@ -367,6 +367,79 @@ def get_variation_by_index(index: int) -> Dict[str, str]:
     }
 
 
+# =============================================================================
+# Screen Replay Variation (Cycle 2 — not part of sequential image cycle)
+# =============================================================================
+
+# Device types — uniform random selection, no weights
+SCREEN_REPLAY_DEVICE_TYPES = ["phone", "tablet", "laptop", "monitor", "tv"]
+
+# Visual cues that must visibly appear in a screen-replay image (≥2 required)
+SCREEN_REPLAY_VISUAL_CUES: Dict[str, str] = {
+    "moire_pixel_grid": (
+        "Moiré / pixel grid — interference pattern from screen subpixels captured by camera"
+    ),
+    "screen_glare_hotspots": (
+        "Screen glare hotspots — specular reflections on the display surface"
+    ),
+    "perspective_keystone_distortion": (
+        "Perspective / keystone distortion — geometric distortion from off-angle capture"
+    ),
+    "gamma_contrast_shift": (
+        "Gamma / contrast shift — colour/brightness characteristics of display capture"
+    ),
+    "edge_crop_cues": (
+        "Edge / crop cues — screen borders, bezel reflections, or cropping consistent with "
+        "display capture"
+    ),
+}
+
+
+def select_screen_replay_variation() -> Dict[str, str]:
+    """Select a screen_replay variation with 2 random device types and 2 random visual cues.
+
+    Device types are chosen uniformly at random (no weights) from
+    SCREEN_REPLAY_DEVICE_TYPES.  Two visual cues are drawn without
+    replacement from SCREEN_REPLAY_VISUAL_CUES.
+
+    The returned dict is compatible with VariationRequest (type, intensity,
+    description, detail) so no protocol changes are required.
+
+    Returns:
+        Dict with keys: type, intensity, description, detail
+    """
+    selected_device = random.choice(SCREEN_REPLAY_DEVICE_TYPES)
+    selected_cue_keys = random.sample(list(SCREEN_REPLAY_VISUAL_CUES.keys()), 2)
+    selected_cues = [SCREEN_REPLAY_VISUAL_CUES[k] for k in selected_cue_keys]
+
+    cues_str = "; ".join(selected_cues)
+
+    description = (
+        f"Screen replay capture — simulate a photo of a face displayed on "
+        f"a {selected_device} screen photographed by a physical camera"
+    )
+    detail = (
+        f"Generate a realistic screen-replay image: a face shown on a {selected_device} "
+        f"screen and photographed with a camera. "
+        f"Must visibly exhibit at least 2 of these cues: {cues_str}. "
+        f"The face must be the dominant object (large enough for reliable face detection) "
+        f"and must remain matchable to the seed identity (high similarity score)."
+    )
+
+    return {
+        "type": "screen_replay",
+        "intensity": "standard",
+        "description": description,
+        "detail": detail,
+        # Extra metadata carried in the plain dict (not sent over the wire via VariationRequest)
+        "device_type": selected_device,
+        "visual_cue_keys": selected_cue_keys,
+    }
+
+
+# =============================================================================
+
+
 def get_all_variation_combinations() -> List[Dict[str, str]]:
     """Get all possible variation type + intensity combinations in order.
 

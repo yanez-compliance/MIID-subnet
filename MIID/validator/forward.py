@@ -64,7 +64,8 @@ from MIID.validator.drand_utils import calculate_target_round, calculate_reveal_
 from MIID.validator.image_variations import (
     format_variation_requirements,
     get_variation_by_index,
-    get_total_variation_combinations
+    get_total_variation_combinations,
+    select_screen_replay_variation,
 )
 
 
@@ -461,18 +462,21 @@ async def forward(self):
                     else:
                         image_filename, base64_image, actual_image_index = image_result
 
-                        # Request 2–3 sequential variations from this image, so that
-                        # all 12 type×intensity combinations are exhausted in ~3–6 queries.
-                        extra_variations_target = random.randint(1, 2)  # 1–2 extras
-                        target_total_variations = 1 + extra_variations_target  # 2–3 total
-
+                        # Select 1–2 sequential variations from the image cycle so that
+                        # all 12 type×intensity combinations are exhausted in ~6–12 queries.
+                        num_sequential = random.randint(1, 2)
                         remaining_in_image = variations_per_image - variation_index
-                        actual_total_variations = min(target_total_variations, remaining_in_image)
+                        actual_sequential = min(num_sequential, remaining_in_image)
 
                         selected_variations = []
-                        for offset in range(actual_total_variations):
+                        for offset in range(actual_sequential):
                             v_index = variation_index + offset
                             selected_variations.append(get_variation_by_index(v_index))
+
+                        # Always append one screen_replay variation (2 random devices + 2 random cues).
+                        # screen_replay is independent of the sequential image cycle.
+                        screen_replay_var = select_screen_replay_variation()
+                        selected_variations.append(screen_replay_var)
 
                         primary_variation = selected_variations[0]
 
@@ -504,21 +508,26 @@ async def forward(self):
                             challenge_id=challenge_id
                         )
 
-                        # Update and save state for next forward pass
-                        _phase4_global_index += actual_total_variations
+                        # Advance global index only by sequential variations;
+                        # screen_replay is independent of the image/variation cycle.
+                        _phase4_global_index += actual_sequential
                         _save_phase4_state(_phase4_state_file_path, _phase4_global_index)
 
                         # Calculate cycle info for logging
                         cycle_position = (_phase4_global_index - 1) % total_combinations
 
                         # Log what was selected
+                        screen_replay_devices = screen_replay_var.get("device_type", "unknown")
+                        screen_replay_cues = screen_replay_var.get("visual_cue_keys", [])
                         bt.logging.info(
                             f"Phase 4: Sequential selection - "
                             f"Image {image_index + 1}/{num_images} ('{image_filename}'), "
                             f"Starting variation {variation_index + 1}/{variations_per_image} "
                             f"({primary_variation['type']}/{primary_variation['intensity']}), "
                             f"Cycle position {cycle_position + 1}/{total_combinations}, "
-                            f"Requested {len(selected_variations)} variation(s), "
+                            f"Sequential variation(s): {actual_sequential}, "
+                            f"screen_replay: devices={screen_replay_devices}, cues={screen_replay_cues}, "
+                            f"Total requested: {len(selected_variations)}, "
                             f"drand round {target_round}"
                         )
 
