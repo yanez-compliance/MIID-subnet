@@ -428,7 +428,7 @@ def select_screen_replay_variation() -> Dict[str, str]:
 
     return {
         "type": "screen_replay",
-        "intensity": selected_device,
+        "intensity": "standard",
         "description": description,
         "detail": detail,
         # Extra metadata carried in the plain dict (not sent over the wire via VariationRequest)
