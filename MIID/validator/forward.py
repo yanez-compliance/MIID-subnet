@@ -788,7 +788,7 @@ async def forward(self):
         },
         # Phase 4: Image variation data for YANEZ post-validation
         "phase4_image_data": {
-            "cycle": "Phase4-C2-Sandbox",
+            "cycle": "Phase4-C1-Exec",
             "note": "Image variations with S3 uploads, post-validation scoring by YANEZ",
             "enabled": PHASE4_ENABLED and image_request is not None,
             "s3_bucket": "yanez-miid-sn54",
