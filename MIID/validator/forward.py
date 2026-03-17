@@ -683,9 +683,9 @@ async def forward(self):
         miner_uids_list = kav_uids.tolist() if hasattr(kav_uids, 'tolist') else list(kav_uids)
 
         # Get config values (Phase 4 - Cycle 1)
-        burn_fraction = getattr(self.config.neuron, 'burn_fraction', 0.70)
-        kav_weight = getattr(self.config.neuron, 'kav_weight', 0.20)
-        uav_weight = getattr(self.config.neuron, 'uav_weight', 0.80)
+        burn_fraction = getattr(self.config.neuron, 'burn_fraction', 0.65)
+        kav_weight = getattr(self.config.neuron, 'kav_weight', 0.15)
+        uav_weight = getattr(self.config.neuron, 'uav_weight', 0.85)
 
         # Apply reputation weighting (UAV + combine + burn in one call)
         # Burn is applied ONCE here after KAV + UAV are combined
@@ -788,7 +788,7 @@ async def forward(self):
         },
         # Phase 4: Image variation data for YANEZ post-validation
         "phase4_image_data": {
-            "cycle": "Phase4-C2-Sandbox",
+            "cycle": "Phase4-C1-Exec",
             "note": "Image variations with S3 uploads, post-validation scoring by YANEZ",
             "enabled": PHASE4_ENABLED and image_request is not None,
             "s3_bucket": "yanez-miid-sn54",

@@ -12,14 +12,14 @@ MIID miners handle three types of tasks from validators:
 - Return structured variations to the validator
 - This task remains active in Phase 4, but with lower reward weight than UAV-focused components
 
-**2. Address UAV -- Unknown Attack Vectors (Phase 3)**
+**2. Address UAV — Unknown Attack Vectors (Phase 3; not in scope Phase 4 Cycle 2)**
 - For a selected seed identity, generate an address that looks legitimate but might fail geocoding or validation
 - Provide the address variant, an explanation label, and latitude/longitude coordinates
-- Examples: typos ("123 Main Str"), abbreviations ("456 Oak Av"), missing directions ("789 1st St")
-- Validators select one high-risk seed per challenge; miners should return UAV output for that selected seed
+- *UAV address submissions are not accepted in Phase 4 Cycle 2.*
 
-**3. Face Image Variation Generation (Phase 4 -- Current)**
-- Receive a base face image and variation requirements (pose, expression, lighting, background)
+**3. Face Image Variation Generation (Phase 4 — Current)**
+- Receive a base face image and variation requirements
+- **Variation types (Phase 4 Cycle 2):** pose_edit, lighting_edit, expression_edit, background_edit, and **screen_replay**
 - Generate identity-preserving image variations using a diffusion model
 - Encrypt and upload results to S3
 - Return signed submission references to the validator
@@ -32,8 +32,9 @@ The subnet has evolved in cycles. Use these dates from the latest docs:
 
 | Date | Milestone |
 |------|-----------|
-| **Jan 22 - Mar 2, 2026** | **Phase 4 Cycle 1 Execution (current stage, reward allocation live)** |
-| Jan 12, 2026 | Manual UAV grading nearly complete, leaderboard published (<2% pending) |
+| **Mar 16 - Apr 13, 2026** | **Phase 4 Cycle 2 Execution (current stage; reward allocation live)** |
+| Mar 16, 2026 | Phase 4 Cycle 2 sandbox ends; execution phase begins |
+| Jan 22 - Mar 2, 2026 | Phase 4 Cycle 1 Execution |
 | Jan 8 - Jan 22, 2026 | Phase 4 Cycle 1 sandbox/calibration window |
 | Dec 31, 2025 | Phase 3 Cycle 1 UAV intake stopped |
 
@@ -202,7 +203,9 @@ python neurons/miner.py --netuid 54 --wallet.name your_wallet_name --wallet.hotk
 
 ### Task 2: Address UAV (Unknown Attack Vectors)
 
-Validators mark one high-risk seed identity for UAV in each challenge. For that selected seed, the miner should return:
+*Not in scope for Phase 4 Cycle 2 — address UAV submissions are not accepted.*
+
+When in scope, validators mark one high-risk seed identity for UAV in each challenge. For that selected seed, the miner should return:
 
 1. An **address variant** that looks legitimate but might fail geocoding (e.g., common typos, local abbreviations, missing street directions)
 2. A **label** explaining why the address could be valid
@@ -243,7 +246,7 @@ Notes:
 
 3. The miner returns signed S3 submission references to the validator.
 
-**Variation types and intensities:**
+**Variation types and intensities (Cycle 2):**
 
 | Type | Light | Medium | Far |
 |------|-------|--------|-----|
@@ -251,6 +254,8 @@ Notes:
 | **Expression edit** | Slight smile, minor brow movement | Smile, serious, mildly surprised | Laughing, surprised, concerned |
 | **Lighting edit** | Subtle brightness/contrast change | Directional light, noticeable shadows | Strong shadows, dramatic contrast |
 | **Background edit** | Color shift, blur adjustment | Different environment type | Dramatic/contrasting environment |
+
+**Screen replay (Cycle 2 only):** Simulate the face as shown on a device screen (e.g. photo on phone/tablet/laptop/monitor/TV). At least **two** of these visual cues must be clearly visible: moiré/pixel grid, screen glare hotspots, perspective/keystone distortion, gamma or contrast shift typical of display capture, or edge/crop cues (screen borders, bezel reflections).
 
 Validators may also request **accessories** on background edits (head coverings, hats, etc.).
 
@@ -318,7 +323,7 @@ For detailed scoring rules, examples, and the latest updates, see [Unknown Attac
 
 Face variation rewards are **reputation-based**, following the same reputation framework as UAV. Your face variation scores feed into your overall miner reputation, which determines your share of the reward pool.
 
-**Important:** In **Phase 4 Cycle 1 Execution**, miners submit face-variation data that is collected and validated. Reward distribution based on this Cycle 1 face data is applied in **Phase 4 Cycle 2 Execution**.
+**Important:** Phase 4 Cycle 2 execution runs **Mar 16 – Apr 13, 2026**. Face-variation data submitted in Cycle 2 is collected and validated for reward distribution in the next cycle.
 
 Face variations go through a multi-stage validation pipeline:
 

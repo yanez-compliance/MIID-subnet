@@ -456,7 +456,7 @@ def add_validator_args(cls, parser):
         '--neuron.burn_fraction',
         type=float,
         help="Fraction of emissions to burn to the burn UID when miners qualify.",
-        default=0.70
+        default=0.65
     )
     # Note: burn_uid is hardcoded to 59 and not configurable
     
@@ -471,13 +471,13 @@ def add_validator_args(cls, parser):
         '--neuron.kav_weight',
         type=float,
         help="Weight for KAV (Known Address Variation) scores in reputation-weighted rewards (only used when UAV_grading is enabled).",
-        default=0.20
+        default=0.15
     )
     parser.add_argument(
         '--neuron.uav_weight',
         type=float,
         help="Weight for UAV (Unknown Address Variation) scores in reputation-weighted rewards (only used when UAV_grading is enabled).",
-        default=0.80
+        default=0.85
     )
     
     # --- Nominatim Cache Configuration ---

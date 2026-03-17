@@ -38,19 +38,18 @@ This network helps **governments, financial institutions, and researchers** impr
 
 ## ⚙️ How It Works
 
-### 🛠️ **Miners: Generate KAV, UAV, and Image Variations**
+### 🛠️ **Miners: Generate KAV and Image Variations**
 Miners process requests from validators and return **identity data variations** to enhance detection models.
 
-- Receive mixed identity challenges from validators (KAV, UAV, and image-variation requests)
+- Receive mixed identity challenges from validators (KAV and image-variation requests; UAV address not in scope this cycle)
 - Generate **KAV** variations: Name / DOB / Address
-- Submit **UAV** location attack vectors that are **unknown to LDS V1**
-- Generate **face image variations** from validator-provided seed images (Phase 4)
+- Generate **face image variations** from validator-provided seed images (Phase 4; Cycle 2 includes screen_replay)
 - Earn rewards based on accuracy, novelty, constraint adherence, and real-world adversarial value
 
 ### 🧑‍🏫 **Validators: Evaluate & Score Miners**
 Validators ensure the dataset maintains **high-quality** and **real-world relevance**.
 
-- Issue challenge queries across KAV, UAV, and image variations
+- Issue challenge queries across KAV and image variations (UAV address not in scope this cycle)
 - Run online validation for immediate weight setting (where applicable)
 - Perform post-validation to assess novelty/quality and update miner reputation for the next cycle
 - Allocate rewards and continuously evolve the dataset for KYC/IDV resilience
@@ -130,8 +129,7 @@ MIID is not just another AI dataset—it's a **live, evolving system** that **ch
 
 ### Phase 4: Deepfake / Face-Based Adversarial Testing for KYC (Q1 2026)
 - Introduce validator-provided seed face images and deepfake-style transformation families.
-- Cycle 1 focuses on: pose_edit, lighting_edit, expression_edit, background_edit.
-- Continue location UAV submissions unknown to LDS V1 while expanding adversarial identity testing.
+- Cycle 1: pose_edit, lighting_edit, expression_edit, background_edit. Cycle 2 adds screen_replay; UAV address is not accepted this cycle.
 - Phase 4 execution begins incorporating rewards based on validated UAV quality from Phase 3 Cycle 1.
 
 ### Phase 5–11 (2026–2027): Identity Realism & Simulation
