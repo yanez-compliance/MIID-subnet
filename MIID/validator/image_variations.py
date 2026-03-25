@@ -233,11 +233,15 @@ def format_variation_requirements(variations: List[Dict[str, str]]) -> str:
         ""
     ]
 
-    # Check if background_edit is in the variations
-    has_background = any(var['type'] == 'background_edit' for var in variations)
-    accessory = None
-    if has_background:
-        accessory = select_random_accessory()
+    # Only draw an accessory if the background variation detail doesn't already include one.
+    # This avoids "double-randomizing" when background_edit was produced by get_variation_by_index()
+    # or by our dedicated helpers.
+    needs_accessory = any(
+        (var.get("type") == "background_edit")
+        and ("Additionally, include:" not in var.get("detail", ""))
+        for var in variations
+    )
+    accessory = select_random_accessory() if needs_accessory else None
 
     for i, var in enumerate(variations, 1):
         detail = var['detail']
@@ -315,6 +319,55 @@ def get_total_variation_combinations() -> int:
         Total number of combinations (types × intensities)
     """
     return len(ALL_VARIATION_TYPES) * len(ALL_INTENSITIES)
+
+
+_NON_BACKGROUND_VARIATION_TYPES: List[str] = [t for t in ALL_VARIATION_TYPES if t != "background_edit"]
+
+
+def get_total_non_background_variation_combinations() -> int:
+    """Total combinations for all non-background types (pose/lighting/expression) × intensities."""
+    return len(_NON_BACKGROUND_VARIATION_TYPES) * len(ALL_INTENSITIES)
+
+
+def get_random_background_variation() -> Dict[str, str]:
+    """Get a `background_edit` variation with random intensity + weighted accessory."""
+    intensity = random.choice(ALL_INTENSITIES)
+
+    type_info = IMAGE_VARIATION_TYPES["background_edit"]
+    intensity_info = type_info["intensities"][intensity]
+
+    accessory = select_random_accessory()
+    description = f"{type_info['description']}. {accessory['description']}"
+    detail = f"{intensity_info['detail']}. Additionally, include: {accessory['detail']}"
+
+    return {
+        "type": "background_edit",
+        "intensity": intensity,
+        "description": description,
+        "detail": detail,
+    }
+
+
+def get_non_background_variation_by_index(index: int) -> Dict[str, str]:
+    """Get a single non-background variation (pose/lighting/expression) by index (wraps)."""
+    total_combinations = get_total_non_background_variation_combinations()
+    actual_index = index % total_combinations
+
+    type_index = actual_index // len(ALL_INTENSITIES)
+    intensity_index = actual_index % len(ALL_INTENSITIES)
+
+    var_type = _NON_BACKGROUND_VARIATION_TYPES[type_index]
+    intensity = ALL_INTENSITIES[intensity_index]
+
+    type_info = IMAGE_VARIATION_TYPES[var_type]
+    intensity_info = type_info["intensities"][intensity]
+
+    return {
+        "type": var_type,
+        "intensity": intensity,
+        "description": type_info["description"],
+        "detail": intensity_info["detail"],
+    }
 
 
 def get_variation_by_index(index: int) -> Dict[str, str]:
