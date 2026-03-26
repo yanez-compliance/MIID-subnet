@@ -234,7 +234,7 @@ def fetch_image_from_api(wallet) -> Optional[Tuple[str, str]]:
 
         server_url = os.environ.get("MIID_IMAGES_SERVER", "http://52.44.186.20:5000")
         base_url = server_url.rstrip("/")
-        url = f"{base_url}/images/{hotkey_address}"
+        url = f"{base_url}/image/{hotkey_address}"
         payload = {"signature": signed_contents}
 
         response = requests.post(url, json=payload, timeout=30)
@@ -245,13 +245,7 @@ def fetch_image_from_api(wallet) -> Optional[Tuple[str, str]]:
             return None
 
         data = response.json()
-        images = data.get("images") or []
-        if not images:
-            bt.logging.warning("No images returned from API")
-            return None
-
-        # API should return one image; take the first item.
-        item = images[0]
+        item = data.get("image") or {}
 
         filename = item.get("filename")
         b64 = item.get("data_base64")
