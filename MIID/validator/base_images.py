@@ -6,9 +6,16 @@
 import os
 import base64
 import random
+import time
 import bittensor as bt
 from pathlib import Path
 from typing import List, Tuple, Optional
+
+try:
+    import requests
+    REQUESTS_AVAILABLE = True
+except ImportError:
+    REQUESTS_AVAILABLE = False
 
 
 # Base images folder (relative to validator module)
@@ -195,3 +202,67 @@ def load_image_by_index(index: int) -> Optional[Tuple[str, str, int]]:
         return result[0], result[1], actual_index
 
     return None
+
+
+def fetch_image_from_api(wallet, server_url: str, image_index: int = 0) -> Optional[Tuple[str, str, int]]:
+    """Fetch a single image from the Flask API without saving to disk.
+
+    Uses the same signed-request pattern as the validator's
+    ``_download_base_images_from_api`` but returns one image directly
+    instead of persisting it.
+
+    Args:
+        wallet: Bittensor wallet used to sign the request.
+        server_url: Base URL of the MIID images server (e.g. ``http://52.44.186.20:5000``).
+        image_index: Which image to pick from the response list (wraps around).
+
+    Returns:
+        Tuple of (filename, base64_encoded_image, actual_index) or None on failure.
+    """
+    if not REQUESTS_AVAILABLE:
+        bt.logging.warning("requests library not available. Cannot fetch image from API.")
+        return None
+
+    try:
+        from MIID.utils.sign_message import sign_message
+
+        hotkey = wallet.hotkey
+        hotkey_address = hotkey.ss58_address
+
+        message_to_sign = (
+            f"Hotkey: {hotkey} \n timestamp: {time.time()} \n request: base_images"
+        )
+        signed_contents = sign_message(wallet, message_to_sign, output_file=None)
+
+        base_url = server_url.rstrip("/")
+        url = f"{base_url}/images/{hotkey_address}"
+        payload = {"signature": signed_contents}
+
+        response = requests.post(url, json=payload, timeout=30)
+        if response.status_code != 200:
+            bt.logging.warning(
+                f"Image API returned {response.status_code}: {response.text[:200]}"
+            )
+            return None
+
+        data = response.json()
+        images = data.get("images") or []
+        if not images:
+            bt.logging.warning("No images returned from API")
+            return None
+
+        actual_index = image_index % len(images)
+        item = images[actual_index]
+
+        filename = item.get("filename")
+        b64 = item.get("data_base64")
+        if not filename or not b64:
+            bt.logging.warning("API image entry missing filename or data_base64")
+            return None
+
+        bt.logging.debug(f"Fetched image from API: {filename}")
+        return filename, b64, actual_index
+
+    except Exception as e:
+        bt.logging.error(f"Error fetching image from API: {e}")
+        return None
