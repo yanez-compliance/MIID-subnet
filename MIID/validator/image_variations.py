@@ -83,21 +83,60 @@ IMAGE_VARIATION_TYPES = {
 }
 
 # Accessory types with weighted selection
+HEADPHONES_STYLE_OPTIONS = [
+    "over-ear headphones",
+    "on-ear headset",
+    "studio headset",
+]
+HEADPHONES_COLOR_OPTIONS = ["black", "white", "dark gray", "navy"]
+HEADPHONES_MATERIAL_OPTIONS = [
+    "matte plastic",
+    "composite polymer",
+    "metal-reinforced plastic",
+]
+HEADPHONES_TEXTURE_OPTIONS = [
+    "matte finish",
+    "soft-touch finish",
+    "smooth satin finish",
+]
+HEADPHONES_SIZE_FIT_OPTIONS = ["compact fit", "standard fit", "slightly oversized fit"]
+HEADPHONES_EXTRA_DETAIL_OPTIONS = [
+    "padded headband",
+    "minimal branding",
+    "simple ear-cup design",
+    "fold-flat profile",
+]
+
+
+def select_random_headphones_detail() -> str:
+    """Create a randomized headphones detail string from attribute options."""
+    style = random.choice(HEADPHONES_STYLE_OPTIONS)
+    color = random.choice(HEADPHONES_COLOR_OPTIONS)
+    material = random.choice(HEADPHONES_MATERIAL_OPTIONS)
+    texture = random.choice(HEADPHONES_TEXTURE_OPTIONS)
+    size_fit = random.choice(HEADPHONES_SIZE_FIT_OPTIONS)
+    extra_detail = random.choice(HEADPHONES_EXTRA_DETAIL_OPTIONS)
+    return (
+        f"{style} in {color} with a {material} frame, {texture}, {size_fit}, "
+        f"and {extra_detail}"
+    )
+
+
 ACCESSORY_TYPES = {
     "religious_head_covering": {
         "description": "Add religious head covering",
         "detail": "Religious head covering (hijab, turban, kippah, taqiyah, etc.) appropriate to subject",
-        "weight": 50
+        "weight": 65
     },
     "brim_hat": {
         "description": "Add brim hat (not baseball)",
         "detail": "Brim hat such as fedora, wide-brim hat, sun hat, or similar (not baseball cap)",
-        "weight": 20
+        "weight": 10
     },
     "knit_winter_hat": {
         "description": "Add knit or winter hat",
         "detail": "Knit hat, beanie, or winter hat",
-        "weight": 20
+        "weight": 10
     },
     "bandana": {
         "description": "Add bandana",
@@ -108,6 +147,11 @@ ACCESSORY_TYPES = {
         "description": "Add baseball cap",
         "detail": "Baseball cap or similar sports cap",
         "weight": 5
+    },
+    "headphones": {
+        "description": "Add headphones",
+        "detail": "Headphones appropriate to the subject; pick a realistic modern style",
+        "weight": 5,
     }
 }
 
@@ -122,11 +166,12 @@ def select_random_accessory() -> Dict[str, str]:
     """Select a random accessory based on weighted distribution.
     
     Weights:
-    - 50% religious head coverings
-    - 20% Brim hats (not baseball)
-    - 20% Knit/winter hats
+    - 65% religious head coverings
+    - 10% Brim hats (not baseball)
+    - 10% Knit/winter hats
     - 5% Bandanas
     - 5% Baseball caps
+    - 5% Headphones
     
     Returns:
         Dict containing:
@@ -142,10 +187,14 @@ def select_random_accessory() -> Dict[str, str]:
     selected_key = random.choices(accessory_keys, weights=weights, k=1)[0]
     accessory_info = ACCESSORY_TYPES[selected_key]
     
+    detail = accessory_info["detail"]
+    if selected_key == "headphones":
+        detail = select_random_headphones_detail()
+
     return {
         "type": selected_key,
         "description": accessory_info["description"],
-        "detail": accessory_info["detail"]
+        "detail": detail,
     }
 
 
