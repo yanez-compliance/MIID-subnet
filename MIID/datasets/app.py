@@ -319,5 +319,64 @@ def get_validator_images(hotkey):
     }), 200
 
 
+@app.route('/image/<hotkey>', methods=['POST'])
+def get_validator_image(hotkey):
+    """
+    Return exactly one base image for this validator (that hotkey's folder under base_images).
+    Same auth + signature verification as /images/<hotkey>.
+
+    Response:
+      { "validator_folder", "verified_by", "image": { "filename", "data_base64" } }
+    """
+    if hotkey not in HOTKEY_TO_FOLDER:
+        return jsonify({"error": "Unauthorized hotkey or no image folder for this validator"}), 403
+
+    if not request.is_json:
+        return jsonify({"error": "Request body must be JSON"}), 400
+
+    data = request.get_json()
+    signature_text = data.get("signature")
+    if not signature_text:
+        return jsonify({"error": "Missing 'signature' in JSON payload"}), 400
+
+    tmp_signature_filename = os.path.join(DATA_DIR, f"tmp_signature_image_{time.time()}.txt")
+    with open(tmp_signature_filename, 'w', encoding='utf-8') as tmp_file:
+        tmp_file.write(signature_text)
+
+    try:
+        verify_message(tmp_signature_filename)
+    except ValueError as e:
+        os.remove(tmp_signature_filename)
+        return jsonify({"error": f"Signature verification failed: {str(e)}"}), 400
+
+    os.remove(tmp_signature_filename)
+
+    folder_name = HOTKEY_TO_FOLDER.get(hotkey)
+    if not folder_name:
+        return jsonify({"error": "No image folder configured for this validator"}), 404
+
+    images_dir = BASE_IMAGES_DIR / folder_name
+    if not images_dir.is_dir():
+        return jsonify({"error": f"Image folder not found: {folder_name}"}), 404
+
+    allowed_ext = ('.png', '.jpg', '.jpeg', '.gif', '.webp')
+    files = [f for f in sorted(images_dir.iterdir()) if f.is_file() and f.suffix.lower() in allowed_ext]
+    if not files:
+        return jsonify({"error": "No images found for this validator"}), 404
+
+    # Keep it deterministic: return the first image in sorted order.
+    f = files[0]
+    try:
+        b64 = base64.standard_b64encode(f.read_bytes()).decode('ascii')
+    except Exception as e:
+        return jsonify({"error": f"Failed to read image: {str(e)}"}), 500
+
+    return jsonify({
+        "validator_folder": folder_name,
+        "verified_by": hotkey,
+        "image": {"filename": f.name, "data_base64": b64},
+    }), 200
+
+
 if __name__ == '__main__':
     app.run(host=HOST, port=PORT, debug=DEBUG)
