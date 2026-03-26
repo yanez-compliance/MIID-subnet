@@ -55,10 +55,7 @@ from MIID.validator.query_generator import QueryGenerator
 
 # Phase 4 imports
 from MIID.validator.base_images import (
-    load_random_base_image,
-    validate_base_images_folder,
-    get_sorted_image_files,
-    load_image_by_index
+    fetch_image_from_api
 )
 from MIID.validator.drand_utils import calculate_target_round, calculate_reveal_buffer
 from MIID.validator.image_variations import (
@@ -393,99 +390,64 @@ async def forward(self):
     selected_variations = None  # Track what variations were requested
 
     if PHASE4_ENABLED:
-        global _phase4_global_index, _phase4_state_file_path
-
         try:
-            # Validate base images folder
-            is_valid, validation_msg = validate_base_images_folder()
-            if not is_valid:
-                bt.logging.warning(f"Phase 4 disabled: {validation_msg}")
+            # API is expected to return a single image.
+            image_result = fetch_image_from_api(self.wallet)
+            if image_result is None:
+                bt.logging.warning("Phase 4 disabled: Could not fetch base image from API")
             else:
-                # Initialize state file path (once per validator session)
-                if _phase4_state_file_path is None:
-                    _phase4_state_file_path = Path(self.config.logging.logging_dir) / "validator_results" / "phase4_state.json"
-                    _phase4_global_index = _load_phase4_state(_phase4_state_file_path)
-                    bt.logging.info(f"Phase 4: Loaded state, global_index={_phase4_global_index}")
+                image_filename, base64_image = image_result
 
-                # Get sorted list of images for consistent ordering
-                image_files = get_sorted_image_files()
-                num_images = len(image_files)
+                # Always request:
+                # 1) background_edit (random intensity + weighted accessory)
+                # 2) exactly one random non-background variation (pose/lighting/expression)
+                # 3) screen_replay (independent random devices + cues)
+                background_var = get_random_background_variation()
+                third_var = get_random_non_background_variation()
+                screen_replay_var = select_screen_replay_variation()
 
-                if num_images == 0:
-                    bt.logging.warning("Phase 4 disabled: No images found in base_images folder")
-                else:
-                    # Each forward pass advances by exactly one step and cycles images only.
-                    total_combinations = num_images
-                    current_index = _phase4_global_index % total_combinations
-                    image_index = current_index
+                selected_variations = [background_var, third_var, screen_replay_var]
 
-                    # Load the specific image by index
-                    image_result = load_image_by_index(image_index)
-                    if image_result is None:
-                        bt.logging.warning(f"Phase 4: Failed to load image at index {image_index}")
-                    else:
-                        image_filename, base64_image, actual_image_index = image_result
+                # Calculate drand round for reveal (after all miners respond)
+                reveal_delay = calculate_reveal_buffer(adaptive_timeout)
+                target_round, reveal_timestamp = calculate_target_round(reveal_delay)
 
-                        # Always request:
-                        # 1) background_edit (random intensity + weighted accessory)
-                        # 2) exactly one random non-background variation (pose/lighting/expression)
-                        # 3) screen_replay (independent random devices + cues)
-                        background_var = get_random_background_variation()
+                # Generate unique challenge ID
+                challenge_id = f"challenge_{int(time.time())}_{self.wallet.hotkey.ss58_address[:8]}"
 
-                        # Random third variation: pose/lighting/expression
-                        third_var = get_random_non_background_variation()
+                # Convert to VariationRequest objects
+                variation_requests = [
+                    VariationRequest(
+                        type=v["type"],
+                        intensity=v["intensity"],
+                        description=v["description"],
+                        detail=v["detail"],
+                    )
+                    for v in selected_variations
+                ]
 
-                        screen_replay_var = select_screen_replay_variation()
+                # Create image request
+                image_request = ImageRequest(
+                    base_image=base64_image,
+                    image_filename=image_filename,
+                    variation_requests=variation_requests,
+                    target_drand_round=target_round,
+                    reveal_timestamp=reveal_timestamp,
+                    challenge_id=challenge_id,
+                )
 
-                        selected_variations = [background_var, third_var, screen_replay_var]
-                        # Calculate drand round for reveal (after all miners respond)
-                        reveal_delay = calculate_reveal_buffer(adaptive_timeout)
-                        target_round, reveal_timestamp = calculate_target_round(reveal_delay)
-
-                        # Generate unique challenge ID
-                        challenge_id = f"challenge_{int(time.time())}_{self.wallet.hotkey.ss58_address[:8]}"
-
-                        # Convert to VariationRequest objects
-                        variation_requests = [
-                            VariationRequest(
-                                type=v["type"],
-                                intensity=v["intensity"],
-                                description=v["description"],
-                                detail=v["detail"]
-                            )
-                            for v in selected_variations
-                        ]
-
-                        # Create image request
-                        image_request = ImageRequest(
-                            base_image=base64_image,
-                            image_filename=image_filename,
-                            variation_requests=variation_requests,
-                            target_drand_round=target_round,
-                            reveal_timestamp=reveal_timestamp,
-                            challenge_id=challenge_id
-                        )
-
-                        # Advance global index by exactly one step (image cycle only).
-                        _phase4_global_index += 1
-                        _save_phase4_state(_phase4_state_file_path, _phase4_global_index)
-
-                        # Calculate cycle info for logging
-                        cycle_position = (_phase4_global_index - 1) % total_combinations
-
-                        # Log what was selected
-                        screen_replay_devices = screen_replay_var.get("device_type", "unknown")
-                        screen_replay_cues = screen_replay_var.get("visual_cue_keys", [])
-                        bt.logging.info(
-                            f"Phase 4: Image cycle + random variation selection - "
-                            f"Image {image_index + 1}/{num_images} ('{image_filename}'), "
-                            f"background_edit={background_var['intensity']}, "
-                            f"third={third_var['type']}/{third_var['intensity']}, "
-                            f"Cycle position {cycle_position + 1}/{total_combinations}, "
-                            f"screen_replay: devices={screen_replay_devices}, cues={screen_replay_cues}, "
-                            f"Total requested: {len(selected_variations)}, "
-                            f"drand round {target_round}"
-                        )
+                # Log what was selected
+                screen_replay_devices = screen_replay_var.get("device_type", "unknown")
+                screen_replay_cues = screen_replay_var.get("visual_cue_keys", [])
+                bt.logging.info(
+                    f"Phase 4: API image + random variation selection - "
+                    f"Image '{image_filename}', "
+                    f"background_edit={background_var['intensity']}, "
+                    f"third={third_var['type']}/{third_var['intensity']}, "
+                    f"screen_replay: devices={screen_replay_devices}, cues={screen_replay_cues}, "
+                    f"Total requested: {len(selected_variations)}, "
+                    f"drand round {target_round}"
+                )
 
         except Exception as e:
             bt.logging.warning(f"Phase 4: Could not create image request: {e}")

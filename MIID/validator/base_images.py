@@ -204,7 +204,7 @@ def load_image_by_index(index: int) -> Optional[Tuple[str, str, int]]:
     return None
 
 
-def fetch_image_from_api(wallet, server_url: str, image_index: int = 0) -> Optional[Tuple[str, str, int]]:
+def fetch_image_from_api(wallet) -> Optional[Tuple[str, str]]:
     """Fetch a single image from the Flask API without saving to disk.
 
     Uses the same signed-request pattern as the validator's
@@ -213,11 +213,9 @@ def fetch_image_from_api(wallet, server_url: str, image_index: int = 0) -> Optio
 
     Args:
         wallet: Bittensor wallet used to sign the request.
-        server_url: Base URL of the MIID images server (e.g. ``http://52.44.186.20:5000``).
-        image_index: Which image to pick from the response list (wraps around).
 
     Returns:
-        Tuple of (filename, base64_encoded_image, actual_index) or None on failure.
+        Tuple of (filename, base64_encoded_image) or None on failure.
     """
     if not REQUESTS_AVAILABLE:
         bt.logging.warning("requests library not available. Cannot fetch image from API.")
@@ -234,6 +232,7 @@ def fetch_image_from_api(wallet, server_url: str, image_index: int = 0) -> Optio
         )
         signed_contents = sign_message(wallet, message_to_sign, output_file=None)
 
+        server_url = os.environ.get("MIID_IMAGES_SERVER", "http://52.44.186.20:5000")
         base_url = server_url.rstrip("/")
         url = f"{base_url}/images/{hotkey_address}"
         payload = {"signature": signed_contents}
@@ -251,8 +250,8 @@ def fetch_image_from_api(wallet, server_url: str, image_index: int = 0) -> Optio
             bt.logging.warning("No images returned from API")
             return None
 
-        actual_index = image_index % len(images)
-        item = images[actual_index]
+        # API should return one image; take the first item.
+        item = images[0]
 
         filename = item.get("filename")
         b64 = item.get("data_base64")
@@ -261,7 +260,7 @@ def fetch_image_from_api(wallet, server_url: str, image_index: int = 0) -> Optio
             return None
 
         bt.logging.debug(f"Fetched image from API: {filename}")
-        return filename, b64, actual_index
+        return filename, b64
 
     except Exception as e:
         bt.logging.error(f"Error fetching image from API: {e}")
