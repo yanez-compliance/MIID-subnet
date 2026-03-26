@@ -64,8 +64,7 @@ from MIID.validator.drand_utils import calculate_target_round, calculate_reveal_
 from MIID.validator.image_variations import (
     format_variation_requirements,
     get_random_background_variation,
-    get_non_background_variation_by_index,
-    get_total_non_background_variation_combinations,
+    get_random_non_background_variation,
     select_screen_replay_variation,
 )
 
@@ -86,9 +85,9 @@ _pending_allocations: List[Dict] = []
 _pending_file_path: Optional[Path] = None
 
 # =============================================================================
-# Phase 4: Sequential Image/Variation Cycling State
+# Phase 4: Image Cycling State
 # =============================================================================
-# Tracks the current position in the image cycle.
+# Tracks the current position in the image cycle only.
 # Global index advances by 1 per forward pass and selects `image_index`.
 
 _phase4_global_index: int = 0
@@ -381,12 +380,13 @@ async def forward(self):
     bt.logging.info(f"Using adaptive timeout of {adaptive_timeout} seconds for {len(seed_names)} identities")
     
     # ==========================================================================
-    # Phase 4: Create Image Request (Sequential Cycling)
+    # Phase 4: Create Image Request (Image cycling + random variations)
     # ==========================================================================
-    # Instead of random selection, we cycle through all images and all variations
-    # sequentially: image1/variation1, image1/variation2, ..., image2/variation1, ...
-    # Only ONE variation is sent per request_synapse.
-    # When all combinations are exhausted, we restart from the beginning.
+    # Each forward pass advances to the next image in order.
+    # Variations are selected as:
+    # 1) background_edit: random intensity + weighted accessory
+    # 2) third variation: random pose/lighting/expression + random intensity
+    # 3) screen_replay: random device + random visual cues
     # ==========================================================================
     image_request = None
     challenge_id = None
@@ -414,15 +414,10 @@ async def forward(self):
                 if num_images == 0:
                     bt.logging.warning("Phase 4 disabled: No images found in base_images folder")
                 else:
-                    # Each forward pass advances by exactly one step and cycles images.
-                    # To exhaust all (image × third_var) pairs in a deterministic order,
-                    # include the non-background combinations in `total_combinations`
-                    # and derive both indices from the same `current_index`.
-                    non_background_total = get_total_non_background_variation_combinations()
-                    total_combinations = num_images * non_background_total
+                    # Each forward pass advances by exactly one step and cycles images only.
+                    total_combinations = num_images
                     current_index = _phase4_global_index % total_combinations
-                    image_index = current_index // non_background_total
-                    third_var_index = current_index % non_background_total
+                    image_index = current_index
 
                     # Load the specific image by index
                     image_result = load_image_by_index(image_index)
@@ -437,15 +432,12 @@ async def forward(self):
                         # 3) screen_replay (independent random devices + cues)
                         background_var = get_random_background_variation()
 
-                        # Deterministic third variation cycling (pose/lighting/expression in order)
-                        # based on the same `current_index` used for `image_index`.
-                        third_var = get_non_background_variation_by_index(third_var_index)
+                        # Random third variation: pose/lighting/expression
+                        third_var = get_random_non_background_variation()
 
                         screen_replay_var = select_screen_replay_variation()
 
                         selected_variations = [background_var, third_var, screen_replay_var]
-                        primary_variation = third_var
-
                         # Calculate drand round for reveal (after all miners respond)
                         reveal_delay = calculate_reveal_buffer(adaptive_timeout)
                         target_round, reveal_timestamp = calculate_target_round(reveal_delay)
@@ -474,8 +466,7 @@ async def forward(self):
                             challenge_id=challenge_id
                         )
 
-                        # Advance global index by exactly one step:
-                        # screen_replay and the random third variation are independent of the cycling index.
+                        # Advance global index by exactly one step (image cycle only).
                         _phase4_global_index += 1
                         _save_phase4_state(_phase4_state_file_path, _phase4_global_index)
 
@@ -486,9 +477,9 @@ async def forward(self):
                         screen_replay_devices = screen_replay_var.get("device_type", "unknown")
                         screen_replay_cues = screen_replay_var.get("visual_cue_keys", [])
                         bt.logging.info(
-                            f"Phase 4: Sequential selection - "
+                            f"Phase 4: Image cycle + random variation selection - "
                             f"Image {image_index + 1}/{num_images} ('{image_filename}'), "
-                            f"background_edit={primary_variation['intensity']}, "
+                            f"background_edit={background_var['intensity']}, "
                             f"third={third_var['type']}/{third_var['intensity']}, "
                             f"Cycle position {cycle_position + 1}/{total_combinations}, "
                             f"screen_replay: devices={screen_replay_devices}, cues={screen_replay_cues}, "
