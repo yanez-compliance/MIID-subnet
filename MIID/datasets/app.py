@@ -1,12 +1,14 @@
 import os
 import base64
 import json
+import random
 import secrets
+import shutil
 import time
 import threading
 from pathlib import Path
 from flask import Flask, request, jsonify
-from datetime import datetime
+from datetime import datetime, timezone
 
 # Import configuration
 from MIID.datasets.config import (
@@ -37,6 +39,13 @@ from MIID.utils.verify_message import verify_message
 # Validator base images (hotkey -> folder under base_images)
 # =============================================================================
 BASE_IMAGES_DIR = Path("/home/ubuntu/YanezMIIDManage/api_image/base_images")
+
+# Batch 3 image pool config
+BATCH_DIR      = Path("/home/ubuntu/YanezMIIDManage/api_image/batch_3_3-27-2026")
+USED_DIR       = Path("/home/ubuntu/YanezMIIDManage/api_image/used_images_batch_3_3-27-26")
+BATCH_LOG      = Path("/home/ubuntu/YanezMIIDManage/api_image/used_batch_3_3_27_2026.json")
+ALLOWED_EXT    = ('.png', '.jpg', '.jpeg', '.gif', '.webp')
+_batch_lock    = threading.Lock()
 HOTKEY_TO_FOLDER = {
     "5DUB7kNLvvx8Dj7D8tn54N1C7Xok6GodNPQE2WECCaL9Wgpr": "miid",
     "5GWzXSra6cBM337nuUU7YTjZQ6ewT2VakDpMj8Pw2i8v8PVs": "yuma",
@@ -322,11 +331,8 @@ def get_validator_images(hotkey):
 @app.route('/image/<hotkey>', methods=['POST'])
 def get_validator_image(hotkey):
     """
-    Return exactly one base image for this validator (that hotkey's folder under base_images).
-    Same auth + signature verification as /images/<hotkey>.
-
-    Response:
-      { "validator_folder", "verified_by", "image": { "filename", "data_base64" } }
+    Pick a random image from BATCH_DIR, move it to USED_DIR, log the move,
+    and return the image to the requesting validator.
     """
     if hotkey not in HOTKEY_TO_FOLDER:
         return jsonify({"error": "Unauthorized hotkey or no image folder for this validator"}), 403
@@ -351,30 +357,49 @@ def get_validator_image(hotkey):
 
     os.remove(tmp_signature_filename)
 
-    folder_name = HOTKEY_TO_FOLDER.get(hotkey)
-    if not folder_name:
-        return jsonify({"error": "No image folder configured for this validator"}), 404
+    with _batch_lock:
+        # Get available images from batch dir
+        available = [f for f in BATCH_DIR.iterdir() if f.is_file() and f.suffix.lower() in ALLOWED_EXT]
+        if not available:
+            return jsonify({"error": "No images left in batch pool"}), 404
 
-    images_dir = BASE_IMAGES_DIR / folder_name
-    if not images_dir.is_dir():
-        return jsonify({"error": f"Image folder not found: {folder_name}"}), 404
+        chosen = random.choice(available)
 
-    allowed_ext = ('.png', '.jpg', '.jpeg', '.gif', '.webp')
-    files = [f for f in sorted(images_dir.iterdir()) if f.is_file() and f.suffix.lower() in allowed_ext]
-    if not files:
-        return jsonify({"error": "No images found for this validator"}), 404
+        # Read image before moving
+        try:
+            image_bytes = chosen.read_bytes()
+        except Exception as e:
+            return jsonify({"error": f"Failed to read image: {str(e)}"}), 500
 
-    # Keep it deterministic: return the first image in sorted order.
-    f = files[0]
-    try:
-        b64 = base64.standard_b64encode(f.read_bytes()).decode('ascii')
-    except Exception as e:
-        return jsonify({"error": f"Failed to read image: {str(e)}"}), 500
+        # Move to used dir
+        USED_DIR.mkdir(parents=True, exist_ok=True)
+        dest = USED_DIR / chosen.name
+        shutil.move(str(chosen), str(dest))
 
+        # Update the log JSON
+        try:
+            with open(BATCH_LOG, 'r', encoding='utf-8') as lf:
+                log = json.load(lf)
+
+            log["images_moved_to_used_count"] = log.get("images_moved_to_used_count", 0) + 1
+            log["images_remaining"] = len(available) - 1  # already moved one
+
+            log.setdefault("moves_to_used_images", []).append({
+                "filename": chosen.name,
+                "moved_at": datetime.now(timezone.utc).isoformat(),
+                "validator_hotkey": hotkey,
+                "dest_path": str(dest),
+            })
+
+            with open(BATCH_LOG, 'w', encoding='utf-8') as lf:
+                json.dump(log, lf, indent=2)
+        except Exception as e:
+            print(f"[ERROR] Failed to update batch log: {e}")
+
+    b64 = base64.standard_b64encode(image_bytes).decode('ascii')
     return jsonify({
-        "validator_folder": folder_name,
         "verified_by": hotkey,
-        "image": {"filename": f.name, "data_base64": b64},
+        "image": {"filename": chosen.name, "data_base64": b64},
     }), 200
 
 
