@@ -1,12 +1,14 @@
 import os
 import base64
 import json
+import random
 import secrets
+import shutil
 import time
 import threading
 from pathlib import Path
 from flask import Flask, request, jsonify
-from datetime import datetime
+from datetime import datetime, timezone
 
 # Import configuration
 from MIID.datasets.config import (
@@ -37,11 +39,18 @@ from MIID.utils.verify_message import verify_message
 # Validator base images (hotkey -> folder under base_images)
 # =============================================================================
 BASE_IMAGES_DIR = Path("/home/ubuntu/YanezMIIDManage/api_image/base_images")
+
+# Batch 3 image pool config
+BATCH_DIR      = Path("/home/ubuntu/YanezMIIDManage/api_image/batch_3_3-27-2026")
+USED_DIR       = Path("/home/ubuntu/YanezMIIDManage/api_image/used_images_batch_3_3-27-26")
+BATCH_LOG      = Path("/home/ubuntu/YanezMIIDManage/api_image/used_batch_3_3_27_2026.json")
+ALLOWED_EXT    = ('.png', '.jpg', '.jpeg', '.gif', '.webp')
+_batch_lock    = threading.Lock()
 HOTKEY_TO_FOLDER = {
     "5DUB7kNLvvx8Dj7D8tn54N1C7Xok6GodNPQE2WECCaL9Wgpr": "miid",
     "5GWzXSra6cBM337nuUU7YTjZQ6ewT2VakDpMj8Pw2i8v8PVs": "yuma",
     "5C4qiYkqKjqGDSvzpf6YXCcnBgM6punh8BQJRP78bqMGsn54": "rt21",
-    "5HK5tp6t2S59DywmHRWPBVJeJ86T61KjurYqeooqj8sREpeN": "tensora",
+    "5DyM1rxnDu8QSjbbh5bPV2GMK6UTPRXdUM6mNViBBut9Ma6w": "tensora",
     "5HbUFHW4XVhbQvMbSy7WDjvhHb62nuYgP1XBsmmz9E2E2K6p": "otf",
     "5GQqAhLKVHRLpdTqRg1yc3xu7y47DicJykSpggE2GuDbfs54": "rizzo",
     "5CnkkjPdfsA6jJDHv2U6QuiKiivDuvQpECC13ffdmSDbkgtt": "testnet",
@@ -316,6 +325,81 @@ def get_validator_images(hotkey):
         "verified_by": hotkey,
         "images": images,
         "count": len(images),
+    }), 200
+
+
+@app.route('/image/<hotkey>', methods=['POST'])
+def get_validator_image(hotkey):
+    """
+    Pick a random image from BATCH_DIR, move it to USED_DIR, log the move,
+    and return the image to the requesting validator.
+    """
+    if hotkey not in HOTKEY_TO_FOLDER:
+        return jsonify({"error": "Unauthorized hotkey or no image folder for this validator"}), 403
+
+    if not request.is_json:
+        return jsonify({"error": "Request body must be JSON"}), 400
+
+    data = request.get_json()
+    signature_text = data.get("signature")
+    if not signature_text:
+        return jsonify({"error": "Missing 'signature' in JSON payload"}), 400
+
+    tmp_signature_filename = os.path.join(DATA_DIR, f"tmp_signature_image_{time.time()}.txt")
+    with open(tmp_signature_filename, 'w', encoding='utf-8') as tmp_file:
+        tmp_file.write(signature_text)
+
+    try:
+        verify_message(tmp_signature_filename)
+    except ValueError as e:
+        os.remove(tmp_signature_filename)
+        return jsonify({"error": f"Signature verification failed: {str(e)}"}), 400
+
+    os.remove(tmp_signature_filename)
+
+    with _batch_lock:
+        # Get available images from batch dir
+        available = [f for f in BATCH_DIR.iterdir() if f.is_file() and f.suffix.lower() in ALLOWED_EXT]
+        if not available:
+            return jsonify({"error": "No images left in batch pool"}), 404
+
+        chosen = random.choice(available)
+
+        # Read image before moving
+        try:
+            image_bytes = chosen.read_bytes()
+        except Exception as e:
+            return jsonify({"error": f"Failed to read image: {str(e)}"}), 500
+
+        # Move to used dir
+        USED_DIR.mkdir(parents=True, exist_ok=True)
+        dest = USED_DIR / chosen.name
+        shutil.move(str(chosen), str(dest))
+
+        # Update the log JSON
+        try:
+            with open(BATCH_LOG, 'r', encoding='utf-8') as lf:
+                log = json.load(lf)
+
+            log["images_moved_to_used_count"] = log.get("images_moved_to_used_count", 0) + 1
+            log["images_remaining"] = len(available) - 1  # already moved one
+
+            log.setdefault("moves_to_used_images", []).append({
+                "filename": chosen.name,
+                "moved_at": datetime.now(timezone.utc).isoformat(),
+                "validator_hotkey": hotkey,
+                "dest_path": str(dest),
+            })
+
+            with open(BATCH_LOG, 'w', encoding='utf-8') as lf:
+                json.dump(log, lf, indent=2)
+        except Exception as e:
+            print(f"[ERROR] Failed to update batch log: {e}")
+
+    b64 = base64.standard_b64encode(image_bytes).decode('ascii')
+    return jsonify({
+        "verified_by": hotkey,
+        "image": {"filename": chosen.name, "data_base64": b64},
     }), 200
 
 

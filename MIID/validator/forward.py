@@ -55,16 +55,13 @@ from MIID.validator.query_generator import QueryGenerator
 
 # Phase 4 imports
 from MIID.validator.base_images import (
-    load_random_base_image,
-    validate_base_images_folder,
-    get_sorted_image_files,
-    load_image_by_index
+    fetch_image_from_api
 )
 from MIID.validator.drand_utils import calculate_target_round, calculate_reveal_buffer
 from MIID.validator.image_variations import (
     format_variation_requirements,
-    get_variation_by_index,
-    get_total_variation_combinations,
+    get_random_background_variation,
+    get_random_non_background_variation,
     select_screen_replay_variation,
 )
 
@@ -85,11 +82,10 @@ _pending_allocations: List[Dict] = []
 _pending_file_path: Optional[Path] = None
 
 # =============================================================================
-# Phase 4: Sequential Image/Variation Cycling State
+# Phase 4: Image Cycling State
 # =============================================================================
-# Tracks the current position in the image × variation cycle.
-# Global index = (image_index × variations_per_image) + variation_index
-# This ensures we cycle through: image1/var1, image1/var2, ..., image2/var1, ...
+# Tracks the current position in the image cycle only.
+# Global index advances by 1 per forward pass and selects `image_index`.
 
 _phase4_global_index: int = 0
 _phase4_state_file_path: Optional[Path] = None
@@ -115,45 +111,12 @@ def _save_phase4_state(file_path: Path, global_index: int):
 
 
 def reset_phase4_state(file_path: Path) -> None:
-    """Reset Phase 4 cycle state to 0 so the next forward starts with variation index 0 (background first).
-    Call this on validator startup so each run starts from the beginning of the image/variation cycle."""
+    """Reset Phase 4 cycle state to 0 so the next forward starts with image index 0."""
     file_path = Path(file_path)
     file_path.parent.mkdir(parents=True, exist_ok=True)
     with open(file_path, 'w') as f:
         json.dump({"global_index": 0}, f)
     bt.logging.info("Phase 4: Reset state to global_index=0 (cycle starts with background variation)")
-
-
-def _get_next_image_and_variation(num_images: int) -> Tuple[int, int, int]:
-    """Get the next image index and variation index in the cycle.
-
-    Args:
-        num_images: Total number of available images
-
-    Returns:
-        Tuple of (image_index, variation_index, new_global_index)
-    """
-    global _phase4_global_index
-
-    if num_images == 0:
-        return 0, 0, 0
-
-    variations_per_image = get_total_variation_combinations()
-    total_combinations = num_images * variations_per_image
-
-    # Wrap around if we've completed a full cycle
-    current_index = _phase4_global_index % total_combinations
-
-    # Calculate image and variation indices
-    image_index = current_index // variations_per_image
-    variation_index = current_index % variations_per_image
-
-    # Increment for next call
-    new_global_index = _phase4_global_index + 1
-
-    return image_index, variation_index, new_global_index
-
-# =============================================================================
 
 
 def _load_pending_allocations(file_path: Path) -> List[Dict]:
@@ -414,122 +377,77 @@ async def forward(self):
     bt.logging.info(f"Using adaptive timeout of {adaptive_timeout} seconds for {len(seed_names)} identities")
     
     # ==========================================================================
-    # Phase 4: Create Image Request (Sequential Cycling)
+    # Phase 4: Create Image Request (Image cycling + random variations)
     # ==========================================================================
-    # Instead of random selection, we cycle through all images and all variations
-    # sequentially: image1/variation1, image1/variation2, ..., image2/variation1, ...
-    # Only ONE variation is sent per request_synapse.
-    # When all combinations are exhausted, we restart from the beginning.
+    # Each forward pass advances to the next image in order.
+    # Variations are selected as:
+    # 1) background_edit: random intensity + weighted accessory
+    # 2) third variation: random pose/lighting/expression + random intensity
+    # 3) screen_replay: random device + random visual cues
     # ==========================================================================
     image_request = None
     challenge_id = None
     selected_variations = None  # Track what variations were requested
 
     if PHASE4_ENABLED:
-        global _phase4_global_index, _phase4_state_file_path
-
         try:
-            # Validate base images folder
-            is_valid, validation_msg = validate_base_images_folder()
-            if not is_valid:
-                bt.logging.warning(f"Phase 4 disabled: {validation_msg}")
+            # API is expected to return a single image.
+            image_result = fetch_image_from_api(self.wallet)
+            if image_result is None:
+                bt.logging.warning("Phase 4 disabled: Could not fetch base image from API")
             else:
-                # Initialize state file path (once per validator session)
-                if _phase4_state_file_path is None:
-                    _phase4_state_file_path = Path(self.config.logging.logging_dir) / "validator_results" / "phase4_state.json"
-                    _phase4_global_index = _load_phase4_state(_phase4_state_file_path)
-                    bt.logging.info(f"Phase 4: Loaded state, global_index={_phase4_global_index}")
+                image_filename, base64_image = image_result
 
-                # Get sorted list of images for consistent ordering
-                image_files = get_sorted_image_files()
-                num_images = len(image_files)
+                # Always request:
+                # 1) background_edit (random intensity + weighted accessory)
+                # 2) exactly one random non-background variation (pose/lighting/expression)
+                # 3) screen_replay (independent random devices + cues)
+                background_var = get_random_background_variation()
+                third_var = get_random_non_background_variation()
+                screen_replay_var = select_screen_replay_variation()
 
-                if num_images == 0:
-                    bt.logging.warning("Phase 4 disabled: No images found in base_images folder")
-                else:
-                    # Determine current image and starting variation index from global cycle index
-                    variations_per_image = get_total_variation_combinations()
-                    total_combinations = num_images * variations_per_image
+                selected_variations = [background_var, third_var, screen_replay_var]
 
-                    current_index = _phase4_global_index % total_combinations
-                    image_index = current_index // variations_per_image
-                    variation_index = current_index % variations_per_image
+                # Calculate drand round for reveal (after all miners respond)
+                reveal_delay = calculate_reveal_buffer(adaptive_timeout)
+                target_round, reveal_timestamp = calculate_target_round(reveal_delay)
 
-                    # Load the specific image by index
-                    image_result = load_image_by_index(image_index)
-                    if image_result is None:
-                        bt.logging.warning(f"Phase 4: Failed to load image at index {image_index}")
-                    else:
-                        image_filename, base64_image, actual_image_index = image_result
+                # Generate unique challenge ID
+                challenge_id = f"challenge_{int(time.time())}_{self.wallet.hotkey.ss58_address[:8]}"
 
-                        # Select 1–2 sequential variations from the image cycle so that
-                        # all 12 type×intensity combinations are exhausted in ~6–12 queries.
-                        num_sequential = random.randint(1, 2)
-                        remaining_in_image = variations_per_image - variation_index
-                        actual_sequential = min(num_sequential, remaining_in_image)
+                # Convert to VariationRequest objects
+                variation_requests = [
+                    VariationRequest(
+                        type=v["type"],
+                        intensity=v["intensity"],
+                        description=v["description"],
+                        detail=v["detail"],
+                    )
+                    for v in selected_variations
+                ]
 
-                        selected_variations = []
-                        for offset in range(actual_sequential):
-                            v_index = variation_index + offset
-                            selected_variations.append(get_variation_by_index(v_index))
+                # Create image request
+                image_request = ImageRequest(
+                    base_image=base64_image,
+                    image_filename=image_filename,
+                    variation_requests=variation_requests,
+                    target_drand_round=target_round,
+                    reveal_timestamp=reveal_timestamp,
+                    challenge_id=challenge_id,
+                )
 
-                        # Always append one screen_replay variation (2 random devices + 2 random cues).
-                        # screen_replay is independent of the sequential image cycle.
-                        screen_replay_var = select_screen_replay_variation()
-                        selected_variations.append(screen_replay_var)
-
-                        primary_variation = selected_variations[0]
-
-                        # Calculate drand round for reveal (after all miners respond)
-                        reveal_delay = calculate_reveal_buffer(adaptive_timeout)
-                        target_round, reveal_timestamp = calculate_target_round(reveal_delay)
-
-                        # Generate unique challenge ID
-                        challenge_id = f"challenge_{int(time.time())}_{self.wallet.hotkey.ss58_address[:8]}"
-
-                        # Convert to VariationRequest objects
-                        variation_requests = [
-                            VariationRequest(
-                                type=v["type"],
-                                intensity=v["intensity"],
-                                description=v["description"],
-                                detail=v["detail"]
-                            )
-                            for v in selected_variations
-                        ]
-
-                        # Create image request
-                        image_request = ImageRequest(
-                            base_image=base64_image,
-                            image_filename=image_filename,
-                            variation_requests=variation_requests,
-                            target_drand_round=target_round,
-                            reveal_timestamp=reveal_timestamp,
-                            challenge_id=challenge_id
-                        )
-
-                        # Advance global index only by sequential variations;
-                        # screen_replay is independent of the image/variation cycle.
-                        _phase4_global_index += actual_sequential
-                        _save_phase4_state(_phase4_state_file_path, _phase4_global_index)
-
-                        # Calculate cycle info for logging
-                        cycle_position = (_phase4_global_index - 1) % total_combinations
-
-                        # Log what was selected
-                        screen_replay_devices = screen_replay_var.get("device_type", "unknown")
-                        screen_replay_cues = screen_replay_var.get("visual_cue_keys", [])
-                        bt.logging.info(
-                            f"Phase 4: Sequential selection - "
-                            f"Image {image_index + 1}/{num_images} ('{image_filename}'), "
-                            f"Starting variation {variation_index + 1}/{variations_per_image} "
-                            f"({primary_variation['type']}/{primary_variation['intensity']}), "
-                            f"Cycle position {cycle_position + 1}/{total_combinations}, "
-                            f"Sequential variation(s): {actual_sequential}, "
-                            f"screen_replay: devices={screen_replay_devices}, cues={screen_replay_cues}, "
-                            f"Total requested: {len(selected_variations)}, "
-                            f"drand round {target_round}"
-                        )
+                # Log what was selected
+                screen_replay_devices = screen_replay_var.get("device_type", "unknown")
+                screen_replay_cues = screen_replay_var.get("visual_cue_keys", [])
+                bt.logging.info(
+                    f"Phase 4: API image + random variation selection - "
+                    f"Image '{image_filename}', "
+                    f"background_edit={background_var['intensity']}, "
+                    f"third={third_var['type']}/{third_var['intensity']}, "
+                    f"screen_replay: devices={screen_replay_devices}, cues={screen_replay_cues}, "
+                    f"Total requested: {len(selected_variations)}, "
+                    f"drand round {target_round}"
+                )
 
         except Exception as e:
             bt.logging.warning(f"Phase 4: Could not create image request: {e}")
@@ -788,7 +706,7 @@ async def forward(self):
         },
         # Phase 4: Image variation data for YANEZ post-validation
         "phase4_image_data": {
-            "cycle": "Phase4-C1-Exec",
+            "cycle": "Phase4-C2-Exec",
             "note": "Image variations with S3 uploads, post-validation scoring by YANEZ",
             "enabled": PHASE4_ENABLED and image_request is not None,
             "s3_bucket": "yanez-miid-sn54",
