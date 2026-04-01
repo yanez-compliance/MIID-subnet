@@ -21,6 +21,9 @@ requests
 unidecode
 geonamescache==3.0.0
 
-# Phase 4: Image Variation Sandbox
-Pillow>=9.0.0  # Image processing
-# timelock  # Drand timelock encryption (install separately: pip install timelock)
+# Phase 4: shared (validator + miner)
+Pillow>=9.0.0
+
+# Phase 4 miner-only packages (diffusion models, face validation, etc.)
+# are in requirements-miner.txt.  Miners should also run:
+#   pip install -r requirements-miner.txt

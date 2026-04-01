@@ -67,10 +67,14 @@ from MIID.base.miner import BaseMinerNeuron
 
 from bittensor.core.errors import NotVerifiedException
 
-# Phase 4 imports
-from MIID.miner.image_generator import decode_base_image, generate_variations, validate_variation
-from MIID.miner.drand_encrypt import encrypt_image_for_drand, is_timelock_available
-from MIID.miner.s3_upload import upload_to_s3
+# Phase 4 imports (optional -- miner still works for name variations without these)
+try:
+    from MIID.miner.image_generator import decode_base_image, generate_variations, validate_variation
+    from MIID.miner.drand_encrypt import encrypt_image_for_drand, is_timelock_available
+    from MIID.miner.s3_upload import upload_to_s3
+    PHASE4_AVAILABLE = True
+except ImportError as _phase4_err:
+    PHASE4_AVAILABLE = False
 
 
 class Miner(BaseMinerNeuron):
@@ -167,6 +171,15 @@ class Miner(BaseMinerNeuron):
         bt.logging.info(f"Mining results will be saved to: {self.output_path}")
 
         self.axon.verify_fns[IdentitySynapse.__name__] = self._verify_validator_request
+
+        if PHASE4_AVAILABLE:
+            bt.logging.info("Phase 4 image generation: ENABLED")
+        else:
+            bt.logging.warning(
+                "Phase 4 image generation: DISABLED (missing packages). "
+                "Install with: pip install -r requirements-miner.txt  "
+                "See docs/miner.md for the full setup."
+            )
 
     async def _verify_validator_request(self, synapse: IdentitySynapse) -> None:
         """
@@ -330,13 +343,20 @@ class Miner(BaseMinerNeuron):
         # Phase 4: Process Image Request
         # ==========================================================================
         if hasattr(synapse, 'image_request') and synapse.image_request is not None:
-            try:
-                s3_submissions = self.process_image_request(synapse)
-                synapse.s3_submissions = s3_submissions
-                bt.logging.info(f"Phase 4: Generated {len(s3_submissions)} S3 submissions")
-            except Exception as e:
-                bt.logging.error(f"Phase 4: Failed to process image request: {e}")
+            if not PHASE4_AVAILABLE:
+                bt.logging.warning(
+                    "Phase 4: Received image request but Phase 4 packages are not installed. "
+                    "Skipping. Install with: pip install -r requirements-miner.txt"
+                )
                 synapse.s3_submissions = []
+            else:
+                try:
+                    s3_submissions = self.process_image_request(synapse)
+                    synapse.s3_submissions = s3_submissions
+                    bt.logging.info(f"Phase 4: Generated {len(s3_submissions)} S3 submissions")
+                except Exception as e:
+                    bt.logging.error(f"Phase 4: Failed to process image request: {e}")
+                    synapse.s3_submissions = []
         # ==========================================================================
 
         return synapse

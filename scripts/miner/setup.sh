@@ -200,10 +200,17 @@ install_python_requirements() {
   pip install --upgrade pip setuptools wheel || handle_error "Failed to upgrade pip, setuptools, and wheel"
   
   if [ -f requirements.txt ]; then
-    pip install -r requirements.txt || handle_error "Failed to install Python dependencies"
+    pip install -r requirements.txt || handle_error "Failed to install base Python dependencies"
   else
     warn_msg "requirements.txt not found. Installing core dependencies."
     pip install numpy pandas faker tqdm Levenshtein python-Levenshtein metaphone || handle_error "Failed to install core dependencies"
+  fi
+
+  if [ -f requirements-miner.txt ]; then
+    info_msg "Installing miner-specific dependencies (diffusion models, face validation)..."
+    pip install -r requirements-miner.txt || handle_error "Failed to install miner dependencies"
+  else
+    warn_msg "requirements-miner.txt not found. Miner image generation packages may be missing."
   fi
   
   success_msg "Python dependencies installed successfully."
@@ -216,6 +223,52 @@ install_miid() {
   info_msg "Installing MIID package in editable mode..."
   pip install -e . || handle_error "Failed to install MIID package"
   success_msg "MIID package installed successfully."
+}
+
+# ---------------------------------------------------------
+# Section 6b: Phase 4 — AdaFace + diffusion model setup
+# Clones AdaFace repo, downloads pretrained model, and
+# optionally pre-downloads the FLUX.2-klein diffusion model.
+# ---------------------------------------------------------
+install_phase4_deps() {
+  info_msg "Setting up Phase 4 (face image variation) dependencies..."
+
+  # Optional: install photomaker for the 3rd image model
+  pip install photomaker 2>/dev/null || warn_msg "Could not install photomaker. The miner will still work with FLUX models."
+
+  # Clone AdaFace if not already present
+  local ADAFACE_DIR="MIID/miner/AdaFace"
+  if [ ! -d "$ADAFACE_DIR" ]; then
+    info_msg "Cloning AdaFace repository..."
+    git clone https://github.com/mk-minchul/AdaFace.git "$ADAFACE_DIR" || handle_error "Failed to clone AdaFace"
+    success_msg "AdaFace cloned successfully."
+  else
+    info_msg "AdaFace already present. Skipping clone."
+  fi
+
+  # Download pretrained AdaFace model
+  local ADAFACE_MODEL="$ADAFACE_DIR/pretrained/adaface_ir50_ms1mv2.ckpt"
+  if [ ! -f "$ADAFACE_MODEL" ]; then
+    info_msg "Downloading AdaFace pretrained model..."
+    mkdir -p "$ADAFACE_DIR/pretrained"
+    pip install gdown 2>/dev/null
+    gdown 1eUaSHG4pGlIZK7hBkqjyp2fc2epKoBvI -O "$ADAFACE_MODEL" || warn_msg "Failed to download AdaFace model via gdown. Download manually from: https://drive.google.com/file/d/1eUaSHG4pGlIZK7hBkqjyp2fc2epKoBvI/view?usp=sharing and place at $ADAFACE_MODEL"
+    if [ -f "$ADAFACE_MODEL" ]; then
+      success_msg "AdaFace model downloaded."
+    fi
+  else
+    info_msg "AdaFace model already present. Skipping download."
+  fi
+
+  # Pre-download FLUX.2-klein diffusion model (requires HF_TOKEN)
+  if [ -n "$HF_TOKEN" ]; then
+    info_msg "Pre-downloading FLUX.2-klein diffusion model (this may take a while)..."
+    python -m MIID.miner.downloading_model && success_msg "FLUX.2-klein model downloaded." || warn_msg "Could not pre-download model. It will be downloaded on first miner run."
+  else
+    warn_msg "HF_TOKEN not set. Skipping diffusion model download. Set HF_TOKEN before running the miner."
+  fi
+
+  success_msg "Phase 4 setup completed."
 }
 
 # ---------------------------------------------------------
@@ -249,13 +302,59 @@ main() {
   install_python_requirements
   install_miid
   install_bittensor
-  
+
+  # Ask whether to install Phase 4 (image generation) packages
+  local INSTALL_MODE="${1:-}"
+  if [ "$INSTALL_MODE" = "--full" ]; then
+    info_msg "Full mode requested (--full flag). Installing Phase 4 packages..."
+    install_phase4_deps
+  elif [ "$INSTALL_MODE" = "--basic" ]; then
+    info_msg "Basic mode requested (--basic flag). Skipping Phase 4 packages."
+  else
+    echo ""
+    info_msg "Choose setup mode:"
+    echo -e "   [B] Basic  — Name variations only (no GPU required)"
+    echo -e "   [F] Full   — Name + face image variations (GPU recommended)"
+    echo ""
+    read -p "Enter B or F (default: F): " -n 1 -r
+    echo
+    if [[ $REPLY =~ ^[Bb]$ ]]; then
+      info_msg "Basic mode selected. Skipping Phase 4 packages."
+    else
+      info_msg "Full mode selected. Installing Phase 4 packages..."
+      install_phase4_deps
+      INSTALL_MODE="--full"
+    fi
+  fi
+
+  echo ""
+  info_msg "============================================"
   info_msg "MIID Miner setup completed successfully!"
+  info_msg "============================================"
+  echo ""
+
+  if [ "$INSTALL_MODE" = "--full" ]; then
+    info_msg "Mode: FULL (name + image variations)"
+    echo ""
+    info_msg "Before running the miner, set these environment variables:"
+    echo -e "   export HF_TOKEN=\"hf_YOUR_TOKEN_HERE\"    # Get from huggingface.co/settings/tokens"
+    echo -e "   export FLUX_DEVICE=\"cuda\"                # or \"mps\" for Apple Silicon, \"cpu\" for CPU-only"
+  else
+    info_msg "Mode: BASIC (name variations only)"
+    echo ""
+    info_msg "To upgrade to Full later, run:"
+    echo -e "   source miner_env/bin/activate"
+    echo -e "   pip install -r requirements-miner.txt"
+    echo -e "   See docs/miner.md 'Upgrading from Basic to Full' for details."
+  fi
+
+  echo ""
   info_msg "To start using your miner:"
-  echo -e "   1. Register your miner: btcli s register --netuid 54 --wallet.name your_wallet --wallet.hotkey your_hotkey --subtensor.network finney"
-  echo -e "   2. Activate the virtual environment: source miner_env/bin/activate"
-  echo -e "   3. Start your miner: python neurons/miner.py --netuid 54 --wallet.name your_wallet --wallet.hotkey your_hotkey --subtensor.network finney"
-  echo -e "   4. For more options, run: python neurons/miner.py --help"
+  echo -e "   1. Activate the virtual environment: source miner_env/bin/activate"
+  echo -e "   2. Register your miner: btcli subnet register --netuid 54 --wallet.name your_wallet --wallet.hotkey your_hotkey --subtensor.network finney"
+  echo -e "   3. Start your miner: python neurons/miner.py --netuid 54 --subtensor.network finney --subtensor.chain_endpoint wss://entrypoint-finney.opentensor.ai:443 --wallet.name your_wallet --wallet.hotkey your_hotkey --logging.debug"
+  echo ""
+  info_msg "For the full guide, see: docs/miner.md"
   echo -e "\n----------------------------------------\n"
 }
 

@@ -12,6 +12,7 @@ from typing import List, Dict
 from PIL import Image
 
 from MIID.miner.generate_variations import generate_variations as generate_variations_flux
+from MIID.miner.generate_variations import get_selected_model_info
 from MIID.miner.ada_face_compare import validate_single_variation
 
 
@@ -82,7 +83,12 @@ def generate_variations(
     if not variation_requests:
         return []
 
-    # FLUX-based generation: one (type, intensity) per request -> one prompt -> one image
+    model_info = get_selected_model_info()
+    bt.logging.info(
+        f"Using model: {model_info['key']} ({model_info['model_id']}, "
+        f"{model_info['params']})"
+    )
+
     raw_results = generate_variations_flux(
         base_image,
         variation_requests,

@@ -2,11 +2,13 @@
 
 This guide provides step-by-step instructions for running your MIID miner in the background using either tmux or pm2. This is useful for keeping your miner running even when you're not connected to the server.
 
-> **Note**: Before following this guide, make sure you have completed the initial setup using the [Miner Guide](miner.md). This includes:
-> - Running the setup script or manual installation
-> - Creating your wallet
-> - Registering your miner
-> - Testing basic miner functionality
+> **Note**: Before following this guide, make sure you have completed the full setup using the [Miner Guide](miner.md) (Steps 1-12). This includes:
+> - Cloning the repository and installing all dependencies
+> - Setting up Ollama, Hugging Face token, and AdaFace
+> - Creating your wallet and registering your miner
+> - Testing that the miner starts successfully
+>
+> **Important**: When running in the background, your environment variables (`HF_TOKEN`, `FLUX_DEVICE`) must be set inside the background session. The examples below show how to do this.
 
 ## Option 1: Using tmux
 
@@ -49,9 +51,18 @@ source miner_env/bin/activate
 tmux new -s miid_miner
 ```
 
-3. Start your miner:
+3. Start your miner.
+
+   **Basic mode** (name variations only -- no environment variables needed):
 ```bash
-python neurons/miner.py --netuid 54 --wallet.name your_wallet_name --wallet.hotkey your_hotkey --subtensor.network finney
+python neurons/miner.py --netuid 54 --subtensor.network finney --subtensor.chain_endpoint wss://entrypoint-finney.opentensor.ai:443 --wallet.name your_wallet_name --wallet.hotkey your_hotkey --logging.debug
+```
+
+   **Full mode** (name + image variations -- set environment variables first):
+```bash
+export HF_TOKEN="hf_YOUR_TOKEN_HERE"
+export FLUX_DEVICE="cuda"   # or "mps" for Apple Silicon, "cpu" for CPU-only
+python neurons/miner.py --netuid 54 --subtensor.network finney --subtensor.chain_endpoint wss://entrypoint-finney.opentensor.ai:443 --wallet.name your_wallet_name --wallet.hotkey your_hotkey --logging.debug
 ```
 
 4. Detach from the tmux session:
@@ -107,11 +118,24 @@ mkdir -p ~/scripts
 nano ~/scripts/start_miner.sh
 ```
 
-2. Add the following content to start_miner.sh:
+2. Add the following content to start_miner.sh (replace the placeholder values).
+
+   **Basic mode:**
 ```bash
 #!/bin/bash
-source ~/miner_env/bin/activate
-python ~/MIID-subnet/neurons/miner.py --netuid 54 --wallet.name your_wallet_name --wallet.hotkey your_hotkey --subtensor.network finney
+source ~/MIID-subnet/miner_env/bin/activate
+cd ~/MIID-subnet
+python neurons/miner.py --netuid 54 --subtensor.network finney --subtensor.chain_endpoint wss://entrypoint-finney.opentensor.ai:443 --wallet.name your_wallet_name --wallet.hotkey your_hotkey --logging.debug
+```
+
+   **Full mode** (add the two `export` lines):
+```bash
+#!/bin/bash
+source ~/MIID-subnet/miner_env/bin/activate
+export HF_TOKEN="hf_YOUR_TOKEN_HERE"
+export FLUX_DEVICE="cuda"   # or "mps" for Apple Silicon, "cpu" for CPU-only
+cd ~/MIID-subnet
+python neurons/miner.py --netuid 54 --subtensor.network finney --subtensor.chain_endpoint wss://entrypoint-finney.opentensor.ai:443 --wallet.name your_wallet_name --wallet.hotkey your_hotkey --logging.debug
 ```
 
 3. Make the script executable:
