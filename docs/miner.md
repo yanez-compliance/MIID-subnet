@@ -487,7 +487,7 @@ Validators may also request **accessories** on background edits (head coverings,
 
 ## How the Three Image Models Work (Full path)
 
-The miner can use three diffusion models; each session **randomly picks one** unless `MIID_MODEL` is set.
+The miner ships with **three** diffusion models; each session **randomly picks one** unless `MIID_MODEL` is set.
 
 | Model | Description | VRAM needed |
 |-------|-------------|-------------|
@@ -495,7 +495,30 @@ The miner can use three diffusion models; each session **randomly picks one** un
 | **FLUX.1-Kontext** | Strong text-guided editing | ~24 GB |
 | **PhotoMaker** | Identity-focused SDXL + LoRA | ~12 GB |
 
-If a model fails to load, the miner falls back to FLUX.2-klein. See `MIID/miner/generate_variations.py` for licenses and details.
+If a model fails to load, the miner falls back to FLUX.2-klein. Licenses, pipeline details, and how to add models are documented in `MIID/miner/generate_variations.py`.
+
+### Other recommendations (future / advanced integration)
+
+These are **not** active in the miner by default. They are listed in `generate_variations.py` as suggested next steps if you want to experiment beyond the three models above—you would need to add a loader, generator, and registrations following the same pattern as the existing models.
+
+**1. PuLID (`pulid`)** — [Hugging Face: guozinan/PuLID](https://huggingface.co/guozinan/PuLID)
+
+- **What it is:** PuLID (Pure and Lightning ID Customization).
+- **Good for:** Very high identity fidelity without changing background, lighting, or style of the base model output.
+- **Works with:** FLUX (PuLID-FLUX) or SDXL (`pulid_v1.1`).
+- **How it works:** Face embedding via InsightFace, visual features via EVA-CLIP, identity tokens injected into the model.
+- **Extra packages:** `pip install insightface onnxruntime`
+- **License:** See the repo (NeurIPS 2024, ByteDance).
+
+**2. PuLID for FLUX.2 (`pulid_flux2`)** — [Hugging Face: Fayens/Pulid-Flux2](https://huggingface.co/Fayens/Pulid-Flux2)
+
+- **What it is:** PuLID weights trained for FLUX.2 (klein and dev).
+- **Good for:** Strong identity preservation with fewer artifacts; aligns with the FLUX.2-klein stack already in the codebase.
+- **Example weights:** `pulid_flux2_klein_v1.safetensors`, `pulid_flux2_klein_v2.safetensors` (dev variants also exist).
+- **How it works:** Same InsightFace + EVA-CLIP idea as PuLID, with weights in FLUX.2 transformer blocks.
+- **Extra packages:** `pip install insightface onnxruntime` (EVA-CLIP downloads on first run, ~800 MB).
+- **Suggested strength** (when integrated): `1.0` (normal) or `1.4` (often a good balance).
+- **License:** See the repo.
 
 ---
 
