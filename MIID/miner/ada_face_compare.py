@@ -27,8 +27,10 @@ Prerequisites:
 """
 
 import os
+import re
 import sys
 import tempfile
+import types
 import torch
 import numpy as np
 from PIL import Image
@@ -39,19 +41,101 @@ import cv2
 # Add AdaFace to path (relative to this file)
 _this_dir = os.path.dirname(os.path.abspath(__file__))
 ADA_FACE_PATH = os.path.join(_this_dir, "AdaFace")
+
+
+def _cuda_works() -> bool:
+    """True only if a tiny CUDA tensor can be created (driver matches PyTorch CUDA)."""
+    if not torch.cuda.is_available():
+        return False
+    try:
+        torch.zeros(1, device="cuda:0")
+        return True
+    except RuntimeError:
+        return False
+
+
+def _resolve_mtcnn_device() -> str:
+    """
+    Device string for AdaFace MTCNN. Respects ADA_FACE_DEVICE, then FLUX_DEVICE, else auto.
+
+    ``torch.cuda.is_available()`` alone is insufficient: an outdated NVIDIA driver can
+    still report available CUDA but fail on first use (matches your traceback).
+    """
+    override = os.environ.get("ADA_FACE_DEVICE", "").strip()
+    if not override:
+        override = os.environ.get("FLUX_DEVICE", "").strip()
+
+    want_cuda = False
+    if override:
+        o = override.lower()
+        if o == "cpu":
+            return "cpu"
+        if o.startswith("cuda"):
+            want_cuda = True
+        elif o == "mps":
+            return "cpu"
+        else:
+            want_cuda = _cuda_works()
+    else:
+        want_cuda = True
+
+    if want_cuda and _cuda_works():
+        return "cuda:0"
+    return "cpu"
+
+
+def _load_face_alignment_align():
+    """
+    AdaFace's ``face_alignment/align.py`` instantiates MTCNN on ``cuda:0`` at import time,
+    before we can patch it. Load that module from source with the correct device string.
+    """
+    align_path = os.path.join(ADA_FACE_PATH, "face_alignment", "align.py")
+    if not os.path.isfile(align_path):
+        raise ImportError(f"Missing {align_path}")
+
+    with open(align_path, "r", encoding="utf-8") as f:
+        src = f.read()
+
+    dev = _resolve_mtcnn_device()
+    old = "mtcnn_model = mtcnn.MTCNN(device='cuda:0', crop_size=(112, 112))"
+    new = f"mtcnn_model = mtcnn.MTCNN(device={repr(dev)}, crop_size=(112, 112))"
+    if old in src:
+        src = src.replace(old, new)
+    else:
+        src, n = re.subn(
+            r"mtcnn_model\s*=\s*mtcnn\.MTCNN\s*\(\s*device\s*=\s*['\"]cuda:0['\"]\s*,\s*crop_size\s*=\s*\(\s*112\s*,\s*112\s*\)\s*\)",
+            f"mtcnn_model = mtcnn.MTCNN(device={repr(dev)}, crop_size=(112, 112))",
+            src,
+            count=1,
+        )
+        if n != 1:
+            raise ImportError(
+                "Could not patch AdaFace face_alignment/align.py for MTCNN device; "
+                "expected the upstream line with device='cuda:0'."
+            )
+
+    if "face_alignment" not in sys.modules:
+        fa_pkg = types.ModuleType("face_alignment")
+        fa_pkg.__path__ = [os.path.join(ADA_FACE_PATH, "face_alignment")]
+        sys.modules["face_alignment"] = fa_pkg
+
+    align_mod = types.ModuleType("face_alignment.align")
+    align_mod.__file__ = align_path
+    align_mod.__package__ = "face_alignment"
+    align_mod.__loader__ = None
+    sys.modules["face_alignment.align"] = align_mod
+    exec(compile(src, align_path, "exec"), align_mod.__dict__)
+    return align_mod
+
+
 if os.path.isdir(ADA_FACE_PATH):
     sys.path.insert(0, ADA_FACE_PATH)
 
 try:
-    from face_alignment import align
+    align = _load_face_alignment_align()
     from face_alignment import mtcnn
     from inference import load_pretrained_model, to_input
-    
-    # Override the hardcoded CUDA device in align.py
-    # Determine device based on CUDA availability
-    device = 'cuda:0' if torch.cuda.is_available() else 'cpu'
-    align.mtcnn_model = mtcnn.MTCNN(device=device, crop_size=(112, 112))
-    
+
 except ImportError as e:
     raise ImportError(
         f"AdaFace modules could not be imported: {e}. "
@@ -117,7 +201,7 @@ def load_adaface_model(architecture='ir_50', model_path=None, device='cpu'):
     model.eval()
     
     # Move model to device
-    if device == 'cuda' and torch.cuda.is_available():
+    if device == "cuda" and _cuda_works():
         model = model.cuda()
     
     print("✓ Model loaded successfully")
@@ -148,7 +232,7 @@ def extract_face_embedding(model, image_path, device='cpu'):
         bgr_input = to_input(aligned_rgb_img)
         
         # Move to device
-        if device == 'cuda' and torch.cuda.is_available():
+        if device == "cuda" and _cuda_works():
             bgr_input = bgr_input.cuda()
             model = model.cuda()
         
@@ -244,9 +328,13 @@ def compare_faces(original_image_path, variation_image_paths, model=None, device
     if model is None:
         model = load_adaface_model(device=device)
         # Initialize MTCNN if not already done
-        if not hasattr(align, 'mtcnn_model') or align.mtcnn_model is None:
-            mtcnn_device = 'cuda:0' if device == 'cuda' and torch.cuda.is_available() else 'cpu'
-            align.mtcnn_model = align.mtcnn.MTCNN(device=mtcnn_device, crop_size=(112, 112))
+        if not hasattr(align, "mtcnn_model") or align.mtcnn_model is None:
+            mtcnn_device = (
+                _resolve_mtcnn_device()
+                if device == "cuda" and _cuda_works()
+                else "cpu"
+            )
+            align.mtcnn_model = mtcnn.MTCNN(device=mtcnn_device, crop_size=(112, 112))
     
     print(f"\nExtracting embedding from original image: {original_image_path}")
     original_embedding = extract_face_embedding(model, original_image_path, device=device)
