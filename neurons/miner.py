@@ -97,6 +97,7 @@ class Miner(BaseMinerNeuron):
     Configuration:
     - model_name: The Ollama model to use (default: 'tinyllama:latest')
     - output_path: Directory for saving mining results (default: logging_dir/mining_results)
+    - save_phase4_images: If True, write Phase 4 variation PNGs under output_path/phase4_images (default: True)
     """
     # Base whitelist of known validators
     WHITELISTED_VALIDATORS = {
@@ -381,6 +382,39 @@ class Miner(BaseMinerNeuron):
         except Exception:
             return False
 
+    @staticmethod
+    def _sanitize_path_component(name: str, max_len: int = 120) -> str:
+        """Make a string safe for use as a single path segment."""
+        if not name:
+            return "unknown"
+        bad = '\\/:*?"<>|\n\r\t'
+        out = "".join(c if c not in bad and ord(c) >= 32 else "_" for c in name)
+        out = out.strip("._") or "unknown"
+        return out[:max_len]
+
+    def _save_phase4_image_if_enabled(
+        self,
+        var: Dict[str, Any],
+        seed_image_name: str,
+        save_dir: Optional[str],
+    ) -> None:
+        """Write decoded variation bytes to disk for local inspection (optional)."""
+        if not save_dir:
+            return
+        try:
+            vtype = self._sanitize_path_component(str(var.get("variation_type", "var")), 80)
+            h = str(var.get("image_hash", "nohash"))[:16]
+            seed = self._sanitize_path_component(seed_image_name, 80)
+            fname = f"{seed}_{vtype}_{h}.png"
+            path = os.path.join(save_dir, fname)
+            with open(path, "wb") as f:
+                f.write(var["image_bytes"])
+            abs_path = os.path.abspath(path)
+            print(f"Phase 4: Saved image to {abs_path}", flush=True)
+            bt.logging.info(f"Phase 4: Saved image to {abs_path}")
+        except Exception as e:
+            bt.logging.warning(f"Phase 4: Could not save local image copy: {e}")
+
     def process_image_request(self, synapse: IdentitySynapse) -> List[S3Submission]:
         """Process Phase 4 image variation request.
 
@@ -431,6 +465,20 @@ class Miner(BaseMinerNeuron):
             path_signature = self.wallet.hotkey.sign(path_message.encode()).hex()[:16]
             bt.logging.debug(f"Phase 4: Generated path_signature: {path_signature}")
 
+            neuron = getattr(self.config, "neuron", None)
+            save_phase4 = neuron is None or getattr(neuron, "save_phase4_images", True)
+            phase4_save_dir: Optional[str] = None
+            if save_phase4:
+                batch_id = int(time.time())
+                safe_cid = self._sanitize_path_component(challenge_id, 100)
+                phase4_save_dir = os.path.join(
+                    self.output_path, "phase4_images", safe_cid, f"batch_{batch_id}"
+                )
+                os.makedirs(phase4_save_dir, exist_ok=True)
+                abs_dir = os.path.abspath(phase4_save_dir)
+                print(f"Phase 4: Saving generated images under {abs_dir}", flush=True)
+                bt.logging.info(f"Phase 4: Saving generated images under {abs_dir}")
+
             for var in variations:
                 try:
                     # Validate image before processing
@@ -446,6 +494,8 @@ class Miner(BaseMinerNeuron):
                             f"Phase 4: Skipping {var['variation_type']} - face identity not preserved"
                         )
                         continue
+
+                    self._save_phase4_image_if_enabled(var, seed_image_name, phase4_save_dir)
                     
                     # Sign the image hash
                     message = f"challenge:{challenge_id}:hash:{var['image_hash']}"
