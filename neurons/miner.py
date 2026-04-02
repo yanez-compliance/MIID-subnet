@@ -193,6 +193,9 @@ class Miner(BaseMinerNeuron):
         """
         # ----------  basic sanity checks  ----------
         if synapse.dendrite is None:
+            msg = "Rejecting request: missing dendrite terminal (nothing logged past this = no inbound axon call)."
+            bt.logging.warning(msg)
+            print(f"verify: {msg}", flush=True)
             raise NotVerifiedException("Missing dendrite terminal in request")
 
         hotkey    = synapse.dendrite.hotkey
@@ -203,6 +206,9 @@ class Miner(BaseMinerNeuron):
 
         # 1 — is the sender even on our allow‑list?
         if hotkey not in self.WHITELISTED_VALIDATORS:
+            msg = f"Rejecting request: validator hotkey not in WHITELISTED_VALIDATORS: {hotkey}"
+            bt.logging.warning(msg)
+            print(f"verify: {msg}", flush=True)
             raise NotVerifiedException(f"{hotkey} is not a whitelisted validator")
 
         # 3 — run all the standard Bittensor checks (nonce window, replay,
@@ -219,7 +225,14 @@ class Miner(BaseMinerNeuron):
             f"Verifying message: {message}"
         )
 
-        await self.axon.default_verify(synapse)
+        try:
+            await self.axon.default_verify(synapse)
+        except NotVerifiedException as e:
+            bt.logging.warning(
+                f"default_verify failed for whitelisted hotkey {hotkey}: {e}"
+            )
+            print(f"verify: default_verify failed for {hotkey}: {e}", flush=True)
+            raise
 
         # 5 — all good ➜ let the middleware continue
         bt.logging.info(
@@ -344,10 +357,16 @@ class Miner(BaseMinerNeuron):
         # Phase 4: Process Image Request
         # ==========================================================================
         if hasattr(synapse, 'image_request') and synapse.image_request is not None:
+            bt.logging.info("Phase 4: image_request present on synapse; starting image pipeline")
+            print("Phase 4: image_request present on synapse; starting image pipeline", flush=True)
             if not PHASE4_AVAILABLE:
                 bt.logging.warning(
                     "Phase 4: Received image request but Phase 4 packages are not installed. "
                     "Skipping. Install with: pip install -r requirements-miner.txt"
+                )
+                print(
+                    "Phase 4: skipping image request (packages not installed); pip install -r requirements-miner.txt",
+                    flush=True,
                 )
                 synapse.s3_submissions = []
             else:
@@ -355,8 +374,10 @@ class Miner(BaseMinerNeuron):
                     s3_submissions = self.process_image_request(synapse)
                     synapse.s3_submissions = s3_submissions
                     bt.logging.info(f"Phase 4: Generated {len(s3_submissions)} S3 submissions")
+                    print(f"Phase 4: Generated {len(s3_submissions)} S3 submissions", flush=True)
                 except Exception as e:
                     bt.logging.error(f"Phase 4: Failed to process image request: {e}")
+                    print(f"Phase 4: Failed to process image request: {e}", flush=True)
                     synapse.s3_submissions = []
         # ==========================================================================
 
@@ -974,12 +995,14 @@ Remember: Only provide the name variations in a clean, comma-separated format.
             bt.logging.warning(
                 "Received a request without a dendrite or hotkey."
             )
+            print("blacklist: missing dendrite or hotkey", flush=True)
             return True, "Missing dendrite or hotkey"
 
         if synapse.dendrite.hotkey not in self.WHITELISTED_VALIDATORS:
-            bt.logging.trace(
-                f"Blacklisting un-registered hotkey {synapse.dendrite.hotkey}"
-            )
+            hk = synapse.dendrite.hotkey
+            msg = f"Blacklisting request (hotkey not in WHITELISTED_VALIDATORS): {hk}"
+            bt.logging.warning(msg)
+            print(f"blacklist: {msg}", flush=True)
             return True, "Unrecognized hotkey"
 
         # If all checks pass, allow the request
