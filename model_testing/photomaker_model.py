@@ -128,6 +128,7 @@ def main() -> None:
         weight_name="photomaker-v1.bin",
         trigger_word=PHOTOMAKER_TRIGGER,
         strict=False,
+        pm_version="v1",
     )
     pipe.fuse_lora()
     place_diffusers_pipeline(pipe, dev, default_offload_on_cuda=True)
