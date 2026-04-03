@@ -131,7 +131,10 @@ def main() -> None:
         pm_version="v1",
     )
     pipe.fuse_lora()
-    place_diffusers_pipeline(pipe, dev, default_offload_on_cuda=True)
+    # Do not use enable_model_cpu_offload here: id_encoder is added in load_photomaker_adapter
+    # after the base SDXL pipeline is built, and offload hooks often leave it on CPU while
+    # inputs are CUDA → "Input type (CUDA...) and weight type (CPU...) should be the same".
+    place_diffusers_pipeline(pipe, dev, default_offload_on_cuda=False)
 
     prompt = MINER_PROMPT
     if PHOTOMAKER_TRIGGER not in prompt.split():
