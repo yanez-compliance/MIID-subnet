@@ -4,10 +4,17 @@
 import os
 import sys
 import types
+from pathlib import Path
+
+_REPO_ROOT = Path(__file__).resolve().parents[1]
+if str(_REPO_ROOT) not in sys.path:
+    sys.path.insert(0, str(_REPO_ROOT))
 
 import torch
 from diffusers import EulerDiscreteScheduler
 from PIL import Image
+
+from MIID.miner.photomaker_loader import get_photomaker_sdxl_pipeline_class
 
 from _cuda_place import place_diffusers_pipeline
 
@@ -77,13 +84,18 @@ def main() -> None:
 
     _ensure_insightface_stubs()
     try:
-        from photomaker import PhotoMakerStableDiffusionXLPipeline  # type: ignore[import-untyped]
-    except ImportError as e:
+        PhotoMakerStableDiffusionXLPipeline = get_photomaker_sdxl_pipeline_class()
+    except Exception as e:
         raise SystemExit(
-            "PhotoMaker: PyPI 'photomaker' is the wrong package (not Tencent PhotoMaker).\n\n"
+            f"PhotoMaker import failed: {type(e).__name__}: {e}\n\n"
+            "Tencent PhotoMaker (not PyPI 'photomaker' 1.x):\n"
             "  pip uninstall photomaker -y\n"
             "  pip install 'git+https://github.com/TencentARC/PhotoMaker.git'\n\n"
-            "See requirements-miner.txt in the repo root for the same instructions.\n"
+            "Also install: pip install einops\n"
+            "If pipeline.py still fails on diffusers APIs, try:\n"
+            "  pip install 'diffusers==0.29.2'\n\n"
+            "Optional: pip install insightface onnxruntime torchvision\n"
+            "This script must be run from the repo (or pip install -e .) so MIID.miner loads.\n"
         ) from e
 
     here = os.path.dirname(os.path.abspath(__file__))
