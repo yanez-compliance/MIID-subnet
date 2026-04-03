@@ -26,8 +26,11 @@ The 3 active models in this file:
 
 How model choice works:
 1. If ``MIID_MODEL`` is set, this file uses that exact model.
-2. If ``MIID_MODEL`` is not set, this file randomly picks one of the 3 models.
-3. The chosen model is kept in memory for the session.
+2. If ``MIID_MODEL`` is not set, this file defaults to ``flux_klein`` (smallest reliable
+   path for typical miner GPUs; avoids broken PhotoMaker imports and random picks
+   of very large checkpoints).
+3. Set ``MIID_MODEL_RANDOM=1`` to restore the old behavior (random choice).
+4. The chosen model is kept in memory for the session.
 
 How intensity works:
 - ``light`` keeps the new image closer to the original.
@@ -52,7 +55,9 @@ Packages for ``photomaker``:
 
 Helpful environment variables:
 - ``MIID_MODEL``: force one model, for example ``flux_klein``
-- ``FLUX_DEVICE``: choose ``cuda``, ``mps``, or ``cpu``
+- ``FLUX_DEVICE``: choose ``cuda``, ``mps``, or ``cpu`` (if unset, uses ``cuda`` when
+  available, else ``mps``, else ``cpu`` — **not** forcing ``cpu`` on GPU hosts)
+- ``MIID_MODEL_RANDOM``: set to ``1`` to randomly pick among ``AVAILABLE_MODELS``
 - ``MIID_INFERENCE_STEPS``: change number of generation steps
 - ``MIID_GUIDANCE_SCALE``: change prompt strength
 - ``HF_TOKEN``: Hugging Face access token
@@ -74,9 +79,28 @@ logger = logging.getLogger(__name__)
 # Configuration
 # =============================================================================
 
-DEVICE = os.environ.get("FLUX_DEVICE", "cpu")
 
-DTYPE = torch.float32
+def _resolve_device() -> str:
+    """Prefer GPU when available; defaulting to CPU on CUDA hosts OOMs 16GB RAM loaders."""
+    explicit = os.environ.get("FLUX_DEVICE", "").strip()
+    if explicit:
+        return explicit
+    if torch.cuda.is_available():
+        return "cuda"
+    if getattr(torch.backends, "mps", None) is not None and torch.backends.mps.is_available():
+        return "mps"
+    return "cpu"
+
+
+DEVICE = _resolve_device()
+
+
+def _flux_klein_torch_dtype() -> torch.dtype:
+    if DEVICE.startswith("cuda"):
+        return torch.bfloat16
+    if DEVICE == "mps":
+        return torch.float16
+    return torch.float32
 
 NUM_INFERENCE_STEPS = int(os.environ.get("MIID_INFERENCE_STEPS", "20"))
 
@@ -108,7 +132,7 @@ PHOTOMAKER_TRIGGER = "img"
 
 # =============================================================================
 # List of models that are active right now.
-# The miner randomly picks one of these unless MIID_MODEL is set.
+# Default is flux_klein unless MIID_MODEL or MIID_MODEL_RANDOM=1 (see _select_model).
 # =============================================================================
 
 AVAILABLE_MODELS: Dict[str, Dict[str, Any]] = {
@@ -216,12 +240,24 @@ def _select_model() -> str:
         return _selected_model
 
     forced = os.environ.get("MIID_MODEL", "").strip().lower()
+    random_flag = os.environ.get("MIID_MODEL_RANDOM", "").strip().lower() in (
+        "1", "true", "yes",
+    )
+
     if forced and forced in AVAILABLE_MODELS:
         _selected_model = forced
         logger.info("Model forced via MIID_MODEL env var: %s", _selected_model)
-    else:
+    elif random_flag:
         _selected_model = random.choice(list(AVAILABLE_MODELS.keys()))
-        logger.info("Randomly selected model for this session: %s", _selected_model)
+        logger.info("Randomly selected model (MIID_MODEL_RANDOM=1): %s", _selected_model)
+    else:
+        # Default: single stable path for small RAM/VRAM hosts (e.g. 16GB RAM).
+        # Avoids photomaker import failures and accidental flux_kontext selection.
+        _selected_model = "flux_klein"
+        logger.info(
+            "Using default model: %s (override with MIID_MODEL=..., or MIID_MODEL_RANDOM=1)",
+            _selected_model,
+        )
 
     cfg = AVAILABLE_MODELS[_selected_model]
     logger.info(
@@ -263,12 +299,22 @@ def _load_flux_klein() -> Any:
     from diffusers import Flux2KleinPipeline
 
     token = _get_hf_token()
+    dtype = _flux_klein_torch_dtype()
     pipe = Flux2KleinPipeline.from_pretrained(
         AVAILABLE_MODELS["flux_klein"]["model_id"],
-        torch_dtype=DTYPE,
+        torch_dtype=dtype,
         token=token,
+        low_cpu_mem_usage=True,
     )
-    return pipe.to(DEVICE)
+    if os.environ.get("MIID_ENABLE_CPU_OFFLOAD", "").strip().lower() in ("1", "true", "yes"):
+        try:
+            pipe.enable_model_cpu_offload()
+        except Exception as exc:
+            logger.warning("MIID_ENABLE_CPU_OFFLOAD set but enable_model_cpu_offload failed: %s", exc)
+            pipe = pipe.to(DEVICE)
+    else:
+        pipe = pipe.to(DEVICE)
+    return pipe
 
 
 def _load_flux_kontext() -> Any:
