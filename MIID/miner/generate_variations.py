@@ -327,6 +327,20 @@ def _load_flux_kontext() -> Any:
         torch_dtype=dtype,
         token=token,
     )
+    # Kontext ~12B: full .to(cuda) often OOMs on 16GB GPUs. Default to CPU offload on CUDA
+    # unless explicitly disabled (MIID_ENABLE_CPU_OFFLOAD=0).
+    offload = os.environ.get("MIID_ENABLE_CPU_OFFLOAD", "1").strip().lower() not in (
+        "0", "false", "no",
+    )
+    if DEVICE.startswith("cuda") and offload:
+        try:
+            pipe.enable_model_cpu_offload()
+            return pipe
+        except Exception as exc:
+            logger.warning(
+                "Flux Kontext: enable_model_cpu_offload failed (%s); using full GPU load",
+                exc,
+            )
     return pipe.to(DEVICE)
 
 
@@ -371,7 +385,14 @@ def _load_photomaker() -> Any:
     from diffusers import EulerDiscreteScheduler
 
     _ensure_insightface_stubs()
-    from photomaker import PhotoMakerStableDiffusionXLPipeline  # type: ignore[import-untyped]
+    try:
+        from photomaker import PhotoMakerStableDiffusionXLPipeline  # type: ignore[import-untyped]
+    except ImportError as e:
+        raise RuntimeError(
+            "PhotoMaker import failed. The PyPI package 'photomaker' is not Tencent PhotoMaker.\n"
+            "  pip uninstall photomaker -y\n"
+            "  pip install git+https://github.com/TencentARC/PhotoMaker.git\n"
+        ) from e
 
     token = _get_hf_token()
     config = AVAILABLE_MODELS["photomaker"]
@@ -400,6 +421,14 @@ def _load_photomaker() -> Any:
         strict=False,
     )
     pipe.fuse_lora()
+    if DEVICE.startswith("cuda") and os.environ.get(
+        "MIID_ENABLE_CPU_OFFLOAD", ""
+    ).strip().lower() in ("1", "true", "yes"):
+        try:
+            pipe.enable_model_cpu_offload()
+            return pipe
+        except Exception as exc:
+            logger.warning("PhotoMaker: CPU offload failed (%s); using .to(cuda)", exc)
     return pipe.to(DEVICE)
 
 
@@ -485,14 +514,18 @@ def _get_prompt_from_request(req: Any, var_type: str, intensity: str) -> str:
 def _generate_with_flux(
     pipe: Any, base_image: Image.Image, prompt: str, intensity: str,
 ) -> Image.Image:
-    """Generate a variation using FLUX.2-klein (img2img with strength)."""
-    strength = INTENSITY_TO_STRENGTH.get(intensity, 0.55)
+    """Generate a variation using FLUX.2 Klein (image-conditioned generation).
+
+    Current ``Flux2KleinPipeline`` does not accept ``strength``; the reference
+    image is encoded as conditioning. Approximate intensity via guidance scale.
+    """
+    mult = {"light": 0.92, "medium": 1.0, "far": 1.12}.get(intensity, 1.0)
+    guidance = float(GUIDANCE_SCALE) * mult
     out = pipe(
         prompt=prompt,
         image=[base_image],
         num_inference_steps=NUM_INFERENCE_STEPS,
-        guidance_scale=GUIDANCE_SCALE,
-        strength=strength,
+        guidance_scale=guidance,
     )
     return out.images[0]
 

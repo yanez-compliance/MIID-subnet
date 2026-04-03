@@ -7,6 +7,8 @@ import torch
 from diffusers import FluxKontextPipeline
 from PIL import Image
 
+from _cuda_place import place_diffusers_pipeline
+
 MINER_PROMPT = (
     "Same person, same identity, Change background environment while keeping subject unchanged. "
     "Add religious head covering, Change environment type (office to outdoor, solid color to gradient). "
@@ -55,7 +57,8 @@ def main() -> None:
         torch_dtype=dtype,
         token=token,
     )
-    pipe = pipe.to(dev)
+    # Full GPU load OOMs typical 16GB cards; CPU offload unless MIID_ENABLE_CPU_OFFLOAD=0
+    place_diffusers_pipeline(pipe, dev, default_offload_on_cuda=True)
 
     out = pipe(
         prompt=MINER_PROMPT,

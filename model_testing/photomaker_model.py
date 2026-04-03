@@ -9,6 +9,8 @@ import torch
 from diffusers import EulerDiscreteScheduler
 from PIL import Image
 
+from _cuda_place import place_diffusers_pipeline
+
 MINER_PROMPT = (
     "Same person, same identity, Change background environment while keeping subject unchanged. "
     "Add religious head covering, Change environment type (office to outdoor, solid color to gradient). "
@@ -74,7 +76,14 @@ def main() -> None:
         raise SystemExit("Set HF_TOKEN or HUGGINGFACE_TOKEN for Hugging Face model access.")
 
     _ensure_insightface_stubs()
-    from photomaker import PhotoMakerStableDiffusionXLPipeline  # type: ignore[import-untyped]
+    try:
+        from photomaker import PhotoMakerStableDiffusionXLPipeline  # type: ignore[import-untyped]
+    except ImportError as e:
+        raise SystemExit(
+            "PhotoMaker: wrong or missing package. PyPI 'photomaker' is not Tencent PhotoMaker.\n"
+            "  pip uninstall photomaker -y\n"
+            "  pip install git+https://github.com/TencentARC/PhotoMaker.git\n"
+        ) from e
 
     here = os.path.dirname(os.path.abspath(__file__))
     seed_path = os.path.join(here, "seed_images", f"{SEED_ID}.png")
@@ -108,7 +117,7 @@ def main() -> None:
         strict=False,
     )
     pipe.fuse_lora()
-    pipe = pipe.to(dev)
+    place_diffusers_pipeline(pipe, dev, default_offload_on_cuda=True)
 
     prompt = MINER_PROMPT
     if PHOTOMAKER_TRIGGER not in prompt.split():

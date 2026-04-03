@@ -12,6 +12,8 @@ import warnings
 import torch
 from PIL import Image
 
+from _cuda_place import place_diffusers_pipeline
+
 MINER_PROMPT = (
     "Same person, same identity, Change background environment while keeping subject unchanged. "
     "Add religious head covering, Change environment type (office to outdoor, solid color to gradient). "
@@ -81,7 +83,7 @@ def _run_kontext_fallback(base: Image.Image, out_path: str, token: str) -> None:
         torch_dtype=dtype,
         token=token,
     )
-    pipe = pipe.to(dev)
+    place_diffusers_pipeline(pipe, dev, default_offload_on_cuda=True)
     out = pipe(
         prompt=MINER_PROMPT,
         image=base,
