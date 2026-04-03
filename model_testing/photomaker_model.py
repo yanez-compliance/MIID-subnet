@@ -16,8 +16,6 @@ from PIL import Image
 
 from MIID.miner.photomaker_loader import get_photomaker_sdxl_pipeline_class
 
-from _cuda_place import place_diffusers_pipeline
-
 MINER_PROMPT = (
     "Same person, same identity, Change background environment while keeping subject unchanged. "
     "Add religious head covering, Change environment type (office to outdoor, solid color to gradient). "
@@ -91,7 +89,7 @@ def main() -> None:
             "Tencent PhotoMaker (not PyPI 'photomaker' 1.x):\n"
             "  pip uninstall photomaker -y\n"
             "  pip install 'git+https://github.com/TencentARC/PhotoMaker.git'\n\n"
-            "Also install: pip install einops\n"
+            "Also install: pip install einops peft\n"
             "If pipeline.py still fails on diffusers APIs, try:\n"
             "  pip install 'diffusers==0.29.2'\n\n"
             "Optional: pip install insightface onnxruntime torchvision\n"
@@ -131,10 +129,21 @@ def main() -> None:
         pm_version="v1",
     )
     pipe.fuse_lora()
-    # Do not use enable_model_cpu_offload here: id_encoder is added in load_photomaker_adapter
-    # after the base SDXL pipeline is built, and offload hooks often leave it on CPU while
-    # inputs are CUDA → "Input type (CUDA...) and weight type (CPU...) should be the same".
-    place_diffusers_pipeline(pipe, dev, default_offload_on_cuda=False)
+    # Full device placement only. Do not use _cuda_place / MIID_ENABLE_CPU_OFFLOAD=1 here:
+    # with offload enabled, id_encoder often stays on CPU while inputs are CUDA.
+    if dev == "cuda" and os.environ.get("MIID_ENABLE_CPU_OFFLOAD", "").strip().lower() in (
+        "1",
+        "true",
+        "yes",
+    ):
+        print(
+            "photomaker_model: ignoring MIID_ENABLE_CPU_OFFLOAD for PhotoMaker (id_encoder must match input device).",
+            file=sys.stderr,
+        )
+    pipe.to(dev)
+    enc = getattr(pipe, "id_encoder", None)
+    if enc is not None:
+        enc.to(dev)
 
     prompt = MINER_PROMPT
     if PHOTOMAKER_TRIGGER not in prompt.split():
