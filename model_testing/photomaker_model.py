@@ -80,9 +80,10 @@ def main() -> None:
         from photomaker import PhotoMakerStableDiffusionXLPipeline  # type: ignore[import-untyped]
     except ImportError as e:
         raise SystemExit(
-            "PhotoMaker: wrong or missing package. PyPI 'photomaker' is not Tencent PhotoMaker.\n"
+            "PhotoMaker: PyPI 'photomaker' is the wrong package (not Tencent PhotoMaker).\n\n"
             "  pip uninstall photomaker -y\n"
-            "  pip install git+https://github.com/TencentARC/PhotoMaker.git\n"
+            "  pip install 'git+https://github.com/TencentARC/PhotoMaker.git'\n\n"
+            "See requirements-miner.txt in the repo root for the same instructions.\n"
         ) from e
 
     here = os.path.dirname(os.path.abspath(__file__))

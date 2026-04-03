@@ -1,8 +1,7 @@
 #!/usr/bin/env python3
 """PuLID-style identity edit: uses Nunchaku PuLIDFluxPipeline on CUDA when available.
 
-If Nunchaku/CUDA is unavailable, falls back to FLUX.1 Kontext img2img with the same miner
-prompt so you still get an output file for comparison.
+If Nunchaku/CUDA is unavailable, falls back to FLUX.1 Kontext with the same miner prompt.
 """
 
 import os
@@ -25,7 +24,7 @@ MODEL_NAME = "pulid"
 SEED_ID = "475c5c38e38b_m_doc"
 BACKGROUND_CHANGE = "medium_background_edit_religious_head_covering"
 INTENSITY = "medium"
-STRENGTH = {"light": 0.35, "medium": 0.55, "far": 0.75}[INTENSITY]
+_INTENSITY_GUIDANCE_MULT = {"light": 0.92, "medium": 1.0, "far": 1.12}
 NUM_STEPS = int(os.environ.get("MIID_INFERENCE_STEPS", "20"))
 GUIDANCE = float(os.environ.get("MIID_GUIDANCE_SCALE", "3.5"))
 
@@ -84,12 +83,12 @@ def _run_kontext_fallback(base: Image.Image, out_path: str, token: str) -> None:
         token=token,
     )
     place_diffusers_pipeline(pipe, dev, default_offload_on_cuda=True)
+    guidance = GUIDANCE * _INTENSITY_GUIDANCE_MULT.get(INTENSITY, 1.0)
     out = pipe(
         prompt=MINER_PROMPT,
         image=base,
         num_inference_steps=NUM_STEPS,
-        guidance_scale=GUIDANCE,
-        strength=STRENGTH,
+        guidance_scale=guidance,
     )
     out.images[0].save(out_path)
 
@@ -112,7 +111,7 @@ def main() -> None:
         return
 
     print(
-        "pulid_model: Nunchaku PuLID unavailable or failed; using FLUX.1 Kontext img2img fallback "
+        "pulid_model: Nunchaku PuLID unavailable or failed; using FLUX.1 Kontext fallback "
         "(install nunchaku + CUDA for true PuLID).",
         file=sys.stderr,
     )

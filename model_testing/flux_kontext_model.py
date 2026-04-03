@@ -21,7 +21,8 @@ SEED_ID = "475c5c38e38b_m_doc"
 BACKGROUND_CHANGE = "medium_background_edit_religious_head_covering"
 MODEL_ID = "black-forest-labs/FLUX.1-Kontext-dev"
 INTENSITY = "medium"
-STRENGTH = {"light": 0.35, "medium": 0.55, "far": 0.75}[INTENSITY]
+# FluxKontextPipeline has no ``strength``; match miner FLUX_INTENSITY_GUIDANCE_MULT.
+_INTENSITY_GUIDANCE_MULT = {"light": 0.92, "medium": 1.0, "far": 1.12}
 NUM_STEPS = int(os.environ.get("MIID_INFERENCE_STEPS", "20"))
 GUIDANCE = float(os.environ.get("MIID_GUIDANCE_SCALE", "3.5"))
 
@@ -60,12 +61,12 @@ def main() -> None:
     # Full GPU load OOMs typical 16GB cards; CPU offload unless MIID_ENABLE_CPU_OFFLOAD=0
     place_diffusers_pipeline(pipe, dev, default_offload_on_cuda=True)
 
+    guidance = GUIDANCE * _INTENSITY_GUIDANCE_MULT.get(INTENSITY, 1.0)
     out = pipe(
         prompt=MINER_PROMPT,
         image=base,
         num_inference_steps=NUM_STEPS,
-        guidance_scale=GUIDANCE,
-        strength=STRENGTH,
+        guidance_scale=guidance,
     )
     out.images[0].save(out_path)
     print(out_path)
