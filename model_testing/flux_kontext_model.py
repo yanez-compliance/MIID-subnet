@@ -1,6 +1,18 @@
 #!/usr/bin/env python3
 """Generate one image with FLUX.1 Kontext (same as MIID miner when MIID_MODEL=flux_kontext)."""
 
+# Accelerate hooks + torch dynamo can spike VRAM on first transformer forward; disable by default.
+import os as _os
+
+if _os.environ.get("MIID_DISABLE_TORCH_DYNAMO", "1").strip().lower() in (
+    "1",
+    "true",
+    "yes",
+    "",
+):
+    _os.environ.setdefault("TORCHDYNAMO_DISABLE", "1")
+
+import gc
 import os
 
 import torch
@@ -58,15 +70,26 @@ def main() -> None:
         torch_dtype=dtype,
         token=token,
     )
-    # Full GPU load OOMs typical 16GB cards; CPU offload unless MIID_ENABLE_CPU_OFFLOAD=0
-    place_diffusers_pipeline(pipe, dev, default_offload_on_cuda=True)
+    # Kontext: sequential offload first — model offload still OOMs on ~16GB during transformer fwd.
+    place_diffusers_pipeline(
+        pipe, dev, default_offload_on_cuda=True, prefer_sequential_offload=True
+    )
+    if dev == "cuda":
+        gc.collect()
+        torch.cuda.empty_cache()
 
     guidance = GUIDANCE * _INTENSITY_GUIDANCE_MULT.get(INTENSITY, 1.0)
+    kw: dict = {}
+    _h = os.environ.get("MIID_KONTEXT_HEIGHT", "").strip()
+    _w = os.environ.get("MIID_KONTEXT_WIDTH", "").strip()
+    if _h.isdigit() and _w.isdigit():
+        kw["height"], kw["width"] = int(_h), int(_w)
     out = pipe(
         prompt=MINER_PROMPT,
         image=base,
         num_inference_steps=NUM_STEPS,
         guidance_scale=guidance,
+        **kw,
     )
     out.images[0].save(out_path)
     print(out_path)

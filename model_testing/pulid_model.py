@@ -4,6 +4,17 @@
 If Nunchaku/CUDA is unavailable, falls back to FLUX.1 Kontext with the same miner prompt.
 """
 
+import os as _os
+
+if _os.environ.get("MIID_DISABLE_TORCH_DYNAMO", "1").strip().lower() in (
+    "1",
+    "true",
+    "yes",
+    "",
+):
+    _os.environ.setdefault("TORCHDYNAMO_DISABLE", "1")
+
+import gc
 import os
 import sys
 import warnings
@@ -82,13 +93,24 @@ def _run_kontext_fallback(base: Image.Image, out_path: str, token: str) -> None:
         torch_dtype=dtype,
         token=token,
     )
-    place_diffusers_pipeline(pipe, dev, default_offload_on_cuda=True)
+    place_diffusers_pipeline(
+        pipe, dev, default_offload_on_cuda=True, prefer_sequential_offload=True
+    )
+    if dev == "cuda":
+        gc.collect()
+        torch.cuda.empty_cache()
     guidance = GUIDANCE * _INTENSITY_GUIDANCE_MULT.get(INTENSITY, 1.0)
+    kw: dict = {}
+    _h = os.environ.get("MIID_KONTEXT_HEIGHT", "").strip()
+    _w = os.environ.get("MIID_KONTEXT_WIDTH", "").strip()
+    if _h.isdigit() and _w.isdigit():
+        kw["height"], kw["width"] = int(_h), int(_w)
     out = pipe(
         prompt=MINER_PROMPT,
         image=base,
         num_inference_steps=NUM_STEPS,
         guidance_scale=guidance,
+        **kw,
     )
     out.images[0].save(out_path)
 
