@@ -71,7 +71,9 @@ def main() -> None:
         token=token,
         low_cpu_mem_usage=True,
     )
-    place_diffusers_pipeline(pipe, dev, default_offload_on_cuda=False)
+    # Image-conditioned Klein runs VAE encode on the seed; full .to(cuda) often OOMs on ~16GB.
+    # Disable offload with MIID_ENABLE_CPU_OFFLOAD=0 for large GPUs.
+    place_diffusers_pipeline(pipe, dev, default_offload_on_cuda=True)
 
     guidance = GUIDANCE * _INTENSITY_GUIDANCE_MULT.get(INTENSITY, 1.0)
     out = pipe(
