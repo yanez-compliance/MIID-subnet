@@ -129,6 +129,10 @@ def main() -> None:
         pm_version="v1",
     )
     pipe.fuse_lora()
+    # load_photomaker_adapter always sets num_tokens=2 (v2 layout). photomaker-v1 + one image
+    # yields two class-token slots in the prompt but only one ID embedding row from the vision
+    # tower → FuseModule torch.cat fails ("Expected size 2 but got size 1"). v1 uses one slot per ID image.
+    pipe.num_tokens = 1
     # Full device placement only. Do not use _cuda_place / MIID_ENABLE_CPU_OFFLOAD=1 here:
     # with offload enabled, id_encoder often stays on CPU while inputs are CUDA.
     if dev == "cuda" and os.environ.get("MIID_ENABLE_CPU_OFFLOAD", "").strip().lower() in (
