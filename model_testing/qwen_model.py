@@ -2,6 +2,8 @@
 """Generate one image with Qwen-Image-Edit-2511 for local testing."""
 
 import os
+import sys
+import gc
 from importlib.util import find_spec
 
 import torch
@@ -68,6 +70,19 @@ def _truthy_env(name: str, default: str = "0") -> bool:
     return os.environ.get(name, default).strip().lower() in ("1", "true", "yes", "on")
 
 
+def _run_generation(pipe: QwenImageEditPlusPipeline, base: Image.Image, steps: int):
+    return pipe(
+        image=[base],
+        prompt=MINER_PROMPT,
+        generator=torch.manual_seed(0),
+        true_cfg_scale=TRUE_CFG_SCALE,
+        negative_prompt=" ",
+        num_inference_steps=steps,
+        guidance_scale=GUIDANCE,
+        num_images_per_prompt=1,
+    )
+
+
 def main() -> None:
     _check_runtime_deps()
 
@@ -109,16 +124,41 @@ def main() -> None:
             vae.enable_tiling()
     pipe.set_progress_bar_config(disable=None)
 
-    out = pipe(
-        image=[base],
-        prompt=MINER_PROMPT,
-        generator=torch.manual_seed(0),
-        true_cfg_scale=TRUE_CFG_SCALE,
-        negative_prompt=" ",
-        num_inference_steps=NUM_STEPS,
-        guidance_scale=GUIDANCE,
-        num_images_per_prompt=1,
-    )
+    try:
+        out = _run_generation(pipe, base, NUM_STEPS)
+    except torch.OutOfMemoryError as exc:
+        if not dev.startswith("cuda"):
+            raise
+        print(
+            "qwen_model: CUDA OOM during inference. Retrying on CPU (slower, high RAM usage).",
+            file=sys.stderr,
+        )
+        del pipe
+        gc.collect()
+        if torch.cuda.is_available():
+            torch.cuda.empty_cache()
+
+        cpu_steps = int(os.environ.get("MIID_CPU_INFERENCE_STEPS", str(min(NUM_STEPS, 20))))
+        pipe = QwenImageEditPlusPipeline.from_pretrained(
+            MODEL_ID,
+            torch_dtype=torch.float32,
+            token=token,
+            low_cpu_mem_usage=True,
+        )
+        pipe.to("cpu")
+        pipe.enable_attention_slicing()
+        vae = getattr(pipe, "vae", None)
+        if vae is not None:
+            if hasattr(vae, "enable_slicing"):
+                vae.enable_slicing()
+            if hasattr(vae, "enable_tiling"):
+                vae.enable_tiling()
+        pipe.set_progress_bar_config(disable=None)
+        try:
+            out = _run_generation(pipe, base, cpu_steps)
+        except Exception:
+            raise exc
+
     out.images[0].save(out_path)
     print(out_path)
 
