@@ -1,16 +1,50 @@
 #!/usr/bin/env python3
-"""Run a smaller Qwen2.5-VL image QA test on a local seed image."""
+"""Generate one image with Qwen-Image-Edit-2511 for local testing."""
 
 import os
+import sys
+import gc
+from importlib.util import find_spec
 
 import torch
-from transformers import pipeline
+from PIL import Image
 
-MODEL_NAME = "qwen25_vl_7b_instruct"
-MODEL_ID = "Qwen/Qwen2.5-VL-7B-Instruct"
+try:
+    from diffusers import QwenImageEditPlusPipeline
+except ImportError as exc:
+    raise SystemExit(
+        "QwenImageEditPlusPipeline not found in your diffusers install.\n"
+        "Install latest diffusers from source:\n"
+        "  pip install git+https://github.com/huggingface/diffusers"
+    ) from exc
+
+MODEL_NAME = "qwen_image_edit_2511"
 SEED_ID = "475c5c38e38b_m_doc"
-QUESTION = os.environ.get("QWEN_VL_QUESTION", "What is in this image?")
-MAX_NEW_TOKENS = int(os.environ.get("QWEN_VL_MAX_NEW_TOKENS", "128"))
+BACKGROUND_CHANGE = "medium_background_edit_religious_head_covering"
+MODEL_ID = "Qwen/Qwen-Image-Edit-2511"
+
+# Keep the same miner-like prompt used in other model_testing scripts.
+MINER_PROMPT = (
+    "Same person, same identity, Change background environment while keeping subject unchanged. "
+    "Add religious head covering, Change environment type (office to outdoor, solid color to gradient). "
+    "Additionally, include: Religious head covering (hijab, turban, kippah, taqiyah, etc.) appropriate to subject. "
+    "Preserve face identity."
+)
+
+NUM_STEPS = int(os.environ.get("MIID_INFERENCE_STEPS", "40"))
+TRUE_CFG_SCALE = float(os.environ.get("MIID_TRUE_CFG_SCALE", "4.0"))
+# Qwen docs use guidance_scale=1.0 for this pipeline family.
+GUIDANCE = float(os.environ.get("MIID_GUIDANCE_SCALE", "1.0"))
+
+
+def _check_runtime_deps() -> None:
+    if find_spec("torchvision") is None:
+        raise SystemExit(
+            "Missing dependency: torchvision.\n"
+            "Qwen-Image-Edit-2511 loads a Transformers video processor that requires torchvision.\n"
+            "Install in this env, then rerun:\n"
+            "  pip install torchvision"
+        )
 
 
 def _device() -> str:
@@ -32,47 +66,100 @@ def _dtype(dev: str) -> torch.dtype:
     return torch.float32
 
 
+def _truthy_env(name: str, default: str = "0") -> bool:
+    return os.environ.get(name, default).strip().lower() in ("1", "true", "yes", "on")
+
+
+def _run_generation(pipe: QwenImageEditPlusPipeline, base: Image.Image, steps: int):
+    return pipe(
+        image=[base],
+        prompt=MINER_PROMPT,
+        generator=torch.manual_seed(0),
+        true_cfg_scale=TRUE_CFG_SCALE,
+        negative_prompt=" ",
+        num_inference_steps=steps,
+        guidance_scale=GUIDANCE,
+        num_images_per_prompt=1,
+    )
+
+
 def main() -> None:
+    _check_runtime_deps()
+
     token = os.environ.get("HF_TOKEN") or os.environ.get("HUGGINGFACE_TOKEN")
     if not token:
         raise SystemExit("Set HF_TOKEN or HUGGINGFACE_TOKEN for Hugging Face model access.")
 
     here = os.path.dirname(os.path.abspath(__file__))
-    seed_path = os.path.abspath(os.path.join(here, "seed_images", f"{SEED_ID}.png"))
-    if not os.path.isfile(seed_path):
-        raise SystemExit(f"Seed image not found: {seed_path}")
-
+    seed_path = os.path.join(here, "seed_images", f"{SEED_ID}.png")
     out_dir = os.path.join(here, "results")
     os.makedirs(out_dir, exist_ok=True)
-    out_path = os.path.join(out_dir, f"{MODEL_NAME}_{SEED_ID}.txt")
+    out_path = os.path.join(out_dir, f"{MODEL_NAME}_{SEED_ID}_{BACKGROUND_CHANGE}.png")
 
     dev = _device()
     dtype = _dtype(dev)
-    device_map = "auto" if dev.startswith("cuda") else dev
+    base = Image.open(seed_path).convert("RGB")
 
-    pipe = pipeline(
-        "image-text-to-text",
-        model=MODEL_ID,
-        dtype=dtype,
-        device_map=device_map,
+    pipe = QwenImageEditPlusPipeline.from_pretrained(
+        MODEL_ID,
+        torch_dtype=dtype,
         token=token,
+        low_cpu_mem_usage=True,
     )
+    # This model is very large; full .to("cuda") can OOM on ~16GB VRAM.
+    # Default to CPU offload on CUDA unless disabled.
+    use_offload = dev.startswith("cuda") and _truthy_env("MIID_ENABLE_CPU_OFFLOAD", "1")
+    if use_offload:
+        pipe.enable_model_cpu_offload()
+    else:
+        pipe.to(dev)
 
-    # load_image() accepts http(s) URLs, a plain filesystem path, or base64 — not file:// URLs.
-    messages = [
-        {
-            "role": "user",
-            "content": [
-                {"type": "image", "url": seed_path},
-                {"type": "text", "text": QUESTION},
-            ],
-        }
-    ]
+    # Extra memory savings.
+    pipe.enable_attention_slicing()
+    vae = getattr(pipe, "vae", None)
+    if vae is not None:
+        if hasattr(vae, "enable_slicing"):
+            vae.enable_slicing()
+        if hasattr(vae, "enable_tiling"):
+            vae.enable_tiling()
+    pipe.set_progress_bar_config(disable=None)
 
-    out = pipe(text=messages, max_new_tokens=MAX_NEW_TOKENS)
-    text = str(out)
-    with open(out_path, "w", encoding="utf-8") as f:
-        f.write(text)
+    try:
+        out = _run_generation(pipe, base, NUM_STEPS)
+    except torch.OutOfMemoryError as exc:
+        if not dev.startswith("cuda"):
+            raise
+        print(
+            "qwen_model: CUDA OOM during inference. Retrying on CPU (slower, high RAM usage).",
+            file=sys.stderr,
+        )
+        del pipe
+        gc.collect()
+        if torch.cuda.is_available():
+            torch.cuda.empty_cache()
+
+        cpu_steps = int(os.environ.get("MIID_CPU_INFERENCE_STEPS", str(min(NUM_STEPS, 20))))
+        pipe = QwenImageEditPlusPipeline.from_pretrained(
+            MODEL_ID,
+            torch_dtype=torch.float32,
+            token=token,
+            low_cpu_mem_usage=True,
+        )
+        pipe.to("cpu")
+        pipe.enable_attention_slicing()
+        vae = getattr(pipe, "vae", None)
+        if vae is not None:
+            if hasattr(vae, "enable_slicing"):
+                vae.enable_slicing()
+            if hasattr(vae, "enable_tiling"):
+                vae.enable_tiling()
+        pipe.set_progress_bar_config(disable=None)
+        try:
+            out = _run_generation(pipe, base, cpu_steps)
+        except Exception:
+            raise exc
+
+    out.images[0].save(out_path)
     print(out_path)
 
 
