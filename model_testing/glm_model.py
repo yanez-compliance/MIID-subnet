@@ -97,7 +97,17 @@ def main() -> None:
         token=token,
         low_cpu_mem_usage=True,
     )
-    place_diffusers_pipeline(pipe, dev, default_offload_on_cuda=True)
+    # Do not default to model CPU offload: GlmImagePipeline's vision path can leave conv weights on
+    # CPU while pixel_values are CUDA (RuntimeError: CUDABFloat16Type vs CPUBFloat16Type). Full
+    # ``pipe.to(cuda)`` keeps weights and activations aligned. To try offload on tight VRAM:
+    #   MIID_ENABLE_CPU_OFFLOAD=1
+    # Optionally also MIID_SEQUENTIAL_CPU_OFFLOAD=1 (see _cuda_place.place_diffusers_pipeline).
+    place_diffusers_pipeline(
+        pipe,
+        dev,
+        default_offload_on_cuda=False,
+        prefer_sequential_offload=True,
+    )
 
     guidance = GUIDANCE * _INTENSITY_GUIDANCE_MULT.get(INTENSITY, 1.0)
     out = pipe(
