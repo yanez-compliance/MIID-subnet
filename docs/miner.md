@@ -94,7 +94,6 @@ On **macOS** (or if you prefer not to use `apt`), use **Option 2** instead—the
 
 3. **Activate the virtual environment** (do this every time you open a new terminal before running the miner):
 ```bash
-cd MIID-subnet
 source miner_env/bin/activate
 ```
 
