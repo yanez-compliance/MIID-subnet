@@ -2,6 +2,7 @@
 """Generate one image with GLM-Image (image-to-image, same prompt path as other model_testing scripts)."""
 
 import os
+import sys
 
 import torch
 from PIL import Image
@@ -14,8 +15,6 @@ except ImportError as exc:
         "GLM-Image requires a recent diffusers with glm_image support, e.g.:\n"
         "  pip install git+https://github.com/huggingface/diffusers"
     ) from exc
-
-from _cuda_place import place_diffusers_pipeline
 
 # Exact string the miner builds from VariationRequest.description + .detail
 # (see MIID/miner/generate_variations._get_prompt_from_request).
@@ -75,6 +74,21 @@ def _generator(dev: str):
     return torch.Generator(device=dev).manual_seed(0)
 
 
+def _place_glm_pipeline(pipe: GlmImagePipeline, dev: str) -> None:
+    """Load the full pipeline on ``dev`` — no Accelerate CPU offload.
+
+    ``enable_model_cpu_offload`` / ``enable_sequential_cpu_offload`` break this pipeline:
+    CUDABFloat16 vs CPUBFloat16 in the vision conv stack, or meta-tensor errors in ``visual``.
+    """
+    if os.environ.get("MIID_ENABLE_CPU_OFFLOAD", "").strip().lower() in ("1", "true", "yes"):
+        print(
+            "glm_model: ignoring MIID_ENABLE_CPU_OFFLOAD (and sequential offload); "
+            "GlmImagePipeline needs a full-device load.",
+            file=sys.stderr,
+        )
+    pipe.to(dev)
+
+
 def main() -> None:
     token = os.environ.get("HF_TOKEN") or os.environ.get("HUGGINGFACE_TOKEN")
     if not token:
@@ -97,17 +111,7 @@ def main() -> None:
         token=token,
         low_cpu_mem_usage=True,
     )
-    # Do not default to model CPU offload: GlmImagePipeline's vision path can leave conv weights on
-    # CPU while pixel_values are CUDA (RuntimeError: CUDABFloat16Type vs CPUBFloat16Type). Full
-    # ``pipe.to(cuda)`` keeps weights and activations aligned. To try offload on tight VRAM:
-    #   MIID_ENABLE_CPU_OFFLOAD=1
-    # Optionally also MIID_SEQUENTIAL_CPU_OFFLOAD=1 (see _cuda_place.place_diffusers_pipeline).
-    place_diffusers_pipeline(
-        pipe,
-        dev,
-        default_offload_on_cuda=False,
-        prefer_sequential_offload=True,
-    )
+    _place_glm_pipeline(pipe, dev)
 
     guidance = GUIDANCE * _INTENSITY_GUIDANCE_MULT.get(INTENSITY, 1.0)
     out = pipe(
