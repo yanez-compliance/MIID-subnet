@@ -110,7 +110,8 @@ def main() -> None:
     # Default to CPU offload on CUDA unless disabled.
     use_offload = dev.startswith("cuda") and _truthy_env("MIID_ENABLE_CPU_OFFLOAD", "1")
     if use_offload:
-        pipe.enable_model_cpu_offload()
+        # Sequential offload has lower VRAM peaks than model offload.
+        pipe.enable_sequential_cpu_offload()
     else:
         pipe.to(dev)
 
