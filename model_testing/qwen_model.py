@@ -2,6 +2,7 @@
 """Generate one image with Qwen-Image-Edit-2511 for local testing."""
 
 import os
+from importlib.util import find_spec
 
 import torch
 from PIL import Image
@@ -34,6 +35,16 @@ TRUE_CFG_SCALE = float(os.environ.get("MIID_TRUE_CFG_SCALE", "4.0"))
 GUIDANCE = float(os.environ.get("MIID_GUIDANCE_SCALE", "1.0"))
 
 
+def _check_runtime_deps() -> None:
+    if find_spec("torchvision") is None:
+        raise SystemExit(
+            "Missing dependency: torchvision.\n"
+            "Qwen-Image-Edit-2511 loads a Transformers video processor that requires torchvision.\n"
+            "Install in this env, then rerun:\n"
+            "  pip install torchvision"
+        )
+
+
 def _device() -> str:
     explicit = os.environ.get("FLUX_DEVICE", "").strip()
     if explicit:
@@ -53,7 +64,13 @@ def _dtype(dev: str) -> torch.dtype:
     return torch.float32
 
 
+def _truthy_env(name: str, default: str = "0") -> bool:
+    return os.environ.get(name, default).strip().lower() in ("1", "true", "yes", "on")
+
+
 def main() -> None:
+    _check_runtime_deps()
+
     token = os.environ.get("HF_TOKEN") or os.environ.get("HUGGINGFACE_TOKEN")
     if not token:
         raise SystemExit("Set HF_TOKEN or HUGGINGFACE_TOKEN for Hugging Face model access.")
@@ -72,8 +89,24 @@ def main() -> None:
         MODEL_ID,
         torch_dtype=dtype,
         token=token,
+        low_cpu_mem_usage=True,
     )
-    pipe.to(dev)
+    # This model is very large; full .to("cuda") can OOM on ~16GB VRAM.
+    # Default to CPU offload on CUDA unless disabled.
+    use_offload = dev.startswith("cuda") and _truthy_env("MIID_ENABLE_CPU_OFFLOAD", "1")
+    if use_offload:
+        pipe.enable_model_cpu_offload()
+    else:
+        pipe.to(dev)
+
+    # Extra memory savings.
+    pipe.enable_attention_slicing()
+    vae = getattr(pipe, "vae", None)
+    if vae is not None:
+        if hasattr(vae, "enable_slicing"):
+            vae.enable_slicing()
+        if hasattr(vae, "enable_tiling"):
+            vae.enable_tiling()
     pipe.set_progress_bar_config(disable=None)
 
     out = pipe(
