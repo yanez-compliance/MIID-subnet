@@ -31,8 +31,8 @@ This document provides quick reference guides and helpful hints for running MIID
    - Confirm your axon has a real IP and port on-chain, firewall/NAT is open, and `axon.external_ip` / `axon.external_port` match what validators use. To print your on-chain IP/port from any machine, run [`MIID/miner/active_miner_check/is_my_miner_alive.py`](../MIID/miner/active_miner_check/is_my_miner_alive.py) with `--hotkey` (SS58), then run these on **another** machine (substitute your IP and port for the example below):
 
 ```bash
-nc -zv 1.208.108.242 53124
-curl -v --max-time 10 "http://1.208.108.242:53124/IdentitySynapse"
+nc -zv <IP> <PORT>
+curl -v --max-time 10 "http://<IP>:<PORT>/IdentitySynapse"
 ```
 
    - **nc:** You want a line like `Connection to … port … [tcp/*] succeeded!` — that means the TCP port is reachable.
