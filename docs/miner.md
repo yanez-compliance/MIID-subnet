@@ -52,9 +52,12 @@ For the full roadmap and detailed architecture, see [Yanez Identity Generation B
 
 ### Additional Requirements for Phase 4 (Face Image Variations)
 - A Hugging Face account with an API token (free)
-- Access to the [FLUX.2-klein-4B](https://huggingface.co/black-forest-labs/FLUX.2-klein-4B) model (accept the license on HuggingFace)
+- Access to the base image models used by the miner:
+  - [FLUX.2-klein-4B](https://huggingface.co/black-forest-labs/FLUX.2-klein-4B) (used by `flux_klein` and `pulid_flux2`)
+  - [FLUX.1-Kontext-dev](https://huggingface.co/black-forest-labs/FLUX.1-Kontext-dev) (used by `pulid` fallback and `flux_kontext` alternative)
+  - Optional alternative: [Qwen-Image-Edit-2511](https://huggingface.co/Qwen/Qwen-Image-Edit-2511)
 - GPU with at least 8GB VRAM recommended (NVIDIA CUDA or Apple Silicon MPS)
-- Additional ~10GB storage for diffusion model weights
+- Additional storage for diffusion model weights (typically ~10GB for FLUX.2-klein; more if you also use Kontext/Qwen)
 - Base Python packages from `requirements.txt` plus miner image packages from `requirements-miner.txt` (`torch`, `diffusers`, `transformers`, `Pillow`, `opencv-python`, etc.)
 
 ---
@@ -514,34 +517,40 @@ The miner ships with **three** diffusion models; each session **randomly picks o
 
 | Model | Description | VRAM needed |
 |-------|-------------|-------------|
-| **FLUX.2-klein** | Fast baseline | ~8 GB |
-| **FLUX.1-Kontext** | Strong text-guided editing | ~24 GB |
-| **PhotoMaker** | Identity-focused SDXL + LoRA | ~12 GB |
+| **FLUX.2-klein** (`flux_klein`) | Fast baseline model; lowest overhead and most stable default path | ~8 GB |
+| **PuLID** (`pulid`) | Identity-focused path: tries Nunchaku PuLID on CUDA, otherwise falls back to FLUX.1-Kontext | ~12 GB+ (Nunchaku path); fallback depends on Kontext |
+| **PuLID-FLUX2** (`pulid_flux2`) | FLUX.2-klein backbone for PuLID-FLUX2-style identity experiments | ~8 GB |
 
-If a model fails to load, the miner falls back to FLUX.2-klein. Licenses, pipeline details, and how to add models are documented in `MIID/miner/generate_variations.py`.
+Default behavior is:
+- If `MIID_MODEL` is set, the miner uses that exact model.
+- If `MIID_MODEL` is not set, it defaults to `flux_klein`.
+- If `MIID_MODEL_RANDOM=1`, it randomly picks from the **three base models** above.
 
-### Other recommendations (future / advanced integration)
+If a model fails to load, the miner falls back to `flux_klein`. Licenses, pipeline details, and model wiring are documented in `MIID/miner/generate_variations.py`.
 
-These are **not** active in the miner by default. They are listed in `generate_variations.py` as suggested next steps if you want to experiment beyond the three models above—you would need to add a loader, generator, and registrations following the same pattern as the existing models.
+### Recommended alternatives (easy to enable now)
 
-**1. PuLID (`pulid`)** — [Hugging Face: guozinan/PuLID](https://huggingface.co/guozinan/PuLID)
+These are already wired in code and can be enabled by setting `MIID_MODEL`:
 
-- **What it is:** PuLID (Pure and Lightning ID Customization).
-- **Good for:** Very high identity fidelity without changing background, lighting, or style of the base model output.
-- **Works with:** FLUX (PuLID-FLUX) or SDXL (`pulid_v1.1`).
-- **How it works:** Face embedding via InsightFace, visual features via EVA-CLIP, identity tokens injected into the model.
-- **Extra packages:** `pip install insightface onnxruntime`
-- **License:** See the repo (NeurIPS 2024, ByteDance).
+1. **FLUX.1-Kontext (`flux_kontext`)**
+   - Strong text-guided editing quality.
+   - Best on higher-memory GPUs (commonly ~24 GB class).
+   - Model: [black-forest-labs/FLUX.1-Kontext-dev](https://huggingface.co/black-forest-labs/FLUX.1-Kontext-dev)
 
-**2. PuLID for FLUX.2 (`pulid_flux2`)** — [Hugging Face: Fayens/Pulid-Flux2](https://huggingface.co/Fayens/Pulid-Flux2)
+2. **Qwen Image Edit (`qwen`)**
+   - Strong instruction-following image editing.
+   - Requires newer diffusers build and `torchvision`.
+   - Model: [Qwen/Qwen-Image-Edit-2511](https://huggingface.co/Qwen/Qwen-Image-Edit-2511)
 
-- **What it is:** PuLID weights trained for FLUX.2 (klein and dev).
-- **Good for:** Strong identity preservation with fewer artifacts; aligns with the FLUX.2-klein stack already in the codebase.
-- **Example weights:** `pulid_flux2_klein_v1.safetensors`, `pulid_flux2_klein_v2.safetensors` (dev variants also exist).
-- **How it works:** Same InsightFace + EVA-CLIP idea as PuLID, with weights in FLUX.2 transformer blocks.
-- **Extra packages:** `pip install insightface onnxruntime` (EVA-CLIP downloads on first run, ~800 MB).
-- **Suggested strength** (when integrated): `1.0` (normal) or `1.4` (often a good balance).
-- **License:** See the repo.
+### Paid model recommendations (future integration)
+
+These are not active in the miner by default, but are good candidates for advanced setups:
+
+- **Soul**
+- **Grok Imagination**
+- **Seedream**
+- **Nonobana**
+- **Nonobana2**
 
 ---
 
