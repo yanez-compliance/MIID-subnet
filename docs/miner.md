@@ -205,7 +205,7 @@ source miner_env/bin/activate
 ### Step 4: Install Base Python Dependencies
 
 ```bash
-pip install --upgrade pip setuptools wheel
+pip install --upgrade pip "setuptools>=68,<82" wheel
 pip install -e .
 ```
 
@@ -273,7 +273,7 @@ git clone https://github.com/yanez-compliance/MIID-subnet.git
 cd MIID-subnet
 python3 -m venv miner_env
 source miner_env/bin/activate
-pip install --upgrade pip setuptools wheel
+pip install --upgrade pip "setuptools>=68,<82" wheel
 pip install -e .
 curl -fsSL https://ollama.com/install.sh | sh
 ollama serve &
@@ -363,7 +363,7 @@ git clone https://github.com/yanez-compliance/MIID-subnet.git
 cd MIID-subnet
 python3 -m venv miner_env
 source miner_env/bin/activate
-pip install --upgrade pip setuptools wheel
+pip install --upgrade pip "setuptools>=68,<82" wheel
 pip install -e .
 pip install -r requirements-miner.txt
 pip install photomaker    # optional
