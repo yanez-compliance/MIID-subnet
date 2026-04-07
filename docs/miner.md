@@ -104,7 +104,7 @@ export FLUX_DEVICE="cuda"   # or mps (Apple) or cpu (slow)
 ```
 If the script could not pre-download FLUX weights, run `python -m MIID.miner.downloading_model` after `HF_TOKEN` is set.
 
-5. **Create a wallet and register** (needs a small amount of TAO; skip if you already have a registered miner):
+5. **Create a wallet and register** (needs a small amount of TAO; skip if you already have a registered miner). If this is your first time setting up, we recommend starting on testnet first (see [First-time setup: run on testnet first](#first-time-setup-run-on-testnet-first)):
 ```bash
 btcli wallet create --wallet.name miner_wallet --wallet.hotkey miner_hotkey
 btcli subnet register --netuid 54 --wallet.name miner_wallet --wallet.hotkey miner_hotkey --subtensor.network finney
@@ -115,6 +115,30 @@ btcli subnet register --netuid 54 --wallet.name miner_wallet --wallet.hotkey min
 python neurons/miner.py --netuid 54 --subtensor.network finney --subtensor.chain_endpoint wss://entrypoint-finney.opentensor.ai:443 --wallet.name miner_wallet --wallet.hotkey miner_hotkey --logging.debug
 ```
 Use the same wallet/hotkey names you created. If you chose **Basic**, you may see `Phase 4 image generation: DISABLED` in the logs—that is expected.
+
+### First-time setup: run on testnet first
+
+For first-time setup, testnet is the safest place to validate your miner end-to-end before running on mainnet.  
+Our MIID testnet netuid is **`322`**.
+
+```bash
+python neurons/miner.py --netuid 322 --subtensor.network test --subtensor.chain_endpoint wss://test.finney.opentensor.ai:443 --wallet.name miner_wallet --wallet.hotkey miner_hotkey --logging.debug --axon.port <YOUR_OPEN_PORT> --axon.ip 0.0.0.0 --axon.external_ip <YOUR_PUBLIC_IP> --axon.external_port <YOUR_PUBLIC_PORT>
+```
+
+View your testnet results on [taostats.io](https://taostats.io).
+
+Flag breakdown for the command above:
+
+- `--netuid 322`: selects the subnet to join; use `322` for MIID testnet.
+- `--subtensor.network test`: points Bittensor to the test network instead of finney/mainnet.
+- `--subtensor.chain_endpoint wss://test.finney.opentensor.ai:443`: sets the websocket RPC endpoint for chain communication.
+- `--wallet.name miner_wallet`: chooses the coldkey wallet name that holds your miner identity.
+- `--wallet.hotkey miner_hotkey`: chooses the hotkey used by the miner process to sign and serve requests.
+- `--logging.debug`: enables verbose logs to make first-run troubleshooting easier.
+- `--axon.port <YOUR_OPEN_PORT>`: local listening port where your miner axon serves validator requests.
+- `--axon.ip 0.0.0.0`: binds the service to all local interfaces so it can accept incoming traffic.
+- `--axon.external_ip <YOUR_PUBLIC_IP>`: advertises the public IP validators should use to reach your miner.
+- `--axon.external_port <YOUR_PUBLIC_PORT>`: advertises the public port validators should use (often your forwarded/NAT port).
 
 ### Option 2: Manual installation
 
