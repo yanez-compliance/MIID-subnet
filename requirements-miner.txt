@@ -14,7 +14,9 @@ gdown
 
 # Optional: enables the PhotoMaker model (3rd image model).
 # If not installed the miner falls back to FLUX.2-klein automatically.
-# photomaker
+# Do NOT use PyPI ``photomaker`` (wrong package). Tencent PhotoMaker:
+#   pip uninstall photomaker -y
+#   pip install git+https://github.com/TencentARC/PhotoMaker.git
 
 # Optional: enables drand timelock encryption.
 # If not installed the miner uses raw bytes (sandbox fallback).
