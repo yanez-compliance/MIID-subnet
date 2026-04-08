@@ -6,7 +6,7 @@ torch>=2
 pandas
 tqdm
 numpy>=1
-setuptools>=68
+setuptools>=68,<82
 faker
 ollama
 python-Levenshtein

@@ -1,8 +1,8 @@
 # MIID/miner/image_generator.py
 #
 # Phase 4: Image variation generator for miners.
-# Uses FLUX-based generation from generate_variations.py when configured
-# (HF token + model). See MIID.miner.generate_variations module docstring for setup.
+# Uses model-based generation from generate_variations.py.
+# See MIID.miner.generate_variations module docstring for setup.
 
 import base64
 import hashlib
@@ -11,7 +11,7 @@ import bittensor as bt
 from typing import List, Dict
 from PIL import Image
 
-from MIID.miner.generate_variations import generate_variations as generate_variations_flux
+from MIID.miner.generate_variations import generate_variations as generate_variations_backend
 from MIID.miner.generate_variations import get_selected_model_info
 from MIID.miner.ada_face_compare import validate_single_variation
 
@@ -60,10 +60,10 @@ def generate_variations(
     base_image: Image.Image,
     variation_requests: List,
 ) -> List[Dict]:
-    """Generate image variations from a base image using FLUX (see generate_variations.py).
+    """Generate image variations from a base image (see generate_variations.py).
 
     Flow: validator sends image_request with variation_requests (each has type + intensity)
-    -> miner passes base_image + variation_requests here -> FLUX gets base image and
+    -> miner passes base_image + variation_requests here -> selected model gets base image and
     the correct prompt per request (type + intensity from IMAGE_VARIATION_PROMPTS)
     -> one variation image per request. We add image_bytes and image_hash for S3/submission.
 
@@ -89,7 +89,7 @@ def generate_variations(
         f"{model_info['params']})"
     )
 
-    raw_results = generate_variations_flux(
+    raw_results = generate_variations_backend(
         base_image,
         variation_requests,
     )
@@ -116,7 +116,7 @@ def generate_variations(
     return variations
 
 
-def validate_variation(
+def validate_face_variation(
     variation: Dict,
     base_image: Image.Image,
     min_similarity: float = 0.7

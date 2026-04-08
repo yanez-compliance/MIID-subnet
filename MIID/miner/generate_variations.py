@@ -7,60 +7,125 @@ This file makes the miner generate image variations.
 
 What this file does:
 1. Keeps a list of image models the miner can use.
-2. Picks one of the active models at random.
-3. Loads that model.
+2. Picks one of the active models at random (or uses the forced model).
+3. Loads that model (importing from MIID.miner.models.*).
 4. Uses the model to make the requested image variations.
 5. Keeps the same return format so the rest of the miner still works.
 
-The 3 active models in this file:
+=============================================================================
+Base models (default pool)
+=============================================================================
+
 1. ``flux_klein``
    - Model: ``black-forest-labs/FLUX.2-klein-4B``
-   - Why keep it: fastest and already close to the old setup.
-2. ``flux_kontext``
+   - Why: fastest and lightest, good baseline for GPU-constrained setups.
+
+2. ``pulid``
+   - Model: PuLID via Nunchaku (falls back to FLUX.1 Kontext)
+   - Why: very high identity fidelity without changing background/lighting.
+   - Extra packages: ``pip install nunchaku`` (CUDA required for true PuLID).
+
+3. ``pulid_flux2``
+   - Model: ``black-forest-labs/FLUX.2-klein-4B`` (PuLID-FLUX2 adapter compatible)
+   - Why: strong identity preservation with the FLUX.2 Klein backbone,
+     compatible with Fayens PuLID-FLUX2 adapter weights.
+
+=============================================================================
+Recommended alternatives (easy to set up)
+=============================================================================
+
+4. ``flux_kontext``
    - Model: ``black-forest-labs/FLUX.1-Kontext-dev``
-   - Why add it: better text-guided image editing quality.
-3. ``photomaker``
-   - Model: ``TencentARC/PhotoMaker`` on top of ``SG161222/RealVisXL_V4.0``
-   - Why add it: strong identity preservation from a single face image,
-     uses a LoRA adapter so it keeps the face consistent.
+   - Why: best text-guided editing quality with minimal visual drift.
+   - Requires ≥24 GB VRAM on GPU.
 
-How model choice works:
+5. ``qwen``
+   - Model: ``Qwen/Qwen-Image-Edit-2511``
+   - Why: strong instruction-following image editor from Qwen.
+   - Install latest diffusers from source for this model.
+
+=============================================================================
+Paid / API model recommendations (not integrated — for future work)
+=============================================================================
+
+These models offer excellent quality via paid APIs.  They are not yet
+integrated into this file but are recommended for miners who want top-tier
+output and are willing to use API credits:
+
+- **Soul**        — high-quality identity-preserving generation
+- **Grok Imagination** — xAI's image generation API
+- **Seedream**    — ByteDance's SeedreamDiT image model
+- **Nonobana**    — advanced image editing model
+- **Nonobana2**   — next-gen Nonobana with improved identity preservation
+
+=============================================================================
+How model choice works
+=============================================================================
+
 1. If ``MIID_MODEL`` is set, this file uses that exact model.
-2. If ``MIID_MODEL`` is not set, this file randomly picks one of the 3 models.
-3. The chosen model is kept in memory for the session.
+2. If ``MIID_MODEL`` is not set, this file defaults to ``flux_klein``.
+3. Set ``MIID_MODEL_RANDOM=1`` to randomly pick from the 3 base models.
+4. The chosen model is kept in memory for the session.
 
-How intensity works:
+=============================================================================
+How intensity works
+=============================================================================
+
 - ``light`` keeps the new image closer to the original.
 - ``medium`` makes a balanced edit.
 - ``far`` allows a bigger change.
 
-Simple setup steps:
+=============================================================================
+Simple setup steps
+=============================================================================
+
 1. Create a Hugging Face token.
 2. Put it in your environment:
    ``export HF_TOKEN="hf_..."``
 3. Install the packages for the model you want to use.
 
-Packages for ``flux_klein`` and ``flux_kontext``:
+Packages for ``flux_klein`` and ``pulid_flux2``:
 - ``pip install diffusers transformers accelerate``
 
-Packages for ``photomaker``:
-- ``pip install diffusers transformers accelerate photomaker``
-- Note: the photomaker package tries to import insightface at startup.
-  If you do NOT have insightface installed, this file creates harmless
-  stubs so the import still works.  You do NOT need to install insightface
-  just for PhotoMaker.
+Packages for ``pulid``:
+- ``pip install diffusers transformers accelerate``
+- For true PuLID: ``pip install nunchaku`` (requires CUDA)
+- Without nunchaku, falls back to FLUX.1 Kontext automatically.
 
-Helpful environment variables:
+Packages for ``flux_kontext``:
+- ``pip install diffusers transformers accelerate``
+
+Packages for ``qwen``:
+- ``pip install git+https://github.com/huggingface/diffusers``
+- ``pip install transformers accelerate torchvision``
+
+=============================================================================
+Helpful environment variables
+=============================================================================
+
 - ``MIID_MODEL``: force one model, for example ``flux_klein``
 - ``FLUX_DEVICE``: choose ``cuda``, ``mps``, or ``cpu``
+- ``MIID_MODEL_RANDOM``: set to ``1`` to randomly pick among base models
 - ``MIID_INFERENCE_STEPS``: change number of generation steps
 - ``MIID_GUIDANCE_SCALE``: change prompt strength
 - ``HF_TOKEN``: Hugging Face access token
+
+=============================================================================
+Testing individual models
+=============================================================================
+
+Each model can be tested standalone from MIID/miner/models/:
+    python MIID/miner/models/flux_klein_model.py [seed_image.png]
+    python MIID/miner/models/pulid_model.py [seed_image.png]
+    python MIID/miner/models/pulid_flux2_model.py [seed_image.png]
+    python MIID/miner/models/flux_kontext_model.py [seed_image.png]
+    python MIID/miner/models/qwen_model.py [seed_image.png]
+
+This lets you see the output for a given prompt and check if the model works
+on your hardware before running the full miner.
 """
 
 import os
-import sys
-import types
 import random
 import logging
 from typing import List, Dict, Any, Optional, Tuple
@@ -74,9 +139,20 @@ logger = logging.getLogger(__name__)
 # Configuration
 # =============================================================================
 
-DEVICE = os.environ.get("FLUX_DEVICE", "cpu")
 
-DTYPE = torch.float32
+def _resolve_device() -> str:
+    """Prefer GPU when available."""
+    explicit = os.environ.get("FLUX_DEVICE", "").strip()
+    if explicit:
+        return explicit
+    if torch.cuda.is_available():
+        return "cuda"
+    if getattr(torch.backends, "mps", None) is not None and torch.backends.mps.is_available():
+        return "mps"
+    return "cpu"
+
+
+DEVICE = _resolve_device()
 
 NUM_INFERENCE_STEPS = int(os.environ.get("MIID_INFERENCE_STEPS", "20"))
 
@@ -84,123 +160,84 @@ GUIDANCE_SCALE = float(os.environ.get("MIID_GUIDANCE_SCALE", "3.5"))
 
 DEFAULT_INTENSITY = "medium"
 
-# This maps the validator's requested intensity to model edit strength.
-# Lower value = safer edit, closer to the original face.
-# Higher value = stronger edit, but more risk of changing identity too much.
 INTENSITY_TO_STRENGTH: Dict[str, float] = {
     "light":  0.35,
     "medium": 0.55,
     "far":    0.75,
 }
 
-# PhotoMaker does not use img2img strength.  It preserves identity through its
-# adapter.  Instead we control variation amount with guidance_scale:
-#   higher guidance = follows "preserve identity" prompt more strictly
-#   lower guidance  = allows more creative deviation
-PHOTOMAKER_INTENSITY_TO_GUIDANCE: Dict[str, float] = {
-    "light":  7.5,
-    "medium": 5.0,
-    "far":    3.0,
-}
-
-# PhotoMaker needs this word somewhere in the prompt so the adapter activates.
-PHOTOMAKER_TRIGGER = "img"
-
 # =============================================================================
-# List of models that are active right now.
-# The miner randomly picks one of these unless MIID_MODEL is set.
+# Available models
 # =============================================================================
 
 AVAILABLE_MODELS: Dict[str, Dict[str, Any]] = {
+    # ── Base models (default pool for random selection) ──
     "flux_klein": {
         "model_id": "black-forest-labs/FLUX.2-klein-4B",
-        "type": "flux",
+        "type": "flux_klein",
         "params": "4B",
         "license": "FLUX.1 dev non-commercial (commercial available from BFL)",
+        "base": True,
         "notes": (
             "Original default. Lightweight, fast inference. "
             "Good baseline for GPU-constrained setups."
         ),
     },
+    "pulid": {
+        "model_id": "guozinan/PuLID (Nunchaku) / FLUX.1-Kontext-dev (fallback)",
+        "type": "pulid",
+        "params": "~12B",
+        "license": "NeurIPS 2024 (ByteDance) / FLUX dev non-commercial",
+        "base": True,
+        "notes": (
+            "PuLID: Pure and Lightning ID Customization. Very high identity "
+            "fidelity. Uses Nunchaku PuLIDFluxPipeline on CUDA; falls back to "
+            "FLUX.1 Kontext when Nunchaku is unavailable."
+        ),
+    },
+    "pulid_flux2": {
+        "model_id": "black-forest-labs/FLUX.2-klein-4B",
+        "type": "pulid_flux2",
+        "params": "4B",
+        "license": "FLUX.1 dev non-commercial",
+        "base": True,
+        "notes": (
+            "FLUX.2 Klein backbone compatible with Fayens PuLID-FLUX2 adapter "
+            "weights (pulid_flux2_klein_v1/v2.safetensors). Strong identity "
+            "preservation with reduced artifacts."
+        ),
+    },
+    # ── Recommended alternatives ──
     "flux_kontext": {
         "model_id": "black-forest-labs/FLUX.1-Kontext-dev",
         "type": "flux_kontext",
         "params": "12B",
         "license": "FLUX.1 dev non-commercial (commercial $999/mo from BFL)",
+        "base": False,
         "notes": (
             "Context-aware editing model from Black Forest Labs. Best text-guided "
-            "editing quality with minimal visual drift across successive edits. "
-            "Requires ≥24 GB VRAM on GPU."
+            "editing quality with minimal visual drift. Requires ≥24 GB VRAM."
         ),
     },
-    "photomaker": {
-        "model_id": "TencentARC/PhotoMaker",
-        "sdxl_base": "SG161222/RealVisXL_V4.0",
-        "type": "photomaker",
-        "params": "~6.6B + LoRA adapter",
-        "license": "Apache-2.0",
+    "qwen": {
+        "model_id": "Qwen/Qwen-Image-Edit-2511",
+        "type": "qwen",
+        "params": "~14B",
+        "license": "Check Qwen model card",
+        "base": False,
         "notes": (
-            "Identity-preserving generation using Stacked ID Embedding. "
-            "Loads a LoRA adapter on top of RealVisXL (SDXL). Keeps the same "
-            "face across generated images. Requires: pip install photomaker"
+            "Qwen's instruction-based image editor. Strong prompt following. "
+            "Requires latest diffusers from source and torchvision."
         ),
     },
 }
 
-# ---------------------------------------------------------------------------
-# Suggested future improvements
-# ---------------------------------------------------------------------------
-# These 2 models are NOT active yet. They are listed here so you can see
-# what to add next and follow the same steps as the active models above.
-#
-# How to add one of these models:
-# 1. Pick one suggested model below.
-# 2. Add a new entry for it inside AVAILABLE_MODELS (copy one of the
-#    existing entries and change the values).
-# 3. Create a loader function named like: _load_<model_name>()
-#    This function downloads and returns the ready-to-use pipeline.
-# 4. Create a generation function named like: _generate_with_<model_name>()
-#    This function takes (pipe, base_image, prompt, intensity) and returns
-#    a PIL Image.
-# 5. Register the loader in _MODEL_LOADERS (the dict near line ~300).
-# 6. Register the generator in _GENERATORS (the dict near line ~470).
-# 7. Install the extra packages that model needs (listed below).
-# 8. Test by setting MIID_MODEL to that model's key name, for example:
-#    export MIID_MODEL="pulid"
-#
-# ── Suggested model 1: "pulid" ──
-# - Hugging Face: https://huggingface.co/guozinan/PuLID
-# - What it is: PuLID (Pure and Lightning ID Customization).
-# - Good for: very high identity fidelity without changing background,
-#   lighting, or style of the base model's output.
-# - Works with: FLUX (PuLID-FLUX) or SDXL (pulid_v1.1).
-# - How it works: extracts face embedding via InsightFace, captures visual
-#   features via EVA-CLIP, injects identity tokens into the model.
-# - Extra packages: pip install insightface onnxruntime
-# - License: check the repo (NeurIPS 2024 paper by ByteDance).
-#
-# ── Suggested model 2: "pulid_flux2" ──
-# - Hugging Face: https://huggingface.co/Fayens/Pulid-Flux2
-# - What it is: PuLID weights trained specifically for FLUX.2 (klein and dev).
-# - Good for: strong identity preservation with reduced artifacts,
-#   directly compatible with the FLUX.2 klein model already in this file.
-# - Available weights:
-#   pulid_flux2_klein_v1.safetensors
-#   pulid_flux2_klein_v2.safetensors
-#   (dev variants also available)
-# - How it works: same InsightFace + EVA-CLIP approach as PuLID, but the
-#   weights are native to the FLUX.2 transformer blocks.
-# - Extra packages: pip install insightface onnxruntime
-#   EVA-CLIP downloads automatically (~800 MB on first run).
-# - Recommended strength: 1.0 (normal) or 1.4 (best balance).
-# - License: check the repo.
-# ---------------------------------------------------------------------------
+BASE_MODELS = [k for k, v in AVAILABLE_MODELS.items() if v.get("base")]
 
 # =============================================================================
 # Module state
 # =============================================================================
 
-_selected_model: Optional[str] = None
 _cached_pipeline: Any = None
 _cached_model_key: Optional[str] = None
 
@@ -210,25 +247,33 @@ _cached_model_key: Optional[str] = None
 
 
 def _select_model() -> str:
-    """Choose the model to use for this session."""
-    global _selected_model
-    if _selected_model is not None:
-        return _selected_model
+    """Choose the model for this generation round."""
 
     forced = os.environ.get("MIID_MODEL", "").strip().lower()
-    if forced and forced in AVAILABLE_MODELS:
-        _selected_model = forced
-        logger.info("Model forced via MIID_MODEL env var: %s", _selected_model)
-    else:
-        _selected_model = random.choice(list(AVAILABLE_MODELS.keys()))
-        logger.info("Randomly selected model for this session: %s", _selected_model)
+    # Default behavior: randomly pick among base models each call.
+    random_flag = os.environ.get("MIID_MODEL_RANDOM", "1").strip().lower() in (
+        "1", "true", "yes",
+    )
 
-    cfg = AVAILABLE_MODELS[_selected_model]
+    if forced and forced in AVAILABLE_MODELS:
+        selected_model = forced
+        logger.info("Model forced via MIID_MODEL env var: %s", selected_model)
+    elif random_flag:
+        selected_model = random.choice(BASE_MODELS)
+        logger.info("Randomly selected model for this round: %s", selected_model)
+    else:
+        selected_model = "flux_klein"
+        logger.info(
+            "Using default model: %s (override with MIID_MODEL=..., or MIID_MODEL_RANDOM=1)",
+            selected_model,
+        )
+
+    cfg = AVAILABLE_MODELS[selected_model]
     logger.info(
         "  model_id=%s  params=%s  license=%s",
         cfg["model_id"], cfg["params"], cfg["license"],
     )
-    return _selected_model
+    return selected_model
 
 
 def get_selected_model_info() -> Dict[str, Any]:
@@ -253,114 +298,42 @@ def _get_hf_token() -> str:
 
 
 # =============================================================================
-# Loaders for each model.
-# These are lazy-loaded, which means the code only imports what it needs.
-# That helps avoid loading extra packages for models that were not selected.
+# Loaders — each imports from the corresponding model module.
+# Lazy imports keep startup fast and avoid loading unneeded dependencies.
 # =============================================================================
 
 
 def _load_flux_klein() -> Any:
-    from diffusers import Flux2KleinPipeline
+    from .models.flux_klein_model import load_pipeline
+    return load_pipeline(device=DEVICE, token=_get_hf_token())
 
-    token = _get_hf_token()
-    pipe = Flux2KleinPipeline.from_pretrained(
-        AVAILABLE_MODELS["flux_klein"]["model_id"],
-        torch_dtype=DTYPE,
-        token=token,
-    )
-    return pipe.to(DEVICE)
+
+def _load_pulid() -> Any:
+    from .models.pulid_model import load_pipeline
+    return load_pipeline(device=DEVICE, token=_get_hf_token())
+
+
+def _load_pulid_flux2() -> Any:
+    from .models.pulid_flux2_model import load_pipeline
+    return load_pipeline(device=DEVICE, token=_get_hf_token())
 
 
 def _load_flux_kontext() -> Any:
-    from diffusers import FluxKontextPipeline
-
-    token = _get_hf_token()
-    dtype = torch.bfloat16 if DEVICE != "cpu" else torch.float32
-    pipe = FluxKontextPipeline.from_pretrained(
-        AVAILABLE_MODELS["flux_kontext"]["model_id"],
-        torch_dtype=dtype,
-        token=token,
-    )
-    return pipe.to(DEVICE)
+    from .models.flux_kontext_model import load_pipeline
+    return load_pipeline(device=DEVICE, token=_get_hf_token())
 
 
-def _ensure_insightface_stubs() -> None:
-    """The ``photomaker`` package imports ``insightface`` at the top of its
-    files even when it is not actually needed for generation.  If insightface
-    is not installed this would crash the import.
-
-    This function creates small empty stand-in modules so the import
-    succeeds without installing insightface.  If insightface IS installed
-    it does nothing.
-    """
-    if "insightface" in sys.modules:
-        return
-    try:
-        import insightface  # type: ignore[import-untyped]  # noqa: F401
-        return
-    except ImportError:
-        pass
-
-    def _stub(name: str) -> types.ModuleType:
-        mod = types.ModuleType(name)
-        mod.__path__ = []  # type: ignore[attr-defined]
-        sys.modules[name] = mod
-        if "." in name:
-            parent_name, _, child_name = name.rpartition(".")
-            parent = sys.modules.get(parent_name)
-            if parent is not None:
-                setattr(parent, child_name, mod)
-        return mod
-
-    _stub("insightface")
-    _stub("insightface.app")
-    _stub("insightface.utils")
-    _stub("insightface.utils.face_align")
-    _stub("insightface.data")
-    sys.modules["insightface.app"].FaceAnalysis = type("FaceAnalysis", (), {})  # type: ignore[attr-defined]
-    sys.modules["insightface.data"].get_image = lambda *a, **kw: None  # type: ignore[attr-defined]
-
-
-def _load_photomaker() -> Any:
-    from diffusers import EulerDiscreteScheduler
-
-    _ensure_insightface_stubs()
-    from photomaker import PhotoMakerStableDiffusionXLPipeline  # type: ignore[import-untyped]
-
-    token = _get_hf_token()
-    config = AVAILABLE_MODELS["photomaker"]
-
-    if DEVICE.startswith("cuda"):
-        dtype = torch.bfloat16
-    elif DEVICE == "mps":
-        dtype = torch.float16
-    else:
-        dtype = torch.float32
-
-    variant = "fp16" if dtype != torch.float32 else None
-
-    pipe = PhotoMakerStableDiffusionXLPipeline.from_pretrained(
-        config["sdxl_base"],
-        torch_dtype=dtype,
-        use_safetensors=True,
-        variant=variant,
-        token=token,
-    )
-    pipe.scheduler = EulerDiscreteScheduler.from_config(pipe.scheduler.config)
-    pipe.load_photomaker_adapter(
-        config["model_id"],
-        weight_name="photomaker-v1.bin",
-        trigger_word=PHOTOMAKER_TRIGGER,
-        strict=False,
-    )
-    pipe.fuse_lora()
-    return pipe.to(DEVICE)
+def _load_qwen() -> Any:
+    from .models.qwen_model import load_pipeline
+    return load_pipeline(device=DEVICE, token=_get_hf_token())
 
 
 _MODEL_LOADERS: Dict[str, Any] = {
     "flux_klein":   _load_flux_klein,
-    "flux_kontext":  _load_flux_kontext,
-    "photomaker":   _load_photomaker,
+    "pulid":        _load_pulid,
+    "pulid_flux2":  _load_pulid_flux2,
+    "flux_kontext": _load_flux_kontext,
+    "qwen":         _load_qwen,
 }
 
 
@@ -369,7 +342,7 @@ def _get_pipeline(model_key: str) -> Any:
 
     If loading fails, we fall back to ``flux_klein`` so the miner can still run.
     """
-    global _cached_pipeline, _cached_model_key, _selected_model
+    global _cached_pipeline, _cached_model_key
 
     if _cached_pipeline is not None and _cached_model_key == model_key:
         return _cached_pipeline
@@ -396,7 +369,6 @@ def _get_pipeline(model_key: str) -> Any:
         )
         _cached_pipeline = _load_flux_klein()
         _cached_model_key = "flux_klein"
-        _selected_model = "flux_klein"
         return _cached_pipeline
 
     _cached_model_key = model_key
@@ -431,70 +403,76 @@ def _get_prompt_from_request(req: Any, var_type: str, intensity: str) -> str:
 
 
 # =============================================================================
-# Each model has its own generation function below.
-# This makes it easy to swap models or add new ones later.
+# Generators — each imports from the corresponding model module.
 # =============================================================================
 
 
-def _generate_with_flux(
+def _generate_with_flux_klein(
     pipe: Any, base_image: Image.Image, prompt: str, intensity: str,
 ) -> Image.Image:
-    """Generate a variation using FLUX.2-klein (img2img with strength)."""
-    strength = INTENSITY_TO_STRENGTH.get(intensity, 0.55)
-    out = pipe(
-        prompt=prompt,
-        image=[base_image],
-        num_inference_steps=NUM_INFERENCE_STEPS,
+    from .models.flux_klein_model import generate
+    return generate(
+        pipe, base_image, prompt,
+        intensity=intensity,
+        num_steps=NUM_INFERENCE_STEPS,
         guidance_scale=GUIDANCE_SCALE,
-        strength=strength,
     )
-    return out.images[0]
+
+
+def _generate_with_pulid(
+    pipe: Any, base_image: Image.Image, prompt: str, intensity: str,
+) -> Image.Image:
+    from .models.pulid_model import generate
+    return generate(
+        pipe, base_image, prompt,
+        intensity=intensity,
+        num_steps=NUM_INFERENCE_STEPS,
+        guidance_scale=GUIDANCE_SCALE,
+    )
+
+
+def _generate_with_pulid_flux2(
+    pipe: Any, base_image: Image.Image, prompt: str, intensity: str,
+) -> Image.Image:
+    from .models.pulid_flux2_model import generate
+    return generate(
+        pipe, base_image, prompt,
+        intensity=intensity,
+        num_steps=NUM_INFERENCE_STEPS,
+        guidance_scale=GUIDANCE_SCALE,
+    )
 
 
 def _generate_with_flux_kontext(
     pipe: Any, base_image: Image.Image, prompt: str, intensity: str,
 ) -> Image.Image:
-    """Generate a variation using FLUX.1-Kontext (instruction-based editing)."""
-    strength = INTENSITY_TO_STRENGTH.get(intensity, 0.55)
-    out = pipe(
-        prompt=prompt,
-        image=base_image,
-        num_inference_steps=NUM_INFERENCE_STEPS,
+    from .models.flux_kontext_model import generate
+    return generate(
+        pipe, base_image, prompt,
+        intensity=intensity,
+        num_steps=NUM_INFERENCE_STEPS,
         guidance_scale=GUIDANCE_SCALE,
-        strength=strength,
     )
-    return out.images[0]
 
 
-def _generate_with_photomaker(
+def _generate_with_qwen(
     pipe: Any, base_image: Image.Image, prompt: str, intensity: str,
 ) -> Image.Image:
-    """Generate a variation using PhotoMaker (identity-conditioned SDXL).
-
-    PhotoMaker preserves identity through its adapter, not through img2img
-    strength.  We control how much the output can deviate via guidance_scale:
-    higher guidance follows the "preserve identity" prompt more strictly,
-    lower guidance gives more creative freedom.
-    """
-    if PHOTOMAKER_TRIGGER not in prompt.split():
-        prompt = f"{PHOTOMAKER_TRIGGER} {prompt}"
-
-    guidance = PHOTOMAKER_INTENSITY_TO_GUIDANCE.get(intensity, 5.0)
-
-    out = pipe(
-        prompt=prompt,
-        input_id_images=[base_image],
-        num_inference_steps=NUM_INFERENCE_STEPS,
-        guidance_scale=guidance,
+    from .models.qwen_model import generate
+    return generate(
+        pipe, base_image, prompt,
+        intensity=intensity,
+        num_steps=NUM_INFERENCE_STEPS,
+        guidance_scale=GUIDANCE_SCALE,
     )
-    return out.images[0]
 
 
-# This connects each model type name to the function that generates images.
 _GENERATORS: Dict[str, Any] = {
-    "flux":          _generate_with_flux,
-    "flux_kontext":  _generate_with_flux_kontext,
-    "photomaker":    _generate_with_photomaker,
+    "flux_klein":   _generate_with_flux_klein,
+    "pulid":        _generate_with_pulid,
+    "pulid_flux2":  _generate_with_pulid_flux2,
+    "flux_kontext": _generate_with_flux_kontext,
+    "qwen":         _generate_with_qwen,
 }
 
 
