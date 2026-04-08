@@ -238,7 +238,6 @@ BASE_MODELS = [k for k, v in AVAILABLE_MODELS.items() if v.get("base")]
 # Module state
 # =============================================================================
 
-_selected_model: Optional[str] = None
 _cached_pipeline: Any = None
 _cached_model_key: Optional[str] = None
 
@@ -248,35 +247,33 @@ _cached_model_key: Optional[str] = None
 
 
 def _select_model() -> str:
-    """Choose the model to use for this session."""
-    global _selected_model
-    if _selected_model is not None:
-        return _selected_model
+    """Choose the model for this generation round."""
 
     forced = os.environ.get("MIID_MODEL", "").strip().lower()
-    random_flag = os.environ.get("MIID_MODEL_RANDOM", "").strip().lower() in (
+    # Default behavior: randomly pick among base models each call.
+    random_flag = os.environ.get("MIID_MODEL_RANDOM", "1").strip().lower() in (
         "1", "true", "yes",
     )
 
     if forced and forced in AVAILABLE_MODELS:
-        _selected_model = forced
-        logger.info("Model forced via MIID_MODEL env var: %s", _selected_model)
+        selected_model = forced
+        logger.info("Model forced via MIID_MODEL env var: %s", selected_model)
     elif random_flag:
-        _selected_model = random.choice(BASE_MODELS)
-        logger.info("Randomly selected model (MIID_MODEL_RANDOM=1): %s", _selected_model)
+        selected_model = random.choice(BASE_MODELS)
+        logger.info("Randomly selected model for this round: %s", selected_model)
     else:
-        _selected_model = "flux_klein"
+        selected_model = "flux_klein"
         logger.info(
             "Using default model: %s (override with MIID_MODEL=..., or MIID_MODEL_RANDOM=1)",
-            _selected_model,
+            selected_model,
         )
 
-    cfg = AVAILABLE_MODELS[_selected_model]
+    cfg = AVAILABLE_MODELS[selected_model]
     logger.info(
         "  model_id=%s  params=%s  license=%s",
         cfg["model_id"], cfg["params"], cfg["license"],
     )
-    return _selected_model
+    return selected_model
 
 
 def get_selected_model_info() -> Dict[str, Any]:
@@ -345,7 +342,7 @@ def _get_pipeline(model_key: str) -> Any:
 
     If loading fails, we fall back to ``flux_klein`` so the miner can still run.
     """
-    global _cached_pipeline, _cached_model_key, _selected_model
+    global _cached_pipeline, _cached_model_key
 
     if _cached_pipeline is not None and _cached_model_key == model_key:
         return _cached_pipeline
@@ -372,7 +369,6 @@ def _get_pipeline(model_key: str) -> Any:
         )
         _cached_pipeline = _load_flux_klein()
         _cached_model_key = "flux_klein"
-        _selected_model = "flux_klein"
         return _cached_pipeline
 
     _cached_model_key = model_key
