@@ -328,6 +328,52 @@ def get_validator_images(hotkey):
     }), 200
 
 
+def _recycle_if_empty():
+    """
+    Called inside _batch_lock. If BATCH_DIR has no images remaining, move every
+    image from USED_DIR back to BATCH_DIR so the pool restarts, and record the
+    event in BATCH_LOG.
+    """
+    batch_images = [f for f in BATCH_DIR.iterdir() if f.is_file() and f.suffix.lower() in ALLOWED_EXT]
+    if batch_images:
+        return  # still images left, nothing to do
+
+    used_images = [f for f in USED_DIR.iterdir() if f.is_file() and f.suffix.lower() in ALLOWED_EXT] if USED_DIR.is_dir() else []
+    if not used_images:
+        return  # nothing to recycle either
+
+    recycled_names = []
+    errors = []
+    for f in used_images:
+        dest = BATCH_DIR / f.name
+        try:
+            shutil.move(str(f), str(dest))
+            recycled_names.append(f.name)
+        except Exception as e:
+            errors.append({"filename": f.name, "error": str(e)})
+            print(f"[ERROR] Failed to recycle {f.name}: {e}")
+
+    print(f"[INFO] Batch pool recycled: moved {len(recycled_names)} images from USED_DIR back to BATCH_DIR")
+
+    try:
+        with open(BATCH_LOG, 'r', encoding='utf-8') as lf:
+            log = json.load(lf)
+
+        log.setdefault("recycle_events", []).append({
+            "recycled_at": datetime.now(timezone.utc).isoformat(),
+            "images_recycled": len(recycled_names),
+            "recycled_filenames": recycled_names,
+            "errors": errors,
+        })
+        log["images_remaining"] = len(recycled_names)
+        log["recycle_count"] = log.get("recycle_count", 0) + 1
+
+        with open(BATCH_LOG, 'w', encoding='utf-8') as lf:
+            json.dump(log, lf, indent=2)
+    except Exception as e:
+        print(f"[ERROR] Failed to log recycle event: {e}")
+
+
 @app.route('/image/<hotkey>', methods=['POST'])
 def get_validator_image(hotkey):
     """
@@ -358,6 +404,9 @@ def get_validator_image(hotkey):
     os.remove(tmp_signature_filename)
 
     with _batch_lock:
+        # If BATCH_DIR is empty, recycle all images from USED_DIR back before serving
+        _recycle_if_empty()
+
         # Get available images from batch dir
         available = [f for f in BATCH_DIR.iterdir() if f.is_file() and f.suffix.lower() in ALLOWED_EXT]
         if not available:

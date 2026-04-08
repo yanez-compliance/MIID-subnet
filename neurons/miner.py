@@ -67,10 +67,14 @@ from MIID.base.miner import BaseMinerNeuron
 
 from bittensor.core.errors import NotVerifiedException
 
-# Phase 4 imports
-from MIID.miner.image_generator import decode_base_image, generate_variations, validate_variation
-from MIID.miner.drand_encrypt import encrypt_image_for_drand, is_timelock_available
-from MIID.miner.s3_upload import upload_to_s3
+# Phase 4 imports (optional -- miner still works for name variations without these)
+try:
+    from MIID.miner.image_generator import decode_base_image, generate_variations, validate_face_variation
+    from MIID.miner.drand_encrypt import encrypt_image_for_drand, is_timelock_available
+    from MIID.miner.s3_upload import upload_to_s3
+    PHASE4_AVAILABLE = True
+except ImportError as _phase4_err:
+    PHASE4_AVAILABLE = False
 
 
 class Miner(BaseMinerNeuron):
@@ -93,6 +97,7 @@ class Miner(BaseMinerNeuron):
     Configuration:
     - model_name: The Ollama model to use (default: 'tinyllama:latest')
     - output_path: Directory for saving mining results (default: logging_dir/mining_results)
+    - save_phase4_images: If True, write Phase 4 variation PNGs under output_path/phase4_images (default: True)
     """
     # Base whitelist of known validators
     WHITELISTED_VALIDATORS = {
@@ -168,6 +173,15 @@ class Miner(BaseMinerNeuron):
 
         self.axon.verify_fns[IdentitySynapse.__name__] = self._verify_validator_request
 
+        if PHASE4_AVAILABLE:
+            bt.logging.info("Phase 4 image generation: ENABLED")
+        else:
+            bt.logging.warning(
+                "Phase 4 image generation: DISABLED (missing packages). "
+                "Install with: pip install -r requirements-miner.txt  "
+                "See docs/miner.md for the full setup."
+            )
+
     async def _verify_validator_request(self, synapse: IdentitySynapse) -> None:
         """
         Rejects any RPC that is not cryptographically proven to come from
@@ -179,6 +193,9 @@ class Miner(BaseMinerNeuron):
         """
         # ----------  basic sanity checks  ----------
         if synapse.dendrite is None:
+            msg = "Rejecting request: missing dendrite terminal (nothing logged past this = no inbound axon call)."
+            bt.logging.warning(msg)
+            print(f"verify: {msg}", flush=True)
             raise NotVerifiedException("Missing dendrite terminal in request")
 
         hotkey    = synapse.dendrite.hotkey
@@ -189,6 +206,9 @@ class Miner(BaseMinerNeuron):
 
         # 1 — is the sender even on our allow‑list?
         if hotkey not in self.WHITELISTED_VALIDATORS:
+            msg = f"Rejecting request: validator hotkey not in WHITELISTED_VALIDATORS: {hotkey}"
+            bt.logging.warning(msg)
+            print(f"verify: {msg}", flush=True)
             raise NotVerifiedException(f"{hotkey} is not a whitelisted validator")
 
         # 3 — run all the standard Bittensor checks (nonce window, replay,
@@ -205,7 +225,14 @@ class Miner(BaseMinerNeuron):
             f"Verifying message: {message}"
         )
 
-        await self.axon.default_verify(synapse)
+        try:
+            await self.axon.default_verify(synapse)
+        except NotVerifiedException as e:
+            bt.logging.warning(
+                f"default_verify failed for whitelisted hotkey {hotkey}: {e}"
+            )
+            print(f"verify: default_verify failed for {hotkey}: {e}", flush=True)
+            raise
 
         # 5 — all good ➜ let the middleware continue
         bt.logging.info(
@@ -330,13 +357,28 @@ class Miner(BaseMinerNeuron):
         # Phase 4: Process Image Request
         # ==========================================================================
         if hasattr(synapse, 'image_request') and synapse.image_request is not None:
-            try:
-                s3_submissions = self.process_image_request(synapse)
-                synapse.s3_submissions = s3_submissions
-                bt.logging.info(f"Phase 4: Generated {len(s3_submissions)} S3 submissions")
-            except Exception as e:
-                bt.logging.error(f"Phase 4: Failed to process image request: {e}")
+            bt.logging.info("Phase 4: image_request present on synapse; starting image pipeline")
+            print("Phase 4: image_request present on synapse; starting image pipeline", flush=True)
+            if not PHASE4_AVAILABLE:
+                bt.logging.warning(
+                    "Phase 4: Received image request but Phase 4 packages are not installed. "
+                    "Skipping. Install with: pip install -r requirements-miner.txt"
+                )
+                print(
+                    "Phase 4: skipping image request (packages not installed); pip install -r requirements-miner.txt",
+                    flush=True,
+                )
                 synapse.s3_submissions = []
+            else:
+                try:
+                    s3_submissions = self.process_image_request(synapse)
+                    synapse.s3_submissions = s3_submissions
+                    bt.logging.info(f"Phase 4: Generated {len(s3_submissions)} S3 submissions")
+                    print(f"Phase 4: Generated {len(s3_submissions)} S3 submissions", flush=True)
+                except Exception as e:
+                    bt.logging.error(f"Phase 4: Failed to process image request: {e}")
+                    print(f"Phase 4: Failed to process image request: {e}", flush=True)
+                    synapse.s3_submissions = []
         # ==========================================================================
 
         return synapse
@@ -421,12 +463,12 @@ class Miner(BaseMinerNeuron):
                         continue
 
                     # Validate face identity preserved (AdaFace, threshold 0.7)
-                    if not validate_variation(var, base_image, min_similarity=0.7):
+                    if not validate_face_variation(var, base_image, min_similarity=0.7):
                         bt.logging.warning(
                             f"Phase 4: Skipping {var['variation_type']} - face identity not preserved"
                         )
                         continue
-                    
+
                     # Sign the image hash
                     message = f"challenge:{challenge_id}:hash:{var['image_hash']}"
                     signature = self.wallet.hotkey.sign(message.encode()).hex()
@@ -904,12 +946,14 @@ Remember: Only provide the name variations in a clean, comma-separated format.
             bt.logging.warning(
                 "Received a request without a dendrite or hotkey."
             )
+            print("blacklist: missing dendrite or hotkey", flush=True)
             return True, "Missing dendrite or hotkey"
 
         if synapse.dendrite.hotkey not in self.WHITELISTED_VALIDATORS:
-            bt.logging.trace(
-                f"Blacklisting un-registered hotkey {synapse.dendrite.hotkey}"
-            )
+            hk = synapse.dendrite.hotkey
+            msg = f"Blacklisting request (hotkey not in WHITELISTED_VALIDATORS): {hk}"
+            bt.logging.warning(msg)
+            print(f"blacklist: {msg}", flush=True)
             return True, "Unrecognized hotkey"
 
         # If all checks pass, allow the request

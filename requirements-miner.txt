@@ -1,0 +1,23 @@
+# Extra dependencies for MIID miners (Phase 4 image generation).
+# Validators do NOT need these packages.
+#
+# Install after the base packages:
+#   pip install -e .
+#   pip install -r requirements-miner.txt
+
+diffusers>=0.30.0
+transformers>=4.40.0
+accelerate>=0.30.0
+opencv-python>=4.8.0
+safetensors
+gdown
+
+# Optional: enables the PhotoMaker model (3rd image model).
+# If not installed the miner falls back to FLUX.2-klein automatically.
+# Do NOT use PyPI ``photomaker`` (wrong package). Tencent PhotoMaker:
+#   pip uninstall photomaker -y
+#   pip install git+https://github.com/TencentARC/PhotoMaker.git
+
+# Optional: enables drand timelock encryption.
+# If not installed the miner uses raw bytes (sandbox fallback).
+# timelock
