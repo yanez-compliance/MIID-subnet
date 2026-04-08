@@ -28,7 +28,14 @@ This document provides quick reference guides and helpful hints for running MIID
 ### Mining Issues
 
 1. **Miner not working or validators cannot reach you**
-   - Confirm your axon has a real IP and port on-chain, firewall/NAT is open, and `axon.external_ip` / `axon.external_port` match what validators use. To print your on-chain IP/port from any machine, run [`MIID/miner/active_miner_check/is_my_miner_alive.py`](../MIID/miner/active_miner_check/is_my_miner_alive.py) with `--hotkey` (SS58), then run these on **another** machine (substitute your IP and port for the example below):
+   - Confirm your axon has a real IP and port on-chain, firewall/NAT is open, and `axon.external_ip` / `axon.external_port` match what validators use.
+   - To print your on-chain IP/port from any machine, run [`MIID/miner/active_miner_check/is_my_miner_alive.py`](../MIID/miner/active_miner_check/is_my_miner_alive.py), then follow the prompts for network (`test`/`main`) and local wallet/hotkey names:
+
+```bash
+python MIID/miner/active_miner_check/is_my_miner_alive.py
+```
+
+   - After the script prints your on-chain IP/port, run these on **another** machine (substitute your IP and port for the example below):
 
 ```bash
 nc -zv <IP> <PORT>
