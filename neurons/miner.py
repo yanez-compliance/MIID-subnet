@@ -69,7 +69,7 @@ from bittensor.core.errors import NotVerifiedException
 
 # Phase 4 imports (optional -- miner still works for name variations without these)
 try:
-    from MIID.miner.image_generator import decode_base_image, generate_variations, validate_variation
+    from MIID.miner.image_generator import decode_base_image, generate_variations, validate_face_variation
     from MIID.miner.drand_encrypt import encrypt_image_for_drand, is_timelock_available
     from MIID.miner.s3_upload import upload_to_s3
     PHASE4_AVAILABLE = True
@@ -510,7 +510,7 @@ class Miner(BaseMinerNeuron):
                         continue
 
                     # Validate face identity preserved (AdaFace, threshold 0.7)
-                    if not validate_variation(var, base_image, min_similarity=0.7):
+                    if not validate_face_variation(var, base_image, min_similarity=0.7):
                         bt.logging.warning(
                             f"Phase 4: Skipping {var['variation_type']} - face identity not preserved"
                         )
