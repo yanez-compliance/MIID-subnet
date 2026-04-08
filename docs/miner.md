@@ -46,7 +46,9 @@ For the full roadmap and detailed architecture, see [Yanez Identity Generation B
 - Python 3.10 or higher
 - A Bittensor wallet with TAO for registration
 - A local LLM via Ollama (default: llama3.1:latest)
+- CPU: 4 physical cores minimum (8+ recommended for better throughput)
 - Sufficient storage for LLM model weights (~10GB or more depending on model)
+- Storage recommendation (Basic path): 30GB minimum free disk, 50GB+ recommended (OS + repo + venv + Ollama models + logs)
 - At least 8GB RAM (16GB+ recommended)
 - Open port 8091 for validator communication ([Network Setup Guide](network_setup.md))
 
@@ -57,8 +59,12 @@ For the full roadmap and detailed architecture, see [Yanez Identity Generation B
   - [FLUX.1-Kontext-dev](https://huggingface.co/black-forest-labs/FLUX.1-Kontext-dev) (used by `pulid` fallback and `flux_kontext` alternative)
   - Optional alternative: [Qwen-Image-Edit-2511](https://huggingface.co/Qwen/Qwen-Image-Edit-2511)
 - GPU with at least 8GB VRAM recommended (NVIDIA CUDA or Apple Silicon MPS)
+- CPU: 8 physical cores recommended (12+ preferred when handling image jobs continuously)
 - Additional storage for diffusion model weights (typically ~10GB for FLUX.2-klein; more if you also use Kontext/Qwen)
+- Storage recommendation (Full path): 80GB minimum free disk, 150GB+ recommended (base stack + multiple image models + cache + outputs)
 - Base Python packages from `requirements.txt` plus miner image packages from `requirements-miner.txt` (`torch`, `diffusers`, `transformers`, `Pillow`, `opencv-python`, etc.)
+
+> **Machine sizing quick guide:** For **Basic** mining, target at least **4 cores / 8GB RAM / 30GB free disk** (better: 8 cores / 16GB / 50GB+). For **Full** mining, target at least **8 cores / 16GB RAM / 80GB free disk + 8GB VRAM GPU** (better: 12+ cores / 32GB RAM / 150GB+ disk + higher-VRAM GPU).
 
 ---
 
