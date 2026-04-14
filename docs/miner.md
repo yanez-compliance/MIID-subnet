@@ -32,7 +32,7 @@ The subnet has evolved in cycles. Use these dates from the latest docs:
 
 | Date | Milestone |
 |------|-----------|
-| **Mar 16 - Apr 13, 2026** | **Phase 4 Cycle 2 Execution (current stage; reward allocation live)** |
+| **Mar 16 - Apr 20, 2026** | **Phase 4 Cycle 2 Execution (current stage; reward allocation live)** |
 | Mar 16, 2026 | Phase 4 Cycle 2 sandbox ends; execution phase begins |
 | Jan 22 - Mar 2, 2026 | Phase 4 Cycle 1 Execution |
 | Jan 8 - Jan 22, 2026 | Phase 4 Cycle 1 sandbox/calibration window |
@@ -624,7 +624,7 @@ For detailed scoring rules, examples, and the latest updates, see [Unknown Attac
 
 Face variation rewards are **reputation-based**, following the same reputation framework as UAV. Your face variation scores feed into your overall miner reputation, which determines your share of the reward pool.
 
-**Important:** Phase 4 Cycle 2 execution runs **Mar 16 – Apr 13, 2026**. Face-variation data submitted in Cycle 2 is collected and validated for reward distribution in the next cycle.
+**Important:** Phase 4 Cycle 2 execution runs **Mar 16 – Apr 20, 2026**. Face-variation data submitted in Cycle 2 is collected and validated for reward distribution in the next cycle.
 
 Face variations go through a multi-stage validation pipeline:
 
