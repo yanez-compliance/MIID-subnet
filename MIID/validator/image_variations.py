@@ -64,19 +64,19 @@ IMAGE_VARIATION_TYPES = {
         }
     },
     "background_edit": {
-        "description": "Change background environment while keeping subject unchanged",
+        "description": "Change the indoor background only while keeping the subject unchanged (no outdoor scenes, skyline, or open sky)",
         "intensities": {
             "light": {
-                "label": "Minor background adjustment",
-                "detail": "Color shift, blur adjustment, or texture change on similar background"
+                "label": "Minor indoor background adjustment",
+                "detail": "Same indoor context; wall color shift, bokeh/blur, or subtle texture change"
             },
             "medium": {
-                "label": "Different background setting",
-                "detail": "Change environment type (office to outdoor, solid color to gradient)"
+                "label": "Different indoor setting",
+                "detail": "Switch to another plausible indoor environment (e.g. office to café, bedroom to lobby); still fully indoors"
             },
             "far": {
-                "label": "Dramatic background change",
-                "detail": "Unusual or contrasting environment, complex scene, dramatic setting"
+                "label": "Dramatic indoor background change",
+                "detail": "Move to a clearly different indoor setting with distinct interior design and scene depth (e.g., office, lobby, studio, gallery), while keeping the background fully indoors with no outdoor elements"
             }
         }
     }
@@ -271,7 +271,7 @@ def format_variation_requirements(variations: List[Dict[str, str]]) -> str:
 
         1. pose_edit (medium): ±30° rotation (clear head turn, profile partially visible)
         2. expression_edit (light): Neutral to slight smile, minor brow movement
-        3. background_edit (far): Unusual or contrasting environment, complex scene. Additionally, include: Religious head covering (hijab, turban, kippah, taqiyah, etc.) appropriate to subject
+        3. background_edit (far): Move to a clearly different indoor setting with distinct interior design and scene depth (e.g., office, lobby, studio, gallery), while keeping the background fully indoors with no outdoor elements. Additionally, include: Religious head covering (hijab, turban, kippah, taqiyah, etc.) appropriate to subject
 
         IMPORTANT: The subject's face must remain recognizable across all variations.
     """
