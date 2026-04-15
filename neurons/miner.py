@@ -50,6 +50,8 @@ different runs and facilitate analysis of results over time.
 import time
 import typing
 import io
+import asyncio
+import random
 import bittensor as bt
 import ollama
 import pandas as pd
@@ -60,7 +62,12 @@ from tqdm import tqdm
 from PIL import Image
 
 # Bittensor Miner Template:
-from MIID.protocol import IdentitySynapse, S3Submission
+from MIID.protocol import (
+    IdentitySynapse,
+    IdentitySubmitSynapse,
+    IdentityPollSynapse,
+    S3Submission,
+)
 
 # import base miner class which takes care of most of the boilerplate
 from MIID.base.miner import BaseMinerNeuron
@@ -171,7 +178,24 @@ class Miner(BaseMinerNeuron):
         os.makedirs(self.output_path, exist_ok=True)
         bt.logging.info(f"Mining results will be saved to: {self.output_path}")
 
+        # Two-phase async jobs (IdentitySubmitSynapse / IdentityPollSynapse)
+        self._job_store: Dict[str, Dict[str, Any]] = {}
+        self._job_lock = asyncio.Lock()
+
         self.axon.verify_fns[IdentitySynapse.__name__] = self._verify_validator_request
+        self.axon.verify_fns[IdentitySubmitSynapse.__name__] = self._verify_submit
+        self.axon.verify_fns[IdentityPollSynapse.__name__] = self._verify_poll
+
+        self.axon.attach(
+            forward_fn=self.forward_identity_submit,
+            blacklist_fn=self.blacklist_submit,
+            priority_fn=self.priority_submit,
+        )
+        self.axon.attach(
+            forward_fn=self.forward_identity_poll,
+            blacklist_fn=self.blacklist_poll,
+            priority_fn=self.priority_poll,
+        )
 
         if PHASE4_AVAILABLE:
             bt.logging.info("Phase 4 image generation: ENABLED")
@@ -182,7 +206,7 @@ class Miner(BaseMinerNeuron):
                 "See docs/miner.md for the full setup."
             )
 
-    async def _verify_validator_request(self, synapse: IdentitySynapse) -> None:
+    async def _verify_core(self, synapse: bt.Synapse) -> None:
         """
         Rejects any RPC that is not cryptographically proven to come from
         one of the whitelisted validator hotkeys.
@@ -239,7 +263,16 @@ class Miner(BaseMinerNeuron):
             f"Verified call from {self.WHITELISTED_VALIDATORS[hotkey]} ({hotkey})"
         )
 
-    async def forward(self, synapse: IdentitySynapse) -> IdentitySynapse:
+    async def _verify_validator_request(self, synapse: IdentitySynapse) -> None:
+        await self._verify_core(synapse)
+
+    async def _verify_submit(self, synapse: IdentitySubmitSynapse) -> None:
+        await self._verify_core(synapse)
+
+    async def _verify_poll(self, synapse: IdentityPollSynapse) -> None:
+        await self._verify_core(synapse)
+
+    async def _forward_identity_impl(self, synapse: IdentitySynapse) -> IdentitySynapse:
         """
         Process a name variation request by generating variations for each name.
         
@@ -381,6 +414,67 @@ class Miner(BaseMinerNeuron):
                     synapse.s3_submissions = []
         # ==========================================================================
 
+        return synapse
+
+    async def forward(self, synapse: IdentitySynapse) -> IdentitySynapse:
+        """Legacy single-phase endpoint (``/IdentitySynapse``)."""
+        return await self._forward_identity_impl(synapse)
+
+    async def forward_identity_submit(self, synapse: IdentitySubmitSynapse) -> IdentitySubmitSynapse:
+        """Two-phase submit: return job_id immediately; work runs in background."""
+        job_id = f"{int(time.time() * 1000)}_{random.randint(10000, 99999)}"
+        synapse_copy = synapse.model_copy(deep=True)
+        async with self._job_lock:
+            self._job_store[job_id] = {"status": "pending"}
+        asyncio.create_task(self._run_identity_job(job_id, synapse_copy))
+        synapse.job_id = job_id
+        synapse.job_status = "accepted"
+        return synapse
+
+    async def _run_identity_job(self, job_id: str, synapse: IdentitySubmitSynapse) -> None:
+        try:
+            out = await self._forward_identity_impl(synapse)
+            async with self._job_lock:
+                self._job_store[job_id] = {"status": "complete", "result": out}
+        except Exception as e:
+            bt.logging.error(f"Background identity job {job_id} failed: {e}")
+            async with self._job_lock:
+                self._job_store[job_id] = {"status": "failed", "error": str(e)}
+
+    async def forward_identity_poll(self, synapse: IdentityPollSynapse) -> IdentityPollSynapse:
+        """Two-phase poll: return completed variations / S3 refs or pending status."""
+        job_id = (synapse.job_id or "").strip()
+        if not job_id:
+            synapse.job_status = "not_found"
+            return synapse
+
+        async with self._job_lock:
+            entry = self._job_store.get(job_id)
+
+        if entry is None:
+            synapse.job_status = "not_found"
+            return synapse
+
+        status = entry.get("status")
+        if status == "pending":
+            synapse.job_status = "pending"
+            return synapse
+
+        if status == "failed":
+            synapse.job_status = "failed"
+            synapse.variations = {}
+            synapse.s3_submissions = []
+            return synapse
+
+        if status == "complete":
+            result: IdentitySynapse = entry["result"]
+            synapse.variations = result.variations if result.variations is not None else {}
+            synapse.s3_submissions = result.s3_submissions
+            synapse.process_time = result.process_time
+            synapse.job_status = "complete"
+            return synapse
+
+        synapse.job_status = "unknown"
         return synapse
 
     def is_valid_image_bytes(self, image_bytes: bytes) -> bool:
@@ -922,25 +1016,7 @@ Remember: Only provide the name variations in a clean, comma-separated format.
                     return seed, "r3", variations, payload
                 return seed, "r3", variations
 
-    async def blacklist(
-        self, synapse: IdentitySynapse
-    ) -> typing.Tuple[bool, str]:
-        """
-        Determines whether an incoming request should be blacklisted and thus ignored.
-        
-        This function implements security checks to ensure that only authorized
-        validators can query this miner. It verifies:
-        1. Whether the request has a valid dendrite and hotkey
-        2. Whether the hotkey is one of the ones on the white list
-        
-        Args:
-            synapse: A IdentitySynapse object constructed from the incoming request.
-
-        Returns:
-            Tuple[bool, str]: A tuple containing:
-                - bool: Whether the request should be blacklisted
-                - str: The reason for the decision
-        """
+    async def _blacklist_core(self, synapse: bt.Synapse) -> typing.Tuple[bool, str]:
         # Check if the request has a valid dendrite and hotkey
         if synapse.dendrite is None or synapse.dendrite.hotkey is None:
             bt.logging.warning(
@@ -962,21 +1038,25 @@ Remember: Only provide the name variations in a clean, comma-separated format.
         )
         return False, "Hotkey recognized!"
 
-    async def priority(self, synapse: IdentitySynapse) -> float:
-        """
-        The priority function determines the order in which requests are handled.
-        
-        This function assigns a priority to each request based on the stake of the
-        calling entity. Requests with higher priority are processed first, which
-        ensures that validators with more stake get faster responses.
-        
-        Args:
-            synapse: The IdentitySynapse object that contains metadata about the incoming request.
+    async def blacklist(
+        self, synapse: IdentitySynapse
+    ) -> typing.Tuple[bool, str]:
+        """Blacklist for ``/IdentitySynapse``."""
+        return await self._blacklist_core(synapse)
 
-        Returns:
-            float: A priority score derived from the stake of the calling entity.
-                  Higher values indicate higher priority.
-        """
+    async def blacklist_submit(
+        self, synapse: IdentitySubmitSynapse
+    ) -> typing.Tuple[bool, str]:
+        """Blacklist for ``/IdentitySubmitSynapse``."""
+        return await self._blacklist_core(synapse)
+
+    async def blacklist_poll(
+        self, synapse: IdentityPollSynapse
+    ) -> typing.Tuple[bool, str]:
+        """Blacklist for ``/IdentityPollSynapse``."""
+        return await self._blacklist_core(synapse)
+
+    async def _priority_core(self, synapse: bt.Synapse) -> float:
         # Check if the request has a valid dendrite and hotkey
         if synapse.dendrite is None or synapse.dendrite.hotkey is None:
             bt.logging.warning(
@@ -999,6 +1079,18 @@ Remember: Only provide the name variations in a clean, comma-separated format.
             f"Prioritizing {synapse.dendrite.hotkey} with value: {priority}"
         )
         return priority
+
+    async def priority(self, synapse: IdentitySynapse) -> float:
+        """Priority for ``/IdentitySynapse``."""
+        return await self._priority_core(synapse)
+
+    async def priority_submit(self, synapse: IdentitySubmitSynapse) -> float:
+        """Priority for ``/IdentitySubmitSynapse``."""
+        return await self._priority_core(synapse)
+
+    async def priority_poll(self, synapse: IdentityPollSynapse) -> float:
+        """Priority for ``/IdentityPollSynapse``."""
+        return await self._priority_core(synapse)
 
 
 # This is the main function, which runs the miner.

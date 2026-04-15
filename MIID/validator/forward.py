@@ -47,7 +47,13 @@ from typing import List, Dict, Any, Tuple, Optional
 from datetime import datetime
 from pathlib import Path
 
-from MIID.protocol import IdentitySynapse, ImageRequest, VariationRequest
+from MIID.protocol import (
+    IdentitySynapse,
+    IdentitySubmitSynapse,
+    IdentityPollSynapse,
+    ImageRequest,
+    VariationRequest,
+)
 from MIID.validator.reward import get_name_variation_rewards, apply_reputation_rewards
 from MIID.utils.uids import get_random_uids
 from MIID.utils.sign_message import sign_message
@@ -145,6 +151,11 @@ def _clear_pending_allocations(file_path: Path):
 
 EPOCH_MIN_TIME = 360  # seconds
 MIID_SERVER = "http://52.44.186.20:5000/upload_data" ## MIID server
+
+# Two-phase (submit + poll) timeouts — keep HTTP calls short; work happens on miner between polls
+TWO_PHASE_SUBMIT_TIMEOUT = 120.0
+TWO_PHASE_POLL_TIMEOUT = 120.0
+TWO_PHASE_POLL_INTERVAL = 15.0
 
 # =============================================================================
 # Phase 4: Image Variation Configuration
@@ -265,6 +276,208 @@ async def dendrite_with_retries(dendrite: bt.Dendrite, axons: list, synapse: Ide
             res[i] = create_default_response()
     
     return res
+
+
+async def dendrite_with_retries_submit(
+    dendrite: bt.Dendrite,
+    axons: list,
+    synapse: IdentitySubmitSynapse,
+    deserialize: bool,
+    timeout: float,
+    cnt_attempts=3,
+):
+    """Same retry behavior as dendrite_with_retries, for IdentitySubmitSynapse (submit phase)."""
+    res = [None] * len(axons)
+    idx = list(range(len(axons)))
+    axons_for_retry = axons.copy()
+
+    def create_default_response():
+        return IdentitySubmitSynapse(
+            identity=synapse.identity,
+            query_template=synapse.query_template,
+            variations={},
+            process_time=process_time,
+            image_request=synapse.image_request,
+        )
+
+    for attempt in range(cnt_attempts):
+        responses = await dendrite(
+            axons=axons_for_retry,
+            synapse=synapse,
+            deserialize=deserialize,
+            timeout=timeout * (1 + attempt * 0.1),
+        )
+
+        new_idx = []
+        new_axons = []
+
+        for i, response in enumerate(responses):
+            process_time = None
+            if hasattr(response, "dendrite") and hasattr(response.dendrite, "process_time"):
+                try:
+                    process_time = float(response.dendrite.process_time)
+                except (ValueError, TypeError):
+                    process_time = None
+
+            if isinstance(response, dict):
+                complete_response = IdentitySubmitSynapse(
+                    identity=synapse.identity,
+                    query_template=synapse.query_template,
+                    variations=response,
+                    process_time=process_time,
+                    image_request=synapse.image_request,
+                )
+                res[idx[i]] = complete_response
+
+            elif hasattr(response, "dendrite"):
+                if (
+                    response.dendrite.status_code is not None
+                    and int(response.dendrite.status_code) == 422
+                ):
+                    if attempt == cnt_attempts - 1:
+                        res[idx[i]] = response
+                    else:
+                        new_idx.append(idx[i])
+                        new_axons.append(axons_for_retry[i])
+                else:
+                    response.process_time = process_time
+                    res[idx[i]] = response
+
+            else:
+                if hasattr(response, "variations"):
+                    response.process_time = process_time
+                    res[idx[i]] = response
+                else:
+                    if attempt == cnt_attempts - 1:
+                        res[idx[i]] = create_default_response()
+                    else:
+                        new_idx.append(idx[i])
+                        new_axons.append(axons_for_retry[i])
+
+        if len(new_idx) <= 50:
+            bt.logging.info(
+                f"Submit phase: Only {len(new_idx)} miners failed (≤50 threshold). Default responses."
+            )
+            for i in new_idx:
+                res[i] = create_default_response()
+            break
+
+        idx = new_idx
+        axons_for_retry = new_axons
+        await asyncio.sleep(5 * (attempt + 1))
+
+    for i, r in enumerate(res):
+        if r is None:
+            res[i] = create_default_response()
+
+    return res
+
+
+async def dendrite_with_retries_poll(
+    dendrite: bt.Dendrite,
+    axons: list,
+    synapse: IdentityPollSynapse,
+    deserialize: bool,
+    timeout: float,
+    cnt_attempts=3,
+):
+    """Retry wrapper for IdentityPollSynapse (one job_id per request)."""
+    res = [None] * len(axons)
+    idx = list(range(len(axons)))
+    axons_for_retry = axons.copy()
+
+    def create_default_response():
+        return IdentityPollSynapse(
+            job_id=synapse.job_id,
+            variations={},
+            job_status="unknown",
+            process_time=process_time,
+        )
+
+    for attempt in range(cnt_attempts):
+        responses = await dendrite(
+            axons=axons_for_retry,
+            synapse=synapse,
+            deserialize=deserialize,
+            timeout=timeout * (1 + attempt * 0.1),
+        )
+
+        new_idx = []
+        new_axons = []
+
+        for i, response in enumerate(responses):
+            process_time = None
+            if hasattr(response, "dendrite") and hasattr(response.dendrite, "process_time"):
+                try:
+                    process_time = float(response.dendrite.process_time)
+                except (ValueError, TypeError):
+                    process_time = None
+
+            if isinstance(response, dict):
+                res[idx[i]] = IdentityPollSynapse(
+                    job_id=synapse.job_id,
+                    variations=response,
+                    job_status="complete",
+                    process_time=process_time,
+                )
+
+            elif hasattr(response, "dendrite"):
+                if (
+                    response.dendrite.status_code is not None
+                    and int(response.dendrite.status_code) == 422
+                ):
+                    if attempt == cnt_attempts - 1:
+                        res[idx[i]] = response
+                    else:
+                        new_idx.append(idx[i])
+                        new_axons.append(axons_for_retry[i])
+                else:
+                    response.process_time = process_time
+                    res[idx[i]] = response
+
+            else:
+                if hasattr(response, "job_status"):
+                    response.process_time = process_time
+                    res[idx[i]] = response
+                else:
+                    if attempt == cnt_attempts - 1:
+                        res[idx[i]] = create_default_response()
+                    else:
+                        new_idx.append(idx[i])
+                        new_axons.append(axons_for_retry[i])
+
+        if len(new_idx) <= 50:
+            for i in new_idx:
+                res[i] = create_default_response()
+            break
+
+        idx = new_idx
+        axons_for_retry = new_axons
+        await asyncio.sleep(5 * (attempt + 1))
+
+    for i, r in enumerate(res):
+        if r is None:
+            res[i] = create_default_response()
+
+    return res
+
+
+def poll_response_to_identity(
+    poll: IdentityPollSynapse,
+    identity_list: List[List[str]],
+    query_template: str,
+    adaptive_timeout: float,
+) -> IdentitySynapse:
+    """Normalize a completed poll response into IdentitySynapse for reward code."""
+    return IdentitySynapse(
+        identity=identity_list,
+        query_template=query_template,
+        variations=poll.variations if poll.variations is not None else {},
+        timeout=adaptive_timeout,
+        image_request=None,
+        s3_submissions=poll.s3_submissions,
+        process_time=poll.process_time,
+    )
 
 
 def process_new_variations_structure(uid_response_map, miner_uids):
@@ -463,6 +676,8 @@ async def forward(self):
         bt.logging.debug(f"Phase 4: Added image variation requirements to query template")
     # ==========================================================================
 
+    two_phase = getattr(self.config.neuron, "two_phase_queries", False)
+
     # 5) Prepare the synapse
     request_synapse = IdentitySynapse(
         identity=identity_list,
@@ -486,61 +701,184 @@ async def forward(self):
     uid_response_map = {}
     batch_size = self.config.neuron.batch_size
     total_batches = (len(miner_uids) + batch_size - 1) // batch_size
-    
-    for i in range(0, len(miner_uids), batch_size):
-        batch_uids = miner_uids[i:i+batch_size]
-        batch_axons = [self.metagraph.axons[uid] for uid in batch_uids]
-        
-        bt.logging.debug(f"🔄 Batch uids: {batch_uids}")
-        await asyncio.sleep(3)  # Large sleep; adjust as desired
 
-        bt.logging.info(f"Processing batch {i//batch_size + 1}/{total_batches} with {len(batch_uids)} miners")
-        batch_start_time = time.time()
-        
-        batch_responses = await dendrite_with_retries(
-            dendrite=self.dendrite,
-            axons=batch_axons,
-            synapse=request_synapse,
-            deserialize=False,
-            timeout=adaptive_timeout,
-            cnt_attempts=3
+    if two_phase:
+        bt.logging.info(
+            f"Two-phase queries: submit_timeout={TWO_PHASE_SUBMIT_TIMEOUT}s, "
+            f"poll_timeout={TWO_PHASE_POLL_TIMEOUT}s, poll_interval={TWO_PHASE_POLL_INTERVAL}s, "
+            f"work_budget={adaptive_timeout}s"
         )
-        
-        batch_duration = time.time() - batch_start_time
-        bt.logging.info(f"Batch {i//batch_size + 1} completed in {batch_duration:.1f}s")
+        submit_synapse = IdentitySubmitSynapse(
+            identity=identity_list,
+            query_template=query_template,
+            variations={},
+            timeout=adaptive_timeout,
+            image_request=image_request,
+        )
+        uid_job_id: Dict[int, str] = {}
 
-        # Map each response to its corresponding UID
-        for idx_resp, response in enumerate(batch_responses):
-            uid = batch_uids[idx_resp]
-            uid_response_map[uid] = response
+        for i in range(0, len(miner_uids), batch_size):
+            batch_uids = miner_uids[i : i + batch_size]
+            batch_axons = [self.metagraph.axons[uid] for uid in batch_uids]
+
+            bt.logging.debug(f"🔄 Submit batch uids: {batch_uids}")
+            await asyncio.sleep(3)
+
+            bt.logging.info(
+                f"Submit batch {i // batch_size + 1}/{total_batches} with {len(batch_uids)} miners"
+            )
+            batch_start_time = time.time()
+            batch_responses = await dendrite_with_retries_submit(
+                dendrite=self.dendrite,
+                axons=batch_axons,
+                synapse=submit_synapse,
+                deserialize=False,
+                timeout=TWO_PHASE_SUBMIT_TIMEOUT,
+                cnt_attempts=3,
+            )
+            bt.logging.info(
+                f"Submit batch {i // batch_size + 1} completed in {time.time() - batch_start_time:.1f}s"
+            )
+
+            for idx_resp, response in enumerate(batch_responses):
+                uid = batch_uids[idx_resp]
+                jid = getattr(response, "job_id", None) or ""
+                uid_job_id[uid] = jid
+                if not jid:
+                    bt.logging.warning(f"Miner {uid} submit returned no job_id.")
+
+            if i + batch_size < len(miner_uids):
+                await asyncio.sleep(2)
+
+        poll_deadline = time.time() + adaptive_timeout
+        uid_done = set()
+
+        while time.time() < poll_deadline and len(uid_done) < len(miner_uids):
+            pending = [u for u in miner_uids if u not in uid_done]
+            if not pending:
+                break
+
+            async def poll_one(uid: int):
+                ax = self.metagraph.axons[uid]
+                ps = IdentityPollSynapse(
+                    job_id=uid_job_id.get(uid, ""),
+                    timeout=TWO_PHASE_POLL_TIMEOUT,
+                )
+                try:
+                    pr = await dendrite_with_retries_poll(
+                        dendrite=self.dendrite,
+                        axons=[ax],
+                        synapse=ps,
+                        deserialize=False,
+                        timeout=TWO_PHASE_POLL_TIMEOUT,
+                        cnt_attempts=3,
+                    )
+                    return uid, pr[0] if pr else None
+                except Exception as e:
+                    bt.logging.warning(f"Poll miner {uid} failed: {e}")
+                    return uid, None
+
+            poll_results = await asyncio.gather(
+                *[poll_one(u) for u in pending], return_exceptions=True
+            )
+
+            for item in poll_results:
+                if isinstance(item, Exception):
+                    bt.logging.warning(f"Poll gather exception: {item}")
+                    continue
+                if item is None:
+                    continue
+                uid, resp = item
+                if resp is None:
+                    continue
+                st = getattr(resp, "job_status", None)
+                if st == "complete" and isinstance(resp, IdentityPollSynapse):
+                    uid_response_map[uid] = poll_response_to_identity(
+                        resp, identity_list, query_template, adaptive_timeout
+                    )
+                    uid_done.add(uid)
+                    bt.logging.info(f"Miner {uid} poll complete (two-phase).")
+                elif st == "failed":
+                    uid_response_map[uid] = IdentitySynapse(
+                        identity=identity_list,
+                        query_template=query_template,
+                        variations={},
+                        timeout=adaptive_timeout,
+                        image_request=None,
+                    )
+                    uid_done.add(uid)
+                    bt.logging.warning(f"Miner {uid} job failed (two-phase).")
+                elif st == "not_found":
+                    uid_response_map[uid] = IdentitySynapse(
+                        identity=identity_list,
+                        query_template=query_template,
+                        variations={},
+                        timeout=adaptive_timeout,
+                        image_request=None,
+                    )
+                    uid_done.add(uid)
+                    bt.logging.warning(f"Miner {uid} job not_found (two-phase).")
+
+            if len(uid_done) == len(miner_uids):
+                break
+
+            await asyncio.sleep(TWO_PHASE_POLL_INTERVAL)
+
+        for uid in miner_uids:
+            if uid not in uid_response_map:
+                uid_response_map[uid] = IdentitySynapse(
+                    identity=identity_list,
+                    query_template=query_template,
+                    variations={},
+                    timeout=adaptive_timeout,
+                    image_request=None,
+                )
+                bt.logging.warning(
+                    f"Miner {uid}: two-phase poll timed out or incomplete; using empty default."
+                )
+
+    else:
+        for i in range(0, len(miner_uids), batch_size):
+            batch_uids = miner_uids[i:i+batch_size]
+            batch_axons = [self.metagraph.axons[uid] for uid in batch_uids]
             
-            if not hasattr(response, 'variations'):
-                bt.logging.warning(f"Miner {uid} returned response without 'variations' attribute.")
-            elif response.variations is None:
-                bt.logging.warning(f"Miner {uid} returned None in 'variations'.")
-            elif not response.variations:
-                bt.logging.warning(f"Miner {uid} returned empty variations dictionary.")
-            else:
-                total_variations = sum(len(v) for v in response.variations.values())
-                # Enhanced logging for name structure validation
-                # for name, variations in response.variations.items():
-                #     name_parts = name.split()
-                #     if len(name_parts) > 1:  # Multi-part name
-                #         #bt.logging.info(f"Validating variations for multi-part name '{name}' (first: '{name_parts[0]}', last: '{name_parts[-1]}')")
-                #         # Validate variation structure
-                #         for var in variations:
-                #             var_parts = var.split()
-                #     #         if len(var_parts) < 2:
-                #     #             bt.logging.warning(f"Miner {uid} returned single-part variation '{var}' for multi-part name '{name}'")
-                #     # #else:  # Single-part name
-                #     #     #bt.logging.info(f"Validating variations for single-part name '{name}'")
-                        
-                bt.logging.info(f"Miner {uid} returned {len(response.variations)} identity variations with {total_variations} total variations.")
-        
-        if i + batch_size < len(miner_uids):
-            sleep_time = 2
-            bt.logging.info(f"Sleeping for {sleep_time}s before next batch")
-            await asyncio.sleep(sleep_time)
+            bt.logging.debug(f"🔄 Batch uids: {batch_uids}")
+            await asyncio.sleep(3)  # Large sleep; adjust as desired
+
+            bt.logging.info(f"Processing batch {i//batch_size + 1}/{total_batches} with {len(batch_uids)} miners")
+            batch_start_time = time.time()
+            
+            batch_responses = await dendrite_with_retries(
+                dendrite=self.dendrite,
+                axons=batch_axons,
+                synapse=request_synapse,
+                deserialize=False,
+                timeout=adaptive_timeout,
+                cnt_attempts=3
+            )
+            
+            batch_duration = time.time() - batch_start_time
+            bt.logging.info(f"Batch {i//batch_size + 1} completed in {batch_duration:.1f}s")
+
+            # Map each response to its corresponding UID
+            for idx_resp, response in enumerate(batch_responses):
+                uid = batch_uids[idx_resp]
+                uid_response_map[uid] = response
+                
+                if not hasattr(response, 'variations'):
+                    bt.logging.warning(f"Miner {uid} returned response without 'variations' attribute.")
+                elif response.variations is None:
+                    bt.logging.warning(f"Miner {uid} returned None in 'variations'.")
+                elif not response.variations:
+                    bt.logging.warning(f"Miner {uid} returned empty variations dictionary.")
+                else:
+                    total_variations = sum(len(v) for v in response.variations.values())
+                    bt.logging.info(f"Miner {uid} returned {len(response.variations)} identity variations with {total_variations} total variations.")
+            
+            if i + batch_size < len(miner_uids):
+                sleep_time = 2
+                bt.logging.info(f"Sleeping for {sleep_time}s before next batch")
+                await asyncio.sleep(sleep_time)
     
     end_time = time.time()
     bt.logging.info(f"Query completed in {end_time - start_time:.2f} seconds")

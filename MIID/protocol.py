@@ -20,7 +20,7 @@
 import typing
 import bittensor as bt
 import json
-from typing import List, Dict, Optional, Tuple
+from typing import List, Dict, Optional, Tuple, Any
 from typing_extensions import TypedDict
 from pydantic import BaseModel, Field
 
@@ -173,4 +173,32 @@ class IdentitySynapse(bt.Synapse):
         Returns:
         - Dict[str, List[List[str]]]: Dictionary mapping each name to its list of [name, dob, address] variations
         """
+        return self.variations
+
+
+class IdentitySubmitSynapse(IdentitySynapse):
+    """Two-phase submit: same payload as IdentitySynapse; miner returns job_id quickly and completes work in the background.
+
+    Routed at ``/IdentitySubmitSynapse`` (separate from ``/IdentitySynapse``).
+    """
+
+    job_id: Optional[str] = None
+    job_status: Optional[str] = None
+
+
+class IdentityPollSynapse(bt.Synapse):
+    """Two-phase poll: fetch result for a job_id from a prior IdentitySubmitSynapse.
+
+    Routed at ``/IdentityPollSynapse``.
+    """
+
+    job_id: str = ""
+    timeout: float = 120.0
+
+    variations: Optional[Dict[str, typing.Union[List[List[str]], "IdentitySynapse.SeedData"]]] = None
+    s3_submissions: Optional[List[S3Submission]] = None
+    job_status: str = "unknown"
+    process_time: Optional[float] = None
+
+    def deserialize(self) -> Optional[Dict[str, Any]]:
         return self.variations

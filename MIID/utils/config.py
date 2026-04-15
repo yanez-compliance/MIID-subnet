@@ -246,6 +246,13 @@ def add_validator_args(cls, parser):
     )
 
     parser.add_argument(
+        "--neuron.two_phase_queries",
+        action="store_true",
+        help="Use IdentitySubmitSynapse + IdentityPollSynapse (short-lived connections) instead of one long IdentitySynapse request.",
+        default=False,
+    )
+
+    parser.add_argument(
         "--neuron.disable_set_weights",
         action="store_true",
         help="Disables setting weights.",
