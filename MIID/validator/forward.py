@@ -401,12 +401,14 @@ async def forward(self):
                 # Always request:
                 # 1) background_edit (random intensity + weighted accessory)
                 # 2) exactly one random non-background variation (pose/lighting/expression)
+                # 2) Temporary: two background_edit variations (random intensity + weighted accessory)
                 # 3) screen_replay (independent random devices + cues)
                 background_var = get_random_background_variation()
-                third_var = get_random_non_background_variation()
+                second_background_var = get_random_background_variation()
+                # third_var = get_random_non_background_variation()  # Temporary: disabled
                 screen_replay_var = select_screen_replay_variation()
 
-                selected_variations = [background_var, third_var, screen_replay_var]
+                selected_variations = [background_var, second_background_var, screen_replay_var]
 
                 # Calculate drand round for reveal (after all miners respond)
                 reveal_delay = calculate_reveal_buffer(adaptive_timeout)
@@ -443,7 +445,7 @@ async def forward(self):
                     f"Phase 4: API image + random variation selection - "
                     f"Image '{image_filename}', "
                     f"background_edit={background_var['intensity']}, "
-                    f"third={third_var['type']}/{third_var['intensity']}, "
+                    f"background_edit_2={second_background_var['intensity']}, "
                     f"screen_replay: devices={screen_replay_devices}, cues={screen_replay_cues}, "
                     f"Total requested: {len(selected_variations)}, "
                     f"drand round {target_round}"
