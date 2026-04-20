@@ -518,7 +518,7 @@ Validators may also request **accessories** on background edits (head coverings,
 
 ## How the Three Image Models Work (Full path)
 
-The miner ships with **three** diffusion models; each session **randomly picks one** unless `MIID_MODEL` is set.
+The miner ships with **three** diffusion models. By default, the miner **randomly picks one at the start of each query** (unless `MIID_MODEL` is set).
 
 | Model | Description | VRAM needed |
 |-------|-------------|-------------|
@@ -528,8 +528,8 @@ The miner ships with **three** diffusion models; each session **randomly picks o
 
 Default behavior is:
 - If `MIID_MODEL` is set, the miner uses that exact model.
-- If `MIID_MODEL` is not set, it defaults to `flux_klein`.
-- If `MIID_MODEL_RANDOM=1`, it randomly picks from the **three base models** above.
+- If `MIID_MODEL` is not set and `MIID_MODEL_RANDOM` is unset (or set to `1`), it randomly picks from the **three base models** above at the start of each query.
+- If `MIID_MODEL` is not set and `MIID_MODEL_RANDOM=0`, it uses `flux_klein`.
 
 If a model fails to load, the miner falls back to `flux_klein`. Licenses, pipeline details, and model wiring are documented in `MIID/miner/generate_variations.py`.
 
