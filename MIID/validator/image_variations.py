@@ -64,7 +64,28 @@ IMAGE_VARIATION_TYPES = {
         }
     },
     "background_edit": {
-        "description": "Change the indoor background only while keeping the subject unchanged (no outdoor scenes, skyline, or open sky)",
+        "description": "Change the background while keeping the subject unchanged",
+        "intensities": {
+            "light": {
+                "label": "Light background change",
+                "detail": "Light background change while preserving identity"
+            },
+            "medium": {
+                "label": "Medium background change",
+                "detail": "Medium background change while preserving identity"
+            },
+            "far": {
+                "label": "Far background change",
+                "detail": "Far background change while preserving identity"
+            }
+        }
+    }
+}
+
+BACKGROUND_ENVIRONMENT_TYPES = {
+    "indoor": {
+        "description": "Indoor background change",
+        "weight": 70,
         "intensities": {
             "light": {
                 "label": "Minor indoor background adjustment",
@@ -72,11 +93,29 @@ IMAGE_VARIATION_TYPES = {
             },
             "medium": {
                 "label": "Different indoor setting",
-                "detail": "Switch to another plausible indoor environment (e.g. office to café, bedroom to lobby); still fully indoors"
+                "detail": "Switch to another plausible indoor environment (e.g. office to cafe, bedroom to lobby); still fully indoors"
             },
             "far": {
                 "label": "Dramatic indoor background change",
                 "detail": "Move to a clearly different indoor setting with distinct interior design and scene depth (e.g., office, lobby, studio, gallery), while keeping the background fully indoors with no outdoor elements"
+            }
+        }
+    },
+    "outdoor": {
+        "description": "Outdoor background change",
+        "weight": 30,
+        "intensities": {
+            "light": {
+                "label": "Minor outdoor background adjustment",
+                "detail": "Same outdoor context with subtle changes (e.g. slight depth-of-field shift, mild scene texture variation, or small lighting-direction change)"
+            },
+            "medium": {
+                "label": "Different outdoor setting",
+                "detail": "Switch to a different plausible outdoor environment (e.g. street to park, plaza to waterfront) while keeping the subject unchanged"
+            },
+            "far": {
+                "label": "Dramatic outdoor background change",
+                "detail": "Move to a clearly different outdoor setting with distinct scene composition and depth (e.g., urban street, beach promenade, mountain overlook, garden path)"
             }
         }
     }
@@ -198,6 +237,31 @@ def select_random_accessory() -> Dict[str, str]:
     }
 
 
+def select_random_background_environment() -> Dict[str, Any]:
+    """Select indoor/outdoor background environment using weighted distribution."""
+    environment_keys = list(BACKGROUND_ENVIRONMENT_TYPES.keys())
+    weights = [BACKGROUND_ENVIRONMENT_TYPES[key]["weight"] for key in environment_keys]
+    selected_key = random.choices(environment_keys, weights=weights, k=1)[0]
+    selected_info = BACKGROUND_ENVIRONMENT_TYPES[selected_key]
+    return {
+        "type": selected_key,
+        "description": selected_info["description"],
+        "intensities": selected_info["intensities"],
+    }
+
+
+def get_background_variation_info(intensity: str) -> Dict[str, str]:
+    """Get weighted-random indoor/outdoor background detail for an intensity."""
+    environment = select_random_background_environment()
+    intensity_info = environment["intensities"][intensity]
+    return {
+        "environment_type": environment["type"],
+        "environment_description": environment["description"],
+        "label": intensity_info["label"],
+        "detail": intensity_info["detail"],
+    }
+
+
 def select_random_variations(
     min_variations: int = 2,
     max_variations: int = 4
@@ -238,13 +302,20 @@ def select_random_variations(
     for var_type in selected_types:
         intensity = random.choice(ALL_INTENSITIES)
         type_info = IMAGE_VARIATION_TYPES[var_type]
-        intensity_info = type_info["intensities"][intensity]
+        if var_type == "background_edit":
+            intensity_info = get_background_variation_info(intensity)
+            description = f"{type_info['description']}. {intensity_info['environment_description']}"
+            detail = intensity_info["detail"]
+        else:
+            intensity_info = type_info["intensities"][intensity]
+            description = type_info["description"]
+            detail = intensity_info["detail"]
 
         variations.append({
             "type": var_type,
             "intensity": intensity,
-            "description": type_info["description"],
-            "detail": intensity_info["detail"]
+            "description": description,
+            "detail": detail
         })
 
     return variations
@@ -325,14 +396,23 @@ def get_variation_type_info(var_type: str, intensity: str) -> Dict[str, Any]:
         KeyError: If var_type or intensity is invalid
     """
     type_info = IMAGE_VARIATION_TYPES[var_type]
-    intensity_info = type_info["intensities"][intensity]
+    if var_type == "background_edit":
+        intensity_info = get_background_variation_info(intensity)
+        description = f"{type_info['description']}. {intensity_info['environment_description']}"
+        detail = intensity_info["detail"]
+        label = intensity_info["label"]
+    else:
+        intensity_info = type_info["intensities"][intensity]
+        description = type_info["description"]
+        detail = intensity_info["detail"]
+        label = intensity_info["label"]
 
     return {
         "type": var_type,
         "intensity": intensity,
-        "description": type_info["description"],
-        "label": intensity_info["label"],
-        "detail": intensity_info["detail"]
+        "description": description,
+        "label": label,
+        "detail": detail
     }
 
 
@@ -383,10 +463,13 @@ def get_random_background_variation() -> Dict[str, str]:
     intensity = random.choice(ALL_INTENSITIES)
 
     type_info = IMAGE_VARIATION_TYPES["background_edit"]
-    intensity_info = type_info["intensities"][intensity]
+    intensity_info = get_background_variation_info(intensity)
 
     accessory = select_random_accessory()
-    description = f"{type_info['description']}. {accessory['description']}"
+    description = (
+        f"{type_info['description']}. {intensity_info['environment_description']}. "
+        f"{accessory['description']}"
+    )
     detail = f"{intensity_info['detail']}. Additionally, include: {accessory['detail']}"
 
     return {
@@ -466,10 +549,14 @@ def get_variation_by_index(index: int) -> Dict[str, str]:
     intensity = ALL_INTENSITIES[intensity_index]
 
     type_info = IMAGE_VARIATION_TYPES[var_type]
-    intensity_info = type_info["intensities"][intensity]
-
-    detail = intensity_info["detail"]
-    description = type_info["description"]
+    if var_type == "background_edit":
+        intensity_info = get_background_variation_info(intensity)
+        detail = intensity_info["detail"]
+        description = f"{type_info['description']}. {intensity_info['environment_description']}"
+    else:
+        intensity_info = type_info["intensities"][intensity]
+        detail = intensity_info["detail"]
+        description = type_info["description"]
 
     # For background_edit only: append a random accessory (weighted) to description and detail
     if var_type == "background_edit":
@@ -570,11 +657,18 @@ def get_all_variation_combinations() -> List[Dict[str, str]]:
     for var_type in ALL_VARIATION_TYPES:
         type_info = IMAGE_VARIATION_TYPES[var_type]
         for intensity in ALL_INTENSITIES:
-            intensity_info = type_info["intensities"][intensity]
+            if var_type == "background_edit":
+                intensity_info = get_background_variation_info(intensity)
+                description = f"{type_info['description']}. {intensity_info['environment_description']}"
+                detail = intensity_info["detail"]
+            else:
+                intensity_info = type_info["intensities"][intensity]
+                description = type_info["description"]
+                detail = intensity_info["detail"]
             combinations.append({
                 "type": var_type,
                 "intensity": intensity,
-                "description": type_info["description"],
-                "detail": intensity_info["detail"]
+                "description": description,
+                "detail": detail
             })
     return combinations
