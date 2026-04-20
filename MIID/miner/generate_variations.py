@@ -63,9 +63,10 @@ How model choice works
 =============================================================================
 
 1. If ``MIID_MODEL`` is set, this file uses that exact model.
-2. If ``MIID_MODEL`` is not set, this file defaults to ``flux_klein``.
-3. Set ``MIID_MODEL_RANDOM=1`` to randomly pick from the 3 base models.
-4. The chosen model is kept in memory for the session.
+2. If ``MIID_MODEL`` is not set, ``MIID_MODEL_RANDOM`` controls random selection.
+3. ``MIID_MODEL_RANDOM`` defaults to ``1`` (random among the 3 base models).
+4. Model selection happens once at the start of each query and is reused for all
+   variations in that query.
 
 =============================================================================
 How intensity works
@@ -240,7 +241,6 @@ BASE_MODELS = [k for k, v in AVAILABLE_MODELS.items() if v.get("base")]
 
 _cached_pipeline: Any = None
 _cached_model_key: Optional[str] = None
-_selected_model_key: Optional[str] = None
 
 # =============================================================================
 # Model selection
@@ -277,17 +277,9 @@ def _select_model() -> str:
     return selected_model
 
 
-def _get_selected_model_key() -> str:
-    """Return the process-level selected model key, choosing once on first use."""
-    global _selected_model_key
-    if _selected_model_key is None:
-        _selected_model_key = _select_model()
-    return _selected_model_key
-
-
-def get_selected_model_info() -> Dict[str, Any]:
-    """Return config dict for the process-level selected model."""
-    key = _get_selected_model_key()
+def get_selected_model_info(model_key: Optional[str] = None) -> Dict[str, Any]:
+    """Return config dict for a selected model key (or choose one now)."""
+    key = model_key or _select_model()
     return {"key": key, **AVAILABLE_MODELS[key]}
 
 
@@ -493,6 +485,7 @@ _GENERATORS: Dict[str, Any] = {
 def generate_variations(
     base_image: Image.Image,
     variation_requests: List[Any],
+    model_key: Optional[str] = None,
 ) -> List[Dict[str, Any]]:
     """Generate image variations from a base face image.
 
@@ -515,7 +508,7 @@ def generate_variations(
     if not variation_requests:
         return []
 
-    model_key = _get_selected_model_key()
+    model_key = model_key or _select_model()
     pipe = _get_pipeline(model_key)
     model_type = AVAILABLE_MODELS[model_key]["type"]
     generator = _GENERATORS.get(model_type)
