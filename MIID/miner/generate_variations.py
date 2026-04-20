@@ -240,6 +240,7 @@ BASE_MODELS = [k for k, v in AVAILABLE_MODELS.items() if v.get("base")]
 
 _cached_pipeline: Any = None
 _cached_model_key: Optional[str] = None
+_selected_model_key: Optional[str] = None
 
 # =============================================================================
 # Model selection
@@ -276,9 +277,17 @@ def _select_model() -> str:
     return selected_model
 
 
+def _get_selected_model_key() -> str:
+    """Return the process-level selected model key, choosing once on first use."""
+    global _selected_model_key
+    if _selected_model_key is None:
+        _selected_model_key = _select_model()
+    return _selected_model_key
+
+
 def get_selected_model_info() -> Dict[str, Any]:
-    """Return config dict for the currently selected model (after first call)."""
-    key = _select_model()
+    """Return config dict for the process-level selected model."""
+    key = _get_selected_model_key()
     return {"key": key, **AVAILABLE_MODELS[key]}
 
 
@@ -506,7 +515,7 @@ def generate_variations(
     if not variation_requests:
         return []
 
-    model_key = _select_model()
+    model_key = _get_selected_model_key()
     pipe = _get_pipeline(model_key)
     model_type = AVAILABLE_MODELS[model_key]["type"]
     generator = _GENERATORS.get(model_type)
