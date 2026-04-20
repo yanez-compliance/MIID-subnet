@@ -73,7 +73,7 @@ def main():
         axon = metagraph.axons[uid]
         # Print all axons that have a non-zero IP
         if axon.ip != "0.0.0.0" and axon.port != 0:
-            print(f"{uid:<6} {axon.hotkey:<50} {axon.ip:<20} {axon.port:<8}")
+            print(f"{uid:<6} {axon.hotkey:<50} {axon.ip:<20} {axon.port:<8} {str(axon.is_serving):<8}")
 
     print("\n--- Your specific miner ---")
     found = False
