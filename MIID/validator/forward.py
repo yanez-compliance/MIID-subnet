@@ -708,8 +708,8 @@ async def forward(self):
         },
         # Phase 4: Image variation data for YANEZ post-validation
         "phase4_image_data": {
-            "cycle": "Phase4-C2-Exec",
-            "note": "Image variations with S3 uploads, post-validation scoring by YANEZ",
+            "cycle": "Phase4-C3-Sandbox",
+            "note": "Sandbox image variations with S3 uploads for YANEZ sandbox testing",
             "enabled": PHASE4_ENABLED and image_request is not None,
             "s3_bucket": "yanez-miid-sn54",
             "challenge_id": challenge_id,
@@ -987,7 +987,7 @@ async def forward(self):
             bt.logging.info("Data uploaded successfully to external server")
 
             # ==========================================================================
-            # Cache rep_data from response for NEXT forward pass (Phase 3 - Cycle 2)
+            # Cache rep_data from response for NEXT forward pass (Phase 4 - Cycle 3 Sandbox)
             # ==========================================================================
             if uav_grading_enabled:
                 if upload_response.get("rep_cache"):
