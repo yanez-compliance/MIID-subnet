@@ -350,6 +350,7 @@ def format_variation_requirements(variations: List[Dict[str, str]]) -> str:
         "",
         "[IMAGE VARIATION REQUIREMENTS]",
         "For the face image provided, generate the following variations while preserving identity. All images are Professional passport-style portraits, 3:4 aspect ratio, head-and-shoulders composition from chest up.",
+        "Recommended output resolution: 1015 x 1350 pixels.",
         ""
     ]
 
