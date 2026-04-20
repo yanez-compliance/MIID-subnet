@@ -237,9 +237,6 @@ install_miid() {
 install_phase4_deps() {
   info_msg "Setting up Phase 4 (face image variation) dependencies..."
 
-  # Optional: install photomaker for the 3rd image model
-  pip install photomaker 2>/dev/null || warn_msg "Could not install photomaker. The miner will still work with FLUX models."
-
   # Clone AdaFace if not already present
   local ADAFACE_DIR="MIID/miner/AdaFace"
   if [ ! -d "$ADAFACE_DIR" ]; then
