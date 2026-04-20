@@ -39,7 +39,7 @@ def select_network_and_netuid():
     """Prompt for network and return (network_name, netuid)."""
     choice = input("Select network [test/main] (default: test): ").strip().lower()
     if choice in {"main", "mainnet"}:
-        return "finney", 52
+        return "finney", 54
     return "test", 322
 
 
