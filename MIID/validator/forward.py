@@ -401,14 +401,12 @@ async def forward(self):
                 # Always request:
                 # 1) background_edit (random intensity + weighted accessory)
                 # 2) exactly one random non-background variation (pose/lighting/expression)
-                # 2) Temporary: two background_edit variations (random intensity + weighted accessory)
                 # 3) screen_replay (independent random devices + cues)
                 background_var = get_random_background_variation()
-                second_background_var = get_random_background_variation()
-                # third_var = get_random_non_background_variation()  # Temporary: disabled
+                third_var = get_random_non_background_variation()
                 screen_replay_var = select_screen_replay_variation()
 
-                selected_variations = [background_var, second_background_var, screen_replay_var]
+                selected_variations = [background_var, third_var, screen_replay_var]
 
                 # Calculate drand round for reveal (after all miners respond)
                 reveal_delay = calculate_reveal_buffer(adaptive_timeout)
@@ -445,7 +443,7 @@ async def forward(self):
                     f"Phase 4: API image + random variation selection - "
                     f"Image '{image_filename}', "
                     f"background_edit={background_var['intensity']}, "
-                    f"background_edit_2={second_background_var['intensity']}, "
+                    f"{third_var['type']}={third_var['intensity']}, "
                     f"screen_replay: devices={screen_replay_devices}, cues={screen_replay_cues}, "
                     f"Total requested: {len(selected_variations)}, "
                     f"drand round {target_round}"
@@ -708,8 +706,8 @@ async def forward(self):
         },
         # Phase 4: Image variation data for YANEZ post-validation
         "phase4_image_data": {
-            "cycle": "Phase4-C2-Exec",
-            "note": "Image variations with S3 uploads, post-validation scoring by YANEZ",
+            "cycle": "Phase4-C3-Sandbox",
+            "note": "Sandbox image variations with S3 uploads for YANEZ sandbox testing",
             "enabled": PHASE4_ENABLED and image_request is not None,
             "s3_bucket": "yanez-miid-sn54",
             "challenge_id": challenge_id,
@@ -987,7 +985,7 @@ async def forward(self):
             bt.logging.info("Data uploaded successfully to external server")
 
             # ==========================================================================
-            # Cache rep_data from response for NEXT forward pass (Phase 3 - Cycle 2)
+            # Cache rep_data from response for NEXT forward pass (Phase 4 - Cycle 3 Sandbox)
             # ==========================================================================
             if uav_grading_enabled:
                 if upload_response.get("rep_cache"):

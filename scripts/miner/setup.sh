@@ -206,13 +206,6 @@ install_python_requirements() {
     warn_msg "requirements.txt not found. Installing core dependencies."
     pip install numpy pandas faker tqdm Levenshtein python-Levenshtein metaphone || handle_error "Failed to install core dependencies"
   fi
-
-  if [ -f requirements-miner.txt ]; then
-    info_msg "Installing miner-specific dependencies (diffusion models, face validation)..."
-    pip install -r requirements-miner.txt || handle_error "Failed to install miner dependencies"
-  else
-    warn_msg "requirements-miner.txt not found. Miner image generation packages may be missing."
-  fi
   
   success_msg "Python dependencies installed successfully."
 }
@@ -237,8 +230,13 @@ install_miid() {
 install_phase4_deps() {
   info_msg "Setting up Phase 4 (face image variation) dependencies..."
 
-  # Optional: install photomaker for the 3rd image model
-  pip install photomaker 2>/dev/null || warn_msg "Could not install photomaker. The miner will still work with FLUX models."
+  # Install miner-only Python packages for full mode.
+  if [ -f requirements-miner.txt ]; then
+    info_msg "Installing miner-specific dependencies (diffusion models, face validation)..."
+    pip install -r requirements-miner.txt || handle_error "Failed to install miner dependencies"
+  else
+    warn_msg "requirements-miner.txt not found. Miner image generation packages may be missing."
+  fi
 
   # Clone AdaFace if not already present
   local ADAFACE_DIR="MIID/miner/AdaFace"

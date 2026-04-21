@@ -303,7 +303,7 @@ pip install -r requirements-miner.txt
 
 Validators do **not** need `requirements-miner.txt` -- only miners.
 
-**Optional:** `pip install photomaker` (third image model; falls back to FLUX.2-klein if missing). **Optional:** `pip install timelock` (drand encryption; otherwise sandbox raw-bytes fallback).
+**Optional:** `pip install timelock` (drand encryption; otherwise sandbox raw-bytes fallback).
 
 ### Step 9: Create a Hugging Face Account and Token
 
@@ -372,7 +372,6 @@ source miner_env/bin/activate
 pip install --upgrade pip "setuptools>=68,<82" wheel
 pip install -e .
 pip install -r requirements-miner.txt
-pip install photomaker    # optional
 pip install timelock      # optional
 curl -fsSL https://ollama.com/install.sh | sh
 ollama serve &
@@ -422,7 +421,7 @@ You can configure your miner with the following command-line arguments:
 Environment variables for Phase 4 (Full path):
 - `HF_TOKEN` or `HUGGINGFACE_TOKEN`: Your Hugging Face API token
 - `FLUX_DEVICE`: Device for image generation (`cuda`, `mps`, or `cpu`)
-- `MIID_MODEL`: Force `flux_klein`, `flux_kontext`, or `photomaker`
+- `MIID_MODEL`: Force `flux_klein`, `flux_kontext`, `pulid`, `pulid_flux2`, or `qwen`
 - `MIID_INFERENCE_STEPS`, `MIID_GUIDANCE_SCALE`: Tune generation (see `MIID/miner/generate_variations.py`)
 
 Example with custom configuration:
@@ -495,7 +494,7 @@ Notes:
 
 2. For each requested variation, the miner:
    - Decodes the base image
-   - Generates a variation using the diffusion pipeline (FLUX / PhotoMaker per `generate_variations.py`) with the specified parameters
+  - Generates a variation using the diffusion pipeline (`generate_variations.py`) with the specified parameters
    - Validates that face identity is preserved (AdaFace similarity check)
    - Encrypts the result using drand timelock encryption when available
    - Uploads the encrypted image to S3
@@ -519,7 +518,7 @@ Validators may also request **accessories** on background edits (head coverings,
 
 ## How the Three Image Models Work (Full path)
 
-The miner ships with **three** diffusion models; each session **randomly picks one** unless `MIID_MODEL` is set.
+The miner ships with **three** diffusion models. By default, the miner **randomly picks one at the start of each query** (unless `MIID_MODEL` is set).
 
 | Model | Description | VRAM needed |
 |-------|-------------|-------------|
@@ -529,8 +528,8 @@ The miner ships with **three** diffusion models; each session **randomly picks o
 
 Default behavior is:
 - If `MIID_MODEL` is set, the miner uses that exact model.
-- If `MIID_MODEL` is not set, it defaults to `flux_klein`.
-- If `MIID_MODEL_RANDOM=1`, it randomly picks from the **three base models** above.
+- If `MIID_MODEL` is not set and `MIID_MODEL_RANDOM` is unset (or set to `1`), it randomly picks from the **three base models** above at the start of each query.
+- If `MIID_MODEL` is not set and `MIID_MODEL_RANDOM=0`, it uses `flux_klein`.
 
 If a model fails to load, the miner falls back to `flux_klein`. Licenses, pipeline details, and model wiring are documented in `MIID/miner/generate_variations.py`.
 
@@ -711,7 +710,7 @@ export HF_TOKEN="hf_YOUR_TOKEN_HERE"
 ```
 
 ### "Failed to load model -- falling back to flux_klein"
-Normal if Kontext or PhotoMaker cannot load.
+Normal if Kontext cannot load.
 
 ### AdaFace / checkpoint issues
 See [Step 10](#step-10-set-up-adaface-face-identity-validation).
@@ -738,7 +737,6 @@ See [Background Mining Guide](background_mining.md). **Basic:** no `HF_TOKEN`/`F
 cd MIID-subnet
 source miner_env/bin/activate
 pip install -r requirements-miner.txt
-pip install photomaker    # optional
 pip install timelock      # optional
 git clone https://github.com/mk-minchul/AdaFace.git MIID/miner/AdaFace
 mkdir -p MIID/miner/AdaFace/pretrained

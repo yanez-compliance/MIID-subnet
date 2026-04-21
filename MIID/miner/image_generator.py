@@ -92,6 +92,7 @@ def generate_variations(
     raw_results = generate_variations_backend(
         base_image,
         variation_requests,
+        model_key=model_info["key"],
     )
 
     variations = []

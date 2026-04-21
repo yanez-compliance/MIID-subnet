@@ -39,7 +39,7 @@ def select_network_and_netuid():
     """Prompt for network and return (network_name, netuid)."""
     choice = input("Select network [test/main] (default: test): ").strip().lower()
     if choice in {"main", "mainnet"}:
-        return "finney", 52
+        return "finney", 54
     return "test", 322
 
 
@@ -73,7 +73,7 @@ def main():
         axon = metagraph.axons[uid]
         # Print all axons that have a non-zero IP
         if axon.ip != "0.0.0.0" and axon.port != 0:
-            print(f"{uid:<6} {axon.hotkey:<50} {axon.ip:<20} {axon.port:<8}")
+            print(f"{uid:<6} {axon.hotkey:<50} {axon.ip:<20} {axon.port:<8} {str(axon.is_serving):<8}")
 
     print("\n--- Your specific miner ---")
     found = False

@@ -97,7 +97,6 @@ class Miner(BaseMinerNeuron):
     Configuration:
     - model_name: The Ollama model to use (default: 'tinyllama:latest')
     - output_path: Directory for saving mining results (default: logging_dir/mining_results)
-    - save_phase4_images: If True, write Phase 4 variation PNGs under output_path/phase4_images (default: True)
     """
     # Base whitelist of known validators
     WHITELISTED_VALIDATORS = {
