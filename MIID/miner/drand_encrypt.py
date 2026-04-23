@@ -45,7 +45,8 @@ def encrypt_for_drand(data: bytes, target_round: int) -> bytes:
     if not TLOCK_AVAILABLE:
         raise ImportError(
             "timelock package not installed. "
-            "Install with: pip install timelock"
+            "Full miners: pip install -r requirements-miner.txt "
+            "(pinned timelock + timelock_wasm_wrapper; Linux x86_64 Python 3.10 required for wheels)."
         )
 
     # Initialize timelock with drand quicknet public key
@@ -83,7 +84,8 @@ def decrypt_with_drand(encrypted_data: bytes, drand_signature: bytes) -> bytes:
     if not TLOCK_AVAILABLE:
         raise ImportError(
             "timelock package not installed. "
-            "Install with: pip install timelock"
+            "Full miners: pip install -r requirements-miner.txt "
+            "(pinned timelock + timelock_wasm_wrapper; Linux x86_64 Python 3.10 required for wheels)."
         )
 
     tlock = Timelock(DRAND_QUICKNET_PK)

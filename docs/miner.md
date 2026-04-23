@@ -303,7 +303,7 @@ pip install -r requirements-miner.txt
 
 Validators do **not** need `requirements-miner.txt` -- only miners.
 
-**Optional:** `pip install timelock` (drand encryption; otherwise sandbox raw-bytes fallback).
+**Drand timelock** for Phase 4 image encryption is **pinned inside** `requirements-miner.txt` (`timelock==0.0.1.dev0`, `timelock_wasm_wrapper==0.0.2`). Official PyPI wheels target **Linux x86_64 + CPython 3.10** only; create the venv with `python3.10 -m venv miner_env` on those hosts. Other platforms skip those lines and the miner uses the raw-bytes sandbox fallback until you run on a compatible host. Ciphertext is non-deterministic per encryption; decryption after `target_round` still matches.
 
 ### Step 9: Create a Hugging Face Account and Token
 
@@ -372,7 +372,6 @@ source miner_env/bin/activate
 pip install --upgrade pip "setuptools>=68,<82" wheel
 pip install -e .
 pip install -r requirements-miner.txt
-pip install timelock      # optional
 curl -fsSL https://ollama.com/install.sh | sh
 ollama serve &
 ollama pull llama3.1:latest
@@ -737,7 +736,6 @@ See [Background Mining Guide](background_mining.md). **Basic:** no `HF_TOKEN`/`F
 cd MIID-subnet
 source miner_env/bin/activate
 pip install -r requirements-miner.txt
-pip install timelock      # optional
 git clone https://github.com/mk-minchul/AdaFace.git MIID/miner/AdaFace
 mkdir -p MIID/miner/AdaFace/pretrained
 gdown 1eUaSHG4pGlIZK7hBkqjyp2fc2epKoBvI -O MIID/miner/AdaFace/pretrained/adaface_ir50_ms1mv2.ckpt

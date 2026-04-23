@@ -232,8 +232,13 @@ install_phase4_deps() {
 
   # Install miner-only Python packages for full mode.
   if [ -f requirements-miner.txt ]; then
-    info_msg "Installing miner-specific dependencies (diffusion models, face validation)..."
+    info_msg "Installing miner-specific dependencies (diffusion models, face validation, timelock)..."
     pip install -r requirements-miner.txt || handle_error "Failed to install miner dependencies"
+    if python -c "from MIID.miner.drand_encrypt import is_timelock_available; import sys; sys.exit(0 if is_timelock_available() else 1)" 2>/dev/null; then
+      success_msg "Drand timelock encryption available (pinned versions in requirements-miner.txt)."
+    else
+      warn_msg "Timelock not importable on this Python/platform. Production: use Linux x86_64 and Python 3.10 venv so timelock wheels install. Miner will use raw-bytes sandbox fallback until then."
+    fi
   else
     warn_msg "requirements-miner.txt not found. Miner image generation packages may be missing."
   fi
@@ -337,6 +342,8 @@ main() {
 
   if [ "$INSTALL_MODE" = "--full" ]; then
     info_msg "Mode: FULL (name + image variations)"
+    echo ""
+    info_msg "Drand timelock uses pinned packages in requirements-miner.txt; wheels need Linux x86_64 + Python 3.10 (use python3.10 -m venv if needed)."
     echo ""
     info_msg "Before running the miner, set these environment variables:"
     echo -e "   export HF_TOKEN=\"hf_YOUR_TOKEN_HERE\"    # Get from huggingface.co/settings/tokens"
