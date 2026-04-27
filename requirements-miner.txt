@@ -12,6 +12,6 @@ opencv-python>=4.8.0
 safetensors
 gdown
 
-# Optional: enables drand timelock encryption.
-# If not installed the miner uses raw bytes (sandbox fallback).
-# timelock
+# Drand timelock encryption (required so generated images are encrypted by default
+# before upload to S3 and only become decryptable after the target drand round).
+timelock==1.2.0
