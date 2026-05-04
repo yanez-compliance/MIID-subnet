@@ -136,6 +136,17 @@ python neurons/miner.py --netuid 322 --subtensor.network test --subtensor.chain_
 
 View your testnet results on [Weights & Biases (MIID subnet 322)](https://wandb.ai/MIID-dev-test/subnet322-test/table?nw=nwuseraromanhigh).
 
+Optional walkthrough video (different subnet, but setup flow is very similar): [YouTube guide](https://www.youtube.com/watch?v=UH_sOZSIk10&list=PLqsRtfujbWUklHVRqOAHQ7tzXYZ8OAZlR).
+If you only want the essentials, jump to:
+- `38:18` BTCLI setup
+- `41:27` Testnet wallet setup
+- `44:48` Secure wallet storage
+- `49:15` Testnet TAO
+- `53:47` Testnet TAO transfer command
+- `56:21` Local miner setup
+- `1:03:56` Register on testnet
+The rest of the video is still useful if you want extra context.
+
 Flag breakdown for the command above:
 
 - `--netuid 322`: selects the subnet to join; use `322` for MIID testnet.
