@@ -3479,6 +3479,7 @@ def calculate_rule_compliance_score(
 
 # Tier multipliers for reputation weighting (policy-based, rarely change)
 TIER_MULTIPLIERS = {
+    "Platinum": 1.25,
     "Diamond": 1.15,
     "Gold": 1.10,
     "Silver": 1.05,
@@ -3495,7 +3496,8 @@ TIER_MULTIPLIERS = {
 #   5.0  - 15.0  → 1.00 - 1.20  (Bronze)
 #   15.0 - 30.0  → 1.20 - 1.50  (Silver)
 #   30.0 - 50.0  → 1.50 - 1.80  (Gold)
-#   50.0+        → 1.80 - 2.00  (Diamond)
+#   50.0 - 200.0 → 1.80 - 2.00  (Diamond)
+#   200.0+       → 2.00 - 3.00  (Platinum)
 
 # Burn UID (hardcoded in existing codebase)
 BURN_UID = 59
@@ -3503,7 +3505,7 @@ BURN_UID = 59
 
 def normalize_rep_score(rep_score: float, rep_tier: Optional[str] = None) -> float:
     """
-    Normalize rep_score to reward-friendly range (0.0 - 2.0).
+    Normalize rep_score to reward-friendly range (0.0 - 3.0).
 
     Uses actual rep_score value for normalization - NO clamping to tier boundaries.
     As rep_score decays, normalized value decreases proportionally.
@@ -3514,7 +3516,7 @@ def normalize_rep_score(rep_score: float, rep_tier: Optional[str] = None) -> flo
         rep_tier: Tier string (unused for normalization, kept for API compatibility)
 
     Returns:
-        Normalized rep_score: 0.0 when score=0, up to 2.0 for high scores
+        Normalized rep_score: 0.0 when score=0, up to 3.0 for high scores
     """
     # Zero or negative score = zero normalized (zero UAV)
     if rep_score <= 0:
@@ -3527,7 +3529,8 @@ def normalize_rep_score(rep_score: float, rep_tier: Optional[str] = None) -> flo
     #   5.0  - 15.0  → 1.00 - 1.20  (Bronze range)
     #   15.0 - 30.0  → 1.20 - 1.50  (Silver range)
     #   30.0 - 50.0  → 1.50 - 1.80  (Gold range)
-    #   50.0+        → 1.80 - 2.00  (Diamond range)
+    #   50.0 - 200.0 → 1.80 - 2.00  (Diamond range)
+    #   200.0+       → 2.00 - 3.00  (Platinum range)
 
     if rep_score < 0.1:
         # Below Watch floor: linear from 0→0.1 maps to 0→0.50
@@ -3544,10 +3547,13 @@ def normalize_rep_score(rep_score: float, rep_tier: Optional[str] = None) -> flo
     elif rep_score <= 50.0:
         # Gold range: 30.0→50.0 maps to 1.50→1.80
         normalized = 1.50 + (rep_score - 30.0) * (1.80 - 1.50) / (50.0 - 30.0)
+    elif rep_score <= 200.0:
+        # Diamond range: 50.0→200.0 maps to 1.80→2.00
+        normalized = 1.80 + (rep_score - 50.0) * (2.00 - 1.80) / (200.0 - 50.0)
     else:
-        # Diamond range: 50.0→9999.0 maps to 1.80→2.00
-        normalized = 1.80 + (rep_score - 50.0) * (2.00 - 1.80) / (9999.0 - 50.0)
-        normalized = min(2.00, normalized)  # Cap at 2.00
+        # Platinum range: 200.0→9999.0 maps to 2.00→3.00
+        normalized = 2.00 + (rep_score - 200.0) * (3.00 - 2.00) / (9999.0 - 200.0)
+        normalized = min(3.00, normalized)  # Cap at 3.00
 
     return round(normalized, 3)
 
@@ -3626,7 +3632,7 @@ def apply_reputation_rewards(
                 T = 0.0
                 uav_reward = 0.0
             else:
-                # Normalize rep_score to reward-friendly range (0.5 - 2.0)
+                # Normalize rep_score to reward-friendly range (0.0 - 3.0)
                 # This prevents Diamond miners from dominating emissions
                 R_norm = normalize_rep_score(rep_score, rep_tier)
                 # Get tier multiplier
@@ -3652,8 +3658,8 @@ def apply_reputation_rewards(
             "quality_score": float(Q),
             "kav_portion_raw": float(kav_portion_raw),
             # UAV details (raw + normalized)
-            "rep_score": float(rep_score),           # Raw score from policy (0.10 - 9999.0), 0 for new miners
-            "rep_score_normalized": float(R_norm),   # Normalized for rewards (0.5 - 2.0), 0 for new miners
+            "rep_score": float(rep_score),           # Raw score from policy (can decay to 0; 0 for new miners)
+            "rep_score_normalized": float(R_norm),   # Normalized for rewards (0.0 - 3.0), 0 for new miners
             "rep_tier": rep_tier,                    # "New" for new miners
             "tier_multiplier": float(T),
             "uav_reward": float(uav_reward),
