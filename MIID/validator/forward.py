@@ -602,8 +602,8 @@ async def forward(self):
 
         # Get config values (Phase 4 - Cycle 1)
         burn_fraction = getattr(self.config.neuron, 'burn_fraction', 0.65)
-        kav_weight = getattr(self.config.neuron, 'kav_weight', 0.15)
-        uav_weight = getattr(self.config.neuron, 'uav_weight', 0.85)
+        kav_weight = getattr(self.config.neuron, 'kav_weight', 0.10)
+        uav_weight = getattr(self.config.neuron, 'uav_weight', 0.90)
 
         # Apply reputation weighting (UAV + combine + burn in one call)
         # Burn is applied ONCE here after KAV + UAV are combined

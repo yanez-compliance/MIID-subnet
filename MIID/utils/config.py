@@ -471,13 +471,13 @@ def add_validator_args(cls, parser):
         '--neuron.kav_weight',
         type=float,
         help="Weight for KAV (Known Address Variation) scores in reputation-weighted rewards (only used when UAV_grading is enabled).",
-        default=0.15
+        default=0.10
     )
     parser.add_argument(
         '--neuron.uav_weight',
         type=float,
         help="Weight for UAV (Unknown Address Variation) scores in reputation-weighted rewards (only used when UAV_grading is enabled).",
-        default=0.85
+        default=0.90
     )
     
     # --- Nominatim Cache Configuration ---

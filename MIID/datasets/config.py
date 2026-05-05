@@ -56,8 +56,8 @@ REWARDS_DIR = os.path.join(DATA_DIR, "rewards")
 # UAV = Unknown Attack Vector (reputation-based from manual validation)
 # NOTE: New miners (not in rep_data) get ZERO UAV - only KAV rewards
 #       They must contribute validated UAVs to build reputation first
-KAV_WEIGHT = 0.20  # 20% allocated to online quality (Q)
-UAV_WEIGHT = 0.80  # 80% allocated to reputation-based rewards (0 for new miners)
+KAV_WEIGHT = 0.10  # 10% allocated to online quality (Q)
+UAV_WEIGHT = 0.90  # 90% allocated to reputation-based rewards (0 for new miners)
 
 # Note: burn_fraction is configured via --neuron.burn_fraction (default 0.75 for Cycle 2)
 

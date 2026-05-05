@@ -3564,8 +3564,8 @@ def apply_reputation_rewards(
     rep_data: Dict[str, Dict],
     metagraph,
     burn_fraction: float = 0.65,
-    kav_weight: float = 0.15,
-    uav_weight: float = 0.85,
+    kav_weight: float = 0.10,
+    uav_weight: float = 0.90,
     kav_metrics: List[Dict] = None
 ) -> Tuple[np.ndarray, np.ndarray, List[Dict]]:
     """
@@ -3587,8 +3587,8 @@ def apply_reputation_rewards(
         rep_data: Dict mapping hotkey -> {rep_score, rep_tier} from Flask
         metagraph: Bittensor metagraph for hotkey lookup
         burn_fraction: Fraction to burn (default 0.65 for Cycle 2)
-        kav_weight: Weight for KAV online quality (default 0.15 = 15%)
-        uav_weight: Weight for UAV reputation-based (default 0.85 = 85%)
+        kav_weight: Weight for KAV online quality (default 0.10 = 10%)
+        uav_weight: Weight for UAV reputation-based (default 0.90 = 90%)
         kav_metrics: Optional detailed metrics from KAV calculation
 
     Returns:
@@ -3680,8 +3680,8 @@ def apply_reputation_rewards(
     # Determine burn mode and target totals based on what's available
     # Edge cases: burn unused portions
     # 1. No KAV and no UAV -> burn 100%
-    # 2. No UAV -> burn = burn_fraction + (uav_weight * keep_fraction) = 0.65 + 0.2975 = 0.9475
-    # 3. No KAV -> burn = burn_fraction + (kav_weight * keep_fraction) = 0.65 + 0.0525 = 0.7025
+    # 2. No UAV -> burn = burn_fraction + (uav_weight * keep_fraction) = 0.65 + 0.315 = 0.965
+    # 3. No KAV -> burn = burn_fraction + (kav_weight * keep_fraction) = 0.65 + 0.035 = 0.685
     # 4. Both present -> normal burn = burn_fraction = 0.65
 
     if total_kav == 0 and total_uav == 0:
@@ -3691,18 +3691,18 @@ def apply_reputation_rewards(
         applied_burn = 1.0
     elif total_uav == 0:
         burn_mode = "no_uav"
-        target_kav_total = keep_fraction * kav_weight  # e.g., 0.35 * 0.15 = 0.0525
+        target_kav_total = keep_fraction * kav_weight  # e.g., 0.35 * 0.10 = 0.035
         target_uav_total = 0.0
-        applied_burn = burn_fraction + (uav_weight * keep_fraction)  # 0.65 + 0.2975 = 0.9475
+        applied_burn = burn_fraction + (uav_weight * keep_fraction)  # 0.65 + 0.315 = 0.965
     elif total_kav == 0:
         burn_mode = "no_kav"
         target_kav_total = 0.0
-        target_uav_total = keep_fraction * uav_weight  # e.g., 0.35 * 0.85 = 0.2975
-        applied_burn = burn_fraction + (kav_weight * keep_fraction)  # 0.65 + 0.0525 = 0.7025
+        target_uav_total = keep_fraction * uav_weight  # e.g., 0.35 * 0.90 = 0.315
+        applied_burn = burn_fraction + (kav_weight * keep_fraction)  # 0.65 + 0.035 = 0.685
     else:
         burn_mode = "configured"
-        target_kav_total = keep_fraction * kav_weight  # e.g., 0.35 * 0.15 = 0.0525
-        target_uav_total = keep_fraction * uav_weight  # e.g., 0.35 * 0.85 = 0.2975
+        target_kav_total = keep_fraction * kav_weight  # e.g., 0.35 * 0.10 = 0.035
+        target_uav_total = keep_fraction * uav_weight  # e.g., 0.35 * 0.90 = 0.315
         applied_burn = burn_fraction
 
     # Rescale KAV and UAV portions separately to their target totals
