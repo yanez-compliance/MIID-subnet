@@ -40,10 +40,10 @@ from MIID.utils.verify_message import verify_message
 # =============================================================================
 BASE_IMAGES_DIR = Path("/home/ubuntu/YanezMIIDManage/api_image/base_images")
 
-# Batch 3 image pool config
-BATCH_DIR      = Path("/home/ubuntu/YanezMIIDManage/api_image/batch_3_3-27-2026")
-USED_DIR       = Path("/home/ubuntu/YanezMIIDManage/api_image/used_images_batch_3_3-27-26")
-BATCH_LOG      = Path("/home/ubuntu/YanezMIIDManage/api_image/used_batch_3_3_27_2026.json")
+# Batch 4 image pool config
+BATCH_DIR      = Path("/home/ubuntu/YanezMIIDManage/api_image/batch_4_4-13-2026")
+USED_DIR       = Path("/home/ubuntu/YanezMIIDManage/api_image/used_batch_4_4-13-2026")
+BATCH_LOG      = Path("/home/ubuntu/YanezMIIDManage/api_image/used_batch_4_4_13_2026.json")
 ALLOWED_EXT    = ('.png', '.jpg', '.jpeg', '.gif', '.webp')
 _batch_lock    = threading.Lock()
 HOTKEY_TO_FOLDER = {
@@ -404,6 +404,9 @@ def get_validator_image(hotkey):
     os.remove(tmp_signature_filename)
 
     with _batch_lock:
+        # If BATCH_DIR is empty, recycle all images from USED_DIR back before serving
+        _recycle_if_empty()
+
         # If BATCH_DIR is empty, recycle all images from USED_DIR back before serving
         _recycle_if_empty()
 
