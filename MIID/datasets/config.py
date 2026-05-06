@@ -32,7 +32,7 @@ ALLOWED_HOTKEYS: List[str] = [
     "5GQqAhLKVHRLpdTqRg1yc3xu7y47DicJykSpggE2GuDbfs54", #Rizzo new HK June30th
     "5EZpnZASr7E13pjbQJVtk2JVQsnB1E9juEw2VuNxDyo54MUV", #MUV validator
     "5E2LP6EnZ54m3wS8s1yPvD5c3xo71kQroBw7aUVK32TKeZ5u", #Tao.bot
-    "5DyM1rxnDu8QSjbbh5bPV2GMK6UTPRXdUM6mNViBBut9Ma6w", #Tensora new HK
+    "5HK5tp6t2S59DywmHRWPBVJeJ86T61KjurYqeooqj8sREpeN", #Tensora old HK
     # "5CnkkjPdfsA6jJDHv2U6QuiKiivDuvQpECC13ffdmSDbkgtt",  # testnet validator
 ]
 
@@ -56,8 +56,8 @@ REWARDS_DIR = os.path.join(DATA_DIR, "rewards")
 # UAV = Unknown Attack Vector (reputation-based from manual validation)
 # NOTE: New miners (not in rep_data) get ZERO UAV - only KAV rewards
 #       They must contribute validated UAVs to build reputation first
-KAV_WEIGHT = 0.20  # 20% allocated to online quality (Q)
-UAV_WEIGHT = 0.80  # 80% allocated to reputation-based rewards (0 for new miners)
+KAV_WEIGHT = 0.10  # 10% allocated to online quality (Q)
+UAV_WEIGHT = 0.90  # 90% allocated to reputation-based rewards (0 for new miners)
 
 # Note: burn_fraction is configured via --neuron.burn_fraction (default 0.75 for Cycle 2)
 
@@ -67,6 +67,7 @@ BURN_UID = 59
 # Tier multipliers for reputation weighting
 # Higher tiers get bonus multipliers on their UAV portion
 TIER_MULTIPLIERS = {
+    "Platinum": 1.25,
     "Diamond": 1.15,
     "Gold": 1.10,
     "Silver": 1.05,
@@ -80,12 +81,13 @@ TIER_MULTIPLIERS = {
 # These values are for reference only - must match reputation-policy-v1.md
 # Watch tier: assigned when rep_score goes negative, but DB clamps to 0.1 floor
 TIER_BOUNDARIES = {
-    "Diamond": (50.0, 9999.0),   # rep_score >= 50.0
-    "Gold":    (30.0, 49.999),   # rep_score 30.0 - 49.999
-    "Silver":  (15.0, 29.999),   # rep_score 15.0 - 29.999
-    "Bronze":  (5.001, 14.999),  # rep_score >5.0 - 14.999
-    "Neutral": (0.10, 5.00),     # rep_score 0.1 - 5.0 (baseline miners)
-    "Watch":   (0.0, 0.099),     # rep_score < 0.1 (penalized, clamped to 0.1 but decay can push to 0)
+    "Platinum": (200.0, 9999.0),  # rep_score >= 200.0
+    "Diamond":  (50.0, 199.999),  # rep_score 50.0 - 199.999
+    "Gold":     (30.0, 49.999),   # rep_score 30.0 - 49.999
+    "Silver":   (15.0, 29.999),   # rep_score 15.0 - 29.999
+    "Bronze":   (5.001, 14.999),  # rep_score >5.0 - 14.999
+    "Neutral":  (0.10, 5.00),     # rep_score 0.1 - 5.0 (baseline miners)
+    "Watch":    (0.0, 0.099),     # rep_score < 0.1 (penalized, clamped to 0.1 but decay can push to 0)
 }
 
 # Normalization (for reference - validator uses continuous function based on actual rep_score)
@@ -96,5 +98,6 @@ TIER_BOUNDARIES = {
 #   5.0  - 15.0  → 1.00 - 1.20  (Bronze)
 #   15.0 - 30.0  → 1.20 - 1.50  (Silver)
 #   30.0 - 50.0  → 1.50 - 1.80  (Gold)
-#   50.0+        → 1.80 - 2.00  (Diamond)
+#   50.0 - 200.0 → 1.80 - 2.00  (Diamond)
+#   200.0+       → 2.00 - 3.00  (Platinum)
 # When rep_score = 0, miner gets zero UAV (only KAV)

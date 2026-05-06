@@ -232,10 +232,24 @@ install_phase4_deps() {
 
   # Install miner-only Python packages for full mode.
   if [ -f requirements-miner.txt ]; then
-    info_msg "Installing miner-specific dependencies (diffusion models, face validation)..."
+    info_msg "Installing miner-specific dependencies (diffusion models, face validation, drand timelock)..."
     pip install -r requirements-miner.txt || handle_error "Failed to install miner dependencies"
   else
     warn_msg "requirements-miner.txt not found. Miner image generation packages may be missing."
+  fi
+
+  # Ensure drand timelock encryption is available. This is the default path:
+  # generated images are encrypted before upload so they only decrypt after a
+  # future drand round. We try a direct install as a safety net in case the
+  # requirements file was missing the entry, then verify the import works.
+  info_msg "Ensuring drand timelock encryption is installed..."
+  if ! python -c "import timelock" >/dev/null 2>&1; then
+    pip install timelock || warn_msg "Could not install 'timelock' on this platform. Image encryption will fall back to raw bytes."
+  fi
+  if python -c "import timelock" >/dev/null 2>&1; then
+    success_msg "Drand timelock encryption is enabled (images will be encrypted by default)."
+  else
+    warn_msg "'timelock' is not importable. The miner will run, but images will NOT be encrypted."
   fi
 
   # Clone AdaFace if not already present

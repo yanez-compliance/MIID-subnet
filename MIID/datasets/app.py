@@ -231,7 +231,7 @@ def upload_data(hotkey):
                 snapshot_miners_list = current_snapshot.get("miners", [])
                 snapshot_miners_dict = {miner.get("hotkey"): miner for miner in snapshot_miners_list}
                 
-                # For each miner that received rewards and exists in database, subtract 0.01 from rep_score
+                # For each miner that received rewards and exists in database, subtract 0.02 from rep_score
                 # Only apply penalty if miner actually got rewards (uav_contribution > 0)
                 updated_miners_count = 0
                 for miner_hotkey, reward_data in rewarded_miners_data.items():
@@ -243,8 +243,8 @@ def upload_data(hotkey):
                         if uav_contribution > 0.0:
                             snapshot_miner = snapshot_miners_dict[miner_hotkey]
                             current_score = snapshot_miner.get("rep_score", 0.0)
-                            # Subtract 0.01 from rep_score
-                            snapshot_miner["rep_score"] = max(0.0, current_score - 0.01)
+                            # Subtract 0.02 from rep_score
+                            snapshot_miner["rep_score"] = max(0.0, current_score - 0.02)
                             # Also update rep_cache to reflect the change
                             if miner_hotkey in rep_cache:
                                 rep_cache[miner_hotkey]["rep_score"] = snapshot_miner["rep_score"]
@@ -253,7 +253,7 @@ def upload_data(hotkey):
                 # Send updated snapshot to database using reward_allocation
                 if updated_miners_count > 0:
                     result = reward_allocation(current_snapshot)
-                    print(f"[INFO] Applied decay (-0.01) to {updated_miners_count} miner(s) and sent to database via reward_allocation()")
+                    print(f"[INFO] Applied decay (-0.02) to {updated_miners_count} miner(s) and sent to database via reward_allocation()")
                 else:
                     print(f"[INFO] No miners to update in reward allocation")
 
