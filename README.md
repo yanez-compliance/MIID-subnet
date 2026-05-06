@@ -11,7 +11,7 @@
 [![Helpful Hints](https://img.shields.io/badge/Helpful-Hints-blue)](docs/helpful_hints.md)
 [![GitHub](https://img.shields.io/badge/GitHub-Repository-black)](https://github.com/yanez-compliance/MIID-subnet)
 
-[⛏️ Mining Guide](docs/miner.md) • [🧑‍🏫 Validator Guide](docs/validator.md) • [📊 Dashboard & Leaderboard](https://tao-ui-dashboard.yanez.ai/) • [🚀 Quick Start](docs/README.md)
+[⛏️ Mining Guide](docs/miner.md) • [🧑‍🏫 Validator Guide](docs/validator.md) • [📊 Dashboard & Leaderboard](https://tao-ui-dashboard.yanez.ai/)
 </div>
 
 ---
