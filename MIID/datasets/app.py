@@ -406,10 +406,7 @@ def get_validator_image(hotkey):
     with _batch_lock:
         # If BATCH_DIR is empty, recycle all images from USED_DIR back before serving
         _recycle_if_empty()
-
-        # If BATCH_DIR is empty, recycle all images from USED_DIR back before serving
-        _recycle_if_empty()
-
+        
         # Get available images from batch dir
         available = [f for f in BATCH_DIR.iterdir() if f.is_file() and f.suffix.lower() in ALLOWED_EXT]
         if not available:
