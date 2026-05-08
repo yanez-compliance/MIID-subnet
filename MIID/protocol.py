@@ -132,13 +132,8 @@ class IdentitySynapse(bt.Synapse):
     """
     
     # Request input, filled by sending dendrite caller.
-    # NOTE: These have defaults so that Bittensor's dendrite can reconstruct
-    # an `IdentitySynapse` from a miner's response body without raising
-    # `Field required` when an older / non-conforming miner strips these
-    # fields from the JSON it returns. The validator always sets both
-    # explicitly when building the outgoing request.
-    identity: List[List[str]] = Field(default_factory=list)  # Each inner list contains [name, dob, address]
-    query_template: str = ""
+    identity: List[List[str]] # Each inner list contains [name, dob, address]
+    query_template: str
 
     timeout: float = 120.0
     
