@@ -298,6 +298,46 @@ install_bittensor() {
 }
 
 # ---------------------------------------------------------
+# Section 7b: btcli sanity check + scalecodec/cyscale conflict fix
+#
+# `async-substrate-interface` (used by bittensor-cli) refuses to import when
+# BOTH `scalecodec` and `cyscale` are installed.  Some transitive deps may
+# still pull in the legacy `scalecodec`, which would make the first `btcli`
+# call crash for a brand-new miner.  This step detects and repairs that
+# situation BEFORE the user runs any `btcli` command.
+# ---------------------------------------------------------
+ensure_btcli_works() {
+  info_msg "Verifying btcli is importable (scalecodec/cyscale conflict check)..."
+
+  local has_scalecodec="no"
+  local has_cyscale="no"
+  python -c "import scalecodec" >/dev/null 2>&1 && has_scalecodec="yes"
+  python -c "import cyscale" >/dev/null 2>&1 && has_cyscale="yes"
+
+  if [ "$has_scalecodec" = "yes" ] && [ "$has_cyscale" = "yes" ]; then
+    warn_msg "Both 'scalecodec' and 'cyscale' detected. Removing legacy 'scalecodec' to avoid btcli startup crash."
+    pip uninstall -y scalecodec >/dev/null 2>&1 || true
+  elif [ "$has_scalecodec" = "yes" ] && [ "$has_cyscale" = "no" ]; then
+    info_msg "Only 'scalecodec' is installed; reinstalling 'cyscale' for async-substrate-interface compatibility."
+    pip uninstall -y scalecodec >/dev/null 2>&1 || true
+    pip install --force-reinstall cyscale >/dev/null 2>&1 || warn_msg "Could not install 'cyscale'. btcli may fail to start."
+  fi
+
+  if btcli --version >/dev/null 2>&1; then
+    success_msg "btcli is ready."
+  else
+    warn_msg "btcli could not start. Attempting recovery (uninstall scalecodec, reinstall cyscale)..."
+    pip uninstall -y scalecodec cyscale >/dev/null 2>&1 || true
+    pip install --force-reinstall cyscale >/dev/null 2>&1 || true
+    if btcli --version >/dev/null 2>&1; then
+      success_msg "btcli is ready after recovery."
+    else
+      warn_msg "btcli still failing. Run 'btcli --version' inside 'miner_env' to see the error and consult docs/miner.md."
+    fi
+  fi
+}
+
+# ---------------------------------------------------------
 # Main Execution Flow
 # ---------------------------------------------------------
 main() {
@@ -342,6 +382,10 @@ main() {
       INSTALL_MODE="--full"
     fi
   fi
+
+  # Run the btcli health check AFTER every pip install step so a transitive
+  # `scalecodec` from any later package does not break the first `btcli` call.
+  ensure_btcli_works
 
   echo ""
   info_msg "============================================"

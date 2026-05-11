@@ -12,8 +12,14 @@ ollama
 python-Levenshtein
 jellyfish
 aiohttp
-substrate-interface
+# Note: do NOT add `substrate-interface` here. It installs the legacy `scalecodec`
+# package, which shares a namespace with `cyscale` (used by
+# `async-substrate-interface` >= 1.6). Having both triggers a
+# `RuntimeError: Conflict detected: 'scalecodec' ... conflicts with 'cyscale'`
+# at `btcli` startup. Use `from bittensor_wallet import Keypair` instead.
 bittensor==10.0.0
+# Phase 4: pin transitive dep — newer releases break bittensor==10.0.0
+async-substrate-interface==1.6.4
 bittensor-cli # Use latest or desired version
 wandb
 python-dotenv # Add dotenv for .env file handling
