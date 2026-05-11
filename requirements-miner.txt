@@ -14,4 +14,4 @@ gdown
 
 # Drand timelock encryption (required so generated images are encrypted by default
 # before upload to S3 and only become decryptable after the target drand round).
-timelock==1.2.0
+timelock
