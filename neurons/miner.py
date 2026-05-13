@@ -50,6 +50,7 @@ different runs and facilitate analysis of results over time.
 import time
 import typing
 import io
+import gc
 import bittensor as bt
 import ollama
 import pandas as pd
@@ -58,6 +59,36 @@ import numpy as np
 from typing import List, Dict, Tuple, Any, Optional
 from tqdm import tqdm
 from PIL import Image
+
+
+def _free_gpu_memory(stage: str = "") -> None:
+    """Release inter-request GPU memory and log resident VRAM.
+
+    Diffusers + sequential CPU offload leave activation buffers and cached
+    allocations alive until Python releases them.  Calling this before and
+    after each image request keeps VRAM from creeping up over time.
+    """
+    try:
+        gc.collect()
+        import torch as _torch
+        if _torch.cuda.is_available():
+            _torch.cuda.empty_cache()
+            try:
+                _torch.cuda.ipc_collect()
+            except Exception:
+                pass
+            free_b, total_b = _torch.cuda.mem_get_info(0)
+            reserved_b = _torch.cuda.memory_reserved(0)
+            allocated_b = _torch.cuda.memory_allocated(0)
+            gib = 1024 ** 3
+            bt.logging.info(
+                f"GPU mem [{stage}]: "
+                f"free={free_b / gib:.2f} GiB / total={total_b / gib:.2f} GiB, "
+                f"torch_reserved={reserved_b / gib:.2f} GiB, "
+                f"torch_allocated={allocated_b / gib:.2f} GiB"
+            )
+    except Exception as _e:
+        bt.logging.debug(f"_free_gpu_memory({stage}) failed: {_e}")
 
 # Bittensor Miner Template:
 from MIID.protocol import IdentitySynapse, S3Submission
@@ -177,8 +208,31 @@ class Miner(BaseMinerNeuron):
 
             forced_model = os.environ.get("MIID_MODEL", "").strip() or "(unset -> random base model)"
             random_flag = os.environ.get("MIID_MODEL_RANDOM", "1").strip()
-            bt.logging.info(f"MIID_MODEL: {forced_model}")
-            bt.logging.info(f"MIID_MODEL_RANDOM: {random_flag}")
+            inference_steps = os.environ.get("MIID_INFERENCE_STEPS", "20").strip()
+            guidance_scale = os.environ.get("MIID_GUIDANCE_SCALE", "3.5").strip()
+            flux_device = os.environ.get("FLUX_DEVICE", "(auto)").strip()
+            enable_offload = os.environ.get("MIID_ENABLE_CPU_OFFLOAD", "(default)").strip()
+            seq_offload = os.environ.get("MIID_SEQUENTIAL_CPU_OFFLOAD", "1").strip()
+            alloc_conf = os.environ.get("PYTORCH_CUDA_ALLOC_CONF", "(unset)").strip()
+            bt.logging.info(
+                f"Phase 4 env: MIID_MODEL={forced_model} MIID_MODEL_RANDOM={random_flag} "
+                f"MIID_INFERENCE_STEPS={inference_steps} MIID_GUIDANCE_SCALE={guidance_scale} "
+                f"FLUX_DEVICE={flux_device} MIID_ENABLE_CPU_OFFLOAD={enable_offload} "
+                f"MIID_SEQUENTIAL_CPU_OFFLOAD={seq_offload} PYTORCH_CUDA_ALLOC_CONF={alloc_conf}"
+            )
+
+            try:
+                import torch as _torch
+                if _torch.cuda.is_available():
+                    _props = _torch.cuda.get_device_properties(0)
+                    bt.logging.info(
+                        f"CUDA device: {_props.name} "
+                        f"({_props.total_memory / 1024 ** 3:.2f} GiB total)"
+                    )
+                else:
+                    bt.logging.info("CUDA device: (not available - using CPU/MPS)")
+            except Exception as _e:
+                bt.logging.debug(f"Could not query CUDA device info: {_e}")
 
             if not (os.environ.get("HF_TOKEN") or os.environ.get("HUGGINGFACE_TOKEN")):
                 bt.logging.warning(
@@ -429,6 +483,8 @@ class Miner(BaseMinerNeuron):
         if not image_request:
             return []
 
+        _free_gpu_memory("before_request")
+
         try:
             # 1. Decode base image
             bt.logging.info(f"Phase 4: Decoding base image: {image_request.image_filename}")
@@ -530,6 +586,16 @@ class Miner(BaseMinerNeuron):
         except Exception as e:
             bt.logging.error(f"Phase 4: Error in process_image_request: {e}")
             return []
+        finally:
+            try:
+                del base_image
+            except Exception:
+                pass
+            try:
+                del variations
+            except Exception:
+                pass
+            _free_gpu_memory("after_request")
 
     def Get_Respond_LLM(self, prompt: str) -> str:
         """
