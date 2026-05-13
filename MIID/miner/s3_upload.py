@@ -11,16 +11,8 @@ import bittensor as bt
 from pathlib import Path
 from typing import Optional
 
-# Try to import boto3 for S3 uploads
-try:
-    import boto3
-    from botocore.exceptions import ClientError, NoCredentialsError
-    BOTO3_AVAILABLE = True
-except ImportError:
-    BOTO3_AVAILABLE = False
-    bt.logging.warning("boto3 not installed. S3 uploads disabled, using local storage.")
-
-# Try to import requests for HTTP PUT uploads (public write buckets)
+# Miner uploads use a public write-only S3 bucket via HTTP PUT, so no AWS
+# credentials and no boto3 client are needed here.
 try:
     import requests
     REQUESTS_AVAILABLE = True
@@ -40,26 +32,6 @@ USE_S3 = os.environ.get("MIID_USE_S3", "true").lower() == "true" and REQUESTS_AV
 
 # Local storage directory (fallback or for sandbox testing)
 LOCAL_STORAGE_DIR = Path(os.environ.get("MIID_LOCAL_STORAGE", "/tmp/miid_submissions"))
-
-# S3 client (initialized lazily)
-_s3_client = None
-
-
-def get_s3_client():
-    """Get or create S3 client.
-    
-    Supports authenticated access. For public write buckets without credentials,
-    use upload_via_http_put() instead.
-    """
-    global _s3_client
-    if _s3_client is None and BOTO3_AVAILABLE:
-        try:
-            _s3_client = boto3.client('s3', region_name=S3_REGION)
-            bt.logging.info(f"[S3] Initialized S3 client for bucket: {S3_BUCKET_NAME}")
-        except Exception as e:
-            bt.logging.error(f"[S3] Failed to create S3 client: {e}")
-            return None
-    return _s3_client
 
 
 def upload_via_http_put(s3_key: str, data: bytes, content_type: str = 'application/octet-stream') -> bool:
@@ -210,24 +182,7 @@ def download_from_s3(s3_key: str) -> Optional[bytes]:
     Returns:
         Encrypted bytes, or None if not found
     """
-    # Try S3 download if configured
-    if USE_S3:
-        try:
-            s3_client = get_s3_client()
-            if s3_client:
-                response = s3_client.get_object(Bucket=S3_BUCKET_NAME, Key=s3_key)
-                data = response['Body'].read()
-                bt.logging.debug(f"[S3] Downloaded: s3://{S3_BUCKET_NAME}/{s3_key}")
-                return data
-        except ClientError as e:
-            if e.response['Error']['Code'] == 'NoSuchKey':
-                bt.logging.warning(f"[S3] File not found: {s3_key}")
-            else:
-                bt.logging.warning(f"[S3] Download failed: {e}. Trying local storage.")
-        except Exception as e:
-            bt.logging.warning(f"[S3] Unexpected error: {e}. Trying local storage.")
-
-    # Fallback to local storage
+    # Miner side is write-only via HTTP PUT; reads come from local storage only.
     try:
         local_path = LOCAL_STORAGE_DIR / s3_key
         if not local_path.exists():
@@ -251,24 +206,7 @@ def get_s3_metadata(s3_key: str) -> Optional[dict]:
     Returns:
         Metadata dict, or None if not found
     """
-    # Try S3 if configured
-    if USE_S3:
-        try:
-            s3_client = get_s3_client()
-            if s3_client:
-                response = s3_client.head_object(Bucket=S3_BUCKET_NAME, Key=s3_key)
-                metadata = response.get('Metadata', {})
-                bt.logging.debug(f"[S3] Got metadata for: {s3_key}")
-                return metadata
-        except ClientError as e:
-            if e.response['Error']['Code'] == '404':
-                bt.logging.warning(f"[S3] File not found: {s3_key}")
-            else:
-                bt.logging.warning(f"[S3] Failed to get metadata: {e}. Trying local storage.")
-        except Exception as e:
-            bt.logging.warning(f"[S3] Unexpected error: {e}. Trying local storage.")
-
-    # Fallback to local storage
+    # Miner side is write-only via HTTP PUT; metadata comes from local storage only.
     try:
         local_path = LOCAL_STORAGE_DIR / s3_key
         metadata_path = local_path.with_suffix(".meta.json")
