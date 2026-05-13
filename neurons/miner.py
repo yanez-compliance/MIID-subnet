@@ -174,6 +174,17 @@ class Miner(BaseMinerNeuron):
 
         if PHASE4_AVAILABLE:
             bt.logging.info("Phase 4 image generation: ENABLED")
+
+            forced_model = os.environ.get("MIID_MODEL", "").strip() or "(unset -> random base model)"
+            random_flag = os.environ.get("MIID_MODEL_RANDOM", "1").strip()
+            bt.logging.info(f"MIID_MODEL: {forced_model}")
+            bt.logging.info(f"MIID_MODEL_RANDOM: {random_flag}")
+
+            if not (os.environ.get("HF_TOKEN") or os.environ.get("HUGGINGFACE_TOKEN")):
+                bt.logging.warning(
+                    "Missing Hugging Face token. Set HF_TOKEN or HUGGINGFACE_TOKEN in your "
+                    'environment, e.g. export HF_TOKEN="hf_..."'
+                )
         else:
             bt.logging.warning(
                 "Phase 4 image generation: DISABLED (missing packages). "
