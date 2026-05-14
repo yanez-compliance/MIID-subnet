@@ -131,8 +131,8 @@ class IdentitySynapse(bt.Synapse):
                  Each name maps to a list of [name_variation, dob_variation, address_variation] arrays
     """
     
-    # Required request input, filled by sending dendrite caller
-    identity: List[List[str]]  # Each inner list contains [name, dob, address]
+    # Request input, filled by sending dendrite caller.
+    identity: List[List[str]] # Each inner list contains [name, dob, address]
     query_template: str
 
     timeout: float = 120.0

@@ -262,6 +262,20 @@ def get_background_variation_info(intensity: str) -> Dict[str, str]:
     }
 
 
+def get_background_variation_info_for_environment(
+    intensity: str, environment_key: str
+) -> Dict[str, str]:
+    """Background detail for a fixed environment (``indoor`` or ``outdoor``) and intensity."""
+    selected_info = BACKGROUND_ENVIRONMENT_TYPES[environment_key]
+    intensity_info = selected_info["intensities"][intensity]
+    return {
+        "environment_type": environment_key,
+        "environment_description": selected_info["description"],
+        "label": intensity_info["label"],
+        "detail": intensity_info["detail"],
+    }
+
+
 def select_random_variations(
     min_variations: int = 2,
     max_variations: int = 4
@@ -465,6 +479,48 @@ def get_random_background_variation() -> Dict[str, str]:
 
     type_info = IMAGE_VARIATION_TYPES["background_edit"]
     intensity_info = get_background_variation_info(intensity)
+
+    accessory = select_random_accessory()
+    description = (
+        f"{type_info['description']}. {intensity_info['environment_description']}. "
+        f"{accessory['description']}"
+    )
+    detail = f"{intensity_info['detail']}. Additionally, include: {accessory['detail']}"
+
+    return {
+        "type": "background_edit",
+        "intensity": intensity,
+        "description": description,
+        "detail": detail,
+    }
+
+
+def get_random_indoor_background_variation() -> Dict[str, str]:
+    """Get a ``background_edit`` variation constrained to indoor settings + weighted accessory."""
+    intensity = random.choice(ALL_INTENSITIES)
+    type_info = IMAGE_VARIATION_TYPES["background_edit"]
+    intensity_info = get_background_variation_info_for_environment(intensity, "indoor")
+
+    accessory = select_random_accessory()
+    description = (
+        f"{type_info['description']}. {intensity_info['environment_description']}. "
+        f"{accessory['description']}"
+    )
+    detail = f"{intensity_info['detail']}. Additionally, include: {accessory['detail']}"
+
+    return {
+        "type": "background_edit",
+        "intensity": intensity,
+        "description": description,
+        "detail": detail,
+    }
+
+
+def get_random_outdoor_background_variation() -> Dict[str, str]:
+    """Get a ``background_edit`` variation constrained to outdoor settings + weighted accessory."""
+    intensity = random.choice(ALL_INTENSITIES)
+    type_info = IMAGE_VARIATION_TYPES["background_edit"]
+    intensity_info = get_background_variation_info_for_environment(intensity, "outdoor")
 
     accessory = select_random_accessory()
     description = (

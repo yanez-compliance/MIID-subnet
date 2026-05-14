@@ -12,6 +12,6 @@ opencv-python>=4.8.0
 safetensors
 gdown
 
-# Drand timelock encryption (required so generated images are encrypted by default
-# before upload to S3 and only become decryptable after the target drand round).
-timelock==1.2.0
+# Drand timelock encryption is provided by bittensor itself via
+# `bittensor.timelock` (backed by the `bittensor_drand` Rust extension that
+# ships with bittensor>=9). No separate `timelock` package is required.

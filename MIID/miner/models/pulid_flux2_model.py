@@ -68,7 +68,11 @@ def load_pipeline(
     except ImportError:
         from _cuda_place import place_diffusers_pipeline
 
-    place_diffusers_pipeline(pipe, dev, default_offload_on_cuda=True)
+    place_diffusers_pipeline(
+        pipe, dev,
+        default_offload_on_cuda=True,
+        prefer_sequential_offload=True,
+    )
     return pipe
 
 

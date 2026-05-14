@@ -40,17 +40,17 @@ from MIID.utils.verify_message import verify_message
 # =============================================================================
 BASE_IMAGES_DIR = Path("/home/ubuntu/YanezMIIDManage/api_image/base_images")
 
-# Batch 3 image pool config
-BATCH_DIR      = Path("/home/ubuntu/YanezMIIDManage/api_image/batch_3_3-27-2026")
-USED_DIR       = Path("/home/ubuntu/YanezMIIDManage/api_image/used_images_batch_3_3-27-26")
-BATCH_LOG      = Path("/home/ubuntu/YanezMIIDManage/api_image/used_batch_3_3_27_2026.json")
+# Batch 4 image pool config
+BATCH_DIR      = Path("/home/ubuntu/YanezMIIDManage/api_image/batch_4_4-13-2026")
+USED_DIR       = Path("/home/ubuntu/YanezMIIDManage/api_image/used_batch_4_4-13-2026")
+BATCH_LOG      = Path("/home/ubuntu/YanezMIIDManage/api_image/used_batch_4_4_13_2026.json")
 ALLOWED_EXT    = ('.png', '.jpg', '.jpeg', '.gif', '.webp')
 _batch_lock    = threading.Lock()
 HOTKEY_TO_FOLDER = {
     "5DUB7kNLvvx8Dj7D8tn54N1C7Xok6GodNPQE2WECCaL9Wgpr": "miid",
     "5GWzXSra6cBM337nuUU7YTjZQ6ewT2VakDpMj8Pw2i8v8PVs": "yuma",
     "5C4qiYkqKjqGDSvzpf6YXCcnBgM6punh8BQJRP78bqMGsn54": "rt21",
-    "5DyM1rxnDu8QSjbbh5bPV2GMK6UTPRXdUM6mNViBBut9Ma6w": "tensora",
+    "5HK5tp6t2S59DywmHRWPBVJeJ86T61KjurYqeooqj8sREpeN": "tensora",
     "5HbUFHW4XVhbQvMbSy7WDjvhHb62nuYgP1XBsmmz9E2E2K6p": "otf",
     "5GQqAhLKVHRLpdTqRg1yc3xu7y47DicJykSpggE2GuDbfs54": "rizzo",
     "5CnkkjPdfsA6jJDHv2U6QuiKiivDuvQpECC13ffdmSDbkgtt": "testnet",
@@ -406,7 +406,7 @@ def get_validator_image(hotkey):
     with _batch_lock:
         # If BATCH_DIR is empty, recycle all images from USED_DIR back before serving
         _recycle_if_empty()
-
+        
         # Get available images from batch dir
         available = [f for f in BATCH_DIR.iterdir() if f.is_file() and f.suffix.lower() in ALLOWED_EXT]
         if not available:

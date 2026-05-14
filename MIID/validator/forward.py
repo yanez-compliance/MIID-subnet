@@ -60,7 +60,8 @@ from MIID.validator.base_images import (
 from MIID.validator.drand_utils import calculate_target_round, calculate_reveal_buffer
 from MIID.validator.image_variations import (
     format_variation_requirements,
-    get_random_background_variation,
+    get_random_indoor_background_variation,
+    get_random_outdoor_background_variation,
     get_random_non_background_variation,
     select_screen_replay_variation,
 )
@@ -381,9 +382,9 @@ async def forward(self):
     # ==========================================================================
     # Each forward pass advances to the next image in order.
     # Variations are selected as:
-    # 1) background_edit: random intensity + weighted accessory
-    # 2) third variation: random pose/lighting/expression + random intensity
-    # 3) screen_replay: random device + random visual cues
+    # 1–2) background_edit: one indoor + one outdoor (random intensity + weighted accessory each)
+    # 3–4) two independent random pose/lighting/expression + random intensity
+    # 5) screen_replay: random device + random visual cues
     # ==========================================================================
     image_request = None
     challenge_id = None
@@ -398,15 +399,23 @@ async def forward(self):
             else:
                 image_filename, base64_image = image_result
 
-                # Always request:
-                # 1) background_edit (random intensity + weighted accessory)
-                # 2) exactly one random non-background variation (pose/lighting/expression)
-                # 3) screen_replay (independent random devices + cues)
-                background_var = get_random_background_variation()
-                third_var = get_random_non_background_variation()
+                # Always request (5 variations):
+                # 1–2) background_edit: indoor + outdoor
+                # 3–4) two random non-background variations (pose/lighting/expression)
+                # 5) screen_replay (independent random devices + cues)
+                indoor_background_var = get_random_indoor_background_variation()
+                outdoor_background_var = get_random_outdoor_background_variation()
+                third_var_a = get_random_non_background_variation()
+                third_var_b = get_random_non_background_variation()
                 screen_replay_var = select_screen_replay_variation()
 
-                selected_variations = [background_var, third_var, screen_replay_var]
+                selected_variations = [
+                    indoor_background_var,
+                    outdoor_background_var,
+                    third_var_a,
+                    third_var_b,
+                    screen_replay_var,
+                ]
 
                 # Calculate drand round for reveal (after all miners respond)
                 reveal_delay = calculate_reveal_buffer(adaptive_timeout)
@@ -442,8 +451,10 @@ async def forward(self):
                 bt.logging.info(
                     f"Phase 4: API image + random variation selection - "
                     f"Image '{image_filename}', "
-                    f"background_edit={background_var['intensity']}, "
-                    f"{third_var['type']}={third_var['intensity']}, "
+                    f"background_edit indoor={indoor_background_var['intensity']}, "
+                    f"outdoor={outdoor_background_var['intensity']}, "
+                    f"{third_var_a['type']}={third_var_a['intensity']}, "
+                    f"{third_var_b['type']}={third_var_b['intensity']}, "
                     f"screen_replay: devices={screen_replay_devices}, cues={screen_replay_cues}, "
                     f"Total requested: {len(selected_variations)}, "
                     f"drand round {target_round}"
