@@ -90,6 +90,47 @@ def _free_gpu_memory(stage: str = "") -> None:
     except Exception as _e:
         bt.logging.debug(f"_free_gpu_memory({stage}) failed: {_e}")
 
+
+def _unload_ollama_model_from_gpu(host: str, model_name: str) -> None:
+    """Ask Ollama to unload the active model so GPU VRAM is free for Phase 4 (FLUX).
+
+    Ollama API: POST /api/generate with ``keep_alive: 0`` drops weights from VRAM.
+
+    Run Ollama with GPU visible for faster LLM work; call this immediately before the
+    image pipeline. Set ``MIID_UNLOAD_OLLAMA_BEFORE_PHASE4=0`` if Ollama is CPU-only.
+    """
+    try:
+        import json
+        import urllib.error
+        import urllib.request
+
+        base = host.rstrip("/")
+        body = json.dumps(
+            {
+                "model": model_name,
+                "prompt": "",
+                "keep_alive": 0,
+                "stream": False,
+            },
+        ).encode()
+        req = urllib.request.Request(
+            f"{base}/api/generate",
+            data=body,
+            headers={"Content-Type": "application/json"},
+            method="POST",
+        )
+        urllib.request.urlopen(req, timeout=120).read()
+        bt.logging.info(f"Ollama: unload requested for model={model_name!r} (keep_alive=0)")
+    except urllib.error.HTTPError as exc:
+        detail = exc.read().decode(errors="replace")[:500]
+        bt.logging.warning(
+            "Ollama unload HTTP %s (non-fatal): %s",
+            getattr(exc, "code", "?"),
+            detail,
+        )
+    except Exception as exc:
+        bt.logging.warning(f"Ollama unload request failed (non-fatal): {exc}")
+
 # Bittensor Miner Template:
 from MIID.protocol import IdentitySynapse, S3Submission
 
@@ -435,6 +476,18 @@ class Miner(BaseMinerNeuron):
                 synapse.s3_submissions = []
             else:
                 try:
+                    if os.environ.get(
+                        "MIID_UNLOAD_OLLAMA_BEFORE_PHASE4", "1",
+                    ).strip().lower() not in ("0", "false", "no"):
+                        _unload_ollama_model_from_gpu(
+                            getattr(
+                                self.config.neuron,
+                                "ollama_url",
+                                "http://127.0.0.1:11434",
+                            ),
+                            self.model_name,
+                        )
+                        _free_gpu_memory("after_ollama_unload")
                     s3_submissions = self.process_image_request(synapse)
                     synapse.s3_submissions = s3_submissions
                     bt.logging.info(f"Phase 4: Generated {len(s3_submissions)} S3 submissions")
