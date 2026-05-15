@@ -16,7 +16,8 @@ Prerequisites:
      git clone https://github.com/mk-minchul/AdaFace.git MIID/miner/AdaFace
 
   2. Install dependencies (if not already installed):
-     pip install opencv-python torch pillow numpy
+     pip install -r requirements-miner.txt
+     (includes opencv-python and pytorch-lightning for loading .ckpt checkpoints)
 
   3. Download a pretrained AdaFace model from:
      https://github.com/mk-minchul/AdaFace#pretrained-models
