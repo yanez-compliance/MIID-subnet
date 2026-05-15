@@ -533,7 +533,7 @@ class Miner(BaseMinerNeuron):
                         bt.logging.warning(
                             f"Phase 4: Skipping {var['variation_type']} - face identity not preserved"
                         )
-                        continue
+                        
 
                     # Sign the image hash
                     message = f"challenge:{challenge_id}:hash:{var['image_hash']}"
