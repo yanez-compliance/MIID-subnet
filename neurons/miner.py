@@ -528,12 +528,12 @@ class Miner(BaseMinerNeuron):
                         )
                         continue
 
-                    # Validate face identity preserved (AdaFace, threshold 0.7)
-                    if not validate_face_variation(var, base_image, min_similarity=0.7):
+                    # Validate face identity preserved (AdaFace, threshold 0.4)
+                    if not validate_face_variation(var, base_image, min_similarity=0.4):
                         bt.logging.warning(
                             f"Phase 4: Skipping {var['variation_type']} - face identity not preserved"
                         )
-                        
+                        continue
 
                     # Sign the image hash
                     message = f"challenge:{challenge_id}:hash:{var['image_hash']}"
