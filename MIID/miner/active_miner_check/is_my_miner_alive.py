@@ -50,13 +50,13 @@ def get_local_hotkey_ss58():
     """
     wallet_name = input("Wallet name (default: default): ").strip() or "default"
     hotkey_name = input("Hotkey name (default: default): ").strip() or "default"
-    wallet = bt.wallet(name=wallet_name, hotkey=hotkey_name)
+    wallet = bt.Wallet(name=wallet_name, hotkey=hotkey_name)
     return wallet.hotkey.ss58_address
 
 
 def main():
     network_name, netuid = select_network_and_netuid()
-    subtensor = bt.subtensor(network=network_name)
+    subtensor = bt.Subtensor(network=network_name)
     metagraph = subtensor.metagraph(netuid=netuid)
     my_hotkey = get_local_hotkey_ss58()
 

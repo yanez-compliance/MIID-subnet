@@ -9,6 +9,7 @@ diffusers>=0.30.0
 transformers>=4.40.0
 accelerate>=0.30.0
 opencv-python>=4.8.0
+pytorch-lightning>=2.0.0  # required to load AdaFace .ckpt checkpoints (PyTorch Lightning)
 safetensors
 gdown
 
