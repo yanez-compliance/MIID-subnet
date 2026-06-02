@@ -1,5 +1,5 @@
 from binascii import unhexlify
-from substrateinterface import Keypair
+from bittensor_wallet import Keypair
 
 def verify_message(file_path: str) -> None:
     """

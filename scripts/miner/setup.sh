@@ -197,10 +197,11 @@ create_and_activate_venv() {
 # ---------------------------------------------------------
 install_python_requirements() {
   info_msg "Installing Python dependencies..."
-  pip install --upgrade pip setuptools wheel || handle_error "Failed to upgrade pip, setuptools, and wheel"
+  # Pin setuptools<82: v82+ drops pkg_resources and breaks isolated `pip install -e .`
+  pip install --upgrade pip "setuptools>=68,<82" wheel || handle_error "Failed to upgrade pip, setuptools, and wheel"
   
   if [ -f requirements.txt ]; then
-    pip install -r requirements.txt || handle_error "Failed to install Python dependencies"
+    pip install -r requirements.txt || handle_error "Failed to install base Python dependencies"
   else
     warn_msg "requirements.txt not found. Installing core dependencies."
     pip install numpy pandas faker tqdm Levenshtein python-Levenshtein metaphone || handle_error "Failed to install core dependencies"
@@ -214,8 +215,76 @@ install_python_requirements() {
 # ---------------------------------------------------------
 install_miid() {
   info_msg "Installing MIID package in editable mode..."
-  pip install -e . || handle_error "Failed to install MIID package"
+  if ! pip install -e .; then
+    warn_msg "Editable install with build isolation failed; retrying with --no-build-isolation (venv setuptools)..."
+    pip install -e . --no-build-isolation || handle_error "Failed to install MIID package"
+  fi
   success_msg "MIID package installed successfully."
+}
+
+# ---------------------------------------------------------
+# Section 6b: Phase 4 — AdaFace + diffusion model setup
+# Clones AdaFace repo, downloads pretrained model, and
+# optionally pre-downloads the FLUX.2-klein diffusion model.
+# ---------------------------------------------------------
+install_phase4_deps() {
+  info_msg "Setting up Phase 4 (face image variation) dependencies..."
+
+  # Install miner-only Python packages for full mode.
+  if [ -f requirements-miner.txt ]; then
+    info_msg "Installing miner-specific dependencies (diffusion models, face validation, drand timelock)..."
+    pip install -r requirements-miner.txt || handle_error "Failed to install miner dependencies"
+  else
+    warn_msg "requirements-miner.txt not found. Miner image generation packages may be missing."
+  fi
+
+  # Ensure drand timelock encryption is available. This is the default path:
+  # generated images are encrypted before upload so they only decrypt after a
+  # future drand round. We try a direct install as a safety net in case the
+  # requirements file was missing the entry, then verify the import works.
+  info_msg "Ensuring drand timelock encryption is installed..."
+  if ! python -c "import timelock" >/dev/null 2>&1; then
+    pip install timelock || warn_msg "Could not install 'timelock' on this platform. Image encryption will fall back to raw bytes."
+  fi
+  if python -c "import timelock" >/dev/null 2>&1; then
+    success_msg "Drand timelock encryption is enabled (images will be encrypted by default)."
+  else
+    warn_msg "'timelock' is not importable. The miner will run, but images will NOT be encrypted."
+  fi
+
+  # Clone AdaFace if not already present
+  local ADAFACE_DIR="MIID/miner/AdaFace"
+  if [ ! -d "$ADAFACE_DIR" ]; then
+    info_msg "Cloning AdaFace repository..."
+    git clone https://github.com/mk-minchul/AdaFace.git "$ADAFACE_DIR" || handle_error "Failed to clone AdaFace"
+    success_msg "AdaFace cloned successfully."
+  else
+    info_msg "AdaFace already present. Skipping clone."
+  fi
+
+  # Download pretrained AdaFace model
+  local ADAFACE_MODEL="$ADAFACE_DIR/pretrained/adaface_ir50_ms1mv2.ckpt"
+  if [ ! -f "$ADAFACE_MODEL" ]; then
+    info_msg "Downloading AdaFace pretrained model..."
+    mkdir -p "$ADAFACE_DIR/pretrained"
+    pip install gdown 2>/dev/null
+    gdown 1eUaSHG4pGlIZK7hBkqjyp2fc2epKoBvI -O "$ADAFACE_MODEL" || warn_msg "Failed to download AdaFace model via gdown. Download manually from: https://drive.google.com/file/d/1eUaSHG4pGlIZK7hBkqjyp2fc2epKoBvI/view?usp=sharing and place at $ADAFACE_MODEL"
+    if [ -f "$ADAFACE_MODEL" ]; then
+      success_msg "AdaFace model downloaded."
+    fi
+  else
+    info_msg "AdaFace model already present. Skipping download."
+  fi
+
+  # Pre-download FLUX.2-klein diffusion model (requires HF_TOKEN)
+  if [ -n "$HF_TOKEN" ]; then
+    info_msg "Pre-downloading FLUX.2-klein diffusion model (this may take a while)..."
+    python -m MIID.miner.downloading_model && success_msg "FLUX.2-klein model downloaded." || warn_msg "Could not pre-download model. It will be downloaded on first miner run."
+  else
+    warn_msg "HF_TOKEN not set. Skipping diffusion model download. Set HF_TOKEN before running the miner."
+  fi
+
+  success_msg "Phase 4 setup completed."
 }
 
 # ---------------------------------------------------------
@@ -226,6 +295,46 @@ install_bittensor() {
   info_msg "Installing Bittensor..."
   pip install bittensor || handle_error "Failed to install Bittensor"
   success_msg "Bittensor installed successfully."
+}
+
+# ---------------------------------------------------------
+# Section 7b: btcli sanity check + scalecodec/cyscale conflict fix
+#
+# `async-substrate-interface` (used by bittensor-cli) refuses to import when
+# BOTH `scalecodec` and `cyscale` are installed.  Some transitive deps may
+# still pull in the legacy `scalecodec`, which would make the first `btcli`
+# call crash for a brand-new miner.  This step detects and repairs that
+# situation BEFORE the user runs any `btcli` command.
+# ---------------------------------------------------------
+ensure_btcli_works() {
+  info_msg "Verifying btcli is importable (scalecodec/cyscale conflict check)..."
+
+  local has_scalecodec="no"
+  local has_cyscale="no"
+  python -c "import scalecodec" >/dev/null 2>&1 && has_scalecodec="yes"
+  python -c "import cyscale" >/dev/null 2>&1 && has_cyscale="yes"
+
+  if [ "$has_scalecodec" = "yes" ] && [ "$has_cyscale" = "yes" ]; then
+    warn_msg "Both 'scalecodec' and 'cyscale' detected. Removing legacy 'scalecodec' to avoid btcli startup crash."
+    pip uninstall -y scalecodec >/dev/null 2>&1 || true
+  elif [ "$has_scalecodec" = "yes" ] && [ "$has_cyscale" = "no" ]; then
+    info_msg "Only 'scalecodec' is installed; reinstalling 'cyscale' for async-substrate-interface compatibility."
+    pip uninstall -y scalecodec >/dev/null 2>&1 || true
+    pip install --force-reinstall cyscale >/dev/null 2>&1 || warn_msg "Could not install 'cyscale'. btcli may fail to start."
+  fi
+
+  if btcli --version >/dev/null 2>&1; then
+    success_msg "btcli is ready."
+  else
+    warn_msg "btcli could not start. Attempting recovery (uninstall scalecodec, reinstall cyscale)..."
+    pip uninstall -y scalecodec cyscale >/dev/null 2>&1 || true
+    pip install --force-reinstall cyscale >/dev/null 2>&1 || true
+    if btcli --version >/dev/null 2>&1; then
+      success_msg "btcli is ready after recovery."
+    else
+      warn_msg "btcli still failing. Run 'btcli --version' inside 'miner_env' to see the error and consult docs/miner.md."
+    fi
+  fi
 }
 
 # ---------------------------------------------------------
@@ -249,13 +358,63 @@ main() {
   install_python_requirements
   install_miid
   install_bittensor
-  
+
+  # Ask whether to install Phase 4 (image generation) packages
+  local INSTALL_MODE="${1:-}"
+  if [ "$INSTALL_MODE" = "--full" ]; then
+    info_msg "Full mode requested (--full flag). Installing Phase 4 packages..."
+    install_phase4_deps
+  elif [ "$INSTALL_MODE" = "--basic" ]; then
+    info_msg "Basic mode requested (--basic flag). Skipping Phase 4 packages."
+  else
+    echo ""
+    info_msg "Choose setup mode:"
+    echo -e "   [B] Basic  — Name variations only (no GPU required)"
+    echo -e "   [F] Full   — Name + face image variations (GPU recommended)"
+    echo ""
+    read -p "Enter B or F (default: F): " -n 1 -r
+    echo
+    if [[ $REPLY =~ ^[Bb]$ ]]; then
+      info_msg "Basic mode selected. Skipping Phase 4 packages."
+    else
+      info_msg "Full mode selected. Installing Phase 4 packages..."
+      install_phase4_deps
+      INSTALL_MODE="--full"
+    fi
+  fi
+
+  # Run the btcli health check AFTER every pip install step so a transitive
+  # `scalecodec` from any later package does not break the first `btcli` call.
+  ensure_btcli_works
+
+  echo ""
+  info_msg "============================================"
   info_msg "MIID Miner setup completed successfully!"
+  info_msg "============================================"
+  echo ""
+
+  if [ "$INSTALL_MODE" = "--full" ]; then
+    info_msg "Mode: FULL (name + image variations)"
+    echo ""
+    info_msg "Before running the miner, set these environment variables:"
+    echo -e "   export HF_TOKEN=\"hf_YOUR_TOKEN_HERE\"    # Get from huggingface.co/settings/tokens"
+    echo -e "   export FLUX_DEVICE=\"cuda\"                # or \"mps\" for Apple Silicon, \"cpu\" for CPU-only"
+  else
+    info_msg "Mode: BASIC (name variations only)"
+    echo ""
+    info_msg "To upgrade to Full later, run:"
+    echo -e "   source miner_env/bin/activate"
+    echo -e "   pip install -r requirements-miner.txt"
+    echo -e "   See docs/miner.md 'Upgrading from Basic to Full' for details."
+  fi
+
+  echo ""
   info_msg "To start using your miner:"
-  echo -e "   1. Register your miner: btcli s register --netuid 54 --wallet.name your_wallet --wallet.hotkey your_hotkey --subtensor.network finney"
-  echo -e "   2. Activate the virtual environment: source miner_env/bin/activate"
-  echo -e "   3. Start your miner: python neurons/miner.py --netuid 54 --wallet.name your_wallet --wallet.hotkey your_hotkey --subtensor.network finney"
-  echo -e "   4. For more options, run: python neurons/miner.py --help"
+  echo -e "   1. Activate the virtual environment: source miner_env/bin/activate"
+  echo -e "   2. Register your miner: btcli subnet register --netuid 54 --wallet.name your_wallet --wallet.hotkey your_hotkey --subtensor.network finney"
+  echo -e "   3. Start your miner: python neurons/miner.py --netuid 54 --subtensor.network finney --subtensor.chain_endpoint wss://entrypoint-finney.opentensor.ai:443 --wallet.name your_wallet --wallet.hotkey your_hotkey --logging.debug"
+  echo ""
+  info_msg "For the full guide, see: docs/miner.md"
   echo -e "\n----------------------------------------\n"
 }
 

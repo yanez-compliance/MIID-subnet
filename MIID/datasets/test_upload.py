@@ -6,7 +6,7 @@ import json
 import requests
 from MIID.utils.sign_message import sign_message
 from MIID.utils.misc import upload_data
-from substrateinterface import Keypair
+from bittensor_wallet import Keypair
 import bittensor
 
 # === CONFIGURATION ===

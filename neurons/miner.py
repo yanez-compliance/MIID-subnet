@@ -49,6 +49,8 @@ different runs and facilitate analysis of results over time.
 
 import time
 import typing
+import io
+import gc
 import bittensor as bt
 import ollama
 import pandas as pd
@@ -56,6 +58,37 @@ import os
 import numpy as np
 from typing import List, Dict, Tuple, Any, Optional
 from tqdm import tqdm
+from PIL import Image
+
+
+def _free_gpu_memory(stage: str = "") -> None:
+    """Release inter-request GPU memory and log resident VRAM.
+
+    Diffusers + sequential CPU offload leave activation buffers and cached
+    allocations alive until Python releases them.  Calling this before and
+    after each image request keeps VRAM from creeping up over time.
+    """
+    try:
+        gc.collect()
+        import torch as _torch
+        if _torch.cuda.is_available():
+            _torch.cuda.empty_cache()
+            try:
+                _torch.cuda.ipc_collect()
+            except Exception:
+                pass
+            free_b, total_b = _torch.cuda.mem_get_info(0)
+            reserved_b = _torch.cuda.memory_reserved(0)
+            allocated_b = _torch.cuda.memory_allocated(0)
+            gib = 1024 ** 3
+            bt.logging.info(
+                f"GPU mem [{stage}]: "
+                f"free={free_b / gib:.2f} GiB / total={total_b / gib:.2f} GiB, "
+                f"torch_reserved={reserved_b / gib:.2f} GiB, "
+                f"torch_allocated={allocated_b / gib:.2f} GiB"
+            )
+    except Exception as _e:
+        bt.logging.debug(f"_free_gpu_memory({stage}) failed: {_e}")
 
 # Bittensor Miner Template:
 from MIID.protocol import IdentitySynapse, S3Submission
@@ -65,10 +98,14 @@ from MIID.base.miner import BaseMinerNeuron
 
 from bittensor.core.errors import NotVerifiedException
 
-# Phase 4 imports
-from MIID.miner.image_generator import decode_base_image, generate_variations
-from MIID.miner.drand_encrypt import encrypt_image_for_drand, is_timelock_available
-from MIID.miner.s3_upload import upload_to_s3
+# Phase 4 imports (optional -- miner still works for name variations without these)
+try:
+    from MIID.miner.image_generator import decode_base_image, generate_variations, validate_face_variation
+    from MIID.miner.drand_encrypt import encrypt_image_for_drand, is_timelock_available
+    from MIID.miner.s3_upload import upload_to_s3
+    PHASE4_AVAILABLE = True
+except ImportError as _phase4_err:
+    PHASE4_AVAILABLE = False
 
 
 class Miner(BaseMinerNeuron):
@@ -155,6 +192,49 @@ class Miner(BaseMinerNeuron):
 
         self.axon.verify_fns[IdentitySynapse.__name__] = self._verify_validator_request
 
+        if PHASE4_AVAILABLE:
+            bt.logging.info("Phase 4 image generation: ENABLED")
+
+            forced_model = os.environ.get("MIID_MODEL", "").strip() or "(unset -> random base model)"
+            random_flag = os.environ.get("MIID_MODEL_RANDOM", "1").strip()
+            inference_steps = os.environ.get("MIID_INFERENCE_STEPS", "20").strip()
+            guidance_scale = os.environ.get("MIID_GUIDANCE_SCALE", "3.5").strip()
+            flux_device = os.environ.get("FLUX_DEVICE", "(auto)").strip()
+            enable_offload = os.environ.get("MIID_ENABLE_CPU_OFFLOAD", "(default)").strip()
+            seq_offload = os.environ.get("MIID_SEQUENTIAL_CPU_OFFLOAD", "1").strip()
+            alloc_conf = os.environ.get("PYTORCH_CUDA_ALLOC_CONF", "(unset)").strip()
+            bt.logging.info(
+                f"Phase 4 env: MIID_MODEL={forced_model} MIID_MODEL_RANDOM={random_flag} "
+                f"MIID_INFERENCE_STEPS={inference_steps} MIID_GUIDANCE_SCALE={guidance_scale} "
+                f"FLUX_DEVICE={flux_device} MIID_ENABLE_CPU_OFFLOAD={enable_offload} "
+                f"MIID_SEQUENTIAL_CPU_OFFLOAD={seq_offload} PYTORCH_CUDA_ALLOC_CONF={alloc_conf}"
+            )
+
+            try:
+                import torch as _torch
+                if _torch.cuda.is_available():
+                    _props = _torch.cuda.get_device_properties(0)
+                    bt.logging.info(
+                        f"CUDA device: {_props.name} "
+                        f"({_props.total_memory / 1024 ** 3:.2f} GiB total)"
+                    )
+                else:
+                    bt.logging.info("CUDA device: (not available - using CPU/MPS)")
+            except Exception as _e:
+                bt.logging.debug(f"Could not query CUDA device info: {_e}")
+
+            if not (os.environ.get("HF_TOKEN") or os.environ.get("HUGGINGFACE_TOKEN")):
+                bt.logging.warning(
+                    "Missing Hugging Face token. Set HF_TOKEN or HUGGINGFACE_TOKEN in your "
+                    'environment, e.g. export HF_TOKEN="hf_..."'
+                )
+        else:
+            bt.logging.warning(
+                "Phase 4 image generation: DISABLED (missing packages). "
+                "Install with: pip install -r requirements-miner.txt  "
+                "See docs/miner.md for the full setup."
+            )
+
     async def _verify_validator_request(self, synapse: IdentitySynapse) -> None:
         """
         Rejects any RPC that is not cryptographically proven to come from
@@ -166,6 +246,9 @@ class Miner(BaseMinerNeuron):
         """
         # ----------  basic sanity checks  ----------
         if synapse.dendrite is None:
+            msg = "Rejecting request: missing dendrite terminal (nothing logged past this = no inbound axon call)."
+            bt.logging.warning(msg)
+            print(f"verify: {msg}", flush=True)
             raise NotVerifiedException("Missing dendrite terminal in request")
 
         hotkey    = synapse.dendrite.hotkey
@@ -176,6 +259,9 @@ class Miner(BaseMinerNeuron):
 
         # 1 — is the sender even on our allow‑list?
         if hotkey not in self.WHITELISTED_VALIDATORS:
+            msg = f"Rejecting request: validator hotkey not in WHITELISTED_VALIDATORS: {hotkey}"
+            bt.logging.warning(msg)
+            print(f"verify: {msg}", flush=True)
             raise NotVerifiedException(f"{hotkey} is not a whitelisted validator")
 
         # 3 — run all the standard Bittensor checks (nonce window, replay,
@@ -192,7 +278,14 @@ class Miner(BaseMinerNeuron):
             f"Verifying message: {message}"
         )
 
-        await self.axon.default_verify(synapse)
+        try:
+            await self.axon.default_verify(synapse)
+        except NotVerifiedException as e:
+            bt.logging.warning(
+                f"default_verify failed for whitelisted hotkey {hotkey}: {e}"
+            )
+            print(f"verify: default_verify failed for {hotkey}: {e}", flush=True)
+            raise
 
         # 5 — all good ➜ let the middleware continue
         bt.logging.info(
@@ -317,16 +410,51 @@ class Miner(BaseMinerNeuron):
         # Phase 4: Process Image Request
         # ==========================================================================
         if hasattr(synapse, 'image_request') and synapse.image_request is not None:
-            try:
-                s3_submissions = self.process_image_request(synapse)
-                synapse.s3_submissions = s3_submissions
-                bt.logging.info(f"Phase 4: Generated {len(s3_submissions)} S3 submissions")
-            except Exception as e:
-                bt.logging.error(f"Phase 4: Failed to process image request: {e}")
+            bt.logging.info("Phase 4: image_request present on synapse; starting image pipeline")
+            print("Phase 4: image_request present on synapse; starting image pipeline", flush=True)
+            if not PHASE4_AVAILABLE:
+                bt.logging.warning(
+                    "Phase 4: Received image request but Phase 4 packages are not installed. "
+                    "Skipping. Install with: pip install -r requirements-miner.txt"
+                )
+                print(
+                    "Phase 4: skipping image request (packages not installed); pip install -r requirements-miner.txt",
+                    flush=True,
+                )
                 synapse.s3_submissions = []
+            else:
+                try:
+                    s3_submissions = self.process_image_request(synapse)
+                    synapse.s3_submissions = s3_submissions
+                    bt.logging.info(f"Phase 4: Generated {len(s3_submissions)} S3 submissions")
+                    print(f"Phase 4: Generated {len(s3_submissions)} S3 submissions", flush=True)
+                except Exception as e:
+                    bt.logging.error(f"Phase 4: Failed to process image request: {e}")
+                    print(f"Phase 4: Failed to process image request: {e}", flush=True)
+                    synapse.s3_submissions = []
         # ==========================================================================
 
         return synapse
+
+    def is_valid_image_bytes(self, image_bytes: bytes) -> bool:
+        """
+        Validate whether raw bytes represent a valid image of any supported format.
+
+        This uses Pillow's image decoder to verify integrity without fully loading
+        pixel data.
+
+        Args:
+            image_bytes: Raw image bytes
+
+        Returns:
+            True if the bytes represent a valid image, False otherwise
+        """
+        try:
+            with Image.open(io.BytesIO(image_bytes)) as img:
+                img.verify()  # Verifies file integrity without decoding pixels
+            return True
+        except Exception:
+            return False
 
     def process_image_request(self, synapse: IdentitySynapse) -> List[S3Submission]:
         """Process Phase 4 image variation request.
@@ -344,17 +472,29 @@ class Miner(BaseMinerNeuron):
         if not image_request:
             return []
 
+        _free_gpu_memory("before_request")
+
         try:
             # 1. Decode base image
             bt.logging.info(f"Phase 4: Decoding base image: {image_request.image_filename}")
             base_image = decode_base_image(image_request.base_image)
 
-            # 2. Generate variations (SANDBOX: returns copies)
-            bt.logging.info(f"Phase 4: Generating {image_request.requested_variations} variations")
+            # Extract seed image name from filename (remove .png extension if present)
+            seed_image_name = image_request.image_filename
+            if seed_image_name.endswith('.png'):
+                seed_image_name = seed_image_name[:-4]  # Remove .png extension
+            elif seed_image_name.endswith('.jpg') or seed_image_name.endswith('.jpeg'):
+                seed_image_name = seed_image_name.rsplit('.', 1)[0]  # Remove extension
+
+            # 2. Generate variations via FLUX: pass full variation_requests (type + intensity per variation)
+            #    so the model gets the correct prompt for each (pose_edit/light, expression_edit/medium, etc.)
+            bt.logging.info(
+                f"Phase 4: Generating {image_request.requested_variations} variations "
+                f"(from validator: {[f'{v.type}({v.intensity})' for v in image_request.variation_requests]})"
+            )
             variations = generate_variations(
                 base_image,
-                image_request.variation_types,
-                image_request.requested_variations
+                image_request.variation_requests
             )
 
             # 3. Process each variation
@@ -370,6 +510,20 @@ class Miner(BaseMinerNeuron):
 
             for var in variations:
                 try:
+                    # Validate image before processing
+                    if not self.is_valid_image_bytes(var["image_bytes"]):
+                        bt.logging.warning(
+                            f"Phase 4: Skipping invalid/corrupt image for {var['variation_type']}"
+                        )
+                        continue
+
+                    # Validate face identity preserved (AdaFace, threshold 0.4)
+                    if not validate_face_variation(var, base_image, min_similarity=0.4):
+                        bt.logging.warning(
+                            f"Phase 4: Skipping {var['variation_type']} - face identity not preserved"
+                        )
+                        continue
+
                     # Sign the image hash
                     message = f"challenge:{challenge_id}:hash:{var['image_hash']}"
                     signature = self.wallet.hotkey.sign(message.encode()).hex()
@@ -397,7 +551,8 @@ class Miner(BaseMinerNeuron):
                         target_round=target_round,
                         challenge_id=challenge_id,
                         variation_type=var["variation_type"],
-                        path_signature=path_signature
+                        path_signature=path_signature,
+                        seed_image_name=seed_image_name
                     )
 
                     if s3_key:
@@ -420,6 +575,16 @@ class Miner(BaseMinerNeuron):
         except Exception as e:
             bt.logging.error(f"Phase 4: Error in process_image_request: {e}")
             return []
+        finally:
+            try:
+                del base_image
+            except Exception:
+                pass
+            try:
+                del variations
+            except Exception:
+                pass
+            _free_gpu_memory("after_request")
 
     def Get_Respond_LLM(self, prompt: str) -> str:
         """
@@ -846,12 +1011,14 @@ Remember: Only provide the name variations in a clean, comma-separated format.
             bt.logging.warning(
                 "Received a request without a dendrite or hotkey."
             )
+            print("blacklist: missing dendrite or hotkey", flush=True)
             return True, "Missing dendrite or hotkey"
 
         if synapse.dendrite.hotkey not in self.WHITELISTED_VALIDATORS:
-            bt.logging.trace(
-                f"Blacklisting un-registered hotkey {synapse.dendrite.hotkey}"
-            )
+            hk = synapse.dendrite.hotkey
+            msg = f"Blacklisting request (hotkey not in WHITELISTED_VALIDATORS): {hk}"
+            bt.logging.warning(msg)
+            print(f"blacklist: {msg}", flush=True)
             return True, "Unrecognized hotkey"
 
         # If all checks pass, allow the request

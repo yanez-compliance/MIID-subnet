@@ -1,0 +1,5 @@
+[build-system]
+# setuptools 82+ removed pkg_resources; legacy setup.py + isolated editable
+# installs need a 81.x setuptools until the project migrates fully to PEP 517 metadata.
+requires = ["setuptools>=68,<82", "wheel"]
+build-backend = "setuptools.build_meta"

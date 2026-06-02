@@ -6,9 +6,16 @@
 import os
 import base64
 import random
+import time
 import bittensor as bt
 from pathlib import Path
 from typing import List, Tuple, Optional
+
+try:
+    import requests
+    REQUESTS_AVAILABLE = True
+except ImportError:
+    REQUESTS_AVAILABLE = False
 
 
 # Base images folder (relative to validator module)
@@ -145,4 +152,110 @@ def load_specific_image(filename: str) -> Optional[Tuple[str, str]]:
         return filename, base64_image
     except Exception as e:
         bt.logging.error(f"Failed to load image {filename}: {e}")
+        return None
+
+
+def get_sorted_image_files() -> List[str]:
+    """Get all image filenames in sorted order for consistent cycling.
+
+    Returns a sorted list of image filenames to ensure deterministic
+    iteration order across validator restarts.
+
+    Returns:
+        Sorted list of image filenames
+    """
+    if not BASE_IMAGES_DIR.exists():
+        return []
+
+    image_files = []
+    for ext in SUPPORTED_EXTENSIONS:
+        for img_path in BASE_IMAGES_DIR.glob(ext):
+            image_files.append(img_path.name)
+
+    # Sort for consistent ordering
+    return sorted(image_files)
+
+
+def load_image_by_index(index: int) -> Optional[Tuple[str, str, int]]:
+    """Load an image by its index in the sorted list.
+
+    Supports wrapping around when index exceeds available images.
+
+    Args:
+        index: The index of the image to load (will wrap around if > num images)
+
+    Returns:
+        Tuple of (filename, base64_encoded_image, actual_index) or None if no images
+    """
+    image_files = get_sorted_image_files()
+
+    if not image_files:
+        bt.logging.warning("No base images available")
+        return None
+
+    # Wrap around if index exceeds number of images
+    actual_index = index % len(image_files)
+    filename = image_files[actual_index]
+
+    result = load_specific_image(filename)
+    if result:
+        return result[0], result[1], actual_index
+
+    return None
+
+
+def fetch_image_from_api(wallet) -> Optional[Tuple[str, str]]:
+    """Fetch a single image from the Flask API without saving to disk.
+
+    Uses the same signed-request pattern as the validator's
+    ``_download_base_images_from_api`` but returns one image directly
+    instead of persisting it.
+
+    Args:
+        wallet: Bittensor wallet used to sign the request.
+
+    Returns:
+        Tuple of (filename, base64_encoded_image) or None on failure.
+    """
+    if not REQUESTS_AVAILABLE:
+        bt.logging.warning("requests library not available. Cannot fetch image from API.")
+        return None
+
+    try:
+        from MIID.utils.sign_message import sign_message
+
+        hotkey = wallet.hotkey
+        hotkey_address = hotkey.ss58_address
+
+        message_to_sign = (
+            f"Hotkey: {hotkey} \n timestamp: {time.time()} \n request: base_images"
+        )
+        signed_contents = sign_message(wallet, message_to_sign, output_file=None)
+
+        server_url = os.environ.get("MIID_IMAGES_SERVER", "http://52.44.186.20:5000")
+        base_url = server_url.rstrip("/")
+        url = f"{base_url}/image/{hotkey_address}"
+        payload = {"signature": signed_contents}
+
+        response = requests.post(url, json=payload, timeout=30)
+        if response.status_code != 200:
+            bt.logging.warning(
+                f"Image API returned {response.status_code}: {response.text[:200]}"
+            )
+            return None
+
+        data = response.json()
+        item = data.get("image") or {}
+
+        filename = item.get("filename")
+        b64 = item.get("data_base64")
+        if not filename or not b64:
+            bt.logging.warning("API image entry missing filename or data_base64")
+            return None
+
+        bt.logging.debug(f"Fetched image from API: {filename}")
+        return filename, b64
+
+    except Exception as e:
+        bt.logging.error(f"Error fetching image from API: {e}")
         return None

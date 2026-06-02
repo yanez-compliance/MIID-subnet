@@ -64,21 +64,133 @@ IMAGE_VARIATION_TYPES = {
         }
     },
     "background_edit": {
-        "description": "Change background environment while keeping subject unchanged",
+        "description": "Change the background while keeping the subject unchanged",
         "intensities": {
             "light": {
-                "label": "Minor background adjustment",
-                "detail": "Color shift, blur adjustment, or texture change on similar background"
+                "label": "Light background change",
+                "detail": "Light background change while preserving identity"
             },
             "medium": {
-                "label": "Different background setting",
-                "detail": "Change environment type (office to outdoor, solid color to gradient)"
+                "label": "Medium background change",
+                "detail": "Medium background change while preserving identity"
             },
             "far": {
-                "label": "Dramatic background change",
-                "detail": "Unusual or contrasting environment, complex scene, dramatic setting"
+                "label": "Far background change",
+                "detail": "Far background change while preserving identity"
             }
         }
+    }
+}
+
+BACKGROUND_ENVIRONMENT_TYPES = {
+    "indoor": {
+        "description": "Indoor background change",
+        "weight": 70,
+        "intensities": {
+            "light": {
+                "label": "Minor indoor background adjustment",
+                "detail": "Same indoor context; wall color shift, bokeh/blur, or subtle texture change"
+            },
+            "medium": {
+                "label": "Different indoor setting",
+                "detail": "Switch to another plausible indoor environment (e.g. office to cafe, bedroom to lobby); still fully indoors"
+            },
+            "far": {
+                "label": "Dramatic indoor background change",
+                "detail": "Move to a clearly different indoor setting with distinct interior design and scene depth (e.g., office, lobby, studio, gallery), while keeping the background fully indoors with no outdoor elements"
+            }
+        }
+    },
+    "outdoor": {
+        "description": "Outdoor background change",
+        "weight": 30,
+        "intensities": {
+            "light": {
+                "label": "Minor outdoor background adjustment",
+                "detail": "Same outdoor context with subtle changes (e.g. slight depth-of-field shift, mild scene texture variation, or small lighting-direction change)"
+            },
+            "medium": {
+                "label": "Different outdoor setting",
+                "detail": "Switch to a different plausible outdoor environment (e.g. street to park, plaza to waterfront) while keeping the subject unchanged"
+            },
+            "far": {
+                "label": "Dramatic outdoor background change",
+                "detail": "Move to a clearly different outdoor setting with distinct scene composition and depth (e.g., urban street, beach promenade, mountain overlook, garden path)"
+            }
+        }
+    }
+}
+
+# Accessory types with weighted selection
+HEADPHONES_STYLE_OPTIONS = [
+    "over-ear headphones",
+    "on-ear headset",
+    "studio headset",
+]
+HEADPHONES_COLOR_OPTIONS = ["black", "white", "dark gray", "navy"]
+HEADPHONES_MATERIAL_OPTIONS = [
+    "matte plastic",
+    "composite polymer",
+    "metal-reinforced plastic",
+]
+HEADPHONES_TEXTURE_OPTIONS = [
+    "matte finish",
+    "soft-touch finish",
+    "smooth satin finish",
+]
+HEADPHONES_SIZE_FIT_OPTIONS = ["compact fit", "standard fit", "slightly oversized fit"]
+HEADPHONES_EXTRA_DETAIL_OPTIONS = [
+    "padded headband",
+    "minimal branding",
+    "simple ear-cup design",
+    "fold-flat profile",
+]
+
+
+def select_random_headphones_detail() -> str:
+    """Create a randomized headphones detail string from attribute options."""
+    style = random.choice(HEADPHONES_STYLE_OPTIONS)
+    color = random.choice(HEADPHONES_COLOR_OPTIONS)
+    material = random.choice(HEADPHONES_MATERIAL_OPTIONS)
+    texture = random.choice(HEADPHONES_TEXTURE_OPTIONS)
+    size_fit = random.choice(HEADPHONES_SIZE_FIT_OPTIONS)
+    extra_detail = random.choice(HEADPHONES_EXTRA_DETAIL_OPTIONS)
+    return (
+        f"{style} in {color} with a {material} frame, {texture}, {size_fit}, "
+        f"and {extra_detail}"
+    )
+
+
+ACCESSORY_TYPES = {
+    "religious_head_covering": {
+        "description": "Add religious head covering",
+        "detail": "Religious head covering (hijab, turban, kippah, taqiyah, etc.) appropriate to subject",
+        "weight": 65
+    },
+    "brim_hat": {
+        "description": "Add brim hat (not baseball)",
+        "detail": "Brim hat such as fedora, wide-brim hat, sun hat, or similar (not baseball cap)",
+        "weight": 10
+    },
+    "knit_winter_hat": {
+        "description": "Add knit or winter hat",
+        "detail": "Knit hat, beanie, or winter hat",
+        "weight": 10
+    },
+    "bandana": {
+        "description": "Add bandana",
+        "detail": "Bandana worn on head",
+        "weight": 5
+    },
+    "baseball_cap": {
+        "description": "Add baseball cap",
+        "detail": "Baseball cap or similar sports cap",
+        "weight": 5
+    },
+    "headphones": {
+        "description": "Add headphones",
+        "detail": "Headphones appropriate to the subject; pick a realistic modern style",
+        "weight": 5,
     }
 }
 
@@ -87,6 +199,81 @@ ALL_VARIATION_TYPES = list(IMAGE_VARIATION_TYPES.keys())
 
 # All available intensity levels
 ALL_INTENSITIES = ["light", "medium", "far"]
+
+
+def select_random_accessory() -> Dict[str, str]:
+    """Select a random accessory based on weighted distribution.
+    
+    Weights:
+    - 65% religious head coverings
+    - 10% Brim hats (not baseball)
+    - 10% Knit/winter hats
+    - 5% Bandanas
+    - 5% Baseball caps
+    - 5% Headphones
+    
+    Returns:
+        Dict containing:
+            - type: str - accessory type key
+            - description: str - accessory description
+            - detail: str - specific accessory detail
+    """
+    # Create weighted list
+    accessory_keys = list(ACCESSORY_TYPES.keys())
+    weights = [ACCESSORY_TYPES[key]["weight"] for key in accessory_keys]
+    
+    # Select based on weights
+    selected_key = random.choices(accessory_keys, weights=weights, k=1)[0]
+    accessory_info = ACCESSORY_TYPES[selected_key]
+    
+    detail = accessory_info["detail"]
+    if selected_key == "headphones":
+        detail = select_random_headphones_detail()
+
+    return {
+        "type": selected_key,
+        "description": accessory_info["description"],
+        "detail": detail,
+    }
+
+
+def select_random_background_environment() -> Dict[str, Any]:
+    """Select indoor/outdoor background environment using weighted distribution."""
+    environment_keys = list(BACKGROUND_ENVIRONMENT_TYPES.keys())
+    weights = [BACKGROUND_ENVIRONMENT_TYPES[key]["weight"] for key in environment_keys]
+    selected_key = random.choices(environment_keys, weights=weights, k=1)[0]
+    selected_info = BACKGROUND_ENVIRONMENT_TYPES[selected_key]
+    return {
+        "type": selected_key,
+        "description": selected_info["description"],
+        "intensities": selected_info["intensities"],
+    }
+
+
+def get_background_variation_info(intensity: str) -> Dict[str, str]:
+    """Get weighted-random indoor/outdoor background detail for an intensity."""
+    environment = select_random_background_environment()
+    intensity_info = environment["intensities"][intensity]
+    return {
+        "environment_type": environment["type"],
+        "environment_description": environment["description"],
+        "label": intensity_info["label"],
+        "detail": intensity_info["detail"],
+    }
+
+
+def get_background_variation_info_for_environment(
+    intensity: str, environment_key: str
+) -> Dict[str, str]:
+    """Background detail for a fixed environment (``indoor`` or ``outdoor``) and intensity."""
+    selected_info = BACKGROUND_ENVIRONMENT_TYPES[environment_key]
+    intensity_info = selected_info["intensities"][intensity]
+    return {
+        "environment_type": environment_key,
+        "environment_description": selected_info["description"],
+        "label": intensity_info["label"],
+        "detail": intensity_info["detail"],
+    }
 
 
 def select_random_variations(
@@ -129,13 +316,20 @@ def select_random_variations(
     for var_type in selected_types:
         intensity = random.choice(ALL_INTENSITIES)
         type_info = IMAGE_VARIATION_TYPES[var_type]
-        intensity_info = type_info["intensities"][intensity]
+        if var_type == "background_edit":
+            intensity_info = get_background_variation_info(intensity)
+            description = f"{type_info['description']}. {intensity_info['environment_description']}"
+            detail = intensity_info["detail"]
+        else:
+            intensity_info = type_info["intensities"][intensity]
+            description = type_info["description"]
+            detail = intensity_info["detail"]
 
         variations.append({
             "type": var_type,
             "intensity": intensity,
-            "description": type_info["description"],
-            "detail": intensity_info["detail"]
+            "description": description,
+            "detail": detail
         })
 
     return variations
@@ -146,6 +340,9 @@ def format_variation_requirements(variations: List[Dict[str, str]]) -> str:
 
     Creates a human-readable description of the requested variations
     to be appended to the query template sent to miners.
+    
+    If background_edit is included, automatically adds a random accessory
+    to the background variation prompt.
 
     Args:
         variations: List of variation dicts from select_random_variations()
@@ -155,24 +352,39 @@ def format_variation_requirements(variations: List[Dict[str, str]]) -> str:
 
     Example output:
         [IMAGE VARIATION REQUIREMENTS]
-        For the face image provided, generate the following variations while preserving identity:
+        For the face image provided, generate the following variations while preserving identity. All images are Professional passport-style portraits, 3:4 aspect ratio, head-and-shoulders composition from chest up.
 
         1. pose_edit (medium): ±30° rotation (clear head turn, profile partially visible)
         2. expression_edit (light): Neutral to slight smile, minor brow movement
-        3. background_edit (far): Unusual or contrasting environment, complex scene
+        3. background_edit (far): Move to a clearly different indoor setting with distinct interior design and scene depth (e.g., office, lobby, studio, gallery), while keeping the background fully indoors with no outdoor elements. Additionally, include: Religious head covering (hijab, turban, kippah, taqiyah, etc.) appropriate to subject
 
         IMPORTANT: The subject's face must remain recognizable across all variations.
     """
     lines = [
         "",
         "[IMAGE VARIATION REQUIREMENTS]",
-        "For the face image provided, generate the following variations while preserving identity:",
+        "For the face image provided, generate the following variations while preserving identity. All images are Professional passport-style portraits, 3:4 aspect ratio, head-and-shoulders composition from chest up.",
+        "Recommended output resolution: 1015 x 1350 pixels.",
         ""
     ]
 
+    # Only draw an accessory if the background variation detail doesn't already include one.
+    # This avoids "double-randomizing" when background_edit was produced by get_variation_by_index()
+    # or by our dedicated helpers.
+    needs_accessory = any(
+        (var.get("type") == "background_edit")
+        and ("Additionally, include:" not in var.get("detail", ""))
+        for var in variations
+    )
+    accessory = select_random_accessory() if needs_accessory else None
+
     for i, var in enumerate(variations, 1):
+        detail = var['detail']
+        # If this is background_edit and detail doesn't already include accessory (e.g. from get_variation_by_index), add it once
+        if var['type'] == 'background_edit' and accessory and "Additionally, include:" not in detail:
+            detail = f"{detail}. Additionally, include: {accessory['detail']}"
         lines.append(
-            f"{i}. {var['type']} ({var['intensity']}): {var['detail']}"
+            f"{i}. {var['type']} ({var['intensity']}): {detail}"
         )
 
     lines.extend([
@@ -199,14 +411,23 @@ def get_variation_type_info(var_type: str, intensity: str) -> Dict[str, Any]:
         KeyError: If var_type or intensity is invalid
     """
     type_info = IMAGE_VARIATION_TYPES[var_type]
-    intensity_info = type_info["intensities"][intensity]
+    if var_type == "background_edit":
+        intensity_info = get_background_variation_info(intensity)
+        description = f"{type_info['description']}. {intensity_info['environment_description']}"
+        detail = intensity_info["detail"]
+        label = intensity_info["label"]
+    else:
+        intensity_info = type_info["intensities"][intensity]
+        description = type_info["description"]
+        detail = intensity_info["detail"]
+        label = intensity_info["label"]
 
     return {
         "type": var_type,
         "intensity": intensity,
-        "description": type_info["description"],
-        "label": intensity_info["label"],
-        "detail": intensity_info["detail"]
+        "description": description,
+        "label": label,
+        "detail": detail
     }
 
 
@@ -233,3 +454,278 @@ def validate_variation_request(variations: List[Dict[str, str]]) -> bool:
             return False
 
     return True
+
+
+def get_total_variation_combinations() -> int:
+    """Get the total number of variation type + intensity combinations.
+
+    Returns:
+        Total number of combinations (types × intensities)
+    """
+    return len(ALL_VARIATION_TYPES) * len(ALL_INTENSITIES)
+
+
+_NON_BACKGROUND_VARIATION_TYPES: List[str] = [t for t in ALL_VARIATION_TYPES if t != "background_edit"]
+
+
+def get_total_non_background_variation_combinations() -> int:
+    """Total combinations for all non-background types (pose/lighting/expression) × intensities."""
+    return len(_NON_BACKGROUND_VARIATION_TYPES) * len(ALL_INTENSITIES)
+
+
+def get_random_background_variation() -> Dict[str, str]:
+    """Get a `background_edit` variation with random intensity + weighted accessory."""
+    intensity = random.choice(ALL_INTENSITIES)
+
+    type_info = IMAGE_VARIATION_TYPES["background_edit"]
+    intensity_info = get_background_variation_info(intensity)
+
+    accessory = select_random_accessory()
+    description = (
+        f"{type_info['description']}. {intensity_info['environment_description']}. "
+        f"{accessory['description']}"
+    )
+    detail = f"{intensity_info['detail']}. Additionally, include: {accessory['detail']}"
+
+    return {
+        "type": "background_edit",
+        "intensity": intensity,
+        "description": description,
+        "detail": detail,
+    }
+
+
+def get_random_indoor_background_variation() -> Dict[str, str]:
+    """Get a ``background_edit`` variation constrained to indoor settings + weighted accessory."""
+    intensity = random.choice(ALL_INTENSITIES)
+    type_info = IMAGE_VARIATION_TYPES["background_edit"]
+    intensity_info = get_background_variation_info_for_environment(intensity, "indoor")
+
+    accessory = select_random_accessory()
+    description = (
+        f"{type_info['description']}. {intensity_info['environment_description']}. "
+        f"{accessory['description']}"
+    )
+    detail = f"{intensity_info['detail']}. Additionally, include: {accessory['detail']}"
+
+    return {
+        "type": "background_edit",
+        "intensity": intensity,
+        "description": description,
+        "detail": detail,
+    }
+
+
+def get_random_outdoor_background_variation() -> Dict[str, str]:
+    """Get a ``background_edit`` variation constrained to outdoor settings + weighted accessory."""
+    intensity = random.choice(ALL_INTENSITIES)
+    type_info = IMAGE_VARIATION_TYPES["background_edit"]
+    intensity_info = get_background_variation_info_for_environment(intensity, "outdoor")
+
+    accessory = select_random_accessory()
+    description = (
+        f"{type_info['description']}. {intensity_info['environment_description']}. "
+        f"{accessory['description']}"
+    )
+    detail = f"{intensity_info['detail']}. Additionally, include: {accessory['detail']}"
+
+    return {
+        "type": "background_edit",
+        "intensity": intensity,
+        "description": description,
+        "detail": detail,
+    }
+
+
+def get_non_background_variation_by_index(index: int) -> Dict[str, str]:
+    """Get a single non-background variation (pose/lighting/expression) by index (wraps)."""
+    total_combinations = get_total_non_background_variation_combinations()
+    actual_index = index % total_combinations
+
+    type_index = actual_index // len(ALL_INTENSITIES)
+    intensity_index = actual_index % len(ALL_INTENSITIES)
+
+    var_type = _NON_BACKGROUND_VARIATION_TYPES[type_index]
+    intensity = ALL_INTENSITIES[intensity_index]
+
+    type_info = IMAGE_VARIATION_TYPES[var_type]
+    intensity_info = type_info["intensities"][intensity]
+
+    return {
+        "type": var_type,
+        "intensity": intensity,
+        "description": type_info["description"],
+        "detail": intensity_info["detail"],
+    }
+
+
+def get_random_non_background_variation() -> Dict[str, str]:
+    """Get one random non-background variation (pose/lighting/expression)."""
+    var_type = random.choice(_NON_BACKGROUND_VARIATION_TYPES)
+    intensity = random.choice(ALL_INTENSITIES)
+
+    type_info = IMAGE_VARIATION_TYPES[var_type]
+    intensity_info = type_info["intensities"][intensity]
+
+    return {
+        "type": var_type,
+        "intensity": intensity,
+        "description": type_info["description"],
+        "detail": intensity_info["detail"],
+    }
+
+
+def get_variation_by_index(index: int) -> Dict[str, str]:
+    """Get a single variation type + intensity by index.
+
+    Cycles through variation types in order: background, pose, lighting, expression;
+    for each type, cycles through intensities: light, medium, far.
+    Order: background_edit/light, background_edit/medium, background_edit/far,
+           pose_edit/light, pose_edit/medium, pose_edit/far,
+           lighting_edit/light, ..., expression_edit/far.
+
+    When the variation is background_edit, a random accessory (weighted selection)
+    is included in both description and detail (e.g. description "Change background... Add religious head covering").
+
+    Supports wrapping around when index exceeds total combinations.
+
+    Args:
+        index: The index of the variation to get (will wrap around)
+
+    Returns:
+        Dict with type, intensity, description, and detail
+    """
+    total_combinations = get_total_variation_combinations()
+    actual_index = index % total_combinations
+
+    # Calculate which type and intensity
+    type_index = actual_index // len(ALL_INTENSITIES)
+    intensity_index = actual_index % len(ALL_INTENSITIES)
+
+    var_type = ALL_VARIATION_TYPES[type_index]
+    intensity = ALL_INTENSITIES[intensity_index]
+
+    type_info = IMAGE_VARIATION_TYPES[var_type]
+    if var_type == "background_edit":
+        intensity_info = get_background_variation_info(intensity)
+        detail = intensity_info["detail"]
+        description = f"{type_info['description']}. {intensity_info['environment_description']}"
+    else:
+        intensity_info = type_info["intensities"][intensity]
+        detail = intensity_info["detail"]
+        description = type_info["description"]
+
+    # For background_edit only: append a random accessory (weighted) to description and detail
+    if var_type == "background_edit":
+        accessory = select_random_accessory()
+        description = f"{description}. {accessory['description']}"
+        detail = f"{detail}. Additionally, include: {accessory['detail']}"
+
+    return {
+        "type": var_type,
+        "intensity": intensity,
+        "description": description,
+        "detail": detail
+    }
+
+
+# =============================================================================
+# Screen Replay Variation (Cycle 2 — not part of sequential image cycle)
+# =============================================================================
+
+# Device types — uniform random selection, no weights
+SCREEN_REPLAY_DEVICE_TYPES = ["phone", "tablet", "laptop", "monitor", "tv"]
+
+# Visual cues that must visibly appear in a screen-replay image (≥2 required)
+SCREEN_REPLAY_VISUAL_CUES: Dict[str, str] = {
+    "moire_pixel_grid": (
+        "Moiré / pixel grid — interference pattern from screen subpixels captured by camera"
+    ),
+    "screen_glare_hotspots": (
+        "Screen glare hotspots — specular reflections on the display surface"
+    ),
+    "perspective_keystone_distortion": (
+        "Perspective / keystone distortion — geometric distortion from off-angle capture"
+    ),
+    "gamma_contrast_shift": (
+        "Gamma / contrast shift — colour/brightness characteristics of display capture"
+    ),
+    "edge_crop_cues": (
+        "Edge / crop cues — screen borders, bezel reflections, or cropping consistent with "
+        "display capture"
+    ),
+}
+
+
+def select_screen_replay_variation() -> Dict[str, str]:
+    """Select a screen_replay variation with 2 random device types and 2 random visual cues.
+
+    Device types are chosen uniformly at random (no weights) from
+    SCREEN_REPLAY_DEVICE_TYPES.  Two visual cues are drawn without
+    replacement from SCREEN_REPLAY_VISUAL_CUES.
+
+    The returned dict is compatible with VariationRequest (type, intensity,
+    description, detail) so no protocol changes are required.
+
+    Returns:
+        Dict with keys: type, intensity, description, detail
+    """
+    selected_device = random.choice(SCREEN_REPLAY_DEVICE_TYPES)
+    selected_cue_keys = random.sample(list(SCREEN_REPLAY_VISUAL_CUES.keys()), 2)
+    selected_cues = [SCREEN_REPLAY_VISUAL_CUES[k] for k in selected_cue_keys]
+
+    cues_str = "; ".join(selected_cues)
+
+    description = (
+        f"Screen replay capture — simulate a photo of a face displayed on "
+        f"a {selected_device} screen photographed by a physical camera"
+    )
+    detail = (
+        f"Generate a realistic screen-replay image: a face shown on a {selected_device} "
+        f"screen and photographed with a camera. "
+        f"Must visibly exhibit at least 2 of these cues: {cues_str}. "
+        f"The face must be the dominant object (large enough for reliable face detection) "
+        f"and must remain matchable to the seed identity (high similarity score)."
+    )
+
+    return {
+        "type": "screen_replay",
+        "intensity": "standard",
+        "description": description,
+        "detail": detail,
+        # Extra metadata carried in the plain dict (not sent over the wire via VariationRequest)
+        "device_type": selected_device,
+        "visual_cue_keys": selected_cue_keys,
+    }
+
+
+# =============================================================================
+
+
+def get_all_variation_combinations() -> List[Dict[str, str]]:
+    """Get all possible variation type + intensity combinations in order.
+
+    Useful for debugging or understanding the full cycle.
+
+    Returns:
+        List of all variation dicts in sequential order
+    """
+    combinations = []
+    for var_type in ALL_VARIATION_TYPES:
+        type_info = IMAGE_VARIATION_TYPES[var_type]
+        for intensity in ALL_INTENSITIES:
+            if var_type == "background_edit":
+                intensity_info = get_background_variation_info(intensity)
+                description = f"{type_info['description']}. {intensity_info['environment_description']}"
+                detail = intensity_info["detail"]
+            else:
+                intensity_info = type_info["intensities"][intensity]
+                description = type_info["description"]
+                detail = intensity_info["detail"]
+            combinations.append({
+                "type": var_type,
+                "intensity": intensity,
+                "description": description,
+                "detail": detail
+            })
+    return combinations

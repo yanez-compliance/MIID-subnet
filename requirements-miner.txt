@@ -1,0 +1,18 @@
+# Extra dependencies for MIID miners (Phase 4 image generation).
+# Validators do NOT need these packages.
+#
+# Install after the base packages:
+#   pip install -e .
+#   pip install -r requirements-miner.txt
+
+diffusers>=0.30.0
+transformers>=4.40.0
+accelerate>=0.30.0
+opencv-python>=4.8.0
+pytorch-lightning>=2.0.0  # required to load AdaFace .ckpt checkpoints (PyTorch Lightning)
+safetensors
+gdown
+
+# Drand timelock encryption is provided by bittensor itself via
+# `bittensor.timelock` (backed by the `bittensor_drand` Rust extension that
+# ships with bittensor>=9). No separate `timelock` package is required.

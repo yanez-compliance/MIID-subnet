@@ -205,7 +205,7 @@ create_and_activate_venv() {
 # ---------------------------------------------------------
 install_python_requirements() {
   info_msg "Installing Python dependencies..."
-  pip install --upgrade pip setuptools wheel || handle_error "Failed to upgrade pip, setuptools, and wheel"
+  pip install --upgrade pip "setuptools>=68,<82" wheel || handle_error "Failed to upgrade pip, setuptools, and wheel"
   
   if [ -f requirements.txt ]; then
     pip install -r requirements.txt || handle_error "Failed to install Python dependencies"
@@ -222,7 +222,10 @@ install_python_requirements() {
 # ---------------------------------------------------------
 install_miid() {
   info_msg "Installing MIID package in editable mode..."
-  pip install -e . || handle_error "Failed to install MIID package"
+  if ! pip install -e .; then
+    warn_msg "Editable install with build isolation failed; retrying with --no-build-isolation (venv setuptools)..."
+    pip install -e . --no-build-isolation || handle_error "Failed to install MIID package"
+  fi
   success_msg "MIID package installed successfully."
 }
 

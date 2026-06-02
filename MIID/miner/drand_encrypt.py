@@ -4,15 +4,15 @@
 # Encrypts image data with drand timelock so it can only be
 # decrypted after the target drand round is released.
 
-import secrets
 import bittensor as bt
 from typing import Optional
 
 
-# Try to import timelock, provide fallback if not installed
-# Note: timelock may not be available on all platforms (requires WASM support)
+# Use bittensor's built-in timelock (backed by bittensor_drand) so we don't
+# need the separate `timelock` Python package. Available on bittensor>=9.
 try:
-    from timelock import Timelock
+    from bittensor import timelock as _bt_timelock
+    from bittensor_drand import get_latest_round as _get_latest_round
     TLOCK_AVAILABLE = True
 except ImportError:
     TLOCK_AVAILABLE = False
@@ -44,18 +44,17 @@ def encrypt_for_drand(data: bytes, target_round: int) -> bytes:
     """
     if not TLOCK_AVAILABLE:
         raise ImportError(
-            "timelock package not installed. "
-            "Install with: pip install timelock"
+            "bittensor.timelock not available. "
+            "Upgrade bittensor to >=9 (which ships bittensor_drand)."
         )
 
-    # Initialize timelock with drand quicknet public key
-    tlock = Timelock(DRAND_QUICKNET_PK)
-
-    # Generate ephemeral secret key for this encryption
-    ephemeral_sk = bytearray(secrets.token_bytes(32))
-
-    # Encrypt for the target round
-    ciphertext = tlock.tle(target_round, data, ephemeral_sk)
+    # bittensor.timelock takes a relative `n_blocks`; convert from the
+    # absolute target_round supplied by the validator. block_time=3.0
+    # (drand QuickNet period) makes 1 block == 1 drand round.
+    n_blocks = max(1, int(target_round) - int(_get_latest_round()))
+    ciphertext, _reveal_round = _bt_timelock.encrypt(
+        data, n_blocks=n_blocks, block_time=3.0
+    )
 
     bt.logging.debug(
         f"Encrypted {len(data)} bytes for drand round {target_round}"
@@ -64,30 +63,32 @@ def encrypt_for_drand(data: bytes, target_round: int) -> bytes:
     return ciphertext
 
 
-def decrypt_with_drand(encrypted_data: bytes, drand_signature: bytes) -> bytes:
+def decrypt_with_drand(encrypted_data: bytes, drand_signature: bytes = None) -> bytes:
     """Decrypt timelock-encrypted data using drand signature.
 
     This can only succeed after the target round's signature is available.
 
     Args:
         encrypted_data: Tlock-encrypted ciphertext
-        drand_signature: Drand signature for the target round
+        drand_signature: Unused; bittensor.timelock fetches the signature
+            itself. Kept for backwards compatibility.
 
     Returns:
         Decrypted original data
 
     Raises:
-        ImportError: If timelock package is not installed
+        ImportError: If bittensor.timelock is not available
         Exception: If decryption fails
     """
     if not TLOCK_AVAILABLE:
         raise ImportError(
-            "timelock package not installed. "
-            "Install with: pip install timelock"
+            "bittensor.timelock not available. "
+            "Upgrade bittensor to >=9 (which ships bittensor_drand)."
         )
 
-    tlock = Timelock(DRAND_QUICKNET_PK)
-    plaintext = tlock.tld(encrypted_data, drand_signature)
+    plaintext = _bt_timelock.decrypt(encrypted_data, no_errors=False)
+    if plaintext is None:
+        raise RuntimeError("Decryption failed (drand round not yet revealed?)")
 
     bt.logging.debug(f"Decrypted {len(plaintext)} bytes")
 
