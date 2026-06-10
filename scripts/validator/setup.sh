@@ -3,7 +3,9 @@
 # setup.sh - Setup environment dependencies for MIID Validator
 #
 # This script installs required dependencies for running a MIID validator node,
-# including Python, Bittensor, and Ollama with the llama3.1 model.
+# including Python, Bittensor, and the base image dependencies.
+# Ollama is NOT required — validators no longer perform LLM-based identity
+# generation. All scoring is handled via the external grading API.
 
 set -e  # Exit immediately on error
 
@@ -134,27 +136,7 @@ install_system_dependencies() {
 }
 
 # ---------------------------------------------------------
-# Section 2: Ollama Installation
-# ---------------------------------------------------------
-install_ollama() {
-  info_msg "Installing Ollama..."
-  if ! command -v ollama &>/dev/null; then
-    curl -fsSL https://ollama.com/install.sh | sh || handle_error "Failed to install Ollama"
-    success_msg "Ollama installed successfully."
-  else
-    info_msg "Ollama is already installed. Skipping."
-  fi
-  
-  # Use pm2 to serve Ollama (mirrors miner script)
-  pm2 start ollama -- serve || warn_msg "Failed to start Ollama with PM2, but continuing..."
-  
-  info_msg "Pulling llama3.1:latest model..."
-  ollama pull llama3.1:latest || handle_error "Failed to pull llama3.1:latest model"
-  success_msg "llama3.1:latest model pulled successfully."
-}
-
-# ---------------------------------------------------------
-# Section 3: Virtual Environment Setup
+# Section 2: Virtual Environment Setup
 # ---------------------------------------------------------
 create_and_activate_venv() {
   local VENV_DIR="validator_env"
@@ -211,7 +193,7 @@ install_python_requirements() {
     pip install -r requirements.txt || handle_error "Failed to install Python dependencies"
   else
     warn_msg "requirements.txt not found. Installing core dependencies."
-    pip install numpy pandas faker tqdm Levenshtein python-Levenshtein metaphone || handle_error "Failed to install core dependencies"
+    pip install numpy bittensor wandb requests python-dotenv Pillow || handle_error "Failed to install core dependencies"
   fi
   
   success_msg "Python dependencies installed successfully."
@@ -223,7 +205,7 @@ install_python_requirements() {
 install_miid() {
   info_msg "Installing MIID package in editable mode..."
   if ! pip install -e .; then
-    warn_msg "Editable install with build isolation failed; retrying with --no-build-isolation (venv setuptools)..."
+    warn_msg "Editable install with build isolation failed; retrying with --no-build-isolation..."
     pip install -e . --no-build-isolation || handle_error "Failed to install MIID package"
   fi
   success_msg "MIID package installed successfully."
@@ -236,6 +218,40 @@ install_bittensor() {
   info_msg "Installing Bittensor..."
   pip install bittensor || handle_error "Failed to install Bittensor"
   success_msg "Bittensor installed successfully."
+}
+
+# ---------------------------------------------------------
+# Section 6: btcli sanity check + scalecodec/cyscale conflict fix
+# ---------------------------------------------------------
+ensure_btcli_works() {
+  info_msg "Verifying btcli is importable (scalecodec/cyscale conflict check)..."
+
+  local has_scalecodec="no"
+  local has_cyscale="no"
+  python -c "import scalecodec" >/dev/null 2>&1 && has_scalecodec="yes"
+  python -c "import cyscale"    >/dev/null 2>&1 && has_cyscale="yes"
+
+  if [ "$has_scalecodec" = "yes" ] && [ "$has_cyscale" = "yes" ]; then
+    warn_msg "Both 'scalecodec' and 'cyscale' detected. Removing legacy 'scalecodec'."
+    pip uninstall -y scalecodec >/dev/null 2>&1 || true
+  elif [ "$has_scalecodec" = "yes" ] && [ "$has_cyscale" = "no" ]; then
+    info_msg "Only 'scalecodec' installed; reinstalling 'cyscale' for async-substrate-interface compat."
+    pip uninstall -y scalecodec >/dev/null 2>&1 || true
+    pip install --force-reinstall cyscale >/dev/null 2>&1 || warn_msg "Could not install 'cyscale'. btcli may fail to start."
+  fi
+
+  if btcli --version >/dev/null 2>&1; then
+    success_msg "btcli is ready."
+  else
+    warn_msg "btcli could not start. Attempting recovery (uninstall scalecodec, reinstall cyscale)..."
+    pip uninstall -y scalecodec cyscale >/dev/null 2>&1 || true
+    pip install --force-reinstall cyscale >/dev/null 2>&1 || true
+    if btcli --version >/dev/null 2>&1; then
+      success_msg "btcli is ready after recovery."
+    else
+      warn_msg "btcli still failing. Run 'btcli --version' inside 'validator_env' to see the error."
+    fi
+  fi
 }
 
 # ---------------------------------------------------------
@@ -253,13 +269,17 @@ main() {
   fi
   
   install_system_dependencies
-  install_ollama
   create_and_activate_venv
   install_python_requirements
   install_miid
   install_bittensor
-  
+  ensure_btcli_works
+
+  echo ""
+  info_msg "============================================"
   info_msg "MIID Validator setup completed successfully!"
+  info_msg "============================================"
+  echo ""
   info_msg "To start using your validator:"
   echo -e "   1. Activate the virtual environment: source validator_env/bin/activate"
   echo -e "   2. Start your validator: python neurons/validator.py --netuid 54 --wallet.name your_wallet --wallet.hotkey your_hotkey --subtensor.network finney"

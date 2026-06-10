@@ -3,14 +3,8 @@ pydantic>=2
 rich>=13
 pytest>=8
 torch>=2
-pandas
-tqdm
 numpy>=1
 setuptools>=68,<82
-faker
-ollama
-python-Levenshtein
-jellyfish
 aiohttp
 # Note: do NOT add `substrate-interface` here. It installs the legacy `scalecodec`
 # package, which shares a namespace with `cyscale` (used by
@@ -24,8 +18,6 @@ bittensor-cli # Use latest or desired version
 wandb
 python-dotenv # Add dotenv for .env file handling
 requests
-unidecode
-geonamescache==3.0.0
 
 # Phase 4: shared (validator + miner)
 Pillow>=9.0.0

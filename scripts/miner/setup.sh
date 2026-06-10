@@ -3,7 +3,15 @@
 # setup.sh - Setup environment dependencies for MIID Miner
 #
 # This script installs required dependencies for running a MIID miner node,
-# including Python, Bittensor, and Ollama with the llama3.1 model.
+# including Python, Bittensor, and the Phase 4 face image variation packages
+# (FLUX diffusion model, AdaFace face validation, drand timelock encryption).
+#
+# Ollama is NOT required — miners no longer perform LLM-based identity
+# generation. All miner work is face image variation via FLUX.
+#
+# Usage:
+#   bash setup.sh            # Interactive (asks for HF_TOKEN confirmation)
+#   bash setup.sh --full     # Non-interactive full install
 
 set -e  # Exit immediately on error
 
@@ -151,30 +159,7 @@ install_python() {
 }
 
 # ---------------------------------------------------------
-# Section 3: Ollama Installation
-# Installs Ollama using the official script
-# ---------------------------------------------------------
-install_ollama() {
-  info_msg "Installing Ollama..."
-  if ! command -v ollama &>/dev/null; then
-    curl -fsSL https://ollama.com/install.sh | sh || handle_error "Failed to install Ollama"
-    success_msg "Ollama installed successfully."
-  else
-    info_msg "Ollama is already installed. Skipping."
-  fi
-  
-  pm2 start ollama -- serve
-  # Pull the required LLM model
-  info_msg "Pulling llama3.1:latest model..."
-  # Run ollama in background
-  
-  ollama pull llama3.1:latest || handle_error "Failed to pull llama3.1:latest model"
-  success_msg "llama3.1:latest model pulled successfully."
-}
-
-# ---------------------------------------------------------
-# Section 4: Virtual Environment Setup
-# Creates a new venv with Python, then activates it.
+# Section 3: Virtual Environment Setup
 # ---------------------------------------------------------
 create_and_activate_venv() {
   local VENV_DIR="miner_env"
@@ -192,31 +177,29 @@ create_and_activate_venv() {
 }
 
 # ---------------------------------------------------------
-# Section 5: Install Python Requirements
-# Installs project dependencies from requirements.txt.
+# Section 4: Install Python Requirements
 # ---------------------------------------------------------
 install_python_requirements() {
   info_msg "Installing Python dependencies..."
-  # Pin setuptools<82: v82+ drops pkg_resources and breaks isolated `pip install -e .`
   pip install --upgrade pip "setuptools>=68,<82" wheel || handle_error "Failed to upgrade pip, setuptools, and wheel"
   
   if [ -f requirements.txt ]; then
     pip install -r requirements.txt || handle_error "Failed to install base Python dependencies"
   else
     warn_msg "requirements.txt not found. Installing core dependencies."
-    pip install numpy pandas faker tqdm Levenshtein python-Levenshtein metaphone || handle_error "Failed to install core dependencies"
+    pip install numpy bittensor wandb requests python-dotenv Pillow || handle_error "Failed to install core dependencies"
   fi
   
   success_msg "Python dependencies installed successfully."
 }
 
 # ---------------------------------------------------------
-# Section 6: Install MIID in editable mode
+# Section 5: Install MIID in editable mode
 # ---------------------------------------------------------
 install_miid() {
   info_msg "Installing MIID package in editable mode..."
   if ! pip install -e .; then
-    warn_msg "Editable install with build isolation failed; retrying with --no-build-isolation (venv setuptools)..."
+    warn_msg "Editable install with build isolation failed; retrying with --no-build-isolation..."
     pip install -e . --no-build-isolation || handle_error "Failed to install MIID package"
   fi
   success_msg "MIID package installed successfully."
@@ -230,7 +213,7 @@ install_miid() {
 install_phase4_deps() {
   info_msg "Setting up Phase 4 (face image variation) dependencies..."
 
-  # Install miner-only Python packages for full mode.
+  # Miner-specific Python packages (diffusion models, face validation, drand)
   if [ -f requirements-miner.txt ]; then
     info_msg "Installing miner-specific dependencies (diffusion models, face validation, drand timelock)..."
     pip install -r requirements-miner.txt || handle_error "Failed to install miner dependencies"
@@ -238,10 +221,7 @@ install_phase4_deps() {
     warn_msg "requirements-miner.txt not found. Miner image generation packages may be missing."
   fi
 
-  # Ensure drand timelock encryption is available. This is the default path:
-  # generated images are encrypted before upload so they only decrypt after a
-  # future drand round. We try a direct install as a safety net in case the
-  # requirements file was missing the entry, then verify the import works.
+  # Ensure drand timelock encryption is available
   info_msg "Ensuring drand timelock encryption is installed..."
   if ! python -c "import timelock" >/dev/null 2>&1; then
     pip install timelock || warn_msg "Could not install 'timelock' on this platform. Image encryption will fall back to raw bytes."
@@ -298,13 +278,7 @@ install_bittensor() {
 }
 
 # ---------------------------------------------------------
-# Section 7b: btcli sanity check + scalecodec/cyscale conflict fix
-#
-# `async-substrate-interface` (used by bittensor-cli) refuses to import when
-# BOTH `scalecodec` and `cyscale` are installed.  Some transitive deps may
-# still pull in the legacy `scalecodec`, which would make the first `btcli`
-# call crash for a brand-new miner.  This step detects and repairs that
-# situation BEFORE the user runs any `btcli` command.
+# Section 8: btcli sanity check + scalecodec/cyscale conflict fix
 # ---------------------------------------------------------
 ensure_btcli_works() {
   info_msg "Verifying btcli is importable (scalecodec/cyscale conflict check)..."
@@ -312,13 +286,13 @@ ensure_btcli_works() {
   local has_scalecodec="no"
   local has_cyscale="no"
   python -c "import scalecodec" >/dev/null 2>&1 && has_scalecodec="yes"
-  python -c "import cyscale" >/dev/null 2>&1 && has_cyscale="yes"
+  python -c "import cyscale"    >/dev/null 2>&1 && has_cyscale="yes"
 
   if [ "$has_scalecodec" = "yes" ] && [ "$has_cyscale" = "yes" ]; then
-    warn_msg "Both 'scalecodec' and 'cyscale' detected. Removing legacy 'scalecodec' to avoid btcli startup crash."
+    warn_msg "Both 'scalecodec' and 'cyscale' detected. Removing legacy 'scalecodec'."
     pip uninstall -y scalecodec >/dev/null 2>&1 || true
   elif [ "$has_scalecodec" = "yes" ] && [ "$has_cyscale" = "no" ]; then
-    info_msg "Only 'scalecodec' is installed; reinstalling 'cyscale' for async-substrate-interface compatibility."
+    info_msg "Only 'scalecodec' installed; reinstalling 'cyscale' for async-substrate-interface compat."
     pip uninstall -y scalecodec >/dev/null 2>&1 || true
     pip install --force-reinstall cyscale >/dev/null 2>&1 || warn_msg "Could not install 'cyscale'. btcli may fail to start."
   fi
@@ -353,38 +327,11 @@ main() {
   
   install_system_dependencies
   install_python
-  install_ollama
   create_and_activate_venv
   install_python_requirements
   install_miid
   install_bittensor
-
-  # Ask whether to install Phase 4 (image generation) packages
-  local INSTALL_MODE="${1:-}"
-  if [ "$INSTALL_MODE" = "--full" ]; then
-    info_msg "Full mode requested (--full flag). Installing Phase 4 packages..."
-    install_phase4_deps
-  elif [ "$INSTALL_MODE" = "--basic" ]; then
-    info_msg "Basic mode requested (--basic flag). Skipping Phase 4 packages."
-  else
-    echo ""
-    info_msg "Choose setup mode:"
-    echo -e "   [B] Basic  — Name variations only (no GPU required)"
-    echo -e "   [F] Full   — Name + face image variations (GPU recommended)"
-    echo ""
-    read -p "Enter B or F (default: F): " -n 1 -r
-    echo
-    if [[ $REPLY =~ ^[Bb]$ ]]; then
-      info_msg "Basic mode selected. Skipping Phase 4 packages."
-    else
-      info_msg "Full mode selected. Installing Phase 4 packages..."
-      install_phase4_deps
-      INSTALL_MODE="--full"
-    fi
-  fi
-
-  # Run the btcli health check AFTER every pip install step so a transitive
-  # `scalecodec` from any later package does not break the first `btcli` call.
+  install_phase4_deps
   ensure_btcli_works
 
   echo ""
@@ -392,22 +339,9 @@ main() {
   info_msg "MIID Miner setup completed successfully!"
   info_msg "============================================"
   echo ""
-
-  if [ "$INSTALL_MODE" = "--full" ]; then
-    info_msg "Mode: FULL (name + image variations)"
-    echo ""
-    info_msg "Before running the miner, set these environment variables:"
-    echo -e "   export HF_TOKEN=\"hf_YOUR_TOKEN_HERE\"    # Get from huggingface.co/settings/tokens"
-    echo -e "   export FLUX_DEVICE=\"cuda\"                # or \"mps\" for Apple Silicon, \"cpu\" for CPU-only"
-  else
-    info_msg "Mode: BASIC (name variations only)"
-    echo ""
-    info_msg "To upgrade to Full later, run:"
-    echo -e "   source miner_env/bin/activate"
-    echo -e "   pip install -r requirements-miner.txt"
-    echo -e "   See docs/miner.md 'Upgrading from Basic to Full' for details."
-  fi
-
+  info_msg "Before running the miner, set these environment variables:"
+  echo -e "   export HF_TOKEN=\"hf_YOUR_TOKEN_HERE\"    # Get from huggingface.co/settings/tokens"
+  echo -e "   export FLUX_DEVICE=\"cuda\"                # or \"mps\" for Apple Silicon, \"cpu\" for CPU-only"
   echo ""
   info_msg "To start using your miner:"
   echo -e "   1. Activate the virtual environment: source miner_env/bin/activate"
