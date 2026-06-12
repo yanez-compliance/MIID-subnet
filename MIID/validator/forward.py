@@ -48,7 +48,11 @@ from MIID.utils.uids import get_random_uids
 from MIID.utils.sign_message import sign_message
 
 from MIID.validator.base_images import fetch_image_from_api
-from MIID.validator.drand_utils import calculate_target_round, calculate_reveal_buffer
+from MIID.validator.drand_utils import (
+    calculate_target_round,
+    calculate_reveal_buffer,
+    REVEAL_DELAY_SECONDS,
+)
 from MIID.validator.image_variations import (
     format_variation_requirements,
     get_random_indoor_background_variation,
@@ -312,9 +316,14 @@ async def forward(self):
                     screen_replay_var,
                 ]
 
-                # Calculate drand round for reveal (after all miners respond)
-                reveal_delay = calculate_reveal_buffer(request_timeout)
+                # Drand unlock at T+40 min (batch1 20m + batch2 20m); grading window T+40–60m
+                reveal_delay = calculate_reveal_buffer(
+                    getattr(self.config.neuron, "reveal_delay_seconds", REVEAL_DELAY_SECONDS)
+                )
                 target_round, reveal_timestamp = calculate_target_round(reveal_delay)
+                bt.logging.info(
+                    f"Phase 4: drand reveal in {reveal_delay}s ({reveal_delay / 60:.0f} min)"
+                )
 
                 # Generate unique challenge ID
                 challenge_id = f"challenge_{int(time.time())}_{self.wallet.hotkey.ss58_address[:8]}"

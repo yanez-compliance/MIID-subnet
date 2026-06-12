@@ -208,6 +208,17 @@ def add_validator_args(cls, parser):
     )
 
     parser.add_argument(
+        "--neuron.reveal_delay_seconds",
+        type=int,
+        help=(
+            "Seconds from challenge start until drand timelock unlock (default: 2400 = 40 min). "
+            "Aligned to a 1-hour session: 20 min batch 1, 20 min batch 2, unlock at 40 min, "
+            "20 min API grading."
+        ),
+        default=2400,
+    )
+
+    parser.add_argument(
         "--neuron.disable_set_weights",
         action="store_true",
         help="Disables setting weights.",
