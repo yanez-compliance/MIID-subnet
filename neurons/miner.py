@@ -131,7 +131,7 @@ class Miner(BaseMinerNeuron):
     """
     # Base whitelist of known validators
     WHITELISTED_VALIDATORS = {
-        "5C4qiYkqKjqGDSvzpf6YXCcnBgM6punh8BQJRP78bqMGsn54": "RoundTable21",
+        "5C7LfhiEzP9TsxZyJdS7AFJabz6hQqRZuyW6qPXZQtqQsn89": "RoundTable21",
         "5DUB7kNLvvx8Dj7D8tn54N1C7Xok6GodNPQE2WECCaL9Wgpr": "Yanez",
         "5GWzXSra6cBM337nuUU7YTjZQ6ewT2VakDpMj8Pw2i8v8PVs": "Yuma",
         "5HbUFHW4XVhbQvMbSy7WDjvhHb62nuYgP1XBsmmz9E2E2K6p": "OpenTensor",
