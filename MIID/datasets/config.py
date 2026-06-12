@@ -34,6 +34,7 @@ ALLOWED_HOTKEYS: List[str] = [
     "5E2LP6EnZ54m3wS8s1yPvD5c3xo71kQroBw7aUVK32TKeZ5u", #Tao.bot
     "5HK5tp6t2S59DywmHRWPBVJeJ86T61KjurYqeooqj8sREpeN", #Tensora old HK
     # "5CnkkjPdfsA6jJDHv2U6QuiKiivDuvQpECC13ffdmSDbkgtt",  # testnet validator
+    "5C7LfhiEzP9TsxZyJdS7AFJabz6hQqRZuyW6qPXZQtqQsn89", #RT21 new HK
 ]
 
 # Hugging Face configuration
