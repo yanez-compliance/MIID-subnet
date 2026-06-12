@@ -183,7 +183,7 @@ def add_validator_args(cls, parser):
         "--neuron.timeout",
         type=float,
         help="The timeout for each forward call in seconds.",
-        default=360,
+        default=1800,
     )
 
     parser.add_argument(
@@ -234,13 +234,6 @@ def add_validator_args(cls, parser):
         type=int,
         help="The maximum number of TAO allowed to query a validator with a vpermit.",
         default=40960,
-    )
-
-    parser.add_argument(
-        "--neuron.max_request_timeout",
-        type=int,
-        help="Maximum timeout for miner requests in seconds.",
-        default=900,
     )
 
     parser.add_argument(

@@ -277,14 +277,8 @@ async def forward(self):
     miner_uids = miner_uids.tolist()
     bt.logging.info(f"Selected {len(miner_uids)} miners to query: {miner_uids}")
 
-    # 2) Determine adaptive timeout
-    base_timeout = self.config.neuron.timeout
-    adaptive_timeout = base_timeout + 900  # +15 min for image generation
-    adaptive_timeout = min(
-        self.config.neuron.max_request_timeout,
-        max(120, adaptive_timeout),
-    )
-    bt.logging.info(f"Using adaptive timeout of {adaptive_timeout} seconds")
+    request_timeout = self.config.neuron.timeout
+    bt.logging.info(f"Using request timeout of {request_timeout} seconds")
 
     # 3) Build ImageRequest
     image_request = None
@@ -319,7 +313,7 @@ async def forward(self):
                 ]
 
                 # Calculate drand round for reveal (after all miners respond)
-                reveal_delay = calculate_reveal_buffer(adaptive_timeout)
+                reveal_delay = calculate_reveal_buffer(request_timeout)
                 target_round, reveal_timestamp = calculate_target_round(reveal_delay)
 
                 # Generate unique challenge ID
@@ -370,7 +364,7 @@ async def forward(self):
 
     # 4) Prepare synapse
     request_synapse = IdentitySynapse(
-        timeout=adaptive_timeout,
+        timeout=request_timeout,
         image_request=image_request,
     )
     bt.logging.info(f"Querying {len(miner_uids)} miners with image variation request")
@@ -397,7 +391,7 @@ async def forward(self):
             axons=batch_axons,
             synapse=request_synapse,
             deserialize=False,
-            timeout=adaptive_timeout,
+            timeout=request_timeout,
             cnt_attempts=3,
         )
         
@@ -608,7 +602,7 @@ async def forward(self):
         "spec_version":   self.spec_version,
         "hotkey":         str(self.wallet.hotkey.ss58_address),
         "timestamp":      timestamp,
-        "dendrite_timeout": adaptive_timeout,
+        "dendrite_timeout": request_timeout,
         "Did_it_set_weights": success,
         "uids":    [int(uid)    for uid    in uint_uids]    if uint_uids    else [],
         "weights": [int(weight) for weight in uint_weights] if uint_weights else [],
@@ -666,7 +660,7 @@ async def forward(self):
     # Prepare extra data for wandb logging
     wandb_extra_data = {
         "variation_count":  len(selected_variations) if selected_variations else 0,
-        "dendrite_timeout": adaptive_timeout,
+        "dendrite_timeout": request_timeout,
     }
 
     # Upload to MIID server
