@@ -1,14 +1,40 @@
+import base64
 import requests
 from datetime import datetime
+from pathlib import Path
+
 import bittensor
 
 # Edit these variables directly in the file
-miner_address = "123 main street, Ukraine"  # Change this to your miner address
-latitude = None  # Optional: set to float value (e.g., 4.5) or leave as None
-longitude = None  # Optional: set to float value (e.g., 31.6) or leave as None
 wallet_name = "miner"  # Your wallet name
 wallet_hotkey = "m"  # Your hotkey name
-api_url = "http://34.211.230.92:5000/validate"  # API endpoint URL
+api_url = "http://98.90.28.118:5001/validate"  # API endpoint URL
+image_dir = Path(__file__).parent / "image"  # Folder containing the image to send
+
+IMAGE_EXTENSIONS = {".png", ".jpg", ".jpeg", ".webp", ".bmp"}
+
+
+def get_image_path(directory: Path) -> Path:
+    """Return the first image file found in the given directory."""
+    if not directory.is_dir():
+        raise FileNotFoundError(f"Image directory not found: {directory}")
+
+    images = sorted(
+        f for f in directory.iterdir()
+        if f.is_file() and f.suffix.lower() in IMAGE_EXTENSIONS
+    )
+    if not images:
+        raise FileNotFoundError(
+            f"No image found in {directory}. "
+            f"Supported formats: {', '.join(sorted(IMAGE_EXTENSIONS))}"
+        )
+    return images[0]
+
+
+def encode_image_b64(image_path: Path) -> str:
+    """Read an image file and return its base64-encoded contents."""
+    with open(image_path, "rb") as f:
+        return base64.b64encode(f.read()).decode("utf-8")
 
 
 def sign_message(wallet: bittensor.Wallet, message_text: str = "API Request") -> str:
@@ -44,7 +70,9 @@ def sign_message(wallet: bittensor.Wallet, message_text: str = "API Request") ->
 
 
 def main():
-    # Load wallet
+    image_path = get_image_path(image_dir)
+    print(f"Sending image: {image_path.name}")
+
     wallet = bittensor.Wallet(name=wallet_name, hotkey=wallet_hotkey)
     
     # Sign message
@@ -52,16 +80,10 @@ def main():
     
     # Prepare payload
     payload = {
-        'miner_address': miner_address,
-        'signature': signature
+        "image": encode_image_b64(image_path),
+        "signature": signature,
     }
-    
-    # Add optional coordinates
-    if latitude is not None:
-        payload['latitude'] = latitude
-    if longitude is not None:
-        payload['longitude'] = longitude
-    
+
     # Send request
     response = requests.post(api_url, json=payload)
     print(f"Response: {response.json()}")
@@ -69,4 +91,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 

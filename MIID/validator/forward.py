@@ -22,25 +22,21 @@
 """
 Validator Forward Module
 
-This module implements the forward function for generating Threat Scenarios.
-The forward function is responsible for:
-1. Selecting random miners to query
-2. Generating threat scenarios and identity test cases
-3. Requesting execution vectors (name variations) that could be used to bypass detection systems
-4. Evaluating the effectiveness of the execution vectors returned by miners
-5. Rewarding miners based on the quality of their execution vectors
-6. Saving the results
-7. Uploading the same results to the external endpoint (Flask-based) via HTTP POST
-
-The module simulates identity screening bypass attempts by generating and evaluating 
-name variations that could potentially evade detection systems.
+Implements the forward function that drives each validation round:
+1. Select random miners to query.
+2. Fetch a base face image from the MIID API.
+3. Build an ImageRequest (5 variations: 2 background, 2 random, 1 screen-replay).
+4. Send the request to miners in batches; collect S3 submission references.
+5. Grade submissions via the external grading API (KAV) using
+   get_image_variation_rewards().
+6. Combine KAV scores with reputation (UAV) via apply_reputation_rewards().
+7. Update miner weights and upload results to the MIID server.
 """
 
 import time
 import bittensor as bt
 import json
 import os
-import random
 import asyncio
 import numpy as np
 from typing import List, Dict, Any, Tuple, Optional
@@ -48,16 +44,16 @@ from datetime import datetime
 from pathlib import Path
 
 from MIID.protocol import IdentitySynapse, ImageRequest, VariationRequest
-from MIID.validator.reward import get_name_variation_rewards, apply_reputation_rewards
+from MIID.validator.reward import get_image_variation_rewards, apply_reputation_rewards
 from MIID.utils.uids import get_random_uids
 from MIID.utils.sign_message import sign_message
-from MIID.validator.query_generator import QueryGenerator
 
-# Phase 4 imports
-from MIID.validator.base_images import (
-    fetch_image_from_api
+from MIID.validator.base_images import fetch_image_from_api
+from MIID.validator.drand_utils import (
+    calculate_target_round,
+    calculate_reveal_buffer,
+    REVEAL_DELAY_SECONDS,
 )
-from MIID.validator.drand_utils import calculate_target_round, calculate_reveal_buffer
 from MIID.validator.image_variations import (
     format_variation_requirements,
     get_random_indoor_background_variation,
@@ -71,7 +67,7 @@ from MIID.validator.image_variations import (
 from MIID.utils.misc import upload_data
 
 # =============================================================================
-# Reputation Cache (Phase 4 - Cycle 1)
+# Reputation Cache (persists across forward passes)
 # =============================================================================
 
 # Module-level cache for reputation data (persists across forward passes)
@@ -145,39 +141,32 @@ def _clear_pending_allocations(file_path: Path):
 # =============================================================================
 
 EPOCH_MIN_TIME = 360  # seconds
-MIID_SERVER = "http://52.44.186.20:5000/upload_data" ## MIID server
+MIID_SERVER = "http://52.44.186.20:5000/upload_data"
 
-# =============================================================================
-# Phase 4: Image Variation Configuration
-# =============================================================================
-PHASE4_ENABLED = True  # Set to False to disable Phase 4 features
-# Variation types and counts are now dynamically selected per challenge
-# See: MIID/validator/image_variations.py for definitions
-# =============================================================================
+PHASE4_ENABLED = True
 
-# =============================================================================
-# UAV Grading Configuration
-# =============================================================================
-# UAV_grading is controlled via config.neuron.UAV_grading (default: False)
-# When False: Uses KAV-only scoring with burn applied directly
-# When True: Uses reputation-weighted rewards (KAV + UAV) with burn applied after combination
-# =============================================================================
 
-async def dendrite_with_retries(dendrite: bt.Dendrite, axons: list, synapse: IdentitySynapse,
-                                deserialize: bool, timeout: float, cnt_attempts=3):
+async def dendrite_with_retries(
+    dendrite: bt.Dendrite,
+    axons: list,
+    synapse: IdentitySynapse,
+    deserialize: bool,
+    timeout: float,
+    cnt_attempts: int = 3,
+):
     """
     Send requests to miners with automatic retry logic for failed connections.
-    
+
     Args:
-        dendrite: The dendrite object to use for communication
-        axons: List of axons to query
-        synapse: The synapse object containing the request
-        deserialize: Whether to deserialize the response
-        timeout: Timeout for each request in seconds
-        cnt_attempts: Number of retry attempts for failed connections
-        
+        dendrite:     The dendrite object to use for communication.
+        axons:        List of axons to query.
+        synapse:      The synapse object containing the request.
+        deserialize:  Whether to deserialize the response.
+        timeout:      Timeout per attempt in seconds.
+        cnt_attempts: Number of retry attempts for failed connections.
+
     Returns:
-        List of responses from miners
+        List of IdentitySynapse responses from miners.
     """
     res = [None] * len(axons)
     idx = list(range(len(axons)))
@@ -185,10 +174,9 @@ async def dendrite_with_retries(dendrite: bt.Dendrite, axons: list, synapse: Ide
     
     def create_default_response():
         return IdentitySynapse(
-            identity=synapse.identity,
-            query_template=synapse.query_template,
-            variations={},
-            process_time=process_time
+            image_request=synapse.image_request,
+            s3_submissions=[],
+            process_time=None,
         )
     
     for attempt in range(cnt_attempts):
@@ -196,37 +184,23 @@ async def dendrite_with_retries(dendrite: bt.Dendrite, axons: list, synapse: Ide
             axons=axons_for_retry,
             synapse=synapse,
             deserialize=deserialize,
-            timeout=timeout * (1 + attempt * 0.1)
+            timeout=timeout * (1 + attempt * 0.1),
         )
         
         new_idx = []
         new_axons = []
         
         for i, response in enumerate(responses):
-            #bt.logging.info(f"#########################################Response {i}: {response}#########################################")
-            #bt.logging.info(f"#########################################Response type: {type(response)}#########################################")
-            
             process_time = None
             if hasattr(response, "dendrite") and hasattr(response.dendrite, "process_time"):
                 try:
                     process_time = float(response.dendrite.process_time)
                 except (ValueError, TypeError):
                     process_time = None
-                        
-            if isinstance(response, dict):
-                # Got the variations dictionary directly
-                complete_response = IdentitySynapse(
-                    identity=synapse.identity,
-                    query_template=synapse.query_template,
-                    variations=response,
-                    process_time=process_time
-                )
-                res[idx[i]] = complete_response
-            
-            elif hasattr(response, 'dendrite'):
-                # Check status code
-                if (response.dendrite.status_code is not None and 
-                    int(response.dendrite.status_code) == 422):
+
+            if hasattr(response, 'dendrite'):
+                if (response.dendrite.status_code is not None
+                        and int(response.dendrite.status_code) == 422):
                     if attempt == cnt_attempts - 1:
                         res[idx[i]] = response
                     else:
@@ -237,9 +211,8 @@ async def dendrite_with_retries(dendrite: bt.Dendrite, axons: list, synapse: Ide
                     res[idx[i]] = response
             
             else:
-                # If the response has variations attribute, treat it as a valid response
-                if hasattr(response, 'variations'):
-                    response.process_time = process_time  # <-- attach it
+                if hasattr(response, 's3_submissions'):
+                    response.process_time = process_time
                     res[idx[i]] = response
                 else:
                     # Retry or assign default
@@ -268,63 +241,27 @@ async def dendrite_with_retries(dendrite: bt.Dendrite, axons: list, synapse: Ide
     return res
 
 
-def process_new_variations_structure(uid_response_map, miner_uids):
-    """Normalize new variations structure for reward calculation.
-
-    Miners may return either the legacy format:
-        { seed_name: [variations...] }
-    or the newer format:
-        { seed_name: { "variations": [...], "uav": {...} } }
-
-    This helper normalizes both into the legacy format in-place on each
-    response object and ignores any UAV/address data entirely.
-    """
-    for uid in miner_uids:
-        response = uid_response_map.get(uid)
-        if not response or not hasattr(response, "variations") or response.variations is None:
-            continue
-
-        miner_variations = {}
-
-        try:
-            items = response.variations.items() if isinstance(response.variations, dict) else []
-            for seed_name, seed_data in items:
-                if isinstance(seed_data, list):
-                    # Old format: variations only
-                    miner_variations[seed_name] = seed_data
-                elif isinstance(seed_data, dict):
-                    # New format: { "variations": [...], "uav": {...} }
-                    # We only care about the variations array and deliberately
-                    # drop any UAV/address-related content.
-                    if "variations" in seed_data:
-                        miner_variations[seed_name] = seed_data.get("variations") or []
-        except Exception as e:
-            bt.logging.warning(f"Miner {uid}: Error processing variations: {e}")
-
-        # Normalize response variations for reward calculation
-        response.variations = miner_variations
-
-
 async def forward(self):
     """
-    The forward function is called by the validator every time step.
+    Validator forward pass — one full validation round.
 
-    This function implements a threat detection simulation that:
-    1. Selects a random set of miners to query
-    2. Generates a complex threat scenario using an LLM
-    3. Creates a list of identity names as test cases
-    4. Sends the threat scenario to miners, requesting execution vectors (name variations)
-    5. Evaluates the effectiveness of execution vectors at bypassing identity detection
-    6. Updates miner scores based on the quality and diversity of their execution vectors
-    7. Saves the results 
-    
-    Returns:
-        The result of the forward function from the MIID.validator module
+    Steps:
+    1.  Select random miners.
+    2.  Fetch base face image from the MIID API.
+    3.  Build ImageRequest (5 variations: indoor bg, outdoor bg, 2 random, screen-replay).
+    4.  Query miners in batches; collect S3 submission references.
+    5.  Compute KAV rewards via get_image_variation_rewards() (calls grading API).
+    6.  Optionally combine with UAV via apply_reputation_rewards().
+    7.  Update scores and set weights.
+    8.  Upload results to the MIID server.
     """
 
-    # --- CREATE NEW WANDB RUN FOR EACH FORWARD PASS ---
-    # Ensure we have a wandb run for this forward pass (unless wandb is disabled)
-    wandb_disabled = hasattr(self.config, 'wandb') and hasattr(self.config.wandb, 'disable') and self.config.wandb.disable
+    # --- Wandb run setup ---
+    wandb_disabled = (
+        hasattr(self.config, 'wandb')
+        and hasattr(self.config.wandb, 'disable')
+        and self.config.wandb.disable
+    )
     if not wandb_disabled:
         bt.logging.info("Creating new wandb run for this validation round")
         self.new_wandb_run()
@@ -338,54 +275,17 @@ async def forward(self):
     available_axon_size = len(self.metagraph.axons) - 1  # Exclude self
     miner_selection_size = min(available_axon_size, self.config.neuron.sample_size)
     miner_uids = get_random_uids(self, k=miner_selection_size)
-    axons = [self.metagraph.axons[uid] for uid in miner_uids]
 
-    bt.logging.debug(f"🔧 Miner axons: {axons}")
     bt.logging.debug(f"⚙️ Miner selection size: {miner_selection_size}")
     bt.logging.debug(f"📋 Available axon size: {available_axon_size}")
 
     miner_uids = miner_uids.tolist()
     bt.logging.info(f"Selected {len(miner_uids)} miners to query: {miner_uids}")
 
-    # 2) Use the existing query generator instance
-    query_generator = self.query_generator
-    
-    # Use the query generator
-    challenge_start_time = time.time()
-    seed_names_with_labels, query_template, query_labels, successful_model, successful_timeout, successful_judge_model, successful_judge_timeout, generation_log = await query_generator.build_queries()
-    challenge_end_time = time.time()
-    bt.logging.info(f"Time to generate challenges: {int(challenge_end_time - challenge_start_time)}s")
+    request_timeout = self.config.neuron.timeout
+    bt.logging.info(f"Using request timeout of {request_timeout} seconds")
 
-    # Extract the names, addresses, and DOBs for use in existing logic
-    seed_names = [item['name'] for item in seed_names_with_labels]
-    seed_addresses = [item['address'] for item in seed_names_with_labels]
-    seed_dob = [item['dob'] for item in seed_names_with_labels]
-    
-    # Create identity list with [name, dob, address] arrays
-    identity_list = [[item['name'], item['dob'], item['address']] for item in seed_names_with_labels]
-
-    # Calculate timeout based on the number of identities and complexity
-    base_timeout = self.config.neuron.timeout  # Double from 60 to 120 seconds
-    # More generous allocation - especially for LLM operations
-    adaptive_timeout = base_timeout + (len(seed_names) * 20) + (query_labels['variation_count'] * 10)
-    adaptive_timeout = min(self.config.neuron.max_request_timeout, max(120, adaptive_timeout))  # clamp [120, max_request_timeout]
-    
-    # Phase 4: Increase timeout by 15 minutes (900 seconds) when Phase 4 is enabled
-    if PHASE4_ENABLED:
-        adaptive_timeout += 900  # Add 15 minutes
-        bt.logging.info(f"Phase 4 enabled: Increased adaptive timeout by 15 minutes (900 seconds)")
-    
-    bt.logging.info(f"Using adaptive timeout of {adaptive_timeout} seconds for {len(seed_names)} identities")
-    
-    # ==========================================================================
-    # Phase 4: Create Image Request (Image cycling + random variations)
-    # ==========================================================================
-    # Each forward pass advances to the next image in order.
-    # Variations are selected as:
-    # 1–2) background_edit: one indoor + one outdoor (random intensity + weighted accessory each)
-    # 3–4) two independent random pose/lighting/expression + random intensity
-    # 5) screen_replay: random device + random visual cues
-    # ==========================================================================
+    # 3) Build ImageRequest
     image_request = None
     challenge_id = None
     selected_variations = None  # Track what variations were requested
@@ -417,9 +317,14 @@ async def forward(self):
                     screen_replay_var,
                 ]
 
-                # Calculate drand round for reveal (after all miners respond)
-                reveal_delay = calculate_reveal_buffer(adaptive_timeout)
+                # Drand unlock at T+40 min (batch1 20m + batch2 20m); grading window T+40–60m
+                reveal_delay = calculate_reveal_buffer(
+                    getattr(self.config.neuron, "reveal_delay_seconds", REVEAL_DELAY_SECONDS)
+                )
                 target_round, reveal_timestamp = calculate_target_round(reveal_delay)
+                bt.logging.info(
+                    f"Phase 4: drand reveal in {reveal_delay}s ({reveal_delay / 60:.0f} min)"
+                )
 
                 # Generate unique challenge ID
                 challenge_id = f"challenge_{int(time.time())}_{self.wallet.hotkey.ss58_address[:8]}"
@@ -467,34 +372,17 @@ async def forward(self):
             image_request = None
             selected_variations = None
 
-    # Add image variation requirements to query template (if Phase 4 enabled)
-    if selected_variations:
-        image_variation_text = format_variation_requirements(selected_variations)
-        query_template = query_template + image_variation_text
-        bt.logging.debug(f"Phase 4: Added image variation requirements to query template")
-    # ==========================================================================
-
-    # 5) Prepare the synapse
+    # 4) Prepare synapse
     request_synapse = IdentitySynapse(
-        identity=identity_list,
-        query_template=query_template,
-        variations={},
-        timeout=adaptive_timeout,
-        image_request=image_request  # Phase 4: Add image request
+        timeout=request_timeout,
+        image_request=image_request,
     )
-
-    if query_generator.use_default_query:  
-        bt.logging.info(f"Querying {len(miner_uids)} miners with default query template")
-    else:
-        bt.logging.info(f"Querying {len(miner_uids)} miners with complex query")
-
-    bt.logging.debug(f"📄 Request synapse: {request_synapse}")
+    bt.logging.info(f"Querying {len(miner_uids)} miners with image variation request")
     await asyncio.sleep(3)
 
-    # 6) Query the network in batches
+    # 5) Query miners in batches
     start_time = time.time()
-    # Use a dictionary to maintain UID-response mapping instead of separate lists
-    uid_response_map = {}
+    uid_response_map: Dict[int, IdentitySynapse] = {}
     batch_size = self.config.neuron.batch_size
     total_batches = (len(miner_uids) + batch_size - 1) // batch_size
     
@@ -513,8 +401,8 @@ async def forward(self):
             axons=batch_axons,
             synapse=request_synapse,
             deserialize=False,
-            timeout=adaptive_timeout,
-            cnt_attempts=3
+            timeout=request_timeout,
+            cnt_attempts=3,
         )
         
         batch_duration = time.time() - batch_start_time
@@ -524,30 +412,16 @@ async def forward(self):
         for idx_resp, response in enumerate(batch_responses):
             uid = batch_uids[idx_resp]
             uid_response_map[uid] = response
-            
-            if not hasattr(response, 'variations'):
-                bt.logging.warning(f"Miner {uid} returned response without 'variations' attribute.")
-            elif response.variations is None:
-                bt.logging.warning(f"Miner {uid} returned None in 'variations'.")
-            elif not response.variations:
-                bt.logging.warning(f"Miner {uid} returned empty variations dictionary.")
+
+            if not hasattr(response, 's3_submissions'):
+                bt.logging.warning(f"Miner {uid}: response missing 's3_submissions'.")
+            elif response.s3_submissions is None:
+                bt.logging.warning(f"Miner {uid}: s3_submissions is None.")
+            elif not response.s3_submissions:
+                bt.logging.warning(f"Miner {uid}: returned empty s3_submissions.")
             else:
-                total_variations = sum(len(v) for v in response.variations.values())
-                # Enhanced logging for name structure validation
-                # for name, variations in response.variations.items():
-                #     name_parts = name.split()
-                #     if len(name_parts) > 1:  # Multi-part name
-                #         #bt.logging.info(f"Validating variations for multi-part name '{name}' (first: '{name_parts[0]}', last: '{name_parts[-1]}')")
-                #         # Validate variation structure
-                #         for var in variations:
-                #             var_parts = var.split()
-                #     #         if len(var_parts) < 2:
-                #     #             bt.logging.warning(f"Miner {uid} returned single-part variation '{var}' for multi-part name '{name}'")
-                #     # #else:  # Single-part name
-                #     #     #bt.logging.info(f"Validating variations for single-part name '{name}'")
-                        
-                bt.logging.info(f"Miner {uid} returned {len(response.variations)} identity variations with {total_variations} total variations.")
-        
+                bt.logging.info(f"Miner {uid}: returned {len(response.s3_submissions)} S3 submissions.")
+
         if i + batch_size < len(miner_uids):
             sleep_time = 2
             bt.logging.info(f"Sleeping for {sleep_time}s before next batch")
@@ -556,56 +430,79 @@ async def forward(self):
     end_time = time.time()
     bt.logging.info(f"Query completed in {end_time - start_time:.2f} seconds")
 
-    # Normalize new structure to legacy for rewards (drop any UAV/address data)
-    process_new_variations_structure(uid_response_map, miner_uids)
-
-    # Create ordered lists from the mapping to maintain consistency (after normalization)
     all_responses = [uid_response_map[uid] for uid in miner_uids]
 
-    # 7) Compute rewards
-    bt.logging.info(f"Received identity variation responses for {len(all_responses)} miners")
-    valid_responses = 0
-    for i, response in enumerate(all_responses):
-        if hasattr(response, 'variations') and response.variations:
-            valid_responses += 1
-        else:
-            bt.logging.warning(f"Miner {miner_uids[i]} returned invalid or empty response")
-    
-    bt.logging.info(f"Received {valid_responses} valid responses out of {len(all_responses)}")
+    # Log valid vs invalid responses
+    valid_count = sum(
+        1 for r in all_responses
+        if hasattr(r, 's3_submissions') and r.s3_submissions
+    )
+    bt.logging.info(f"Received {valid_count} valid responses out of {len(all_responses)}")
 
-    seed_script = [item['script'] for item in seed_names_with_labels]
-    
-    # Check if UAV grading is enabled (default: False)
+    # Build s3_submissions_by_miner for grading
+    s3_submissions_by_miner: Dict[str, Any] = {}
+    for uid, response in uid_response_map.items():
+        if PHASE4_ENABLED and hasattr(response, 's3_submissions') and response.s3_submissions:
+            miner_hotkey = str(self.metagraph.axons[uid].hotkey)
+            s3_data = []
+            for sub in response.s3_submissions:
+                s3_data.append({
+                    "s3_key":       sub.s3_key,
+                    "image_hash":   sub.image_hash,
+                    "signature":    sub.signature,
+                    "variation_type": sub.variation_type,
+                    "path_signature": sub.path_signature,
+                })
+            s3_submissions_by_miner[str(uid)] = {
+                "hotkey":           miner_hotkey,
+                "submissions":      s3_data,
+                "submission_count": len(s3_data),
+            }
+
+    # Build phase4_image_data for the grading API — mirrors the structure used
+    # in validator_api_test.py so the signing and payload format match exactly.
+    phase4_image_data: Optional[Dict] = None
+    if PHASE4_ENABLED and image_request is not None and selected_variations:
+        phase4_image_data = {
+            "cycle": "Phase4-C4-Sandbox",
+            "challenge_id": challenge_id,
+            "base_image_filename": image_request.image_filename,
+            "target_drand_round": image_request.target_drand_round,
+            "reveal_timestamp": image_request.reveal_timestamp,
+            "requested_variations": selected_variations,
+            "variation_count": len(selected_variations),
+            "variation_types": [v["type"] for v in selected_variations],
+            "variation_intensities": [v["intensity"] for v in selected_variations],
+            "s3_submissions_by_miner": s3_submissions_by_miner,
+        }
+
+    # 6) Compute rewards (KAV + optional UAV)
     uav_grading_enabled = getattr(self.config.neuron, 'UAV_grading', False)
-    
+
     if uav_grading_enabled:
-        # Phase 3: Get KAV rewards WITHOUT burn - burn will be applied after reputation weighting
-        kav_rewards, kav_uids, detailed_metrics = get_name_variation_rewards(
+        # Get KAV rewards WITHOUT burn — burn applied after KAV+UAV in apply_reputation_rewards()
+        kav_rewards, kav_uids, detailed_metrics = get_image_variation_rewards(
             self,
-            seed_names,
-            seed_dob,
-            seed_addresses,
-            seed_script,
-            all_responses,
-            miner_uids,
-            variation_count=query_labels['variation_count'],
-            phonetic_similarity=query_labels['phonetic_similarity'],
-            orthographic_similarity=query_labels['orthographic_similarity'],
-            rule_based=query_labels.get('rule_based'),  # Pass rule-based metadata
-            skip_burn=True  # Phase 3: Skip burn here, apply after KAV+UAV in apply_reputation_rewards()
+            challenge_id=challenge_id or "",
+            s3_submissions_by_miner=s3_submissions_by_miner,
+            miner_uids=miner_uids,
+            selected_variations=selected_variations or [],
+            skip_burn=True,
+            phase4_image_data=phase4_image_data,
         )
 
-        # ==========================================================================
-        # REPUTATION-WEIGHTED REWARDS (Phase 4 - Cycle 1)
-        # ==========================================================================
         global _cached_rep_data, _cached_rep_version, _pending_allocations, _pending_file_path
 
         # Initialize pending file path (once per validator session)
         if _pending_file_path is None:
-            _pending_file_path = Path(self.config.logging.logging_dir) / "validator_results" / "pending_allocations.json"
+            _pending_file_path = (
+                Path(self.config.logging.logging_dir)
+                / "validator_results"
+                / "pending_allocations.json"
+            )
             _pending_allocations = _load_pending_allocations(_pending_file_path)
             if _pending_allocations:
-                bt.logging.info(f"Loaded {len(_pending_allocations)} pending allocations from previous session")
+                bt.logging.info(f"Loaded {len(_pending_allocations)} pending allocations from disk")
 
         # With skip_burn=True, kav_rewards/kav_uids contain only miners (no burn UID)
         # Convert to list for apply_reputation_rewards
@@ -626,244 +523,103 @@ async def forward(self):
             burn_fraction=burn_fraction,
             kav_weight=kav_weight,
             uav_weight=uav_weight,
-            kav_metrics=detailed_metrics
+            kav_metrics=detailed_metrics,
         )
 
         bt.logging.info(
             f"Applied reputation rewards: {len(miner_uids_list)} miners, "
             f"using rep_snapshot_version={_cached_rep_version or 'None (first run)'}"
         )
-        # ==========================================================================
-        # END REPUTATION-WEIGHTED REWARDS
-        # ==========================================================================
     else:
         # UAV grading disabled: Use KAV-only scoring with burn applied directly
         bt.logging.info("UAV_grading disabled. Using KAV-only scoring with burn applied.")
-        rewards, updated_uids, detailed_metrics = get_name_variation_rewards(
+        rewards, updated_uids, detailed_metrics = get_image_variation_rewards(
             self,
-            seed_names,
-            seed_dob,
-            seed_addresses,
-            seed_script,
-            all_responses,
-            miner_uids,
-            variation_count=query_labels['variation_count'],
-            phonetic_similarity=query_labels['phonetic_similarity'],
-            orthographic_similarity=query_labels['orthographic_similarity'],
-            rule_based=query_labels.get('rule_based'),  # Pass rule-based metadata
-            skip_burn=False  # Apply burn directly in get_name_variation_rewards
+            challenge_id=challenge_id or "",
+            s3_submissions_by_miner=s3_submissions_by_miner,
+            miner_uids=miner_uids,
+            selected_variations=selected_variations or [],
+            skip_burn=False,
+            phase4_image_data=phase4_image_data,
         )
-        # Use detailed_metrics as combined_metrics for consistency
         combined_metrics = detailed_metrics
 
     # Verify UID-reward mapping before updating scores
     bt.logging.info("=== UID-REWARD MAPPING VERIFICATION ===")
     for i, uid in enumerate(updated_uids):
         reward = rewards[i] if i < len(rewards) else 0.0
-        response = uid_response_map.get(uid) if uid != 59 else None  # Burn UID won't have a response
-        has_response = response is not None
         if uid == 59:
             bt.logging.info(f"UID {uid}: IS BURNED EVENT. NO REWARD OR RESPONSE.")
         else:
+            has_response = uid_response_map.get(uid) is not None
             bt.logging.info(f"UID {uid}: Reward={reward:.4f}, HasResponse={has_response}")
     bt.logging.info("=== END UID-REWARD MAPPING VERIFICATION ===")
 
     self.update_scores(rewards, updated_uids)
     bt.logging.info(f"REWARDS: {rewards}  for UIDs: {updated_uids}")
 
-    # 8) Save results locally
+    # 7) Save results locally
     timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
     results_dir = os.path.join(self.config.logging.logging_dir, "validator_results")
     os.makedirs(results_dir, exist_ok=True)
     
     run_dir = os.path.join(results_dir, f"run_{timestamp}")
     os.makedirs(run_dir, exist_ok=True)
-    
-    # Format example queries with actual identities to show what was sent to miners
-    formatted_queries = {}
-    for identity in seed_names_with_labels:
-        try:
-            # Format the (non-UAV) query template with the actual identity name
-            formatted_query = query_template.replace("{name}", identity['name'])
-            formatted_queries[identity['name']] = {
-                "query": formatted_query,
-                "identity": {
-                    "name": identity['name'],
-                    "dob": identity['dob'],
-                    "address": identity['address']
-                }
-            }
-        except Exception as e:
-            bt.logging.error(f"Error formatting query for identity '{identity.get('name', 'unknown')}': {str(e)}")
-            formatted_queries[identity.get('name', 'unknown')] = {
-                "query": f"Error formatting query: {str(e)}",
-                "identity": identity
-            }
-    
-    # Save the query and responses to a JSON file
+
     results = {
         "timestamp": timestamp,
-        "seed_names_with_labels": seed_names_with_labels,
-        "seed_names": seed_names,
-        "seed_addresses": seed_addresses,
-        "seed_dob": seed_dob,
-        "query_template": query_template,
-        "query_labels": query_labels,
-        "formatted_queries": formatted_queries,  # Add the formatted queries
-        "request_synapse": {
-            "identity": identity_list,
-            "query_template": query_template,
-            "dendrite_timeout": adaptive_timeout
-        },
-        # Phase 4: Image variation data for YANEZ post-validation
         "phase4_image_data": {
-            "cycle": "Phase4-C4-Sandbox",
+            **(phase4_image_data or {}),
             "note": "Sandbox image variations with S3 uploads for YANEZ Sandbox testing",
             "enabled": PHASE4_ENABLED and image_request is not None,
             "s3_bucket": "yanez-miid-sn54",
+            # Fallbacks for when image_request was unavailable (phase4_image_data is None)
             "challenge_id": challenge_id,
             "base_image_filename": image_request.image_filename if image_request else None,
-            "target_drand_round": image_request.target_drand_round if image_request else None,
-            "reveal_timestamp": image_request.reveal_timestamp if image_request else None,
-            # Detailed variation requests with type + intensity for scoring
-            "requested_variations": selected_variations if selected_variations else [],
-            # Summary for quick reference
-            "variation_count": len(selected_variations) if selected_variations else 0,
-            "variation_types": [v["type"] for v in selected_variations] if selected_variations else [],
+            "target_drand_round":  image_request.target_drand_round if image_request else None,
+            "reveal_timestamp":    image_request.reveal_timestamp if image_request else None,
+            "requested_variations": selected_variations or [],
+            "variation_count":  len(selected_variations) if selected_variations else 0,
+            "variation_types":  [v["type"] for v in selected_variations] if selected_variations else [],
             "variation_intensities": [v["intensity"] for v in selected_variations] if selected_variations else [],
-            "s3_submissions_by_miner": {},  # Populated below
-        },
-        "query_generation": {
-            "use_default_query": self.query_generator.use_default_query,
-            "configured_model": getattr(self.config.neuron, 'ollama_model_name', "llama3.1:latest"),
-            "model_used": successful_model,  # Actual model that succeeded
-            "timeout_used": successful_timeout,  # Actual timeout that succeeded
-            "generation_time": challenge_end_time - challenge_start_time,
-            "generation_log": generation_log,
-            # Enhanced generation details
-            "generation_attempts": generation_log.get("attempts", []),
-            "generation_decision": generation_log.get("decision", "unknown"),
-            "final_template": generation_log.get("final_template", query_template),
-            "total_attempts": len(generation_log.get("attempts", [])),
-            "successful_attempt_index": next((i for i, attempt in enumerate(generation_log.get("attempts", [])) 
-                                           if attempt.get("status") in ["success", "success_after_repair", "proceeded_with_invalid_template"]), None)
-        },
-        "query_validation": {
-            "judge_enabled": self.query_generator.use_judge_model,
-            "judge_model_used": successful_judge_model,  # Judge model that succeeded (if any)
-            "judge_timeout_used": successful_judge_timeout,  # Judge timeout that succeeded (if any)
-            "judge_strict_mode": self.query_generator.judge_strict_mode,
-            "judge_on_static_pass": self.query_generator.judge_on_static_pass,
-            # Enhanced validation details from generation_log
-            "validation_details": generation_log.get("validation", {}),
-            "static_issues": generation_log.get("validation", {}).get("static_issues", []),
-            "judge_issues": generation_log.get("validation", {}).get("judge_issues", []),
-            "final_issues": generation_log.get("validation", {}).get("final_issues", []),
-            "validation_decision": generation_log.get("validation", {}).get("decision", "unknown"),
-            # Validation summary for quick insights
-            "validation_summary": {
-                "static_checks_passed": len(generation_log.get("validation", {}).get("static_issues", [])) == 0,
-                "judge_was_used": successful_judge_model is not None,
-                "judge_found_issues": len(generation_log.get("validation", {}).get("judge_issues", [])) > 0,
-                "final_issues_count": len(generation_log.get("validation", {}).get("final_issues", [])),
-                "template_has_hints": "[VALIDATION HINTS]" in query_template if query_template else False
-            }
+            "s3_submissions_by_miner": s3_submissions_by_miner,
         },
         "responses": {},
-        "rewards": {}
+        "rewards": {},
     }
 
     for i, uid in enumerate(miner_uids):
         # Get the response for this specific UID from our mapping
         response = uid_response_map.get(uid)
-        
-        if response is not None:
-            bt.logging.info(f"#########################################Response Time miner {uid}: {response.process_time}#########################################")
-
-            # Get the axon for this UID
-            axon = self.metagraph.axons[uid]
-            
-            # Convert the response to a serializable format
-            response_data = {
-                "uid": int(uid),
-                "hotkey": str(self.metagraph.axons[uid].hotkey),
-                "axon": {
-                    "ip": str(axon.ip) if hasattr(axon, 'ip') else None,
-                    "port": int(axon.port) if hasattr(axon, 'port') else None,
-                    "hotkey": str(axon.hotkey),
-                    "coldkey": str(axon.coldkey) if hasattr(axon, 'coldkey') else None,
-                    "version": int(axon.version) if hasattr(axon, 'version') else None,
-                    "protocol": int(axon.protocol) if hasattr(axon, 'protocol') else None,
-                    "is_serving": bool(axon.is_serving) if hasattr(axon, 'is_serving') else None
-                },
-                "response_time": response.process_time,  # When we processed this response
-                "variations": {},
-                "error": None,
-                "scoring_details": detailed_metrics[i] if i < len(detailed_metrics) else {}
-            }
-            
-            # Add variations if available
-            if hasattr(response, 'variations') and response.variations is not None:
-                response_data["variations"] = response.variations
-            else:
-                # Log error information if available
-                if hasattr(response, 'dendrite') and hasattr(response.dendrite, 'status_code'):
-                    response_data["error"] = {
-                        "status_code": response.dendrite.status_code,
-                        "status_message": getattr(response.dendrite, 'status_message', 'Unknown error')
-                    }
-                else:
-                    response_data["error"] = {
-                        "message": "Invalid response format",
-                        "response_type": str(type(response))
-                    }
-
-            # Phase 4: Collect S3 submissions
-            if PHASE4_ENABLED and hasattr(response, 's3_submissions') and response.s3_submissions:
-                miner_hotkey = str(self.metagraph.axons[uid].hotkey)
-                s3_data = []
-                for submission in response.s3_submissions:
-                    s3_data.append({
-                        "s3_key": submission.s3_key,
-                        "image_hash": submission.image_hash,
-                        "signature": submission.signature,
-                        "variation_type": submission.variation_type
-                    })
-                results["phase4_image_data"]["s3_submissions_by_miner"][str(uid)] = {
-                    "hotkey": miner_hotkey,
-                    "submissions": s3_data,
-                    "submission_count": len(s3_data)
+        axon = self.metagraph.axons[uid]
+        axon_data = {
+            "ip":         str(axon.ip)       if hasattr(axon, 'ip')         else None,
+            "port":       int(axon.port)     if hasattr(axon, 'port')       else None,
+            "hotkey":     str(axon.hotkey),
+            "coldkey":    str(axon.coldkey)  if hasattr(axon, 'coldkey')    else None,
+            "version":    int(axon.version)  if hasattr(axon, 'version')    else None,
+            "protocol":   int(axon.protocol) if hasattr(axon, 'protocol')   else None,
+            "is_serving": bool(axon.is_serving) if hasattr(axon, 'is_serving') else None,
+        }
+        response_data = {
+            "uid":            int(uid),
+            "hotkey":         str(self.metagraph.axons[uid].hotkey),
+            "axon":           axon_data,
+            "response_time":  response.process_time if response else None,
+            "s3_submissions": s3_submissions_by_miner.get(str(uid), {}),
+            "scoring_details": detailed_metrics[i] if i < len(detailed_metrics) else {},
+        }
+        if response is None:
+            response_data["error"] = {"message": "No response received"}
+        elif not (hasattr(response, 's3_submissions') and response.s3_submissions):
+            if hasattr(response, 'dendrite') and hasattr(response.dendrite, 'status_code'):
+                response_data["error"] = {
+                    "status_code":    response.dendrite.status_code,
+                    "status_message": getattr(response.dendrite, 'status_message', 'Unknown error'),
                 }
-                bt.logging.info(f"Phase 4: Collected {len(s3_data)} S3 submissions from miner {uid}")
-        else:
-            # Handle case where no response was received for this UID
-            bt.logging.warning(f"No response received for miner {uid}")
-            
-            # Get the axon for this UID
-            axon = self.metagraph.axons[uid]
-            
-            response_data = {
-                "uid": int(uid),
-                "hotkey": str(self.metagraph.axons[uid].hotkey),
-                "axon": {
-                    "ip": str(axon.ip) if hasattr(axon, 'ip') else None,
-                    "port": int(axon.port) if hasattr(axon, 'port') else None,
-                    "hotkey": str(axon.hotkey),
-                    "coldkey": str(axon.coldkey) if hasattr(axon, 'coldkey') else None,
-                    "version": int(axon.version) if hasattr(axon, 'version') else None,
-                    "protocol": int(axon.protocol) if hasattr(axon, 'protocol') else None,
-                    "is_serving": bool(axon.is_serving) if hasattr(axon, 'is_serving') else None
-                },
-                "response_time": None,
-                "variations": {},
-                "error": {
-                    "message": "No response received",
-                    "response_type": "None"
-                },
-                "scoring_details": detailed_metrics[i] if i < len(detailed_metrics) else {}
-            }
-        
-        # Add to the results
+            else:
+                response_data["error"] = {"message": "Empty or invalid response"}
+
         results["responses"][str(uid)] = response_data
         results["rewards"][str(uid)] = float(rewards[i]) if i < len(rewards) else 0.0
     
@@ -871,57 +627,38 @@ async def forward(self):
     bt.logging.info(f"Spec version for setting weights: {self.spec_version}")
     (success, uint_uids, uint_weights) = self.set_weights()
     bt.logging.info(f"Weights set successfully: {success}")
-    bt.logging.debug(f"📊 Uids: {uint_uids}")
-    bt.logging.debug(f"⚖️ Weights: {uint_weights}")
-    
-    # Always add weights info to results, regardless of success
-    results["Weights"] = {
-        "spec_version": self.spec_version,
-        "hotkey": str(self.wallet.hotkey.ss58_address),
-        "timestamp": timestamp,
-        "model_name": successful_model or getattr(self.config.neuron, 'ollama_model_name', "llama3.1:latest"),
-        "query_generator_timeout": successful_timeout,
-        "judge_model": successful_judge_model,
-        "judge_timeout": successful_judge_timeout,
-        "dendrite_timeout": adaptive_timeout,
-        "Did_it_set_weights": success,
-        "uids": [int(uid) for uid in uint_uids] if uint_uids else [],
-        "weights": [int(weight) for weight in uint_weights] if uint_weights else []
-    }
-    bt.logging.debug(f"📈 Results: {results['Weights']}")
-    
-    # Add metagraph scores for all miners
-    results["metagraph_scores"] = {
-        "timestamp": timestamp,
-        "total_miners": len(self.scores),
-        "scores_by_uid": {}
-    }
-    bt.logging.debug(f"📊 Metagraph scores: {results['metagraph_scores']}")
-    # Add scores for each UID in the metagraph
-    for uid in range(len(self.scores)):
-        results["metagraph_scores"]["scores_by_uid"][str(uid)] = {
-            "uid": int(uid),
-            "hotkey": str(self.metagraph.axons[uid].hotkey) if uid < len(self.metagraph.axons) else "unknown",
-            "score": float(self.scores[uid]),
-            "was_queried": uid in miner_uids
-        }
-    
-    bt.logging.debug(f"📋 Metagraph scores added for {len(self.scores)} miners")
-    
-    if not success:
-        bt.logging.error("Failed to set weights. Exiting.")
-    else:
-        bt.logging.info("Weights set successfully.")
 
-    # ==========================================================================
-    # 9) Add reward_allocation to results (Phase 4 - Cycle 1)
-    # ==========================================================================
+    results["Weights"] = {
+        "spec_version":   self.spec_version,
+        "hotkey":         str(self.wallet.hotkey.ss58_address),
+        "timestamp":      timestamp,
+        "dendrite_timeout": request_timeout,
+        "Did_it_set_weights": success,
+        "uids":    [int(uid)    for uid    in uint_uids]    if uint_uids    else [],
+        "weights": [int(weight) for weight in uint_weights] if uint_weights else [],
+    }
+
+    results["metagraph_scores"] = {
+        "timestamp":     timestamp,
+        "total_miners":  len(self.scores),
+        "scores_by_uid": {
+            str(uid): {
+                "uid":        int(uid),
+                "hotkey":     str(self.metagraph.axons[uid].hotkey) if uid < len(self.metagraph.axons) else "unknown",
+                "score":      float(self.scores[uid]),
+                "was_queried": uid in miner_uids,
+            }
+            for uid in range(len(self.scores))
+        },
+    }
+
+    # Reward allocation tracking
     if uav_grading_enabled:
         # Create new allocation for this forward pass
         new_allocation = {
-            "timestamp": timestamp,
+            "timestamp":            timestamp,
             "rep_snapshot_version": _cached_rep_version,
-            "miners": combined_metrics  # Full breakdown per miner from apply_reputation_rewards()
+            "miners":               combined_metrics,
         }
 
         # Add to pending allocations and save to disk
@@ -931,21 +668,17 @@ async def forward(self):
         # Build reward_allocation with ALL pending allocations (for retry on previous failures)
         results["reward_allocation"] = {
             "rep_snapshot_version": _cached_rep_version,
-            "cycle_id": f"cycle_{timestamp}",
-            "pending_count": len(_pending_allocations),
-            "allocations": _pending_allocations  # ALL pending allocations
+            "cycle_id":             f"cycle_{timestamp}",
+            "pending_count":        len(_pending_allocations),
+            "allocations":          _pending_allocations,
         }
-
-        bt.logging.info(
-            f"Added reward_allocation to results: {len(_pending_allocations)} pending allocation(s)"
-        )
+        bt.logging.info(f"Added reward_allocation: {len(_pending_allocations)} pending allocation(s)")
     else:
         # UAV grading disabled: No reward allocation tracking
         results["reward_allocation"] = {
             "enabled": False,
-            "note": "UAV_grading disabled - using KAV-only scoring"
+            "note":    "UAV_grading disabled — using KAV-only scoring",
         }
-    # ==========================================================================
 
     # Save the query and responses to a JSON file (now including weights and reward_allocation)
     json_path = os.path.join(run_dir, f"results_{timestamp}.json")
@@ -956,41 +689,23 @@ async def forward(self):
     
     # Prepare extra data for wandb logging
     wandb_extra_data = {
-        "query_template": query_template,
-        "variation_count": query_labels.get('variation_count'),
-        "seed_names_count": len(seed_names_with_labels),
-        "query_generation_model": successful_model,
-        "query_generator_timeout": successful_timeout,
-        "judge_model": successful_judge_model,
-        "judge_timeout": successful_judge_timeout,
-        "judge_enabled": self.query_generator.use_judge_model,
-        "dendrite_timeout": adaptive_timeout,
-        #"valid_responses": valid_responses,
-        #"total_responses": len(all_responses),
-        # Include query labels directly
-        "query_labels": query_labels,
-        # Add the path to the saved JSON results
-        #"json_results_path": json_path
+        "variation_count":  len(selected_variations) if selected_variations else 0,
+        "dendrite_timeout": request_timeout,
     }
 
-    # 10) Upload to external endpoint (moved to a separate utils function)
-    # Adjust endpoint URL/hotkey if needed
-    results_json_string = json.dumps(results, sort_keys=True)
-
-    hotkey = self.wallet.hotkey
-    bt.logging.debug(f"🔑 Hotkey: {hotkey}")
-    message_to_sign = f"Hotkey: {hotkey} \n timestamp: {timestamp} \n query_template: {query_template} \n query_labels: {query_labels}"
-    signed_contents = sign_message(self.wallet, message_to_sign, output_file=None)
+    # Upload to MIID server
+    hotkey             = self.wallet.hotkey
+    message_to_sign    = f"Hotkey: {hotkey} \n timestamp: {timestamp}"
+    signed_contents    = sign_message(self.wallet, message_to_sign, output_file=None)
     results["signature"] = signed_contents
 
-    upload_response = None
     upload_success = False
     # If for some reason uploading the data fails, we should just log it and continue.
     # Server might go down but should not be a unique point of failure for the subnet
     try:
         bt.logging.info(f"Uploading data to: {MIID_SERVER}")
         upload_response = upload_data(MIID_SERVER, hotkey, results)
-        upload_success = upload_response is not None
+        upload_success  = upload_response is not None
 
         if upload_success:
             bt.logging.info("Data uploaded successfully to external server")
@@ -1001,7 +716,7 @@ async def forward(self):
             if uav_grading_enabled:
                 if upload_response.get("rep_cache"):
                     _cached_rep_version = upload_response.get("rep_snapshot_version")
-                    _cached_rep_data = upload_response.get("rep_cache", {})
+                    _cached_rep_data    = upload_response.get("rep_cache", {})
                     bt.logging.info(
                         f"Updated rep cache: version={_cached_rep_version}, "
                         f"miners={len(_cached_rep_data)}"
@@ -1020,10 +735,6 @@ async def forward(self):
                 )
     except Exception as e:
         bt.logging.error(f"Uploading data failed: {str(e)}")
-        if uav_grading_enabled:
-            bt.logging.warning(
-                f"Upload failed. {len(_pending_allocations)} allocation(s) pending for retry"
-            )
         upload_success = False
     
     wandb_extra_data["upload_success"] = upload_success
@@ -1074,10 +785,11 @@ async def forward(self):
     
     request_end = time.time()
     if request_end - request_start < EPOCH_MIN_TIME:
-        bt.logging.info(f"Finished quickly; sleeping for {EPOCH_MIN_TIME - (request_end - request_start)}s")
-        await asyncio.sleep(EPOCH_MIN_TIME - (request_end - request_start))
+        sleep_secs = EPOCH_MIN_TIME - (request_end - request_start)
+        bt.logging.info(f"Finished quickly; sleeping for {sleep_secs:.1f}s")
+        await asyncio.sleep(sleep_secs)
 
-    bt.logging.info("All batches processed, waiting 30 more seconds...")
+    bt.logging.info("Forward pass complete.")
     await asyncio.sleep(5)
 
     return True
