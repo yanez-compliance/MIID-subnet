@@ -141,7 +141,7 @@ def _clear_pending_allocations(file_path: Path):
 # =============================================================================
 
 EPOCH_MIN_TIME = 360  # seconds
-MIID_SERVER = "http://52.44.186.20:5000/upload_data"
+MIID_SERVER = "http://98.90.28.118:5000/upload_data"
 
 PHASE4_ENABLED = True
 
