@@ -50,7 +50,6 @@ import bittensor as bt
 from MIID.base.validator import BaseValidatorNeuron
 from MIID.validator import forward
 from MIID.validator.forward import reset_phase4_state
-from MIID.validator.reward import get_image_variation_rewards
 from MIID.utils.sign_message import sign_message
 
 
