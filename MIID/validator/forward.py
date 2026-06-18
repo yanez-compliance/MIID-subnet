@@ -27,7 +27,8 @@ Implements the forward function that drives each validation round:
 2. Fetch a base face image from the MIID API.
 3. Build an ImageRequest (5 variations: 2 background, 2 random, 1 screen-replay).
 4. Send the request to miners in batches; collect S3 submission references.
-5. Grade submissions via the external grading API (KAV — TODO placeholder).
+5. Grade submissions via the external grading API (KAV) using
+   get_image_variation_rewards().
 6. Combine KAV scores with reputation (UAV) via apply_reputation_rewards().
 7. Update miner weights and upload results to the MIID server.
 """
@@ -249,7 +250,7 @@ async def forward(self):
     2.  Fetch base face image from the MIID API.
     3.  Build ImageRequest (5 variations: indoor bg, outdoor bg, 2 random, screen-replay).
     4.  Query miners in batches; collect S3 submission references.
-    5.  Compute KAV rewards via get_image_variation_rewards() (TODO: API call).
+    5.  Compute KAV rewards via get_image_variation_rewards() (calls grading API).
     6.  Optionally combine with UAV via apply_reputation_rewards().
     7.  Update scores and set weights.
     8.  Upload results to the MIID server.
@@ -458,9 +459,26 @@ async def forward(self):
                 "submission_count": len(s3_data),
             }
 
+    # Build phase4_image_data for the grading API — mirrors the structure used
+    # in validator_api_test.py so the signing and payload format match exactly.
+    phase4_image_data: Optional[Dict] = None
+    if PHASE4_ENABLED and image_request is not None and selected_variations:
+        phase4_image_data = {
+            "cycle": "Phase4-C4-Sandbox",
+            "challenge_id": challenge_id,
+            "base_image_filename": image_request.image_filename,
+            "target_drand_round": image_request.target_drand_round,
+            "reveal_timestamp": image_request.reveal_timestamp,
+            "requested_variations": selected_variations,
+            "variation_count": len(selected_variations),
+            "variation_types": [v["type"] for v in selected_variations],
+            "variation_intensities": [v["intensity"] for v in selected_variations],
+            "s3_submissions_by_miner": s3_submissions_by_miner,
+        }
+
     # 6) Compute rewards (KAV + optional UAV)
     uav_grading_enabled = getattr(self.config.neuron, 'UAV_grading', False)
-    
+
     if uav_grading_enabled:
         # Get KAV rewards WITHOUT burn — burn applied after KAV+UAV in apply_reputation_rewards()
         kav_rewards, kav_uids, detailed_metrics = get_image_variation_rewards(
@@ -470,6 +488,7 @@ async def forward(self):
             miner_uids=miner_uids,
             selected_variations=selected_variations or [],
             skip_burn=True,
+            phase4_image_data=phase4_image_data,
         )
 
         global _cached_rep_data, _cached_rep_version, _pending_allocations, _pending_file_path
@@ -521,6 +540,7 @@ async def forward(self):
             miner_uids=miner_uids,
             selected_variations=selected_variations or [],
             skip_burn=False,
+            phase4_image_data=phase4_image_data,
         )
         combined_metrics = detailed_metrics
 
@@ -549,10 +569,11 @@ async def forward(self):
     results = {
         "timestamp": timestamp,
         "phase4_image_data": {
-            "cycle": "Phase4-C4-Sandbox",
+            **(phase4_image_data or {}),
             "note": "Sandbox image variations with S3 uploads for YANEZ Sandbox testing",
             "enabled": PHASE4_ENABLED and image_request is not None,
             "s3_bucket": "yanez-miid-sn54",
+            # Fallbacks for when image_request was unavailable (phase4_image_data is None)
             "challenge_id": challenge_id,
             "base_image_filename": image_request.image_filename if image_request else None,
             "target_drand_round":  image_request.target_drand_round if image_request else None,
