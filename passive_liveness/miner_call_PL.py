@@ -8,7 +8,7 @@ import bittensor
 # Edit these variables directly in the file
 wallet_name = "miner"  # Your wallet name
 wallet_hotkey = "m"  # Your hotkey name
-api_url = "http://34.211.230.92:5000/validate"  # API endpoint URL
+api_url = "http://98.90.28.118:5001/validate"  # API endpoint URL
 image_dir = Path(__file__).parent / "image"  # Folder containing the image to send
 
 IMAGE_EXTENSIONS = {".png", ".jpg", ".jpeg", ".webp", ".bmp"}
