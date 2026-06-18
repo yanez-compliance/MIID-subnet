@@ -56,7 +56,7 @@ from MIID.validator.image_variations import format_variation_requirements
 
 # External grading API endpoint — grades submitted face image variations.
 # Update this URL to match the current grading server before deployment.
-GRADING_API_URL = "http://52.44.186.20:5000/grade"
+GRADING_API_URL = "http://98.90.28.118:5000/grade"
 
 # Tiny epsilon added to validation score to break ties using identity_preservation.
 # e.g. two miners both averaging 0.6 validation will be ordered by their avg_ip.
