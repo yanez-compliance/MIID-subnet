@@ -244,66 +244,72 @@ def get_image_variation_rewards(
     results_by_miner: Dict[str, Any] = {}
     api_succeeded = False
 
-    try:
-        # Build phase4_image_data from individual args when not provided by caller
-        if phase4_image_data is None:
-            phase4_image_data = {
+    if not s3_submissions_by_miner:
+        bt.logging.info(
+            f"No valid submissions for challenge {challenge_id}. "
+            "Skipping grading API call — all miners will receive 0.0 KAV scores."
+        )
+    else:
+        try:
+            # Build phase4_image_data from individual args when not provided by caller
+            if phase4_image_data is None:
+                phase4_image_data = {
+                    "challenge_id": challenge_id,
+                    "requested_variations": selected_variations,
+                    "variation_count": len(selected_variations),
+                    "variation_types": [v.get("type", "") for v in selected_variations],
+                    "variation_intensities": [v.get("intensity", "") for v in selected_variations],
+                    "s3_submissions_by_miner": s3_submissions_by_miner,
+                    "cycle": None,
+                }
+            elif "s3_submissions_by_miner" not in phase4_image_data:
+                # Ensure submissions are included even if caller omitted them
+                phase4_image_data = {**phase4_image_data, "s3_submissions_by_miner": s3_submissions_by_miner}
+
+            # Sign the payload — matches the exact signing format in validator_api_test.py
+            timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
+            requested_variations = phase4_image_data.get("requested_variations", selected_variations)
+            image_requirements = format_variation_requirements(requested_variations)
+            query_template = (
+                f"[PHASE4] challenge_id: {challenge_id}"
+                f"{image_requirements}"
+            )
+            query_labels = {
+                "variation_count": phase4_image_data.get("variation_count", len(requested_variations)),
+                "variation_types": phase4_image_data.get("variation_types", [v.get("type", "") for v in requested_variations]),
+                "variation_intensities": phase4_image_data.get("variation_intensities", [v.get("intensity", "") for v in requested_variations]),
                 "challenge_id": challenge_id,
-                "requested_variations": selected_variations,
-                "variation_count": len(selected_variations),
-                "variation_types": [v.get("type", "") for v in selected_variations],
-                "variation_intensities": [v.get("intensity", "") for v in selected_variations],
-                "s3_submissions_by_miner": s3_submissions_by_miner,
-                "cycle": None,
+                "cycle": phase4_image_data.get("cycle"),
             }
-        elif "s3_submissions_by_miner" not in phase4_image_data:
-            # Ensure submissions are included even if caller omitted them
-            phase4_image_data = {**phase4_image_data, "s3_submissions_by_miner": s3_submissions_by_miner}
+            hotkey = self.wallet.hotkey
+            message_to_sign = (
+                f"Hotkey: {hotkey} \n timestamp: {timestamp} \n "
+                f"query_template: {query_template} \n query_labels: {query_labels}"
+            )
+            signed_contents = sign_message(self.wallet, message_to_sign, output_file=None)
 
-        # Sign the payload — matches the exact signing format in validator_api_test.py
-        timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
-        requested_variations = phase4_image_data.get("requested_variations", selected_variations)
-        image_requirements = format_variation_requirements(requested_variations)
-        query_template = (
-            f"[PHASE4] challenge_id: {challenge_id}"
-            f"{image_requirements}"
-        )
-        query_labels = {
-            "variation_count": phase4_image_data.get("variation_count", len(requested_variations)),
-            "variation_types": phase4_image_data.get("variation_types", [v.get("type", "") for v in requested_variations]),
-            "variation_intensities": phase4_image_data.get("variation_intensities", [v.get("intensity", "") for v in requested_variations]),
-            "challenge_id": challenge_id,
-            "cycle": phase4_image_data.get("cycle"),
-        }
-        hotkey = self.wallet.hotkey
-        message_to_sign = (
-            f"Hotkey: {hotkey} \n timestamp: {timestamp} \n "
-            f"query_template: {query_template} \n query_labels: {query_labels}"
-        )
-        signed_contents = sign_message(self.wallet, message_to_sign, output_file=None)
+            payload = {
+                "signature": signed_contents,
+                "phase4_image_data": phase4_image_data,
+            }
 
-        payload = {
-            "signature": signed_contents,
-            "phase4_image_data": phase4_image_data,
-        }
-
-        bt.logging.info(
-            f"Calling grading API at {GRADING_API_URL} "
-            f"for challenge {challenge_id} with {len(s3_submissions_by_miner)} miners."
-        )
-        resp = requests.post(GRADING_API_URL, json=payload, timeout=1200)
-        resp.raise_for_status()
-        api_json = resp.json()
-        results_by_miner = api_json.get("results_by_miner", {})
-        api_succeeded = True
-        bt.logging.info(
-            f"Grading API returned results for {len(results_by_miner)} miners."
-        )
-    except Exception as exc:
-        bt.logging.error(
-            f"Grading API call failed: {exc}. "
-            f"All miners will receive 0.0 KAV scores for this round."
-        )
+            bt.logging.info(
+                f"Calling grading API at {GRADING_API_URL} "
+                f"for challenge {challenge_id} with {len(s3_submissions_by_miner)} miners."
+            )
+            resp = requests.post(GRADING_API_URL, json=payload, timeout=1200)
+            resp.raise_for_status()
+            api_json = resp.json()
+            results_by_miner = api_json.get("results_by_miner", {})
+            api_succeeded = True
+            bt.logging.info(
+                f"Grading API returned results for {len(results_by_miner)} miners."
+            )
+        except Exception as exc:
+            bt.logging.error(
+                f"Grading API call failed: {exc}. "
+                f"All miners will receive 0.0 KAV scores for this round."
+            )
 
     # ── 2. Grade each miner ───────────────────────────────────────────────────
     num_requested = max(len(selected_variations), 1)
