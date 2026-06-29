@@ -25,7 +25,7 @@ Validator Forward Module
 Implements the forward function that drives each validation round:
 1. Select random miners to query.
 2. Fetch a base face image from the MIID API.
-3. Build an ImageRequest (5 variations: 2 background, 2 random, 1 screen-replay).
+3. Build an ImageRequest (6 variations: 2 background, lighting, expression, pose, screen-replay).
 4. Send the request to miners in batches; collect S3 submission references.
 5. Grade submissions via the external grading API (KAV) using
    get_image_variation_rewards().
@@ -58,7 +58,7 @@ from MIID.validator.image_variations import (
     format_variation_requirements,
     get_random_indoor_background_variation,
     get_random_outdoor_background_variation,
-    get_random_non_background_variation,
+    get_random_variation_by_type,
     select_screen_replay_variation,
 )
 
@@ -248,7 +248,7 @@ async def forward(self):
     Steps:
     1.  Select random miners.
     2.  Fetch base face image from the MIID API.
-    3.  Build ImageRequest (5 variations: indoor bg, outdoor bg, 2 random, screen-replay).
+    3.  Build ImageRequest (6 variations: indoor bg, outdoor bg, lighting, expression, pose, screen-replay).
     4.  Query miners in batches; collect S3 submission references.
     5.  Compute KAV rewards via get_image_variation_rewards() (calls grading API).
     6.  Optionally combine with UAV via apply_reputation_rewards().
@@ -299,21 +299,23 @@ async def forward(self):
             else:
                 image_filename, base64_image = image_result
 
-                # Always request (5 variations):
+                # Always request (6 variations):
                 # 1–2) background_edit: indoor + outdoor
-                # 3–4) two random non-background variations (pose/lighting/expression)
-                # 5) screen_replay (independent random devices + cues)
+                # 3–5) lighting, expression, pose (one each)
+                # 6) screen_replay (independent random devices + cues)
                 indoor_background_var = get_random_indoor_background_variation()
                 outdoor_background_var = get_random_outdoor_background_variation()
-                third_var_a = get_random_non_background_variation()
-                third_var_b = get_random_non_background_variation()
+                lighting_var = get_random_variation_by_type("lighting_edit")
+                expression_var = get_random_variation_by_type("expression_edit")
+                pose_var = get_random_variation_by_type("pose_edit")
                 screen_replay_var = select_screen_replay_variation()
 
                 selected_variations = [
                     indoor_background_var,
                     outdoor_background_var,
-                    third_var_a,
-                    third_var_b,
+                    lighting_var,
+                    expression_var,
+                    pose_var,
                     screen_replay_var,
                 ]
 
@@ -358,8 +360,9 @@ async def forward(self):
                     f"Image '{image_filename}', "
                     f"background_edit indoor={indoor_background_var['intensity']}, "
                     f"outdoor={outdoor_background_var['intensity']}, "
-                    f"{third_var_a['type']}={third_var_a['intensity']}, "
-                    f"{third_var_b['type']}={third_var_b['intensity']}, "
+                    f"lighting={lighting_var['intensity']}, "
+                    f"expression={expression_var['intensity']}, "
+                    f"pose={pose_var['intensity']}, "
                     f"screen_replay: devices={screen_replay_devices}, cues={screen_replay_cues}, "
                     f"Total requested: {len(selected_variations)}, "
                     f"drand round {target_round}"

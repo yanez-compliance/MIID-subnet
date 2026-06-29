@@ -562,8 +562,12 @@ def get_non_background_variation_by_index(index: int) -> Dict[str, str]:
 def get_random_non_background_variation() -> Dict[str, str]:
     """Get one random non-background variation (pose/lighting/expression)."""
     var_type = random.choice(_NON_BACKGROUND_VARIATION_TYPES)
-    intensity = random.choice(ALL_INTENSITIES)
+    return get_random_variation_by_type(var_type)
 
+
+def get_random_variation_by_type(var_type: str) -> Dict[str, str]:
+    """Get one random-intensity variation for a specific type."""
+    intensity = random.choice(ALL_INTENSITIES)
     type_info = IMAGE_VARIATION_TYPES[var_type]
     intensity_info = type_info["intensities"][intensity]
 
