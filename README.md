@@ -38,18 +38,18 @@ This network helps **governments, financial institutions, and researchers** impr
 
 ## ⚙️ How It Works
 
-### 🛠️ **Miners: Generate KAV and Image Variations**
-Miners process requests from validators and return **identity data variations** to enhance detection models.
+### 🛠️ **Miners: Generate Face Image Variations**
+Miners process image challenges from validators and return **identity-preserving face variations** to enhance KYC/IDV detection models.
 
-- Receive mixed identity challenges from validators (KAV and image-variation requests; UAV address not in scope this cycle)
-- Generate **KAV** variations: Name / DOB / Address
-- Generate **face image variations** from validator-provided seed images (Phase 4; Cycle 2 includes screen_replay)
-- Earn rewards based on accuracy, novelty, constraint adherence, and real-world adversarial value
+- Receive validator-provided seed face images with variation requirements (Phase 4; Cycle 2 includes screen_replay)
+- Generate **face image variations** using diffusion models (pose, lighting, expression, background, screen replay)
+- Encrypt, upload, and return signed S3 submission references
+- Earn rewards based on variation quality, constraint adherence, identity preservation, and reputation
 
 ### 🧑‍🏫 **Validators: Evaluate & Score Miners**
 Validators ensure the dataset maintains **high-quality** and **real-world relevance**.
 
-- Issue challenge queries across KAV and image variations (UAV address not in scope this cycle)
+- Issue face image variation challenges with seed images and transformation requirements
 - Run online validation for immediate weight setting (where applicable)
 - Perform post-validation to assess novelty/quality and update miner reputation for the next cycle
 - Allocate rewards and continuously evolve the dataset for KYC/IDV resilience
@@ -60,9 +60,10 @@ Validators ensure the dataset maintains **high-quality** and **real-world releva
 
 ### Prerequisites
 - **Python 3.10+**
-- **Ollama (default LLM: llama3.1)**
 - **Bittensor wallet with TAO**
-- **8GB+ RAM (16GB recommended)**
+- **GPU with 8GB+ VRAM** (NVIDIA CUDA or Apple Silicon MPS recommended)
+- **Hugging Face account and API token** (for diffusion model access)
+- **16GB+ RAM recommended**
 - **Open port 8091 for miner-to-validator communication** ([Network Setup Guide](docs/network_setup.md))
 
 ### 1️⃣ **Setup for Miners**
@@ -102,7 +103,7 @@ For detailed instructions, check our **[Mining Guide](docs/miner.md)** and **[Va
 - Earn rewards while **enhancing AI-driven name-matching and sanctions screening**.
 
 ### 🏆 **Incentives for Participants**
-- **Miners**: Earn rewards for producing high-quality, diverse identity variations.
+- **Miners**: Earn rewards for producing high-quality, identity-preserving face image variations.
 - **Validators**: Gain influence in network security and reward distribution.
 
 ### 🌎 **Real-World Impact**
