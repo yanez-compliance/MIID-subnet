@@ -696,9 +696,22 @@ async def forward(self):
     upload_response = None
     # If for some reason uploading the data fails, we should just log it and continue.
     # Server might go down but should not be a unique point of failure for the subnet
+    testnet_export_path = None
+    if is_testnet and challenge_id:
+        testnet_export_path = os.path.join(
+            os.path.expanduser("~"),
+            f"testnet_upload_{challenge_id}.json",
+        )
+
     try:
         if is_testnet:
             bt.logging.info("Testnet detected — skipping upload to MIID server")
+            if testnet_export_path:
+                with open(testnet_export_path, "w", encoding="utf-8") as f:
+                    json.dump(results, f, indent=4)
+                bt.logging.info(
+                    f"Testnet: saved upload payload for review at: {testnet_export_path}"
+                )
             upload_success = True
         else:
             bt.logging.info(f"Uploading data to: {MIID_SERVER}")
@@ -748,8 +761,8 @@ async def forward(self):
         extra_data=wandb_extra_data # Pass additional context
     )
     
-    # Delete JSON file and directories ONLY after successful upload
-    if upload_success:
+    # Delete JSON file and directories ONLY after successful upload (keep on testnet for review)
+    if upload_success and not is_testnet:
         bt.logging.info(f"Upload successful. Cleaning up local files...")
         bt.logging.info(f"Deleting json file: {json_path}")
         bt.logging.info(f"Deleting rundir: {run_dir}")
@@ -762,6 +775,12 @@ async def forward(self):
         except Exception as e:
             bt.logging.error(f"Error deleting files: {e}")
             bt.logging.warning(f"You might want to delete these files manually: {json_path}, {run_dir}, {results_dir}")
+    elif is_testnet:
+        bt.logging.info("Testnet: keeping local files for review (upload skipped)")
+        if testnet_export_path:
+            bt.logging.info(f"Testnet upload payload saved at: {testnet_export_path}")
+        bt.logging.info(f"JSON file preserved at: {json_path}")
+        bt.logging.info(f"Run directory preserved at: {run_dir}")
     else:
         bt.logging.warning("Upload failed. Keeping local files for debugging.")
         bt.logging.warning("You might want to reach out to the MIID team to add your hotkey to the allowlist.")
