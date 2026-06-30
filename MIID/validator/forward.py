@@ -702,22 +702,37 @@ async def forward(self):
     signed_contents    = sign_message(self.wallet, message_to_sign, output_file=None)
     results["signature"] = signed_contents
 
+    is_testnet = (
+        self.config.netuid == 322
+        and hasattr(self.config, 'subtensor')
+        and getattr(self.config.subtensor, 'network', None) == "test"
+        and "test.finney.opentensor.ai" in getattr(self.config.subtensor, 'chain_endpoint', '')
+    )
+
     upload_success = False
+    upload_response = None
     # If for some reason uploading the data fails, we should just log it and continue.
     # Server might go down but should not be a unique point of failure for the subnet
     try:
-        bt.logging.info(f"Uploading data to: {MIID_SERVER}")
-        upload_response = upload_data(MIID_SERVER, hotkey, results)
-        upload_success  = upload_response is not None
+        if is_testnet:
+            bt.logging.info("Testnet detected — skipping upload to MIID server")
+            upload_success = True
+        else:
+            bt.logging.info(f"Uploading data to: {MIID_SERVER}")
+            upload_response = upload_data(MIID_SERVER, hotkey, results)
+            upload_success = upload_response is not None
 
         if upload_success:
-            bt.logging.info("Data uploaded successfully to external server")
+            bt.logging.info(
+                "Testnet: upload skipped (treated as successful)"
+                if is_testnet else "Data uploaded successfully to external server"
+            )
 
             # ==========================================================================
             # Cache rep_data from response for NEXT forward pass (Phase 4 - Cycle 3 Sandbox)
             # ==========================================================================
             if uav_grading_enabled:
-                if upload_response.get("rep_cache"):
+                if upload_response and upload_response.get("rep_cache"):
                     _cached_rep_version = upload_response.get("rep_snapshot_version")
                     _cached_rep_data    = upload_response.get("rep_cache", {})
                     bt.logging.info(
