@@ -390,7 +390,8 @@ def format_variation_requirements(variations: List[Dict[str, str]]) -> str:
     lines.extend([
         "",
         "IMPORTANT: The subject's face must remain recognizable across all variations.",
-        "Each variation should clearly address the specified type and intensity level.",
+        "Each variation should clearly address all specified types and intensity levels "
+        "(combined variations must satisfy every component).",
         ""
     ])
 
@@ -577,6 +578,81 @@ def get_random_variation_by_type(var_type: str) -> Dict[str, str]:
         "description": type_info["description"],
         "detail": intensity_info["detail"],
     }
+
+
+COMBINED_VARIATION_SEPARATOR = "+"
+
+
+def get_random_combined_variation(var_types: List[str]) -> Dict[str, Any]:
+    """Get a single image variation that combines multiple edit types.
+
+    Each component gets its own random intensity. The returned ``type`` is the
+    component keys joined with ``+`` (e.g. ``lighting_edit+expression_edit``),
+    which miners must use as ``variation_type`` when uploading.
+
+    Args:
+        var_types: Two or more variation type keys from IMAGE_VARIATION_TYPES.
+
+    Returns:
+        Dict with type, intensity, description, detail, and components metadata.
+    """
+    if len(var_types) < 2:
+        raise ValueError("Combined variation requires at least 2 types")
+
+    components: List[Dict[str, str]] = []
+    for var_type in var_types:
+        if var_type not in IMAGE_VARIATION_TYPES:
+            raise ValueError(f"Unknown variation type: {var_type}")
+        intensity = random.choice(ALL_INTENSITIES)
+        type_info = IMAGE_VARIATION_TYPES[var_type]
+        intensity_info = type_info["intensities"][intensity]
+        components.append({
+            "type": var_type,
+            "intensity": intensity,
+            "description": type_info["description"],
+            "detail": intensity_info["detail"],
+        })
+
+    combined_type = COMBINED_VARIATION_SEPARATOR.join(var_types)
+    combined_intensity = COMBINED_VARIATION_SEPARATOR.join(c["intensity"] for c in components)
+    combined_description = (
+        "Combined variation — apply all of the following while preserving identity: "
+        + "; ".join(
+            f"{c['type']} ({c['intensity']}): {c['description']}" for c in components
+        )
+    )
+    combined_detail = " AND ".join(
+        f"{c['type']} ({c['intensity']}): {c['detail']}" for c in components
+    )
+
+    return {
+        "type": combined_type,
+        "intensity": combined_intensity,
+        "description": combined_description,
+        "detail": combined_detail,
+        "components": components,
+    }
+
+
+def build_standard_challenge_variations() -> List[Dict[str, Any]]:
+    """Build the standard 6-variation challenge set.
+
+    Order:
+    1. background_edit (indoor)
+    2. background_edit (outdoor)
+    3. screen_replay
+    4. lighting_edit + expression_edit
+    5. lighting_edit + pose_edit
+    6. pose_edit + expression_edit
+    """
+    return [
+        get_random_indoor_background_variation(),
+        get_random_outdoor_background_variation(),
+        select_screen_replay_variation(),
+        get_random_combined_variation(["lighting_edit", "expression_edit"]),
+        get_random_combined_variation(["lighting_edit", "pose_edit"]),
+        get_random_combined_variation(["pose_edit", "expression_edit"]),
+    ]
 
 
 def get_variation_by_index(index: int) -> Dict[str, str]:
