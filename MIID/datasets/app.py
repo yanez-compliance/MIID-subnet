@@ -210,7 +210,7 @@ def upload_data(hotkey):
                     }]
 
                 # Count how many pending allocations each miner earned UAV in (stack decay per cycle)
-                decay_counts = {}  # {miner_hotkey: times to apply -0.02}
+                decay_counts = {}  # {miner_hotkey: times to apply -0.05}
                 uav_eligible_hotkeys = []
                 for allocation in allocations:
                     for allocation_miner in allocation.get("miners", []):
@@ -230,7 +230,7 @@ def upload_data(hotkey):
                     if miner_hotkey in snapshot_miners_dict:
                         snapshot_miner = snapshot_miners_dict[miner_hotkey]
                         current_score = snapshot_miner.get("rep_score", 0.0)
-                        snapshot_miner["rep_score"] = max(0.0, current_score - (0.02 * decay_times))
+                        snapshot_miner["rep_score"] = max(0.0, current_score - (0.05 * decay_times))
                         if miner_hotkey in rep_cache:
                             rep_cache[miner_hotkey]["rep_score"] = snapshot_miner["rep_score"]
                         updated_hotkeys.append(miner_hotkey)
@@ -240,7 +240,7 @@ def upload_data(hotkey):
                 # Send updated snapshot to database using reward_allocation
                 if updated_miners_count > 0:
                     result = reward_allocation(current_snapshot)
-                    print(f"[INFO] {hotkey} Applied decay (-0.02) to {updated_miners_count} miner(s) and sent to database via reward_allocation()")
+                    print(f"[INFO] {hotkey} Applied decay (-0.05) to {updated_miners_count} miner(s) and sent to database via reward_allocation()")
                 else:
                     print(f"[INFO] {hotkey} No miners to update in reward allocation")
 
