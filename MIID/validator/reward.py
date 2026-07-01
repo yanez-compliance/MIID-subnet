@@ -42,6 +42,7 @@ Reward allocation:
 """
 
 import numpy as np
+import time
 from typing import List, Dict, Tuple, Any, Optional
 import bittensor as bt
 import requests
@@ -57,6 +58,8 @@ from MIID.validator.image_variations import format_variation_requirements
 # External grading API endpoint — grades submitted face image variations.
 # Update this URL to match the current grading server before deployment.
 GRADING_API_URL = "http://98.90.28.118:5000/grade"
+GRADING_RETRY_ATTEMPTS = 3
+GRADING_RETRY_DELAY_SECONDS = 60
 
 # Tiny epsilon added to validation score to break ties using identity_preservation.
 # e.g. two miners both averaging 0.6 validation will be ordered by their avg_ip.
@@ -293,18 +296,31 @@ def get_image_variation_rewards(
                 "phase4_image_data": phase4_image_data,
             }
 
-            bt.logging.info(
-                f"Calling grading API at {GRADING_API_URL} "
-                f"for challenge {challenge_id} with {len(s3_submissions_by_miner)} miners."
-            )
-            resp = requests.post(GRADING_API_URL, json=payload, timeout=1200)
-            resp.raise_for_status()
-            api_json = resp.json()
-            results_by_miner = api_json.get("results_by_miner", {})
-            api_succeeded = True
-            bt.logging.info(
-                f"Grading API returned results for {len(results_by_miner)} miners."
-            )
+            for attempt in range(GRADING_RETRY_ATTEMPTS):
+                try:
+                    bt.logging.info(
+                        f"Calling grading API at {GRADING_API_URL} "
+                        f"for challenge {challenge_id} with {len(s3_submissions_by_miner)} miners "
+                        f"(attempt {attempt + 1}/{GRADING_RETRY_ATTEMPTS})."
+                    )
+                    resp = requests.post(GRADING_API_URL, json=payload, timeout=1200)
+                    resp.raise_for_status()
+                    api_json = resp.json()
+                    results_by_miner = api_json.get("results_by_miner", {})
+                    api_succeeded = True
+                    bt.logging.info(
+                        f"Grading API returned results for {len(results_by_miner)} miners."
+                    )
+                    break
+                except Exception as exc:
+                    if attempt < GRADING_RETRY_ATTEMPTS - 1:
+                        bt.logging.warning(
+                            f"Grading API attempt {attempt + 1}/{GRADING_RETRY_ATTEMPTS} failed: {exc}. "
+                            f"Retrying in {GRADING_RETRY_DELAY_SECONDS}s..."
+                        )
+                        time.sleep(GRADING_RETRY_DELAY_SECONDS)
+                    else:
+                        raise
         except Exception as exc:
             bt.logging.error(
                 f"Grading API call failed: {exc}. "
