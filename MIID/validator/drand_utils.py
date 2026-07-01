@@ -190,6 +190,57 @@ def is_round_available(round_number: int) -> bool:
 REVEAL_DELAY_SECONDS = 40 * 60  # 2400 seconds
 
 
+def seconds_until_reveal(reveal_timestamp: int) -> int:
+    """Return seconds until reveal_timestamp (0 if already past)."""
+    return max(0, reveal_timestamp - int(time.time()))
+
+
+def wait_until_reveal(
+    target_round: int,
+    reveal_timestamp: int,
+    poll_interval: int = 30,
+    post_reveal_timeout: int = 120,
+) -> bool:
+    """Block until the drand round is available so the grading API can decrypt.
+
+    Polls is_round_available() on a fixed interval. Miners may finish early;
+    this keeps the validator from calling the grading API until unlock.
+
+    Args:
+        target_round: Drand round when images become decryptable
+        reveal_timestamp: Expected Unix reveal time (for logging only)
+        poll_interval: Seconds between availability checks
+        post_reveal_timeout: Extra seconds to keep polling after reveal_timestamp
+
+    Returns:
+        True if the round signature is available, False on timeout
+    """
+    deadline = reveal_timestamp + post_reveal_timeout
+
+    while time.time() < deadline:
+        if is_round_available(target_round):
+            bt.logging.info(f"Drand round {target_round} available — ready for grading API")
+            return True
+
+        remaining = seconds_until_reveal(reveal_timestamp)
+        if remaining > 0:
+            bt.logging.info(
+                f"Drand round {target_round} not ready; "
+                f"rechecking in {poll_interval}s ({remaining}s until reveal)"
+            )
+        else:
+            bt.logging.info(
+                f"Drand round {target_round} not ready yet; rechecking in {poll_interval}s"
+            )
+        time.sleep(poll_interval)
+
+    bt.logging.error(
+        f"Timed out waiting for drand round {target_round} "
+        f"({post_reveal_timeout}s after reveal timestamp {reveal_timestamp})"
+    )
+    return False
+
+
 def calculate_reveal_buffer(reveal_delay_seconds: int = REVEAL_DELAY_SECONDS) -> int:
     """Return drand reveal delay for a validation session.
 

@@ -54,6 +54,7 @@ from MIID.validator.drand_utils import (
     calculate_target_round,
     calculate_reveal_buffer,
     REVEAL_DELAY_SECONDS,
+    wait_until_reveal,
 )
 from MIID.validator.image_variations import (
     build_standard_challenge_variations,
@@ -471,6 +472,17 @@ async def forward(self):
             "variation_intensities": [v["intensity"] for v in selected_variations],
             "s3_submissions_by_miner": s3_submissions_by_miner,
         }
+
+    # Wait for drand reveal before grading — images stay encrypted until T+40 min
+    if PHASE4_ENABLED and image_request is not None and s3_submissions_by_miner:
+        reveal_ready = wait_until_reveal(
+            target_round=image_request.target_drand_round,
+            reveal_timestamp=image_request.reveal_timestamp,
+        )
+        if not reveal_ready:
+            bt.logging.warning(
+                "Drand round not confirmed; grading API may fail to decrypt submissions"
+            )
 
     # 6) Compute rewards (KAV + optional UAV)
     uav_grading_enabled = getattr(self.config.neuron, 'UAV_grading', False)
