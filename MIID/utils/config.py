@@ -312,8 +312,10 @@ def add_validator_args(cls, parser):
     parser.add_argument(
         '--neuron.burn_fraction',
         type=float,
-        help="Fraction of emissions to burn to the burn UID when miners qualify.",
-        default=0.65,
+        help="Fraction of emissions to burn to the burn UID when miners qualify. "
+             "The remaining PARTNER_FRACTION (35%) routes to the commercial partner "
+             "hotkey if registered on mainnet, otherwise is also burned.",
+        default=0.30,
     )
 
     # --- UAV Grading Configuration ---

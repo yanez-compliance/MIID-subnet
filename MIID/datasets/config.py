@@ -59,7 +59,8 @@ REWARDS_DIR = os.path.join(DATA_DIR, "rewards")
 KAV_WEIGHT = 0.10  # 10% allocated to online quality (Q)
 UAV_WEIGHT = 0.90  # 90% allocated to reputation-based rewards (0 for new miners)
 
-# Note: burn_fraction is configured via --neuron.burn_fraction (default 0.75 for Cycle 2)
+# Note: burn_fraction is configured via --neuron.burn_fraction (default 0.30, SN54 Dual Incentive)
+# Partner pool (PARTNER_FRACTION = 0.35) routes to PARTNER_HOTKEY if on mainnet, else burned.
 
 # Burn UID (hardcoded in existing codebase)
 BURN_UID = 59
