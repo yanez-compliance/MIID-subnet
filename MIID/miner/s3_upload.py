@@ -111,9 +111,14 @@ def upload_to_s3(
     Returns:
         S3 key (path) if successful, None if failed
     """
-    # Generate S3 key path with path_signature for security
+    # Generate S3 key path with path_signature for security.
+    # Replace '+' with '_' in the filename — '+' in a URL path can be
+    # misinterpreted as a space by S3, causing the object to be stored under
+    # the wrong key.  The original variation_type (with '+') is preserved in
+    # the metadata below so the grading API can still match it correctly.
     timestamp = int(time.time())
-    s3_key = f"submissions/{challenge_id}/{miner_hotkey}/{path_signature}/{seed_image_name}/{variation_type}_{timestamp}.png.tlock"
+    safe_variation_type = variation_type.replace("+", "_")
+    s3_key = f"submissions/{challenge_id}/{miner_hotkey}/{path_signature}/{seed_image_name}/{safe_variation_type}_{timestamp}.png.tlock"
 
     # Prepare metadata
     metadata = {
@@ -275,7 +280,8 @@ def generate_s3_key(
     if timestamp is None:
         timestamp = int(time.time())
 
-    return f"submissions/{challenge_id}/{miner_hotkey}/{path_signature}/{seed_image_name}/{variation_type}_{timestamp}.png.tlock"
+    safe_variation_type = variation_type.replace("+", "_")
+    return f"submissions/{challenge_id}/{miner_hotkey}/{path_signature}/{seed_image_name}/{safe_variation_type}_{timestamp}.png.tlock"
 
 
 def list_local_submissions(challenge_id: Optional[str] = None) -> list:
