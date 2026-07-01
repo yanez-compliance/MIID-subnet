@@ -251,6 +251,7 @@ def get_image_variation_rewards(
     """
     # ── 1. Call external grading API ─────────────────────────────────────────
     results_by_miner: Dict[str, Any] = {}
+    sampled_variation: Optional[str] = None
     api_succeeded = False
 
     if not s3_submissions_by_miner:
@@ -313,9 +314,11 @@ def get_image_variation_rewards(
                     resp.raise_for_status()
                     api_json = resp.json()
                     results_by_miner = api_json.get("results_by_miner", {})
+                    sampled_variation = api_json.get("sampled_variation", None)
                     api_succeeded = True
                     bt.logging.info(
-                        f"Grading API returned results for {len(results_by_miner)} miners."
+                        f"Grading API returned results for {len(results_by_miner)} miners "
+                        f"(sampled_variation={sampled_variation!r})."
                     )
                     break
                 except Exception as exc:
@@ -334,8 +337,27 @@ def get_image_variation_rewards(
             )
 
     # ── 2. Grade each miner ───────────────────────────────────────────────────
-    num_requested = max(len(selected_variations), 1)
     requested_types = [v.get("type", "") for v in selected_variations]
+
+    # Option A: if the API only graded a sampled variation slot, restrict
+    # scoring to that type so ungraded slots don't collapse the average and
+    # block the identity threshold gate.  Falls back to all requested types
+    # when sampled_variation is absent or doesn't match a requested type.
+    if sampled_variation and sampled_variation in requested_types:
+        effective_types = [sampled_variation]
+        bt.logging.info(
+            f"Scoring against sampled variation only: {sampled_variation!r} "
+            f"(1 of {len(requested_types)} requested types)."
+        )
+    else:
+        effective_types = requested_types
+        if sampled_variation:
+            bt.logging.warning(
+                f"sampled_variation {sampled_variation!r} not in requested types "
+                f"{requested_types}; falling back to all {len(requested_types)} types."
+            )
+
+    num_graded = max(len(effective_types), 1)
 
     rewards = np.zeros(len(miner_uids), dtype=float)
     detailed_metrics: List[Dict] = []
@@ -357,9 +379,10 @@ def get_image_variation_rewards(
             if vtype and vtype not in submission_by_type:
                 submission_by_type[vtype] = sub
 
-        # Score each requested slot; missing slots count as 0
+        # Score each graded slot only; a missing submission for the graded slot
+        # still counts as 0 (miner did not submit for this variation type).
         per_variation: List[Dict] = []
-        for vtype in requested_types:
+        for vtype in effective_types:
             sub = submission_by_type.get(vtype)
             if sub is None:
                 per_variation.append({
@@ -370,8 +393,8 @@ def get_image_variation_rewards(
                     "identity_preservation": 0.0,
                 })
             else:
-                vs_raw = int(sub.get("validation_score", 0))
-                ip = float(sub.get("identity_preservation", 0.0))
+                vs_raw = int(sub.get("validation_score") or 0)
+                ip = float(sub.get("identity_preservation") or 0.0)
                 per_variation.append({
                     "variation_type": vtype,
                     "submitted": True,
@@ -382,9 +405,9 @@ def get_image_variation_rewards(
                     "status": sub.get("status", ""),
                 })
 
-        # Averages over all requested slots (missing slots penalize average)
-        avg_vs_norm = sum(v["validation_score_norm"] for v in per_variation) / num_requested
-        avg_ip = sum(v["identity_preservation"] for v in per_variation) / num_requested
+        # Average over graded slots only (num_graded = 1 when API sampled one type)
+        avg_vs_norm = sum(v["validation_score_norm"] for v in per_variation) / num_graded
+        avg_ip = sum(v["identity_preservation"] for v in per_variation) / num_graded
 
         # Composite score: validation score + tiny identity tiebreak
         rewards[i] = avg_vs_norm + avg_ip * _IDENTITY_TIEBREAK_EPS
@@ -393,7 +416,9 @@ def get_image_variation_rewards(
             "uid": uid,
             "miner_hotkey": hotkey,
             "api_graded": api_succeeded and bool(miner_result),
-            "num_requested": num_requested,
+            "sampled_variation": sampled_variation,
+            "num_requested": len(requested_types),
+            "num_graded": num_graded,
             "num_submitted": sum(1 for v in per_variation if v["submitted"]),
             "per_variation_scores": per_variation,
             "avg_validation_score": float(avg_vs_norm),
