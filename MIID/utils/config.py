@@ -49,7 +49,7 @@ def check_config(cls, config: "bt.Config"):
 
     full_path = os.path.expanduser(
         "{}/{}/{}/netuid{}/{}".format(
-            config.logging.logging_dir,  # TODO: change from ~/.bittensor/miners to ~/.bittensor/neurons
+            config.logging.logging_dir,
             config.wallet.name,
             config.wallet.hotkey,
             config.netuid,
@@ -62,7 +62,6 @@ def check_config(cls, config: "bt.Config"):
         os.makedirs(config.neuron.full_path, exist_ok=True)
 
     if not config.neuron.dont_save_events:
-        # Add custom event logger for the events.
         events_logger = setup_events_logger(
             config.neuron.full_path, config.neuron.events_retention_size
         )
@@ -70,10 +69,7 @@ def check_config(cls, config: "bt.Config"):
 
 
 def add_args(cls, parser):
-    """
-    Adds relevant arguments to the parser for operation.
-    """
-
+    """Adds relevant arguments to the parser for operation."""
 
     parser.add_argument("--netuid", type=int, help="Subnet netuid", default=1)
 
@@ -88,20 +84,13 @@ def add_args(cls, parser):
         "--neuron.epoch_length",
         type=int,
         help="The default epoch length (how often we set weights, measured in 12 second blocks).",
-        default=360,## MIID: 360 blocks = 4320 seconds = 72 minutes
+        default=360,
     )
 
     parser.add_argument(
         "--mock",
         action="store_true",
         help="Mock neuron and all network components.",
-        default=False,
-    )
-
-    parser.add_argument(
-        "--local_test",
-        action="store_true",
-        help="Local test mode - bypasses incompatible metagraph API for local subtensor testing.",
         default=False,
     )
 
@@ -147,29 +136,8 @@ def add_miner_args(cls, parser):
     parser.add_argument(
         "--neuron.name",
         type=str,
-        help="Trials for this neuron go in neuron.root / (wallet_cold - wallet_hot) / neuron.name. ",
+        help="Trials for this neuron go in neuron.root / (wallet_cold - wallet_hot) / neuron.name.",
         default="miner",
-    )
-
-    parser.add_argument(
-        "--neuron.model_name",
-        type=str,
-        help="The Ollama model to use (default: tinyllama:latest)",
-        default="tinyllama:latest",
-    )
-
-    parser.add_argument(
-        "--neuron.ollama_url",
-        type=str,
-        help="Url to ollama",
-        default="http://127.0.0.1:11434",
-    )
-
-    parser.add_argument(
-        "--neuron.ollama_request_timeout",
-        type=int,
-        help="Timeout for the Ollama request in seconds.",
-        default=60,
     )
 
     parser.add_argument(
@@ -207,7 +175,7 @@ def add_validator_args(cls, parser):
     parser.add_argument(
         "--neuron.name",
         type=str,
-        help="Trials for this neuron go in neuron.root / (wallet_cold - wallet_hot) / neuron.name. ",
+        help="Trials for this neuron go in neuron.root / (wallet_cold - wallet_hot) / neuron.name.",
         default="validator",
     )
 
@@ -215,7 +183,7 @@ def add_validator_args(cls, parser):
         "--neuron.timeout",
         type=float,
         help="The timeout for each forward call in seconds.",
-        default=360,
+        default=1200,
     )
 
     parser.add_argument(
@@ -226,23 +194,28 @@ def add_validator_args(cls, parser):
     )
 
     parser.add_argument(
-        "--neuron.use_default_query",
-        action="store_true",
-        help="If set, use the default query template.",
-        default=False,
-    )
-    parser.add_argument(
         "--neuron.sample_size",
         type=int,
         help="The number of miners to query in a single step.",
-        default=250,# MIID: 50 miners we want to query in a single step change to 100
+        default=250,
     )
 
     parser.add_argument(
         "--neuron.batch_size",
         type=int,
         help="The number of miners to query in a single batch.",
-        default=150, # MIID: 5 miners we want to query in a single batch change to 10
+        default=150,
+    )
+
+    parser.add_argument(
+        "--neuron.reveal_delay_seconds",
+        type=int,
+        help=(
+            "Seconds from challenge start until drand timelock unlock (default: 2400 = 40 min). "
+            "Aligned to a 1-hour session: 20 min batch 1, 20 min batch 2, unlock at 40 min, "
+            "20 min API grading."
+        ),
+        default=2400,
     )
 
     parser.add_argument(
@@ -263,8 +236,6 @@ def add_validator_args(cls, parser):
         "--neuron.axon_off",
         "--axon_off",
         action="store_true",
-        # Note: the validator needs to serve an Axon with their IP or they may
-        #   be blacklisted by the firewall of serving peers on the network.
         help="Set this flag to not attempt to serve an Axon.",
         default=False,
     )
@@ -279,225 +250,113 @@ def add_validator_args(cls, parser):
     parser.add_argument(
         "--wandb.project_name",
         type=str,
-        help="The name of the project where you are sending the new run. Auto-changes to 'subnet322-test' when running on testnet (netuid 322).",
-        default="MIID"  # for project_name MIID for mainnet and subnet322-test for testnet
+        help="The wandb project name. Auto-changes to 'subnet322-test' when running on testnet.",
+        default="MIID",
     )
-    parser.add_argument(
-        "--seed_names.sample_size",
-        type=int,
-        help="The number of seed names to generate for each validation round.",
-        default=15,
-    )
+
     parser.add_argument(
         "--wandb.entity",
         type=str,
-        help="The name of the project where you are sending the new run.",
-        default="MIID-dev-test" 
+        help="The wandb entity to log to.",
+        default="MIID-dev-test",
     )
+
     parser.add_argument(
         "--wandb.max_run_steps",
         type=int,
         help="The maximum number of steps per wandb run before creating a new run.",
-        default=1
+        default=1,
     )
+
     parser.add_argument(
         "--wandb.disable",
         action="store_true",
-        help="Disable wandb logging entirely. Useful for debugging or when wandb is unavailable.",
+        help="Disable wandb logging entirely.",
         default=True,
     )
+
     parser.add_argument(
         "--wandb.cleanup_runs",
         action="store_true",
-        help="Automatically delete wandb run folders after each run is finished. Useful for saving disk space.",
+        help="Automatically delete wandb run folders after each run is finished.",
         default=True,
     )
-    parser.add_argument(
-        '--neuron.ollama_fallback_models',
-        type=str,
-        nargs='+',
-        help="A list of fallback Ollama models to try if the primary model fails.",
-        default=['llama3.2:latest', 'tinyllama:latest']
-    )
-    parser.add_argument(
-        '--neuron.ollama_fallback_timeouts',
-        type=int,
-        nargs='+',
-        help="A list of fallback timeouts (in seconds) to try for Ollama requests.",
-        default=[100, 120]
-    )
-    parser.add_argument(
-            "--neuron.ollama_url",
-            type=str,
-            help="Url to ollama",
-            default="http://127.0.0.1:11434",
-        )
-    parser.add_argument(
-            "--neuron.ollama_model_name",
-            type=str,
-            help="Model name to use with ollama",
-            default="llama3.1:latest",
-        )
-    parser.add_argument(
-        "--neuron.ollama_request_timeout",
-        type=int,
-        help="Timeout for the Ollama request in seconds.",
-        default=90, # MIID: 60 seconds is the default timeout to wait for a response from the Ollama server change to 90 seconds
-    )
 
-    parser.add_argument(
-        "--neuron.max_request_timeout",
-        type=int,
-        help="Maximum timeout for miner requests in seconds.",
-        default=900, # MIID: Maximum timeout limit for adaptive timeout calculation
-    )
-
-    parser.add_argument(
-        '--neuron.ollama_judge_model',
-        type=str,
-        help="The Ollama model to use for judging query templates (default: llama3.2:latest)",
-        default="mistral:latest"
-    )
-
-    parser.add_argument(
-        '--neuron.ollama_judge_timeout',
-        type=int,
-        help="Timeout for the Ollama judge request in seconds.",
-        default=60
-    )
-
-    parser.add_argument(
-        '--neuron.ollama_judge_fallback_models',
-        type=str,
-        nargs='+',
-        help="A list of fallback Ollama models to try for judging if the primary fails.",
-        default=['llama3.2:latest','tinyllama:latest']
-    )
-
-    parser.add_argument(
-        '--neuron.ollama_judge_fallback_timeouts',
-        type=int,
-        nargs='+',
-        help="A list of fallback timeouts (in seconds) to try for Ollama judge requests.",
-        default=[90,100, 120]
-    )
-
-    parser.add_argument(
-        '--neuron.use_judge_model',
-        action='store_true',
-        help="Enable LLM judge for query validation. Auto-enables if complex query generation is used.",
-        default=True
-    )
-
-    parser.add_argument(
-        '--neuron.judge_strict_mode',
-        action='store_true',
-        help="Enable strict mode for LLM judge (fails on JSON parsing errors). Default is lenient mode.",
-        default=False
-    )
-
-    parser.add_argument(
-        '--neuron.judge_on_static_pass',
-        action='store_true',
-        help="Run LLM judge even when static checks pass (default: disabled)",
-        default=False
-    )
-
-    parser.add_argument(
-        '--neuron.judge_failure_threshold',
-        type=int,
-        help="Number of consecutive judge failures before suggesting to disable judge (default: 10).",
-        default=10
-    )
-
-    parser.add_argument(
-        '--neuron.regenerate_on_invalid',
-        action='store_true',
-        help="When a generated query is structurally invalid (e.g., missing {name}), try next model/timeout. Default: False (append hints to the current query and proceed).",
-        default=False
-    )
-
-    parser.add_argument(
-        '--neuron.enable_repair_prompt',
-        action='store_true',
-        help="Attempt to repair an invalid query template by prompting the LLM with the issues and labels (default: False).",
-        default=False
-    )
-
-    # --- Blended Ranking Reward System Arguments ---
-    # Note: apply_ranking is always enabled (removed as configurable option)
+    # --- Blended Ranking Reward System ---
     parser.add_argument(
         '--neuron.top_miner_cap',
         type=int,
         help="The maximum number of top miners to consider for ranking rewards.",
-        default=50
+        default=50,
     )
     parser.add_argument(
         '--neuron.quality_threshold',
         type=float,
         help="The minimum quality score a miner must achieve to be eligible for ranking rewards.",
-        default=0.6
+        default=0.6,
     )
     parser.add_argument(
         '--neuron.decay_rate',
         type=float,
         help="The decay rate for the exponential ranking reward curve.",
-        default=0.05
+        default=0.05,
     )
     parser.add_argument(
         '--neuron.blend_factor',
         type=float,
-        help="The blend factor between rank-based reward and original score (e.g., 0.7 means 70% rank, 30% original score).",
-        default=0.7
+        help="Blend factor between rank-based reward and original score.",
+        default=0.7,
     )
-    
+
     # --- Emission Burn Configuration ---
     parser.add_argument(
         '--neuron.burn_fraction',
         type=float,
-        help="Fraction of emissions to burn to the burn UID when miners qualify.",
-        default=0.65
+        help="Fraction of emissions to burn to the burn UID when miners qualify. "
+             "The remaining PARTNER_FRACTION (35%) routes to the commercial partner "
+             "hotkey if registered on mainnet, otherwise is also burned.",
+        default=0.30,
     )
-    # Note: burn_uid is hardcoded to 59 and not configurable
-    
+
     # --- UAV Grading Configuration ---
     parser.add_argument(
         '--neuron.UAV_grading',
         action='store_true',
-        help="Enable UAV grading system with reputation-weighted rewards (KAV + UAV). When False, uses KAV-only scoring with burn applied directly.",
-        default=True
+        help="Enable UAV grading system with reputation-weighted rewards (KAV + UAV).",
+        default=True,
     )
     parser.add_argument(
         '--neuron.kav_weight',
         type=float,
-        help="Weight for KAV (Known Address Variation) scores in reputation-weighted rewards (only used when UAV_grading is enabled).",
-        default=0.10
+        help="Weight for KAV (image quality) scores in reputation-weighted rewards.",
+        default=0.10,
     )
     parser.add_argument(
         '--neuron.uav_weight',
         type=float,
-        help="Weight for UAV (Unknown Address Variation) scores in reputation-weighted rewards (only used when UAV_grading is enabled).",
-        default=0.90
+        help="Weight for UAV (reputation) scores in reputation-weighted rewards.",
+        default=0.90,
     )
-    
+
     # --- Nominatim Cache Configuration ---
     parser.add_argument(
         '--neuron.nominatim_cache_enabled',
         action='store_true',
-        help="Enable caching of Nominatim API results to reduce API calls.",
-        default=True
+        help="Enable caching of Nominatim API results.",
+        default=True,
     )
     parser.add_argument(
         '--neuron.nominatim_cache_max_size',
         type=int,
-        help="Maximum number of entries in the Nominatim cache. Lower values reduce memory usage.",
-        default=10000
+        help="Maximum number of entries in the Nominatim cache.",
+        default=10000,
     )
 
 
 def config(cls):
     """
-    Returns the configuration object specific to this miner or validator after adding relevant arguments.
+    Returns the configuration object specific to this miner or validator
+    after adding relevant arguments.
     """
     parser = argparse.ArgumentParser()
     bt.Wallet.add_args(parser)

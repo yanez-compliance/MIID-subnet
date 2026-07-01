@@ -16,3453 +16,505 @@
 # THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
 # OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 # DEALINGS IN THE SOFTWARE.
+
+"""
+Reward Module — Face Image Variation Scoring
+
+KAV (Known Address Variation / online image quality score):
+  - Computed by calling an external grading API (GRADING_API_URL /grade) that
+    evaluates submitted face image variations for quality, identity
+    preservation, and variation compliance.
+  - The API payload mirrors the format used by validator_api_test.py:
+      { "signature": <signed message>, "phase4_image_data": { ... } }
+  - Miners are ranked by avg validation score (primary) and avg identity
+    preservation (tiebreaker); top 50 with avg_identity_preservation >= 0.6
+    receive an exponential-decay blended reward.
+
+UAV (Unknown Address Variation / reputation score):
+  - Computed from the validator's reputation snapshot (rep_data) obtained from
+    the MIID server on each successful upload.
+  - Handled entirely by apply_reputation_rewards() — unchanged from Phase 3.
+
+Reward allocation (SN54 Dual Incentive Mechanism — effective July 1):
+  - Data-generation miners: ~35%     (KAV + UAV, unchanged)
+  - Burn fraction: ~30%              (--neuron.burn_fraction, default 0.30)
+  - Commercial partner pool: ~35%    (routes to PARTNER_HOTKEY if on mainnet, else burned)
+  - KAV weight: 10% of miner share   (--neuron.kav_weight, default 0.10)
+  - UAV weight: 90% of miner share   (--neuron.uav_weight, default 0.90)
+
+  The partner pool is funded by reducing the burn from 65% → 30%, NOT by
+  reducing miner rewards.  If PARTNER_HOTKEY is absent from the metagraph the
+  35% partner fraction is added to the burn (total burn reverts to 65%).
+"""
+
 import numpy as np
-from typing import List, Dict, Tuple, Any, Set, Union, Optional
-import bittensor as bt
-import Levenshtein
-import jellyfish
-import os
-import csv
 import time
-import traceback
-import math
-import random
-import ollama
-from datetime import datetime, timedelta
-import re
+from typing import List, Dict, Tuple, Any, Optional
+import bittensor as bt
 import requests
-from unidecode import unidecode
-import geonamescache
-
-# Import rule_evaluator for rule-based compliance checking
-from MIID.validator.rule_evaluator import evaluate_rule_compliance
-from MIID.validator.cheat_detection import (
-    build_normalized_set,
-    pairwise_similarity_metrics,
-    hash_signature,
-    overlap_coefficient,
-    jaccard,
-    detect_cheating_patterns,
-    remove_disallowed_unicode,
-    normalize_address_for_deduplication,
-)
-from MIID.validator.cache import LRUCache
-
-HOTKEY_TO_VALIDATOR_NAME: Dict[str, str] = {
-    "5DUB7kNLvvx8Dj7D8tn54N1C7Xok6GodNPQE2WECCaL9Wgpr": "Postal system",
-    "5GWzXSra6cBM337nuUU7YTjZQ6ewT2VakDpMj8Pw2i8v8PVs": "Street data",
-    "5C4qiYkqKjqGDSvzpf6YXCcnBgM6punh8BQJRP78bqMGsn54": "Residence service",
-    "5HK5tp6t2S59DywmHRWPBVJeJ86T61KjurYqeooqj8sREpeN": "Geospatial data",
-    "5HbUFHW4XVhbQvMbSy7WDjvhHb62nuYgP1XBsmmz9E2E2K6p": "Location precision",
-    "5GQqAhLKVHRLpdTqRg1yc3xu7y47DicJykSpggE2GuDbfs54": "Quality service",
-}
-
-def clean_transliteration_output(raw_response: str) -> str:
-    """
-    Extracts the transliterated name from LLM output, removes appended instructions,
-    and any leading/trailing punctuation like '-'.
-    """
-    lines = raw_response.splitlines()
-    transliterated = ""
-    
-    for line in lines:
-        line = line.strip()
-        if not line:
-            continue
-        # Skip instruction/meta lines
-        if any(keyword in line.lower() for keyword in [
-            "output only", "do not", "end of output", "input", "latin script"
-        ]):
-            continue
-        if re.search(r"[A-Za-zÀ-ÿ]", line):
-            transliterated = line
-            break
-
-    # Remove known script words (case-insensitive)
-    for word in ["latin", "cyrillic", "arabic", "chinese"]:
-        transliterated = re.sub(rf"\b{word}\b", "", transliterated, flags=re.IGNORECASE)
-
-    # Remove unwanted characters, keep letters, hyphens, apostrophes, spaces
-    transliterated = re.sub(r"[^A-Za-zÀ-ÿ\s\-\']", "", transliterated)
-
-    # Strip leading/trailing punctuation (like '-')
-    transliterated = transliterated.strip(" -")
-
-    # Collapse multiple spaces
-    transliterated = re.sub(r"\s+", " ", transliterated).strip()
-    
-    return transliterated
-
-
-def translate_unidecode(original_name):
-    """
-    Fallback transliteration function using unidecode.
-    Converts to ASCII.
-    
-    Args:
-        original_name: The original name to transliterate
-        
-    Returns:
-        The transliterated name in ASCII
-    """
-    english_name = unidecode(original_name)
-    return english_name
-
-
-# Define the reward component weights globally
-MIID_REWARD_WEIGHTS = {
-    ##### Quality based similarity weights (phonetic and orthographic similarity)
-    "similarity_weight": 0.60,       # Combined weight for phonetic and orthographic similarity (reduced from 0.60)
-    "count_weight": 0.15,            # Weight for having the correct number of variations (reduced from 0.15)
-    "uniqueness_weight": 0.10,       # Weight for having unique variations (unchanged)
-    "length_weight": 0.15,           # Weight for reasonable length variations (reduced from 0.15)
-    ##### Rule compliance weight
-    "rule_compliance_weight": 0.20,  # NEW: Weight for rule-based compliance
-    ##### First/last name weights
-    # Weights for combining first/last name scores in calculate_variation_quality
-    "first_name_weight": 0.3, 
-    "last_name_weight": 0.7
-}
-
-def reward(query: int, response: int) -> float:
-    """
-    Reward the miner response to the dummy request. This method returns a reward
-    value for the miner, which is used to update the miner's score.
-
-    Returns:
-    - float: The reward value for the miner.
-    """
-    bt.logging.info(
-        f"In rewards, query val: {query}, response val: {response}, rewards val: {1.0 if response == query * 2 else 0}"
-    )
-    return 1.0 if response == query * 2 else 0
-
-
-def calculate_phonetic_similarity(original_name: str, variation: str) -> float:
-    """
-    Calculate phonetic similarity between two strings using a randomized subset of phonetic algorithms.
-    This makes it harder for miners to game the system by not knowing which algorithms will be used.
-    The selection and weighting are deterministic for each original_name.
-
-    We randomize the subset and weights of multiple phonetic algorithms (Soundex, Metaphone, NYSIIS)
-    to reduce overfitting to any single encoding. Randomness is deterministically seeded per interpreter
-    session using Python's salted hash of `original_name`, which yields:
-      • Reproducibility for the same name within a single run (same selection/weights each time)
-      • Variation across different runs (fresh selections/weights after interpreter restart)
-
-    This per-run determinism and cross-run variability are intentional to balance auditability and
-    anti-gaming. If strict cross-run reproducibility becomes a requirement, we can switch to a stable
-    digest (e.g., SHA-256) and/or a local RNG seeded from that digest.
-
-    """
-    # Define available phonetic algorithms
-    algorithms = {
-        "soundex": lambda x, y: jellyfish.soundex(x) == jellyfish.soundex(y),
-        "metaphone": lambda x, y: jellyfish.metaphone(x) == jellyfish.metaphone(y),
-        "nysiis": lambda x, y: jellyfish.nysiis(x) == jellyfish.nysiis(y),
-        # Add more algorithms if needed
-    }
-
-    # Deterministically seed the random selection based on the original name
-    random.seed(hash(original_name) % 10000)
-    selected_algorithms = random.sample(list(algorithms.keys()), k=min(3, len(algorithms)))
-
-    # Generate random weights that sum to 1.0
-    weights = [random.random() for _ in selected_algorithms]
-    total_weight = sum(weights)
-    normalized_weights = [w / total_weight for w in weights]
-
-    # Calculate the weighted phonetic score
-    phonetic_score = sum(
-        algorithms[algo](original_name, variation) * weight
-        for algo, weight in zip(selected_algorithms, normalized_weights)
-    )
-
-    return float(phonetic_score)
-
-def calculate_orthographic_similarity(original_name: str, variation: str) -> float:
-    """
-    Calculate orthographic similarity between two strings using Levenshtein distance.
-    
-    Args:
-        original_name: The original name
-        variation: The variation to compare against
-        
-    Returns:
-        Orthographic similarity score between 0 and 1
-    """
-    try:
-        # Use Levenshtein distance to compare
-        distance = Levenshtein.distance(original_name, variation)
-        max_len = max(len(original_name), len(variation))
-        
-        # Calculate orthographic similarity score (0-1)
-        return 1.0 - (distance / max_len)
-    except Exception as e:
-        bt.logging.warning(f"Error calculating orthographic score: {str(e)}")
-        return 0.0
-
-def has_excessive_letter_repetition(text: str, max_repetition: int = 2) -> bool:
-    """
-    Check if a string has any letter repeated more than max_repetition times consecutively.
-    
-    Args:
-        text: The text to check
-        max_repetition: Maximum allowed consecutive repetitions (default: 2, so "aaa" is excessive)
-        
-    Returns:
-        True if there are more than max_repetition consecutive identical letters, False otherwise
-    """
-    if not text:
-        return False
-    
-    # Use regex to find sequences of 3 or more identical letters (case-insensitive)
-    pattern = r'(.)\1{' + str(max_repetition) + r',}'
-    return bool(re.search(pattern, text, re.IGNORECASE))
-
-def looks_like_address(address: str) -> bool:
-    address = address.strip().lower()
-
-    # Keep all letters (Latin and non-Latin) and numbers
-    # Using a more compatible approach for Unicode characters
-    address_len = re.sub(r'[^\w]', '', address.strip(), flags=re.UNICODE)
-    if len(address_len) < 30:
-        return False
-    if len(address_len) > 300:  # maximum length check
-        return False
-
-    # Count letters (both Latin and non-Latin) - using \w which includes Unicode letters
-    letter_count = len(re.findall(r'[^\W\d]', address, flags=re.UNICODE))
-    if letter_count < 20:
-        return False
-
-    if re.match(r"^[^a-zA-Z]*$", address):  # no letters at all
-        return False
-    if len(set(address)) < 5:  # all chars basically the same
-        return False
-        
-    # Has at least one digit in a comma-separated section
-    # Replace hyphens and semicolons with empty strings before counting numbers
-    address_for_number_count = address.replace('-', '').replace(';', '')
-    # Split address by commas and check for numbers in each section
-    sections = [s.strip() for s in address_for_number_count.split(',')]
-    sections_with_numbers = []
-    for section in sections:
-        # Only match ASCII digits (0-9), not other numeric characters
-        number_groups = re.findall(r"[0-9]+", section)
-        if len(number_groups) > 0:
-            sections_with_numbers.append(section)
-    # Need at least 1 section that contains numbers
-    if len(sections_with_numbers) < 1:
-        return False
-
-    if address.count(",") < 2:
-        return False
-    
-    # Check for special characters that should not be in addresses
-    special_chars = ['`', ':', '%', '$', '@', '*', '^', '[', ']', '{', '}', '_', '«', '»']
-    if any(char in address for char in special_chars):
-        return False
-    
-    # # Contains common address words or patterns
-    # common_words = ["st", "street", "rd", "road", "ave", "avenue", "blvd", "boulevard", "drive", "ln", "lane", "plaza", "city", "platz", "straße", "straße", "way", "place", "square", "allee", "allee", "gasse", "gasse"]
-    # # Also check for common patterns like "1-1-1" (Japanese addresses) or "Unter den" (German)
-    # has_common_word = any(word in address for word in common_words)
-    # has_address_pattern = re.search(r'\d+-\d+-\d+', address) or re.search(r'unter den|marienplatz|champs|place de', address)
-    
-    # if not (has_common_word or has_address_pattern):
-    #     return False
-    
-    return True
-
-def compute_bounding_box_areas_meters(nominatim_results):
-    """
-    Computes bounding box areas in meters instead of degrees.
-    """
-    if not isinstance(nominatim_results, list):
-        return []
-    
-    areas = []
-    for item in nominatim_results:
-        if "boundingbox" not in item:
-            continue
-        
-        # Extract and convert bounding box coords to floats
-        south, north, west, east = map(float, item["boundingbox"])
-        
-        # Approx center latitude for longitude scaling
-        center_lat = (south + north) / 2.0
-        lat_m = 111_000  # meters per degree latitude
-        lon_m = 111_000 * math.cos(math.radians(center_lat))  # meters per degree longitude
-        height_m = abs(north - south) * lat_m
-        width_m = abs(east - west) * lon_m
-        area_m2 = width_m * height_m
-        
-        areas.append({
-            "south": south,
-            "north": north,
-            "west": west,
-            "east": east,
-            "width_m": width_m,
-            "height_m": height_m,
-            "area_m2": area_m2,
-            "result": item  # Keep reference to original result
-        })
-    
-    return areas
-
-
-# Global cache instance for Nominatim API results
-# Max size of 10000 entries (~36 MB memory usage)
-_nominatim_cache = LRUCache(max_size=10000)
-_cache_enabled = None  # Will be initialized from config.neuron.nominatim_cache_enabled
-
-# Cache statistics tracking
-_cache_stats = {
-    "cache_hits": 0,
-    "api_calls": 0
-}
-
-
-def check_with_nominatim(address: str, validator_uid: int, miner_uid: int, seed_address: str, seed_name: str, validator_hotkey: str = None) -> Union[float, str, dict]:
-    """
-    Validates address using Nominatim API and returns a score based on bounding box areas.
-    Returns:
-        - dict with 'score' and 'num_results' for success
-        - "TIMEOUT" for timeout
-        - "API_ERROR" for API failures (network errors, exceptions)
-        - 0.0 for invalid address (API succeeded but address not found/filtered out)
-    
-    Results are cached to avoid repeated API calls for the same address.
-    Addresses are normalized using normalize_address_for_deduplication so that similar
-    addresses (e.g., "House 4" vs "House 1" in the same location) share the same cache entry.
-    
-    Cache only stores the score to minimize memory usage.
-    """
-    global _cache_stats
-    
-    # Normalize address for cache key using deduplication normalization
-    # This ensures addresses like "House 4" and "House 1" at the same location share cache
-    normalized_set = normalize_address_for_deduplication(address)
-    if not normalized_set:
-        cache_key = ""
-    else:
-        # Sort words for deterministic ordering, then extract all letters
-        dedup_text = " ".join(sorted(normalized_set))
-        letters = re.findall(r'[^\W\d]', dedup_text, flags=re.UNICODE)
-        letters = [c.lower() for c in letters if c not in ['\u02BB', '\u02BC']]
-        cache_key = ''.join(sorted(letters))
-    # Convert set to string for use as cache key (sets are unhashable)
-    
-    
-    # Check if cache is enabled and we have a valid cache key
-    # Default to True if not yet initialized from config
-    cache_enabled = _cache_enabled if _cache_enabled is not None else True
-    use_cache = cache_enabled and bool(cache_key) and _nominatim_cache is not None
-    
-    if use_cache:
-        # Check cache first
-        cached_result = _nominatim_cache.get(cache_key)
-        if cached_result is not None:
-            _cache_stats["cache_hits"] += 1
-            bt.logging.debug(f"Cache hit for address: {address}")
-            # Cached result is just the score (float), return as dict with only score
-            if isinstance(cached_result, (int, float)):
-                return {"score": float(cached_result)}
-            return cached_result
-        bt.logging.debug(f"Cache miss for address: {address}")
-    elif not cache_enabled:
-        bt.logging.debug(f"Cache disabled, making API call for: {address}")
-    else:
-        bt.logging.debug(f"Address normalization resulted in empty key, skipping cache for: {address}")
-    
-    # Cache miss or no cache key - make API call
-    _cache_stats["api_calls"] += 1
-    try:
-        url = "https://nominatim.openstreetmap.org/search"
-        params = {"q": address, "format": "json"}
-        
-        # Use validator hotkey to get validator name from mapping and create a unique User-Agent
-        # Each validator consistently uses its own User-Agent for all requests
-        # if validator_hotkey and validator_hotkey in HOTKEY_TO_VALIDATOR_NAME:
-        #     validator_name = HOTKEY_TO_VALIDATOR_NAME[validator_hotkey]
-        #     user_agent = (
-        #         f"MIID-Subnet/1.0 (YANEZ-MIID Team; "
-        #         f"https://github.com/yanez-compliance/MIID-subnet; "
-        #         f"Validator: {validator_name}; "
-        #         f"Using OpenStreetMap/Nominatim data under ODbL)"
-        #     )
-        # else:
-        #     # Fallback if hotkey not found in mapping
-        #     user_agent = (
-        #         f"MIID-Subnet/1.0 (YANEZ-MIID Team; "
-        #         f"https://github.com/yanez-compliance/MIID-subnet; "
-        #         f"Using OpenStreetMap/Nominatim data under ODbL)"
-        #     )
-
-        if validator_hotkey and validator_hotkey in HOTKEY_TO_VALIDATOR_NAME:
-            validator_name = HOTKEY_TO_VALIDATOR_NAME[validator_hotkey]
-        else:
-            validator_name = "Unknown Validator"
-            # validator_name = random.choice(list(HOTKEY_TO_VALIDATOR_NAME.values()))
-        nominatim_headers = {
-            # "User-Agent": user_agent
-            # "User-Agent": f"{validator_name}"
-            "User-Agent": "location search"
-        }
-        
-        response = requests.get(url, params=params, headers=nominatim_headers, timeout=5)
-        results = response.json()
-        
-        # Check if we have any results
-        if len(results) == 0:
-            result = 0.0
-            if use_cache:
-                _nominatim_cache.put(cache_key, result)
-            return result
-        
-        # Extract numbers from the original address for matching
-        original_numbers = set(re.findall(r"[0-9]+", address.lower()))
-        
-        # Filter results based on place_rank, name check, and numbers check
-        filtered_results = []
-        for result in results:
-            # Check place_rank is 20 or above
-            place_rank = result.get('place_rank', 0)
-            if place_rank < 20:
-                continue
-            
-            # Check that 'name' field exists and is in the original address
-            name = result.get('name', '')
-            if name:
-                # Check if name is in the address (case-insensitive)
-                if name.lower() not in address.lower():
-                    continue
-            
-            # Check that numbers in display_name match numbers from the original address
-            display_name = result.get('display_name', '')
-            if display_name:
-                display_numbers = set(re.findall(r"[0-9]+", display_name.lower()))
-                if original_numbers:
-                    # Ensure display numbers exactly match original numbers (no new numbers, no missing numbers)
-                    if display_numbers != original_numbers:
-                        continue
-            
-            filtered_results.append(result)
-        
-        # If no results pass the filters, return 0.0
-        if len(filtered_results) == 0:
-            result = 0.0
-            if use_cache:
-                _nominatim_cache.put(cache_key, result)
-            return result
-        
-        # Calculate bounding box areas for all results (not just filtered)
-        areas_data = compute_bounding_box_areas_meters(results)
-        
-        if len(areas_data) == 0:
-            result = 0.0
-            if use_cache:
-                _nominatim_cache.put(cache_key, result)
-            return result
-        
-        # Extract areas
-        areas = [item["area_m2"] for item in areas_data]
-        
-        # Use the total area for scoring
-        total_area = sum(areas)
-        
-        # Score based on total area
-        if total_area < 100:
-            score = 1.0
-        elif total_area < 1000:
-            score = 0.9
-        elif total_area < 10000:
-            score = 0.8
-        elif total_area < 100000:
-            score = 0.7
-        else:
-            score = 0.3
-        
-        # Store simplified score details (only score and num_results for cache)
-        num_results = len(areas)
-        
-        # Full details for return value (includes all data for current use)
-        score_details = {
-            "score": score,
-            "num_results": num_results,
-            "areas": areas,
-            "total_area": total_area,
-            "areas_data": areas_data
-        }
-        
-        # Cache only the score to save memory
-        if use_cache:
-            _nominatim_cache.put(cache_key, score)
-        
-        return score_details
-    except requests.exceptions.Timeout:
-        bt.logging.warning(f"API timeout for address: {address}")
-        result = "TIMEOUT"
-        # Don't cache timeouts - they might succeed on retry
-        return result
-    except requests.exceptions.RequestException as e:
-        bt.logging.error(f"Request exception for address '{address}': {type(e).__name__}: {str(e)}")
-        result = "API_ERROR"
-        # Don't cache API failures - they might succeed on retry
-        return result
-    except ValueError as e:
-        error_msg = str(e)
-        # Check if it's an encoding error (like latin-1 codec issues)
-        if "codec" in error_msg.lower() and "encode" in error_msg.lower():
-            bt.logging.warning(f"Encoding error for address '{address}' (treating as timeout): {error_msg}")
-            result = "TIMEOUT"
-            # Don't cache timeouts - they might succeed on retry
-            return result
-        else:
-            bt.logging.error(f"ValueError (likely JSON parsing) for address '{address}': {error_msg}")
-            result = "API_ERROR"
-            # Don't cache API failures - they might succeed on retry
-            return result
-    except Exception as e:
-        bt.logging.error(f"Unexpected exception for address '{address}': {type(e).__name__}: {str(e)}")
-        bt.logging.error(f"Traceback: {traceback.format_exc()}")
-        result = "API_ERROR"
-        # Don't cache API failures - they might succeed on retry
-        return result
-
-def check_with_photon(address: str) -> Union[float, str]:
-    """
-    Check address with Photon API.
-    Returns: float score (1.0 for success, 0.0 for failure) or "TIMEOUT" string
-    """
-    try:
-        url = "https://photon.komoot.io/api/"
-        params = {"q": address}
-
-        response = requests.get(url, params=params, timeout=5)
-        response.raise_for_status()
-        data = response.json()
-        
-        # Return 0.0 if features list is empty
-        if not data.get('features') or len(data.get('features', [])) == 0:
-            return 0.0
-
-        return 1.0
-    except requests.exceptions.Timeout:
-        bt.logging.warning(f"Photon API timeout for address: {address}")
-        return "TIMEOUT"
-    except Exception as e:
-        bt.logging.error(f"Error checking address with Photon API: {type(e).__name__}: {str(e)}")
-        return 0.0
-
-# Global country name mapping to handle variations between miner submissions and geonames data
-# All keys and values are lowercase for case-insensitive matching
-COUNTRY_MAPPING = {
-    # Korea variations
-    "korea, south": "south korea",
-    "korea, north": "north korea",
-    
-    # Cote d'Ivoire variations
-    "cote d ivoire": "ivory coast",
-    "côte d'ivoire": "ivory coast",
-    "cote d'ivoire": "ivory coast",
-    
-    # Gambia variations
-    "the gambia": "gambia",
-    
-    # Netherlands variations
-    "netherlands": "the netherlands",
-    "holland": "the netherlands",
-    
-    # Congo variations
-    "congo, democratic republic of the": "democratic republic of the congo",
-    "drc": "democratic republic of the congo",
-    "congo, republic of the": "republic of the congo",
-    
-    # Burma/Myanmar variations
-    "burma": "myanmar",
-
-    # Bonaire variations
-    'bonaire': 'bonaire, saint eustatius and saba',
-    
-    # Additional common variations
-    "usa": "united states",
-    "us": "united states",
-    "united states of america": "united states",
-    "uk": "united kingdom",
-    "great britain": "united kingdom",
-    "britain": "united kingdom",
-    "uae": "united arab emirates",
-    "u.s.a.": "united states",
-    "u.s.": "united states",
-    "u.k.": "united kingdom",
-
-
-    # north 
-    'north macedonia, the republic of': 'north macedonia',
-
-    # palestinian
-    'palestine, state of': 'palestinian territory',
-    'palestinian': 'palestinian territory',
-}
-
-
-def extract_city_country(address: str, two_parts: bool = False) -> tuple:
-    """
-    Extract city and country from an address.
-    Country is always the last part.
-    City is found by checking each section from right to left (excluding country)
-    and validating against geonames data to ensure it's a real city in the country.
-    
-    Examples:
-    - "115 New Cavendish Street, London W1T 5DU, United Kingdom" -> ("London", "United Kingdom")
-    - "223 William Street, Melbourne VIC 3000, Australia" -> ("Melbourne", "Australia")
-    - "Rosenthaler Straße 1, 10119 Berlin, Germany" -> ("Berlin", "Germany")
-    - "3 Upper Alma Road, Rosebank, Cape Town, 7700, South Africa" -> ("Cape Town", "South Africa")
-    - "6 , Yemen" -> ("", "Yemen")  # No valid city found
-    
-    Args:
-        address: The address to extract from
-        two_parts: If True, treat the last two comma-separated segments as the country
-                   (e.g., "congo, republic of the"). Defaults to False.
-
-    Returns:
-        Tuple of (city, country) - both strings, empty if not found
-        The country is returned in its normalized form (mapped to standard name)
-    """
-    if not address:
-        return "", ""
-
-    address = address.lower()
-    
-    parts = [p.strip() for p in address.split(",")]
-    if len(parts) < 2:
-        return "", ""
-
-    # Determine country and its normalized form
-    # The country_checking_name is used for geonames lookups
-    # The normalized_country is what we return
-    
-    # Always try single-part country first (just the last segment)
-    last_part = parts[-1]
-    single_part_normalized = COUNTRY_MAPPING.get(last_part, last_part)
-    
-    # If two_parts flag is set, also try two-part country
-    country_checking_name = ''
-    if two_parts and len(parts) >= 2:
-        two_part_raw = f"{parts[-2]}, {parts[-1]}"
-        two_part_normalized = COUNTRY_MAPPING.get(two_part_raw, two_part_raw)
-
-        if two_part_raw != two_part_normalized:
-            country_checking_name = two_part_normalized
-            normalized_country = two_part_normalized
-            used_two_parts_for_country = True
-
-    if country_checking_name == '':
-        # Single-part country
-        country_checking_name = single_part_normalized
-        normalized_country = single_part_normalized
-        used_two_parts_for_country = False
-
-    # If no country found, return empty
-    if not normalized_country:
-        return "", ""
-
-    # Check each section from right to left (excluding the country)
-    exclude_count = 2 if used_two_parts_for_country else 1
-    # Start from 2 when excluding one part (country), 3 when excluding two parts
-    for i in range(exclude_count + 1, len(parts) + 1):
-        candidate_index = -i
-        if abs(candidate_index) > len(parts):
-            break
-        
-        candidate_part = parts[candidate_index]
-        if not candidate_part:
-            continue
-            
-        words = candidate_part.split()
-        
-        # Try different combinations of words (1-2 words max)
-        # Start with 2 words, then 1 word for better city matching
-        for num_words in range(len(words)):
-            current_word = words[num_words]
-
-            # Try current word
-            candidates = [current_word]
-
-            # Also try current + previous (if exists)
-            if num_words > 0:
-                prev_plus_current = words[num_words - 1] + " " + words[num_words]
-                candidates.append(prev_plus_current)
-
-            for city_candidate in candidates:
-                # Skip if contains numbers or is too short
-                if any(char.isdigit() for char in city_candidate):
-                    continue
-
-                # Validate the city exists in the country
-                if city_in_country(city_candidate, country_checking_name):
-                    return city_candidate, normalized_country
-
-    return "", normalized_country
-
-# Global cache for geonames data to avoid reloading
-_geonames_cache = None
-_cities_data = None
-_countries_data = None
-
-def get_geonames_data():
-    """Get cached geonames data, loading it only once."""
-    global _geonames_cache, _cities_data, _countries_data
-    
-    if _geonames_cache is None:
-        bt.logging.info("Loading geonames data for the first time...")
-        start_time = time.time()
-        _geonames_cache = geonamescache.GeonamesCache()
-        _cities_data = _geonames_cache.get_cities()
-        _countries_data = _geonames_cache.get_countries()
-        end_time = time.time()
-        bt.logging.info(f"Geonames data loaded in {end_time - start_time:.2f} seconds")
-    
-    return _cities_data, _countries_data
-
-def city_in_country(city_name: str, country_name: str) -> bool:
-    """
-    Check if a city is actually in the specified country using geonamescache.
-    
-    Args:
-        city_name: Name of the city
-        country_name: Name of the country
-        
-    Returns:
-        True if city is in country, False otherwise
-    """
-    if not city_name or not country_name:
-        return False
-    
-    try:
-        cities, countries = get_geonames_data()
-        
-        city_name_lower = city_name.lower()
-        country_name_lower = country_name.lower()
-        
-        # Find country code
-        country_code = None
-        for code, data in countries.items():
-            if data.get('name', '').lower().strip() == country_name_lower.strip():
-                country_code = code
-                break
-        
-        if not country_code:
-            return False
-        
-        # Only check cities that are actually in the specified country
-        city_words = city_name_lower.split()
-        
-        for city_id, city_data in cities.items():
-            # Skip cities not in the target country
-            if city_data.get("countrycode", "") != country_code:
-                continue
-                
-            city_data_name = city_data.get("name", "").lower()
-            
-            # Check exact match first
-            if city_data_name.strip() == city_name_lower.strip():
-                return True
-            # Check first word match
-            elif len(city_words) >= 2 and city_data_name.startswith(city_words[0]):
-                return True
-            # Check second word match
-            elif len(city_words) >= 2 and city_words[1] in city_data_name:
-                return True
-        
-        return False
-        
-    except Exception as e:
-        bt.logging.warning(f"Error checking city '{city_name}' in country '{country_name}': {str(e)}")
-        return False
-
-def check_western_sahara_cities(generated_address: str) -> bool:
-    """
-    Check if any Western Sahara city appears in the generated address.
-    
-    Args:
-        generated_address: The generated address to check
-        
-    Returns:
-        True if any Western Sahara city is found in the address, False otherwise
-    """
-    if not generated_address:
-        return False
-    
-    # Western Sahara cities
-    WESTERN_SAHARA_CITIES = [
-        "laayoune", "dakhla", "boujdour", "es semara", "sahrawi", "tifariti", "aousserd"
-    ]
-    
-    gen_lower = generated_address.lower()
-    
-    # Check if any of the cities appear in the generated address
-    for city in WESTERN_SAHARA_CITIES:
-        if city in gen_lower:
-            return True
-    
-    return False
-
-def validate_address_region(generated_address: str, seed_address: str) -> bool:
-    """
-    Validate that generated address has correct region from seed address.
-    
-    Special handling for disputed regions not in geonames:
-    - Luhansk, Crimea, Donetsk, West Sahara
-    
-    Args:
-        generated_address: The generated address to validate
-        seed_address: The seed address to match against
-        
-    Returns:
-        True if region is valid, False otherwise
-    """
-    if not generated_address or not seed_address:
-        return False
-    
-    # Special handling for disputed regions not in geonames
-    seed_lower = seed_address.lower()
-    
-    # Special handling for Western Sahara - check for cities instead of region name
-    if seed_lower in ["west sahara", "western sahara"]:
-        return check_western_sahara_cities(generated_address)
-    
-    # Other special regions
-    OTHER_SPECIAL_REGIONS = ["luhansk", "crimea", "donetsk", "macau"]
-    if seed_lower in OTHER_SPECIAL_REGIONS:
-        # If seed is a special region, check if that region appears in generated address
-        gen_lower = generated_address.lower()
-        return seed_lower in gen_lower
-    
-    # Extract city and country from both addresses
-    gen_city, gen_country = extract_city_country(generated_address, two_parts=(',' in seed_address))
-    seed_address_lower = seed_address.lower()
-    seed_address_mapped = COUNTRY_MAPPING.get(seed_address.lower(), seed_address.lower())
-
-    
-    # If no city was extracted from generated address, it's an error
-    if not gen_city:
-        return False
-    
-    # If no country was extracted from generated address, it's an error
-    if not gen_country:
-        return False
-    
-    # Check if either city or country matches
-    city_match = gen_city and seed_address_lower and gen_city == seed_address_lower
-    country_match = gen_country and seed_address_lower and gen_country == seed_address_lower
-    mapped_match = gen_country and seed_address_mapped and gen_country == seed_address_mapped
-
-    
-    if not (city_match or country_match or mapped_match):
-        return False
-    
-    return True
-
-def transliterate_name_with_llm(original_name: str, script: str, model_name: str = "tinyllama:latest") -> str:
-    """
-    Use LLM to transliterate a non-Latin name to Latin script for phonetic comparison.
-    Tries tinyllama first, then falls back to llama3.1:latest.
-    
-    Args:
-        original_name: The original non-Latin name to transliterate
-        model_name: The Ollama model to use for transliteration (if specified, uses that first)
-        
-    Returns:
-        The transliterated name in Latin script, or fallback transliteration if all models fail
-    """
-    llama_models = [
-        "tinyllama:latest",
-        "llama3.1:latest",
-    ]
-
-    if model_name in llama_models:
-        models_to_try = [model_name] + [m for m in llama_models if m != model_name]
-    else:
-        models_to_try = llama_models
-
-    for current_model in models_to_try:
-        attempts = 0
-        while attempts < 5:
-            try:
-                prompt = f"Transliterate this {script} name to Latin script, output only the name:\n{original_name}"
-
-                response = ollama.generate(
-                    model=current_model,
-                    prompt=prompt,
-                    options={
-                        'temperature': 0.1,
-                        'top_p': 0.9,
-                        'max_tokens': 50,
-                        'timeout': 30
-                    }
-                )
-
-                raw_output = response['response'].strip()
-
-                transliterated = clean_transliteration_output(raw_output)
-
-                # Validate transliteration: must contain at least one letter
-                if transliterated and re.match(r"^[A-Za-zÀ-ÿ\s\-\']+$", transliterated):
-                    bt.logging.info(f"Successfully transliterated '{original_name}' to '{transliterated}' using {current_model}")
-                    return transliterated
-                else:
-                    bt.logging.warning(f"Invalid transliteration result for '{original_name}' with {current_model}, attempt {attempts + 1}/5")
-                    attempts += 1
-
-            except Exception as e:
-                bt.logging.error(f"Error in LLM transliteration for '{original_name}' with {current_model}, attempt {attempts + 1}/5: {str(e)}")
-                attempts += 1
-
-        bt.logging.warning(f"Model {current_model} failed 5 times for '{original_name}', trying next model")
-
-    # Fallback
-    bt.logging.info(f"All LLM attempts failed for '{original_name}', using fallback transliteration")
-    fallback_result = translate_unidecode(original_name)
-    bt.logging.info(f"Fallback transliteration result for '{original_name}': '{fallback_result}'")
-    return fallback_result
-
-
-def calculate_part_score(
-    original_part: str,
-    variations: List[str],
-    phonetic_similarity: Dict[str, float],
-    orthographic_similarity: Dict[str, float],
-    expected_count: int
-) -> Tuple[float, Dict]:
-    """Calculate score and detailed metrics for a single part (first or last name)"""
-    # bt.logging.info(f"\nCalculating part score for: {original_part}")
-    # bt.logging.info(f"Number of variations: {len(variations)}")
-    # bt.logging.info(f"Expected count: {expected_count}")
-    
-    if not variations:
-        bt.logging.warning("No variations provided")
-        return 0.0, {}
-    
-    # Define the boundaries for each similarity level with no overlaps
-    # There is a gap so no code can be in 2 different bounds
-    phonetic_boundaries = {
-        "Light": (0.80, 1.00),   # High similarity range
-        "Medium": (0.60, 0.79),  # Moderate similarity range
-        "Far": (0.30, 0.59)      # Low similarity range
-    }
-    
-    orthographic_boundaries = {
-        "Light": (0.70, 1.00),   # High similarity range
-        "Medium": (0.50, 0.69),  # Moderate similarity range
-        "Far": (0.20, 0.49)      # Low similarity range
-    }
-    
-    # 1. Check if count matches expected count with adaptive tolerance
-    # Handle case where expected_count is 0 (100% rule-based scenario)
-    if expected_count == 0:
-        # If no variations are expected for non-rule-compliant part, give full score
-        count_score = 1.0
-        bt.logging.info(f"Count score: 1.0 (no non-rule variations expected)")
-    else:
-        # Tolerance increases with expected count to be more forgiving for larger sets
-        base_tolerance = 0.2  # 20% base tolerance
-        tolerance = base_tolerance + (0.05 * (expected_count // 10))  # Add 5% per 10 expected variations
-        tolerance = min(tolerance, 0.4)  # Cap at 40% maximum tolerance
-        
-        tolerance_range = expected_count * tolerance
-        actual_count = len(variations)
-        lower_bound = max(1, expected_count - tolerance_range)  # Ensure at least 1 variation required
-        upper_bound = expected_count + tolerance_range
-        
-        if lower_bound <= actual_count <= upper_bound:
-            count_score = 1.0
-            #bt.logging.info(f"Count score: 1.0 (within tolerance range: {lower_bound:.1f}-{upper_bound:.1f})")
-        else:
-            if actual_count < lower_bound:
-                deviation = lower_bound - actual_count
-                #bt.logging.warning(f"Too few variations: {actual_count} < {lower_bound:.1f}")
-            else:
-                deviation = actual_count - upper_bound
-                #bt.logging.warning(f"Too many variations: {actual_count} > {upper_bound:.1f}")
-            
-            # Smoother penalty curve using exponential decay
-            count_score = math.exp(-deviation / expected_count)
-            #bt.logging.info(f"Count score: {count_score:.3f} (penalty for deviation: {deviation})")
-    
-    # 2. Enhanced uniqueness check with similarity clustering and excessive repetition filtering
-    unique_variations = []
-    filtered_count = 0
-    for var in variations:
-        # Filter out variations with excessive letter repetition (more than 2 consecutive identical letters)
-        if has_excessive_letter_repetition(var, max_repetition=2):
-            filtered_count += 1
-            #bt.logging.warning(f"Filtered variation '{var}' due to excessive letter repetition")
-            continue
-        
-        # Check if this variation is too similar to any existing unique variation
-        is_unique = True
-        for unique_var in unique_variations:
-            combined_similarity = (
-                calculate_phonetic_similarity(var, unique_var) * 0.7 +
-                calculate_orthographic_similarity(var, unique_var) * 0.3
-            )
-            if combined_similarity > 0.99:  # Very high similarity threshold
-                is_unique = False
-                #bt.logging.warning(f"Variation '{var}' is too similar to existing variation '{unique_var}'")
-                break
-        if is_unique:
-            unique_variations.append(var)
-    
-    # Calculate penalty for filtered variations (excessive repetition)
-    filter_penalty = 0.0
-    if filtered_count > 0:
-        filter_penalty = min(0.2, filtered_count * 0.05)  # Up to 20% penalty
-        #bt.logging.warning(f"Filtered {filtered_count} variations with excessive repetition (penalty: {filter_penalty:.3f})")
-    
-    uniqueness_score = len(unique_variations) / len(variations) if variations else 0
-    # if uniqueness_score < 1.0:
-    #     bt.logging.warning(f"Found similar variations. Uniqueness score: {uniqueness_score:.3f}")
-    # else:
-        #bt.logging.info("All variations are sufficiently unique. Uniqueness score: 1.0")
-    
-    # 3. Improved length reasonableness with adaptive thresholds
-    length_scores = []
-    for var in unique_variations:
-        original_len = len(original_part)
-        var_len = len(var)
-        
-        # Adaptive threshold based on original name length
-        min_ratio = 0.6 if original_len <= 5 else 0.7  # More forgiving for short names
-        
-        # Consider both absolute and relative length differences
-        length_ratio = min(var_len / original_len, original_len / var_len)
-        absolute_diff = abs(var_len - original_len)
-        
-        # Combine both metrics with smooth transition
-        length_score = length_ratio * (1.0 - min(1.0, absolute_diff / original_len))
-        length_scores.append(length_score)
-        
-        # if length_score < min_ratio:
-        #     bt.logging.warning(
-        #         f"Variation '{var}' (len={var_len}) has poor length score {length_score:.3f} "
-        #         f"compared to original '{original_part}' (len={original_len})"
-        #     )
-    
-    length_score = sum(length_scores) / len(length_scores) if length_scores else 0
-    #bt.logging.info(f"Average length score: {length_score:.3f}")
-    
-    # Calculate similarity scores with improved distribution analysis
-    phonetic_scores = []
-    orthographic_scores = []
-    
-    for variation in unique_variations:
-        p_score = calculate_phonetic_similarity(original_part, variation)
-        o_score = calculate_orthographic_similarity(original_part, variation)
-        
-        phonetic_scores.append(p_score)
-        orthographic_scores.append(o_score)
-        
-        # if p_score < 0.3 and o_score < 0.3:
-        #     bt.logging.warning(
-        #         f"Very low similarity for variation '{variation}': "
-        #         f"phonetic={p_score:.3f}, orthographic={o_score:.3f}"
-        #     )
-    
-    # Sort scores for distribution analysis
-    phonetic_scores.sort()
-    orthographic_scores.sort()
-    
-    # Calculate quality scores with improved distribution matching
-    def calculate_distribution_quality(scores, boundaries, targets):
-        quality = 0.0
-        total_matched = 0
-        
-        for level, (lower, upper) in boundaries.items():
-            target_percentage = targets.get(level, 0.0)
-            if target_percentage == 0.0:
-                continue
-                
-            # Count scores in this range
-            count = sum(1 for score in scores if lower <= score <= upper)
-            target_count = int(target_percentage * len(scores))
-            
-            if target_count > 0:
-                # Calculate match quality with diminishing returns
-                match_ratio = count / target_count
-                #match_quality = 1.0 - math.exp(-match_ratio)  # Smooth curve
-                # Diminishing returns after target
-                # this gives 100% at target, then diminishing returns for exceeding
-                if match_ratio <= 1.0:
-                    match_quality = match_ratio  # Linear up to target
-                else:    
-                    match_quality = 1.0 - math.exp(-(match_ratio - 1.0))  
-                quality += target_percentage * match_quality
-                total_matched += count
-                
-                # bt.logging.info(
-                #     f"{level} similarity: {count}/{target_count} variations "
-                #     f"({match_quality:.3f} quality)"
-                # )
-        
-        # Penalize unmatched variations
-        unmatched = len(scores) - total_matched
-        if unmatched > 0:
-            penalty = 0.1 * (unmatched / len(scores))
-            quality = max(0.0, quality - penalty)
-            # bt.logging.warning(f"Penalty of {penalty:.3f} applied for {unmatched} unmatched variations")
-        
-        return quality
-    
-    phonetic_quality = calculate_distribution_quality(
-        phonetic_scores, phonetic_boundaries, phonetic_similarity
-    )
-    orthographic_quality = calculate_distribution_quality(
-        orthographic_scores, orthographic_boundaries, orthographic_similarity
-    )
-    
-    # Calculate combined similarity score
-    similarity_score = (phonetic_quality + orthographic_quality) / 2  # Average of both similarities
-    #bt.logging.info(f"Similarity score: {similarity_score:.3f} (phonetic: {phonetic_quality:.3f}, orthographic: {orthographic_quality:.3f})")
-    
-    # Apply minimum similarity threshold to prevent gaming
-    # If similarity is very low, severely reduce the score
-    min_similarity_threshold = 0.2
-    if similarity_score < min_similarity_threshold:
-        #bt.logging.warning(f"Very low similarity score ({similarity_score:.3f}) detected - applying penalty")
-        # Penalize low similarity scores
-        similarity_score *= 0.1  # Keep only 10% of the similarity score
-        #bt.logging.warning(f"Adjusted similarity score: {similarity_score:.3f}")
-    #########################################################
-    ### move this to config file
-    # Calculate final quality score with all factors - updated weights from analysis
-    # Use the globally defined weights
-    similarity_weight = MIID_REWARD_WEIGHTS["similarity_weight"]
-    count_weight = MIID_REWARD_WEIGHTS["count_weight"]
-    uniqueness_weight = MIID_REWARD_WEIGHTS["uniqueness_weight"]
-    length_weight = MIID_REWARD_WEIGHTS["length_weight"]
-    
-    final_score = (
-        similarity_weight * similarity_score +
-        count_weight * count_score +
-        uniqueness_weight * uniqueness_score +
-        length_weight * length_score
-    )
-    
-    # Apply penalty for filtered variations with excessive letter repetition
-    if filter_penalty > 0:
-        final_score = max(0.0, final_score * (1.0 - filter_penalty))
-    
-    # # DETAILED LOGGING FOR DEBUGGING 0.0 SCORES
-    # bt.logging.info(f"--- DETAILED SCORE CALCULATION FOR '{original_part}' ---")
-    # bt.logging.info(f"Similarity Score: {similarity_score:.4f} (Weight: {similarity_weight}) -> Contributes: {similarity_weight * similarity_score:.4f}")
-    # bt.logging.info(f"Count Score: {count_score:.4f} (Weight: {count_weight}) -> Contributes: {count_weight * count_score:.4f}")
-    # bt.logging.info(f"Uniqueness Score: {uniqueness_score:.4f} (Weight: {uniqueness_weight}) -> Contributes: {uniqueness_weight * uniqueness_score:.4f}")
-    # bt.logging.info(f"Length Score: {length_score:.4f} (Weight: {length_weight}) -> Contributes: {length_weight * length_score:.4f}")
-    # bt.logging.info(f"FINAL PART SCORE for '{original_part}': {final_score:.4f}")
-    # bt.logging.info(f"--- END DETAILED CALCULATION ---")
-    
-    if final_score == 0:
-        bt.logging.warning(f"Zero score for '{original_part}'. Possible reasons:")
-        if len(variations) == 0:
-            bt.logging.warning("  - No variations provided")
-        if similarity_score == 0:
-            bt.logging.warning("  - All variations had very low similarity scores")
-        if uniqueness_score == 0:
-            bt.logging.warning("  - All variations were too similar to each other")
-    
-    # Just before returning the final_score, prepare the detailed metrics
-    detailed_metrics = {
-        "similarity": {
-            "phonetic": float(phonetic_quality),
-            "orthographic": float(orthographic_quality),
-            "combined": float(similarity_score)
-        },
-        "count": {
-            "actual": actual_count,
-            "expected": expected_count,
-            "score": float(count_score)
-        },
-        "uniqueness": {
-            "unique_count": len(unique_variations),
-            "total_count": len(variations),
-            "score": float(uniqueness_score)
-        },
-        "length": {
-            "score": float(length_score)
-        },
-        "variations": [{
-            "variation": var,
-            "phonetic_score": float(calculate_phonetic_similarity(original_part, var)),
-            "orthographic_score": float(calculate_orthographic_similarity(original_part, var)),
-            "length_ratio": float(len(var)) / float(len(original_part))
-        } for var in variations]
-    }
-    
-    return final_score, detailed_metrics
-
-
-def calculate_part_score_phonetic_only(
-    original_part: str,
-    variations: List[str],
-    phonetic_similarity: Dict[str, float],
-    expected_count: int
-) -> Tuple[float, Dict]:
-    """Calculate score and detailed metrics for a single part (first or last name) using only phonetic similarity"""
-    
-    if not variations:
-        bt.logging.warning("No variations provided")
-        return 0.0, {}
-    
-    # Define the boundaries for phonetic similarity levels with no overlaps
-    # There is a gap so no code can be in 2 different bounds
-    phonetic_boundaries = {
-        "Light": (0.80, 1.00),   # High similarity range
-        "Medium": (0.60, 0.79),  # Moderate similarity range
-        "Far": (0.30, 0.59)      # Low similarity range
-    }
-    
-    # 1. Check if count matches expected count with adaptive tolerance
-    # Handle case where expected_count is 0 (100% rule-based scenario)
-    if expected_count == 0:
-        # If no variations are expected for non-rule-compliant part, give full score
-        count_score = 1.0
-        bt.logging.info(f"Count score: 1.0 (no non-rule variations expected)")
-    else:
-        # Tolerance increases with expected count to be more forgiving for larger sets
-        base_tolerance = 0.2  # 20% base tolerance
-        tolerance = base_tolerance + (0.05 * (expected_count // 10))  # Add 5% per 10 expected variations
-        tolerance = min(tolerance, 0.4)  # Cap at 40% maximum tolerance
-        
-        tolerance_range = expected_count * tolerance
-        actual_count = len(variations)
-        lower_bound = max(1, expected_count - tolerance_range)  # Ensure at least 1 variation required
-        upper_bound = expected_count + tolerance_range
-        
-        if lower_bound <= actual_count <= upper_bound:
-            count_score = 1.0
-            #bt.logging.info(f"Count score: 1.0 (within tolerance range: {lower_bound:.1f}-{upper_bound:.1f})")
-        else:
-            if actual_count < lower_bound:
-                deviation = lower_bound - actual_count
-                #bt.logging.warning(f"Too few variations: {actual_count} < {lower_bound:.1f}")
-            else:
-                deviation = actual_count - upper_bound
-                #bt.logging.warning(f"Too many variations: {actual_count} > {upper_bound:.1f}")
-            
-            # Smoother penalty curve using exponential decay
-            count_score = math.exp(-deviation / expected_count)
-            #bt.logging.info(f"Count score: {count_score:.3f} (penalty for deviation: {deviation})")
-    
-    # 2. Enhanced uniqueness check with phonetic similarity clustering and excessive repetition filtering
-    unique_variations = []
-    filtered_count = 0
-    for var in variations:
-        # Filter out variations with excessive letter repetition (more than 2 consecutive identical letters)
-        if has_excessive_letter_repetition(var, max_repetition=2):
-            filtered_count += 1
-            #bt.logging.warning(f"Filtered variation '{var}' due to excessive letter repetition")
-            continue
-        
-        # Check if this variation is too similar to any existing unique variation
-        is_unique = True
-        for unique_var in unique_variations:
-            phonetic_sim = calculate_phonetic_similarity(var, unique_var)
-            if phonetic_sim > 0.99:  # Very high similarity threshold
-                is_unique = False
-                #bt.logging.warning(f"Variation '{var}' is too similar to existing variation '{unique_var}'")
-                break
-        if is_unique:
-            unique_variations.append(var)
-    
-    # Calculate penalty for filtered variations (excessive repetition)
-    filter_penalty = 0.0
-    if filtered_count > 0:
-        filter_penalty = min(0.2, filtered_count * 0.05)  # Up to 20% penalty
-        #bt.logging.warning(f"Filtered {filtered_count} variations with excessive repetition (penalty: {filter_penalty:.3f})")
-    
-    uniqueness_score = len(unique_variations) / len(variations) if variations else 0
-    
-    # 3. Improved length reasonableness with adaptive thresholds
-    length_scores = []
-    for var in unique_variations:
-        original_len = len(original_part)
-        var_len = len(var)
-        
-        # Adaptive threshold based on original name length
-        min_ratio = 0.6 if original_len <= 5 else 0.7  # More forgiving for short names
-        
-        # Consider both absolute and relative length differences
-        length_ratio = min(var_len / original_len, original_len / var_len)
-        absolute_diff = abs(var_len - original_len)
-        
-        # Combine both metrics with smooth transition
-        length_score = length_ratio * (1.0 - min(1.0, absolute_diff / original_len))
-        length_scores.append(length_score)
-        
-    
-    length_score = sum(length_scores) / len(length_scores) if length_scores else 0
-    #bt.logging.info(f"Average length score: {length_score:.3f}")
-    
-    # Calculate phonetic similarity scores with improved distribution analysis
-    phonetic_scores = []
-    
-    for variation in unique_variations:
-        p_score = calculate_phonetic_similarity(original_part, variation)
-        phonetic_scores.append(p_score)
-        
-    # Sort scores for distribution analysis
-    phonetic_scores.sort()
-    
-    # Calculate quality scores with improved distribution matching
-    def calculate_distribution_quality(scores, boundaries, targets):
-        quality = 0.0
-        total_matched = 0
-        
-        for level, (lower, upper) in boundaries.items():
-            target_percentage = targets.get(level, 0.0)
-            if target_percentage == 0.0:
-                continue
-                
-            # Count scores in this range
-            count = sum(1 for score in scores if lower <= score <= upper)
-            target_count = int(target_percentage * len(scores))
-            
-            if target_count > 0:
-                # Calculate match quality with diminishing returns
-                match_ratio = count / target_count
-                #match_quality = 1.0 - math.exp(-match_ratio)  # Smooth curve
-                # Diminishing returns after target
-                # this gives 100% at target, then diminishing returns for exceeding
-                if match_ratio <= 1.0:
-                    match_quality = match_ratio  # Linear up to target
-                else:    
-                    match_quality = 1.0 - math.exp(-(match_ratio - 1.0))  
-                quality += target_percentage * match_quality
-                total_matched += count
-                
-                # bt.logging.info(
-                #     f"{level} similarity: {count}/{target_count} variations "
-                #     f"({match_quality:.3f} quality)"
-                # )
-        
-        # Penalize unmatched variations
-        unmatched = len(scores) - total_matched
-        if unmatched > 0:
-            penalty = 0.1 * (unmatched / len(scores))
-            quality = max(0.0, quality - penalty)
-            # bt.logging.warning(f"Penalty of {penalty:.3f} applied for {unmatched} unmatched variations")
-        
-        return quality
-    
-    phonetic_quality = calculate_distribution_quality(
-        phonetic_scores, phonetic_boundaries, phonetic_similarity
-    )
-    
-    # Use only phonetic similarity score
-    similarity_score = phonetic_quality
-    
-    # Apply minimum similarity threshold to prevent gaming
-    # If similarity is very low, severely reduce the score
-    min_similarity_threshold = 0.2
-    if similarity_score < min_similarity_threshold:
-        similarity_score *= 0.1  # Keep only 10% of the similarity score
-
-    similarity_weight = MIID_REWARD_WEIGHTS["similarity_weight"]
-    count_weight = MIID_REWARD_WEIGHTS["count_weight"]
-    uniqueness_weight = MIID_REWARD_WEIGHTS["uniqueness_weight"]
-    length_weight = MIID_REWARD_WEIGHTS["length_weight"]
-    
-    final_score = (
-        similarity_weight * similarity_score +
-        count_weight * count_score +
-        uniqueness_weight * uniqueness_score +
-        length_weight * length_score
-    )
-    
-    # Apply penalty for filtered variations with excessive letter repetition
-    if filter_penalty > 0:
-        final_score = max(0.0, final_score * (1.0 - filter_penalty))
-    
-    if final_score == 0:
-        bt.logging.warning(f"Zero score for '{original_part}'. Possible reasons:")
-        if len(variations) == 0:
-            bt.logging.warning("  - No variations provided")
-        if similarity_score == 0:
-            bt.logging.warning("  - All variations had very low phonetic similarity scores")
-        if uniqueness_score == 0:
-            bt.logging.warning("  - All variations were too similar to each other")
-    
-    # Just before returning the final_score, prepare the detailed metrics
-    detailed_metrics = {
-        "similarity": {
-            "phonetic": float(phonetic_quality),
-            "combined": float(similarity_score)
-        },
-        "count": {
-            "actual": actual_count,
-            "expected": expected_count,
-            "score": float(count_score)
-        },
-        "uniqueness": {
-            "unique_count": len(unique_variations),
-            "total_count": len(variations),
-            "score": float(uniqueness_score)
-        },
-        "length": {
-            "score": float(length_score)
-        },
-        "variations": [{
-            "variation": var,
-            "phonetic_score": float(calculate_phonetic_similarity(original_part, var)),
-            "length_ratio": float(len(var)) / float(len(original_part))
-        } for var in variations]
-    }
-    
-    return final_score, detailed_metrics
-
-
-def get_name_part_weights(name: str) -> dict:
-    """Generate weights for different name parts based on name characteristics, with randomness."""
-    random.seed(hash(name) % 10000)
-    name_parts = name.split()
-    if len(name_parts) < 2:
-        return {"first_name_weight": 1.0, "last_name_weight": 0.0}
-    lengths = [len(part) for part in name_parts]
-    total_length = sum(lengths)
-    weights = []
-    for length in lengths:
-        base_weight = length / total_length
-        randomized_weight = base_weight * random.uniform(0.8, 1.2)  # 20% randomness
-        weights.append(randomized_weight)
-    total_weight = sum(weights)
-    normalized_weights = [w / total_weight for w in weights]
-
-    return {
-        "first_name_weight": normalized_weights[0],
-        "last_name_weight": normalized_weights[1]
-    }
-
-def calculate_variation_quality(
-    original_name: str,  # Full name as a string
-    variations: List[str],
-    phonetic_similarity: Dict[str, float] = None,
-    orthographic_similarity: Dict[str, float] = None,
-    expected_count: int = 10,
-    rule_based: Dict[str, Any] = None  # New parameter for rule-based metadata
-) -> Tuple[float, Dict]:
-    """
-    Calculate the quality of execution vectors (name variations) for threat detection.
-    Returns both the quality score and detailed metrics.
-    """
-    #bt.logging.info(f"\n{'='*50}")
-    #bt.logging.info(f"Calculating variation quality for: {original_name}")
-    #bt.logging.info(f"Total variations: {len(variations)}")
-    #bt.logging.info(f"Expected count: {expected_count}")
-
-    # Default similarity preferences if none provided
-    if phonetic_similarity is None:
-        phonetic_similarity = {"Medium": 1.0}
-    if orthographic_similarity is None:
-        orthographic_similarity = {"Medium": 1.0}
-
-    # First, calculate rule compliance to identify rule-based variations
-    rule_compliance_score = 0.0
-    rule_compliance_metrics = {}
-    rule_compliant_variations = set()
-    target_percentage = 0.0
-    effective_target_rules = []
-
-    if rule_based and "selected_rules" in rule_based:
-        #bt.logging.info("\nCalculating rule-based compliance score:")
-        target_rules = rule_based.get("selected_rules", [])
-        
-        # The pre-filtering logic has been moved to evaluate_rule_compliance
-        effective_target_rules = target_rules
-
-        if effective_target_rules:
-            target_percentage = rule_based.get("rule_percentage", 30) / 100.0  # Convert to fraction
-            rule_compliance_score, rule_compliance_metrics = calculate_rule_compliance_score(
-                original_name,
-                variations,
-                effective_target_rules,
-                target_percentage
-            )
-            if "rules_satisfied_by_variation" in rule_compliance_metrics:
-                rule_compliant_variations = set(rule_compliance_metrics["rules_satisfied_by_variation"].keys())
-    else:
-        bt.logging.info("No rule-based requirements specified")
-
-    # Separate variations into rule-compliant and non-rule-compliant
-    non_rule_compliant_variations = [
-        var for var in variations if var not in rule_compliant_variations
-    ]
-    
-    # Split the original name into first and last name
-    name_parts = original_name.split()
-    part_weights = get_name_part_weights(original_name)
-    if len(name_parts) < 2:
-        first_name = original_name
-        last_name = None
-        #bt.logging.warning(f"Could not split name '{original_name}' into first and last name")
-    else:
-        first_name = name_parts[0]
-        last_name = name_parts[-1]
-        #bt.logging.info(f"Using first name: '{first_name}', last name: '{last_name}'")
-    
-    # Process NON-RULE-COMPLIANT variations for base quality score
-    first_name_variations = []
-    last_name_variations = []
-    
-    for variation in non_rule_compliant_variations:
-        parts = variation.split()
-        if len(parts) >= 2:
-            first_name_variations.append(parts[0])
-            last_name_variations.append(parts[-1])
-        elif len(parts) == 1:
-            # If variation is a single word and we expect two names,
-            # this should be considered a lower quality variation
-            if last_name:
-                bt.logging.warning(f"Single word variation '{variation}' for full name '{original_name}'")
-                # Only use it for first name with a penalty
-                first_name_variations.append(parts[0])
-            else:
-                # If original is also single word, use normally
-                first_name_variations.append(parts[0])
-        else:
-            bt.logging.warning(f"Empty variation found for '{original_name}'")
-
-    # Adjust expected count for non-rule-compliant part
-    expected_base_count = expected_count * (1.0 - target_percentage)
-
-    #bt.logging.info(f"First name variations (non-rule): {len(first_name_variations)}")
-    #if last_name:
-    #    bt.logging.info(f"Last name variations (non-rule): {len(last_name_variations)}")
-    
-    # Calculate score for first name (non-rule-compliant part)
-    #bt.logging.info("\nCalculating first name score (non-rule-compliant):")
-    first_name_score, first_metrics = calculate_part_score(
-        first_name,
-        first_name_variations,
-        phonetic_similarity,
-        orthographic_similarity,
-        expected_base_count
-    )
-    
-    # Calculate score for last name if available
-    last_name_score = 0.0
-    last_metrics = {}
-    if last_name:
-        #bt.logging.info("\nCalculating last name score (non-rule-compliant):")
-        last_name_score, last_metrics = calculate_part_score(
-            last_name,
-            last_name_variations,
-            phonetic_similarity,
-            orthographic_similarity,
-            expected_base_count
-        )
-        
-        # Apply penalty for missing last names in non-rule-compliant variations
-        if len(last_name_variations) < len(non_rule_compliant_variations):
-            missing_ratio = (len(non_rule_compliant_variations) - len(last_name_variations)) / len(non_rule_compliant_variations) if len(non_rule_compliant_variations) > 0 else 0
-            last_name_score *= (1.0 - missing_ratio)
-            bt.logging.warning(f"Applied missing last name penalty (non-rule): {missing_ratio:.2f}")
-
-    # Combine first/last name scores for the base_score
-    if last_name:
-        base_score = (
-            part_weights.get("first_name_weight", MIID_REWARD_WEIGHTS["first_name_weight"]) * first_name_score +
-            part_weights.get("last_name_weight", MIID_REWARD_WEIGHTS["last_name_weight"]) * last_name_score
-        )
-    else:
-        # If no last name, use only first name score
-        base_score = first_name_score
-        
-    # If no non-rule variations were expected, the base_score is not penalized.
-    # This is separated from the case where they were expected but not provided.
-    if expected_base_count == 0:
-        base_score = 1.0 # Or some other neutral value, 1.0 seems fair to not penalize.
-    
-    # Apply rule compliance to final score using weights from the global config
-    rule_compliance_weight = MIID_REWARD_WEIGHTS["rule_compliance_weight"]
-    
-    # If rules were requested but none were applicable to this name, adjust weights
-    # to base the score entirely on similarity.
-    if rule_based and "selected_rules" in rule_based and not effective_target_rules:
-        bt.logging.debug(f"⚖️ No rules applicable for '{original_name}', adjusting weights. Base score will be final score.")
-        base_weight = 1.0
-        rule_compliance_weight = 0.0
-    else:
-        base_weight = 1.0 - rule_compliance_weight
-
-    # The base_score already contains the other weighted components (length, count, uniqueness)
-    # So we need to scale it down to make room for the rule compliance component
-    final_score = (base_weight * base_score) + (rule_compliance_weight * rule_compliance_score)
-
-    # Prepare detailed metrics
-    detailed_metrics = {
-        "first_name": {
-            "score": float(first_name_score),
-            "metrics": first_metrics
-        },
-        "base_score": float(base_score),
-        "final_score": float(final_score),
-        "variation_count": len(variations),
-        "non_rule_compliant_variations_count": len(non_rule_compliant_variations),
-        "rule_compliant_variations_count": len(rule_compliant_variations)
-    }
-    
-    if last_name:
-        detailed_metrics["last_name"] = {
-            "score": float(last_name_score),
-            "metrics": last_metrics
-        }
-        
-    if rule_based:
-        detailed_metrics["rule_compliance"] = {
-            "score": float(rule_compliance_score),
-            "metrics": rule_compliance_metrics
-        }
-
-    # bt.logging.info(f"\nFinal score breakdown for '{original_name}':")
-    # bt.logging.info(f"  - First name score (non-rule): {first_name_score:.3f}")
-    # if last_name:
-    #     bt.logging.info(f"  - Last name score (non-rule): {last_name_score:.3f}")
-    # bt.logging.info(f"  - Base similarity score (non-rule): {base_score:.3f}")
-    # if rule_based:
-    #     bt.logging.info(f"  - Rule compliance score: {rule_compliance_score:.3f} (weight: {rule_compliance_weight:.2f})")
-    # bt.logging.info(f"  - Final score: {final_score:.3f}")
-    
-    if final_score == 0:
-        bt.logging.warning(f"Zero final score for '{original_name}'. Possible reasons:")
-        if first_name_score == 0 and len(non_rule_compliant_variations) > 0:
-            bt.logging.warning("  - Zero first name score on non-rule variations")
-        if last_name and last_name_score == 0 and len(last_name_variations) > 0:
-            bt.logging.warning("  - Zero last name score on non-rule variations")
-        if len(variations) == 0:
-            bt.logging.warning("  - No variations provided")
-        if rule_based and rule_compliance_score == 0 and len(rule_compliant_variations) > 0:
-            bt.logging.warning("  - Zero rule compliance score on rule-compliant variations")
-    
-    #bt.logging.info(f"{'='*50}\n")
-    return final_score, base_score, detailed_metrics
-
-
-def calculate_variation_quality_phonetic_only(
-    original_name: str,  # Full name as a string
-    variations: List[str],
-    phonetic_similarity: Dict[str, float] = None,
-    expected_count: int = 10
-) -> Tuple[float, float, Dict]:
-    """
-    Calculate the quality of execution vectors (name variations) using ONLY phonetic similarity.
-    No rule-based scoring, no orthographic similarity - just phonetic similarity for both first and last names.
-    """
-
-    # Default phonetic similarity preferences if none provided
-    if phonetic_similarity is None:
-        phonetic_similarity = {"Medium": 1.0}
-
-    # Split the original name into first and last name
-    name_parts = original_name.split()
-    part_weights = get_name_part_weights(original_name)
-    if len(name_parts) < 2:
-        first_name = original_name
-        last_name = None
-    else:
-        first_name = name_parts[0]
-        last_name = name_parts[-1]
-    
-    # Process ALL variations for phonetic-only scoring
-    first_name_variations = []
-    last_name_variations = []
-    
-    for variation in variations:
-        parts = variation.split()
-        if len(parts) >= 2:
-            first_name_variations.append(parts[0])
-            last_name_variations.append(parts[-1])
-        elif len(parts) == 1:
-            # If variation is a single word and we expect two names,
-            # this should be considered a lower quality variation
-            if last_name:
-                bt.logging.warning(f"Single word variation '{variation}' for full name '{original_name}'")
-                # Only use it for first name with a penalty
-                first_name_variations.append(parts[0])
-            else:
-                # If original is also single word, use normally
-                first_name_variations.append(parts[0])
-        else:
-            bt.logging.warning(f"Empty variation found for '{original_name}'")
-
-    # Calculate phonetic-only score for first name
-    first_name_score, first_metrics = calculate_part_score_phonetic_only(
-        first_name,
-        first_name_variations,
-        phonetic_similarity,
-        expected_count
-    )
-    
-    # Calculate phonetic-only score for last name if available
-    last_name_score = 0.0
-    last_metrics = {}
-    if last_name:
-        #bt.logging.info("\nCalculating last name score (phonetic-only):")
-        last_name_score, last_metrics = calculate_part_score_phonetic_only(
-            last_name,
-            last_name_variations,
-            phonetic_similarity,
-            expected_count
-        )
-        
-        # Apply penalty for missing last names in variations
-        if len(last_name_variations) < len(variations):
-            missing_ratio = (len(variations) - len(last_name_variations)) / len(variations) if len(variations) > 0 else 0
-            last_name_score *= (1.0 - missing_ratio)
-            bt.logging.warning(f"Applied missing last name penalty: {missing_ratio:.2f}")
-
-    # Combine first/last name scores for the final score
-    if last_name:
-        final_score = (
-            part_weights.get("first_name_weight", MIID_REWARD_WEIGHTS["first_name_weight"]) * first_name_score +
-            part_weights.get("last_name_weight", MIID_REWARD_WEIGHTS["last_name_weight"]) * last_name_score
-        )
-        base_score = final_score  # Same as final score since no rule compliance
-    else:
-        # If no last name, use only first name score
-        final_score = first_name_score
-        base_score = final_score
-
-    # Prepare detailed metrics
-    detailed_metrics = {
-        "first_name": {
-            "score": float(first_name_score),
-            "metrics": first_metrics
-        },
-        "final_score": float(final_score),
-        "base_score": float(base_score),
-        "variation_count": len(variations),
-        "scoring_method": "phonetic_only"
-    }
-    
-    if last_name:
-        detailed_metrics["last_name"] = {
-            "score": float(last_name_score),
-            "metrics": last_metrics
-        }
-    
-    if final_score == 0:
-        bt.logging.warning(f"Zero final score for '{original_name}'. Possible reasons:")
-        if first_name_score == 0 and len(first_name_variations) > 0:
-            bt.logging.warning("  - Zero first name phonetic score")
-        if last_name and last_name_score == 0 and len(last_name_variations) > 0:
-            bt.logging.warning("  - Zero last name phonetic score")
-        if len(variations) == 0:
-            bt.logging.warning("  - No variations provided")
-
-    return final_score, base_score, detailed_metrics
-
-
-def _calculate_similarity_and_penalties(responses: list, uids: list, seed_names: list, detailed_metrics: list, rewards: np.ndarray) -> tuple:
-    """
-    Calculate similarity between miner responses and determine penalties for duplication.
-    Also, calculate penalties for excessive use of special characters.
-
-    Args:
-        responses: A list of response objects from miners.
-        uids: A list of miner UIDs.
-        seed_names: A list of seed names for which variations were requested.
-        detailed_metrics: A list of dictionaries with detailed metrics for each miner.
-        rewards: The current rewards for each miner.
-
-    Returns:
-        A tuple containing the updated rewards and detailed_metrics list.
-    """
-    
-    bt.logging.info(f"\n{'='*60}")
-    bt.logging.info(f"🔍 CHEATING DETECTION ANALYSIS")
-    bt.logging.info(f"{'='*60}")
-    bt.logging.info(f"Analyzing {len(uids)} miners for cheating patterns...")
-    
-    # Convert IdentitySynapse objects to dictionaries for cheat detection
-    response_dicts = []
-    for response in responses:
-        if hasattr(response, 'variations') and response.variations:
-            response_dicts.append(response.variations)
-        else:
-            response_dicts.append({})
-    
-    cheating_results = detect_cheating_patterns(response_dicts, uids, rewards, seed_names)
-
-    duplication_penalties = cheating_results["duplication_penalties"]
-    signature_penalties = cheating_results["signature_penalties"]
-    collusion_penalties = cheating_results["collusion_penalties"]
-    special_char_penalties = cheating_results["special_char_penalties"]
-    address_duplication_penalties = cheating_results["address_duplication_penalties"]
-    special_char_ratios = cheating_results["special_char_ratios"]
-    special_char_counts = cheating_results["special_char_counts"]
-    total_variations_counts = cheating_results["total_variations_counts"]
-    
-    # Analyze penalty patterns for summary
-    penalized_miners = []
-    collusion_groups = []
-    duplication_pairs = []
-    signature_duplicates = []
-    special_char_offenders = []
-    address_duplication_offenders = []
-    
-    # Collect penalty statistics
-    for i, uid in enumerate(uids):
-        total_penalty = 0
-        penalties_applied = []
-        
-        if collusion_penalties[i] > 0:
-            total_penalty += collusion_penalties[i]
-            penalties_applied.append(f"collusion({collusion_penalties[i]:.2f})")
-            collusion_groups.append(uid)
-            
-        if duplication_penalties[i] > 0:
-            total_penalty += duplication_penalties[i]
-            penalties_applied.append(f"duplication({duplication_penalties[i]:.2f})")
-            duplication_pairs.append(uid)
-            
-        if signature_penalties[i] > 0:
-            total_penalty += signature_penalties[i]
-            penalties_applied.append(f"signature({signature_penalties[i]:.2f})")
-            signature_duplicates.append(uid)
-            
-        if special_char_penalties[i] > 0:
-            total_penalty += special_char_penalties[i]
-            penalties_applied.append(f"special_chars({special_char_penalties[i]:.2f})")
-            special_char_offenders.append(uid)
-            
-        if address_duplication_penalties[i] > 0:
-            total_penalty += address_duplication_penalties[i]
-            penalties_applied.append(f"address_duplication({address_duplication_penalties[i]:.2f})")
-            address_duplication_offenders.append(uid)
-            
-        if total_penalty > 0:
-            penalized_miners.append((uid, total_penalty, penalties_applied))
-    
-    # Log summary of findings
-    bt.logging.info(f"\n📊 CHEATING DETECTION SUMMARY:")
-    bt.logging.info(f"  • Total miners analyzed: {len(uids)}")
-    bt.logging.info(f"  • Miners with penalties: {len(penalized_miners)}")
-    bt.logging.info(f"  • Honest miners: {len(uids) - len(penalized_miners)}")
-    
-    if penalized_miners:
-        bt.logging.info(f"\n🚨 CHEATING PATTERNS DETECTED:")
-        
-        if collusion_groups:
-            bt.logging.info(f"  • Collusion groups: {len(collusion_groups)} miners")
-            bt.logging.info(f"    Miners: {', '.join(str(uid) for uid in collusion_groups)}")
-            
-        if duplication_pairs:
-            bt.logging.info(f"  • Duplication pairs: {len(duplication_pairs)} miners")
-            bt.logging.info(f"    Miners: {', '.join(str(uid) for uid in duplication_pairs)}")
-            
-        if signature_duplicates:
-            bt.logging.info(f"  • Signature duplicates: {len(signature_duplicates)} miners")
-            bt.logging.info(f"    Miners: {', '.join(str(uid) for uid in signature_duplicates)}")
-            
-        if special_char_offenders:
-            bt.logging.info(f"  • Special character abuse: {len(special_char_offenders)} miners")
-            bt.logging.info(f"    Miners: {', '.join(str(uid) for uid in special_char_offenders)}")
-            
-        if address_duplication_offenders:
-            bt.logging.info(f"  • Address duplication: {len(address_duplication_offenders)} miners")
-            bt.logging.info(f"    Miners: {', '.join(str(uid) for uid in address_duplication_offenders)}")
-            
-        bt.logging.info(f"\n⚠️  PENALTY BREAKDOWN:")
-        for uid, total_penalty, penalties in penalized_miners:
-            bt.logging.info(f"  • Miner {uid}: {total_penalty:.3f} total penalty [{', '.join(penalties)}]")
-    else:
-        bt.logging.info(f"\n✅ NO CHEATING DETECTED")
-        bt.logging.info(f"  All {len(uids)} miners appear to be honest")
-    
-    bt.logging.info(f"\n{'='*60}")
-    
-    # Apply penalties and update metrics
-    updated_rewards = np.copy(rewards)
-    num_miners = len(responses)
-    for i in range(num_miners):
-        uid = uids[i]
-        total_penalty = 0
-
-        # Always record special character observability metrics
-        if i < len(detailed_metrics):
-            miner_metrics = detailed_metrics[i]
-            miner_metrics.setdefault('penalties', {})
-            miner_metrics['penalties']['special_chars_ratio'] = float(special_char_ratios[i])
-            miner_metrics['penalties']['special_char_variations_count'] = int(special_char_counts[i])
-            miner_metrics['penalties']['total_variations_count'] = int(total_variations_counts[i])
-
-        # Collusion Penalty
-        if collusion_penalties[i] > 0:
-            penalty_amount = collusion_penalties[i]
-            total_penalty += penalty_amount
-            if i < len(detailed_metrics):
-                miner_metrics = detailed_metrics[i]
-                miner_metrics.setdefault('penalties', {})
-                miner_metrics['penalties']['collusion'] = penalty_amount
-
-        # Duplication Penalty
-        if duplication_penalties[i] > 0:
-            penalty_amount = duplication_penalties[i]
-            total_penalty += penalty_amount
-            if i < len(detailed_metrics):
-                miner_metrics = detailed_metrics[i]
-                miner_metrics.setdefault('penalties', {})
-                miner_metrics['penalties']['duplication'] = penalty_amount
-
-        # Signature (exact-copy) Penalty
-        if signature_penalties[i] > 0:
-            penalty_amount = signature_penalties[i]
-            total_penalty += penalty_amount
-            if i < len(detailed_metrics):
-                miner_metrics = detailed_metrics[i]
-                miner_metrics.setdefault('penalties', {})
-                miner_metrics['penalties']['signature_copy'] = penalty_amount
-
-        # Special Character Penalty
-        if special_char_penalties[i] > 0:
-            penalty_amount = special_char_penalties[i]
-            total_penalty += penalty_amount
-            if i < len(detailed_metrics):
-                miner_metrics = detailed_metrics[i]
-                miner_metrics.setdefault('penalties', {})
-                miner_metrics['penalties']['special_chars'] = penalty_amount
-
-        # Address Duplication Penalty
-        if address_duplication_penalties[i] > 0:
-            penalty_amount = address_duplication_penalties[i]
-            total_penalty += penalty_amount
-            if i < len(detailed_metrics):
-                miner_metrics = detailed_metrics[i]
-                miner_metrics.setdefault('penalties', {})
-                miner_metrics['penalties']['post_address_duplication'] = penalty_amount
-
-        # Apply combined penalty
-        if total_penalty > 0:
-            total_penalty = min(total_penalty, 1.0) # Cap total penalty
-            current_reward = updated_rewards[i]
-            penalized_reward = current_reward * (1.0 - total_penalty)
-            updated_rewards[i] = penalized_reward
-            if i < len(detailed_metrics):
-                # Record post-processing penalties separately and combined with pre-penalties
-                miner_metrics = detailed_metrics[i]
-                miner_metrics.setdefault('penalties', {})
-                miner_metrics['penalties']['post_total_penalty'] = float(total_penalty)
-                pre_total_penalty = float(miner_metrics['penalties'].get('total_penalty', 0.0))
-                # miner_metrics['penalties']['overall_total_penalty'] = (1.0 - pre_total_penalty) * (1.0 - total_penalty)
-                miner_metrics['penalties']['overall_total_penalty'] = 1.0 - ((1.0 - pre_total_penalty) * (1.0 - total_penalty))
-                detailed_metrics[i]['final_reward'] = penalized_reward
-
-    bt.logging.info(f"✅ Cheating detection and penalty application completed")
-    bt.logging.info(f"{'='*60}\n")
-    
-    return updated_rewards, detailed_metrics
-
-
-def _grade_dob_variations(variations: Dict[str, List[List[str]]], seed_dob: List[str], miner_metrics: Dict[str, Any]) -> Dict[str, Any]:
-    """
-    Grade DOB variations based on the required criteria.
-    Each seed name gets its own score based on variations found, then scores are averaged.
-    """
-    
-    # Required day ranges (max days for each category)
-    ranges = [1, 3, 30, 90, 365]  # ±1, ±3, ±30, ±90, ±365 days
-    total_ranges = len(ranges) + 1  # +1 for year_month
-    
-    # Store detailed breakdown in results (do the work once)
-    detailed_breakdown = {
-        "seed_dobs": [],
-        "variations_by_name": {},
-        "category_classifications": {}
-    }
-    
-    # Track individual scores for each name
-    name_scores = []
-    all_found_ranges = set()
-    
-    for name_idx, name in enumerate(variations.keys()):
-        if name not in variations or len(variations[name]) < 1 or name_idx >= len(seed_dob):
-            continue
-            
-        if not seed_dob[name_idx]:
-            continue
-            
-        # Extract DOB variations for this name
-        all_variations = variations[name]
-        dob_variations = [var[1] for var in all_variations if len(var) > 1]  # Include empty strings for proper counting
-        
-        if not dob_variations:
-            continue
-        
-        # Check for duplicates within this name's DOB variations
-        unique_dobs = set()
-        duplicates_in_name = 0
-        duplicate_details = []
-        
-        for dob_var in dob_variations:
-            if dob_var and dob_var in unique_dobs:
-                duplicates_in_name += 1
-                duplicate_details.append(dob_var)
-            elif dob_var:
-                unique_dobs.add(dob_var)
-        
-        # Category classification for this name (do the work once)
-        name_found_ranges = set()
-        try:
-            seed_date = datetime.strptime(seed_dob[name_idx], "%Y-%m-%d")
-            categories = {}
-            
-            for dob_var in dob_variations:
-                if not dob_var:
-                    continue
-                    
-                try:
-                    # Try full date format first
-                    var_date = datetime.strptime(dob_var, "%Y-%m-%d")
-                    day_diff = abs((var_date - seed_date).days)
-                    
-                    # Classify this variation
-                    if day_diff <= 1:
-                        category = "±1 day"
-                        name_found_ranges.add(1)
-                        all_found_ranges.add(1)
-                    elif day_diff <= 3:
-                        category = "±3 days"
-                        name_found_ranges.add(3)
-                        all_found_ranges.add(3)
-                    elif day_diff <= 30:
-                        category = "±30 days"
-                        name_found_ranges.add(30)
-                        all_found_ranges.add(30)
-                    elif day_diff <= 90:
-                        category = "±90 days"
-                        name_found_ranges.add(90)
-                        all_found_ranges.add(90)
-                    elif day_diff <= 365:
-                        category = "±365 days"
-                        name_found_ranges.add(365)
-                        all_found_ranges.add(365)
-                    else:
-                        category = "Outside range"
-                        
-                except ValueError:
-                    # Try year-month only format
-                    try:
-                        year_month = datetime.strptime(dob_var, "%Y-%m")
-                        if (seed_date.year == year_month.year and 
-                            seed_date.month == year_month.month):
-                            category = "Year+Month only"
-                            name_found_ranges.add("year_month")
-                            all_found_ranges.add("year_month")
-                        else:
-                            category = "Invalid year-month"
-                    except ValueError:
-                        category = "Invalid format"
-                
-                if category not in categories:
-                    categories[category] = []
-                categories[category].append(dob_var)
-            
-            # Calculate individual score for this name based on variations found
-            name_score = len(name_found_ranges) / total_ranges if total_ranges > 0 else 0.0
-            name_scores.append(name_score)
-            
-            # Store category classifications and score
-            detailed_breakdown["category_classifications"][name] = {
-                "categories": categories,
-                "score": name_score
-            }
-                
-        except ValueError:
-            detailed_breakdown["category_classifications"][name] = {
-                "error": "Invalid seed DOB format",
-                "score": 0.0
-            }
-            # Add 0 score for invalid seed DOB
-            name_scores.append(0.0)
-    
-    # Calculate overall score as average of individual name scores
-    if name_scores:
-        overall_score = sum(name_scores) / len(name_scores)
-    else:
-        overall_score = 0.0
-    
-    return {
-        "overall_score": overall_score,
-        "found_ranges": list(all_found_ranges),
-        "total_ranges": total_ranges,
-        "detailed_breakdown": detailed_breakdown
-    }
-
-def _grade_address_variations(variations: Dict[str, List[List[str]]], seed_addresses: List[str], miner_metrics: Dict[str, Any], validator_uid: int, miner_uid: int, validator_hotkey: str = None, config=None) -> Dict[str, Any]:
-    """Grade address variations - check all with heuristics, one random with API, and region validation."""
-    # Initialize cache enabled state from config
-    global _cache_enabled
-    if config is not None:
-        _cache_enabled = getattr(config.neuron, 'nominatim_cache_enabled', True)
-    elif _cache_enabled is None:
-        # If no config provided and not yet initialized, default to enabled
-        _cache_enabled = True
-    
-    if not seed_addresses or not any(seed_addresses):
-        return {"overall_score": 1.0}
-    
-    # Collect all addresses with their corresponding seed addresses
-    all_addresses = []
-    address_seed_mapping = []
-    for name_idx, name in enumerate(variations.keys()):
-        if name in variations and len(variations[name]) >= 1 and name_idx < len(seed_addresses):
-            # Extract address variations (index 2 of each [name_var, dob_var, address_var] array)
-            all_variations = variations[name]
-            address_variations = [var[2] for var in all_variations if len(var) > 2]  # Include empty strings for proper counting
-            if address_variations and seed_addresses[name_idx]:
-                valid_addrs = [addr for addr in address_variations if addr and addr.strip()]
-                all_addresses.extend(valid_addrs)
-                # Map each address to its corresponding seed address
-                seed_addr = seed_addresses[name_idx]
-                address_seed_mapping.extend([seed_addr] * len(valid_addrs))
-    
-    if not all_addresses:
-        return {"overall_score": 0.0}
-    
-    # Store detailed breakdown in results (do the work once)
-    address_breakdown = {
-        "seed_addresses": [],
-        "variations_by_name": {},
-        "validation_results": {},
-        "api_validation": {}
-    }
-    
-    # Strict validation in order:
-    # 1. If looks_like_address is false -> return 0
-    # 2. If country or city are not in seed -> return 0  
-    # 3. If API passes -> full score
-    
-    # Process each name and validate addresses (do the work once)
-    heuristic_perfect = True
-    region_matches = 0
-    api_validated_addresses = []  # Will store tuples of (addr, seed_addr, seed_name)
-    
-    for name_idx, name in enumerate(variations.keys()):
-        if name not in variations or len(variations[name]) < 1 or name_idx >= len(seed_addresses):
-            continue
-            
-        if not seed_addresses[name_idx]:
-            continue
-            
-        # Extract address variations for this name
-        all_variations = variations[name]
-        address_variations = [var[2] for var in all_variations if len(var) > 2 and var[2]]
-        
-        if not address_variations:
-            continue
-        
-        # Store validation results for each address (do the work once)
-        validation_results = []
-        seed_addr = seed_addresses[name_idx]
-        for i, addr in enumerate(address_variations):
-            if not addr or not addr.strip():
-                validation_results.append({
-                    "address": addr,
-                    "seed_address": seed_addr,
-                    "looks_like_address": False,
-                    "region_match": False,
-                    "passed_validation": False,
-                    "status": "EMPTY/INVALID"
-                })
-                heuristic_perfect = False
-                continue
-                
-            # Step 1: Check if looks like address
-            looks_like = looks_like_address(addr)
-            
-            # Step 2: Check if country or city matches seed
-            region_match = False
-            if looks_like:
-                region_match = validate_address_region(addr, seed_addr)
-            
-            # Track validation results
-            passed_validation = looks_like and region_match
-            if not looks_like or not region_match:
-                heuristic_perfect = False
-            
-            if passed_validation:
-                # Store address, seed address, and seed name (name is the key from variations)
-                api_validated_addresses.append((addr, seed_addr, name))
-                region_matches += 1
-            
-            validation_results.append({
-                "address": addr,
-                "seed_address": seed_addresses[name_idx],
-                "looks_like_address": looks_like,
-                "region_match": region_match,
-                "passed_validation": passed_validation,
-                "status": "PASSED" if passed_validation else "FAILED"
-            })
-        
-        address_breakdown["validation_results"][name] = validation_results
-    
-    # If first 2 steps fail, return 0 immediately (no API call needed)
-    if not heuristic_perfect:
-        address_breakdown["api_validation"] = {
-            "api_result": False,
-            "total_eligible_addresses": 0,
-            "api_attempts": [],
-            "reason": "Heuristic validation failed - no API call made"
-        }
-        
-        return {
-            "overall_score": 0.0,
-            "heuristic_perfect": False,
-            "api_result": False,
-            "region_matches": region_matches,
-            "total_addresses": len(all_addresses),
-            "base_score": 0.0,
-            "detailed_breakdown": address_breakdown
-        }
-    
-    # Only call API if all addresses passed first 2 checks - now validates with Nominatim API
-    api_result = False
-    api_attempts = []
-    nominatim_successful_calls = 0
-    nominatim_timeout_calls = 0
-    nominatim_failed_calls = 0
-    total_calls = 0
-    nominatim_scores = []  # Initialize scores list
-    
-    if api_validated_addresses:
-        # Randomly choose up to 3 different addresses for API validation with Nominatim
-        max_addresses = min(3, len(api_validated_addresses))
-        chosen_addresses = random.sample(api_validated_addresses, max_addresses)
-        
-        # Use all chosen addresses for Nominatim API
-        nominatim_addresses = chosen_addresses
-        
-        # Try Nominatim API (up to 3 calls)
-        nominatim_scores = []
-        failure_count = 0  # Track consecutive failures for exponential backoff
-        api_error_count = 0  # Track total API_ERROR results (for fallback to Photon)
-        timeout_count = 0  # Track total TIMEOUT results (for fallback to Photon)
-        addresses_with_api_errors = []  # Store addresses that resulted in API_ERROR or TIMEOUT
-        for i, (addr, seed_addr, seed_name) in enumerate(nominatim_addresses):
-            result = check_with_nominatim(addr, validator_uid, miner_uid, seed_addr, seed_name, validator_hotkey)
-            
-            # Extract score and details from result
-            # Cache returns simplified dict with only score (no num_results)
-            score = None
-            score_details = None
-            if isinstance(result, dict) and "score" in result:
-                score = result["score"]
-                # If it's a cached result (only has score, no areas_data), use minimal details
-                if "areas_data" not in result:
-                    # This is a cached simplified result - only score, no num_results
-                    score_details = {
-                        "score": result["score"]
-                    }
-                else:
-                    # Full result from API call
-                    score_details = result
-            elif result == "TIMEOUT" or result == "API_ERROR":
-                score = result
-                if result == "TIMEOUT":
-                    timeout_count += 1
-                else:
-                    api_error_count += 1
-                addresses_with_api_errors.append((addr, seed_addr, seed_name))
-                # Apply exponential backoff for API failures/timeouts
-                nominatim_timeout_calls += 1
-                failure_count += 1
-                wait_time = min(1.0 * (2 ** failure_count), 10.0)  # Exponential backoff, max 10s
-                bt.logging.debug(f"{result} - waiting {wait_time:.2f}s (failure count: {failure_count})")
-                if i < len(nominatim_addresses) - 1:
-                    time.sleep(wait_time)
-            else:
-                score = result if isinstance(result, (int, float)) else 0.0
-            
-            api_attempts.append({
-                "address": addr,
-                "api": "nominatim",
-                "result": score,
-                "score_details": score_details,
-                "attempt": i + 1
-            })
-            
-            # Handle result - successful API calls
-            # Note: TIMEOUT and API_ERROR are handled above, so we only handle successful results here
-            if isinstance(result, dict) and result.get("score", 0) > 0.0:
-                nominatim_successful_calls += 1
-                nominatim_scores.append(result["score"])
-                failure_count = 0  # Reset on success
-                if i < len(nominatim_addresses) - 1:
-                    time.sleep(1.0)  # Normal wait between calls
-            elif isinstance(result, (int, float)) and result > 0.0:
-                nominatim_successful_calls += 1
-                nominatim_scores.append(result)
-                failure_count = 0  # Reset on success
-                if i < len(nominatim_addresses) - 1:
-                    time.sleep(1.0)  # Normal wait between calls
-            else:
-                # result == 0.0: API succeeded but address is invalid (bad address)
-                # Don't apply exponential backoff - API worked fine, address is just bad
-                nominatim_failed_calls += 1
-                failure_count = 0  # Reset since API call succeeded
-                if i < len(nominatim_addresses) - 1:
-                    time.sleep(1.0)  # Normal wait between calls
-        
-        # Fallback to Photon API if we got 3 API_ERROR results or 3 TIMEOUT results (all addresses failed)
-        # This triggers when we get API_ERROR or TIMEOUT for all addresses we checked (up to 3)
-        total_failures = api_error_count + timeout_count
-        if total_failures >= 3 and addresses_with_api_errors and len(addresses_with_api_errors) >= 3:
-            bt.logging.warning(f"Got {total_failures} failures ({api_error_count} API_ERROR, {timeout_count} TIMEOUT) from Nominatim. Falling back to Photon API for {len(addresses_with_api_errors)} addresses.")
-            
-            # Reset scores and counters for Photon API fallback
-            photon_scores = []
-            photon_successful_calls = 0
-            photon_timeout_calls = 0
-            photon_failed_calls = 0
-            
-            # Use Photon API for the addresses that had API_ERROR or TIMEOUT from Nominatim
-            for idx, (addr, seed_addr, seed_name) in enumerate(addresses_with_api_errors):
-                # Call Photon API to check the address
-                photon_result = check_with_photon(addr)
-                
-                # Process Photon API result and convert to match scoring format
-                if photon_result == "TIMEOUT":
-                    photon_timeout_calls += 1
-                    api_attempts.append({
-                        "address": addr,
-                        "api": "photon",
-                        "result": "TIMEOUT",
-                        "score_details": None,
-                        "attempt": len(api_attempts) + 1,
-                        "fallback": True
-                    })
-                elif isinstance(photon_result, (int, float)):
-                    if photon_result > 0.0:
-                        photon_successful_calls += 1
-                        photon_scores.append(photon_result)
-                        api_attempts.append({
-                            "address": addr,
-                            "api": "photon",
-                            "result": photon_result,
-                            "score_details": {"score": photon_result},
-                            "attempt": len(api_attempts) + 1,
-                            "fallback": True
-                        })
-                    else:
-                        photon_failed_calls += 1
-                        api_attempts.append({
-                            "address": addr,
-                            "api": "photon",
-                            "result": photon_result,
-                            "score_details": None,
-                            "attempt": len(api_attempts) + 1,
-                            "fallback": True
-                        })
-                
-                # Add delay between Photon API calls to respect rate limits
-                if idx < len(addresses_with_api_errors) - 1:
-                    time.sleep(1.0)
-            
-            # Calculate results from Photon API and return early
-            total_calls = len(addresses_with_api_errors)
-            total_successful = photon_successful_calls
-            total_timeouts = photon_timeout_calls
-            total_failed = photon_failed_calls
-            
-            if total_failed > 0:
-                api_result = "FAILED"  # Any failure = 0.0 score
-            elif total_timeouts > 0:
-                api_result = "TIMEOUT"  # All pass but timeouts = -0.2 per timeout
-            else:
-                api_result = "SUCCESS"  # All pass without timeouts = perfect score
-            
-            # Scoring based on Photon API results
-            if photon_failed_calls > 0 or len(photon_scores) == 0:
-                # Any failure or no successful calls results in 0.3 score
-                base_score = 0.3
-            else:
-                # Use the average of all successful Photon API call scores
-                base_score = sum(photon_scores) / len(photon_scores)
-            
-            # Store API validation results with Photon API data
-            address_breakdown["api_validation"] = {
-                "api_result": api_result,
-                "total_eligible_addresses": len(api_validated_addresses),
-                "api_attempts": api_attempts,
-                "photon_successful_calls": photon_successful_calls,
-                "photon_timeout_calls": photon_timeout_calls,
-                "photon_failed_calls": photon_failed_calls,
-                "total_successful_calls": total_successful,
-                "total_timeout_calls": total_timeouts,
-                "total_failed_calls": total_failed,
-                "total_calls": total_calls
-            }
-            
-            return {
-                "overall_score": base_score,
-                "heuristic_perfect": heuristic_perfect,
-                "api_result": api_result,
-                "region_matches": region_matches,
-                "total_addresses": len(all_addresses),
-                "detailed_breakdown": address_breakdown
-            }
-        
-        
-        # Set final result based on Nominatim API results
-        total_calls = len(chosen_addresses)
-        total_successful = nominatim_successful_calls
-        total_timeouts = nominatim_timeout_calls
-        total_failed = nominatim_failed_calls
-        
-        if total_failed > 0:
-            api_result = "FAILED"  # Any failure = 0.0 score
-        elif total_timeouts > 0:
-            api_result = "TIMEOUT"  # All pass but timeouts = -0.2 per timeout
-        else:
-            api_result = "SUCCESS"  # All pass without timeouts = perfect score
-    
-    # Scoring based on individual API results using actual scores from API calls
-    if nominatim_failed_calls > 0 or len(nominatim_scores) == 0:
-        # Any failure or no successful calls results in 0.3 score
-        base_score = 0.3
-    else:
-        # Use the average of all successful API call scores
-        base_score = sum(nominatim_scores) / len(nominatim_scores)
-    
-    # Store API validation results
-    address_breakdown["api_validation"] = {
-        "api_result": api_result,
-        "total_eligible_addresses": len(api_validated_addresses),
-        "api_attempts": api_attempts,
-        "nominatim_successful_calls": nominatim_successful_calls,
-        "nominatim_timeout_calls": nominatim_timeout_calls,
-        "nominatim_failed_calls": nominatim_failed_calls,
-        "total_successful_calls": total_successful,
-        "total_timeout_calls": total_timeouts,
-        "total_failed_calls": total_failed,
-        "total_calls": total_calls
-    }
-    
-    return {
-        "overall_score": base_score,
-        "heuristic_perfect": heuristic_perfect,
-        "api_result": api_result,
-        "region_matches": region_matches,
-        "total_addresses": len(all_addresses),
-        "detailed_breakdown": address_breakdown
-    }
+from datetime import datetime
+from MIID.utils.sign_message import sign_message
+from MIID.validator.image_variations import format_variation_requirements
+
+
+# =============================================================================
+# KAV: Image Variation Grading (via external API)
+# =============================================================================
+
+# External grading API endpoint — grades submitted face image variations.
+# Update this URL to match the current grading server before deployment.
+GRADING_API_URL = "http://98.90.28.118:5000/grade"
+GRADING_RETRY_ATTEMPTS = 3
+GRADING_RETRY_DELAY_SECONDS = 60
+
+# Tiny epsilon added to validation score to break ties using identity_preservation.
+# e.g. two miners both averaging 0.6 validation will be ordered by their avg_ip.
+_IDENTITY_TIEBREAK_EPS = 1e-5
 
 
 def _apply_blended_rank_cap_with_quality(
     rewards: np.ndarray,
     detailed_metrics: List[Dict],
-    uids: List[int],
+    uids: np.ndarray,
     top_miner_cap: int,
-    quality_threshold: float,
+    identity_threshold: float,
     decay_rate: float,
     blend_factor: float,
     burn_uid: int,
     skip_burn: bool = False,
 ) -> Tuple[np.ndarray, np.ndarray, List[Dict], bool]:
     """
-    Applies a blended ranking model with a quality threshold.
-    1. Ranks all miners based on their initial reward scores.
-    2. Filters for miners within the top_miner_cap.
-    3. From that group, further filters for miners who meet the quality_threshold.
-    4. Re-ranks the final qualified group and calculates an exponential decay reward.
-    5. Blends the rank-based reward with the original reward score.
-    6. Miners who do not qualify receive a reward of 0.
-    
-    Args:
-        burn_uid: UID to receive burned emissions (always 59, hardcoded)
-        skip_burn: If True, do not append burn UID even in the 100% burn case.
-    """    
-    # Convert uids to numpy array for consistent return type
+    Applies the same blended exponential-decay ranking used by the old
+    name-variation system, adapted for image variation scoring.
+
+    Pipeline:
+    1. Rank all miners by their composite reward (avg_validation_score +
+       tiny identity tiebreak).  Rank 0 = best.
+    2. Keep only the top ``top_miner_cap`` miners.
+    3. Within that group filter by ``identity_threshold``
+       (avg_identity_preservation >= threshold).
+    4. Re-rank the qualified subset and compute:
+           ranked_component  = exp(-decay_rate * rank)
+           blended_reward    = blend_factor * ranked_component
+                               + (1 - blend_factor) * original_score
+    5. Miners who do not qualify receive a reward of 0.
+    6. If nobody qualifies trigger a burn event.
+
+    Returns:
+        (final_rewards, uids, detailed_metrics, is_100_percent_burn)
+    """
     uids = np.array(uids)
-    
-    # Get initial quality scores from detailed metrics for thresholding
-    quality_scores = np.array([
-        metrics.get('final_reward', 0.0) 
-        for metrics in detailed_metrics
+
+    # Identity preservation scores for the quality gate
+    identity_scores = np.array([
+        m.get("avg_identity_preservation", 0.0) for m in detailed_metrics
     ])
-    
-    # Get global ranks (0 = best) based on the post-penalty rewards
+
+    # Global ranks — 0 = highest reward
     global_ranks = (-rewards).argsort().argsort()
-    
-    # Stage 1: Identify miners within top cap
+
     within_cap_mask = global_ranks < top_miner_cap
-    
-    # Stage 2: Among top miners, filter by quality threshold
-    qualified_mask = (within_cap_mask) & (quality_scores >= quality_threshold)
+    qualified_mask = within_cap_mask & (identity_scores >= identity_threshold)
     qualified_indices = np.where(qualified_mask)[0]
-    
+
     final_rewards = np.zeros_like(rewards)
-    
-    # Update detailed metrics for logging and analysis (before burn check)
+
+    # Annotate every miner's metrics with ranking diagnostics
     for i, metrics in enumerate(detailed_metrics):
-        is_qualified = qualified_mask[i]
-        metrics['ranking_info'] = {
-            'initial_reward': float(rewards[i]), # This is now the post-penalty reward
-            'global_rank': int(global_ranks[i]),
-            'within_top_cap': bool(within_cap_mask[i]),
-            'quality_score': float(quality_scores[i]),
-            'meets_quality_threshold': bool(quality_scores[i] >= quality_threshold),
-            'is_qualified_for_ranking': bool(is_qualified),
-            'final_blended_reward': 0.0  # Will be updated if miner qualifies
+        metrics["ranking_info"] = {
+            "initial_reward": float(rewards[i]),
+            "global_rank": int(global_ranks[i]),
+            "within_top_cap": bool(within_cap_mask[i]),
+            "avg_identity_preservation": float(identity_scores[i]),
+            "meets_identity_threshold": bool(identity_scores[i] >= identity_threshold),
+            "is_qualified_for_ranking": bool(qualified_mask[i]),
+            "final_blended_reward": 0.0,
         }
-    
+
     if len(qualified_indices) > 0:
-        # Get original rewards for the qualified miners
         qualified_original_rewards = rewards[qualified_indices]
-        
-        # Re-rank ONLY among the qualified miners
+
+        # Re-rank only among qualified miners
         qualified_ranks = (-qualified_original_rewards).argsort().argsort()
-        
-        # Calculate exponential decay reward based on rank
-        ranked_rewards_component = np.exp(-decay_rate * qualified_ranks)
-        
-        # Blend the rank reward with the original reward
-        blended_rewards = (blend_factor * ranked_rewards_component + 
-                           (1 - blend_factor) * qualified_original_rewards)
-        
-        # Place the calculated blended rewards into the final rewards array
-        final_rewards[qualified_indices] = blended_rewards
-        
-        # Update the final_blended_reward for qualified miners
-        for idx, qualified_idx in enumerate(qualified_indices):
-            detailed_metrics[qualified_idx]['ranking_info']['final_blended_reward'] = float(blended_rewards[idx])
-        
-        bt.logging.info(f"Applied blended ranking: {qualified_mask.sum()} of {len(rewards)} miners qualified for rewards.")
-        # Return False to indicate 100% burn did not occur (miners qualified)
+
+        # Exponential decay: rank 0 → 1.0, rank N → exp(-decay_rate * N)
+        ranked_component = np.exp(-decay_rate * qualified_ranks)
+
+        # Blend rank-based reward with original score
+        blended = (
+            blend_factor * ranked_component
+            + (1 - blend_factor) * qualified_original_rewards
+        )
+
+        final_rewards[qualified_indices] = blended
+
+        for idx, qi in enumerate(qualified_indices):
+            detailed_metrics[qi]["ranking_info"]["final_blended_reward"] = float(blended[idx])
+
+        bt.logging.info(
+            f"Applied blended ranking: {qualified_mask.sum()} / {len(rewards)} miners qualified "
+            f"(top_cap={top_miner_cap}, identity_threshold={identity_threshold})."
+        )
         return final_rewards, uids, detailed_metrics, False
-    else:
-        # No miners qualified - normally burn all emissions.
-        # If skip_burn=True (reputation-weighted pipeline), defer burn until after KAV+UAV are combined.
-        bt.logging.warning("🔥 BURN EVENT: No miners qualified after applying top cap and quality threshold")
-        if skip_burn:
-            bt.logging.warning(
-                f"Deferring 100% burn to reputation-weighted stage (skip_burn=True). "
-                f"Not appending burn UID {burn_uid} in KAV stage."
-            )
-            # Return True to indicate the 100% burn condition occurred (no miners qualified),
-            # but do NOT modify uids/rewards here.
-            return final_rewards, uids, detailed_metrics, True
 
-        bt.logging.warning(f"All emissions will be burned to UID {burn_uid}")
-        
-        # Extend arrays to include burn UID
-        extended_uids = np.append(uids, burn_uid)
-        extended_rewards = np.append(final_rewards, 1.0)  # All zeros except burn UID gets 1.0
-        
-        # Update detailed metrics to include burn UID
-        burn_metrics = {
-            'uid': burn_uid,
-            'variations': {},
-            'average_quality': 0.0,
-            'similarity_penalty': 0.0,
-            'post_penalty_reward': 1.0,
-            'is_burn': True,
-            'burn_type': '100_percent',  # Indicates 100% burn due to no qualified miners
-            'ranking_info': {
-                'initial_reward': 0.0,
-                'global_rank': -1,  # Special rank for burn
-                'within_top_cap': False,
-                'quality_score': 0.0,
-                'meets_quality_threshold': False,
-                'is_qualified_for_ranking': False,
-                'final_blended_reward': 1.0  # Burn gets all rewards
-            }
-        }
-        detailed_metrics.append(burn_metrics)
-        
-        # Return True to indicate 100% burn occurred (no miners qualified)
-        return extended_rewards, extended_uids, detailed_metrics, True
+    # ── No miners qualified → burn event ─────────────────────────────────────
+    bt.logging.warning(
+        "BURN EVENT: No miners passed top-cap + identity threshold filters. "
+        "All emissions will be burned."
+    )
+
+    if skip_burn:
+        # Defer burn to apply_reputation_rewards() when UAV grading is enabled
+        bt.logging.warning(
+            f"skip_burn=True — deferring 100% burn to reputation-weighted stage."
+        )
+        return final_rewards, uids, detailed_metrics, True
+
+    extended_uids = np.append(uids, burn_uid)
+    extended_rewards = np.append(final_rewards, 1.0)
+    detailed_metrics.append({
+        "uid": burn_uid,
+        "is_burn": True,
+        "burn_type": "100_percent",
+        "ranking_info": {
+            "initial_reward": 0.0,
+            "global_rank": -1,
+            "within_top_cap": False,
+            "avg_identity_preservation": 0.0,
+            "meets_identity_threshold": False,
+            "is_qualified_for_ranking": False,
+            "final_blended_reward": 1.0,
+        },
+    })
+    return extended_rewards, extended_uids, detailed_metrics, True
 
 
-def get_name_variation_rewards(
+def get_image_variation_rewards(
     self,
-    seed_names: List[str],
-    seed_dob: List[str],
-    seed_addresses: List[str],
-    seed_script: List[str],
-    responses: List[Dict[str, List[List[str]]]],
-    uids: List[int],
-    variation_count: int = 10,
-    phonetic_similarity: Dict[str, float] = None,
-    orthographic_similarity: Dict[str, float] = None,
-    rule_based: Dict[str, Any] = None,  # New parameter for rule-based metadata
-    skip_burn: bool = False  # Phase 3: Skip burn when using reputation-weighted rewards
+    challenge_id: str,
+    s3_submissions_by_miner: Dict[str, Any],
+    miner_uids: List[int],
+    selected_variations: List[Dict],
+    skip_burn: bool = False,
+    phase4_image_data: Optional[Dict] = None,
 ) -> Tuple[np.ndarray, np.ndarray, List[Dict]]:
     """
-    Calculate rewards for execution vectors (name variations) that simulate threat scenarios.
-    
-    This function evaluates how well miners generate execution vectors (name variations)
-    that could be used to bypass identity screening systems. The evaluation considers:
-    1. Adherence to the specified threat scenario parameters
-    2. Quality and diversity of execution vectors
-    3. Effectiveness as potential bypass methods based on similarity metrics
-    4. Compliance with requested rule-based transformations
-    5. Compliance with requested DOB and address variations
-    
+    Compute KAV rewards for each miner based on their image variation submissions.
+
+    Grading pipeline:
+    1. Sign and POST the challenge data to the external grading API
+       (GRADING_API_URL).  Payload format mirrors validator_api_test.py:
+           { "signature": <signed_message>, "phase4_image_data": { ... } }
+       The API returns per-miner, per-image scores inside "results_by_miner".
+    2. For each miner:
+       a. Determine how many variation types were requested.
+       b. Match each requested type to the miner's submitted images.
+          Missing submissions are treated as score=0 / identity_preservation=0.
+       c. Compute:
+            avg_validation_score      = mean(validation_score / 5.0)  [0 – 1]
+            avg_identity_preservation = mean(identity_preservation)   [0 – 1]
+       d. Composite ranking score = avg_validation_score
+          + avg_identity_preservation × _IDENTITY_TIEBREAK_EPS
+          (primary: validation score; tiebreaker: identity preservation)
+    3. Apply blended exponential-decay ranking (same curve as old name-variation
+       system):
+       • Only top ``top_miner_cap`` (default 50) miners are considered.
+       • Among those, only miners with avg_identity_preservation ≥ 0.6
+         (``quality_threshold``) are eligible for a reward.
+       • Eligible miners are re-ranked; reward = blend of exp(-decay*rank)
+         and original score.
+    4. Apply burn:
+       • skip_burn=True  → no burn appended (burn applied later in
+         apply_reputation_rewards when UAV grading is enabled).
+       • skip_burn=False → miner rewards are rescaled to keep_fraction and
+         burn UID 59 is appended with weight burn_fraction.
+
     Args:
-        seed_names: Original identity names to generate variations for
-        responses: List of execution vector responses from miners
-        uids: List of UIDs corresponding to responses
-        variation_count: Expected number of execution vectors per identity
-        phonetic_similarity: Dictionary mapping similarity levels to percentages
-        orthographic_similarity: Dictionary mapping similarity levels to percentages
-        rule_based: Dictionary containing rule-based requirements
-        
+        self:                    Validator instance (metagraph, config, wallet).
+        challenge_id:            Unique ID for the current challenge round.
+        s3_submissions_by_miner: Dict mapping str(uid) → submission metadata.
+        miner_uids:              Ordered list of miner UIDs to score.
+        selected_variations:     List of requested variation specs
+                                 (each dict has at minimum a "type" key).
+        skip_burn:               When True, burn UID is NOT appended.
+        phase4_image_data:       Full phase4 challenge dict (built in forward.py)
+                                 that is sent as the API payload body.  When
+                                 omitted a minimal dict is constructed from the
+                                 other arguments.
+
     Returns:
-        Tuple containing:
-        - Array of rewards for each miner based on execution vector quality
-        - List of dictionaries containing detailed scoring metrics for each miner
+        Tuple of:
+            rewards          – np.ndarray, one entry per miner (+ burn UID
+                               if skip_burn=False).
+            uids             – np.ndarray of corresponding UIDs.
+            detailed_metrics – List of per-miner metric dicts for logging.
     """
-    # Default similarity preferences if none provided
-    if phonetic_similarity is None:
-        phonetic_similarity = {"Medium": 1.0}
-    if orthographic_similarity is None:
-        orthographic_similarity = {"Medium": 1.0}
-        
-    # Boundaries for different similarity levels (ranges instead of thresholds)
-    phonetic_boundaries = {
-        "Light": (0.8, 1.0),  # High similarity range
-        "Medium": (0.6, 0.8), # Moderate similarity range
-        "Far": (0.3, 0.6)     # Low similarity range
-    }
-    
-    orthographic_boundaries = {
-        "Light": (0.7, 1.0),  # High similarity range
-        "Medium": (0.5, 0.7), # Moderate similarity range
-        "Far": (0.2, 0.5)     # Low similarity range
-    }
-    
-    # Run ID is now managed at the forward pass level, not in reward function
-    
-    rewards = np.zeros(len(responses))
-    detailed_metrics = []  # Store detailed metrics for each miner
-    
-    # Log rule-based requirements if provided
-    # if rule_based:
-    #     #bt.logging.info(f"Rule-based requirements: {rule_based}")
-    #     #bt.logging.info(f"Target rules: {rule_based.get('selected_rules', [])}")
-    #     #bt.logging.info(f"Target rule-based percentage: {rule_based.get('rule_percentage', 30)}%")
-    # else:
-    #     #bt.logging.info("No rule-based requirements specified")
-    #     pass
-    
-    # Validate that responses and uids have the same length
-    if len(responses) != len(uids):
-        bt.logging.error(f"CRITICAL: Length mismatch between responses ({len(responses)}) and uids ({len(uids)})")
-        raise ValueError(f"Length mismatch: responses={len(responses)}, uids={len(uids)}")
-    
-    bt.logging.info(f"Processing rewards for {len(responses)} miners with UIDs: {uids}")
-    
-    # Pre-transliterate non-Latin seed names once for all miners
-    bt.logging.info("Pre-transliterating non-Latin seed names...")
-    start_time = time.time()
-    transliterated_seed_names = {}
-    for name, script in zip(seed_names, seed_script):
-        if script != "latin":
-            bt.logging.info(f"Transliterating non-Latin name: '{name}' (script: {script})")
-            transliterated_name = transliterate_name_with_llm(name, script)
-            transliterated_seed_names[name] = transliterated_name
-            bt.logging.info(f"Transliterated '{name}' to '{transliterated_name}'")
-        else:
-            transliterated_seed_names[name] = name  # Keep Latin names as-is
-    end_time = time.time()
-    bt.logging.info(f"Transliteration complete in {end_time - start_time:.2f} seconds")
-    bt.logging.info(f"Transliteration complete. Transliterated names: {transliterated_seed_names}")
-    
-    # Exponential backoff sleep between miner gradings
-    _sleep_time = 0.05  # start at 50ms
-    _sleep_growth = 1.02
-    _sleep_cap = 3.0
-    
-    # Process each miner's response
-    for i, (response, uid) in enumerate(zip(responses, uids)):
-        #bt.logging.info(f"\n{'='*50}")
-        #bt.logging.info(f"Processing miner {uid}")
-        
-        # Initialize metrics dictionary for this miner
-        miner_metrics = {
-            "quality_scores": {},
-            "penalties": {
-                "extra_names": 0.0,
-                "missing_names": 0.0,
-                "insufficient_addresses": 0.0,
-                "insufficient_dob": 0.0,
-                "non_letters_in_names": 0.0,
-                "total_penalty": 0.0
-            },
-            "completeness_multiplier": 1.0,
-            "name_metrics": {},
-            "invalid_names": [],
-            "missing_names": []
-        }
-        
-        # Correctly access the variations from the response object
-        variations = response.variations if hasattr(response, 'variations') else {}
-        
-        if not variations:
-            bt.logging.warning(f"Miner {uid} returned invalid or empty response")
-            rewards[i] = 0.0
-            # Correctly set metrics for invalid/empty response
-            miner_metrics["penalties"]["missing_names"] = 1.0  # All names are missing
-            miner_metrics["penalties"]["total_penalty"] = 1.0 
-            miner_metrics["completeness_multiplier"] = 0.0
-            miner_metrics["average_quality"] = 0.0
-            miner_metrics["final_reward"] = 0.0
-            detailed_metrics.append(miner_metrics)
-            continue
-            
-        quality_scores = []
-        base_scores = []
-        extra_names_penalty = 0.0
+    # ── 1. Call external grading API ─────────────────────────────────────────
+    results_by_miner: Dict[str, Any] = {}
+    api_succeeded = False
 
-        # Calculate penalty for unexpected names (extra variations)
-        invalid_names = set(variations.keys()) - set(seed_names)
-        if invalid_names:
-            bt.logging.warning(f"Miner {uid} provided variations for unexpected names: {invalid_names}")
-            # 10% penalty per extra name, up to 70% max
-            extra_penalty = min(0.7, len(invalid_names) * 0.1)
-            bt.logging.info(f"Extra penalty: {extra_penalty}")
-            extra_names_penalty = float(extra_penalty)
-            miner_metrics["invalid_names"] = list(invalid_names)
-        
-        # Safety check: ensure all variations have the correct format [name, dob, address]
-        for name, vars_list in variations.items():
-            if not vars_list:
-                bt.logging.warning(f"Miner {uid} provided empty variations for {name}")
-                continue
-            
-            # Check if each variation has at least 3 elements (name, dob, address)
-            for j, var in enumerate(vars_list):
-                if not isinstance(var, (list, tuple)) or len(var) < 3:
-                    bt.logging.warning(f"Miner {uid} provided incomplete variation {j} for {name}: expected [name, dob, address], got {var}")
-                    # Pad with empty strings if needed
-                    if isinstance(var, (list, tuple)):
-                        while len(var) < 3:
-                            var.append("")
-                    else:
-                        # If it's not a list/tuple, replace it with a properly formatted one
-                        vars_list[j] = [str(var) if var else "", "", ""]
-        
-        # Penalty for too many variations per name, DOB, and addresses
-        for name, vars_list in variations.items():
-            
-            # Extract name, DOB, and address variations from the structure once
-            # vars_list is [[name_var, dob_var, address_var], [name_var, dob_var, address_var], ...]
-            name_variations = [var[0] for var in vars_list if len(var) > 0]  # Include empty strings for proper counting
-            dob_variations = [var[1] for var in vars_list if len(var) > 1]  # Include empty strings for proper counting
-            address_variations = [var[2] for var in vars_list if len(var) > 2]  # Include empty strings for proper counting
-            
-            if variation_count > 0:
-                allowed_with_grace = int(variation_count * 1.2)  # 20% grace, rounded down
-                
-                # Check names for variation count
-                if len(name_variations) > allowed_with_grace:
-                    too_many = len(name_variations) - allowed_with_grace
-                    penalty_too_many = too_many * 0.05  # 5% per extra
-                    # bt.logging.info(f"Too many name variations for {name}: {too_many} extra → penalty {penalty_too_many}")
-                    extra_names_penalty += penalty_too_many
-                
-                # Check DOB for variation count
-                if len(dob_variations) > allowed_with_grace:
-                    too_many = len(dob_variations) - allowed_with_grace
-                    penalty_too_many = too_many * 0.05  # 5% per extra
-                    # bt.logging.info(f"Too many DOB variations for {name}: {too_many} extra → penalty {penalty_too_many}")
-                    extra_names_penalty += penalty_too_many
-                
-                # Check addresses for variation count
-                if len(address_variations) > allowed_with_grace:
-                    too_many = len(address_variations) - allowed_with_grace
-                    penalty_too_many = too_many * 0.05  # 5% per extra
-                    # bt.logging.info(f"Too many address variations for {name}: {too_many} extra → penalty {penalty_too_many}")
-                    extra_names_penalty += penalty_too_many
-        
-            # Normalize DOB variations for duplicate detection
-            def normalize_dob(dob_str):
-                """Normalize DOB string by removing extra spaces and standardizing format"""
-                if not dob_str:
-                    return ""
-                # Remove all spaces and convert to lowercase
-                normalized = dob_str.replace(" ", "").replace("-", "").replace("/", "").replace(".", "").lower()
-                return normalized
-            
-            # Normalize address variations for duplicate detection
-            def normalize_address(addr_str):
-                """Normalize address string by removing extra spaces and standardizing format"""
-                if not addr_str:
-                    return ""
-                # Remove extra spaces, convert to lowercase, and standardize common separators
-                normalized = " ".join(addr_str.split()).lower()
-                # Replace common separators with spaces
-                normalized = normalized.replace(",", " ").replace(";", " ").replace("-", " ")
-                # Remove multiple spaces
-                normalized = " ".join(normalized.split())
-                return normalized
-            
-            # Penalty for duplicate variations - names
-            duplicates_names = len(name_variations) - len(set(name_variations))
-            if duplicates_names > 0:
-                penalty_duplicates = duplicates_names * 0.05  # e.g. 5% penalty per duplicate
-                # bt.logging.info(f"Duplicate variations for {name}: {duplicates_names} duplicates → penalty {penalty_duplicates}")
-                extra_names_penalty += penalty_duplicates
-            
-            # Penalty for duplicate variations - DOB (with normalization)
-            dob_duplicates_penalty = 0.0
-            if dob_variations:  # Check if DOB list exists and is not empty
-                normalized_dobs = [normalize_dob(dob) for dob in dob_variations if dob]  # Filter out empty strings
-                duplicates_dob = len(normalized_dobs) - len(set(normalized_dobs))
-                if duplicates_dob > 0:
-                    penalty_duplicates = duplicates_dob * 0.05  # e.g. 5% penalty per duplicate
-                    # bt.logging.info(f"Duplicate DOB variations for {name}: {duplicates_dob} duplicates → penalty {penalty_duplicates}")
-                    dob_duplicates_penalty += penalty_duplicates
-            
-            dob_duplicates_penalty = min(dob_duplicates_penalty, 0.1)  # Max 10% penalty
-            # Penalty for duplicate variations - addresses (with normalization)
-            address_duplicates_penalty = 0.0
-            if address_variations:  # Check if address list exists and is not empty
-                # First, check for exact duplicates (existing logic)
-                normalized_addresses = [normalize_address(addr) for addr in address_variations if addr]  # Filter out empty strings
-                duplicates_addresses = len(normalized_addresses) - len(set(normalized_addresses))
-                if duplicates_addresses > 0:
-                    penalty_duplicates = duplicates_addresses * 0.05  # e.g. 5% penalty per duplicate
-                    # bt.logging.info(f"Duplicate address variations for {name}: {duplicates_addresses} duplicates → penalty {penalty_duplicates}")
-                    address_duplicates_penalty += penalty_duplicates
-                
-                # Second, check for duplicate first sections (before first comma)
-                first_sections = []
-                for addr in address_variations:
-                    if addr and addr.strip():
-                        # Remove disallowed Unicode characters (symbols, emoji, etc.) but preserve commas
-                        addr = remove_disallowed_unicode(addr, preserve_comma=True)
-                        if not addr or not addr.strip():
-                            continue
-                        # Strip leading commas and spaces to prevent gaming the system
-                        # (miners might add ", " at the front to bypass duplicate detection)
-                        normalized_addr = addr.strip().lstrip(',').strip()
-                        if not normalized_addr:
-                            continue
-                        # Split on comma and get the first section
-                        parts = normalized_addr.split(',')
-                        if parts:
-                            first_section = parts[0].strip()
-                            # If first section is less than 3 characters, combine with second section
-                            if len(first_section) < 4 and len(parts) > 1:
-                                # Combine first 2 sections (remove the comma between them)
-                                first_section = (parts[0].strip() + " " + parts[1].strip()).strip()
-                            # Normalize the first section (lowercase, remove extra spaces, remove 2-letter words)
-                            words = first_section.split()
-                            # Filter out 2-letter words
-                            filtered_words = [word for word in words if len(word) > 2]
-                            normalized_first = " ".join(filtered_words).lower().strip()
-                            if normalized_first:  # Only add if not empty after filtering
-                                first_sections.append(normalized_first)
-                
-                if first_sections:
-                    # Count how many addresses share the same first section using dictionary
-                    first_section_counts = {}
-                    for section in first_sections:
-                        first_section_counts[section] = first_section_counts.get(section, 0) + 1
-                    # Penalize if any first section appears more than once
-                    duplicate_first_sections = sum(count - 1 for count in first_section_counts.values() if count > 1)
-                    if duplicate_first_sections > 0:
-                        penalty_first_section = duplicate_first_sections * 0.05  # 5% penalty per duplicate first section
-                        # bt.logging.info(f"Duplicate first sections for {name}: {duplicate_first_sections} duplicates → penalty {penalty_first_section}")
-                        address_duplicates_penalty += penalty_first_section
-            
-            address_duplicates_penalty = min(address_duplicates_penalty, 0.5)  # Max 50% penalty
-
-            extra_names_penalty = extra_names_penalty + dob_duplicates_penalty + address_duplicates_penalty
-
-        # Optionally cap at 1.0 total
-        extra_names_penalty = min(extra_names_penalty, 1.0)
-        miner_metrics["penalties"]["extra_names"] = extra_names_penalty
-        miner_metrics["penalties"]["extra_names_breakdown"] = {
-            "dob_duplicates": dob_duplicates_penalty,
-            "address_duplicates": address_duplicates_penalty
-        }
-    
-        # Calculate penalty for missing names
-        missing_names = set(seed_names) - set(variations.keys())
-        if missing_names:
-            bt.logging.warning(f"Miner {uid} missing variations for names: {missing_names}")
-            # 20% penalty per missing name, up to 90% max
-            missing_penalty = min(0.9, len(missing_names) * 0.2)
-            #bt.logging.info(f"Missing penalty: {missing_penalty}")
-            miner_metrics["penalties"]["missing_names"] = float(missing_penalty)
-            miner_metrics["missing_names"] = list(missing_names)
-        
-        # Calculate penalty for insufficient address variations
-        insufficient_addresses_penalty = 0.0
-        insufficient_addresses = []
-        
-        if variation_count > 0:
-            min_required = max(1, int(variation_count * 0.8))  # At least 80% of expected variations
-            
-            for name, vars_list in variations.items():
-                # Extract address variations from the structure
-                address_variations = [var[2] for var in vars_list if len(var) > 2]  # Include empty strings for proper counting
-                address_count = len([addr for addr in address_variations if addr.strip()])  # Count only non-empty addresses
-                if address_count < min_required:
-                    insufficient_count = min_required - address_count
-                    insufficient_addresses.append(f"{name}: {address_count}/{min_required}")
-                    # 10% penalty per missing address variation, up to 50% max per name
-                    penalty_per_name = min(0.5, insufficient_count * 0.1)
-                    insufficient_addresses_penalty += penalty_per_name
-                    bt.logging.warning(f"Miner {uid} insufficient address variations for {name}: {address_count}/{min_required} → penalty {penalty_per_name}")
-        
-        # Cap the insufficient addresses penalty
-        insufficient_addresses_penalty = min(insufficient_addresses_penalty, 0.4)  # Max 40% penalty
-        miner_metrics["penalties"]["insufficient_addresses"] = float(insufficient_addresses_penalty)
-        
-        # Calculate penalty for insufficient DOB variations
-        insufficient_dob_penalty = 0.0
-        insufficient_dob = []
-        
-        if variation_count > 0:
-            min_required = max(1, int(variation_count * 0.8))  # At least 80% of expected variations
-            
-            for name, vars_list in variations.items():
-                # Extract DOB variations from the structure
-                dob_variations = [var[1] for var in vars_list if len(var) > 1]  # Include empty strings for proper counting
-                dob_count = len([dob for dob in dob_variations if dob.strip()])  # Count only non-empty DOBs
-                if dob_count < min_required:
-                    insufficient_count = min_required - dob_count
-                    insufficient_dob.append(f"{name}: {dob_count}/{min_required}")
-                    # 10% penalty per missing DOB variation, up to 50% max per name
-                    penalty_per_name = min(0.5, insufficient_count * 0.1)
-                    insufficient_dob_penalty += penalty_per_name
-                    bt.logging.warning(f"Miner {uid} insufficient DOB variations for {name}: {dob_count}/{min_required} → penalty {penalty_per_name}")
-        
-        # Cap the insufficient DOB penalty
-        insufficient_dob_penalty = min(insufficient_dob_penalty, 0.1)  # Max 10% penalty
-        miner_metrics["penalties"]["insufficient_dob"] = float(insufficient_dob_penalty)
-        
-        # Penalty for names with non-letters (only if >40% have non-letters)
-        # Valid characters: letters, spaces, hyphens, apostrophes
-        names_with_numbers = 0
-        total_names = 0
-        non_letters_penalty = 0.0
-        
-        for name, vars_list in variations.items():
-            total_names += 1
-            name_has_numbers = False
-            
-            for var in vars_list:
-                if len(var) > 0 and var[0]:
-                    name_var = var[0]
-                    # Check for non-letter characters (excluding allowed: spaces)
-                    non_letter_chars = []
-                    for char in name_var:
-                        if not char.isalpha() and not char == " ":
-                            non_letter_chars.append(char)
-                            if char.isdigit():
-                                name_has_numbers = True
-                    # If more than 2 symbols/numbers in the name variation, add 0.05 penalty
-                    if len(non_letter_chars) > 2:
-                        non_letters_penalty += 0.05
-
-            if name_has_numbers:
-                names_with_numbers += 1
-        
-        # If more than 40% of names have numbers, add 0.2 penalty
-        if total_names > 0 and (names_with_numbers / total_names) > 0.4:
-            non_letters_penalty += 0.2
-        
-        miner_metrics["penalties"]["non_letters_in_names"] = float(non_letters_penalty)
-        
-        # Calculate total penalty and completeness multiplier
-        total_penalty = min(0.9, miner_metrics["penalties"]["extra_names"] + miner_metrics["penalties"]["missing_names"] + miner_metrics["penalties"]["insufficient_addresses"] + miner_metrics["penalties"]["insufficient_dob"] + miner_metrics["penalties"]["non_letters_in_names"])
-        completeness_multiplier = max(0.1, 1.0 - total_penalty)
-        miner_metrics["penalties"]["total_penalty"] = float(total_penalty)
-        miner_metrics["completeness_multiplier"] = float(completeness_multiplier)
-
-        # Add rule-based metrics fields
-        if rule_based:
-            miner_metrics["rule_compliance"] = {
-                "overall_score": 0.0,
-                "by_name": {}
-            }
-        
-        # Process each seed name
-        for name, script in zip(seed_names, seed_script):
-            if name not in variations or not variations[name]:
-                continue
-            
-            # Skip non-Latin names - they will have their own judging part
-            if script != "latin":
-                continue
-
-            # Convert base name to lowercase, only grading lowercase names
-            base_name = name.lower()
-            
-            # Get variations for this name (use original name as key)
-            # variations[name] is a list of [name_var, dob_var, address_var] arrays
-            # We need to extract just the name variations (index 0 of each array)
-            all_variations = variations[name]
-            name_variations = [var[0].lower() if var[0] else "" for var in all_variations if len(var) > 0]  # Lowercase all variations before grading
-            name_metrics = {
-                "variations": [],
-                "quality_score": 0.0,
-                "uniqueness_score": 0.0,
-                "count_score": 0.0,
-                "length_score": 0.0,
-                "phonetic_scores": [],
-                "orthographic_scores": []
-            }
-            
-            # Calculate quality score
-            try:
-                quality, base_score, name_detailed_metrics = calculate_variation_quality(
-                    base_name,
-                    name_variations,
-                    phonetic_similarity=phonetic_similarity,
-                    orthographic_similarity=orthographic_similarity,
-                    expected_count=variation_count,
-                    rule_based=rule_based  # Pass rule-based metadata
-                )
-                quality_scores.append(quality)
-                base_scores.append(base_score)
-                miner_metrics["name_metrics"][name] = name_detailed_metrics
-                
-                # Extract rule compliance metrics if available
-                if rule_based and "rule_compliance" in name_detailed_metrics:
-                    miner_metrics["rule_compliance"]["by_name"][name] = name_detailed_metrics["rule_compliance"]
-            except Exception as e:
-                bt.logging.error(f"Error calculating quality for miner {uid}, name '{base_name}': {str(e)}")
-                traceback.print_exc()
-
-        start_time = time.time()
-        # Process each non-Latin seed name using phonetic-only scoring with pre-transliterated names
-        for name, script in zip(seed_names, seed_script):
-            if name not in variations or not variations[name]:
-                continue
-
-            if script == "latin":
-                continue
-                
-            # Get variations for this name
-            # variations[name] is a list of [name_var, dob_var, address_var] arrays
-            # We need to extract just the name variations (index 0 of each array)
-            all_variations = variations[name]
-            name_variations = [var[0].lower() if var[0] else "" for var in all_variations if len(var) > 0]  # Lowercase all variations before grading
-            
-            # Use pre-transliterated name
-            transliterated_name = transliterated_seed_names[name]
-            
-            # Use phonetic-only scoring on transliterated name
-            try:
-                quality, base_score, name_detailed_metrics = calculate_variation_quality_phonetic_only(
-                    transliterated_name,
-                    name_variations,
-                    phonetic_similarity=phonetic_similarity,
-                    expected_count=variation_count
-                )
-                # Add transliteration info to metrics
-                name_detailed_metrics["transliteration"] = {
-                    "original_name": name,
-                    "transliterated_name": transliterated_name,
-                    "transliteration_success": True
-                }
-            except Exception as e:
-                bt.logging.error(f"Error calculating phonetic-only quality for miner {uid}, name '{name}': {str(e)}")
-                traceback.print_exc()
-                continue
-            
-            # Add scoring method info to metrics
-            name_detailed_metrics["scoring_method"] = "phonetic_only_with_llm_transliteration"
-            
-            quality_scores.append(quality)
-            base_scores.append(base_score)
-            miner_metrics["name_metrics"][name] = name_detailed_metrics
-        end_time = time.time()
-        bt.logging.info(f"Phonetic-only scoring time: {end_time - start_time:.2f} seconds")
-        
-        # Calculate overall rule compliance score if applicable
-        if rule_based and quality_scores and any("rule_compliance" in miner_metrics["name_metrics"].get(name, {}) for name in seed_names):
-            rule_scores = [
-                miner_metrics["name_metrics"].get(name, {}).get("rule_compliance", {}).get("score", 0.0)
-                for name in seed_names if name in miner_metrics["name_metrics"]
-            ]
-            if rule_scores:
-                miner_metrics["rule_compliance"]["overall_score"] = float(sum(rule_scores) / len(rule_scores))
-                #bt.logging.info(f"Overall rule compliance score: {miner_metrics['rule_compliance']['overall_score']:.3f}")
-        
-        # Grade DOB variations before final reward calculation
-        dob_grading_score = _grade_dob_variations(variations, seed_dob, miner_metrics)
-        miner_metrics["dob_grading"] = dob_grading_score
-        
-        # Grade address variations before final reward calculation
-        start_time = time.time()
-        # Get validator hotkey for user agent mapping
-        validator_hotkey = None
-        if hasattr(self, 'metagraph') and hasattr(self.metagraph, 'hotkeys') and self.uid < len(self.metagraph.hotkeys):
-            validator_hotkey = str(self.metagraph.hotkeys[self.uid])
-        elif hasattr(self, 'wallet') and hasattr(self.wallet, 'hotkey'):
-            validator_hotkey = str(self.wallet.hotkey.ss58_address)
-        address_grading_score = _grade_address_variations(variations, seed_addresses, miner_metrics, self.uid, uid, validator_hotkey, config=self.config)
-        miner_metrics["address_grading"] = address_grading_score
-        end_time = time.time()
-        bt.logging.info(f"Address grading time: {end_time - start_time:.2f} seconds")
-        
-        # Calculate final reward incorporating DOB and address grading
-        if quality_scores:
-            avg_quality = sum(quality_scores) / len(quality_scores)
-            avg_base_score = sum(base_scores) / len(base_scores)
-            
-            # Separate weights for each component
-            quality_weight = 0.2
-            dob_weight = 0.1
-            address_weight = 0.7
-            
-            # Calculate each component separately
-            quality_component = avg_quality * quality_weight
-            
-            # DOB component
-            if dob_grading_score["overall_score"] == 0.0 and any(seed_dob):
-                dob_component = 0.0  # 0 points for missing DOB variations
-            else:
-                dob_component = dob_grading_score["overall_score"] * dob_weight
-            
-            # Address component
-            if address_grading_score["overall_score"] == 0.0 and any(seed_addresses):
-                address_component = 0.0  # 0 points for missing address variations
-            else:
-                address_component = address_grading_score["overall_score"] * address_weight
-            
-            # Final quality is sum of all components
-            final_quality = quality_component + dob_component + address_component
-            
-            rewards[i] = final_quality * completeness_multiplier
-            miner_metrics["average_base_score"] = float(avg_base_score)
-            miner_metrics["average_quality"] = float(avg_quality)
-            miner_metrics["identity_quality"] = float(final_quality)
-            miner_metrics["final_reward"] = float(rewards[i])
-        else:
-            rewards[i] = 0.0
-            miner_metrics["average_quality"] = 0.0
-            miner_metrics["identity_quality"] = 0.0
-            miner_metrics["final_reward"] = 0.0
-        
-        # # # ADD DETAILED LOGGING HERE to debug 0.0 scores
-        # # bt.logging.info(f"--- DEBUGGING REWARD FOR MINER {uid} ---")
-        # # bt.logging.info(f"Seed names with variations: {[name for name in seed_names if name in variations and variations[name]]}")
-        # # bt.logging.info(f"Quality scores per name: {quality_scores}")
-        # # bt.logging.info(f"Average quality score: {miner_metrics['average_quality']:.4f}")
-        # # bt.logging.info(f"Completeness multiplier (1.0 - penalty): {completeness_multiplier:.4f}")
-        # # bt.logging.info(f"Final reward (avg_quality * completeness_multiplier): {rewards[i]:.4f}")
-        # # bt.logging.info(f"--- END DEBUGGING REWARD FOR MINER {uid} ---")
-        
-        # #bt.logging.info(f"Miner {uid} final Score: {rewards[i]}")
-        # #bt.logging.info(f"Miner {uid} penalties: {miner_metrics['penalties']}")
-        # if 'rule_compliance' in miner_metrics:
-        #     bt.logging.info(f"Miner {uid} rule compliance: {miner_metrics['rule_compliance']['overall_score']}")
-        # else:
-        #     bt.logging.info(f"Miner {uid} rule compliance: 0.0")
-        bt.logging.info(f"Miner {uid} Base quality scores: {quality_scores}")
-        bt.logging.info(f"Miner {uid} average quality: {miner_metrics['average_quality']}")
-        bt.logging.info(f"Miner {uid} completeness multiplier: {miner_metrics['completeness_multiplier']}")
-        bt.logging.info(f"Miner {uid} DOB score: {miner_metrics.get('dob_grading', {}).get('overall_score', 0.0)}")
-        bt.logging.info(f"Miner {uid} Address score: {miner_metrics.get('address_grading', {}).get('overall_score', 0.0)}")
-        bt.logging.info(f"Miner {uid} final Score: {miner_metrics['final_reward']}")
-        detailed_metrics.append(miner_metrics)
-        # backoff sleep before grading next miner
-        time.sleep(_sleep_time)
-        _sleep_time = min(_sleep_cap, _sleep_time * _sleep_growth)
-        
-    # After initial rewards are calculated, apply penalties for high similarity between miners
-    # Process seed names for cheating detection using pre-transliterated names
-    processed_seed_names = []
-    for name, script in zip(seed_names, seed_script):
-        if script != "latin":
-            # Use pre-transliterated name
-            processed_seed_names.append(transliterated_seed_names[name])
-        else:
-            # Use name as-is without script suffix processing
-            processed_seed_names.append(name)
-    
-    bt.logging.info(f"Processed seed names for cheating detection: {processed_seed_names}")
-    
-    try:
-        rewards, detailed_metrics = _calculate_similarity_and_penalties(
-            responses, uids, processed_seed_names, detailed_metrics, rewards
+    if not s3_submissions_by_miner:
+        bt.logging.info(
+            f"No valid submissions for challenge {challenge_id}. "
+            "Skipping grading API call — all miners will receive 0.0 KAV scores."
         )
-    except Exception as e:
-        bt.logging.error(f"Error in similarity and penalty calculation: {str(e)}")
-        bt.logging.warning("Using rewards without similarity penalties as fallback")
-        # Keep the original rewards without applying similarity penalties
-        # detailed_metrics would remain as calculated before the penalty step
-    
-    # Get burn configuration from config with defaults
-    burn_fraction = getattr(self.config.neuron, 'burn_fraction', 0.65)
-    burn_uid = 59  # Hardcoded: burn UID is always 59 and never configurable
-    keep_fraction = 1.0 - burn_fraction
-
-    # Apply the blended ranking and quality threshold (always enabled).
-    bt.logging.info("Applying blended ranking and quality threshold to post-penalty rewards.")
-    is_100_percent_burn = False
-    rewards, uids, detailed_metrics, is_100_percent_burn = _apply_blended_rank_cap_with_quality(
-        rewards,
-        detailed_metrics,
-        uids,
-        top_miner_cap=self.config.neuron.top_miner_cap,
-        quality_threshold=self.config.neuron.quality_threshold,
-        decay_rate=self.config.neuron.decay_rate,
-        blend_factor=self.config.neuron.blend_factor,
-        burn_uid=burn_uid,
-        skip_burn=skip_burn,
-    )
-
-    # ==========================================================================
-    # Phase 3: Skip burn if using reputation-weighted rewards
-    # Burn will be applied later in apply_reputation_rewards() after KAV+UAV
-    # ==========================================================================
-    if skip_burn:
-        bt.logging.info("Skipping burn application (will be applied after reputation weighting)")
-        # Return rewards without burn - burn will be applied in apply_reputation_rewards()
-        return rewards, np.array(uids), detailed_metrics
-
-    # Apply configured emission burn if 100% burn did not occur (miners qualified)
-    if not is_100_percent_burn:
-        # Check if burn UID is already in the array (shouldn't happen, but safety check)
-        if burn_uid not in uids:
-            # Calculate total reward sum for rescaling
-            total_reward_sum = np.sum(rewards)
-            
-            if total_reward_sum > 0:
-                # Rescale miner rewards to keep_fraction (default 30%)
-                # This ensures miners receive keep_fraction of emissions, with burn_fraction going to burn
-                rescale_factor = keep_fraction / total_reward_sum
-                rewards = rewards * rescale_factor
-                
-                # Add burn UID with configured burn_fraction weight (default 70%)
-                uids = np.append(uids, burn_uid)
-                rewards = np.append(rewards, burn_fraction)
-                
-                # Log the burn event
-                bt.logging.info(f"🔥 Applied {burn_fraction*100:.1f}% emission burn: {burn_fraction*100:.1f}% to UID {burn_uid}, {keep_fraction*100:.1f}% to miners")
-                
-                # Add burn metrics to detailed_metrics for tracking
-                burn_metrics = {
-                    'uid': burn_uid,
-                    'variations': {},
-                    'average_quality': 0.0,
-                    'similarity_penalty': 0.0,
-                    'post_penalty_reward': burn_fraction,
-                    'is_burn': True,
-                    'burn_type': f'{int(burn_fraction*100)}_percent',  # Indicates configured burn percentage
-                    'ranking_info': {
-                        'initial_reward': 0.0,
-                        'global_rank': -1,  # Special rank for burn
-                        'within_top_cap': False,
-                        'quality_score': 0.0,
-                        'meets_quality_threshold': False,
-                        'is_qualified_for_ranking': False,
-                        'final_blended_reward': burn_fraction
-                    }
+    else:
+        try:
+            # Build phase4_image_data from individual args when not provided by caller
+            if phase4_image_data is None:
+                phase4_image_data = {
+                    "challenge_id": challenge_id,
+                    "requested_variations": selected_variations,
+                    "variation_count": len(selected_variations),
+                    "variation_types": [v.get("type", "") for v in selected_variations],
+                    "variation_intensities": [v.get("intensity", "") for v in selected_variations],
+                    "s3_submissions_by_miner": s3_submissions_by_miner,
+                    "cycle": None,
                 }
-                detailed_metrics.append(burn_metrics)
+            elif "s3_submissions_by_miner" not in phase4_image_data:
+                # Ensure submissions are included even if caller omitted them
+                phase4_image_data = {**phase4_image_data, "s3_submissions_by_miner": s3_submissions_by_miner}
+
+            # Sign the payload — matches the exact signing format in validator_api_test.py
+            timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
+            requested_variations = phase4_image_data.get("requested_variations", selected_variations)
+            image_requirements = format_variation_requirements(requested_variations)
+            query_template = (
+                f"[PHASE4] challenge_id: {challenge_id}"
+                f"{image_requirements}"
+            )
+            query_labels = {
+                "variation_count": phase4_image_data.get("variation_count", len(requested_variations)),
+                "variation_types": phase4_image_data.get("variation_types", [v.get("type", "") for v in requested_variations]),
+                "variation_intensities": phase4_image_data.get("variation_intensities", [v.get("intensity", "") for v in requested_variations]),
+                "challenge_id": challenge_id,
+                "cycle": phase4_image_data.get("cycle"),
+            }
+            hotkey = self.wallet.hotkey
+            message_to_sign = (
+                f"Hotkey: {hotkey} \n timestamp: {timestamp} \n "
+                f"query_template: {query_template} \n query_labels: {query_labels}"
+            )
+            signed_contents = sign_message(self.wallet, message_to_sign, output_file=None)
+
+            payload = {
+                "signature": signed_contents,
+                "phase4_image_data": phase4_image_data,
+            }
+
+            for attempt in range(GRADING_RETRY_ATTEMPTS):
+                try:
+                    bt.logging.info(
+                        f"Calling grading API at {GRADING_API_URL} "
+                        f"for challenge {challenge_id} with {len(s3_submissions_by_miner)} miners "
+                        f"(attempt {attempt + 1}/{GRADING_RETRY_ATTEMPTS})."
+                    )
+                    resp = requests.post(GRADING_API_URL, json=payload, timeout=1200)
+                    resp.raise_for_status()
+                    api_json = resp.json()
+                    results_by_miner = api_json.get("results_by_miner", {})
+                    api_succeeded = True
+                    bt.logging.info(
+                        f"Grading API returned results for {len(results_by_miner)} miners."
+                    )
+                    break
+                except Exception as exc:
+                    if attempt < GRADING_RETRY_ATTEMPTS - 1:
+                        bt.logging.warning(
+                            f"Grading API attempt {attempt + 1}/{GRADING_RETRY_ATTEMPTS} failed: {exc}. "
+                            f"Retrying in {GRADING_RETRY_DELAY_SECONDS}s..."
+                        )
+                        time.sleep(GRADING_RETRY_DELAY_SECONDS)
+                    else:
+                        raise
+        except Exception as exc:
+            bt.logging.error(
+                f"Grading API call failed: {exc}. "
+                f"All miners will receive 0.0 KAV scores for this round."
+            )
+
+    # ── 2. Grade each miner ───────────────────────────────────────────────────
+    num_requested = max(len(selected_variations), 1)
+    requested_types = [v.get("type", "") for v in selected_variations]
+
+    rewards = np.zeros(len(miner_uids), dtype=float)
+    detailed_metrics: List[Dict] = []
+
+    for i, uid in enumerate(miner_uids):
+        hotkey = (
+            self.metagraph.hotkeys[uid]
+            if uid < len(self.metagraph.hotkeys)
+            else "unknown"
+        )
+
+        miner_result = results_by_miner.get(str(uid), {})
+        raw_submissions = miner_result.get("submissions", [])
+
+        # Build type → first-matching submission lookup
+        submission_by_type: Dict[str, Dict] = {}
+        for sub in raw_submissions:
+            vtype = sub.get("variation_type", "")
+            if vtype and vtype not in submission_by_type:
+                submission_by_type[vtype] = sub
+
+        # Score each requested slot; missing slots count as 0
+        per_variation: List[Dict] = []
+        for vtype in requested_types:
+            sub = submission_by_type.get(vtype)
+            if sub is None:
+                per_variation.append({
+                    "variation_type": vtype,
+                    "submitted": False,
+                    "validation_score_raw": 0,
+                    "validation_score_norm": 0.0,
+                    "identity_preservation": 0.0,
+                })
             else:
-                # Edge case: all rewards are zero, still apply burn structure
-                bt.logging.warning(f"All miner rewards are zero, but applying {burn_fraction*100:.1f}% burn structure")
-                uids = np.append(uids, burn_uid)
-                rewards = np.append(rewards, burn_fraction)
-                
-                burn_metrics = {
-                    'uid': burn_uid,
-                    'variations': {},
-                    'average_quality': 0.0,
-                    'similarity_penalty': 0.0,
-                    'post_penalty_reward': burn_fraction,
-                    'is_burn': True,
-                    'burn_type': f'{int(burn_fraction*100)}_percent',
-                    'ranking_info': {
-                        'initial_reward': 0.0,
-                        'global_rank': -1,
-                        'within_top_cap': False,
-                        'quality_score': 0.0,
-                        'meets_quality_threshold': False,
-                        'is_qualified_for_ranking': False,
-                        'final_blended_reward': burn_fraction
-                    }
-                }
-                detailed_metrics.append(burn_metrics)
-        else:
-            bt.logging.warning(f"Burn UID {burn_uid} already present in uids array, skipping {burn_fraction*100:.1f}% burn application")
-    else:
-        bt.logging.info("100% burn occurred (no miners qualified), skipping configured burn application")
+                vs_raw = int(sub.get("validation_score", 0))
+                ip = float(sub.get("identity_preservation", 0.0))
+                per_variation.append({
+                    "variation_type": vtype,
+                    "submitted": True,
+                    "validation_score_raw": vs_raw,
+                    "validation_score_norm": vs_raw / 5.0,
+                    "identity_preservation": ip,
+                    "comment": sub.get("comment", ""),
+                    "status": sub.get("status", ""),
+                })
 
-    # Final verification: ensure rewards array length matches UIDs length
-    if len(rewards) != len(uids):
-        bt.logging.error(f"CRITICAL: Final rewards length ({len(rewards)}) does not match UIDs length ({len(uids)})")
-        raise ValueError(f"Final length mismatch: rewards={len(rewards)}, uids={len(uids)}")
-    
-    bt.logging.info(f"Successfully calculated rewards for {len(rewards)} UIDs (including burn)")
-    bt.logging.debug(f"Final rewards: {rewards}")
-    bt.logging.debug(f"Final UIDs: {uids}")
-    
-    return rewards, uids, detailed_metrics
+        # Averages over all requested slots (missing slots penalize average)
+        avg_vs_norm = sum(v["validation_score_norm"] for v in per_variation) / num_requested
+        avg_ip = sum(v["identity_preservation"] for v in per_variation) / num_requested
 
+        # Composite score: validation score + tiny identity tiebreak
+        rewards[i] = avg_vs_norm + avg_ip * _IDENTITY_TIEBREAK_EPS
 
-def calculate_rule_compliance_score(
-    original_name: str,
-    variations: List[str],
-    target_rules: List[str],
-    target_percentage: float = 0.3
-) -> Tuple[float, Dict]:
-    """
-    Calculate how well the variations comply with the target rules.
-    
-    Args:
-        original_name: The original name
-        variations: List of name variations
-        target_rules: List of rules that should be followed
-        target_percentage: Percentage of variations that should comply with rules
-        
-    Returns:
-        Tuple containing:
-        - Compliance score (0-1)
-        - Dictionary with detailed metrics
-    """
-    # bt.logging.info(f"\nCalculating rule compliance for '{original_name}'")
-    # bt.logging.info(f"Target rules: {target_rules}")
-    # bt.logging.info(f"Target percentage: {target_percentage * 100:.1f}%")
-    
-    if not variations or not target_rules:
-        bt.logging.warning("No variations or no target rules provided for rule compliance calculation.")
-        return 0.0, {
-            "compliant_variations_by_rule": {},
-            "rules_satisfied_by_variation": {},
-            "compliance_ratio_overall_variations": 0.0,
-            "overall_compliant_unique_variations_count": 0,
-            "expected_compliant_variations_count": 0,
-            "quantity_score": 0.0,
-            "rule_diversity_factor": 0.0,
-            "num_target_rules_met": 0,
-            "total_target_rules": len(target_rules) if target_rules else 0,
-            "score": 0.0
-        }
-    
-    # Evaluate rule compliance
-    # compliant_variations_by_rule is Dict[str (rule_name), List[str (variation)]]
-    compliant_variations_by_rule, compliance_ratio_from_evaluator = evaluate_rule_compliance(
-        original_name, 
-        variations, 
-        target_rules
+        detailed_metrics.append({
+            "uid": uid,
+            "miner_hotkey": hotkey,
+            "api_graded": api_succeeded and bool(miner_result),
+            "num_requested": num_requested,
+            "num_submitted": sum(1 for v in per_variation if v["submitted"]),
+            "per_variation_scores": per_variation,
+            "avg_validation_score": float(avg_vs_norm),
+            "avg_identity_preservation": float(avg_ip),
+            # final_reward kept as avg_vs_norm for downstream logging clarity
+            "final_reward": float(avg_vs_norm),
+        })
+
+    # ── 3. Blended ranking with identity preservation threshold ───────────────
+    burn_fraction = getattr(self.config.neuron, "burn_fraction", 0.30)
+    top_miner_cap = getattr(self.config.neuron, "top_miner_cap", 50)
+    # quality_threshold repurposed as identity_preservation minimum (default 0.6)
+    identity_threshold = getattr(self.config.neuron, "quality_threshold", 0.6)
+    decay_rate = getattr(self.config.neuron, "decay_rate", 0.05)
+    blend_factor = getattr(self.config.neuron, "blend_factor", 0.7)
+
+    rewards, uids_array, detailed_metrics, is_100_percent_burn = (
+        _apply_blended_rank_cap_with_quality(
+            rewards=rewards,
+            detailed_metrics=detailed_metrics,
+            uids=miner_uids,
+            top_miner_cap=top_miner_cap,
+            identity_threshold=identity_threshold,
+            decay_rate=decay_rate,
+            blend_factor=blend_factor,
+            burn_uid=BURN_UID,
+            skip_burn=skip_burn,
+        )
     )
-    
-    # Check if no rules were possible for this name structure
-    # If target_rules were provided but evaluate_rule_compliance returned empty results,
-    # it means no rules were applicable to this name structure
-    if target_rules and not compliant_variations_by_rule:
-        bt.logging.debug(f"⚠️ No rules were applicable for '{original_name}' with target rules: {target_rules}")
-        return 1.0, {
-            "compliant_variations_by_rule": {},
-            "rules_satisfied_by_variation": {},
-            "compliance_ratio_overall_variations": 0.0,
-            "overall_compliant_unique_variations_count": 0,
-            "expected_compliant_variations_count": 0,
-            "quantity_score": 1.0,
-            "rule_diversity_factor": 1.0,
-            "num_target_rules_met": 0,
-            "total_target_rules": len(target_rules),
-            "score": 1.0
-        }
-    
-    # Create a dictionary to map each compliant variation to the list of rules it satisfied
-    rules_satisfied_by_variation = {}
-    for rule, rule_compliant_variations_list in compliant_variations_by_rule.items():
-        for variation in rule_compliant_variations_list:
-            if variation not in rules_satisfied_by_variation:
-                rules_satisfied_by_variation[variation] = []
-            # Ensure no duplicate rules (though unlikely with current evaluators)
-            if rule not in rules_satisfied_by_variation[variation]:
-                 rules_satisfied_by_variation[variation].append(rule)
 
-    # Count unique variations that satisfied at least one rule (from the target_rules)
-    overall_compliant_count = len(rules_satisfied_by_variation)
-    expected_compliant_count = max(1, int(len(variations) * target_percentage))
-    
-    # bt.logging.info(f"Found {overall_compliant_count} unique variations complying with at least one target rule (expected ~{expected_compliant_count} based on target percentage)")
-    
-    # for rule, variations_list in compliant_variations_by_rule.items():
-    #     # This logging shows all rules returned by evaluate_rule_compliance, which should be the target_rules
-    #     bt.logging.info(f"Rule '{rule}': {len(variations_list)} variations matched")
-    
-    # Calculate the quantity-based compliance score
-    ratio_of_actual_to_expected = overall_compliant_count / expected_compliant_count if expected_compliant_count > 0 else 0.0
-    
-    quantity_score = 0.0
-    if ratio_of_actual_to_expected <= 0.0:
-        quantity_score = 0.0
-    elif ratio_of_actual_to_expected <= 1.0:  # At or below target
-        quantity_score = ratio_of_actual_to_expected
-    else:  # Above target - apply a gentler penalty
-        quantity_score = max(0.5, 1.5 - 0.5 * ratio_of_actual_to_expected)
-    
-    #bt.logging.info(f"Overall compliance ratio vs target: {ratio_of_actual_to_expected:.2f}, Quantity-based score: {quantity_score:.2f}")
+    # ── 4. Burn + dual-incentive partner handling ─────────────────────────────
+    if skip_burn:
+        bt.logging.info(
+            "skip_burn=True — burn will be applied in apply_reputation_rewards()."
+        )
+        return rewards, uids_array, detailed_metrics
 
-    # Calculate rule diversity factor
-    num_target_rules_met = 0
-    rule_diversity_factor = 0.0
+    if not is_100_percent_burn:
+        if BURN_UID not in uids_array:
+            # Miners always receive (1 - burn_fraction - PARTNER_FRACTION) = 35%
+            miner_fraction = 1.0 - burn_fraction - PARTNER_FRACTION
+            total_reward_sum = float(np.sum(rewards))
 
-    if not target_rules: # No specific rules targeted, so diversity is maximal or not applicable.
-        rule_diversity_factor = 1.0
-    elif overall_compliant_count == 0: # No variations complied with any target rule.
-        # This case should have been handled earlier, but just in case
-        rule_diversity_factor = 0.0
-        num_target_rules_met = 0
-    else:
-        # Count how many of the *effective_rules* were satisfied by at least one variation.
-        # compliant_variations_by_rule.keys() contains only the rules that were actually evaluated
-        # (after filtering out impossible rules in evaluate_rule_compliance)
-        satisfied_effective_rules = set()
-        for rule_name, compliant_vars_for_rule_list in compliant_variations_by_rule.items():
-            if compliant_vars_for_rule_list:  # Rule was satisfied by at least one variation
-                satisfied_effective_rules.add(rule_name)
-        num_target_rules_met = len(satisfied_effective_rules)
-        
-        # Calculate diversity based on effective rules (rules that were actually possible to apply)
-        effective_rules_count = len(compliant_variations_by_rule)
-        if effective_rules_count > 0:
-            rule_diversity_factor = num_target_rules_met / effective_rules_count
+            if total_reward_sum > 0:
+                rewards = rewards * (miner_fraction / total_reward_sum)
+
+            # Dual incentive: route PARTNER_FRACTION to partner if on mainnet
+            partner_uid = _get_partner_uid(self.metagraph)
+            if partner_uid is not None:
+                actual_burn = burn_fraction            # 30%
+                actual_partner = PARTNER_FRACTION      # 35%
+            else:
+                actual_burn = burn_fraction + PARTNER_FRACTION  # 65% (reverts to old behaviour)
+                actual_partner = 0.0
+
+            uids_array = np.append(uids_array, BURN_UID)
+            rewards = np.append(rewards, actual_burn)
+            detailed_metrics.append({
+                "uid": BURN_UID,
+                "is_burn": True,
+                "burn_type": f"{int(actual_burn * 100)}_percent",
+                "ranking_info": {
+                    "initial_reward": 0.0,
+                    "global_rank": -1,
+                    "within_top_cap": False,
+                    "avg_identity_preservation": 0.0,
+                    "meets_identity_threshold": False,
+                    "is_qualified_for_ranking": False,
+                    "final_blended_reward": actual_burn,
+                },
+            })
+
+            if partner_uid is not None:
+                uids_array = np.append(uids_array, partner_uid)
+                rewards = np.append(rewards, actual_partner)
+                detailed_metrics.append({
+                    "uid": partner_uid,
+                    "is_partner": True,
+                    "partner_hotkey": PARTNER_HOTKEY,
+                    "partner_fraction": actual_partner,
+                    "ranking_info": {
+                        "initial_reward": 0.0,
+                        "global_rank": -1,
+                        "within_top_cap": False,
+                        "avg_identity_preservation": 0.0,
+                        "meets_identity_threshold": False,
+                        "is_qualified_for_ranking": False,
+                        "final_blended_reward": actual_partner,
+                    },
+                })
+                bt.logging.info(
+                    f"Dual Incentive applied: burn={actual_burn:.0%} (UID {BURN_UID}), "
+                    f"partner={actual_partner:.0%} (UID {partner_uid}), "
+                    f"miners={miner_fraction:.0%}."
+                )
+            else:
+                bt.logging.info(
+                    f"Applied {actual_burn * 100:.1f}% emission burn (partner not on mainnet): "
+                    f"UID {BURN_UID} gets {actual_burn:.2%}, miners share {miner_fraction:.2%}."
+                )
         else:
-            # No effective rules means no rules were possible for this name structure
-            rule_diversity_factor = 1.0
+            bt.logging.warning(
+                f"Burn UID {BURN_UID} already present — skipping burn application."
+            )
+    else:
+        bt.logging.info("100% burn occurred (no miners qualified).")
 
-    #bt.logging.info(f"Met {num_target_rules_met} out of {len(compliant_variations_by_rule)} effective rules. Rule diversity factor: {rule_diversity_factor:.2f}")
+    if len(rewards) != len(uids_array):
+        raise ValueError(
+            f"Length mismatch after burn: rewards={len(rewards)}, uids={len(uids_array)}"
+        )
 
-    # Final score combines quantity and diversity
-    final_score = quantity_score * rule_diversity_factor
-    # bt.logging.info(f"Final rule compliance score (quantity * diversity): {final_score:.2f}")
-    
-    return final_score, {
-        "compliant_variations_by_rule": compliant_variations_by_rule,
-        "rules_satisfied_by_variation": rules_satisfied_by_variation,
-        "compliance_ratio_overall_variations": compliance_ratio_from_evaluator, # Ratio of variations that matched any rule to total variations
-        "overall_compliant_unique_variations_count": overall_compliant_count,
-        "expected_compliant_variations_count": expected_compliant_count,
-        "quantity_score": float(quantity_score),
-        "rule_diversity_factor": float(rule_diversity_factor),
-        "num_target_rules_met": num_target_rules_met,
-        "total_target_rules": len(target_rules),
-        "score": float(final_score) # This is the score based on meeting the target rule_percentage and diversity
-    }
+    bt.logging.info(
+        f"get_image_variation_rewards complete: {len(rewards)} entries "
+        f"(including burn UID). api_succeeded={api_succeeded}."
+    )
+    return rewards, uids_array, detailed_metrics
 
 
 # =============================================================================
-# Reputation-Weighted Reward System (Phase 3 - Cycle 2)
+# Reputation-Weighted Reward System (Phase 4 - Cycle 4)
 #
 # Configurable weights (via --neuron.kav_weight, --neuron.uav_weight):
 #   - Passed to apply_reputation_rewards() from forward.py using getattr()
@@ -3480,12 +532,12 @@ def calculate_rule_compliance_score(
 # Tier multipliers for reputation weighting (policy-based, rarely change)
 TIER_MULTIPLIERS = {
     "Platinum": 1.25,
-    "Diamond": 1.15,
-    "Gold": 1.10,
-    "Silver": 1.05,
-    "Bronze": 1.02,
-    "Neutral": 1.00,
-    "Watch": 0.90,
+    "Diamond":  1.15,
+    "Gold":     1.10,
+    "Silver":   1.05,
+    "Bronze":   1.02,
+    "Neutral":  1.00,
+    "Watch":    0.90,
 }
 
 # Normalization ranges (for reference - actual normalization uses continuous function)
@@ -3502,6 +554,35 @@ TIER_MULTIPLIERS = {
 # Burn UID (hardcoded in existing codebase)
 BURN_UID = 59
 
+# ── Dual Incentive Mechanism (SN54, July 1) ───────────────────────────────────
+# Vetted commercial partner hotkey that receives the partner pool allocation.
+# If this hotkey is not registered on mainnet the full PARTNER_FRACTION is
+# redirected to burn (total burn reverts to 65% as before).
+PARTNER_HOTKEY = "5Dw7tYMwTBxc3BgapjJ2omvP5TGFSDe3UsV414aHHcpRKh2V"
+PARTNER_FRACTION = 0.35  # 35% of total emissions → commercial partner pool
+
+
+def _get_partner_uid(metagraph) -> Optional[int]:
+    """
+    Return the UID of PARTNER_HOTKEY in the metagraph, or None if not present.
+
+    A return value of None causes the partner fraction to be redirected to burn
+    so that total miner rewards remain unchanged.
+    """
+    if metagraph is None:
+        return None
+    for uid_idx, hk in enumerate(metagraph.hotkeys):
+        if hk == PARTNER_HOTKEY:
+            bt.logging.info(
+                f"Dual Incentive: partner hotkey found at UID {uid_idx}."
+            )
+            return uid_idx
+    bt.logging.warning(
+        f"Dual Incentive: partner hotkey {PARTNER_HOTKEY} not found in metagraph. "
+        "Partner fraction (35%) will be added to burn."
+    )
+    return None
+
 
 def normalize_rep_score(rep_score: float, rep_tier: Optional[str] = None) -> float:
     """
@@ -3516,7 +597,7 @@ def normalize_rep_score(rep_score: float, rep_tier: Optional[str] = None) -> flo
         rep_tier: Tier string (unused for normalization, kept for API compatibility)
 
     Returns:
-        Normalized rep_score: 0.0 when score=0, up to 3.0 for high scores
+        Normalized rep_score in [0.0, 3.0].
     """
     # Zero or negative score = zero normalized (zero UAV)
     if rep_score <= 0:
@@ -3563,38 +644,47 @@ def apply_reputation_rewards(
     uids: List[int],
     rep_data: Dict[str, Dict],
     metagraph,
-    burn_fraction: float = 0.65,
+    burn_fraction: float = 0.30,
     kav_weight: float = 0.10,
     uav_weight: float = 0.90,
-    kav_metrics: List[Dict] = None
+    kav_metrics: List[Dict] = None,
 ) -> Tuple[np.ndarray, np.ndarray, List[Dict]]:
     """
     Apply reputation weighting to KAV rewards, combine with UAV, and apply burn.
 
-    This single function handles the entire reputation reward pipeline:
-    1. Calculate UAV rewards (R × T) from rep_data and KAV portions (Q) separately
-    2. Rescale KAV and UAV portions separately to guarantee exact proportions:
-       - KAV portions scaled to sum to keep_fraction * kav_weight (e.g., 0.3 * 0.2 = 0.06)
-       - UAV portions scaled to sum to keep_fraction * uav_weight (e.g., 0.3 * 0.8 = 0.24)
-    3. Combine rescaled portions per miner and add burn UID 59
+    Dual Incentive Mechanism (SN54, July 1):
+      ~35% → data-generation miners  (KAV + UAV, unchanged)
+      ~30% → burn (UID 59)           (reduced from 65%)
+      ~35% → commercial partner pool (PARTNER_HOTKEY, if on mainnet; else burned)
+
+    Pipeline:
+    1. Calculate KAV portions (kav_weight × Q) and UAV portions (uav_weight × R×T)
+       separately for each miner.
+    2. Rescale KAV and UAV portions independently so they hit exact target totals:
+         KAV target = miner_fraction × kav_weight   (e.g. 0.35 × 0.10 = 0.035)
+         UAV target = miner_fraction × uav_weight   (e.g. 0.35 × 0.90 = 0.315)
+       where miner_fraction = 1.0 - burn_fraction - PARTNER_FRACTION = 0.35
+    3. Combine rescaled portions per miner, append burn UID 59 and (if on
+       mainnet) the partner UID.
 
     This ensures that after burn, exactly kav_weight% of kept rewards go to KAV
     and uav_weight% go to UAV, regardless of the raw score distributions.
+    Miner rewards are NOT affected by whether the partner is on mainnet.
 
     Args:
         kav_rewards: KAV quality scores (Q) from get_name_variation_rewards()
         uids: List of miner UIDs
         rep_data: Dict mapping hotkey -> {rep_score, rep_tier} from Flask
         metagraph: Bittensor metagraph for hotkey lookup
-        burn_fraction: Fraction to burn (default 0.65 for Cycle 2)
+        burn_fraction: Fraction to burn (default 0.30; partner gets PARTNER_FRACTION)
         kav_weight: Weight for KAV online quality (default 0.10 = 10%)
         uav_weight: Weight for UAV reputation-based (default 0.90 = 90%)
         kav_metrics: Optional detailed metrics from KAV calculation
 
     Returns:
         Tuple of:
-            - final_rewards: np.ndarray including burn UID (ready for set_weights)
-            - final_uids: np.ndarray including burn UID
+            - final_rewards: np.ndarray including burn UID [+ partner UID]
+            - final_uids: np.ndarray including burn UID [+ partner UID]
             - combined_metrics: List of dicts with full breakdown per miner
     """
     # Separate arrays for KAV and UAV portions
@@ -3673,37 +763,105 @@ def apply_reputation_rewards(
         combined_metrics.append(metric_entry)
 
     # --- Step 2: Calculate totals and rescale separately to guarantee proportions ---
-    keep_fraction = 1.0 - burn_fraction
+    # Miners always receive miner_fraction (35%) — independent of partner routing.
+    # Partner fraction goes to PARTNER_HOTKEY if on mainnet, otherwise to burn.
+    miner_fraction = 1.0 - burn_fraction - PARTNER_FRACTION  # 1.0 - 0.30 - 0.35 = 0.35
     total_kav = np.sum(kav_portions)
     total_uav = np.sum(uav_portions)
 
-    # Determine burn mode and target totals based on what's available
-    # Edge cases: burn unused portions
-    # 1. No KAV and no UAV -> burn 100%
-    # 2. No UAV -> burn = burn_fraction + (uav_weight * keep_fraction) = 0.65 + 0.315 = 0.965
-    # 3. No KAV -> burn = burn_fraction + (kav_weight * keep_fraction) = 0.65 + 0.035 = 0.685
-    # 4. Both present -> normal burn = burn_fraction = 0.65
+    # Resolve partner UID once for this round
+    partner_uid = _get_partner_uid(metagraph)
 
-    if total_kav == 0 and total_uav == 0:
-        burn_mode = "100_percent"
+    has_kav     = total_kav > 0
+    has_uav     = total_uav > 0
+    has_partner = partner_uid is not None
+
+    # Shorthands (keep expressions readable and tied to constants)
+    _kav_share = miner_fraction * kav_weight   # 0.35 * 0.10 = 0.035
+    _uav_share = miner_fraction * uav_weight   # 0.35 * 0.90 = 0.315
+    _base_burn_no_partner = burn_fraction + PARTNER_FRACTION  # 0.30 + 0.35 = 0.65
+
+    # ── 8-way dispatch: all combinations of KAV / UAV / partner availability ──
+    # Every branch must satisfy:
+    #   applied_burn + actual_partner + target_kav_total + target_uav_total == 1.0
+    #
+    # Unused miner weight (missing KAV or UAV) always flows to burn.
+    # Missing partner always adds PARTNER_FRACTION to burn.
+    #
+    # Case | KAV | UAV | Partner | burn   | partner | kav    | uav
+    # -----|-----|-----|---------|--------|---------|--------|-------
+    #  1   |  ✗  |  ✗  |   ✗    | 1.000  | 0.000   | 0.000  | 0.000
+    #  2   |  ✗  |  ✗  |   ✓    | 0.650  | 0.350   | 0.000  | 0.000
+    #  3   |  ✗  |  ✓  |   ✗    | 0.685  | 0.000   | 0.000  | 0.315
+    #  4   |  ✓  |  ✗  |   ✗    | 0.965  | 0.000   | 0.035  | 0.000
+    #  5   |  ✗  |  ✓  |   ✓    | 0.335  | 0.350   | 0.000  | 0.315
+    #  6   |  ✓  |  ✗  |   ✓    | 0.615  | 0.350   | 0.035  | 0.000
+    #  7   |  ✓  |  ✓  |   ✗    | 0.650  | 0.000   | 0.035  | 0.315
+    #  8   |  ✓  |  ✓  |   ✓    | 0.300  | 0.350   | 0.035  | 0.315
+
+    if not has_kav and not has_uav and not has_partner:
+        # Case 1 — no miners produced output AND partner not registered → full burn
+        burn_mode      = "no_kav_no_uav_no_partner"
         target_kav_total = 0.0
         target_uav_total = 0.0
-        applied_burn = 1.0
-    elif total_uav == 0:
-        burn_mode = "no_uav"
-        target_kav_total = keep_fraction * kav_weight  # e.g., 0.35 * 0.10 = 0.035
-        target_uav_total = 0.0
-        applied_burn = burn_fraction + (uav_weight * keep_fraction)  # 0.65 + 0.315 = 0.965
-    elif total_kav == 0:
-        burn_mode = "no_kav"
+        applied_burn   = 1.0
+        actual_partner = 0.0
+
+    elif not has_kav and not has_uav:
+        # Case 2 — no miner output, but partner present → partner keeps 35%, rest burns
+        burn_mode      = "no_kav_no_uav"
         target_kav_total = 0.0
-        target_uav_total = keep_fraction * uav_weight  # e.g., 0.35 * 0.90 = 0.315
-        applied_burn = burn_fraction + (kav_weight * keep_fraction)  # 0.65 + 0.035 = 0.685
+        target_uav_total = 0.0
+        applied_burn   = burn_fraction + miner_fraction  # 0.30 + 0.35 = 0.65
+        actual_partner = PARTNER_FRACTION                # 0.35
+
+    elif not has_kav and not has_partner:
+        # Case 3 — no KAV, no partner → unused KAV share + partner fraction go to burn
+        burn_mode      = "no_kav_no_partner"
+        target_kav_total = 0.0
+        target_uav_total = _uav_share                   # 0.315
+        applied_burn   = _base_burn_no_partner + _kav_share  # 0.65 + 0.035 = 0.685
+        actual_partner = 0.0
+
+    elif not has_uav and not has_partner:
+        # Case 4 — no UAV, no partner → unused UAV share + partner fraction go to burn
+        burn_mode      = "no_uav_no_partner"
+        target_kav_total = _kav_share                   # 0.035
+        target_uav_total = 0.0
+        applied_burn   = _base_burn_no_partner + _uav_share  # 0.65 + 0.315 = 0.965
+        actual_partner = 0.0
+
+    elif not has_kav:
+        # Case 5 — no KAV, but UAV + partner present → unused KAV share goes to burn
+        burn_mode      = "no_kav"
+        target_kav_total = 0.0
+        target_uav_total = _uav_share                   # 0.315
+        applied_burn   = burn_fraction + _kav_share     # 0.30 + 0.035 = 0.335
+        actual_partner = PARTNER_FRACTION               # 0.35
+
+    elif not has_uav:
+        # Case 6 — no UAV, but KAV + partner present → unused UAV share goes to burn
+        burn_mode      = "no_uav"
+        target_kav_total = _kav_share                   # 0.035
+        target_uav_total = 0.0
+        applied_burn   = burn_fraction + _uav_share     # 0.30 + 0.315 = 0.615
+        actual_partner = PARTNER_FRACTION               # 0.35
+
+    elif not has_partner:
+        # Case 7 — KAV + UAV present, but partner not registered → partner fraction burns
+        burn_mode      = "no_partner"
+        target_kav_total = _kav_share                   # 0.035
+        target_uav_total = _uav_share                   # 0.315
+        applied_burn   = _base_burn_no_partner          # 0.65
+        actual_partner = 0.0
+
     else:
-        burn_mode = "configured"
-        target_kav_total = keep_fraction * kav_weight  # e.g., 0.35 * 0.10 = 0.035
-        target_uav_total = keep_fraction * uav_weight  # e.g., 0.35 * 0.90 = 0.315
-        applied_burn = burn_fraction
+        # Case 8 — all present: KAV + UAV + partner → normal dual-incentive operation
+        burn_mode      = "configured"
+        target_kav_total = _kav_share                   # 0.035
+        target_uav_total = _uav_share                   # 0.315
+        applied_burn   = burn_fraction                  # 0.30
+        actual_partner = PARTNER_FRACTION               # 0.35
 
     # Rescale KAV and UAV portions separately to their target totals
     if total_kav > 0 and target_kav_total > 0:
@@ -3739,21 +897,51 @@ def apply_reputation_rewards(
         # Burn info (set after burn_mode is determined)
         metric["burn_fraction"] = float(burn_fraction)
         metric["burn_fraction_applied"] = float(applied_burn)
+        metric["partner_fraction"] = float(actual_partner)
         metric["burn_mode"] = burn_mode
 
-    # --- Step 3: Add burn UID ---
+    # --- Step 3: Add burn UID and (if on mainnet) partner UID ---
     final_rewards = np.append(final_rewards, applied_burn)
     final_uids = np.append(np.array(uids), BURN_UID)
 
-    # Update metrics with final_reward values from final_rewards array (after burn UID added)
-    # This ensures metrics match exactly what's in the final_rewards array
-    for i, metric in enumerate(combined_metrics):
+    combined_metrics.append({
+        "uid": BURN_UID,
+        "is_burn": True,
+        "burn_type": f"{int(applied_burn * 100)}_percent",
+        "burn_mode": burn_mode,
+        "final_reward": float(applied_burn),
+    })
+
+    if actual_partner > 0 and partner_uid is not None:
+        final_rewards = np.append(final_rewards, actual_partner)
+        final_uids = np.append(final_uids, partner_uid)
+        combined_metrics.append({
+            "uid": partner_uid,
+            "is_partner": True,
+            "partner_hotkey": PARTNER_HOTKEY,
+            "partner_fraction": float(actual_partner),
+            "burn_mode": burn_mode,
+            "final_reward": float(actual_partner),
+        })
+
+    # Update miner metrics with final_reward values from final_rewards array
+    for i, metric in enumerate(combined_metrics[:len(uids)]):
         metric["final_reward"] = float(final_rewards[i])
 
-    bt.logging.info(
-        f"Applied reputation rewards for {len(uids)} miners ({new_miner_count} new, KAV-only). "
-        f"KAV: {kav_weight}, UAV: {uav_weight}, Burn: {burn_fraction}. "
-        f"Burn UID {BURN_UID}: {applied_burn:.2%} (mode={burn_mode})"
-    )
+    if partner_uid is not None and actual_partner > 0:
+        bt.logging.info(
+            f"Dual Incentive applied for {len(uids)} miners ({new_miner_count} new, KAV-only). "
+            f"KAV: {kav_weight}, UAV: {uav_weight}, "
+            f"Burn: {applied_burn:.2%} (UID {BURN_UID}), "
+            f"Partner: {actual_partner:.2%} (UID {partner_uid}), "
+            f"mode={burn_mode}."
+        )
+    else:
+        bt.logging.info(
+            f"Applied reputation rewards for {len(uids)} miners ({new_miner_count} new, KAV-only). "
+            f"KAV: {kav_weight}, UAV: {uav_weight}, "
+            f"Burn: {applied_burn:.2%} (UID {BURN_UID}) [partner not on mainnet], "
+            f"mode={burn_mode}."
+        )
 
     return final_rewards, final_uids, combined_metrics

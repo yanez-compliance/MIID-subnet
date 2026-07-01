@@ -185,20 +185,79 @@ def is_round_available(round_number: int) -> bool:
     return get_round_signature(round_number) is not None
 
 
-def calculate_reveal_buffer(timeout_seconds: float) -> int:
-    """Calculate appropriate reveal delay based on Bittensor epoch.
+# Fixed 1-hour session: 20 min batch 1 + 20 min batch 2 + 20 min API grading.
+# Images unlock at the 40-minute mark regardless of early finishes or batch retries.
+REVEAL_DELAY_SECONDS = 40 * 60  # 2400 seconds
 
-    The reveal should happen after post-validation completes, which
-    occurs at the end of a Bittensor epoch. A Bittensor epoch is
-    approximately 72 minutes (360 blocks × 12 seconds/block = 4320 seconds).
+
+def seconds_until_reveal(reveal_timestamp: int) -> int:
+    """Return seconds until reveal_timestamp (0 if already past)."""
+    return max(0, reveal_timestamp - int(time.time()))
+
+
+def wait_until_reveal(
+    target_round: int,
+    reveal_timestamp: int,
+    poll_interval: int = 30,
+    post_reveal_timeout: int = 120,
+) -> bool:
+    """Block until the drand round is available so the grading API can decrypt.
+
+    Polls is_round_available() on a fixed interval. Miners may finish early;
+    this keeps the validator from calling the grading API until unlock.
 
     Args:
-        timeout_seconds: The synapse timeout for miner responses (unused,
-                        kept for API compatibility)
+        target_round: Drand round when images become decryptable
+        reveal_timestamp: Expected Unix reveal time (for logging only)
+        poll_interval: Seconds between availability checks
+        post_reveal_timeout: Extra seconds to keep polling after reveal_timestamp
 
     Returns:
-        Delay in seconds for drand reveal (1 Bittensor epoch)
+        True if the round signature is available, False on timeout
     """
-    # One Bittensor epoch: 360 blocks × 12 seconds = 4320 seconds (~72 minutes)
-    BITTENSOR_EPOCH_SECONDS = 4320
-    return BITTENSOR_EPOCH_SECONDS
+    deadline = reveal_timestamp + post_reveal_timeout
+
+    while time.time() < deadline:
+        if is_round_available(target_round):
+            bt.logging.info(f"Drand round {target_round} available — ready for grading API")
+            return True
+
+        remaining = seconds_until_reveal(reveal_timestamp)
+        if remaining > 0:
+            bt.logging.info(
+                f"Drand round {target_round} not ready; "
+                f"rechecking in {poll_interval}s ({remaining}s until reveal)"
+            )
+        else:
+            bt.logging.info(
+                f"Drand round {target_round} not ready yet; rechecking in {poll_interval}s"
+            )
+        time.sleep(poll_interval)
+
+    bt.logging.error(
+        f"Timed out waiting for drand round {target_round} "
+        f"({post_reveal_timeout}s after reveal timestamp {reveal_timestamp})"
+    )
+    return False
+
+
+def calculate_reveal_buffer(reveal_delay_seconds: int = REVEAL_DELAY_SECONDS) -> int:
+    """Return drand reveal delay for a validation session.
+
+    Session schedule (1 hour total):
+      - 0–20 min:  batch 1
+      - 20–40 min: batch 2
+      - 40 min:    encryption unlocks (drand reveal)
+      - 40–60 min: API grading window
+
+    Unlock is fixed at T+40 min from challenge start so the grading API can
+    decrypt as soon as both batches are expected to be done.
+
+    Args:
+        reveal_delay_seconds: Seconds from challenge start until reveal.
+                              Defaults to REVEAL_DELAY_SECONDS (40 minutes).
+
+    Returns:
+        Delay in seconds for drand reveal.
+    """
+    return reveal_delay_seconds

@@ -18,19 +18,18 @@
 
 ## 🔍 What is MIID?
 
-**MIID** (Multimodal Inorganic Identity Dataset) is a next-generation **identity testing** and **identity data generation** subnet designed to enhance fraud detection, KYC systems, and name-matching algorithms. Our goal is to provide **financial institutions, security systems, and AI researchers** with a robust dataset of **name variations, transliterations, and identity attributes** that help identify identity fraud and evasion techniques.
+**MIID** (Multimodal Inorganic Identity Dataset) is a next-generation **identity testing** and **identity data generation** subnet designed to enhance fraud detection, KYC systems, and biometric verification. Our goal is to provide **financial institutions, security systems, and AI researchers** with a robust dataset of **identity-preserving face image variations** that help identify deepfake and presentation-attack evasion techniques.
 
-By incentivizing **miners** to create high-quality identity variations, **MIID** serves as a critical tool in financial crime prevention, identity resolution, and security intelligence.
+By incentivizing **miners** to create high-quality face image variations, **MIID** serves as a critical tool in financial crime prevention, identity resolution, and security intelligence.
 
 ## 🎯 Why MIID Matters
 
-Fraudsters use **identity manipulation techniques** to evade detection. **Sanctioned individuals**, **high-risk entities**, and **money launderers** exploit weaknesses in screening systems by using name variations, fake documents, and location obfuscation.
+Fraudsters use **identity manipulation techniques** to evade detection — including deepfakes, screen replays, and biometric spoofing. **Sanctioned individuals**, **high-risk entities**, and **money launderers** exploit weaknesses in KYC and IDV systems.
 
 MIID **tests and enhances these systems** by:
-- ✅ **Simulating Identity-Related Risk Scenarios** for AML and sanctions screening
-- ✅ **Evaluating Identity Matching Algorithms**
-- ✅ **Providing Identity Data for Model Training**
-
+- ✅ **Simulating Face-Based Adversarial Scenarios** for KYC and biometric screening
+- ✅ **Evaluating Identity-Preserving Image Transformations**
+- ✅ **Providing Adversarial Face Data for Model Training**
 
 This network helps **governments, financial institutions, and researchers** improve their fraud detection models, making the financial ecosystem safer.
 
@@ -38,21 +37,21 @@ This network helps **governments, financial institutions, and researchers** impr
 
 ## ⚙️ How It Works
 
-### 🛠️ **Miners: Generate KAV and Image Variations**
-Miners process requests from validators and return **identity data variations** to enhance detection models.
+### 🛠️ **Miners: Generate Face Image Variations**
+Miners process image variation requests from validators and return **identity-preserving face image variations**.
 
-- Receive mixed identity challenges from validators (KAV and image-variation requests; UAV address not in scope this cycle)
-- Generate **KAV** variations: Name / DOB / Address
-- Generate **face image variations** from validator-provided seed images (Phase 4; Cycle 2 includes screen_replay)
-- Earn rewards based on accuracy, novelty, constraint adherence, and real-world adversarial value
+- Receive base face images and variation requirements from validators
+- Generate variations using diffusion models: **pose_edit**, **lighting_edit**, **expression_edit**, **background_edit**, and **screen_replay** (Cycle 2)
+- Encrypt and upload results to S3; return signed submission references
+- **Image generation is the only scored task** — a GPU and the full image stack are required to earn rewards
 
 ### 🧑‍🏫 **Validators: Evaluate & Score Miners**
 Validators ensure the dataset maintains **high-quality** and **real-world relevance**.
 
-- Issue challenge queries across KAV and image variations (UAV address not in scope this cycle)
-- Run online validation for immediate weight setting (where applicable)
-- Perform post-validation to assess novelty/quality and update miner reputation for the next cycle
-- Allocate rewards and continuously evolve the dataset for KYC/IDV resilience
+- Issue face image variation challenges
+- Run automated pre-checks and identity preservation validation
+- Perform manual validation to assess transformation accuracy
+- Set miner weights based on image variation quality and reputation
 
 ---
 
@@ -60,22 +59,27 @@ Validators ensure the dataset maintains **high-quality** and **real-world releva
 
 ### Prerequisites
 - **Python 3.10+**
-- **Ollama (default LLM: llama3.1)**
+- **GPU with 8GB+ VRAM** (NVIDIA CUDA or Apple Silicon MPS)
+- **Hugging Face account and API token** (for diffusion model access)
 - **Bittensor wallet with TAO**
-- **8GB+ RAM (16GB recommended)**
-- **Open port 8091 for miner-to-validator communication** ([Network Setup Guide](docs/network_setup.md))
+- **16GB+ RAM** (32GB recommended)
+- **80GB+ free disk** (for model weights and cache)
+- **Open port 8091** for miner-to-validator communication ([Network Setup Guide](docs/network_setup.md))
 
 ### 1️⃣ **Setup for Miners**
 ```bash
-# Install dependencies
+# Install dependencies (includes image-generation stack)
 bash scripts/miner/setup.sh
 
 # Activate the miner environment
 source miner_env/bin/activate
 
+# Set required environment variables
+export HF_TOKEN="hf_YOUR_TOKEN_HERE"
+export FLUX_DEVICE="cuda"   # or mps for Apple Silicon
+
 # Start mining
 pm2 start python --name neuron-miner -- neurons/miner.py --netuid 54 --wallet.name your-wallet --wallet.hotkey your-hotkey --subtensor.network finney
-
 ```
 
 ### 2️⃣ **Setup for Validators**
@@ -97,12 +101,12 @@ For detailed instructions, check our **[Mining Guide](docs/miner.md)** and **[Va
 ## 🔥 Why Join MIID?
 
 ### 🔐 **Be Part of the Future of Digital Identity Security**
-- Help **banks, fintech, and law enforcement agencies** strengthen fraud detection.
+- Help **banks, fintech, and law enforcement agencies** strengthen KYC and biometric fraud detection.
 - Contribute to **privacy-preserving AI research**.
-- Earn rewards while **enhancing AI-driven name-matching and sanctions screening**.
+- Earn rewards while **enhancing AI-driven face verification and presentation-attack detection**.
 
 ### 🏆 **Incentives for Participants**
-- **Miners**: Earn rewards for producing high-quality, diverse identity variations.
+- **Miners**: Earn rewards for producing high-quality, identity-preserving face image variations.
 - **Validators**: Gain influence in network security and reward distribution.
 
 ### 🌎 **Real-World Impact**
@@ -127,10 +131,10 @@ MIID is not just another AI dataset—it's a **live, evolving system** that **ch
 - Establish post-validation workflows and LDS V1 (beta → full) to separate signal from noise.
 - Use validated UAV quality to build a reputation signal that carries into future cycles.
 
-### Phase 4: Deepfake / Face-Based Adversarial Testing for KYC (Q1 2026)
-- Introduce validator-provided seed face images and deepfake-style transformation families.
-- Cycle 1: pose_edit, lighting_edit, expression_edit, background_edit. Cycle 2 adds screen_replay; UAV address is not accepted this cycle.
-- Phase 4 execution begins incorporating rewards based on validated UAV quality from Phase 3 Cycle 1.
+### Phase 4: Deepfake / Face-Based Adversarial Testing for KYC (Q1 2026) — **Current**
+- Validator-provided seed face images and deepfake-style transformation families.
+- Cycle 1: pose_edit, lighting_edit, expression_edit, background_edit. Cycle 2 adds screen_replay.
+- **Image generation is the sole scored miner task** in the current cycle.
 
 ### Phase 5–11 (2026–2027): Identity Realism & Simulation
 - Expand biometric attack families beyond Cycle 1 (e.g., swap/recapture/morphing) (Q1 2026)
@@ -149,8 +153,8 @@ MIID is not just another AI dataset—it's a **live, evolving system** that **ch
 ## 🌍 Future Plans
 
 We are continuously improving MIID to:
-- Expand **identity data generation** for enhanced AI benchmarking.
-- Integrate **more complex identity attributes** (addresses, dates of birth, etc.).
+- Expand **face-based adversarial data generation** for enhanced AI benchmarking.
+- Integrate **more complex biometric attack families** (document spoofing, voice, 3D avatars).
 - Improve **fraud detection AI** using multi-modal data sources.
 
 Join us in shaping the future of **identity verification and fraud prevention**.
