@@ -34,6 +34,7 @@ Implements the forward function that drives each validation round:
 """
 
 import time
+import shutil
 import bittensor as bt
 import json
 import os
@@ -139,6 +140,8 @@ def _clear_pending_allocations(file_path: Path):
 
 EPOCH_MIN_TIME = 360  # seconds
 MIID_SERVER = "http://52.44.186.20:5000/upload_data"
+UPLOAD_RETRY_ATTEMPTS = 3
+UPLOAD_RETRY_DELAY_SECONDS = 60
 
 PHASE4_ENABLED = True
 
@@ -265,6 +268,13 @@ async def forward(self):
     # --- END WANDB SETUP ---
 
     request_start = time.time()
+
+    is_testnet = (
+        self.config.netuid == 322
+        and hasattr(self.config, 'subtensor')
+        and getattr(self.config.subtensor, 'network', None) == "test"
+        and "test.finney.opentensor.ai" in getattr(self.config.subtensor, 'chain_endpoint', '')
+    )
     
     bt.logging.info("Updating and querying available uids")
 
@@ -544,13 +554,18 @@ async def forward(self):
     self.update_scores(rewards, updated_uids)
     bt.logging.info(f"REWARDS: {rewards}  for UIDs: {updated_uids}")
 
-    # 7) Save results locally
+    # 7) Save results locally (testnet: flat file only; mainnet: run_* subdir)
     timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
     results_dir = os.path.join(self.config.logging.logging_dir, "validator_results")
     os.makedirs(results_dir, exist_ok=True)
-    
-    run_dir = os.path.join(results_dir, f"run_{timestamp}")
-    os.makedirs(run_dir, exist_ok=True)
+
+    if is_testnet:
+        json_path = os.path.join(results_dir, f"results_{timestamp}.json")
+        run_dir = None
+    else:
+        run_dir = os.path.join(results_dir, f"run_{timestamp}")
+        os.makedirs(run_dir, exist_ok=True)
+        json_path = os.path.join(run_dir, f"results_{timestamp}.json")
 
     results = {
         "timestamp": timestamp,
@@ -647,9 +662,10 @@ async def forward(self):
             "miners":               combined_metrics,
         }
 
-        # Add to pending allocations and save to disk
+        # Add to pending allocations and save to disk (mainnet only)
         _pending_allocations.append(new_allocation)
-        _save_pending_allocations(_pending_file_path, _pending_allocations)
+        if not is_testnet:
+            _save_pending_allocations(_pending_file_path, _pending_allocations)
 
         # Build reward_allocation with ALL pending allocations (for retry on previous failures)
         results["reward_allocation"] = {
@@ -667,7 +683,6 @@ async def forward(self):
         }
 
     # Save the query and responses to a JSON file (now including weights and reward_allocation)
-    json_path = os.path.join(run_dir, f"results_{timestamp}.json")
     with open(json_path, 'w', encoding='utf-8') as f:
         json.dump(results, f, indent=4)
     
@@ -685,38 +700,27 @@ async def forward(self):
     signed_contents    = sign_message(self.wallet, message_to_sign, output_file=None)
     results["signature"] = signed_contents
 
-    is_testnet = (
-        self.config.netuid == 322
-        and hasattr(self.config, 'subtensor')
-        and getattr(self.config.subtensor, 'network', None) == "test"
-        and "test.finney.opentensor.ai" in getattr(self.config.subtensor, 'chain_endpoint', '')
-    )
-
     upload_success = False
     upload_response = None
     # If for some reason uploading the data fails, we should just log it and continue.
     # Server might go down but should not be a unique point of failure for the subnet
-    testnet_export_path = None
-    if is_testnet and challenge_id:
-        testnet_export_path = os.path.join(
-            os.path.expanduser("~"),
-            f"testnet_upload_{challenge_id}.json",
-        )
-
     try:
         if is_testnet:
             bt.logging.info("Testnet detected — skipping upload to MIID server")
-            if testnet_export_path:
-                with open(testnet_export_path, "w", encoding="utf-8") as f:
-                    json.dump(results, f, indent=4)
-                bt.logging.info(
-                    f"Testnet: saved upload payload for review at: {testnet_export_path}"
-                )
             upload_success = True
         else:
             bt.logging.info(f"Uploading data to: {MIID_SERVER}")
-            upload_response = upload_data(MIID_SERVER, hotkey, results)
-            upload_success = upload_response is not None
+            for attempt in range(UPLOAD_RETRY_ATTEMPTS):
+                upload_response = upload_data(MIID_SERVER, hotkey, results)
+                if upload_response is not None:
+                    upload_success = True
+                    break
+                if attempt < UPLOAD_RETRY_ATTEMPTS - 1:
+                    bt.logging.warning(
+                        f"Upload attempt {attempt + 1}/{UPLOAD_RETRY_ATTEMPTS} failed. "
+                        f"Retrying in {UPLOAD_RETRY_DELAY_SECONDS}s..."
+                    )
+                    await asyncio.sleep(UPLOAD_RETRY_DELAY_SECONDS)
 
         if upload_success:
             bt.logging.info(
@@ -736,9 +740,10 @@ async def forward(self):
                         f"miners={len(_cached_rep_data)}"
                     )
 
-                # Clear pending allocations after successful upload
+                # Clear pending allocations after successful upload (mainnet only)
                 _pending_allocations.clear()
-                _clear_pending_allocations(_pending_file_path)
+                if not is_testnet:
+                    _clear_pending_allocations(_pending_file_path)
                 bt.logging.info("Cleared pending allocations after successful upload")
             # ==========================================================================
         else:
@@ -776,11 +781,19 @@ async def forward(self):
             bt.logging.error(f"Error deleting files: {e}")
             bt.logging.warning(f"You might want to delete these files manually: {json_path}, {run_dir}, {results_dir}")
     elif is_testnet:
-        bt.logging.info("Testnet: keeping local files for review (upload skipped)")
-        if testnet_export_path:
-            bt.logging.info(f"Testnet upload payload saved at: {testnet_export_path}")
-        bt.logging.info(f"JSON file preserved at: {json_path}")
-        bt.logging.info(f"Run directory preserved at: {run_dir}")
+        try:
+            for name in os.listdir(results_dir):
+                path = os.path.join(results_dir, name)
+                if os.path.abspath(path) == os.path.abspath(json_path):
+                    continue
+                if os.path.isdir(path):
+                    shutil.rmtree(path)
+                else:
+                    os.remove(path)
+            bt.logging.info(f"Testnet: kept results file at: {json_path}")
+        except Exception as e:
+            bt.logging.error(f"Testnet cleanup failed: {e}")
+            bt.logging.info(f"Testnet results file at: {json_path}")
     else:
         bt.logging.warning("Upload failed. Keeping local files for debugging.")
         bt.logging.warning("You might want to reach out to the MIID team to add your hotkey to the allowlist.")
