@@ -339,25 +339,25 @@ def get_image_variation_rewards(
     # ── 2. Grade each miner ───────────────────────────────────────────────────
     requested_types = [v.get("type", "") for v in selected_variations]
 
-    # Option A: if the API only graded a sampled variation slot, restrict
-    # scoring to that type so ungraded slots don't collapse the average and
-    # block the identity threshold gate.  Falls back to all requested types
-    # when sampled_variation is absent or doesn't match a requested type.
-    if sampled_variation and sampled_variation in requested_types:
-        effective_types = [sampled_variation]
+    # The API samples exactly one variation slot and returns only that one
+    # submission per miner.  sampled_variation is an aux_type (e.g.
+    # "background_in", "screen_replay_1", "lighting_edit_expression_edit_1")
+    # which is NOT a member of requested_types (base types like "background_edit"),
+    # so membership checks are never used.  We detect sampled-only mode by
+    # whether the API call succeeded and a sampled_variation was returned.
+    score_sampled_only = bool(sampled_variation and api_succeeded)
+    num_graded = 1 if score_sampled_only else max(len(requested_types), 1)
+
+    if score_sampled_only:
         bt.logging.info(
-            f"Scoring against sampled variation only: {sampled_variation!r} "
+            f"Scoring single sampled variation slot: {sampled_variation!r} "
             f"(1 of {len(requested_types)} requested types)."
         )
-    else:
-        effective_types = requested_types
-        if sampled_variation:
-            bt.logging.warning(
-                f"sampled_variation {sampled_variation!r} not in requested types "
-                f"{requested_types}; falling back to all {len(requested_types)} types."
-            )
-
-    num_graded = max(len(effective_types), 1)
+    elif sampled_variation:
+        bt.logging.warning(
+            f"sampled_variation={sampled_variation!r} present but api_succeeded=False; "
+            f"falling back to scoring all {len(requested_types)} requested types."
+        )
 
     rewards = np.zeros(len(miner_uids), dtype=float)
     detailed_metrics: List[Dict] = []
@@ -372,40 +372,64 @@ def get_image_variation_rewards(
         miner_result = results_by_miner.get(str(uid), {})
         raw_submissions = miner_result.get("submissions", [])
 
-        # Build type → first-matching submission lookup
-        submission_by_type: Dict[str, Dict] = {}
-        for sub in raw_submissions:
-            vtype = sub.get("variation_type", "")
-            if vtype and vtype not in submission_by_type:
-                submission_by_type[vtype] = sub
-
-        # Score each graded slot only; a missing submission for the graded slot
-        # still counts as 0 (miner did not submit for this variation type).
-        per_variation: List[Dict] = []
-        for vtype in effective_types:
-            sub = submission_by_type.get(vtype)
+        if score_sampled_only:
+            # The API returned exactly one submission per miner — the sampled
+            # slot.  Use it directly; do not attempt type-based matching since
+            # the aux_type label may differ from the base variation_type.
+            sub = raw_submissions[0] if raw_submissions else None
             if sub is None:
-                per_variation.append({
-                    "variation_type": vtype,
+                per_variation: List[Dict] = [{
+                    "variation_type": sampled_variation,
                     "submitted": False,
                     "validation_score_raw": 0,
                     "validation_score_norm": 0.0,
                     "identity_preservation": 0.0,
-                })
+                }]
             else:
                 vs_raw = int(sub.get("validation_score") or 0)
                 ip = float(sub.get("identity_preservation") or 0.0)
-                per_variation.append({
-                    "variation_type": vtype,
+                per_variation = [{
+                    "variation_type": sub.get("variation_type", sampled_variation),
                     "submitted": True,
                     "validation_score_raw": vs_raw,
                     "validation_score_norm": vs_raw / 5.0,
                     "identity_preservation": ip,
                     "comment": sub.get("comment", ""),
                     "status": sub.get("status", ""),
-                })
+                }]
+        else:
+            # Fallback: API failed or no sampled_variation.
+            # Score all requested types; missing submissions count as 0.
+            submission_by_type: Dict[str, Dict] = {}
+            for sub in raw_submissions:
+                vtype = sub.get("variation_type", "")
+                if vtype and vtype not in submission_by_type:
+                    submission_by_type[vtype] = sub
 
-        # Average over graded slots only (num_graded = 1 when API sampled one type)
+            per_variation = []
+            for vtype in requested_types:
+                sub = submission_by_type.get(vtype)
+                if sub is None:
+                    per_variation.append({
+                        "variation_type": vtype,
+                        "submitted": False,
+                        "validation_score_raw": 0,
+                        "validation_score_norm": 0.0,
+                        "identity_preservation": 0.0,
+                    })
+                else:
+                    vs_raw = int(sub.get("validation_score") or 0)
+                    ip = float(sub.get("identity_preservation") or 0.0)
+                    per_variation.append({
+                        "variation_type": vtype,
+                        "submitted": True,
+                        "validation_score_raw": vs_raw,
+                        "validation_score_norm": vs_raw / 5.0,
+                        "identity_preservation": ip,
+                        "comment": sub.get("comment", ""),
+                        "status": sub.get("status", ""),
+                    })
+
         avg_vs_norm = sum(v["validation_score_norm"] for v in per_variation) / num_graded
         avg_ip = sum(v["identity_preservation"] for v in per_variation) / num_graded
 
@@ -423,7 +447,6 @@ def get_image_variation_rewards(
             "per_variation_scores": per_variation,
             "avg_validation_score": float(avg_vs_norm),
             "avg_identity_preservation": float(avg_ip),
-            # final_reward kept as avg_vs_norm for downstream logging clarity
             "final_reward": float(avg_vs_norm),
         })
 
