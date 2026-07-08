@@ -147,67 +147,98 @@ UPLOAD_RETRY_DELAY_SECONDS = 60
 PHASE4_ENABLED = True
 
 
-async def query_miners(
+async def dendrite_with_retries(
     dendrite: bt.Dendrite,
     axons: list,
     synapse: IdentitySynapse,
     deserialize: bool,
     timeout: float,
+    cnt_attempts: int = 3,
 ):
     """
-    Send a single request to miners with a fixed timeout. No retries.
-
-    Miners get exactly one window to respond. Any miner that fails, times out,
-    or sends an error receives a default empty response — no second chances.
-    This prevents coordinated first-attempt failures from being used to gain
-    extra submission time.
+    Send requests to miners with automatic retry logic for failed connections.
 
     Args:
-        dendrite:    The dendrite object to use for communication.
-        axons:       List of axons to query.
-        synapse:     The synapse object containing the request.
-        deserialize: Whether to deserialize the response.
-        timeout:     Fixed timeout in seconds. Not extended under any condition.
+        dendrite:     The dendrite object to use for communication.
+        axons:        List of axons to query.
+        synapse:      The synapse object containing the request.
+        deserialize:  Whether to deserialize the response.
+        timeout:      Timeout per attempt in seconds.
+        cnt_attempts: Number of retry attempts for failed connections.
 
     Returns:
         List of IdentitySynapse responses from miners.
     """
+    res = [None] * len(axons)
+    idx = list(range(len(axons)))
+    axons_for_retry = axons.copy()
+    
     def create_default_response():
         return IdentitySynapse(
             image_request=synapse.image_request,
             s3_submissions=[],
             process_time=None,
         )
+    
+    for attempt in range(cnt_attempts):
+        responses = await dendrite(
+            axons=axons_for_retry,
+            synapse=synapse,
+            deserialize=deserialize,
+            timeout=timeout * (1 + attempt * 0.1),
+        )
+        
+        new_idx = []
+        new_axons = []
+        
+        for i, response in enumerate(responses):
+            process_time = None
+            if hasattr(response, "dendrite") and hasattr(response.dendrite, "process_time"):
+                try:
+                    process_time = float(response.dendrite.process_time)
+                except (ValueError, TypeError):
+                    process_time = None
 
-    responses = await dendrite(
-        axons=axons,
-        synapse=synapse,
-        deserialize=deserialize,
-        timeout=timeout,
-    )
-
-    res = []
-    for response in responses:
-        process_time = None
-        if hasattr(response, "dendrite") and hasattr(response.dendrite, "process_time"):
-            try:
-                process_time = float(response.dendrite.process_time)
-            except (ValueError, TypeError):
-                process_time = None
-
-        if hasattr(response, 'dendrite'):
-            response.process_time = process_time
-            res.append(response)
-        elif hasattr(response, 's3_submissions'):
-            response.process_time = process_time
-            res.append(response)
-        else:
-            res.append(create_default_response())
-
-    # Safety: pad to match axon count if dendrite returned fewer items
-    while len(res) < len(axons):
-        res.append(create_default_response())
-
+            if hasattr(response, 'dendrite'):
+                if (response.dendrite.status_code is not None
+                        and int(response.dendrite.status_code) == 422):
+                    if attempt == cnt_attempts - 1:
+                        res[idx[i]] = response
+                    else:
+                        new_idx.append(idx[i])
+                        new_axons.append(axons_for_retry[i])
+                else:
+                    response.process_time = process_time  # <-- attach it
+                    res[idx[i]] = response
+            
+            else:
+                if hasattr(response, 's3_submissions'):
+                    response.process_time = process_time
+                    res[idx[i]] = response
+                else:
+                    # Retry or assign default
+                    if attempt == cnt_attempts - 1:
+                        res[idx[i]] = create_default_response()
+                    else:
+                        new_idx.append(idx[i])
+                        new_axons.append(axons_for_retry[i])
+        
+        if len(new_idx) <= 50:  # Only retry if more than 50 miners failed
+            bt.logging.info(f"Only {len(new_idx)} miners failed (≤50 threshold). Giving them default responses instead of retrying.")
+            # Give default responses to failed miners
+            for i in new_idx:
+                res[i] = create_default_response()
+            break
+        
+        idx = new_idx
+        axons_for_retry = new_axons
+        await asyncio.sleep(5 * (attempt + 1))
+    
+    # Fill any remaining None
+    for i, r in enumerate(res):
+        if r is None:
+            res[i] = create_default_response()
+    
     return res
 
 
@@ -362,12 +393,13 @@ async def forward(self):
         bt.logging.info(f"Processing batch {i//batch_size + 1}/{total_batches} with {len(batch_uids)} miners")
         batch_start_time = time.time()
         
-        batch_responses = await query_miners(
+        batch_responses = await dendrite_with_retries(
             dendrite=self.dendrite,
             axons=batch_axons,
             synapse=request_synapse,
             deserialize=False,
             timeout=request_timeout,
+            cnt_attempts=3,
         )
         
         batch_duration = time.time() - batch_start_time
