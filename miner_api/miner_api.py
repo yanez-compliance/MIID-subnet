@@ -8,10 +8,31 @@ import bittensor
 # Edit these variables directly in the file
 wallet_name = "miner"  # Your wallet name
 wallet_hotkey = "m"  # Your hotkey name
-api_url = "http://98.90.28.118:5001/validate"  # API endpoint URL
+api_base_url = "http://98.90.28.118:5001"  # API base URL (no endpoint path)
 image_dir = Path(__file__).parent / "image"  # Folder containing the image to send
 
 IMAGE_EXTENSIONS = {".png", ".jpg", ".jpeg", ".webp", ".bmp"}
+
+# Available endpoints on the API
+ENDPOINTS = {
+    "1": "is_live",  # Screen replay / liveness check
+    "2": "is_ai",    # Face variations / AI-generated face detection
+}
+
+
+def choose_endpoint() -> str:
+    """Prompt the user to pick which endpoint to call."""
+    while True:
+        print("\nWhich check do you want to run?")
+        print("  1) is_live  - Screen replay / liveness check")
+        print("  2) is_ai    - Face variations / AI-generated face detection")
+        choice = input("Enter 1 or 2 (or 'is_live'/'is_ai'): ").strip().lower()
+
+        if choice in ENDPOINTS:
+            return ENDPOINTS[choice]
+        if choice in ENDPOINTS.values():
+            return choice
+        print("Invalid selection. Please try again.")
 
 
 def get_image_path(directory: Path) -> Path:
@@ -70,8 +91,11 @@ def sign_message(wallet: bittensor.Wallet, message_text: str = "API Request") ->
 
 
 def main():
+    endpoint = choose_endpoint()
+    api_url = f"{api_base_url}/{endpoint}"
+
     image_path = get_image_path(image_dir)
-    print(f"Sending image: {image_path.name}")
+    print(f"Sending image: {image_path.name} -> {api_url}")
 
     wallet = bittensor.Wallet(name=wallet_name, hotkey=wallet_hotkey)
     
