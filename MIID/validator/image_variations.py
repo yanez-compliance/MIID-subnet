@@ -8,6 +8,19 @@ from typing import List, Dict, Any
 
 
 # =============================================================================
+# Shared image requirement text (attached to every variation request)
+# =============================================================================
+
+# This text is appended to every VariationRequest so each variation the miner
+# generates carries the same composition/resolution constraints.
+IMAGE_VARIATION_REQUIREMENTS = (
+    "All images are Professional passport-style portraits, 3:4 aspect ratio, "
+    "head-and-shoulders composition from chest up. "
+    "Recommended output resolution: 1015 x 1350 pixels."
+)
+
+
+# =============================================================================
 # Image Variation Type Definitions (YEVS-style)
 # =============================================================================
 
@@ -363,8 +376,7 @@ def format_variation_requirements(variations: List[Dict[str, str]]) -> str:
     lines = [
         "",
         "[IMAGE VARIATION REQUIREMENTS]",
-        "For the face image provided, generate the following variations while preserving identity. All images are Professional passport-style portraits, 3:4 aspect ratio, head-and-shoulders composition from chest up.",
-        "Recommended output resolution: 1015 x 1350 pixels.",
+        f"For the face image provided, generate the following variations while preserving identity. {IMAGE_VARIATION_REQUIREMENTS}",
         ""
     ]
 

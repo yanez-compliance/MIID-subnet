@@ -59,6 +59,7 @@ from MIID.validator.drand_utils import (
 from MIID.validator.image_variations import (
     build_standard_challenge_variations,
     format_variation_requirements,
+    IMAGE_VARIATION_REQUIREMENTS,
 )
 
 
@@ -331,7 +332,7 @@ async def forward(self):
                         type=v["type"],
                         intensity=v["intensity"],
                         description=v["description"],
-                        detail=v["detail"],
+                        detail=f"{v['detail']}. {IMAGE_VARIATION_REQUIREMENTS}",
                     )
                     for v in selected_variations
                 ]
