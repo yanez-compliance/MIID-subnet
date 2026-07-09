@@ -59,7 +59,7 @@ wallet=${1:-owner}
 setup_environment() {
     # Clone subtensor and enter the directory
     if [ ! -d "subtensor" ]; then
-        git clone https://github.com/opentensor/subtensor.git
+        git clone https://github.com/RaoFoundation/subtensor.git
     fi
     cd subtensor
     git pull
