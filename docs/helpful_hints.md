@@ -9,6 +9,37 @@ This document provides quick reference guides and helpful hints for running MIID
 - [Logging Guide](logging.md) - Understanding and managing logs
 - [Validator Guide](validator.md) - Running and managing validators
 - [Miner Guide](miner.md) - Running and managing miners
+- [Yanez Tao Dashboard](https://tao-ui-dashboard.yanez.ai/) - Miner leaderboards and face submissions
+
+## Miner Dashboard
+
+Track live miner performance on the [Yanez Tao Dashboard](https://tao-ui-dashboard.yanez.ai/).
+
+### Dashboard Overview
+
+The dashboard contains three tabs:
+
+1. **KAV Leaderboard**
+2. **Reputation Leaderboard**
+3. **Face Dashboard**
+
+### KAV Leaderboard
+
+The **KAV Leaderboard** previously displayed identity preservation scores. Since identity is no longer evaluated as a standalone metric, the leaderboard is being updated to display each miner's **Live KAV prediction score** instead.
+
+At the moment, the KAV Leaderboard still requires a few adjustments. It has not yet been fully updated with the latest changes, but it is already capable of displaying miners' current Live KAV scores.
+
+### Reputation Leaderboard
+
+The **Reputation Leaderboard** displays each miner's **UAV (Unknown Attack Vector)** reputation score from the **previous cycle 3**. These are the scores used to allocate the remaining rewards during the current cycle.
+
+Since these scores are already finalized, the only change you'll notice throughout the cycle is that they gradually decrease as rewards are distributed to miners.
+
+### Face Dashboard
+
+The **Face Dashboard** shows all of the images submitted during the current cycle, along with a **predicted quality score** generated from the initial automated assessment.
+
+These scores are **predictions only**. At the end of each cycle, every image is still sent to a manual reviewer for post-validation. Because of this, the displayed scores should not be considered final and may change after manual review.
 
 ## Common Issues and Solutions
 
@@ -156,6 +187,7 @@ These are the main places miners execute work and can tune behavior (different i
 - [Logging Guide](logging.md) - Log management and analysis
 - [Validator Guide](validator.md) - Validator operations
 - [Miner Guide](miner.md) - Miner operations
+- [Yanez Tao Dashboard](https://tao-ui-dashboard.yanez.ai/) - KAV, reputation, and face submission views
 
 ## Support
 
