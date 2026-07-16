@@ -353,6 +353,33 @@ def add_validator_args(cls, parser):
     )
 
 
+def _nest_dotted_keys(cfg):
+    """Convert dot-notation flat keys in bt.Config to nested namespace objects.
+
+    bittensor >= 10.3.0 removed the munch library, so bt.Config no longer
+    auto-nests argparse dest keys like 'neuron.name' into config.neuron.name.
+    This function restores that nesting so the rest of the codebase is unchanged.
+    """
+    flat_keys = {k: v for k, v in vars(cfg).items() if "." in k}
+    for dotted_key in flat_keys:
+        try:
+            delattr(cfg, dotted_key)
+        except AttributeError:
+            pass
+
+    for dotted_key, value in flat_keys.items():
+        parts = dotted_key.split(".")
+        obj = cfg
+        for part in parts[:-1]:
+            existing = getattr(obj, part, None)
+            if not isinstance(existing, argparse.Namespace):
+                setattr(obj, part, argparse.Namespace())
+            obj = getattr(obj, part)
+        setattr(obj, parts[-1], value)
+
+    return cfg
+
+
 def config(cls):
     """
     Returns the configuration object specific to this miner or validator
@@ -364,4 +391,7 @@ def config(cls):
     bt.logging.add_args(parser)
     bt.Axon.add_args(parser)
     cls.add_args(parser)
-    return bt.Config(parser)
+    cfg = bt.Config(parser)
+    # bittensor >= 10.3.0 removed munch; manually nest dot-notation keys
+    _nest_dotted_keys(cfg)
+    return cfg
