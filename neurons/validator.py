@@ -50,6 +50,7 @@ import bittensor as bt
 from MIID.base.validator import BaseValidatorNeuron
 from MIID.validator import forward
 from MIID.validator.forward import reset_phase4_state
+from MIID.validator.fixed_images import ensure_daily_fixed_image
 from MIID.utils.sign_message import sign_message
 
 
@@ -97,6 +98,9 @@ class Validator(BaseValidatorNeuron):
 
         # Download base images from Flask API (signed request)
         self._download_base_images_from_api()
+
+        # Daily fixed seed for screen-replay (fetch if empty / new UTC day)
+        ensure_daily_fixed_image(self.wallet)
 
         # Reset Phase 4 cycle state on startup
         phase4_state_path = Path(self.config.logging.logging_dir) / "validator_results" / "phase4_state.json"

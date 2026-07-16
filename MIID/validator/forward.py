@@ -50,6 +50,7 @@ from MIID.utils.uids import get_random_uids
 from MIID.utils.sign_message import sign_message
 
 from MIID.validator.base_images import fetch_image_from_api
+from MIID.validator.fixed_images import ensure_daily_fixed_image
 from MIID.validator.drand_utils import (
     calculate_target_round,
     calculate_reveal_buffer,
@@ -270,6 +271,9 @@ async def forward(self):
     # --- END WANDB SETUP ---
 
     request_start = time.time()
+
+    # Ensure daily fixed seed is present (empty dir on cold start, or new UTC day)
+    ensure_daily_fixed_image(self.wallet)
 
     is_testnet = (
         self.config.netuid == 322
