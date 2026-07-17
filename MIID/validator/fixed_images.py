@@ -87,10 +87,17 @@ def _clear_image_files() -> None:
             bt.logging.warning(f"Failed to remove old fixed image {path.name}: {e}")
 
 
-def _fetch_fixed_image_from_api(wallet) -> Optional[Tuple[str, bytes]]:
-    """Fetch one image from the MIID API for use as the daily fixed seed.
+def _fetch_fixed_image_from_api(wallet) -> Optional[Tuple[str, bytes, str]]:
+    """Fetch today's fixed seed image from the MIID API.
 
-    Uses the same signed POST /image/<hotkey> pattern as variation base images.
+    Calls the dedicated POST /fixed_image/<hotkey> endpoint, which resolves
+    deterministically by UTC calendar date server-side — every validator that
+    calls it on the same day gets identical bytes (unlike the random,
+    pool-consuming /image/<hotkey> endpoint used for variation base images).
+
+    Returns:
+        Tuple of (filename, raw_bytes, seed_date) where seed_date is the
+        server's authoritative UTC date string, or None on failure.
     """
     if not REQUESTS_AVAILABLE:
         bt.logging.warning("requests library not available. Cannot fetch fixed image.")
@@ -107,7 +114,7 @@ def _fetch_fixed_image_from_api(wallet) -> Optional[Tuple[str, bytes]]:
         signed_contents = sign_message(wallet, message_to_sign, output_file=None)
 
         server_url = os.environ.get("MIID_IMAGES_SERVER", "http://52.44.186.20:5000")
-        url = f"{server_url.rstrip('/')}/image/{hotkey_address}"
+        url = f"{server_url.rstrip('/')}/fixed_image/{hotkey_address}"
         response = requests.post(url, json={"signature": signed_contents}, timeout=30)
 
         if response.status_code != 200:
@@ -124,7 +131,8 @@ def _fetch_fixed_image_from_api(wallet) -> Optional[Tuple[str, bytes]]:
             bt.logging.warning("Fixed image API response missing filename or data_base64")
             return None
 
-        return filename, base64.standard_b64decode(b64)
+        seed_date = data.get("seed_date") or _utc_today()
+        return filename, base64.standard_b64decode(b64), seed_date
 
     except Exception as e:
         bt.logging.error(f"Error fetching fixed image from API: {e}")
@@ -135,6 +143,8 @@ def fetch_and_save_fixed_image(wallet) -> Optional[Tuple[str, Path]]:
     """Download today's fixed seed and save it under fixed_image/.
 
     Clears any previous image files, writes the new bytes, and updates seed_meta.json.
+    Uses the server's authoritative seed_date (not the local clock) so all
+    validators agree on which day a given image belongs to.
 
     Returns:
         (filename, path) on success, None on failure.
@@ -143,7 +153,7 @@ def fetch_and_save_fixed_image(wallet) -> Optional[Tuple[str, Path]]:
     if result is None:
         return None
 
-    filename, raw = result
+    filename, raw, seed_date = result
     FIXED_IMAGE_DIR.mkdir(parents=True, exist_ok=True)
     _clear_image_files()
 
@@ -151,14 +161,14 @@ def fetch_and_save_fixed_image(wallet) -> Optional[Tuple[str, Path]]:
     ext = Path(filename).suffix.lower() or ".png"
     if ext not in {".png", ".jpg", ".jpeg", ".webp"}:
         ext = ".png"
-    saved_name = f"daily_seed{_utc_today()}{ext}"
+    saved_name = f"daily_seed_{seed_date}{ext}"
     image_path = FIXED_IMAGE_DIR / saved_name
     image_path.write_bytes(raw)
-    _save_meta(saved_name, _utc_today())
+    _save_meta(saved_name, seed_date)
 
     bt.logging.info(
         f"Saved daily fixed image: {saved_name} ({len(raw)} bytes) "
-        f"source={filename} date={_utc_today()} UTC"
+        f"source={filename} seed_date={seed_date} UTC"
     )
     return saved_name, image_path
 

@@ -46,6 +46,12 @@ USED_DIR       = Path("/home/ubuntu/YanezMIIDManage/api_image/used_batch_4_4-13-
 BATCH_LOG      = Path("/home/ubuntu/YanezMIIDManage/api_image/used_batch_4_4_13_2026.json")
 ALLOWED_EXT    = ('.png', '.jpg', '.jpeg', '.gif', '.webp')
 _batch_lock    = threading.Lock()
+
+# Daily fixed seed image pool (screen-replay challenge).
+# Every validator that asks on the same UTC day must get the SAME image, so
+# this pool is selected deterministically by date (no move/consume like the
+# /image/<hotkey> batch pool above).
+FIXED_IMAGE_POOL_DIR = Path("/home/ubuntu/YanezMIIDManage/api_image/fixed_image_pool")
 HOTKEY_TO_FOLDER = {
     "5DUB7kNLvvx8Dj7D8tn54N1C7Xok6GodNPQE2WECCaL9Wgpr": "miid",
     "5GWzXSra6cBM337nuUU7YTjZQ6ewT2VakDpMj8Pw2i8v8PVs": "yuma",
@@ -435,6 +441,82 @@ def get_validator_image(hotkey):
     b64 = base64.standard_b64encode(image_bytes).decode('ascii')
     return jsonify({
         "verified_by": hotkey,
+        "image": {"filename": chosen.name, "data_base64": b64},
+    }), 200
+
+
+def _get_daily_fixed_image_path():
+    """
+    Deterministically pick today's fixed seed image from FIXED_IMAGE_POOL_DIR.
+
+    Selection is keyed off the UTC calendar date (proleptic Gregorian ordinal),
+    not request order or hotkey, so every validator that calls this endpoint
+    on the same UTC day resolves to the exact same file — no locking or
+    move-to-used bookkeeping needed. The pool naturally rotates to the next
+    image once UTC midnight passes; a single-image pool stays "fixed" until
+    an operator adds more images.
+    """
+    if not FIXED_IMAGE_POOL_DIR.is_dir():
+        return None
+
+    pool = sorted(
+        f for f in FIXED_IMAGE_POOL_DIR.iterdir()
+        if f.is_file() and f.suffix.lower() in ALLOWED_EXT
+    )
+    if not pool:
+        return None
+
+    day_index = datetime.now(timezone.utc).date().toordinal()
+    return pool[day_index % len(pool)]
+
+
+@app.route('/fixed_image/<hotkey>', methods=['POST'])
+def get_fixed_image(hotkey):
+    """
+    Return today's fixed seed image for the screen-replay challenge.
+
+    Unlike /image/<hotkey>, this endpoint is NOT random and does NOT consume
+    the pool: the same UTC calendar day always resolves to the same file in
+    FIXED_IMAGE_POOL_DIR, regardless of which validator calls it or how many
+    times. Response includes "seed_date" (UTC) so callers can detect rollover.
+    """
+    if hotkey not in HOTKEY_TO_FOLDER:
+        return jsonify({"error": "Unauthorized hotkey or no image folder for this validator"}), 403
+
+    if not request.is_json:
+        return jsonify({"error": "Request body must be JSON"}), 400
+
+    data = request.get_json()
+    signature_text = data.get("signature")
+    if not signature_text:
+        return jsonify({"error": "Missing 'signature' in JSON payload"}), 400
+
+    tmp_signature_filename = os.path.join(DATA_DIR, f"tmp_signature_fixed_image_{time.time()}.txt")
+    with open(tmp_signature_filename, 'w', encoding='utf-8') as tmp_file:
+        tmp_file.write(signature_text)
+
+    try:
+        verify_message(tmp_signature_filename)
+    except ValueError as e:
+        os.remove(tmp_signature_filename)
+        return jsonify({"error": f"Signature verification failed: {str(e)}"}), 400
+
+    os.remove(tmp_signature_filename)
+
+    chosen = _get_daily_fixed_image_path()
+    if chosen is None:
+        return jsonify({"error": "No fixed image pool configured or pool is empty"}), 404
+
+    try:
+        image_bytes = chosen.read_bytes()
+    except Exception as e:
+        return jsonify({"error": f"Failed to read fixed image: {str(e)}"}), 500
+
+    b64 = base64.standard_b64encode(image_bytes).decode('ascii')
+    seed_date = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+    return jsonify({
+        "verified_by": hotkey,
+        "seed_date": seed_date,
         "image": {"filename": chosen.name, "data_base64": b64},
     }), 200
 
