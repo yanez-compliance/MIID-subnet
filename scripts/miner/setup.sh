@@ -289,11 +289,11 @@ ensure_btcli_works() {
   python -c "import cyscale"    >/dev/null 2>&1 && has_cyscale="yes"
 
   if [ "$has_scalecodec" = "yes" ] && [ "$has_cyscale" = "yes" ]; then
-    warn_msg "Both 'scalecodec' and 'cyscale' detected. Removing legacy 'scalecodec'."
-    pip uninstall -y scalecodec >/dev/null 2>&1 || true
+    warn_msg "Both 'scalecodec' and 'cyscale' detected. Removing legacy 'scalecodec' (and 'substrate-interface', which depends on it)."
+    pip uninstall -y scalecodec substrate-interface >/dev/null 2>&1 || true
   elif [ "$has_scalecodec" = "yes" ] && [ "$has_cyscale" = "no" ]; then
     info_msg "Only 'scalecodec' installed; reinstalling 'cyscale' for async-substrate-interface compat."
-    pip uninstall -y scalecodec >/dev/null 2>&1 || true
+    pip uninstall -y scalecodec substrate-interface >/dev/null 2>&1 || true
     pip install --force-reinstall cyscale >/dev/null 2>&1 || warn_msg "Could not install 'cyscale'. btcli may fail to start."
   fi
 
@@ -301,7 +301,7 @@ ensure_btcli_works() {
     success_msg "btcli is ready."
   else
     warn_msg "btcli could not start. Attempting recovery (uninstall scalecodec, reinstall cyscale)..."
-    pip uninstall -y scalecodec cyscale >/dev/null 2>&1 || true
+    pip uninstall -y scalecodec substrate-interface cyscale >/dev/null 2>&1 || true
     pip install --force-reinstall cyscale >/dev/null 2>&1 || true
     if btcli --version >/dev/null 2>&1; then
       success_msg "btcli is ready after recovery."
