@@ -4,7 +4,7 @@
 # Defines variation types with intensity bins for face image variations.
 
 import random
-from typing import List, Dict, Any
+from typing import List, Dict, Any, Optional
 
 
 # =============================================================================
@@ -647,20 +647,25 @@ def get_random_combined_variation(var_types: List[str]) -> Dict[str, Any]:
 
 
 def build_standard_challenge_variations() -> List[Dict[str, Any]]:
-    """Build the standard 6-variation challenge set.
+    """Build the standard 5-variation synthetic (FLUX-generated) challenge set.
 
     Order:
     1. background_edit (indoor)
     2. background_edit (outdoor)
-    3. screen_replay
-    4. lighting_edit + expression_edit
-    5. lighting_edit + pose_edit
-    6. pose_edit + expression_edit
+    3. lighting_edit + expression_edit
+    4. lighting_edit + pose_edit
+    5. pose_edit + expression_edit
+
+    NOTE: screen_replay is intentionally NOT part of this set anymore. It is
+    no longer a synthetic/FLUX-generated variation requested every round —
+    it is a REAL physical screen capture the miner submits at most once per
+    UTC day using the daily fixed seed image. See
+    format_real_screen_replay_instructions() for the miner-facing task text,
+    and ScreenReplayUAV in MIID/protocol.py for the reported metadata.
     """
     return [
         get_random_indoor_background_variation(),
         get_random_outdoor_background_variation(),
-        select_screen_replay_variation(),
         get_random_combined_variation(["lighting_edit", "expression_edit"]),
         get_random_combined_variation(["lighting_edit", "pose_edit"]),
         get_random_combined_variation(["pose_edit", "expression_edit"]),
@@ -789,6 +794,114 @@ def select_screen_replay_variation() -> Dict[str, str]:
         "device_type": selected_device,
         "visual_cue_keys": selected_cue_keys,
     }
+
+
+def validate_screen_replay_uav(uav: Any) -> bool:
+    """Validate a miner's ScreenReplayUAV checklist for a real screen-replay capture.
+
+    Mirrors validate_variation_request() but for the UAV metadata attached to
+    the screen_replay S3Submission: checks that free-text fields are present,
+    device_photographed is a recognized device, and every cue key defined in
+    SCREEN_REPLAY_VISUAL_CUES was reported as a bool (miners always report all
+    five cues, regardless of how many are actually visible).
+
+    Accepts either a ScreenReplayUAV instance (typical, since
+    S3Submission.screen_replay_uav is already parsed by pydantic) or an
+    equivalent plain dict.
+
+    Args:
+        uav: ScreenReplayUAV instance or dict to validate
+
+    Returns:
+        True if the checklist is well-formed
+    """
+    if uav is None:
+        return False
+
+    def _get(field: str) -> Any:
+        return uav.get(field) if isinstance(uav, dict) else getattr(uav, field, None)
+
+    for field in ("seed_image", "date", "camera_used", "device_photographed"):
+        value = _get(field)
+        if not isinstance(value, str) or not value.strip():
+            return False
+
+    if _get("device_photographed") not in SCREEN_REPLAY_DEVICE_TYPES:
+        return False
+
+    for cue_key in SCREEN_REPLAY_VISUAL_CUES:
+        if not isinstance(_get(cue_key), bool):
+            return False
+
+    return True
+
+
+# =============================================================================
+# Real Screen Replay Instructions (physical capture, NOT FLUX-generated)
+# =============================================================================
+
+REAL_SCREEN_REPLAY_REQUIREMENTS = (
+    "This is a REAL physical photograph, not an AI-generated image. Do not use "
+    "FLUX or any generator for this task — the daily seed image must be "
+    "displayed on an actual screen and photographed with a separate camera."
+)
+
+
+def format_real_screen_replay_instructions(seed_filename: Optional[str] = None) -> str:
+    """Build the miner-facing instructions for the real screen-replay task.
+
+    Explains the one-per-UTC-day physical capture that accompanies the daily
+    fixed seed image (sent alongside the synthetic variation base image, see
+    ImageRequest.daily_seed_image in MIID/protocol.py): display the seed on a
+    real device screen, photograph it with a different physical camera, and
+    submit it the same way as any other variation, with a filled-out
+    ScreenReplayUAV report attached.
+
+    Args:
+        seed_filename: Filename of today's daily seed image, if known —
+            included in the instructions so miners can reference it in their
+            ScreenReplayUAV.seed_image field.
+
+    Returns:
+        Formatted instructions string to send to miners alongside the request.
+    """
+    device_list = ", ".join(SCREEN_REPLAY_DEVICE_TYPES)
+    cue_lines = "\n".join(
+        f"   - {key}: {desc}" for key, desc in SCREEN_REPLAY_VISUAL_CUES.items()
+    )
+    seed_line = (
+        f"Today's daily seed image: {seed_filename}"
+        if seed_filename
+        else "Today's daily seed image is attached as daily_seed_image."
+    )
+
+    lines = [
+        "",
+        "[REAL SCREEN-REPLAY CAPTURE — separate from the image variations above]",
+        "At most once per UTC day, you may submit a REAL screen-replay capture "
+        "using the daily fixed seed image. This is independent of the request/"
+        "response cycle above — submit it whenever you've taken the photo, to "
+        "any validator.",
+        "",
+        seed_line,
+        REAL_SCREEN_REPLAY_REQUIREMENTS,
+        "",
+        "How to capture it:",
+        f"1. Display the daily seed image on a real device screen ({device_list}).",
+        "2. Photograph that screen with a DIFFERENT physical camera (not a screenshot).",
+        "3. Upload the photo the same way as any other variation "
+        "(variation_type=\"screen_replay\", same s3_key/signature/path_signature scheme).",
+        "4. Attach a ScreenReplayUAV report alongside that S3Submission with:",
+        "   - seed_image: filename of the daily seed you used",
+        "   - date: capture date (UTC, YYYY-MM-DD)",
+        "   - camera_used: the camera/device that took the photo",
+        f"   - device_photographed: which device you displayed the seed on ({device_list})",
+        "   - one true/false value for EVERY cue below — report honestly; a real "
+        "capture may show none, some, or all of them:",
+        cue_lines,
+        "",
+    ]
+    return "\n".join(lines)
 
 
 # =============================================================================

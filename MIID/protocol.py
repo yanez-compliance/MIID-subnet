@@ -48,6 +48,12 @@ class ImageRequest(BaseModel):
     Contains the base image and parameters for generating variations.
     The miner will generate variations, encrypt them with drand timelock,
     upload to S3, and return S3 references.
+
+    Also carries the daily fixed seed image (second image) used for the
+    REAL screen-replay task — a physical photograph, not a FLUX-generated
+    variation. Miners may submit at most one real screen-replay capture per
+    UTC day, to any validator, whenever they've taken it (not tied to this
+    request/response cycle).
     """
     base_image: str           # Base64 encoded image
     image_filename: str       # Original filename for reference
@@ -57,6 +63,11 @@ class ImageRequest(BaseModel):
     target_drand_round: int   # Drand round when decryption becomes possible
     reveal_timestamp: int     # Unix timestamp when reveal occurs
     challenge_id: Optional[str] = None  # Unique identifier for this challenge
+
+    # Daily fixed seed for the REAL screen-replay task (same for every miner/validator that day)
+    daily_seed_image: Optional[str] = None       # Base64 encoded daily seed image
+    daily_seed_filename: Optional[str] = None    # Filename of the daily seed image
+    real_screen_replay_instructions: Optional[str] = None  # Human-readable task instructions
 
     class Config:
         # Allow arbitrary types for flexibility

@@ -25,7 +25,8 @@ Validator Forward Module
 Implements the forward function that drives each validation round:
 1. Select random miners to query.
 2. Fetch a base face image from the MIID API.
-3. Build an ImageRequest (6 variations: 2 background, screen-replay, 3 combined edits).
+3. Build an ImageRequest (5 synthetic variations: 2 background, 3 combined edits;
+   plus the daily fixed seed image + instructions for the REAL screen-replay task).
 4. Send the request to miners in batches; collect S3 submission references.
 5. Grade submissions via the external grading API (KAV) using
    get_image_variation_rewards().
@@ -50,7 +51,7 @@ from MIID.utils.uids import get_random_uids
 from MIID.utils.sign_message import sign_message
 
 from MIID.validator.base_images import fetch_image_from_api
-from MIID.validator.fixed_images import ensure_daily_fixed_image
+from MIID.validator.fixed_images import ensure_daily_fixed_image, load_fixed_image_base64
 from MIID.validator.drand_utils import (
     calculate_target_round,
     calculate_reveal_buffer,
@@ -60,6 +61,7 @@ from MIID.validator.drand_utils import (
 from MIID.validator.image_variations import (
     build_standard_challenge_variations,
     format_variation_requirements,
+    format_real_screen_replay_instructions,
     IMAGE_VARIATION_REQUIREMENTS,
 )
 
@@ -251,7 +253,10 @@ async def forward(self):
     Steps:
     1.  Select random miners.
     2.  Fetch base face image from the MIID API.
-    3.  Build ImageRequest (6 variations: indoor bg, outdoor bg, screen-replay, 3 combined edits).
+    3.  Build ImageRequest (5 synthetic variations: indoor bg, outdoor bg, 3
+        combined edits; plus the daily fixed seed image + real screen-replay
+        instructions — that task is a physical capture, submitted at most
+        once per UTC day, independent of this request/response cycle).
     4.  Query miners in batches; collect S3 submission references.
     5.  Compute KAV rewards via get_image_variation_rewards() (calls grading API).
     6.  Optionally combine with UAV via apply_reputation_rewards().
@@ -312,11 +317,24 @@ async def forward(self):
             else:
                 image_filename, base64_image = image_result
 
-                # Always request (6 variations):
+                # Always request (5 synthetic variations):
                 # 1–2) background_edit: indoor + outdoor
-                # 3) screen_replay
-                # 4–6) combined edits: lighting+expression, lighting+pose, pose+expression
+                # 3–5) combined edits: lighting+expression, lighting+pose, pose+expression
+                # screen_replay is NOT included here — it's a real physical
+                # capture sent via daily_seed_image below, not FLUX-generated.
                 selected_variations = build_standard_challenge_variations()
+
+                # Daily fixed seed + instructions for the REAL screen-replay task
+                daily_seed = load_fixed_image_base64()
+                if daily_seed is None:
+                    bt.logging.warning(
+                        "Phase 4: No daily fixed seed image available; "
+                        "screen-replay instructions will be sent without a seed image."
+                    )
+                daily_seed_filename, daily_seed_b64 = daily_seed if daily_seed else (None, None)
+                real_screen_replay_instructions = format_real_screen_replay_instructions(
+                    seed_filename=daily_seed_filename
+                )
 
                 # Drand unlock at T+40 min (batch1 20m + batch2 20m); grading window T+40–60m
                 reveal_delay = calculate_reveal_buffer(
@@ -349,12 +367,12 @@ async def forward(self):
                     target_drand_round=target_round,
                     reveal_timestamp=reveal_timestamp,
                     challenge_id=challenge_id,
+                    daily_seed_image=daily_seed_b64,
+                    daily_seed_filename=daily_seed_filename,
+                    real_screen_replay_instructions=real_screen_replay_instructions,
                 )
 
                 # Log what was selected
-                screen_replay_var = selected_variations[2]
-                screen_replay_devices = screen_replay_var.get("device_type", "unknown")
-                screen_replay_cues = screen_replay_var.get("visual_cue_keys", [])
                 variation_summary = ", ".join(
                     f"{v['type']}({v['intensity']})" for v in selected_variations
                 )
@@ -362,7 +380,7 @@ async def forward(self):
                     f"Phase 4: API image + random variation selection - "
                     f"Image '{image_filename}', "
                     f"variations=[{variation_summary}], "
-                    f"screen_replay: device={screen_replay_devices}, cues={screen_replay_cues}, "
+                    f"daily_seed={daily_seed_filename or 'unavailable'}, "
                     f"Total requested: {len(selected_variations)}, "
                     f"drand round {target_round}"
                 )
