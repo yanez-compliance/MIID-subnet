@@ -73,6 +73,33 @@ class ImageRequest(BaseModel):
         return [v.type for v in self.variation_requests]
 
 
+class ScreenReplayUAV(BaseModel):
+    """Miner-reported metadata for a real screen-replay capture (UAV-style).
+
+    Attached to the S3Submission whose variation_type == "screen_replay".
+    The photo itself travels through the same s3_key/signature path as any
+    other variation; this carries the extra claims manual review needs:
+    which seed image was used, when/how it was captured, and a true/false
+    checklist for each known visual cue (see SCREEN_REPLAY_VISUAL_CUES in
+    MIID/validator/image_variations.py). All five cues are always reported —
+    a real capture may show none, some, or all of them.
+    """
+    seed_image: str            # Filename of the fixed daily seed used
+    date: str                  # Capture date, "YYYY-MM-DD" (UTC)
+    camera_used: str           # Camera/device used to take the photo
+    device_photographed: str   # Device the seed was displayed on (phone/tablet/laptop/monitor/tv)
+
+    # Cue checklist — one bool per cue key in SCREEN_REPLAY_VISUAL_CUES
+    moire_pixel_grid: bool               # Interference pattern from screen subpixels
+    screen_glare_hotspots: bool          # Specular reflections on the display surface
+    perspective_keystone_distortion: bool  # Geometric distortion from off-angle capture
+    gamma_contrast_shift: bool           # Colour/brightness characteristics of display capture
+    edge_crop_cues: bool                 # Screen borders, bezel reflections, or cropping
+
+    class Config:
+        arbitrary_types_allowed = True
+
+
 class S3Submission(BaseModel):
     """Phase 4: Miner's S3 submission response.
 
@@ -89,6 +116,9 @@ class S3Submission(BaseModel):
     signature: str        # Wallet signature proving ownership
     variation_type: str   # Which variation type this submission addresses
     path_signature: str   # Unique path component: sign(challenge_id:miner_hotkey)[:16]
+
+    # Only populated when variation_type == "screen_replay"
+    screen_replay_uav: Optional[ScreenReplayUAV] = None
 
     class Config:
         arbitrary_types_allowed = True
