@@ -847,6 +847,47 @@ REAL_SCREEN_REPLAY_REQUIREMENTS = (
 )
 
 
+def build_screen_replay_uav_template(seed_filename: Optional[str] = None) -> str:
+    """Return a fill-in-the-blank ScreenReplayUAV template that miners copy-paste.
+
+    The template is intentionally minimal: every field the miner must supply
+    appears on its own line with a short placeholder.  The seed_image and date
+    fields are pre-filled when the information is available.
+
+    Args:
+        seed_filename: Filename of today's daily seed image (pre-fills seed_image).
+
+    Returns:
+        A multi-line string block the miner copies, fills in, and attaches to
+        their S3Submission as screen_replay_uav.
+    """
+    import datetime as _dt
+    today_utc = _dt.datetime.now(_dt.timezone.utc).strftime("%Y-%m-%d")
+    seed_value = seed_filename or "FILL_IN_seed_filename"
+    device_options = "/".join(SCREEN_REPLAY_DEVICE_TYPES)
+
+    lines = [
+        "# ════════════════════════════════════════════════",
+        "# SCREEN-REPLAY SUBMISSION TEMPLATE  (copy & fill)",
+        "# ════════════════════════════════════════════════",
+        f'seed_image:               "{seed_value}"      # DO NOT CHANGE — use today\'s seed',
+        f'date:                     "{today_utc}"          # UTC capture date YYYY-MM-DD',
+        'camera_used:              "YOUR_CAMERA_OR_PHONE"  # e.g. "iPhone 15 Pro"',
+        f'device_photographed:      "phone"               # one of: {device_options}',
+        "#",
+        "# Mark each cue true if clearly visible in your photo, false otherwise.",
+        "# Report honestly — graders will verify. Real photos may show 0–5 cues.",
+        "#",
+        "moire_pixel_grid:              false  # interference pattern from screen subpixels",
+        "screen_glare_hotspots:         false  # specular reflections on display surface",
+        "perspective_keystone_distortion: false  # geometric distortion from off-angle shot",
+        "gamma_contrast_shift:          false  # colour/brightness of display capture",
+        "edge_crop_cues:                false  # screen borders, bezel, or cropping visible",
+        "# ════════════════════════════════════════════════",
+    ]
+    return "\n".join(lines)
+
+
 def format_real_screen_replay_instructions(seed_filename: Optional[str] = None) -> str:
     """Build the miner-facing instructions for the real screen-replay task.
 
@@ -857,6 +898,13 @@ def format_real_screen_replay_instructions(seed_filename: Optional[str] = None) 
     submit it the same way as any other variation, with a filled-out
     ScreenReplayUAV report attached.
 
+    Includes a ready-to-fill template block (see build_screen_replay_uav_template)
+    so miners only need to change the values they know.
+
+    ⚠️  SPAM RULE: submit at most ONE screen-replay per UTC day.
+        A second submission from the same miner on the same day will be
+        penalised — do not re-submit even if you think the first was bad.
+
     Args:
         seed_filename: Filename of today's daily seed image, if known —
             included in the instructions so miners can reference it in their
@@ -866,39 +914,35 @@ def format_real_screen_replay_instructions(seed_filename: Optional[str] = None) 
         Formatted instructions string to send to miners alongside the request.
     """
     device_list = ", ".join(SCREEN_REPLAY_DEVICE_TYPES)
-    cue_lines = "\n".join(
-        f"   - {key}: {desc}" for key, desc in SCREEN_REPLAY_VISUAL_CUES.items()
-    )
     seed_line = (
         f"Today's daily seed image: {seed_filename}"
         if seed_filename
         else "Today's daily seed image is attached as daily_seed_image."
     )
+    template_block = build_screen_replay_uav_template(seed_filename)
 
     lines = [
         "",
-        "[REAL SCREEN-REPLAY CAPTURE — separate from the image variations above]",
-        "At most once per UTC day, you may submit a REAL screen-replay capture "
-        "using the daily fixed seed image. This is independent of the request/"
-        "response cycle above — submit it whenever you've taken the photo, to "
-        "any validator.",
+        "╔══════════════════════════════════════════════════════╗",
+        "║  REAL SCREEN-REPLAY CAPTURE  (separate from synthetics) ║",
+        "╚══════════════════════════════════════════════════════╝",
         "",
         seed_line,
+        "",
         REAL_SCREEN_REPLAY_REQUIREMENTS,
         "",
-        "How to capture it:",
-        f"1. Display the daily seed image on a real device screen ({device_list}).",
-        "2. Photograph that screen with a DIFFERENT physical camera (not a screenshot).",
-        "3. Upload the photo the same way as any other variation "
-        "(variation_type=\"screen_replay\", same s3_key/signature/path_signature scheme).",
-        "4. Attach a ScreenReplayUAV report alongside that S3Submission with:",
-        "   - seed_image: filename of the daily seed you used",
-        "   - date: capture date (UTC, YYYY-MM-DD)",
-        "   - camera_used: the camera/device that took the photo",
-        f"   - device_photographed: which device you displayed the seed on ({device_list})",
-        "   - one true/false value for EVERY cue below — report honestly; a real "
-        "capture may show none, some, or all of them:",
-        cue_lines,
+        "⚠️  SPAM WARNING: submit at most ONE screen-replay per UTC day.",
+        "    A second submission will be detected and your score WILL be penalised.",
+        "",
+        "Quick steps:",
+        f"  1. Display the daily seed image on a real device ({device_list}).",
+        "  2. Photograph it with a DIFFERENT physical camera (no screenshots).",
+        "  3. Upload the photo as variation_type=\"screen_replay\" (same S3 path scheme).",
+        "  4. Fill in the template below and attach it as screen_replay_uav.",
+        "",
+        template_block,
+        "",
+        "Submit to ANY validator whenever you have the photo — not tied to this request.",
         "",
     ]
     return "\n".join(lines)

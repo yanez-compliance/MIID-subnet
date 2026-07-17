@@ -35,6 +35,8 @@ The miner pipeline:
 6. Return S3Submission references to the validator
 """
 
+import hashlib
+import json
 import time
 import typing
 import io
@@ -47,10 +49,13 @@ from PIL import Image
 from bittensor.core.errors import NotVerifiedException
 
 # Protocol
-from MIID.protocol import IdentitySynapse, S3Submission
+from MIID.protocol import IdentitySynapse, S3Submission, ScreenReplayUAV
 
 # Base miner class
 from MIID.base.miner import BaseMinerNeuron
+
+# screen_replay.json lives next to the repo root (one level up from neurons/)
+SCREEN_REPLAY_JSON = os.path.join(os.path.dirname(os.path.dirname(__file__)), "screen_replay.json")
 
 
 def _free_gpu_memory(stage: str = "") -> None:
@@ -223,6 +228,12 @@ class Miner(BaseMinerNeuron):
             synapse.s3_submissions = []
             return synapse
 
+        req = synapse.image_request
+        bt.logging.info(
+            f"Received: IMAGE 1='{req.image_filename}' | "
+            f"IMAGE 2='{req.daily_seed_filename or 'none'}'"
+        )
+
         bt.logging.info("Processing image variation request")
 
         if not PHASE4_AVAILABLE:
@@ -235,11 +246,17 @@ class Miner(BaseMinerNeuron):
 
         try:
             s3_submissions = self.process_image_request(synapse)
-            synapse.s3_submissions = s3_submissions
             bt.logging.info(f"Phase 4: Generated {len(s3_submissions)} S3 submissions")
         except Exception as e:
             bt.logging.error(f"Phase 4: Failed to process image request: {e}")
-            synapse.s3_submissions = []
+            s3_submissions = []
+
+        # Try to attach a real screen-replay submission from screen_replay.json
+        sr_sub = self._try_screen_replay_submission(req)
+        if sr_sub is not None:
+            s3_submissions.append(sr_sub)
+
+        synapse.s3_submissions = s3_submissions
 
         total_time = time.time() - start_time
         bt.logging.info(f"Request completed in {total_time:.2f}s of {timeout:.1f}s allowed.")
@@ -371,6 +388,101 @@ class Miner(BaseMinerNeuron):
             except Exception:
                 pass
             _free_gpu_memory("after_request")
+
+    def _try_screen_replay_submission(self, image_request) -> Optional[S3Submission]:
+        """Submit a real screen-replay photo if screen_replay.json is filled in.
+
+        Reads screen_replay.json from the repo root. If photo_path points to a
+        real image file the miner is done: upload → S3Submission returned.
+        After a successful upload photo_path is cleared so it won't re-submit.
+        """
+        if not os.path.exists(SCREEN_REPLAY_JSON):
+            return None
+
+        try:
+            with open(SCREEN_REPLAY_JSON, "r") as f:
+                data = json.load(f)
+        except Exception as e:
+            bt.logging.warning(f"screen_replay.json: could not read: {e}")
+            return None
+
+        photo_path = data.get("photo_path", "").strip()
+        if not photo_path or not os.path.exists(photo_path):
+            return None  # not filled in yet
+
+        try:
+            photo_bytes = open(photo_path, "rb").read()
+        except Exception as e:
+            bt.logging.warning(f"screen_replay.json: cannot read photo '{photo_path}': {e}")
+            return None
+
+        if not self.is_valid_image_bytes(photo_bytes):
+            bt.logging.warning(f"screen_replay.json: '{photo_path}' is not a valid image")
+            return None
+
+        try:
+            challenge_id   = image_request.challenge_id or "sandbox_test"
+            image_hash     = hashlib.sha256(photo_bytes).hexdigest()
+            message        = f"challenge:{challenge_id}:hash:{image_hash}"
+            signature      = self.wallet.hotkey.sign(message.encode()).hex()
+            path_message   = f"{challenge_id}:{self.wallet.hotkey.ss58_address}"
+            path_signature = self.wallet.hotkey.sign(path_message.encode()).hex()[:16]
+
+            if is_timelock_available():
+                encrypted_data = encrypt_image_for_drand(photo_bytes, image_request.target_drand_round)
+                if encrypted_data is None:
+                    bt.logging.warning("screen_replay.json: timelock encryption failed")
+                    return None
+            else:
+                encrypted_data = photo_bytes
+
+            seed_name = (image_request.daily_seed_filename or "unknown_seed").rsplit(".", 1)[0]
+
+            s3_key = upload_to_s3(
+                encrypted_data=encrypted_data,
+                miner_hotkey=self.wallet.hotkey.ss58_address,
+                signature=signature,
+                image_hash=image_hash,
+                target_round=image_request.target_drand_round,
+                challenge_id=challenge_id,
+                variation_type="screen_replay",
+                path_signature=path_signature,
+                seed_image_name=seed_name,
+            )
+            if not s3_key:
+                bt.logging.warning("screen_replay.json: S3 upload failed")
+                return None
+
+            uav = ScreenReplayUAV(
+                seed_image=image_request.daily_seed_filename or "",
+                date=data.get("date", ""),
+                camera_used=data.get("camera_used", ""),
+                device_photographed=data.get("device_photographed", "phone"),
+                moire_pixel_grid=bool(data.get("moire_pixel_grid", False)),
+                screen_glare_hotspots=bool(data.get("screen_glare_hotspots", False)),
+                perspective_keystone_distortion=bool(data.get("perspective_keystone_distortion", False)),
+                gamma_contrast_shift=bool(data.get("gamma_contrast_shift", False)),
+                edge_crop_cues=bool(data.get("edge_crop_cues", False)),
+            )
+
+            # Clear photo_path so we don't re-submit next round
+            data["photo_path"] = ""
+            with open(SCREEN_REPLAY_JSON, "w") as f:
+                json.dump(data, f, indent=2)
+
+            bt.logging.info(f"Screen-replay submitted: {s3_key}")
+            return S3Submission(
+                s3_key=s3_key,
+                image_hash=image_hash,
+                signature=signature,
+                variation_type="screen_replay",
+                path_signature=path_signature,
+                screen_replay_uav=uav,
+            )
+
+        except Exception as e:
+            bt.logging.error(f"screen_replay.json: submission failed: {e}")
+            return None
 
     async def blacklist(self, synapse: IdentitySynapse) -> typing.Tuple[bool, str]:
         """Blacklist requests from non-whitelisted validators."""
