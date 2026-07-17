@@ -11,9 +11,8 @@ aiohttp
 # `async-substrate-interface` >= 1.6). Having both triggers a
 # `RuntimeError: Conflict detected: 'scalecodec' ... conflicts with 'cyscale'`
 # at `btcli` startup. Use `from bittensor_wallet import Keypair` instead.
-bittensor==10.0.0
-# Phase 4: pin transitive dep — newer releases break bittensor==10.0.0
-async-substrate-interface==1.6.4
+bittensor>=10.5.0
+cyscale  # required by async-substrate-interface >= 1.6 (transitive dep of bittensor >= 10.3.0)
 bittensor-cli # Use latest or desired version
 wandb
 python-dotenv # Add dotenv for .env file handling
