@@ -40,8 +40,7 @@ import bittensor as bt
 import json
 import os
 import asyncio
-import numpy as np
-from typing import List, Dict, Any, Tuple, Optional
+from typing import List, Dict, Any, Optional
 from datetime import datetime
 from pathlib import Path
 
@@ -81,68 +80,10 @@ _cached_rep_version: Optional[str] = None
 _pending_allocations: List[Dict] = []
 _pending_file_path: Optional[Path] = None
 
-# =============================================================================
-# Screen-replay spam & duplicate tracking (resets at UTC midnight)
-# =============================================================================
-# Maps miner_hotkey -> UTC date string of their first accepted screen_replay today.
-# A second submission on the same date triggers a spam penalty.
-_screen_replay_daily_tracker: Dict[str, str] = {}
-# Tracks image_hash of every accepted screen_replay submission today to catch
-# near-identical re-submissions from the same or different miners.
-_screen_replay_seen_hashes: set = set()
-_screen_replay_tracker_date: str = ""   # the UTC date the tracker was last reset
-
-
-def _get_utc_today() -> str:
-    from datetime import datetime, timezone
-    return datetime.now(timezone.utc).strftime("%Y-%m-%d")
-
-
-def _reset_screen_replay_tracker_if_new_day() -> None:
-    """Reset spam/duplicate trackers at UTC midnight."""
-    global _screen_replay_daily_tracker, _screen_replay_seen_hashes, _screen_replay_tracker_date
-    today = _get_utc_today()
-    if today != _screen_replay_tracker_date:
-        _screen_replay_daily_tracker = {}
-        _screen_replay_seen_hashes = set()
-        _screen_replay_tracker_date = today
-        bt.logging.info(f"Screen-replay spam tracker reset for UTC day {today}")
-
-
-def check_screen_replay_submission(
-    miner_hotkey: str,
-    image_hash: str,
-) -> Tuple[bool, str]:
-    """Pre-filter a screen_replay submission for spam and duplicates.
-
-    Called once per screen_replay S3Submission before it enters grading.
-
-    Returns:
-        (accepted: bool, reason: str)
-        accepted=False means the submission should be dropped and the miner
-        penalised; reason explains why.
-    """
-    _reset_screen_replay_tracker_if_new_day()
-    today = _get_utc_today()
-
-    # 1. Duplicate image hash (same or different miner re-submitting identical bytes)
-    if image_hash in _screen_replay_seen_hashes:
-        return False, f"Duplicate image_hash {image_hash[:12]}… — submission rejected"
-
-    # 2. Spam: miner already submitted once today
-    if miner_hotkey in _screen_replay_daily_tracker:
-        prev_date = _screen_replay_daily_tracker[miner_hotkey]
-        if prev_date == today:
-            return (
-                False,
-                f"Miner {miner_hotkey[:10]}… already submitted a screen_replay today "
-                f"({prev_date}). Second submission rejected and score penalised.",
-            )
-
-    # Accept: register hash + date
-    _screen_replay_seen_hashes.add(image_hash)
-    _screen_replay_daily_tracker[miner_hotkey] = today
-    return True, "ok"
+# NOTE: Screen-replay spam/duplicate checking (once-per-day, dedup by image
+# hash) is intentionally not implemented yet — not needed while this task is
+# still experimental. Miners can be advised informally not to spam; a real
+# check can be added here later once manual review volume becomes a concern.
 
 # =============================================================================
 # Phase 4: Image Cycling State
@@ -522,13 +463,10 @@ async def forward(self):
     )
     bt.logging.info(f"Received {valid_count} valid responses out of {len(all_responses)}")
 
-    # Build s3_submissions_by_miner for grading
-    # Screen-replay submissions are pre-filtered for spam and duplicates here
-    # before they enter the grading pipeline.
+    # Build s3_submissions_by_miner for grading. Screen-replay submissions are
+    # passed through as-is for now (no spam/duplicate check yet — see note
+    # near the top of this file).
     s3_submissions_by_miner: Dict[str, Any] = {}
-    # Tracks miners whose screen_replay was rejected today (spam/dupe) so that
-    # the reward layer can apply the appropriate score penalty.
-    screen_replay_penalised_uids: set = set()
 
     for uid, response in uid_response_map.items():
         if PHASE4_ENABLED and hasattr(response, 's3_submissions') and response.s3_submissions:
@@ -536,19 +474,8 @@ async def forward(self):
             s3_data = []
             for sub in response.s3_submissions:
                 if sub.variation_type == "screen_replay":
-                    accepted, reason = check_screen_replay_submission(
-                        miner_hotkey=miner_hotkey,
-                        image_hash=sub.image_hash,
-                    )
-                    if not accepted:
-                        bt.logging.warning(
-                            f"Miner UID {uid} ({miner_hotkey[:10]}…) "
-                            f"screen_replay REJECTED: {reason}"
-                        )
-                        screen_replay_penalised_uids.add(uid)
-                        continue  # drop this submission from grading
                     bt.logging.info(
-                        f"Miner UID {uid} screen_replay accepted (hash={sub.image_hash[:12]}…)"
+                        f"Miner UID {uid} screen_replay received (hash={sub.image_hash[:12]}…)"
                     )
                 s3_data.append({
                     "s3_key":       sub.s3_key,
@@ -672,17 +599,6 @@ async def forward(self):
 
     self.update_scores(rewards, updated_uids)
     bt.logging.info(f"REWARDS: {rewards}  for UIDs: {updated_uids}")
-
-    # Apply spam penalty for miners whose screen_replay was rejected today.
-    # We zero their score directly as a deterrent (same effect as a 0-reward round).
-    if screen_replay_penalised_uids:
-        penalised_uid_list = list(screen_replay_penalised_uids)
-        zero_rewards = np.zeros(len(penalised_uid_list))
-        self.update_scores(zero_rewards, penalised_uid_list)
-        bt.logging.warning(
-            f"Screen-replay spam penalty applied to UIDs: {penalised_uid_list}. "
-            "Their score has been zeroed for this round."
-        )
 
     # 7) Save results locally (testnet: flat file only; mainnet: run_* subdir)
     timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
