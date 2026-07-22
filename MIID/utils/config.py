@@ -358,6 +358,12 @@ def config(cls):
     Returns the configuration object specific to this miner or validator
     after adding relevant arguments.
     """
+    # bittensor >= 10.5.0 introduced BT_NO_PARSE_CLI_ARGS which defaults to
+    # "true", causing bt.Config(parser) to skip all CLI arg parsing and return
+    # only DEFAULTS (which has no `neuron` key). We must set it to "false" so
+    # that wallet/subtensor/neuron args passed on the command line are parsed.
+    os.environ.setdefault("BT_NO_PARSE_CLI_ARGS", "false")
+
     parser = argparse.ArgumentParser()
     bt.Wallet.add_args(parser)
     bt.Subtensor.add_args(parser)

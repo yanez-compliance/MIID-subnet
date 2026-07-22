@@ -14,7 +14,7 @@ def run_standalone_test():
     # If no default wallet exists, you might need to specify name/hotkey arguments.
     try:
         # Tries to load the default config wallet, or falls back to 'default'/'default'
-        wallet = bt.wallet() 
+        wallet = bt.Wallet()
         print(f"Loaded wallet: {wallet.name}, Hotkey: {wallet.hotkey_str}")
     except Exception as e:
         print(f"Error: Could not load wallet. Make sure you have a bittensor wallet configured.\nDetails: {e}")

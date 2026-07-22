@@ -50,9 +50,9 @@ class BaseNeuron(ABC):
     def config(cls):
         return config(cls)
 
-    subtensor: "bt.subtensor"
-    wallet: "bt.wallet"
-    metagraph: "bt.metagraph"
+    subtensor: "bt.Subtensor"
+    wallet: "bt.Wallet"
+    metagraph: "bt.Metagraph"
     spec_version: int = spec_version
 
     @property
@@ -80,7 +80,9 @@ class BaseNeuron(ABC):
 
         # The wallet holds the cryptographic key pairs for the miner.
         if self.config.mock:
-            self.wallet = bt.MockWallet(config=self.config)
+            from bittensor_wallet.mock import get_mock_wallet
+
+            self.wallet = get_mock_wallet()
             self.subtensor = MockSubtensor(
                 self.config.netuid, wallet=self.wallet
             )
