@@ -473,16 +473,34 @@ async def forward(self):
             miner_hotkey = str(self.metagraph.axons[uid].hotkey)
             s3_data = []
             for sub in response.s3_submissions:
+                # screen_replay_uav (date/camera/device/cue-checklist) arrives
+                # already parsed on sub — the miner sent it directly over the
+                # wire, no separate JSON file or S3 upload involved. We don't
+                # use it for KAV grading; we just carry it through into
+                # results/s3_submissions_by_miner so it ends up in the final
+                # JSON uploaded to the MIID server (Flask app) below.
+                uav_dict = None
+                if sub.screen_replay_uav is not None:
+                    if hasattr(sub.screen_replay_uav, "model_dump"):
+                        uav_dict = sub.screen_replay_uav.model_dump()
+                    elif hasattr(sub.screen_replay_uav, "dict"):
+                        uav_dict = sub.screen_replay_uav.dict()
+                    else:
+                        uav_dict = dict(sub.screen_replay_uav)
+
                 if sub.variation_type == "screen_replay":
                     bt.logging.info(
-                        f"Miner UID {uid} screen_replay received (hash={sub.image_hash[:12]}…)"
+                        f"Miner UID {uid} screen_replay received (hash={sub.image_hash[:12]}…, "
+                        f"uav={'present' if uav_dict else 'MISSING'})"
                     )
+
                 s3_data.append({
                     "s3_key":       sub.s3_key,
                     "image_hash":   sub.image_hash,
                     "signature":    sub.signature,
                     "variation_type": sub.variation_type,
                     "path_signature": sub.path_signature,
+                    "screen_replay_uav": uav_dict,
                 })
             s3_submissions_by_miner[str(uid)] = {
                 "hotkey":           miner_hotkey,
