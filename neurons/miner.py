@@ -54,8 +54,13 @@ from MIID.protocol import IdentitySynapse, S3Submission, ScreenReplayUAV
 # Base miner class
 from MIID.base.miner import BaseMinerNeuron
 
-# screen_replay.json lives next to the repo root (one level up from neurons/)
-SCREEN_REPLAY_JSON = os.path.join(os.path.dirname(os.path.dirname(__file__)), "screen_replay.json")
+# screen_replay.json lives under MIID/miner/real_image_miner_guide/. Miners fill
+# it in (or run the helper submit_real_photo.py) to queue a real screen-replay
+# submission. See MIID/miner/real_image_miner_guide/README.md.
+SCREEN_REPLAY_JSON = os.path.join(
+    os.path.dirname(os.path.dirname(__file__)),
+    "MIID", "miner", "real_image_miner_guide", "screen_replay.json",
+)
 
 
 def _free_gpu_memory(stage: str = "") -> None:
@@ -390,11 +395,20 @@ class Miner(BaseMinerNeuron):
             _free_gpu_memory("after_request")
 
     def _try_screen_replay_submission(self, image_request) -> Optional[S3Submission]:
-        """Submit a real screen-replay photo if screen_replay.json is filled in.
+        """Submit a real screen-replay photo if screen_replay.json says it's ready.
 
-        Reads screen_replay.json from the repo root. If photo_path points to a
-        real image file the miner is done: upload → S3Submission returned.
-        After a successful upload photo_path is cleared so it won't re-submit.
+        Reads screen_replay.json (MIID/miner/real_image_miner_guide/). Miners
+        (or the helper script submit_real_photo.py in that same folder) fill
+        in the photo path + metadata and flip "ready" to true. This runs on
+        every validator query — since the axon is always listening, this is
+        effectively a background check — so as soon as "ready" is true the
+        next query submits the photo. After a successful upload the whole
+        file is reset back to its blank/not-ready state so it won't
+        accidentally re-submit on the next round.
+
+        If "ready" is false (the normal/default state), this is a no-op —
+        real screen-replay submissions are optional and not expected every
+        round.
         """
         if not os.path.exists(SCREEN_REPLAY_JSON):
             return None
@@ -406,9 +420,16 @@ class Miner(BaseMinerNeuron):
             bt.logging.warning(f"screen_replay.json: could not read: {e}")
             return None
 
+        if not bool(data.get("ready", False)):
+            return None  # nothing queued — normal, expected most rounds
+
         photo_path = data.get("photo_path", "").strip()
         if not photo_path or not os.path.exists(photo_path):
-            return None  # not filled in yet
+            bt.logging.warning(
+                f"screen_replay.json: ready=true but photo_path is missing/invalid "
+                f"('{photo_path}'). Leaving ready=true and will retry next round."
+            )
+            return None
 
         try:
             photo_bytes = open(photo_path, "rb").read()
@@ -465,10 +486,21 @@ class Miner(BaseMinerNeuron):
                 edge_crop_cues=bool(data.get("edge_crop_cues", False)),
             )
 
-            # Clear photo_path so we don't re-submit next round
-            data["photo_path"] = ""
+            # Reset to a blank/not-ready state so we don't re-submit next round
+            # and so stale metadata can't accidentally be reused for a future photo.
             with open(SCREEN_REPLAY_JSON, "w") as f:
-                json.dump(data, f, indent=2)
+                json.dump({
+                    "ready": False,
+                    "photo_path": "",
+                    "date": "",
+                    "camera_used": "",
+                    "device_photographed": "",
+                    "moire_pixel_grid": False,
+                    "screen_glare_hotspots": False,
+                    "perspective_keystone_distortion": False,
+                    "gamma_contrast_shift": False,
+                    "edge_crop_cues": False,
+                }, f, indent=2)
 
             bt.logging.info(f"Screen-replay submitted: {s3_key}")
             return S3Submission(
