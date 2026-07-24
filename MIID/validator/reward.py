@@ -66,6 +66,7 @@ from MIID.validator.image_variations import format_variation_requirements
 GRADING_API_URL = "http://98.90.28.118:5000/grade"
 GRADING_RETRY_ATTEMPTS = 3
 GRADING_RETRY_DELAY_SECONDS = 60
+GRADING_API_TIMEOUT_SECONDS = 1800  # 30 minutes per attempt
 
 # Tiny epsilon added to validation score to break ties using identity_preservation.
 # e.g. two miners both averaging 0.6 validation will be ordered by their avg_ip.
@@ -310,7 +311,7 @@ def get_image_variation_rewards(
                         f"for challenge {challenge_id} with {len(s3_submissions_by_miner)} miners "
                         f"(attempt {attempt + 1}/{GRADING_RETRY_ATTEMPTS})."
                     )
-                    resp = requests.post(GRADING_API_URL, json=payload, timeout=1200)
+                    resp = requests.post(GRADING_API_URL, json=payload, timeout=GRADING_API_TIMEOUT_SECONDS)
                     resp.raise_for_status()
                     api_json = resp.json()
                     results_by_miner = api_json.get("results_by_miner", {})
