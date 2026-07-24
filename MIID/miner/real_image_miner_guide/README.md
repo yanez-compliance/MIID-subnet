@@ -84,6 +84,10 @@ may legitimately show anywhere from 0 to 5 of these cues.
 - **Each submission needs exactly TWO photos** — two different angles of the
   *same* capture, not one photo and not two unrelated photos. This is basic
   proof it's a real physical photo, not a single static image reused twice.
+- **The face must dominate both photos.** Frame so the face on the screen is
+  the main subject — large enough for reliable face detection and still
+  matchable to the seed identity. Don't crop so tight that the screen
+  disappears, and don't pull so far back that the face is tiny.
 - It's a **real physical photo**, not a screenshot and not AI-generated. Do
   not use FLUX or any generator for this — that defeats the purpose.
 - `inbox/` must contain exactly 2 images when you run the script — the

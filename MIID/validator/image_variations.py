@@ -847,7 +847,11 @@ def validate_screen_replay_uav(uav: Any) -> bool:
 REAL_SCREEN_REPLAY_REQUIREMENTS = (
     "This is a REAL physical photograph, not an AI-generated image. Do not use "
     "FLUX or any generator for this task — the daily seed image must be "
-    "displayed on an actual screen and photographed with a separate camera."
+    "displayed on an actual screen and photographed with a separate camera. "
+    "In both photos, the face on the screen must be the dominant object "
+    "(large enough for reliable face detection) and remain matchable to the "
+    "seed identity (high similarity score). Do not crop so tightly that the "
+    "screen is gone, and do not pull so far back that the face is tiny."
 )
 
 
@@ -953,6 +957,8 @@ def format_real_screen_replay_instructions(seed_filename: Optional[str] = None) 
         "  2. Photograph it TWICE from two different angles/positions, with a",
         "     DIFFERENT physical camera (no screenshots). Two distinct shots",
         "     of the same on-screen capture, not two unrelated photos.",
+        "     In BOTH shots the face must be the dominant object — large",
+        "     enough for reliable face detection and matchable to the seed.",
         "  3. Upload both photos as variation_type=\"screen_replay\": angle 1 in",
         "     s3_key/image_hash/signature, angle 2 in s3_key_angle2/",
         "     image_hash_angle2/signature_angle2 (same S3 path scheme).",
