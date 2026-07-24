@@ -26,7 +26,9 @@ Implements the forward function that drives each validation round:
 1. Select random miners to query.
 2. Fetch a base face image from the MIID API.
 3. Build an ImageRequest (5 synthetic variations: 2 background, 3 combined edits;
-   plus the daily fixed seed image + instructions for the REAL screen-replay task).
+   plus the daily fixed seed image + instructions for the REAL screen-replay task —
+   miners may send as many non-duplicate real captures as they want, each one
+   bundling 2 photos/angles of the same capture as basic proof it's real).
 4. Send the request to miners in batches; collect S3 submission references.
 5. Grade submissions via the external grading API (KAV) using
    get_image_variation_rewards().
@@ -80,10 +82,14 @@ _cached_rep_version: Optional[str] = None
 _pending_allocations: List[Dict] = []
 _pending_file_path: Optional[Path] = None
 
-# NOTE: Screen-replay spam/duplicate checking (once-per-day, dedup by image
-# hash) is intentionally not implemented yet — not needed while this task is
-# still experimental. Miners can be advised informally not to spam; a real
-# check can be added here later once manual review volume becomes a concern.
+# NOTE: Screen-replay policy is "send as many non-duplicate real captures as
+# you want" — there is no daily cap. Each submission must carry 2 photos
+# (2 angles of the same capture; see S3Submission.s3_key_angle2 in
+# MIID/protocol.py). Actual duplicate-detection (dedup by image hash across
+# a miner's submission history) is intentionally not implemented yet — not
+# needed while this task is still experimental. Miners can be advised
+# informally not to resubmit the same capture; a real check can be added
+# here later once manual review volume becomes a concern.
 
 # =============================================================================
 # Phase 4: Image Cycling State
@@ -259,8 +265,10 @@ async def forward(self):
     2.  Fetch base face image from the MIID API.
     3.  Build ImageRequest (5 synthetic variations: indoor bg, outdoor bg, 3
         combined edits; plus the daily fixed seed image + real screen-replay
-        instructions — that task is a physical capture, submitted at most
-        once per UTC day, independent of this request/response cycle).
+        instructions — that task is a physical capture miners may submit as
+        many non-duplicate times as they want (no daily cap), each one
+        bundling 2 photos/angles of the same capture, independent of this
+        request/response cycle).
     4.  Query miners in batches; collect S3 submission references.
     5.  Compute KAV rewards via get_image_variation_rewards() (calls grading API).
     6.  Optionally combine with UAV via apply_reputation_rewards().
@@ -464,8 +472,9 @@ async def forward(self):
     bt.logging.info(f"Received {valid_count} valid responses out of {len(all_responses)}")
 
     # Build s3_submissions_by_miner for grading. Screen-replay submissions are
-    # passed through as-is for now (no spam/duplicate check yet — see note
-    # near the top of this file).
+    # passed through as-is for now (miners may send as many non-duplicate
+    # captures as they want; actual dedup checking isn't implemented yet —
+    # see note near the top of this file).
     s3_submissions_by_miner: Dict[str, Any] = {}
 
     for uid, response in uid_response_map.items():
@@ -489,8 +498,14 @@ async def forward(self):
                         uav_dict = dict(sub.screen_replay_uav)
 
                 if sub.variation_type == "screen_replay":
+                    # Every screen_replay submission carries 2 photos (2 angles
+                    # of the same capture) — angle 2 rides on the *_angle2
+                    # fields below. Miners may send as many non-duplicate
+                    # captures as they want; there's no daily cap.
                     bt.logging.info(
-                        f"Miner UID {uid} screen_replay received (hash={sub.image_hash[:12]}…, "
+                        f"Miner UID {uid} screen_replay received "
+                        f"(angle1_hash={sub.image_hash[:12]}…, "
+                        f"angle2_hash={(sub.image_hash_angle2 or 'MISSING')[:12]}…, "
                         f"uav={'present' if uav_dict else 'MISSING'})"
                     )
 
@@ -500,6 +515,9 @@ async def forward(self):
                     "signature":    sub.signature,
                     "variation_type": sub.variation_type,
                     "path_signature": sub.path_signature,
+                    "s3_key_angle2":     sub.s3_key_angle2,
+                    "image_hash_angle2": sub.image_hash_angle2,
+                    "signature_angle2":  sub.signature_angle2,
                     "screen_replay_uav": uav_dict,
                 })
             s3_submissions_by_miner[str(uid)] = {

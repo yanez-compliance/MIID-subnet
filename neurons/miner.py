@@ -395,16 +395,20 @@ class Miner(BaseMinerNeuron):
             _free_gpu_memory("after_request")
 
     def _try_screen_replay_submission(self, image_request) -> Optional[S3Submission]:
-        """Submit a real screen-replay photo if screen_replay.json says it's ready.
+        """Submit a real screen-replay capture if screen_replay.json says it's ready.
 
         Reads screen_replay.json (MIID/miner/real_image_miner_guide/). Miners
         (or the helper script submit_real_photo.py in that same folder) fill
-        in the photo path + metadata and flip "ready" to true. This runs on
-        every validator query — since the axon is always listening, this is
-        effectively a background check — so as soon as "ready" is true the
-        next query submits the photo. After a successful upload the whole
-        file is reset back to its blank/not-ready state so it won't
-        accidentally re-submit on the next round.
+        in TWO photo paths (two different angles of the same capture) +
+        metadata and flip "ready" to true. This runs on every validator
+        query — since the axon is always listening, this is effectively a
+        background check — so as soon as "ready" is true the next query
+        submits both photos as one screen_replay submission. After a
+        successful upload the whole file is reset back to its blank/not-ready
+        state so it won't accidentally re-submit the exact same capture again
+        (that would be a duplicate). There's no limit on how many *different*
+        captures a miner can queue up and submit over time — just never the
+        same one twice.
 
         If "ready" is false (the normal/default state), this is a no-op —
         real screen-replay submissions are optional and not expected every
@@ -424,38 +428,64 @@ class Miner(BaseMinerNeuron):
             return None  # nothing queued — normal, expected most rounds
 
         photo_path = data.get("photo_path", "").strip()
+        photo_path_2 = data.get("photo_path_2", "").strip()
         if not photo_path or not os.path.exists(photo_path):
             bt.logging.warning(
                 f"screen_replay.json: ready=true but photo_path is missing/invalid "
                 f"('{photo_path}'). Leaving ready=true and will retry next round."
             )
             return None
+        if not photo_path_2 or not os.path.exists(photo_path_2):
+            bt.logging.warning(
+                f"screen_replay.json: ready=true but photo_path_2 (second angle) is "
+                f"missing/invalid ('{photo_path_2}'). A screen-replay submission needs "
+                f"TWO photos of the same capture. Leaving ready=true and will retry next round."
+            )
+            return None
 
         try:
             photo_bytes = open(photo_path, "rb").read()
+            photo_bytes_2 = open(photo_path_2, "rb").read()
         except Exception as e:
-            bt.logging.warning(f"screen_replay.json: cannot read photo '{photo_path}': {e}")
+            bt.logging.warning(f"screen_replay.json: cannot read photo(s): {e}")
             return None
 
         if not self.is_valid_image_bytes(photo_bytes):
             bt.logging.warning(f"screen_replay.json: '{photo_path}' is not a valid image")
             return None
+        if not self.is_valid_image_bytes(photo_bytes_2):
+            bt.logging.warning(f"screen_replay.json: '{photo_path_2}' is not a valid image")
+            return None
 
         try:
             challenge_id   = image_request.challenge_id or "sandbox_test"
             image_hash     = hashlib.sha256(photo_bytes).hexdigest()
+            image_hash_2   = hashlib.sha256(photo_bytes_2).hexdigest()
+
+            if image_hash == image_hash_2:
+                bt.logging.warning(
+                    "screen_replay.json: both photos hash identically (same file "
+                    "submitted twice) — a screen-replay submission needs two DIFFERENT "
+                    "angles. Rejecting locally; take a second, distinct photo."
+                )
+                return None
+
             message        = f"challenge:{challenge_id}:hash:{image_hash}"
             signature      = self.wallet.hotkey.sign(message.encode()).hex()
+            message_2      = f"challenge:{challenge_id}:hash:{image_hash_2}"
+            signature_2    = self.wallet.hotkey.sign(message_2.encode()).hex()
             path_message   = f"{challenge_id}:{self.wallet.hotkey.ss58_address}"
             path_signature = self.wallet.hotkey.sign(path_message.encode()).hex()[:16]
 
             if is_timelock_available():
                 encrypted_data = encrypt_image_for_drand(photo_bytes, image_request.target_drand_round)
-                if encrypted_data is None:
+                encrypted_data_2 = encrypt_image_for_drand(photo_bytes_2, image_request.target_drand_round)
+                if encrypted_data is None or encrypted_data_2 is None:
                     bt.logging.warning("screen_replay.json: timelock encryption failed")
                     return None
             else:
                 encrypted_data = photo_bytes
+                encrypted_data_2 = photo_bytes_2
 
             seed_name = (image_request.daily_seed_filename or "unknown_seed").rsplit(".", 1)[0]
 
@@ -471,7 +501,22 @@ class Miner(BaseMinerNeuron):
                 seed_image_name=seed_name,
             )
             if not s3_key:
-                bt.logging.warning("screen_replay.json: S3 upload failed")
+                bt.logging.warning("screen_replay.json: S3 upload failed (angle 1)")
+                return None
+
+            s3_key_2 = upload_to_s3(
+                encrypted_data=encrypted_data_2,
+                miner_hotkey=self.wallet.hotkey.ss58_address,
+                signature=signature_2,
+                image_hash=image_hash_2,
+                target_round=image_request.target_drand_round,
+                challenge_id=challenge_id,
+                variation_type="screen_replay_angle2",
+                path_signature=path_signature,
+                seed_image_name=seed_name,
+            )
+            if not s3_key_2:
+                bt.logging.warning("screen_replay.json: S3 upload failed (angle 2)")
                 return None
 
             uav = ScreenReplayUAV(
@@ -486,12 +531,14 @@ class Miner(BaseMinerNeuron):
                 edge_crop_cues=bool(data.get("edge_crop_cues", False)),
             )
 
-            # Reset to a blank/not-ready state so we don't re-submit next round
-            # and so stale metadata can't accidentally be reused for a future photo.
+            # Reset to a blank/not-ready state so we don't re-submit this exact
+            # capture again (that would be a duplicate) — miners are free to
+            # queue up a brand-new capture right away for the next submission.
             with open(SCREEN_REPLAY_JSON, "w") as f:
                 json.dump({
                     "ready": False,
                     "photo_path": "",
+                    "photo_path_2": "",
                     "date": "",
                     "camera_used": "",
                     "device_photographed": "",
@@ -502,13 +549,16 @@ class Miner(BaseMinerNeuron):
                     "edge_crop_cues": False,
                 }, f, indent=2)
 
-            bt.logging.info(f"Screen-replay submitted: {s3_key}")
+            bt.logging.info(f"Screen-replay submitted (2 angles): {s3_key} + {s3_key_2}")
             return S3Submission(
                 s3_key=s3_key,
                 image_hash=image_hash,
                 signature=signature,
                 variation_type="screen_replay",
                 path_signature=path_signature,
+                s3_key_angle2=s3_key_2,
+                image_hash_angle2=image_hash_2,
+                signature_angle2=signature_2,
                 screen_replay_uav=uav,
             )
 

@@ -658,8 +658,12 @@ def build_standard_challenge_variations() -> List[Dict[str, Any]]:
 
     NOTE: screen_replay is intentionally NOT part of this set anymore. It is
     no longer a synthetic/FLUX-generated variation requested every round —
-    it is a REAL physical screen capture the miner submits at most once per
-    UTC day using the daily fixed seed image. See
+    it is a REAL physical screen capture using the daily fixed seed image.
+    Miners may submit as many of these real captures as they want, whenever
+    ready (no daily cap) — the only rule is that every submission must be a
+    genuinely new capture (never a duplicate of one already sent), and each
+    submission bundles two photos (two different angles) of the same
+    capture as basic proof it's real. See
     format_real_screen_replay_instructions() for the miner-facing task text,
     and ScreenReplayUAV in MIID/protocol.py for the reported metadata.
     """
@@ -852,7 +856,9 @@ def build_screen_replay_uav_template(seed_filename: Optional[str] = None) -> str
 
     The template is intentionally minimal: every field the miner must supply
     appears on its own line with a short placeholder.  The seed_image and date
-    fields are pre-filled when the information is available.
+    fields are pre-filled when the information is available. This checklist
+    describes ONE capture event — the two photos (two angles) submitted for
+    that capture share this same metadata block.
 
     Args:
         seed_filename: Filename of today's daily seed image (pre-fills seed_image).
@@ -891,19 +897,21 @@ def build_screen_replay_uav_template(seed_filename: Optional[str] = None) -> str
 def format_real_screen_replay_instructions(seed_filename: Optional[str] = None) -> str:
     """Build the miner-facing instructions for the real screen-replay task.
 
-    Explains the one-per-UTC-day physical capture that accompanies the daily
-    fixed seed image (sent alongside the synthetic variation base image, see
+    Explains the physical capture that accompanies the daily fixed seed
+    image (sent alongside the synthetic variation base image, see
     ImageRequest.daily_seed_image in MIID/protocol.py): display the seed on a
-    real device screen, photograph it with a different physical camera, and
-    submit it the same way as any other variation, with a filled-out
-    ScreenReplayUAV report attached.
+    real device screen, photograph it TWICE from two different angles with a
+    different physical camera, and submit both photos together as one
+    screen_replay submission, with a filled-out ScreenReplayUAV report
+    attached.
+
+    Miners may send as many of these submissions as they want — there is no
+    daily cap — but every submission must be a genuinely new capture. Never
+    resubmit the same photos (or the same capture) twice; duplicates are
+    filtered out and penalised.
 
     Includes a ready-to-fill template block (see build_screen_replay_uav_template)
     so miners only need to change the values they know.
-
-    ⚠️  SPAM RULE: submit at most ONE screen-replay per UTC day.
-        A second submission from the same miner on the same day will be
-        penalised — do not re-submit even if you think the first was bad.
 
     Args:
         seed_filename: Filename of today's daily seed image, if known —
@@ -931,18 +939,30 @@ def format_real_screen_replay_instructions(seed_filename: Optional[str] = None) 
         "",
         REAL_SCREEN_REPLAY_REQUIREMENTS,
         "",
-        "⚠️  SPAM WARNING: submit at most ONE screen-replay per UTC day.",
-        "    A second submission will be detected and your score WILL be penalised.",
+        "Send as MANY real captures as you like — there's no daily limit.",
+        "The only rule: NEVER submit a duplicate. Every submission must be a",
+        "fresh, genuinely new capture — resubmitting the same photo(s) again",
+        "will be detected and your score WILL be penalised.",
+        "",
+        "Each submission needs TWO photos of the SAME capture (two different",
+        "camera angles/positions), not just one — this is basic proof it's a",
+        "real physical photo and not a single static image reused twice.",
         "",
         "Quick steps:",
         f"  1. Display the daily seed image on a real device ({device_list}).",
-        "  2. Photograph it with a DIFFERENT physical camera (no screenshots).",
-        "  3. Upload the photo as variation_type=\"screen_replay\" (same S3 path scheme).",
-        "  4. Fill in the template below and attach it as screen_replay_uav.",
+        "  2. Photograph it TWICE from two different angles/positions, with a",
+        "     DIFFERENT physical camera (no screenshots). Two distinct shots",
+        "     of the same on-screen capture, not two unrelated photos.",
+        "  3. Upload both photos as variation_type=\"screen_replay\": angle 1 in",
+        "     s3_key/image_hash/signature, angle 2 in s3_key_angle2/",
+        "     image_hash_angle2/signature_angle2 (same S3 path scheme).",
+        "  4. Fill in the template below ONCE (it describes the capture as a",
+        "     whole) and attach it as screen_replay_uav.",
         "",
         template_block,
         "",
-        "Submit to ANY validator whenever you have the photo — not tied to this request.",
+        "Submit to ANY validator whenever you have a new capture ready — not",
+        "tied to this request. Send as many non-duplicate captures as you can.",
         "",
     ]
     return "\n".join(lines)
