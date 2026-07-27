@@ -346,17 +346,23 @@ def get_image_variation_rewards(
     # so membership checks are never used.  We detect sampled-only mode by
     # whether the API call succeeded and a sampled_variation was returned.
     score_sampled_only = bool(sampled_variation and api_succeeded)
-    num_graded = 1 if score_sampled_only else max(len(requested_types), 1)
+    if not api_succeeded:
+        # API never returned grades — nothing was graded (0 of N requested).
+        num_graded = 0
+    elif score_sampled_only:
+        num_graded = 1
+    else:
+        num_graded = max(len(requested_types), 1)
 
     if score_sampled_only:
         bt.logging.info(
             f"Scoring single sampled variation slot: {sampled_variation!r} "
             f"(1 of {len(requested_types)} requested types)."
         )
-    elif sampled_variation:
+    elif not api_succeeded:
         bt.logging.warning(
-            f"sampled_variation={sampled_variation!r} present but api_succeeded=False; "
-            f"falling back to scoring all {len(requested_types)} requested types."
+            f"Grading API did not succeed; num_graded=0 "
+            f"(0 of {len(requested_types)} requested types)."
         )
 
     rewards = np.zeros(len(miner_uids), dtype=float)
@@ -430,8 +436,12 @@ def get_image_variation_rewards(
                         "status": sub.get("status", ""),
                     })
 
-        avg_vs_norm = sum(v["validation_score_norm"] for v in per_variation) / num_graded
-        avg_ip = sum(v["identity_preservation"] for v in per_variation) / num_graded
+        if num_graded > 0:
+            avg_vs_norm = sum(v["validation_score_norm"] for v in per_variation) / num_graded
+            avg_ip = sum(v["identity_preservation"] for v in per_variation) / num_graded
+        else:
+            avg_vs_norm = 0.0
+            avg_ip = 0.0
 
         # Composite score: validation score + tiny identity tiebreak
         rewards[i] = avg_vs_norm + avg_ip * _IDENTITY_TIEBREAK_EPS
