@@ -44,7 +44,7 @@ import os
 from typing import List, Optional
 from PIL import Image
 
-from bittensor.core.errors import NotVerifiedException
+from MIID.compat.transport import NotVerifiedException
 
 # Protocol
 from MIID.protocol import IdentitySynapse, S3Submission

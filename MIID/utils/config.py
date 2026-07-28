@@ -353,21 +353,65 @@ def add_validator_args(cls, parser):
     )
 
 
+def add_wallet_args(parser):
+    """Wallet CLI args. bt.Wallet.add_args() no longer exists in bittensor v11."""
+    parser.add_argument(
+        "--wallet.name", type=str, default="default", help="The name of the wallet to use."
+    )
+    parser.add_argument(
+        "--wallet.hotkey", type=str, default="default", help="The name of the wallet's hotkey."
+    )
+    parser.add_argument(
+        "--wallet.path",
+        type=str,
+        default="~/.bittensor/wallets/",
+        help="The path to the wallet directory.",
+    )
+
+
+def add_subtensor_args(parser):
+    """Subtensor CLI args. bt.Subtensor.add_args() no longer exists in bittensor v11."""
+    parser.add_argument(
+        "--subtensor.network",
+        type=str,
+        default="finney",
+        help="The subtensor network to connect to (finney, test, archive, local, or a ws:// URL).",
+    )
+    parser.add_argument(
+        "--subtensor.chain_endpoint",
+        type=str,
+        default=None,
+        help="Explicit chain websocket endpoint; overrides --subtensor.network if set.",
+    )
+
+
+def add_axon_args(parser):
+    """Axon CLI args. bt.Axon.add_args() no longer exists in bittensor v11 (no Axon class at all)."""
+    parser.add_argument("--axon.port", type=int, default=8091, help="Port for our own HTTP server to bind on.")
+    parser.add_argument("--axon.ip", type=str, default="0.0.0.0", help="Bind IP for our own HTTP server.")
+    parser.add_argument(
+        "--axon.external_ip", type=str, default=None, help="IP to advertise on chain (auto-detected if unset)."
+    )
+    parser.add_argument(
+        "--axon.external_port", type=int, default=None, help="Port to advertise on chain (defaults to --axon.port)."
+    )
+
+
 def config(cls):
     """
     Returns the configuration object specific to this miner or validator
     after adding relevant arguments.
-    """
-    # bittensor >= 10.5.0 introduced BT_NO_PARSE_CLI_ARGS which defaults to
-    # "true", causing bt.Config(parser) to skip all CLI arg parsing and return
-    # only DEFAULTS (which has no `neuron` key). We must set it to "false" so
-    # that wallet/subtensor/neuron args passed on the command line are parsed.
-    os.environ.setdefault("BT_NO_PARSE_CLI_ARGS", "false")
 
+    bittensor v11 deleted bt.Config / bt.Wallet.add_args / bt.Subtensor.add_args
+    / bt.Axon.add_args / the whole argparse-based config system, along with
+    bt.logging. This reimplements just enough of it (see MIID/compat/config.py
+    and MIID/compat/logging_shim.py) to keep the existing --wallet.name style
+    CLI flags and config.wallet.name style attribute access working.
+    """
     parser = argparse.ArgumentParser()
-    bt.Wallet.add_args(parser)
-    bt.Subtensor.add_args(parser)
+    add_wallet_args(parser)
+    add_subtensor_args(parser)
     bt.logging.add_args(parser)
-    bt.Axon.add_args(parser)
+    add_axon_args(parser)
     cls.add_args(parser)
     return bt.Config(parser)

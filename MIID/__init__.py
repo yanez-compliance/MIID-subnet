@@ -27,6 +27,11 @@ __spec_version__ = (
     + (1 * int(version_split[2]))
 )
 
+# Install the bittensor v11 compatibility shim (bt.logging, bt.Synapse,
+# bt.Axon, bt.Dendrite, bt.Config, bt.MockSubtensor) before anything else in
+# this package touches those names.
+from . import compat as _compat  # noqa: F401
+
 # Import all submodules.
 from . import protocol
 from . import base

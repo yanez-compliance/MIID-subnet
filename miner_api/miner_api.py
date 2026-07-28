@@ -78,7 +78,8 @@ def sign_message(wallet: bittensor.Wallet, message_text: str = "API Request") ->
     signed_message = f"<Bytes>On {timestamp} {timezone_name} {message_text}</Bytes>"
 
     # Sign the message
-    signature = keypair.sign(data=signed_message)
+    # bittensor v11's Keypair.sign() renamed the `data` kwarg to `message`.
+    signature = keypair.sign(message=signed_message)
 
     # Construct the output in the expected format
     signature_text = (

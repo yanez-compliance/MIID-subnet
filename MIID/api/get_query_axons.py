@@ -118,8 +118,10 @@ async def get_query_api_axons(
     dendrite = bt.Dendrite(wallet=wallet)
 
     if metagraph is None:
+        from MIID.compat.metagraph import get_metagraph
+
         subtensor = bt.Subtensor()
-        metagraph = subtensor.metagraph(netuid=21)
+        metagraph = get_metagraph(subtensor, netuid=21)
 
     if uids is not None:
         query_uids = [uids] if isinstance(uids, int) else uids

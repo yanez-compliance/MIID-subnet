@@ -1,5 +1,5 @@
 from binascii import unhexlify
-from bittensor_wallet import Keypair
+from bittensor.wallet import Keypair
 
 def verify_message(file_path: str) -> None:
     """
@@ -57,7 +57,9 @@ def verify_message(file_path: str) -> None:
     real_signature = unhexlify(signature.encode())
 
     # 5) Verify
-    if not keypair.verify(data=message, signature=real_signature):
+    # bittensor v11's Keypair.verify() renamed the `data` kwarg to `message` and,
+    # unlike `sign()`, requires it as raw bytes rather than str.
+    if not keypair.verify(message=message.encode("utf-8"), signature=real_signature):
         raise ValueError(f"Invalid signature for address={address}")
     else:
         print(f"Signature verified, signed by {address}")

@@ -29,12 +29,10 @@ from typing import List, Union
 from traceback import print_exception
 
 from MIID.base.neuron import BaseNeuron
-from MIID.base.utils.weight_utils import (
-    process_weights_for_netuid,
-    convert_weights_and_uids_for_emit,
-)  # TODO: Replace when bittensor switches to numpy
+from MIID.base.utils.weight_utils import process_weights_for_netuid
 from MIID.mock import MockDendrite
 from MIID.utils.config import add_validator_args
+from MIID.compat.chain import set_weights as compat_set_weights
 
 
 class BaseValidatorNeuron(BaseNeuron):
@@ -89,15 +87,16 @@ class BaseValidatorNeuron(BaseNeuron):
 
         bt.logging.info("serving ip to chain...")
         try:
+            # Only used to publish IP:port on chain (bt.ServeAxon intent below);
+            # validators don't run an HTTP server of their own here, matching
+            # the old behavior where this Axon was never .start()'d either.
             self.axon = bt.Axon(wallet=self.wallet, config=self.config)
 
             try:
-                # In bittensor 10.0.0+, serve_axon returns ExtrinsicResponse instead of bool/tuple
-                response = self.subtensor.serve_axon(
-                    netuid=self.config.netuid,
-                    axon=self.axon,
-                )
-                # Handle ExtrinsicResponse object
+                # v11: publish IP/port via the bt.ServeAxon intent instead of
+                # the removed Subtensor.serve_axon(axon=...) method.
+                response = self.axon.serve(netuid=self.config.netuid, subtensor=self.subtensor)
+                # Handle ExtrinsicResult object
                 if hasattr(response, 'success'):
                     if response.success:
                         message = getattr(response, 'message', 'Success')
@@ -287,20 +286,18 @@ class BaseValidatorNeuron(BaseNeuron):
         bt.logging.debug("processed_weights", processed_weights)
         bt.logging.debug("processed_weight_uids", processed_weight_uids)
 
-        # Convert to uint16 weights and uids.
-        (
-            uint_uids,
-            uint_weights,
-        ) = convert_weights_and_uids_for_emit(
-            uids=processed_weight_uids, weights=processed_weights
-        )
-        bt.logging.debug("uint_weights", uint_weights)
-        bt.logging.debug("uint_uids", uint_uids)
+        # v11's bt.SetWeights intent accepts plain floats directly (any scale;
+        # only proportions matter) and does the u16 clipping/quantization
+        # internally, so the old convert_weights_and_uids_for_emit() u16
+        # conversion step is no longer needed.
+        uint_uids = [int(u) for u in processed_weight_uids]
+        uint_weights = [float(w) for w in processed_weights]
 
-        # Set the weights on chain via our subtensor connection.
-        # In bittensor 10.0.0+, set_weights returns ExtrinsicResponse instead of tuple
+        # Set the weights on chain via the bt.SetWeights intent (Subtensor.set_weights
+        # no longer exists in v11 -- see MIID/compat/chain.py).
         try:
-            response = self.subtensor.set_weights(
+            response = compat_set_weights(
+                self.subtensor,
                 wallet=self.wallet,
                 netuid=self.config.netuid,
                 uids=uint_uids,
@@ -309,27 +306,17 @@ class BaseValidatorNeuron(BaseNeuron):
                 wait_for_inclusion=False,
                 version_key=self.spec_version,
             )
-            # Handle ExtrinsicResponse object
             if hasattr(response, 'success'):
                 if response.success:
                     message = getattr(response, 'message', 'Success')
                     bt.logging.info(f"set_weights on chain successfully! {message}")
                     return True, uint_uids, uint_weights
                 else:
-                    error_msg = getattr(response, 'message', getattr(response, 'error', 'Unknown error'))
+                    error = getattr(response, 'error', None)
+                    error_msg = getattr(error, 'remediation', None) or getattr(response, 'message', 'Unknown error')
                     bt.logging.error(f"set_weights failed: {error_msg}")
                     return False, [], []
-            # Fallback for compatibility (if response is still a tuple)
-            elif isinstance(response, tuple):
-                result, msg = response
-                if result is True:
-                    bt.logging.info("set_weights on chain successfully!")
-                    return True, uint_uids, uint_weights
-                else:
-                    bt.logging.error(f"set_weights failed: {msg}")
-                    return False, [], []
             else:
-                # Assume success if we can't determine
                 bt.logging.warning(f"set_weights returned unexpected type: {type(response)}, assuming success")
                 return True, uint_uids, uint_weights
         except Exception as e:

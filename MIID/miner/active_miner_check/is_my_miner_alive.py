@@ -34,6 +34,8 @@ COPY/PASTE — run on a different machine than the miner (use IP/port from scrip
 
 import bittensor as bt
 
+from MIID.compat.metagraph import get_metagraph
+
 
 def select_network_and_netuid():
     """Prompt for network and return (network_name, netuid)."""
@@ -57,7 +59,7 @@ def get_local_hotkey_ss58():
 def main():
     network_name, netuid = select_network_and_netuid()
     subtensor = bt.Subtensor(network=network_name)
-    metagraph = subtensor.metagraph(netuid=netuid)
+    metagraph = get_metagraph(subtensor, netuid)
     my_hotkey = get_local_hotkey_ss58()
 
     print(f"\nUsing network: {network_name}")

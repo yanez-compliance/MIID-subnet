@@ -17,7 +17,8 @@ def main(args):
     message = (
         "<Bytes>" + f"On {timestamp} {timezone} {args.message}" + "</Bytes>"
     )
-    signature = keypair.sign(data=message)
+    # bittensor v11's Keypair.sign() renamed the `data` kwarg to `message`.
+    signature = keypair.sign(message=message)
 
     file_contents = f"{message}\n\tSigned by: {keypair.ss58_address}\n\tSignature: {signature.hex()}"
     print(file_contents)

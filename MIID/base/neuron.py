@@ -16,6 +16,7 @@
 # DEALINGS IN THE SOFTWARE.
 
 import copy
+import os
 import typing
 
 import bittensor as bt
@@ -27,6 +28,8 @@ from MIID.utils.config import check_config, add_args, config
 from MIID.utils.misc import ttl_get_block
 from MIID import __spec_version__ as spec_version
 from MIID.mock import MockSubtensor, MockMetagraph
+from MIID.compat.metagraph import get_metagraph
+from MIID.compat.chain import is_hotkey_registered
 
 
 class BaseNeuron(ABC):
@@ -80,7 +83,7 @@ class BaseNeuron(ABC):
 
         # The wallet holds the cryptographic key pairs for the miner.
         if self.config.mock:
-            from bittensor_wallet.mock import get_mock_wallet
+            from MIID.compat.mock import get_mock_wallet
 
             self.wallet = get_mock_wallet()
             self.subtensor = MockSubtensor(
@@ -90,9 +93,14 @@ class BaseNeuron(ABC):
                 self.config.netuid, subtensor=self.subtensor
             )
         else:
-            self.wallet = bt.Wallet(config=self.config)
-            self.subtensor = bt.Subtensor(config=self.config)
-            self.metagraph = self.subtensor.metagraph(self.config.netuid)
+            self.wallet = bt.Wallet(
+                name=self.config.wallet.name,
+                hotkey=self.config.wallet.hotkey,
+                path=os.path.expanduser(self.config.wallet.path),
+            )
+            network = self.config.subtensor.chain_endpoint or self.config.subtensor.network
+            self.subtensor = bt.Subtensor(network=network)
+            self.metagraph = get_metagraph(self.subtensor, self.config.netuid)
 
         bt.logging.info(f"Wallet: {self.wallet}")
         bt.logging.info(f"Subtensor: {self.subtensor}")
@@ -106,7 +114,7 @@ class BaseNeuron(ABC):
             self.wallet.hotkey.ss58_address
         )
         bt.logging.info(
-            f"Running neuron on subnet: {self.config.netuid} with uid {self.uid} using network: {self.subtensor.chain_endpoint}"
+            f"Running neuron on subnet: {self.config.netuid} with uid {self.uid} using network: {self.subtensor.endpoint}"
         )
         self.step = 0
         self.last_update = 0
@@ -137,10 +145,12 @@ class BaseNeuron(ABC):
 
     def check_registered(self):
         # --- Check for registration.
-        if not self.subtensor.is_hotkey_registered(
+        registered = is_hotkey_registered(
+            self.subtensor,
             netuid=self.config.netuid,
             hotkey_ss58=self.wallet.hotkey.ss58_address,
-        ):
+        )
+        if not registered:
             bt.logging.error(
                 f"Wallet: {self.wallet} is not registered on netuid {self.config.netuid}."
                 f" Please register the hotkey using `btcli subnets register` before trying again"

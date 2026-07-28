@@ -113,7 +113,7 @@ def ttl_get_block(self) -> int:
 
     Note: self here is the miner or validator instance
     """
-    return self.subtensor.get_current_block()
+    return self.subtensor.block
 
 
 def upload_data(endpoint_base: str, hotkey: str, payload: dict):

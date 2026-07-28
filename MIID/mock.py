@@ -2,54 +2,31 @@ import time
 
 import asyncio
 import random
-import numpy as np
 import bittensor as bt
 
 from typing import List, Optional
 
-
-class MockSubtensor(bt.MockSubtensor):
-    def __init__(self, netuid, n=16, wallet=None, network="mock"):
-        super().__init__(network=network)
-
-        if not self.subnet_exists(netuid):
-            self.create_subnet(netuid)
-
-        # Register ourself (the validator) as a neuron at uid=0
-        if wallet is not None:
-            self.force_register_neuron(
-                netuid=netuid,
-                hotkey=wallet.hotkey.ss58_address,
-                coldkey=wallet.coldkey.ss58_address,
-                balance=100000,
-                stake=100000,
-            )
-
-        # Register n mock neurons who will be miners
-        for i in range(1, n + 1):
-            self.force_register_neuron(
-                netuid=netuid,
-                hotkey=f"miner-hotkey-{i}",
-                coldkey="mock-coldkey",
-                balance=100000,
-                stake=100000,
-            )
+from MIID.compat.mock import CompatMockSubtensor
+from MIID.compat.metagraph import get_metagraph
+from MIID.compat.synapse import Synapse
 
 
-class MockMetagraph(bt.Metagraph):
-    def __init__(self, netuid=1, network="mock", subtensor=None):
-        super().__init__(netuid=netuid, network=network, sync=False)
+# bittensor v11 has no chain/network mocks (bt.MockSubtensor / bt.MockMetagraph
+# are gone -- the migration guide's advice is to test against a local node
+# instead). MockSubtensor/MockMetagraph here are thin aliases over our own
+# lightweight, in-memory stand-ins (see MIID/compat/mock.py and
+# MIID/compat/metagraph.py) kept only so `--mock` mode keeps working
+# structurally for local/offline development.
+MockSubtensor = CompatMockSubtensor
 
-        if subtensor is not None:
-            self.subtensor = subtensor
-        self.sync(subtensor=subtensor)
 
-        for axon in self.axons:
-            axon.ip = "127.0.0.0"
-            axon.port = 8091
-
-        bt.logging.info(f"Metagraph: {self}")
-        bt.logging.info(f"Axons: {self.axons}")
+def MockMetagraph(netuid: int = 1, network: str = "mock", subtensor=None):
+    if subtensor is None:
+        raise ValueError("MockMetagraph requires a subtensor instance.")
+    metagraph = get_metagraph(subtensor, netuid)
+    bt.logging.info(f"Metagraph: {metagraph}")
+    bt.logging.info(f"Axons: {metagraph.axons}")
+    return metagraph
 
 
 class MockDendrite(bt.Dendrite):
@@ -62,8 +39,8 @@ class MockDendrite(bt.Dendrite):
 
     async def forward(
         self,
-        axons: List[bt.Axon],
-        synapse: bt.Synapse = bt.Synapse(),
+        axons: List,
+        synapse: Optional[Synapse] = None,
         timeout: float = 12,
         deserialize: bool = True,
         run_async: bool = True,
@@ -71,6 +48,8 @@ class MockDendrite(bt.Dendrite):
     ):
         if streaming:
             raise NotImplementedError("Streaming not implemented yet.")
+        if synapse is None:
+            synapse = Synapse()
 
         async def query_all_axons(streaming: bool):
             """Queries all axons for responses."""
@@ -79,26 +58,20 @@ class MockDendrite(bt.Dendrite):
                 """Queries a single axon for a response."""
 
                 start_time = time.time()
-                s = synapse.copy()
-                # Attach some more required data so it looks real
-                s = self.preprocess_synapse_for_request(axon, s, timeout)
-                # We just want to mock the response, so we'll just fill in some data
+                s = self.preprocess_synapse_for_request(axon, synapse, timeout)
+                # We just want to mock the response; real Synapse subclasses
+                # (e.g. IdentitySynapse) don't have generic dummy_input/output
+                # fields, so we just echo the request back with mock timing.
                 process_time = random.random()
                 if process_time < timeout:
-                    s.dendrite.process_time = str(time.time() - start_time)
-                    # Update the status code and status message of the dendrite to match the axon
-                    # TODO (developer): replace with your own expected synapse data
-                    s.dummy_output = s.dummy_input * 2
+                    s.dendrite.process_time = process_time
                     s.dendrite.status_code = 200
                     s.dendrite.status_message = "OK"
-                    synapse.dendrite.process_time = str(process_time)
                 else:
-                    s.dummy_output = 0
+                    s.dendrite.process_time = timeout
                     s.dendrite.status_code = 408
                     s.dendrite.status_message = "Timeout"
-                    synapse.dendrite.process_time = str(timeout)
 
-                # Return the updated synapse object after deserializing if requested
                 if deserialize:
                     return s.deserialize()
                 else:

@@ -132,7 +132,7 @@ def process_weights_for_netuid(
     uids,
     weights: np.ndarray,
     netuid: int,
-    subtensor: "bittensor.subtensor",
+    subtensor: "bittensor.subtensor" = None,
     metagraph: "bittensor.metagraph" = None,
     exclude_quantile: int = 0,
 ) -> Union[
@@ -157,17 +157,20 @@ def process_weights_for_netuid(
 
     # Get latest metagraph from chain if metagraph is None.
     if metagraph is None:
-        metagraph = subtensor.metagraph(netuid)
+        from MIID.compat.metagraph import get_metagraph
+
+        metagraph = get_metagraph(subtensor, netuid)
 
     # Cast weights to floats.
     if not isinstance(weights, np.ndarray) or weights.dtype != np.float32:
         weights = weights.astype(np.float32)
 
-    # Network configuration parameters from an subtensor.
-    # These parameters determine the range of acceptable weights for each neuron.
+    # Network configuration parameters, read straight off the metagraph
+    # (Subtensor.min_allowed_weights()/max_weight_limit() no longer exist in
+    # v11 -- these values now come back as part of the 'metagraph' read).
     quantile = exclude_quantile / U16_MAX
-    min_allowed_weights = subtensor.min_allowed_weights(netuid=netuid)
-    max_weight_limit = subtensor.max_weight_limit(netuid=netuid)
+    min_allowed_weights = metagraph.min_allowed_weights
+    max_weight_limit = metagraph.max_weight_limit
     bittensor.logging.debug("quantile", quantile)
     bittensor.logging.debug("min_allowed_weights", min_allowed_weights)
     bittensor.logging.debug("max_weight_limit", max_weight_limit)

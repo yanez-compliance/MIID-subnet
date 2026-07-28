@@ -19,26 +19,18 @@
 
 import bittensor as bt
 from typing import List, Optional, Union, Any, Dict
-from MIID.protocol import Dummy
-from bittensor.subnets import SubnetsAPI
+
+# NOTE: bittensor v11 removed bt.subnets.SubnetsAPI entirely (see the
+# migration guide's "Axon, Dendrite, and Synapse are gone" section) and this
+# class is unused leftover template code (nothing else in MIID imports it).
+# Kept only as a stub so importing this module doesn't crash; querying via
+# the subnet's own protocol should go through MIID.compat.transport.CompatDendrite
+# directly instead.
 
 
-class DummyAPI(SubnetsAPI):
+class DummyAPI:
     def __init__(self, wallet: "bt.Wallet"):
-        super().__init__(wallet)
-        self.netuid = 33
-        self.name = "dummy"
-
-    def prepare_synapse(self, dummy_input: int) -> Dummy:
-        synapse.dummy_input = dummy_input
-        return synapse
-
-    def process_responses(
-        self, responses: List[Union["bt.Synapse", Any]]
-    ) -> List[int]:
-        outputs = []
-        for response in responses:
-            if response.dendrite.status_code != 200:
-                continue
-            return outputs.append(response.dummy_output)
-        return outputs
+        raise NotImplementedError(
+            "DummyAPI relied on bittensor.subnets.SubnetsAPI, which was removed in "
+            "bittensor v11. Use MIID.compat.transport.CompatDendrite directly instead."
+        )
