@@ -21,10 +21,16 @@
 Reward Module — Face Image Variation Scoring
 
 KAV (Known Address Variation / online image quality score):
-  - Computed by calling an external grading API (GRADING_API_URL /grade) that
-    evaluates submitted face image variations for quality, identity
-    preservation, and variation compliance.
-  - The API payload mirrors the format used by validator_api_test.py:
+  - Computed by calling an external grading API that evaluates submitted face
+    image variations for quality, identity preservation, and variation
+    compliance.
+  - Async flow (avoids long-lived HTTP connections):
+      1. POST /grade_v2 — returns 200 + status "processing"; grading runs
+         in the background.
+      2. Poll /grade_results after 15 min, then 5 min later, then every 1 min.
+         status "completed" returns the grade payload under "result";
+         status "processing" means poll again.
+  - The /grade_v2 payload mirrors the format used by validator_api_test.py:
       { "signature": <signed message>, "phase4_image_data": { ... } }
   - Miners are ranked by avg validation score (primary) and avg identity
     preservation (tiebreaker); top 50 with avg_identity_preservation >= 0.6
@@ -61,15 +67,172 @@ from MIID.validator.image_variations import format_variation_requirements
 # KAV: Image Variation Grading (via external API)
 # =============================================================================
 
-# External grading API endpoint — grades submitted face image variations.
-# Update this URL to match the current grading server before deployment.
-GRADING_API_URL = "http://98.90.28.118:5000/grade"
+# External grading API — submit to /grade_v2 (async ack), then poll /grade_results.
+# Update GRADING_API_BASE to match the current grading server before deployment.
+GRADING_API_BASE = "http://98.90.28.118:5000"
+GRADING_API_URL = f"{GRADING_API_BASE}/grade_v2"
+GRADING_RESULTS_URL = f"{GRADING_API_BASE}/grade_results"
+
+# Submit: short timeout — server should ack immediately and grade in background.
+GRADING_SUBMIT_TIMEOUT_SECONDS = 60
 GRADING_RETRY_ATTEMPTS = 3
 GRADING_RETRY_DELAY_SECONDS = 60
+
+# Poll /grade_results: first wait 15 min, then 5 min, then every 1 min until
+# status "completed" or GRADING_POLL_MAX_DURATION_SECONDS from submit elapses.
+GRADING_RESULTS_TIMEOUT_SECONDS = 30
+GRADING_POLL_INITIAL_WAIT_SECONDS = 15 * 60   # 15 minutes
+GRADING_POLL_SECOND_WAIT_SECONDS = 5 * 60     # 5 minutes
+GRADING_POLL_INTERVAL_SECONDS = 60            # 1 minute
+GRADING_POLL_MAX_DURATION_SECONDS = 60 * 60   # stop polling after 60 min total
 
 # Tiny epsilon added to validation score to break ties using identity_preservation.
 # e.g. two miners both averaging 0.6 validation will be ordered by their avg_ip.
 _IDENTITY_TIEBREAK_EPS = 1e-5
+
+
+def _submit_and_poll_grading_api(
+    payload: Dict[str, Any],
+    challenge_id: str,
+) -> Dict[str, Any]:
+    """
+    Submit a grading job to /grade_v2, then poll /grade_results until ready.
+
+    Server contract:
+      POST /grade_v2        → 200 { "status": "processing" }
+      POST /grade_results   → 200 { "status": "processing" }
+                            → 200 { "status": "completed", "result": { ... } }
+
+    Poll schedule after a successful submit:
+      - wait 15 minutes, then poll
+      - wait 5 minutes, then poll
+      - poll every 1 minute thereafter
+
+    Returns the inner ``result`` dict once status is "completed".
+    Raises on submit failure (after retries) or if polling times out.
+    """
+    # ── 1. Submit to /grade_v2 (expect immediate 200 + status processing) ────
+    last_submit_exc: Optional[Exception] = None
+    for attempt in range(GRADING_RETRY_ATTEMPTS):
+        try:
+            bt.logging.info(
+                f"Submitting grading job to {GRADING_API_URL} "
+                f"for challenge {challenge_id} "
+                f"(attempt {attempt + 1}/{GRADING_RETRY_ATTEMPTS})."
+            )
+            resp = requests.post(
+                GRADING_API_URL,
+                json=payload,
+                timeout=GRADING_SUBMIT_TIMEOUT_SECONDS,
+            )
+            resp.raise_for_status()
+            submit_json = resp.json() if resp.content else {}
+            bt.logging.info(
+                f"Grading job accepted (HTTP {resp.status_code}, "
+                f"status={submit_json.get('status')!r}) for challenge "
+                f"{challenge_id}. Will poll {GRADING_RESULTS_URL}."
+            )
+            last_submit_exc = None
+            break
+        except Exception as exc:
+            last_submit_exc = exc
+            if attempt < GRADING_RETRY_ATTEMPTS - 1:
+                bt.logging.warning(
+                    f"Grading submit attempt {attempt + 1}/{GRADING_RETRY_ATTEMPTS} "
+                    f"failed: {exc}. Retrying in {GRADING_RETRY_DELAY_SECONDS}s..."
+                )
+                time.sleep(GRADING_RETRY_DELAY_SECONDS)
+            else:
+                raise
+
+    if last_submit_exc is not None:
+        raise last_submit_exc
+
+    # ── 2. Poll /grade_results on the configured schedule ────────────────────
+    results_payload = {
+        "challenge_id": challenge_id,
+        "signature": payload.get("signature"),
+    }
+    poll_waits = [
+        GRADING_POLL_INITIAL_WAIT_SECONDS,
+        GRADING_POLL_SECOND_WAIT_SECONDS,
+    ]
+    poll_start = time.time()
+    poll_attempt = 0
+
+    while True:
+        elapsed = time.time() - poll_start
+        if elapsed >= GRADING_POLL_MAX_DURATION_SECONDS:
+            raise TimeoutError(
+                f"Grading results for challenge {challenge_id} not ready after "
+                f"{GRADING_POLL_MAX_DURATION_SECONDS // 60} minutes of polling."
+            )
+
+        if poll_attempt < len(poll_waits):
+            wait_seconds = poll_waits[poll_attempt]
+        else:
+            wait_seconds = GRADING_POLL_INTERVAL_SECONDS
+
+        # Cap the wait so we don't overshoot the overall deadline
+        remaining = GRADING_POLL_MAX_DURATION_SECONDS - (time.time() - poll_start)
+        wait_seconds = min(wait_seconds, max(0, remaining))
+
+        bt.logging.info(
+            f"Waiting {wait_seconds / 60:.1f} min before polling /grade_results "
+            f"for challenge {challenge_id} "
+            f"(poll #{poll_attempt + 1}, elapsed {elapsed / 60:.1f} min)."
+        )
+        if wait_seconds > 0:
+            time.sleep(wait_seconds)
+
+        poll_attempt += 1
+        try:
+            bt.logging.info(
+                f"Polling grading results at {GRADING_RESULTS_URL} "
+                f"for challenge {challenge_id} (poll #{poll_attempt})."
+            )
+            resp = requests.post(
+                GRADING_RESULTS_URL,
+                json=results_payload,
+                timeout=GRADING_RESULTS_TIMEOUT_SECONDS,
+            )
+            resp.raise_for_status()
+            api_json = resp.json() if resp.content else {}
+            status = str(api_json.get("status", "")).lower()
+
+            if status == "processing":
+                bt.logging.info(
+                    f"Grading still processing for challenge {challenge_id}. "
+                    f"Will poll again."
+                )
+                continue
+
+            if status == "completed":
+                result = api_json.get("result")
+                if not isinstance(result, dict):
+                    raise ValueError(
+                        f"/grade_results returned status=completed but missing "
+                        f"'result' object for challenge {challenge_id}."
+                    )
+                bt.logging.info(
+                    f"Grading results ready for challenge {challenge_id} "
+                    f"after {poll_attempt} poll(s) "
+                    f"({(time.time() - poll_start) / 60:.1f} min)."
+                )
+                return result
+
+            bt.logging.warning(
+                f"/grade_results returned unexpected status={status!r} "
+                f"for challenge {challenge_id}: keys={list(api_json.keys())}. "
+                f"Treating as processing."
+            )
+        except TimeoutError:
+            raise
+        except Exception as exc:
+            bt.logging.warning(
+                f"Poll #{poll_attempt} for challenge {challenge_id} failed: {exc}. "
+                f"Will retry on next interval."
+            )
 
 
 def _apply_blended_rank_cap_with_quality(
@@ -202,10 +365,15 @@ def get_image_variation_rewards(
     Compute KAV rewards for each miner based on their image variation submissions.
 
     Grading pipeline:
-    1. Sign and POST the challenge data to the external grading API
+    1. Sign and POST the challenge data to the external grading API /grade_v2
        (GRADING_API_URL).  Payload format mirrors validator_api_test.py:
            { "signature": <signed_message>, "phase4_image_data": { ... } }
-       The API returns per-miner, per-image scores inside "results_by_miner".
+       The server returns 200 + status "processing" immediately and grades
+       in the background.  The validator then polls /grade_results
+       (15 min → 5 min → every 1 min) until status is "completed" (grade
+       payload under "result") or "processing" (poll again).
+       The result contains per-miner, per-image scores inside
+       "results_by_miner".
     2. For each miner:
        a. Determine how many variation types were requested.
        b. Match each requested type to the miner's submitted images.
@@ -303,33 +471,18 @@ def get_image_variation_rewards(
                 "phase4_image_data": phase4_image_data,
             }
 
-            for attempt in range(GRADING_RETRY_ATTEMPTS):
-                try:
-                    bt.logging.info(
-                        f"Calling grading API at {GRADING_API_URL} "
-                        f"for challenge {challenge_id} with {len(s3_submissions_by_miner)} miners "
-                        f"(attempt {attempt + 1}/{GRADING_RETRY_ATTEMPTS})."
-                    )
-                    resp = requests.post(GRADING_API_URL, json=payload, timeout=1200)
-                    resp.raise_for_status()
-                    api_json = resp.json()
-                    results_by_miner = api_json.get("results_by_miner", {})
-                    sampled_variation = api_json.get("sampled_variation", None)
-                    api_succeeded = True
-                    bt.logging.info(
-                        f"Grading API returned results for {len(results_by_miner)} miners "
-                        f"(sampled_variation={sampled_variation!r})."
-                    )
-                    break
-                except Exception as exc:
-                    if attempt < GRADING_RETRY_ATTEMPTS - 1:
-                        bt.logging.warning(
-                            f"Grading API attempt {attempt + 1}/{GRADING_RETRY_ATTEMPTS} failed: {exc}. "
-                            f"Retrying in {GRADING_RETRY_DELAY_SECONDS}s..."
-                        )
-                        time.sleep(GRADING_RETRY_DELAY_SECONDS)
-                    else:
-                        raise
+            bt.logging.info(
+                f"Starting async grading for challenge {challenge_id} "
+                f"with {len(s3_submissions_by_miner)} miners."
+            )
+            api_json = _submit_and_poll_grading_api(payload, challenge_id)
+            results_by_miner = api_json.get("results_by_miner", {})
+            sampled_variation = api_json.get("sampled_variation", None)
+            api_succeeded = True
+            bt.logging.info(
+                f"Grading API returned results for {len(results_by_miner)} miners "
+                f"(sampled_variation={sampled_variation!r})."
+            )
         except Exception as exc:
             bt.logging.error(
                 f"Grading API call failed: {exc}. "
@@ -346,17 +499,23 @@ def get_image_variation_rewards(
     # so membership checks are never used.  We detect sampled-only mode by
     # whether the API call succeeded and a sampled_variation was returned.
     score_sampled_only = bool(sampled_variation and api_succeeded)
-    num_graded = 1 if score_sampled_only else max(len(requested_types), 1)
+    if not api_succeeded:
+        # API never returned grades — nothing was graded (0 of N requested).
+        num_graded = 0
+    elif score_sampled_only:
+        num_graded = 1
+    else:
+        num_graded = max(len(requested_types), 1)
 
     if score_sampled_only:
         bt.logging.info(
             f"Scoring single sampled variation slot: {sampled_variation!r} "
             f"(1 of {len(requested_types)} requested types)."
         )
-    elif sampled_variation:
+    elif not api_succeeded:
         bt.logging.warning(
-            f"sampled_variation={sampled_variation!r} present but api_succeeded=False; "
-            f"falling back to scoring all {len(requested_types)} requested types."
+            f"Grading API did not succeed; num_graded=0 "
+            f"(0 of {len(requested_types)} requested types)."
         )
 
     rewards = np.zeros(len(miner_uids), dtype=float)
@@ -430,8 +589,12 @@ def get_image_variation_rewards(
                         "status": sub.get("status", ""),
                     })
 
-        avg_vs_norm = sum(v["validation_score_norm"] for v in per_variation) / num_graded
-        avg_ip = sum(v["identity_preservation"] for v in per_variation) / num_graded
+        if num_graded > 0:
+            avg_vs_norm = sum(v["validation_score_norm"] for v in per_variation) / num_graded
+            avg_ip = sum(v["identity_preservation"] for v in per_variation) / num_graded
+        else:
+            avg_vs_norm = 0.0
+            avg_ip = 0.0
 
         # Composite score: validation score + tiny identity tiebreak
         rewards[i] = avg_vs_norm + avg_ip * _IDENTITY_TIEBREAK_EPS
