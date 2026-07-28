@@ -84,7 +84,7 @@ GRADING_RESULTS_TIMEOUT_SECONDS = 30
 GRADING_POLL_INITIAL_WAIT_SECONDS = 15 * 60   # 15 minutes
 GRADING_POLL_SECOND_WAIT_SECONDS = 5 * 60     # 5 minutes
 GRADING_POLL_INTERVAL_SECONDS = 60            # 1 minute
-GRADING_POLL_MAX_DURATION_SECONDS = 40 * 60   # stop polling after 40 min total
+GRADING_POLL_MAX_DURATION_SECONDS = 60 * 60   # stop polling after 60 min total
 
 # Tiny epsilon added to validation score to break ties using identity_preservation.
 # e.g. two miners both averaging 0.6 validation will be ordered by their avg_ip.
