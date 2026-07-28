@@ -18,10 +18,10 @@ httpx>=0.27
 # the standalone `bittensor_wallet` / `bittensor-cli` packages are superseded
 # and should NOT be installed alongside it).
 #
-# Pinned to the v11 line: v11 replaced the axon/dendrite/synapse networking
-# stack (see MIID/compat/) and the whole bt.Config/argparse/bt.logging system,
+# Exact pin: v11 replaced the axon/dendrite/synapse networking stack
+# (see MIID/compat/) and the whole bt.Config/argparse/bt.logging system,
 # so this codebase will NOT work against bittensor <11 or >=12.
-bittensor>=11,<12
+bittensor==11.0.1
 cyscale  # required by async-substrate-interface >= 1.6 (transitive dep of bittensor)
 wandb
 python-dotenv # Add dotenv for .env file handling
