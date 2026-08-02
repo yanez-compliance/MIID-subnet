@@ -462,7 +462,7 @@ async def forward(self):
     phase4_image_data: Optional[Dict] = None
     if PHASE4_ENABLED and image_request is not None and selected_variations:
         phase4_image_data = {
-            "cycle": "Phase4-C4-Sandbox",
+            "cycle": "Phase4-C5-Sandbox",
             "challenge_id": challenge_id,
             "base_image_filename": image_request.image_filename,
             "target_drand_round": image_request.target_drand_round,
@@ -742,7 +742,7 @@ async def forward(self):
             )
 
             # ==========================================================================
-            # Cache rep_data from response for NEXT forward pass (Phase 4 - Cycle 3 Sandbox)
+            # Cache rep_data from response for NEXT forward pass (Phase 4 - Cycle 5 Sandbox)
             # ==========================================================================
             if uav_grading_enabled:
                 if upload_response and upload_response.get("rep_cache"):
