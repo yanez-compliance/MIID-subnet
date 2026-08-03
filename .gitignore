@@ -245,3 +245,9 @@ scripts/local_subnet_test.sh
 scripts/fix_miner_wallet.sh
 scripts/test_phase4_standalone.py
 unittest/
+
+# Real screen-replay photos are personal to each miner — never commit them.
+MIID/miner/real_image_miner_guide/inbox/*
+!MIID/miner/real_image_miner_guide/inbox/.gitkeep
+MIID/miner/real_image_miner_guide/staged/*
+!MIID/miner/real_image_miner_guide/staged/.gitkeep

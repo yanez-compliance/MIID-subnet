@@ -25,7 +25,10 @@ Validator Forward Module
 Implements the forward function that drives each validation round:
 1. Select random miners to query.
 2. Fetch a base face image from the MIID API.
-3. Build an ImageRequest (6 variations: 2 background, screen-replay, 3 combined edits).
+3. Build an ImageRequest (5 synthetic variations: 2 background, 3 combined edits;
+   plus the daily fixed seed image + instructions for the REAL screen-replay task —
+   miners may send as many non-duplicate real captures as they want, each one
+   bundling 2 photos/angles of the same capture as basic proof it's real).
 4. Send the request to miners in batches; collect S3 submission references.
 5. Grade submissions via the external grading API (KAV) using
    get_image_variation_rewards().
@@ -39,8 +42,7 @@ import bittensor as bt
 import json
 import os
 import asyncio
-import numpy as np
-from typing import List, Dict, Any, Tuple, Optional
+from typing import List, Dict, Any, Optional
 from datetime import datetime
 from pathlib import Path
 
@@ -50,6 +52,12 @@ from MIID.utils.uids import get_random_uids
 from MIID.utils.sign_message import sign_message
 
 from MIID.validator.base_images import fetch_image_from_api
+from MIID.validator.fixed_images import (
+    ensure_daily_fixed_image,
+    load_fixed_image_base64,
+    list_fixed_image_pool,
+    VALIDATOR_SENDS_SEED_IMAGE,
+)
 from MIID.validator.drand_utils import (
     calculate_target_round,
     calculate_reveal_buffer,
@@ -59,6 +67,7 @@ from MIID.validator.drand_utils import (
 from MIID.validator.image_variations import (
     build_standard_challenge_variations,
     format_variation_requirements,
+    format_real_screen_replay_instructions,
     IMAGE_VARIATION_REQUIREMENTS,
 )
 
@@ -77,6 +86,15 @@ _cached_rep_version: Optional[str] = None
 # Module-level pending queue for failed uploads (persists across forward passes)
 _pending_allocations: List[Dict] = []
 _pending_file_path: Optional[Path] = None
+
+# NOTE: Screen-replay policy is "send as many non-duplicate real captures as
+# you want" — there is no daily cap. Each submission must carry 2 photos
+# (2 angles of the same capture; see S3Submission.s3_key_angle2 in
+# MIID/protocol.py). Actual duplicate-detection (dedup by image hash across
+# a miner's submission history) is intentionally not implemented yet — not
+# needed while this task is still experimental. Miners can be advised
+# informally not to resubmit the same capture; a real check can be added
+# here later once manual review volume becomes a concern.
 
 # =============================================================================
 # Phase 4: Image Cycling State
@@ -250,7 +268,12 @@ async def forward(self):
     Steps:
     1.  Select random miners.
     2.  Fetch base face image from the MIID API.
-    3.  Build ImageRequest (6 variations: indoor bg, outdoor bg, screen-replay, 3 combined edits).
+    3.  Build ImageRequest (5 synthetic variations: indoor bg, outdoor bg, 3
+        combined edits; plus the daily fixed seed image + real screen-replay
+        instructions — that task is a physical capture miners may submit as
+        many non-duplicate times as they want (no daily cap), each one
+        bundling 2 photos/angles of the same capture, independent of this
+        request/response cycle).
     4.  Query miners in batches; collect S3 submission references.
     5.  Compute KAV rewards via get_image_variation_rewards() (calls grading API).
     6.  Optionally combine with UAV via apply_reputation_rewards().
@@ -270,6 +293,12 @@ async def forward(self):
     # --- END WANDB SETUP ---
 
     request_start = time.time()
+
+    # Ensure daily fixed seed is present (empty dir on cold start, or new UTC day).
+    # Only needed when the validator itself is sending the seed image — see
+    # VALIDATOR_SENDS_SEED_IMAGE in MIID/validator/fixed_images.py.
+    if VALIDATOR_SENDS_SEED_IMAGE:
+        ensure_daily_fixed_image(self.wallet)
 
     is_testnet = (
         self.config.netuid == 322
@@ -308,11 +337,44 @@ async def forward(self):
             else:
                 image_filename, base64_image = image_result
 
-                # Always request (6 variations):
+                # Always request (5 synthetic variations):
                 # 1–2) background_edit: indoor + outdoor
-                # 3) screen_replay
-                # 4–6) combined edits: lighting+expression, lighting+pose, pose+expression
+                # 3–5) combined edits: lighting+expression, lighting+pose, pose+expression
+                # screen_replay is NOT included here — it's a real physical
+                # capture, not FLUX-generated.
                 selected_variations = build_standard_challenge_variations()
+
+                # Instructions for the REAL screen-replay task.
+                #
+                # Sandbox mode (VALIDATOR_SENDS_SEED_IMAGE=False, current default):
+                # the validator does NOT fetch/send a seed image at all — miners
+                # instead pick one themselves at random from the static
+                # fixed_image/ pool (7 images, checked into git) so they can
+                # practice the flow. Flip VALIDATOR_SENDS_SEED_IMAGE back to True
+                # in MIID/validator/fixed_images.py to resume validator-driven
+                # daily seeds; this branch below reverts to that automatically.
+                daily_seed_filename, daily_seed_b64 = None, None
+                if VALIDATOR_SENDS_SEED_IMAGE:
+                    daily_seed = load_fixed_image_base64()
+                    if daily_seed is None:
+                        bt.logging.warning(
+                            "Phase 4: No daily fixed seed image available; "
+                            "screen-replay instructions will be sent without a seed image."
+                        )
+                    daily_seed_filename, daily_seed_b64 = daily_seed if daily_seed else (None, None)
+                    real_screen_replay_instructions = format_real_screen_replay_instructions(
+                        seed_filename=daily_seed_filename
+                    )
+                else:
+                    seed_pool = list_fixed_image_pool()
+                    if not seed_pool:
+                        bt.logging.warning(
+                            "Phase 4: fixed_image/ pool is empty; screen-replay "
+                            "instructions will be sent without a seed pool."
+                        )
+                    real_screen_replay_instructions = format_real_screen_replay_instructions(
+                        seed_pool=seed_pool
+                    )
 
                 # Drand unlock at T+40 min (batch1 20m + batch2 20m); grading window T+40–60m
                 reveal_delay = calculate_reveal_buffer(
@@ -345,20 +407,25 @@ async def forward(self):
                     target_drand_round=target_round,
                     reveal_timestamp=reveal_timestamp,
                     challenge_id=challenge_id,
+                    daily_seed_image=daily_seed_b64,
+                    daily_seed_filename=daily_seed_filename,
+                    real_screen_replay_instructions=real_screen_replay_instructions,
                 )
 
                 # Log what was selected
-                screen_replay_var = selected_variations[2]
-                screen_replay_devices = screen_replay_var.get("device_type", "unknown")
-                screen_replay_cues = screen_replay_var.get("visual_cue_keys", [])
                 variation_summary = ", ".join(
                     f"{v['type']}({v['intensity']})" for v in selected_variations
+                )
+                seed_mode_log = (
+                    f"daily_seed={daily_seed_filename or 'unavailable'}"
+                    if VALIDATOR_SENDS_SEED_IMAGE
+                    else f"seed_pool_size={len(seed_pool)} (miner picks; sandbox mode)"
                 )
                 bt.logging.info(
                     f"Phase 4: API image + random variation selection - "
                     f"Image '{image_filename}', "
                     f"variations=[{variation_summary}], "
-                    f"screen_replay: device={screen_replay_devices}, cues={screen_replay_cues}, "
+                    f"{seed_mode_log}, "
                     f"Total requested: {len(selected_variations)}, "
                     f"drand round {target_round}"
                 )
@@ -437,19 +504,54 @@ async def forward(self):
     )
     bt.logging.info(f"Received {valid_count} valid responses out of {len(all_responses)}")
 
-    # Build s3_submissions_by_miner for grading
+    # Build s3_submissions_by_miner for grading. Screen-replay submissions are
+    # passed through as-is for now (miners may send as many non-duplicate
+    # captures as they want; actual dedup checking isn't implemented yet —
+    # see note near the top of this file).
     s3_submissions_by_miner: Dict[str, Any] = {}
+
     for uid, response in uid_response_map.items():
         if PHASE4_ENABLED and hasattr(response, 's3_submissions') and response.s3_submissions:
             miner_hotkey = str(self.metagraph.axons[uid].hotkey)
             s3_data = []
             for sub in response.s3_submissions:
+                # screen_replay_uav (date/camera/device/cue-checklist) arrives
+                # already parsed on sub — the miner sent it directly over the
+                # wire, no separate JSON file or S3 upload involved. We don't
+                # use it for KAV grading; we just carry it through into
+                # results/s3_submissions_by_miner so it ends up in the final
+                # JSON uploaded to the MIID server (Flask app) below.
+                uav_dict = None
+                if sub.screen_replay_uav is not None:
+                    if hasattr(sub.screen_replay_uav, "model_dump"):
+                        uav_dict = sub.screen_replay_uav.model_dump()
+                    elif hasattr(sub.screen_replay_uav, "dict"):
+                        uav_dict = sub.screen_replay_uav.dict()
+                    else:
+                        uav_dict = dict(sub.screen_replay_uav)
+
+                if sub.variation_type == "screen_replay":
+                    # Every screen_replay submission carries 2 photos (2 angles
+                    # of the same capture) — angle 2 rides on the *_angle2
+                    # fields below. Miners may send as many non-duplicate
+                    # captures as they want; there's no daily cap.
+                    bt.logging.info(
+                        f"Miner UID {uid} screen_replay received "
+                        f"(angle1_hash={sub.image_hash[:12]}…, "
+                        f"angle2_hash={(sub.image_hash_angle2 or 'MISSING')[:12]}…, "
+                        f"uav={'present' if uav_dict else 'MISSING'})"
+                    )
+
                 s3_data.append({
                     "s3_key":       sub.s3_key,
                     "image_hash":   sub.image_hash,
                     "signature":    sub.signature,
                     "variation_type": sub.variation_type,
                     "path_signature": sub.path_signature,
+                    "s3_key_angle2":     sub.s3_key_angle2,
+                    "image_hash_angle2": sub.image_hash_angle2,
+                    "signature_angle2":  sub.signature_angle2,
+                    "screen_replay_uav": uav_dict,
                 })
             s3_submissions_by_miner[str(uid)] = {
                 "hotkey":           miner_hotkey,

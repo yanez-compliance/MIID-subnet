@@ -46,6 +46,16 @@ USED_DIR       = Path("/home/ubuntu/YanezMIIDManage/api_image/used_batch_4_4-13-
 BATCH_LOG      = Path("/home/ubuntu/YanezMIIDManage/api_image/used_batch_4_4_13_2026.json")
 ALLOWED_EXT    = ('.png', '.jpg', '.jpeg', '.gif', '.webp')
 _batch_lock    = threading.Lock()
+
+# Daily fixed seed image pool (screen-replay challenge).
+# Every validator that asks on the same UTC day must get the SAME image, so
+# this pool is selected deterministically by date (no move/consume like the
+# /image/<hotkey> batch pool above).
+FIXED_IMAGE_POOL_DIR = Path("/home/ubuntu/YanezMIIDManage/api_image/fixed_image_pool")
+# Serve log — same role as BATCH_LOG for the random pool (written by
+# image_manage_fixed.py, appended on each /fixed_image serve).
+FIXED_IMAGE_LOG = Path("/home/ubuntu/YanezMIIDManage/api_image/used_fixed_image_pool.json")
+_fixed_image_lock = threading.Lock()
 HOTKEY_TO_FOLDER = {
     "5DUB7kNLvvx8Dj7D8tn54N1C7Xok6GodNPQE2WECCaL9Wgpr": "miid",
     "5GWzXSra6cBM337nuUU7YTjZQ6ewT2VakDpMj8Pw2i8v8PVs": "yuma",
@@ -436,6 +446,142 @@ def get_validator_image(hotkey):
     b64 = base64.standard_b64encode(image_bytes).decode('ascii')
     return jsonify({
         "verified_by": hotkey,
+        "image": {"filename": chosen.name, "data_base64": b64},
+    }), 200
+
+
+def _get_daily_fixed_image_path():
+    """
+    Deterministically pick today's fixed seed image from FIXED_IMAGE_POOL_DIR.
+
+    Selection is keyed off the UTC calendar date (proleptic Gregorian ordinal),
+    not request order or hotkey, so every validator that calls this endpoint
+    on the same UTC day resolves to the exact same file — no locking or
+    move-to-used bookkeeping needed. The pool naturally rotates to the next
+    image once UTC midnight passes; a single-image pool stays "fixed" until
+    an operator adds more images.
+    """
+    if not FIXED_IMAGE_POOL_DIR.is_dir():
+        return None
+
+    pool = sorted(
+        f for f in FIXED_IMAGE_POOL_DIR.iterdir()
+        if f.is_file() and f.suffix.lower() in ALLOWED_EXT
+    )
+    if not pool:
+        return None
+
+    day_index = datetime.now(timezone.utc).date().toordinal()
+    return pool[day_index % len(pool)]
+
+
+def _log_fixed_image_serve(hotkey, filename, seed_date):
+    """
+    Append a serve record to FIXED_IMAGE_LOG (used_fixed_image_pool.json).
+
+    Analogous to updating BATCH_LOG on /image/<hotkey>, except we do NOT move
+    the file — every validator on the same UTC day gets the same filename.
+    Also updates daily_assignments so operators can see at a glance which
+    validators received today's shared seed.
+    Must be called under _fixed_image_lock.
+    """
+    try:
+        if FIXED_IMAGE_LOG.is_file():
+            with open(FIXED_IMAGE_LOG, 'r', encoding='utf-8') as lf:
+                log = json.load(lf)
+        else:
+            log = {
+                "initialized_at": datetime.now(timezone.utc).isoformat(),
+                "pool_dir": str(FIXED_IMAGE_POOL_DIR),
+                "endpoint": "/fixed_image/<hotkey>",
+                "serves_to_validators": [],
+                "daily_assignments": {},
+                "manifest": [],
+            }
+
+        served_at = datetime.now(timezone.utc).isoformat()
+        log.setdefault("serves_to_validators", []).append({
+            "filename": filename,
+            "seed_date": seed_date,
+            "served_at": served_at,
+            "validator_hotkey": hotkey,
+            "note": "same image for all validators on this UTC day",
+        })
+        log["serves_to_validators_count"] = len(log["serves_to_validators"])
+
+        assignments = log.setdefault("daily_assignments", {})
+        day_entry = assignments.setdefault(seed_date, {
+            "filename": filename,
+            "validators": [],
+            "serve_count": 0,
+        })
+        day_entry["filename"] = filename
+        if hotkey not in day_entry["validators"]:
+            day_entry["validators"].append(hotkey)
+        day_entry["serve_count"] = len(day_entry["validators"])
+        day_entry["last_served_at"] = served_at
+
+        log["today_seed_date"] = seed_date
+        log["today_selected_filename"] = filename
+
+        with open(FIXED_IMAGE_LOG, 'w', encoding='utf-8') as lf:
+            json.dump(log, lf, indent=2)
+    except Exception as e:
+        print(f"[ERROR] Failed to update fixed image serve log: {e}")
+
+
+@app.route('/fixed_image/<hotkey>', methods=['POST'])
+def get_fixed_image(hotkey):
+    """
+    Return today's fixed seed image for the screen-replay challenge.
+
+    Unlike /image/<hotkey>, this endpoint is NOT random and does NOT consume
+    the pool: the same UTC calendar day always resolves to the same file in
+    FIXED_IMAGE_POOL_DIR, regardless of which validator calls it or how many
+    times. Each successful serve is logged to FIXED_IMAGE_LOG so we can see
+    which validators received today's shared image.
+    Response includes "seed_date" (UTC) so callers can detect rollover.
+    """
+    if hotkey not in HOTKEY_TO_FOLDER:
+        return jsonify({"error": "Unauthorized hotkey or no image folder for this validator"}), 403
+
+    if not request.is_json:
+        return jsonify({"error": "Request body must be JSON"}), 400
+
+    data = request.get_json()
+    signature_text = data.get("signature")
+    if not signature_text:
+        return jsonify({"error": "Missing 'signature' in JSON payload"}), 400
+
+    tmp_signature_filename = os.path.join(DATA_DIR, f"tmp_signature_fixed_image_{time.time()}.txt")
+    with open(tmp_signature_filename, 'w', encoding='utf-8') as tmp_file:
+        tmp_file.write(signature_text)
+
+    try:
+        verify_message(tmp_signature_filename)
+    except ValueError as e:
+        os.remove(tmp_signature_filename)
+        return jsonify({"error": f"Signature verification failed: {str(e)}"}), 400
+
+    os.remove(tmp_signature_filename)
+
+    with _fixed_image_lock:
+        chosen = _get_daily_fixed_image_path()
+        if chosen is None:
+            return jsonify({"error": "No fixed image pool configured or pool is empty"}), 404
+
+        try:
+            image_bytes = chosen.read_bytes()
+        except Exception as e:
+            return jsonify({"error": f"Failed to read fixed image: {str(e)}"}), 500
+
+        seed_date = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+        _log_fixed_image_serve(hotkey, chosen.name, seed_date)
+
+    b64 = base64.standard_b64encode(image_bytes).decode('ascii')
+    return jsonify({
+        "verified_by": hotkey,
+        "seed_date": seed_date,
         "image": {"filename": chosen.name, "data_base64": b64},
     }), 200
 

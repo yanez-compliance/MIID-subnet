@@ -35,6 +35,8 @@ The miner pipeline:
 6. Return S3Submission references to the validator
 """
 
+import hashlib
+import json
 import time
 import typing
 import io
@@ -47,10 +49,27 @@ from PIL import Image
 from bittensor.core.errors import NotVerifiedException
 
 # Protocol
-from MIID.protocol import IdentitySynapse, S3Submission
+from MIID.protocol import IdentitySynapse, S3Submission, ScreenReplayUAV
 
 # Base miner class
 from MIID.base.miner import BaseMinerNeuron
+
+# screen_replay.json lives under MIID/miner/real_image_miner_guide/. Miners fill
+# it in (or run the helper submit_real_photo.py) to queue a real screen-replay
+# submission. See MIID/miner/real_image_miner_guide/README.md.
+SCREEN_REPLAY_JSON = os.path.join(
+    os.path.dirname(os.path.dirname(__file__)),
+    "MIID", "miner", "real_image_miner_guide", "screen_replay.json",
+)
+
+# Holds extra captures submitted (via submit_real_photo.py) while a previous
+# one was still pending — see queue_existing_pending_capture() there. Drained
+# oldest-first, one per successful screen-replay submission, so a miner can
+# queue up several captures back-to-back without any of them being dropped.
+SCREEN_REPLAY_QUEUE_DIR = os.path.join(
+    os.path.dirname(os.path.dirname(__file__)),
+    "MIID", "miner", "real_image_miner_guide", "queue",
+)
 
 
 def _free_gpu_memory(stage: str = "") -> None:
@@ -223,6 +242,13 @@ class Miner(BaseMinerNeuron):
             synapse.s3_submissions = []
             return synapse
 
+        req = synapse.image_request
+        seed_source = req.daily_seed_filename or "sandbox: miner picks from local fixed_image/ pool"
+        bt.logging.info(
+            f"Received: IMAGE 1='{req.image_filename}' | "
+            f"IMAGE 2 (screen-replay seed)='{seed_source}'"
+        )
+
         bt.logging.info("Processing image variation request")
 
         if not PHASE4_AVAILABLE:
@@ -235,11 +261,17 @@ class Miner(BaseMinerNeuron):
 
         try:
             s3_submissions = self.process_image_request(synapse)
-            synapse.s3_submissions = s3_submissions
             bt.logging.info(f"Phase 4: Generated {len(s3_submissions)} S3 submissions")
         except Exception as e:
             bt.logging.error(f"Phase 4: Failed to process image request: {e}")
-            synapse.s3_submissions = []
+            s3_submissions = []
+
+        # Try to attach a real screen-replay submission from screen_replay.json
+        sr_sub = self._try_screen_replay_submission(req)
+        if sr_sub is not None:
+            s3_submissions.append(sr_sub)
+
+        synapse.s3_submissions = s3_submissions
 
         total_time = time.time() - start_time
         bt.logging.info(f"Request completed in {total_time:.2f}s of {timeout:.1f}s allowed.")
@@ -371,6 +403,251 @@ class Miner(BaseMinerNeuron):
             except Exception:
                 pass
             _free_gpu_memory("after_request")
+
+    def _try_screen_replay_submission(self, image_request) -> Optional[S3Submission]:
+        """Submit a real screen-replay capture if screen_replay.json says it's ready.
+
+        Reads screen_replay.json (MIID/miner/real_image_miner_guide/). Miners
+        (or the helper script submit_real_photo.py in that same folder) fill
+        in TWO photo paths (two different angles of the same capture) +
+        metadata and flip "ready" to true. This runs on every validator
+        query — since the axon is always listening, this is effectively a
+        background check — so as soon as "ready" is true the next query
+        submits both photos as one screen_replay submission. After a
+        successful upload the whole file is reset back to its blank/not-ready
+        state so it won't accidentally re-submit the exact same capture again
+        (that would be a duplicate). There's no limit on how many *different*
+        captures a miner can queue up and submit over time — just never the
+        same one twice.
+
+        If "ready" is false (the normal/default state), this is a no-op —
+        real screen-replay submissions are optional and not expected every
+        round.
+        """
+        if not os.path.exists(SCREEN_REPLAY_JSON):
+            return None
+
+        try:
+            with open(SCREEN_REPLAY_JSON, "r") as f:
+                data = json.load(f)
+        except Exception as e:
+            bt.logging.warning(f"screen_replay.json: could not read: {e}")
+            return None
+
+        if not bool(data.get("ready", False)):
+            return None  # nothing queued — normal, expected most rounds
+
+        photo_path = data.get("photo_path", "").strip()
+        photo_path_2 = data.get("photo_path_2", "").strip()
+        if not photo_path or not os.path.exists(photo_path):
+            bt.logging.warning(
+                f"screen_replay.json: ready=true but photo_path is missing/invalid "
+                f"('{photo_path}'). Leaving ready=true and will retry next round."
+            )
+            return None
+        if not photo_path_2 or not os.path.exists(photo_path_2):
+            bt.logging.warning(
+                f"screen_replay.json: ready=true but photo_path_2 (second angle) is "
+                f"missing/invalid ('{photo_path_2}'). A screen-replay submission needs "
+                f"TWO photos of the same capture. Leaving ready=true and will retry next round."
+            )
+            return None
+
+        # Sandbox mode: the validator isn't sending a seed image, so the miner
+        # must self-report which pool image (MIID/validator/fixed_image/) they
+        # used — recorded by submit_real_photo.py as "seed_image". Falls back
+        # to the validator-provided filename if VALIDATOR_SENDS_SEED_IMAGE is
+        # ever flipped back on (see MIID/validator/fixed_images.py).
+        chosen_seed_image = (data.get("seed_image") or "").strip() or (image_request.daily_seed_filename or "")
+        if not chosen_seed_image:
+            bt.logging.warning(
+                "screen_replay.json: ready=true but 'seed_image' is missing — record "
+                "which fixed_image/ pool file you used (re-run submit_real_photo.py "
+                "with --seed-image or answer the prompt). Leaving ready=true and will "
+                "retry next round."
+            )
+            return None
+
+        try:
+            photo_bytes = open(photo_path, "rb").read()
+            photo_bytes_2 = open(photo_path_2, "rb").read()
+        except Exception as e:
+            bt.logging.warning(f"screen_replay.json: cannot read photo(s): {e}")
+            return None
+
+        if not self.is_valid_image_bytes(photo_bytes):
+            bt.logging.warning(f"screen_replay.json: '{photo_path}' is not a valid image")
+            return None
+        if not self.is_valid_image_bytes(photo_bytes_2):
+            bt.logging.warning(f"screen_replay.json: '{photo_path_2}' is not a valid image")
+            return None
+
+        try:
+            challenge_id   = image_request.challenge_id or "sandbox_test"
+            image_hash     = hashlib.sha256(photo_bytes).hexdigest()
+            image_hash_2   = hashlib.sha256(photo_bytes_2).hexdigest()
+
+            if image_hash == image_hash_2:
+                bt.logging.warning(
+                    "screen_replay.json: both photos hash identically (same file "
+                    "submitted twice) — a screen-replay submission needs two DIFFERENT "
+                    "angles. Rejecting locally; take a second, distinct photo."
+                )
+                return None
+
+            message        = f"challenge:{challenge_id}:hash:{image_hash}"
+            signature      = self.wallet.hotkey.sign(message.encode()).hex()
+            message_2      = f"challenge:{challenge_id}:hash:{image_hash_2}"
+            signature_2    = self.wallet.hotkey.sign(message_2.encode()).hex()
+            path_message   = f"{challenge_id}:{self.wallet.hotkey.ss58_address}"
+            path_signature = self.wallet.hotkey.sign(path_message.encode()).hex()[:16]
+
+            if is_timelock_available():
+                encrypted_data = encrypt_image_for_drand(photo_bytes, image_request.target_drand_round)
+                encrypted_data_2 = encrypt_image_for_drand(photo_bytes_2, image_request.target_drand_round)
+                if encrypted_data is None or encrypted_data_2 is None:
+                    bt.logging.warning("screen_replay.json: timelock encryption failed")
+                    return None
+            else:
+                encrypted_data = photo_bytes
+                encrypted_data_2 = photo_bytes_2
+
+            seed_name = chosen_seed_image.rsplit(".", 1)[0]
+
+            s3_key = upload_to_s3(
+                encrypted_data=encrypted_data,
+                miner_hotkey=self.wallet.hotkey.ss58_address,
+                signature=signature,
+                image_hash=image_hash,
+                target_round=image_request.target_drand_round,
+                challenge_id=challenge_id,
+                variation_type="screen_replay",
+                path_signature=path_signature,
+                seed_image_name=seed_name,
+            )
+            if not s3_key:
+                bt.logging.warning("screen_replay.json: S3 upload failed (angle 1)")
+                return None
+
+            s3_key_2 = upload_to_s3(
+                encrypted_data=encrypted_data_2,
+                miner_hotkey=self.wallet.hotkey.ss58_address,
+                signature=signature_2,
+                image_hash=image_hash_2,
+                target_round=image_request.target_drand_round,
+                challenge_id=challenge_id,
+                variation_type="screen_replay_angle2",
+                path_signature=path_signature,
+                seed_image_name=seed_name,
+            )
+            if not s3_key_2:
+                bt.logging.warning("screen_replay.json: S3 upload failed (angle 2)")
+                return None
+
+            uav = ScreenReplayUAV(
+                seed_image=chosen_seed_image,
+                date=data.get("date", ""),
+                camera_used=data.get("camera_used", ""),
+                device_photographed=data.get("device_photographed", "phone"),
+                moire_pixel_grid=bool(data.get("moire_pixel_grid", False)),
+                screen_glare_hotspots=bool(data.get("screen_glare_hotspots", False)),
+                perspective_keystone_distortion=bool(data.get("perspective_keystone_distortion", False)),
+                gamma_contrast_shift=bool(data.get("gamma_contrast_shift", False)),
+                edge_crop_cues=bool(data.get("edge_crop_cues", False)),
+            )
+
+            # Reset to a blank/not-ready state so we don't re-submit this exact
+            # capture again (that would be a duplicate) — miners are free to
+            # queue up a brand-new capture right away for the next submission.
+            with open(SCREEN_REPLAY_JSON, "w") as f:
+                json.dump({
+                    "ready": False,
+                    "photo_path": "",
+                    "photo_path_2": "",
+                    "seed_image": "",
+                    "date": "",
+                    "camera_used": "",
+                    "device_photographed": "",
+                    "moire_pixel_grid": False,
+                    "screen_glare_hotspots": False,
+                    "perspective_keystone_distortion": False,
+                    "gamma_contrast_shift": False,
+                    "edge_crop_cues": False,
+                }, f, indent=2)
+
+            # The active slot just freed up — pull in the next queued capture
+            # (if any) so it goes out on a later validator query instead of
+            # sitting untouched. Oldest first.
+            self._promote_next_queued_screen_replay()
+
+            bt.logging.info(f"Screen-replay submitted (2 angles): {s3_key} + {s3_key_2}")
+            return S3Submission(
+                s3_key=s3_key,
+                image_hash=image_hash,
+                signature=signature,
+                variation_type="screen_replay",
+                path_signature=path_signature,
+                s3_key_angle2=s3_key_2,
+                image_hash_angle2=image_hash_2,
+                signature_angle2=signature_2,
+                screen_replay_uav=uav,
+            )
+
+        except Exception as e:
+            bt.logging.error(f"screen_replay.json: submission failed: {e}")
+            return None
+
+    def _promote_next_queued_screen_replay(self) -> None:
+        """Promote the oldest queued capture (if any) into the active slot.
+
+        submit_real_photo.py queues extra captures in SCREEN_REPLAY_QUEUE_DIR
+        when screen_replay.json is already occupied (ready=true) — see
+        queue_existing_pending_capture() there. Called right after resetting
+        screen_replay.json back to blank following a successful submission,
+        so a miner can queue up several captures back-to-back and have each
+        one sent out automatically, one per subsequent validator query,
+        without any of them being dropped or overwritten.
+        """
+        if not os.path.isdir(SCREEN_REPLAY_QUEUE_DIR):
+            return
+
+        try:
+            queued_files = sorted(
+                f for f in os.listdir(SCREEN_REPLAY_QUEUE_DIR)
+                if f.endswith(".json")
+            )
+        except Exception as e:
+            bt.logging.warning(f"screen_replay queue: could not list {SCREEN_REPLAY_QUEUE_DIR}: {e}")
+            return
+
+        if not queued_files:
+            return
+
+        # Filenames are timestamp-based (queued_YYYYMMDDTHHMMSSffffff.json),
+        # so a plain sort gives FIFO order — oldest capture goes out first.
+        next_file = os.path.join(SCREEN_REPLAY_QUEUE_DIR, queued_files[0])
+        try:
+            with open(next_file, "r") as f:
+                queued_data = json.load(f)
+        except Exception as e:
+            bt.logging.warning(f"screen_replay queue: could not read {next_file}: {e}, discarding it")
+            try:
+                os.remove(next_file)
+            except Exception:
+                pass
+            return
+
+        try:
+            with open(SCREEN_REPLAY_JSON, "w") as f:
+                json.dump(queued_data, f, indent=2)
+            os.remove(next_file)
+            remaining = len(queued_files) - 1
+            bt.logging.info(
+                f"Screen-replay queue: promoted {queued_files[0]} to active slot "
+                f"({remaining} still queued)."
+            )
+        except Exception as e:
+            bt.logging.warning(f"screen_replay queue: failed to promote {next_file}: {e}")
 
     async def blacklist(self, synapse: IdentitySynapse) -> typing.Tuple[bool, str]:
         """Blacklist requests from non-whitelisted validators."""
