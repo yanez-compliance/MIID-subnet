@@ -50,7 +50,7 @@ import bittensor as bt
 from MIID.base.validator import BaseValidatorNeuron
 from MIID.validator import forward
 from MIID.validator.forward import reset_phase4_state
-from MIID.validator.fixed_images import ensure_daily_fixed_image
+from MIID.validator.fixed_images import ensure_daily_fixed_image, VALIDATOR_SENDS_SEED_IMAGE
 from MIID.utils.sign_message import sign_message
 
 
@@ -99,8 +99,13 @@ class Validator(BaseValidatorNeuron):
         # Download base images from Flask API (signed request)
         self._download_base_images_from_api()
 
-        # Daily fixed seed for screen-replay (fetch if empty / new UTC day)
-        ensure_daily_fixed_image(self.wallet)
+        # Daily fixed seed for screen-replay (fetch if empty / new UTC day).
+        # Only needed when the validator is sending the seed image itself —
+        # see VALIDATOR_SENDS_SEED_IMAGE in MIID/validator/fixed_images.py.
+        # Currently disabled: miners pick their own seed from the static
+        # fixed_image/ pool instead (sandbox practice mode).
+        if VALIDATOR_SENDS_SEED_IMAGE:
+            ensure_daily_fixed_image(self.wallet)
 
         # Reset Phase 4 cycle state on startup
         phase4_state_path = Path(self.config.logging.logging_dir) / "validator_results" / "phase4_state.json"

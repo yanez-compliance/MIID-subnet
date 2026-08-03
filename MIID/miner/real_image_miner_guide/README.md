@@ -1,32 +1,42 @@
 # Real Screen-Replay Photo Submission
 
 This folder is where you submit a **real, physical photograph** — not an
-AI-generated one — of the daily seed image displayed on a real screen. This
-is completely **optional** and is not required every round. There is **no
+AI-generated one — of a seed image displayed on a real screen. This is
+completely **optional** and is not required every round. There is **no
 daily limit** — submit as many different real captures as you want, as
 often as you like. The only hard rule is: **never submit a duplicate**
 (the same capture/photos again) — that's filtered out and penalised. It's
 also fine to skip this entirely, or only submit occasionally.
 
+> **Sandbox mode (current):** the validator isn't sending you a seed image
+> right now. Instead, pick any ONE image yourself, at random, from
+> `MIID/validator/fixed_image/` — a small pool that ships with this repo (no
+> download needed). This lets you practice the flow before the validator
+> resumes pushing a seed image every round.
+
 ## TL;DR
 
-1. Take TWO photos of the SAME capture, from two different angles/positions:
-   display today's daily seed image on a real screen (phone, tablet, laptop,
-   monitor, or TV) and photograph it twice with a **different** physical
-   camera (no screenshots). Two angles of one capture, not two unrelated
-   photos.
-2. Drop both photo files into `inbox/` (this folder) — exactly 2 images.
-3. Run:
+1. Pick ONE image at random from `MIID/validator/fixed_image/` in this repo.
+2. Take TWO photos of the SAME capture, from two different angles/positions:
+   display that image on a real screen (phone, tablet, laptop, monitor, or
+   TV) and photograph it twice with a **different** physical camera (no
+   screenshots). Two angles of one capture, not two unrelated photos.
+3. Drop both photo files into `inbox/` (this folder) — exactly 2 images.
+4. Run:
    ```bash
    python MIID/miner/real_image_miner_guide/submit_real_photo.py
    ```
-4. Answer the few questions it asks you (camera used, which device you
-   photographed, which visual cues are visible). That's it — nothing else to
-   do. Your miner process picks it up automatically and submits both photos
-   as one submission the next time a validator queries you.
-5. Want to submit again? Take a brand-new pair of photos and re-run the
-   script — as many times as you like, whenever you're ready. Just make sure
-   each pair is a genuinely new capture, never the same photos reused.
+5. Answer the few questions it asks you (which pool image you used, camera
+   used, which device you photographed, which visual cues are visible).
+   That's it — nothing else to do. Your miner process picks it up
+   automatically and submits both photos as one submission the next time a
+   validator queries you.
+6. Want to submit again? Pick a (possibly different) pool image, take a
+   brand-new pair of photos, and re-run the script — as many times as you
+   like, whenever you're ready. Just make sure each pair is a genuinely new
+   capture, never the same photos reused. If your previous capture hasn't
+   gone out yet, it's queued automatically (see "Submitting more than one at
+   a time" below) — nothing is ever lost or overwritten.
 
 You do **not** need to restart your miner. `neurons/miner.py` checks
 `screen_replay.json` on every incoming validator request, so as soon as the
@@ -54,6 +64,30 @@ script above finishes, the very next query will submit your photo.
 - If `"ready"` is `false` (the normal, default state), the miner does
   nothing extra — this is expected most rounds. It's optional either way.
 
+## Submitting more than one at a time (the `queue/` folder)
+
+`screen_replay.json` only has **one active slot**. If you run
+`submit_real_photo.py` again before your always-running miner process has
+had a chance to pick up and send the previous capture (i.e. `ready` is still
+`true`), nothing is lost:
+
+1. `submit_real_photo.py` notices the active slot is still occupied, copies
+   that pending capture into `queue/` (named with a timestamp so order is
+   preserved), and writes your **new** capture into `screen_replay.json` —
+   your new one takes the active slot immediately.
+2. Every time the miner process finishes sending the active capture, it
+   checks `queue/` and automatically promotes the **oldest** queued capture
+   into the now-empty active slot, ready to go out on the next validator
+   query.
+3. This repeats until `queue/` is empty — so you can queue up as many
+   captures back-to-back as you want (take photos, run the script, repeat)
+   and each one will eventually be sent, in the order you submitted them.
+
+You don't need to do anything special to use this — it kicks in
+automatically whenever you submit while a previous capture is still
+pending. `queue/` is just a holding area; you shouldn't normally need to
+look inside it.
+
 ## `screen_replay.json` fields
 
 | Field | Meaning |
@@ -61,6 +95,7 @@ script above finishes, the very next query will submit your photo.
 | `ready` | Set to `true` by `submit_real_photo.py` when a capture is queued. The miner flips it back to `false` after submitting. **You shouldn't normally need to edit this by hand.** |
 | `photo_path` | Absolute path to the staged photo file (angle 1). |
 | `photo_path_2` | Absolute path to the staged photo file (angle 2 — a different angle of the same capture). |
+| `seed_image` | Filename of the `MIID/validator/fixed_image/` pool image you randomly picked and photographed (sandbox mode). |
 | `date` | Capture date, `YYYY-MM-DD` (UTC). Defaults to today. |
 | `camera_used` | The camera/phone you used to take the photos, e.g. `"iPhone 15 Pro"`. |
 | `device_photographed` | Which device displayed the seed image: one of `phone`, `tablet`, `laptop`, `monitor`, `tv`. |
@@ -101,6 +136,7 @@ You can skip all the interactive prompts by passing flags up front:
 
 ```bash
 python MIID/miner/real_image_miner_guide/submit_real_photo.py \
+  --seed-image 034633750981_f_doc.png \
   --camera "iPhone 15 Pro" \
   --device phone \
   --moire --glare
@@ -108,6 +144,7 @@ python MIID/miner/real_image_miner_guide/submit_real_photo.py \
 
 | Flag | Meaning |
 |---|---|
+| `--seed-image TEXT` | Filename of the `fixed_image/` pool image you used |
 | `--camera TEXT` | Camera/phone used to take the photo |
 | `--device {phone,tablet,laptop,monitor,tv}` | Device the seed image was displayed on |
 | `--date YYYY-MM-DD` | Capture date (defaults to today, UTC) |

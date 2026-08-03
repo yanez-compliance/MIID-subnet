@@ -25,6 +25,15 @@ FIXED_IMAGE_DIR = Path(__file__).parent / "fixed_image"
 SEED_META_PATH = FIXED_IMAGE_DIR / "seed_meta.json"
 SUPPORTED_EXTENSIONS = ("*.png", "*.jpg", "*.jpeg", "*.webp")
 
+# Sandbox toggle: while False, the validator does NOT fetch/send a daily seed
+# image at all. Instead, fixed_image/ holds a small static pool (currently 7
+# images, checked into git) that miners pick from *themselves* for the real
+# screen-replay task — this lets miners practice the flow before the
+# validator resumes picking/pushing the seed image every day. Flip back to
+# True to restore the old validator-driven daily-seed behavior; none of the
+# fetch/cache logic below needs to change.
+VALIDATOR_SENDS_SEED_IMAGE = False
+
 
 def _utc_today() -> str:
     """Return today's date in UTC as YYYY-MM-DD."""
@@ -203,6 +212,17 @@ def ensure_daily_fixed_image(wallet) -> Optional[Tuple[str, Path]]:
     reason = "empty directory" if is_fixed_image_dir_empty() else "new UTC day (00:00:00)"
     bt.logging.info(f"Refreshing daily fixed image ({reason})")
     return fetch_and_save_fixed_image(wallet)
+
+
+def list_fixed_image_pool() -> List[str]:
+    """List filenames of the static fixed-image pool miners choose from.
+
+    Used only in sandbox mode (VALIDATOR_SENDS_SEED_IMAGE=False) to build the
+    miner-facing instructions dynamically, so the text always matches
+    whatever images actually sit in fixed_image/ (currently 7, checked into
+    git) without needing a hardcoded count anywhere.
+    """
+    return [p.name for p in _list_image_files()]
 
 
 def load_fixed_image_base64() -> Optional[Tuple[str, str]]:

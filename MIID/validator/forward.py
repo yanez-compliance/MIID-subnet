@@ -52,7 +52,12 @@ from MIID.utils.uids import get_random_uids
 from MIID.utils.sign_message import sign_message
 
 from MIID.validator.base_images import fetch_image_from_api
-from MIID.validator.fixed_images import ensure_daily_fixed_image, load_fixed_image_base64
+from MIID.validator.fixed_images import (
+    ensure_daily_fixed_image,
+    load_fixed_image_base64,
+    list_fixed_image_pool,
+    VALIDATOR_SENDS_SEED_IMAGE,
+)
 from MIID.validator.drand_utils import (
     calculate_target_round,
     calculate_reveal_buffer,
@@ -289,8 +294,11 @@ async def forward(self):
 
     request_start = time.time()
 
-    # Ensure daily fixed seed is present (empty dir on cold start, or new UTC day)
-    ensure_daily_fixed_image(self.wallet)
+    # Ensure daily fixed seed is present (empty dir on cold start, or new UTC day).
+    # Only needed when the validator itself is sending the seed image — see
+    # VALIDATOR_SENDS_SEED_IMAGE in MIID/validator/fixed_images.py.
+    if VALIDATOR_SENDS_SEED_IMAGE:
+        ensure_daily_fixed_image(self.wallet)
 
     is_testnet = (
         self.config.netuid == 322
@@ -333,20 +341,40 @@ async def forward(self):
                 # 1–2) background_edit: indoor + outdoor
                 # 3–5) combined edits: lighting+expression, lighting+pose, pose+expression
                 # screen_replay is NOT included here — it's a real physical
-                # capture sent via daily_seed_image below, not FLUX-generated.
+                # capture, not FLUX-generated.
                 selected_variations = build_standard_challenge_variations()
 
-                # Daily fixed seed + instructions for the REAL screen-replay task
-                daily_seed = load_fixed_image_base64()
-                if daily_seed is None:
-                    bt.logging.warning(
-                        "Phase 4: No daily fixed seed image available; "
-                        "screen-replay instructions will be sent without a seed image."
+                # Instructions for the REAL screen-replay task.
+                #
+                # Sandbox mode (VALIDATOR_SENDS_SEED_IMAGE=False, current default):
+                # the validator does NOT fetch/send a seed image at all — miners
+                # instead pick one themselves at random from the static
+                # fixed_image/ pool (7 images, checked into git) so they can
+                # practice the flow. Flip VALIDATOR_SENDS_SEED_IMAGE back to True
+                # in MIID/validator/fixed_images.py to resume validator-driven
+                # daily seeds; this branch below reverts to that automatically.
+                daily_seed_filename, daily_seed_b64 = None, None
+                if VALIDATOR_SENDS_SEED_IMAGE:
+                    daily_seed = load_fixed_image_base64()
+                    if daily_seed is None:
+                        bt.logging.warning(
+                            "Phase 4: No daily fixed seed image available; "
+                            "screen-replay instructions will be sent without a seed image."
+                        )
+                    daily_seed_filename, daily_seed_b64 = daily_seed if daily_seed else (None, None)
+                    real_screen_replay_instructions = format_real_screen_replay_instructions(
+                        seed_filename=daily_seed_filename
                     )
-                daily_seed_filename, daily_seed_b64 = daily_seed if daily_seed else (None, None)
-                real_screen_replay_instructions = format_real_screen_replay_instructions(
-                    seed_filename=daily_seed_filename
-                )
+                else:
+                    seed_pool = list_fixed_image_pool()
+                    if not seed_pool:
+                        bt.logging.warning(
+                            "Phase 4: fixed_image/ pool is empty; screen-replay "
+                            "instructions will be sent without a seed pool."
+                        )
+                    real_screen_replay_instructions = format_real_screen_replay_instructions(
+                        seed_pool=seed_pool
+                    )
 
                 # Drand unlock at T+40 min (batch1 20m + batch2 20m); grading window T+40–60m
                 reveal_delay = calculate_reveal_buffer(
@@ -388,11 +416,16 @@ async def forward(self):
                 variation_summary = ", ".join(
                     f"{v['type']}({v['intensity']})" for v in selected_variations
                 )
+                seed_mode_log = (
+                    f"daily_seed={daily_seed_filename or 'unavailable'}"
+                    if VALIDATOR_SENDS_SEED_IMAGE
+                    else f"seed_pool_size={len(seed_pool)} (miner picks; sandbox mode)"
+                )
                 bt.logging.info(
                     f"Phase 4: API image + random variation selection - "
                     f"Image '{image_filename}', "
                     f"variations=[{variation_summary}], "
-                    f"daily_seed={daily_seed_filename or 'unavailable'}, "
+                    f"{seed_mode_log}, "
                     f"Total requested: {len(selected_variations)}, "
                     f"drand round {target_round}"
                 )

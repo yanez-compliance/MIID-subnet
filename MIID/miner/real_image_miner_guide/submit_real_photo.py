@@ -65,6 +65,16 @@ INBOX_DIR = HERE / "inbox"
 STAGED_DIR = HERE / "staged"
 SCREEN_REPLAY_JSON = HERE / "screen_replay.json"
 
+# Holds captures submitted while a previous one was still waiting for the
+# miner process to pick it up, so re-running this script never loses/
+# overwrites a pending submission. See queue_existing_pending_capture().
+QUEUE_DIR = HERE / "queue"
+
+# Sandbox mode: shared pool of fixed images (checked into git) that miners
+# choose from at random, since the validator isn't sending a seed image right
+# now (see VALIDATOR_SENDS_SEED_IMAGE in MIID/validator/fixed_images.py).
+FIXED_IMAGE_POOL_DIR = PROJECT_ROOT / "MIID" / "validator" / "fixed_image"
+
 
 def _log(level: str, msg: str) -> None:
     print(f"[{level}] {msg}", flush=True)
@@ -140,8 +150,92 @@ def prompt_bool_if_missing(flag_value: bool, prompt: str) -> bool:
     return entered in ("y", "yes")
 
 
+def list_pool_images() -> list[str]:
+    """List filenames in the shared fixed_image/ pool (sandbox seed images)."""
+    if not FIXED_IMAGE_POOL_DIR.exists():
+        return []
+    return sorted(
+        p.name for p in FIXED_IMAGE_POOL_DIR.iterdir()
+        if p.is_file() and p.suffix.lower() in IMAGE_EXTENSIONS
+    )
+
+
+def prompt_seed_image(value: str | None) -> str:
+    """Get which fixed_image/ pool file the miner used as their screen-replay seed.
+
+    Sandbox mode: the validator doesn't send a seed image right now, so the
+    miner must have picked one themselves (at random) from the shared pool
+    and report which one here. If flag_value is already a valid pool
+    filename, use it directly (no prompt) — handy for scripting.
+    """
+    pool = list_pool_images()
+
+    if value:
+        if not pool or value in pool:
+            return value
+        print(f"  Warning: '{value}' isn't in the known pool ({FIXED_IMAGE_POOL_DIR}); using it anyway.")
+        return value
+
+    if not pool:
+        entered = input(
+            "Filename of the seed image you displayed and photographed "
+            f"(couldn't list {FIXED_IMAGE_POOL_DIR}, type it manually): "
+        ).strip()
+        return entered
+
+    print(f"\nWhich fixed_image/ pool image did you randomly pick and photograph?")
+    for i, name in enumerate(pool, 1):
+        print(f"  {i}. {name}")
+    while True:
+        entered = input(f"Enter a number (1-{len(pool)}) or the filename: ").strip()
+        if entered.isdigit() and 1 <= int(entered) <= len(pool):
+            return pool[int(entered) - 1]
+        if entered in pool:
+            return entered
+        print(f"  Please enter a number 1-{len(pool)}, or one of: {', '.join(pool)}")
+
+
+def queue_existing_pending_capture() -> None:
+    """Back up a still-pending capture into queue/ instead of overwriting it.
+
+    screen_replay.json only has ONE "active" slot at a time. If you run this
+    script again before the always-running miner process (neurons/miner.py)
+    has had a chance to pick up and submit the previous capture (it still
+    has "ready": true), overwriting screen_replay.json here would silently
+    drop that earlier capture. Instead, copy it into queue/ first — the miner
+    process drains queue/ automatically (oldest first) every time it finishes
+    submitting the active capture, so nothing you submit is ever lost; extra
+    captures just wait their turn and go out on later validator queries.
+    """
+    if not SCREEN_REPLAY_JSON.exists():
+        return
+    try:
+        with open(SCREEN_REPLAY_JSON, "r") as f:
+            existing = json.load(f)
+    except Exception:
+        return
+    if not bool(existing.get("ready", False)):
+        return  # nothing pending — safe to overwrite
+
+    QUEUE_DIR.mkdir(parents=True, exist_ok=True)
+    # Timestamp-based name so files sort in submission order (oldest first)
+    # when the miner process drains the queue later.
+    queued_name = f"queued_{_dt.datetime.now(_dt.timezone.utc).strftime('%Y%m%dT%H%M%S%f')}.json"
+    shutil.copy(str(SCREEN_REPLAY_JSON), str(QUEUE_DIR / queued_name))
+    _log(
+        "OK",
+        f"A previous capture was still waiting to be sent — queued it as "
+        f"queue/{queued_name}. Your miner will submit it automatically right "
+        f"after this new one. This new capture takes the active slot now.",
+    )
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument(
+        "--seed-image",
+        help="Filename of the fixed_image/ pool image you randomly picked and photographed",
+    )
     parser.add_argument("--camera", help="Camera/phone used to take the photo, e.g. 'iPhone 15 Pro'")
     parser.add_argument("--device", choices=DEVICE_TYPES, help="Device the seed image was displayed on")
     parser.add_argument("--date", help="Capture date YYYY-MM-DD (UTC). Defaults to today.")
@@ -166,6 +260,8 @@ def main() -> int:
     _log("OK", f"Found photo (angle 1): {photo_path.name} ({len(photo_bytes)} bytes)")
     _log("OK", f"Found photo (angle 2): {photo_path_2.name} ({len(photo_bytes_2)} bytes)")
 
+    seed_image = prompt_seed_image(args.seed_image)
+    _log("OK", f"Seed image: {seed_image}")
     camera_used = prompt_if_missing(args.camera, "Camera/phone used to take the photos (e.g. 'iPhone 15 Pro')")
     device_photographed = prompt_device(args.device)
     date = args.date or _dt.datetime.now(_dt.timezone.utc).strftime("%Y-%m-%d")
@@ -193,6 +289,7 @@ def main() -> int:
         "ready": True,
         "photo_path": str(staged_path.resolve()),
         "photo_path_2": str(staged_path_2.resolve()),
+        "seed_image": seed_image,
         "date": date,
         "camera_used": camera_used,
         "device_photographed": device_photographed,
@@ -202,6 +299,8 @@ def main() -> int:
         "gamma_contrast_shift": gamma,
         "edge_crop_cues": edge_crop,
     }
+    queue_existing_pending_capture()
+
     with open(SCREEN_REPLAY_JSON, "w") as f:
         json.dump(data, f, indent=2)
 
@@ -215,7 +314,8 @@ def main() -> int:
         "DONE",
         "Want to submit again? There's no daily limit — just drop a NEW pair of photos "
         "(a genuinely new capture) in inbox/ and run this script again. Never resubmit "
-        "the same capture twice.",
+        "the same capture twice. If your previous capture hasn't been sent yet, it's "
+        "queued automatically and won't be lost — it'll go out right after this one.",
     )
     return 0
 

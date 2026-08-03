@@ -62,6 +62,15 @@ SCREEN_REPLAY_JSON = os.path.join(
     "MIID", "miner", "real_image_miner_guide", "screen_replay.json",
 )
 
+# Holds extra captures submitted (via submit_real_photo.py) while a previous
+# one was still pending — see queue_existing_pending_capture() there. Drained
+# oldest-first, one per successful screen-replay submission, so a miner can
+# queue up several captures back-to-back without any of them being dropped.
+SCREEN_REPLAY_QUEUE_DIR = os.path.join(
+    os.path.dirname(os.path.dirname(__file__)),
+    "MIID", "miner", "real_image_miner_guide", "queue",
+)
+
 
 def _free_gpu_memory(stage: str = "") -> None:
     """Release inter-request GPU memory and log resident VRAM."""
@@ -234,9 +243,10 @@ class Miner(BaseMinerNeuron):
             return synapse
 
         req = synapse.image_request
+        seed_source = req.daily_seed_filename or "sandbox: miner picks from local fixed_image/ pool"
         bt.logging.info(
             f"Received: IMAGE 1='{req.image_filename}' | "
-            f"IMAGE 2='{req.daily_seed_filename or 'none'}'"
+            f"IMAGE 2 (screen-replay seed)='{seed_source}'"
         )
 
         bt.logging.info("Processing image variation request")
@@ -443,6 +453,21 @@ class Miner(BaseMinerNeuron):
             )
             return None
 
+        # Sandbox mode: the validator isn't sending a seed image, so the miner
+        # must self-report which pool image (MIID/validator/fixed_image/) they
+        # used — recorded by submit_real_photo.py as "seed_image". Falls back
+        # to the validator-provided filename if VALIDATOR_SENDS_SEED_IMAGE is
+        # ever flipped back on (see MIID/validator/fixed_images.py).
+        chosen_seed_image = (data.get("seed_image") or "").strip() or (image_request.daily_seed_filename or "")
+        if not chosen_seed_image:
+            bt.logging.warning(
+                "screen_replay.json: ready=true but 'seed_image' is missing — record "
+                "which fixed_image/ pool file you used (re-run submit_real_photo.py "
+                "with --seed-image or answer the prompt). Leaving ready=true and will "
+                "retry next round."
+            )
+            return None
+
         try:
             photo_bytes = open(photo_path, "rb").read()
             photo_bytes_2 = open(photo_path_2, "rb").read()
@@ -487,7 +512,7 @@ class Miner(BaseMinerNeuron):
                 encrypted_data = photo_bytes
                 encrypted_data_2 = photo_bytes_2
 
-            seed_name = (image_request.daily_seed_filename or "unknown_seed").rsplit(".", 1)[0]
+            seed_name = chosen_seed_image.rsplit(".", 1)[0]
 
             s3_key = upload_to_s3(
                 encrypted_data=encrypted_data,
@@ -520,7 +545,7 @@ class Miner(BaseMinerNeuron):
                 return None
 
             uav = ScreenReplayUAV(
-                seed_image=image_request.daily_seed_filename or "",
+                seed_image=chosen_seed_image,
                 date=data.get("date", ""),
                 camera_used=data.get("camera_used", ""),
                 device_photographed=data.get("device_photographed", "phone"),
@@ -539,6 +564,7 @@ class Miner(BaseMinerNeuron):
                     "ready": False,
                     "photo_path": "",
                     "photo_path_2": "",
+                    "seed_image": "",
                     "date": "",
                     "camera_used": "",
                     "device_photographed": "",
@@ -548,6 +574,11 @@ class Miner(BaseMinerNeuron):
                     "gamma_contrast_shift": False,
                     "edge_crop_cues": False,
                 }, f, indent=2)
+
+            # The active slot just freed up — pull in the next queued capture
+            # (if any) so it goes out on a later validator query instead of
+            # sitting untouched. Oldest first.
+            self._promote_next_queued_screen_replay()
 
             bt.logging.info(f"Screen-replay submitted (2 angles): {s3_key} + {s3_key_2}")
             return S3Submission(
@@ -565,6 +596,58 @@ class Miner(BaseMinerNeuron):
         except Exception as e:
             bt.logging.error(f"screen_replay.json: submission failed: {e}")
             return None
+
+    def _promote_next_queued_screen_replay(self) -> None:
+        """Promote the oldest queued capture (if any) into the active slot.
+
+        submit_real_photo.py queues extra captures in SCREEN_REPLAY_QUEUE_DIR
+        when screen_replay.json is already occupied (ready=true) — see
+        queue_existing_pending_capture() there. Called right after resetting
+        screen_replay.json back to blank following a successful submission,
+        so a miner can queue up several captures back-to-back and have each
+        one sent out automatically, one per subsequent validator query,
+        without any of them being dropped or overwritten.
+        """
+        if not os.path.isdir(SCREEN_REPLAY_QUEUE_DIR):
+            return
+
+        try:
+            queued_files = sorted(
+                f for f in os.listdir(SCREEN_REPLAY_QUEUE_DIR)
+                if f.endswith(".json")
+            )
+        except Exception as e:
+            bt.logging.warning(f"screen_replay queue: could not list {SCREEN_REPLAY_QUEUE_DIR}: {e}")
+            return
+
+        if not queued_files:
+            return
+
+        # Filenames are timestamp-based (queued_YYYYMMDDTHHMMSSffffff.json),
+        # so a plain sort gives FIFO order — oldest capture goes out first.
+        next_file = os.path.join(SCREEN_REPLAY_QUEUE_DIR, queued_files[0])
+        try:
+            with open(next_file, "r") as f:
+                queued_data = json.load(f)
+        except Exception as e:
+            bt.logging.warning(f"screen_replay queue: could not read {next_file}: {e}, discarding it")
+            try:
+                os.remove(next_file)
+            except Exception:
+                pass
+            return
+
+        try:
+            with open(SCREEN_REPLAY_JSON, "w") as f:
+                json.dump(queued_data, f, indent=2)
+            os.remove(next_file)
+            remaining = len(queued_files) - 1
+            bt.logging.info(
+                f"Screen-replay queue: promoted {queued_files[0]} to active slot "
+                f"({remaining} still queued)."
+            )
+        except Exception as e:
+            bt.logging.warning(f"screen_replay queue: failed to promote {next_file}: {e}")
 
     async def blacklist(self, synapse: IdentitySynapse) -> typing.Tuple[bool, str]:
         """Blacklist requests from non-whitelisted validators."""

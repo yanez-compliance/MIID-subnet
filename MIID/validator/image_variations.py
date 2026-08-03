@@ -846,8 +846,8 @@ def validate_screen_replay_uav(uav: Any) -> bool:
 
 REAL_SCREEN_REPLAY_REQUIREMENTS = (
     "This is a REAL physical photograph, not an AI-generated image. Do not use "
-    "FLUX or any generator for this task — the daily seed image must be "
-    "displayed on an actual screen and photographed with a separate camera. "
+    "FLUX or any generator for this task — the seed image must be displayed "
+    "on an actual screen and photographed with a separate camera. "
     "In both photos, the face on the screen must be the dominant object "
     "(large enough for reliable face detection) and remain matchable to the "
     "seed identity (high similarity score). Do not crop so tightly that the "
@@ -855,7 +855,10 @@ REAL_SCREEN_REPLAY_REQUIREMENTS = (
 )
 
 
-def build_screen_replay_uav_template(seed_filename: Optional[str] = None) -> str:
+def build_screen_replay_uav_template(
+    seed_filename: Optional[str] = None,
+    seed_pool: Optional[List[str]] = None,
+) -> str:
     """Return a fill-in-the-blank ScreenReplayUAV template that miners copy-paste.
 
     The template is intentionally minimal: every field the miner must supply
@@ -865,7 +868,13 @@ def build_screen_replay_uav_template(seed_filename: Optional[str] = None) -> str
     that capture share this same metadata block.
 
     Args:
-        seed_filename: Filename of today's daily seed image (pre-fills seed_image).
+        seed_filename: Filename of the validator-provided seed image, when the
+            validator is sending one directly (VALIDATOR_SENDS_SEED_IMAGE=True
+            in MIID/validator/fixed_images.py). Pre-fills seed_image.
+        seed_pool: Sandbox mode only (VALIDATOR_SENDS_SEED_IMAGE=False) — list
+            of filenames from the shared fixed_image/ pool the miner picks
+            from themselves. Listed as a comment so the miner knows which
+            filename to type in.
 
     Returns:
         A multi-line string block the miner copies, fills in, and attaches to
@@ -873,14 +882,23 @@ def build_screen_replay_uav_template(seed_filename: Optional[str] = None) -> str
     """
     import datetime as _dt
     today_utc = _dt.datetime.now(_dt.timezone.utc).strftime("%Y-%m-%d")
-    seed_value = seed_filename or "FILL_IN_seed_filename"
     device_options = "/".join(SCREEN_REPLAY_DEVICE_TYPES)
+
+    if seed_filename:
+        seed_value = seed_filename
+        seed_comment = "DO NOT CHANGE — use the provided seed"
+    elif seed_pool:
+        seed_value = "FILL_IN_seed_filename"
+        seed_comment = f"put the filename you randomly picked, one of: {', '.join(seed_pool)}"
+    else:
+        seed_value = "FILL_IN_seed_filename"
+        seed_comment = "put the filename of the seed image you used"
 
     lines = [
         "# ════════════════════════════════════════════════",
         "# SCREEN-REPLAY SUBMISSION TEMPLATE  (copy & fill)",
         "# ════════════════════════════════════════════════",
-        f'seed_image:               "{seed_value}"      # DO NOT CHANGE — use today\'s seed',
+        f'seed_image:               "{seed_value}"      # {seed_comment}',
         f'date:                     "{today_utc}"          # UTC capture date YYYY-MM-DD',
         'camera_used:              "YOUR_CAMERA_OR_PHONE"  # e.g. "iPhone 15 Pro"',
         f'device_photographed:      "phone"               # one of: {device_options}',
@@ -898,16 +916,26 @@ def build_screen_replay_uav_template(seed_filename: Optional[str] = None) -> str
     return "\n".join(lines)
 
 
-def format_real_screen_replay_instructions(seed_filename: Optional[str] = None) -> str:
+def format_real_screen_replay_instructions(
+    seed_filename: Optional[str] = None,
+    seed_pool: Optional[List[str]] = None,
+) -> str:
     """Build the miner-facing instructions for the real screen-replay task.
 
-    Explains the physical capture that accompanies the daily fixed seed
-    image (sent alongside the synthetic variation base image, see
-    ImageRequest.daily_seed_image in MIID/protocol.py): display the seed on a
-    real device screen, photograph it TWICE from two different angles with a
-    different physical camera, and submit both photos together as one
-    screen_replay submission, with a filled-out ScreenReplayUAV report
-    attached.
+    Explains the physical capture: display a seed image on a real device
+    screen, photograph it TWICE from two different angles with a different
+    physical camera, and submit both photos together as one screen_replay
+    submission, with a filled-out ScreenReplayUAV report attached.
+
+    Two modes, controlled by which image the seed comes from:
+      - Validator-provided (seed_filename set, VALIDATOR_SENDS_SEED_IMAGE=True
+        in fixed_images.py): miners use the exact image the validator sent.
+      - Sandbox / miner-chosen (seed_pool set instead): the validator isn't
+        sending a seed image right now. Miners instead pick, at random,
+        any one of the images from the shared fixed_image/ pool that ships
+        with the codebase (currently 7 static images) and use that. This
+        lets miners practice the real-capture flow before the validator
+        resumes pushing a seed image every round.
 
     Miners may send as many of these submissions as they want — there is no
     daily cap — but every submission must be a genuinely new capture. Never
@@ -918,20 +946,34 @@ def format_real_screen_replay_instructions(seed_filename: Optional[str] = None) 
     so miners only need to change the values they know.
 
     Args:
-        seed_filename: Filename of today's daily seed image, if known —
-            included in the instructions so miners can reference it in their
-            ScreenReplayUAV.seed_image field.
+        seed_filename: Filename of the validator-provided seed image, if the
+            validator is currently sending one.
+        seed_pool: List of filenames in the shared fixed_image/ pool, when
+            miners are choosing their own seed image (sandbox mode).
 
     Returns:
         Formatted instructions string to send to miners alongside the request.
     """
     device_list = ", ".join(SCREEN_REPLAY_DEVICE_TYPES)
-    seed_line = (
-        f"Today's daily seed image: {seed_filename}"
-        if seed_filename
-        else "Today's daily seed image is attached as daily_seed_image."
-    )
-    template_block = build_screen_replay_uav_template(seed_filename)
+
+    if seed_filename:
+        seed_line = f"Today's seed image (from the validator): {seed_filename}"
+        display_instruction = f"Display the provided seed image on a real device ({device_list})."
+    elif seed_pool:
+        pool_list = "\n".join(f"    - {name}" for name in seed_pool)
+        seed_line = (
+            "SANDBOX MODE: the validator isn't sending a seed image right now.\n"
+            "Instead, randomly pick ONE image yourself from the shared pool below\n"
+            "(MIID/validator/fixed_image/ in this repo — ships with the codebase,\n"
+            "no download needed) and use it as your seed for this capture:\n"
+            f"{pool_list}"
+        )
+        display_instruction = f"Display your randomly-chosen pool image on a real device ({device_list})."
+    else:
+        seed_line = "No seed image is currently configured for this task."
+        display_instruction = f"Display your seed image on a real device ({device_list})."
+
+    template_block = build_screen_replay_uav_template(seed_filename, seed_pool)
 
     lines = [
         "",
@@ -953,7 +995,7 @@ def format_real_screen_replay_instructions(seed_filename: Optional[str] = None) 
         "real physical photo and not a single static image reused twice.",
         "",
         "Quick steps:",
-        f"  1. Display the daily seed image on a real device ({device_list}).",
+        f"  1. {display_instruction}",
         "  2. Photograph it TWICE from two different angles/positions, with a",
         "     DIFFERENT physical camera (no screenshots). Two distinct shots",
         "     of the same on-screen capture, not two unrelated photos.",
@@ -963,7 +1005,8 @@ def format_real_screen_replay_instructions(seed_filename: Optional[str] = None) 
         "     s3_key/image_hash/signature, angle 2 in s3_key_angle2/",
         "     image_hash_angle2/signature_angle2 (same S3 path scheme).",
         "  4. Fill in the template below ONCE (it describes the capture as a",
-        "     whole) and attach it as screen_replay_uav.",
+        "     whole) and attach it as screen_replay_uav — including the exact",
+        "     seed_image filename you used.",
         "",
         template_block,
         "",
