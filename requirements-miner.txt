@@ -12,6 +12,7 @@ opencv-python>=4.8.0
 pytorch-lightning>=2.0.0  # required to load AdaFace .ckpt checkpoints (PyTorch Lightning)
 safetensors
 gdown
+pillow-heif>=0.13.0 # for HEIC image support
 
 # Drand timelock encryption is provided by bittensor itself via
 # `bittensor.timelock` (backed by the `bittensor_drand` Rust extension that

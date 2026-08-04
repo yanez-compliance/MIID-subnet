@@ -22,6 +22,9 @@ also fine to skip this entirely, or only submit occasionally.
    TV) and photograph it twice with a **different** physical camera (no
    screenshots). Two angles of one capture, not two unrelated photos.
 3. Drop both photo files into `inbox/` (this folder) — exactly 2 images.
+   iPhone HEIC/HEIF files are fine: the script converts them to JPEG
+   automatically when it runs (needs `pillow-heif`, already in
+   `requirements.txt`).
 4. Run:
    ```bash
    python MIID/miner/real_image_miner_guide/submit_real_photo.py

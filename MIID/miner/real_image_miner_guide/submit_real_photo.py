@@ -12,7 +12,9 @@ submission — duplicates are filtered out and penalised.
 
 What it does:
   1. Finds the two image files you placed in inbox/ (next to this script) —
-     two different angles/positions of the same on-screen capture.
+     two different angles/positions of the same on-screen capture. Phone
+     HEIC/HEIF dumps are auto-converted to JPEG in place first, so you can
+     drop files straight from an iPhone.
   2. Asks a few quick questions about the capture (camera used, device the
      seed image was displayed on, which visual cues are visible) — unless
      you already answered them via CLI flags.
@@ -45,6 +47,7 @@ import argparse
 import datetime as _dt
 import hashlib
 import shutil
+import subprocess
 import sys
 from pathlib import Path
 
@@ -59,6 +62,9 @@ import json  # noqa: E402
 DEVICE_TYPES = ["phone", "tablet", "laptop", "monitor", "tv"]
 
 IMAGE_EXTENSIONS = {".png", ".jpg", ".jpeg", ".webp", ".bmp"}
+# Phone camera "High Efficiency" formats — converted to JPEG on drop so the
+# rest of the pipeline (validate / stage / encrypt) only ever sees common formats.
+HEIC_EXTENSIONS = {".heic", ".heif"}
 
 HERE = Path(__file__).resolve().parent
 INBOX_DIR = HERE / "inbox"
@@ -80,6 +86,92 @@ def _log(level: str, msg: str) -> None:
     print(f"[{level}] {msg}", flush=True)
 
 
+def _convert_heic_to_jpeg(src: Path, dest: Path) -> None:
+    """Decode one HEIC/HEIF file to JPEG. Tries pillow-heif, then CLI tools."""
+    # 1) pillow-heif (preferred — pure Python dep once installed)
+    try:
+        from pillow_heif import register_heif_opener
+        from PIL import Image
+
+        register_heif_opener()
+        with Image.open(src) as img:
+            rgb = img.convert("RGB")
+            rgb.save(dest, format="JPEG", quality=95)
+        return
+    except ImportError:
+        pass
+    except Exception as e:
+        _log("ERROR", f"Failed to convert '{src.name}' with pillow-heif: {e}")
+        sys.exit(1)
+
+    # 2) ImageMagick (`magick` or legacy `convert`)
+    for cmd in (
+        ["magick", str(src), str(dest)],
+        ["convert", str(src), str(dest)],
+    ):
+        if shutil.which(cmd[0]):
+            try:
+                subprocess.run(cmd, check=True, capture_output=True)
+                if dest.exists() and dest.stat().st_size > 0:
+                    return
+            except Exception as e:
+                _log("ERROR", f"Failed to convert '{src.name}' with {cmd[0]}: {e}")
+                sys.exit(1)
+
+    # 3) libheif's heif-convert
+    if shutil.which("heif-convert"):
+        try:
+            subprocess.run(
+                ["heif-convert", str(src), str(dest)],
+                check=True,
+                capture_output=True,
+            )
+            if dest.exists() and dest.stat().st_size > 0:
+                return
+        except Exception as e:
+            _log("ERROR", f"Failed to convert '{src.name}' with heif-convert: {e}")
+            sys.exit(1)
+
+    _log(
+        "ERROR",
+        f"Found phone HEIC/HEIF photo '{src.name}' but no converter is available.",
+    )
+    _log(
+        "ERROR",
+        "Install one of:  pip install pillow-heif   OR   apt install libheif-examples / imagemagick",
+    )
+    sys.exit(1)
+
+
+def convert_heic_in_inbox() -> None:
+    """Convert any .heic/.heif files in inbox/ to JPEG, then remove the originals.
+
+    iPhones often drop High Efficiency (HEIC) files. Converting in place keeps
+    the "drop two photos + run this script" UX, and leaves inbox/ with only
+    formats the rest of this script already understands.
+    """
+    INBOX_DIR.mkdir(parents=True, exist_ok=True)
+    heic_files = sorted(
+        p for p in INBOX_DIR.iterdir()
+        if p.is_file() and p.suffix.lower() in HEIC_EXTENSIONS
+    )
+    if not heic_files:
+        return
+
+    for src in heic_files:
+        dest = src.with_suffix(".jpg")
+        if dest.exists():
+            _log(
+                "ERROR",
+                f"Cannot convert '{src.name}': '{dest.name}' already exists in inbox/. "
+                "Remove one of them and re-run.",
+            )
+            sys.exit(1)
+        _convert_heic_to_jpeg(src, dest)
+        src.unlink()
+        _log("OK", f"Converted phone HEIC → JPEG: {src.name} → {dest.name}")
+
+
 def find_inbox_photos() -> tuple[Path, Path]:
     """Return the two image files (two angles of the same capture) sitting in
     inbox/, or exit with an error.
@@ -88,8 +180,11 @@ def find_inbox_photos() -> tuple[Path, Path]:
     (two different angles) as basic proof it's a real physical photo. Fewer
     than two isn't enough; more than two is ambiguous about which pair
     belongs together, so both cases are treated as errors.
+
+    Phone HEIC/HEIF dumps are converted to JPEG first (see convert_heic_in_inbox).
     """
     INBOX_DIR.mkdir(parents=True, exist_ok=True)
+    convert_heic_in_inbox()
     candidates = sorted(
         p for p in INBOX_DIR.iterdir()
         if p.is_file() and p.suffix.lower() in IMAGE_EXTENSIONS
