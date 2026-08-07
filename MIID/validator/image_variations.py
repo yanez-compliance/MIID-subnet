@@ -662,10 +662,11 @@ def build_standard_challenge_variations() -> List[Dict[str, Any]]:
     Miners may submit as many of these real captures as they want, whenever
     ready (no daily cap) — the only rule is that every submission must be a
     genuinely new capture (never a duplicate of one already sent), and each
-    submission bundles two photos (two different angles) of the same
-    capture as basic proof it's real. See
-    format_real_screen_replay_instructions() for the miner-facing task text,
-    and ScreenReplayUAV in MIID/protocol.py for the reported metadata.
+    submission bundles two photos of the same capture as basic proof it's
+    real: (1) a face-dominant, centered, low-distortion close-up of the
+    screen, and (2) a wider environment shot of the whole device/scene.
+    See format_real_screen_replay_instructions() for the miner-facing task
+    text, and ScreenReplayUAV in MIID/protocol.py for the reported metadata.
     """
     return [
         get_random_indoor_background_variation(),
@@ -848,10 +849,16 @@ REAL_SCREEN_REPLAY_REQUIREMENTS = (
     "This is a REAL physical photograph, not an AI-generated image. Do not use "
     "FLUX or any generator for this task — the seed image must be displayed "
     "on an actual screen and photographed with a separate camera. "
-    "In both photos, the face on the screen must be the dominant object "
-    "(large enough for reliable face detection) and remain matchable to the "
-    "seed identity (high similarity score). Do not crop so tightly that the "
-    "screen is gone, and do not pull so far back that the face is tiny."
+    "Each submission needs TWO photos of the SAME capture: "
+    "(1) FACE CLOSE-UP — face on screen is dominant and centered, with as "
+    "little angular/perspective distortion as possible (near head-on to the "
+    "display), large enough for reliable face detection and matchable to the "
+    "seed identity; keep a little screen/bezel context, don't crop the face "
+    "alone. "
+    "(2) ENVIRONMENT SHOT — wider photo of the whole screen/device in its "
+    "physical surroundings (desk, room, laptop keyboard, phone in hand, etc.). "
+    "Angular distortion, keystone, glare, and moiré are fine here; the face "
+    "should still be visible on the screen so the shot can be linked to (1)."
 )
 
 
@@ -864,8 +871,8 @@ def build_screen_replay_uav_template(
     The template is intentionally minimal: every field the miner must supply
     appears on its own line with a short placeholder.  The seed_image and date
     fields are pre-filled when the information is available. This checklist
-    describes ONE capture event — the two photos (two angles) submitted for
-    that capture share this same metadata block.
+    describes ONE capture event — the two photos (face close-up + environment
+    shot) submitted for that capture share this same metadata block.
 
     Args:
         seed_filename: Filename of the validator-provided seed image, when the
@@ -923,9 +930,11 @@ def format_real_screen_replay_instructions(
     """Build the miner-facing instructions for the real screen-replay task.
 
     Explains the physical capture: display a seed image on a real device
-    screen, photograph it TWICE from two different angles with a different
-    physical camera, and submit both photos together as one screen_replay
-    submission, with a filled-out ScreenReplayUAV report attached.
+    screen, photograph it TWICE with a different physical camera — once as a
+    centered face-dominant close-up (minimal angular distortion), once as a
+    wider environment shot of the whole screen/device — and submit both
+    together as one screen_replay submission, with a filled-out
+    ScreenReplayUAV report attached.
 
     Two modes, controlled by which image the seed comes from:
       - Validator-provided (seed_filename set, VALIDATOR_SENDS_SEED_IMAGE=True
@@ -990,20 +999,26 @@ def format_real_screen_replay_instructions(
         "fresh, genuinely new capture — resubmitting the same photo(s) again",
         "will be detected and your score WILL be penalised.",
         "",
-        "Each submission needs TWO photos of the SAME capture (two different",
-        "camera angles/positions), not just one — this is basic proof it's a",
-        "real physical photo and not a single static image reused twice.",
+        "Each submission needs TWO photos of the SAME capture, not just one —",
+        "this is basic proof it's a real physical photo and not a single",
+        "static image reused twice:",
+        "  • Photo 1 (FACE CLOSE-UP): face dominant + centered, as little",
+        "    angular/perspective distortion as possible (near head-on).",
+        "  • Photo 2 (ENVIRONMENT): whole screen/device in its surroundings;",
+        "    angular distortion / keystone / glare are OK.",
         "",
         "Quick steps:",
         f"  1. {display_instruction}",
-        "  2. Photograph it TWICE from two different angles/positions, with a",
-        "     DIFFERENT physical camera (no screenshots). Two distinct shots",
-        "     of the same on-screen capture, not two unrelated photos.",
-        "     In BOTH shots the face must be the dominant object — large",
-        "     enough for reliable face detection and matchable to the seed.",
-        "  3. Upload both photos as variation_type=\"screen_replay\": angle 1 in",
-        "     s3_key/image_hash/signature, angle 2 in s3_key_angle2/",
-        "     image_hash_angle2/signature_angle2 (same S3 path scheme).",
+        "  2. Photograph it TWICE with a DIFFERENT physical camera (no",
+        "     screenshots) — same on-screen capture, not two unrelated photos:",
+        "       (a) FACE CLOSE-UP — face centered and dominant, minimize",
+        "           angular distortion; keep a bit of screen/bezel context.",
+        "       (b) ENVIRONMENT — step back / reframe to show the whole",
+        "           screen and nearby surroundings; distortion is fine; face",
+        "           on screen should still be visible.",
+        "  3. Upload both as variation_type=\"screen_replay\": photo 1 (face",
+        "     close-up) in s3_key/image_hash/signature, photo 2 (environment)",
+        "     in s3_key_angle2/image_hash_angle2/signature_angle2.",
         "  4. Fill in the template below ONCE (it describes the capture as a",
         "     whole) and attach it as screen_replay_uav — including the exact",
         "     seed_image filename you used.",

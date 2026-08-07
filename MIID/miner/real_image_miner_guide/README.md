@@ -17,10 +17,16 @@ also fine to skip this entirely, or only submit occasionally.
 ## TL;DR
 
 1. Pick ONE image at random from `MIID/validator/fixed_image/` in this repo.
-2. Take TWO photos of the SAME capture, from two different angles/positions:
-   display that image on a real screen (phone, tablet, laptop, monitor, or
-   TV) and photograph it twice with a **different** physical camera (no
-   screenshots). Two angles of one capture, not two unrelated photos.
+2. Take TWO photos of the SAME capture with a **different** physical camera
+   (no screenshots):
+   - **Photo 1 — FACE CLOSE-UP:** face on screen is dominant and **centered**,
+     with **as little angular/perspective distortion as possible** (near
+     head-on to the display). Keep a little screen/bezel context — don't
+     crop the face alone.
+   - **Photo 2 — ENVIRONMENT:** wider shot of the **whole screen/device in
+     its surroundings** (desk, room, laptop keyboard, etc.). Angular
+     distortion, keystone, glare, and moiré are fine here; the face should
+     still be visible on the screen so the shot links to photo 1.
 3. Drop both photo files into `inbox/` (this folder) — exactly 2 images.
    iPhone HEIC/HEIF files are fine: the script converts them to JPEG
    automatically when it runs (needs `pillow-heif`, already in
@@ -29,7 +35,8 @@ also fine to skip this entirely, or only submit occasionally.
    ```bash
    python MIID/miner/real_image_miner_guide/submit_real_photo.py
    ```
-5. Answer the few questions it asks you (which pool image you used, camera
+5. Tell the script which file is the face close-up vs the environment shot,
+   then answer the few questions it asks (which pool image you used, camera
    used, which device you photographed, which visual cues are visible).
    That's it — nothing else to do. Your miner process picks it up
    automatically and submits both photos as one submission the next time a
@@ -47,15 +54,16 @@ script above finishes, the very next query will submit your photo.
 
 ## How it works under the hood
 
-- `submit_real_photo.py` finds the two images you placed in `inbox/`, moves
-  them into `staged/` (so `inbox/` is free for next time), and rewrites
-  `screen_replay.json` with both photos' local paths + your answers, ending
-  with `"ready": true`. It does **not** upload anything to S3 itself —
-  that only happens once, below, at the real submission step.
+- `submit_real_photo.py` finds the two images you placed in `inbox/`, asks
+  which is the face close-up vs environment shot, moves them into `staged/`
+  (so `inbox/` is free for next time), and rewrites `screen_replay.json`
+  with both photos' local paths + your answers, ending with `"ready": true`.
+  It does **not** upload anything to S3 itself — that only happens once,
+  below, at the real submission step.
 - Your always-running miner process (`neurons/miner.py`) checks
   `screen_replay.json` every time it handles a validator request. When it
   sees `"ready": true`, it:
-  1. Reads both photos from `photo_path` and `photo_path_2`.
+  1. Reads both photos from `photo_path` (face) and `photo_path_2` (env).
   2. Encrypts each with drand timelock (same as every other submission).
   3. Uploads both **encrypted** photos to the real S3 submissions path (the
      only S3 uploads in this whole flow).
@@ -96,15 +104,15 @@ look inside it.
 | Field | Meaning |
 |---|---|
 | `ready` | Set to `true` by `submit_real_photo.py` when a capture is queued. The miner flips it back to `false` after submitting. **You shouldn't normally need to edit this by hand.** |
-| `photo_path` | Absolute path to the staged photo file (angle 1). |
-| `photo_path_2` | Absolute path to the staged photo file (angle 2 — a different angle of the same capture). |
+| `photo_path` | Absolute path to the staged **FACE CLOSE-UP** (centered, minimal angular distortion). |
+| `photo_path_2` | Absolute path to the staged **ENVIRONMENT** shot (whole screen/device in surroundings). |
 | `seed_image` | Filename of the `MIID/validator/fixed_image/` pool image you randomly picked and photographed (sandbox mode). |
 | `date` | Capture date, `YYYY-MM-DD` (UTC). Defaults to today. |
 | `camera_used` | The camera/phone you used to take the photos, e.g. `"iPhone 15 Pro"`. |
 | `device_photographed` | Which device displayed the seed image: one of `phone`, `tablet`, `laptop`, `monitor`, `tv`. |
 | `moire_pixel_grid` | `true`/`false` — is a moiré/pixel-grid interference pattern visible? |
 | `screen_glare_hotspots` | `true`/`false` — are specular glare hotspots visible? |
-| `perspective_keystone_distortion` | `true`/`false` — is there off-angle/keystone distortion? |
+| `perspective_keystone_distortion` | `true`/`false` — is there off-angle/keystone distortion? (often on the environment shot) |
 | `gamma_contrast_shift` | `true`/`false` — is there a colour/brightness shift typical of a display capture? |
 | `edge_crop_cues` | `true`/`false` — are screen borders/bezel/cropping visible? |
 
@@ -119,18 +127,16 @@ may legitimately show anywhere from 0 to 5 of these cues.
 - **Never submit a duplicate.** Every submission must be a genuinely new
   capture. Re-running the script on the same photos, or reusing photos from
   a previous submission, will be detected and penalised.
-- **Each submission needs exactly TWO photos** — two different angles of the
-  *same* capture, not one photo and not two unrelated photos. This is basic
-  proof it's a real physical photo, not a single static image reused twice.
-- **The face must dominate both photos.** Frame so the face on the screen is
-  the main subject — large enough for reliable face detection and still
-  matchable to the seed identity. Don't crop so tight that the screen
-  disappears, and don't pull so far back that the face is tiny.
+- **Each submission needs exactly TWO photos** of the *same* capture:
+  - Photo 1: face-dominant, centered, **minimal angular distortion**
+  - Photo 2: whole screen/device **environment** (distortion OK)
+  Not one photo, and not two unrelated photos.
 - It's a **real physical photo**, not a screenshot and not AI-generated. Do
   not use FLUX or any generator for this — that defeats the purpose.
 - `inbox/` must contain exactly 2 images when you run the script — the
   script errors out if it finds fewer or more than 2, so there's no
-  ambiguity about which pair belongs together.
+  ambiguity about which pair belongs together. You'll be asked which file
+  is the face close-up vs the environment shot.
 - Skipping this entirely is fine. It's optional, not scored every round.
 
 ## Command-line flags (optional, for scripting/automation)
@@ -139,6 +145,7 @@ You can skip all the interactive prompts by passing flags up front:
 
 ```bash
 python MIID/miner/real_image_miner_guide/submit_real_photo.py \
+  --face closeup.jpg --env wide.jpg \
   --seed-image 034633750981_f_doc.png \
   --camera "iPhone 15 Pro" \
   --device phone \
@@ -147,6 +154,8 @@ python MIID/miner/real_image_miner_guide/submit_real_photo.py \
 
 | Flag | Meaning |
 |---|---|
+| `--face TEXT` | Inbox filename of the FACE CLOSE-UP |
+| `--env TEXT` | Inbox filename of the ENVIRONMENT shot |
 | `--seed-image TEXT` | Filename of the `fixed_image/` pool image you used |
 | `--camera TEXT` | Camera/phone used to take the photo |
 | `--device {phone,tablet,laptop,monitor,tv}` | Device the seed image was displayed on |

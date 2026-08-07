@@ -55,8 +55,10 @@ class ImageRequest(BaseModel):
     they want (no daily cap), to any validator, whenever they've taken one
     (not tied to this request/response cycle) — as long as each submission
     is a genuinely new capture and never a duplicate of one already sent.
-    Each screen-replay submission bundles two photos (two different camera
-    angles of the same capture) as basic proof it's a real physical photo.
+    Each screen-replay submission bundles two photos of the same capture as
+    basic proof it's a real physical photo: (1) a face-dominant, centered,
+    low-distortion close-up of the screen, and (2) a wider environment shot
+    of the whole device/scene.
     """
     base_image: str           # Base64 encoded image
     image_filename: str       # Original filename for reference
@@ -91,8 +93,8 @@ class ScreenReplayUAV(BaseModel):
     """Miner-reported metadata for a real screen-replay capture (UAV-style).
 
     Attached to the S3Submission whose variation_type == "screen_replay".
-    Describes ONE capture event that is proven with TWO photos (two
-    different camera angles of the same seed-on-screen moment — see
+    Describes ONE capture event that is proven with TWO photos of the same
+    seed-on-screen moment — (1) face close-up and (2) environment shot (see
     S3Submission.s3_key / s3_key_angle2 below); this carries the extra
     claims manual review needs: which seed image was used, when/how it was
     captured, and a true/false checklist for each known visual cue (see
@@ -128,19 +130,22 @@ class S3Submission(BaseModel):
     key and can be verified during post-validation.
 
     For variation_type == "screen_replay" ONLY: a submission must bundle
-    TWO photos of the same real capture (two different camera angles) as
-    basic proof it's an actual physical photo and not a single static image
-    replayed twice. The primary fields (s3_key/image_hash/signature) hold
-    "angle 1"; the *_angle2 fields hold "angle 2". Every other variation
-    type only ever uses the primary fields and leaves *_angle2 as None.
+    TWO photos of the same real capture as basic proof it's an actual
+    physical photo and not a single static image replayed twice:
+      - Primary fields (s3_key/image_hash/signature): FACE CLOSE-UP —
+        face dominant and centered, minimal angular/perspective distortion.
+      - *_angle2 fields: ENVIRONMENT SHOT — whole screen/device in its
+        surroundings; angular distortion is fine.
+    Every other variation type only ever uses the primary fields and leaves
+    *_angle2 as None.
     """
-    s3_key: str           # Path to encrypted file in S3 bucket (angle 1 for screen_replay)
-    image_hash: str       # SHA256 hash of the original (unencrypted) image (angle 1)
-    signature: str        # Wallet signature proving ownership (angle 1)
+    s3_key: str           # Path to encrypted file in S3 bucket (face close-up for screen_replay)
+    image_hash: str       # SHA256 hash of the original (unencrypted) image (face close-up)
+    signature: str        # Wallet signature proving ownership (face close-up)
     variation_type: str   # Which variation type this submission addresses
     path_signature: str   # Unique path component: sign(challenge_id:miner_hotkey)[:16]
 
-    # screen_replay ONLY — second camera angle of the same capture.
+    # screen_replay ONLY — wider environment shot of the same capture.
     # image_hash_angle2 must differ from image_hash (two distinct photos,
     # not the same file uploaded twice) or the submission is rejected as a
     # malformed/duplicate screen-replay.

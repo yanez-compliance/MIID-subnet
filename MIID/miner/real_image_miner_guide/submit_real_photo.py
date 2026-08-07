@@ -1,8 +1,13 @@
 r"""Real screen-replay photo submitter.
 
-This is the ONE file miners run after dropping TWO real photos (two
-different angles of the SAME capture) into inbox/. See README.md in this
-folder for the full walkthrough.
+This is the ONE file miners run after dropping TWO real photos of the SAME
+capture into inbox/. See README.md in this folder for the full walkthrough.
+
+Photo roles (important):
+  1. FACE CLOSE-UP — face on screen is dominant and centered, with as little
+     angular/perspective distortion as possible (near head-on to the display).
+  2. ENVIRONMENT — wider shot of the whole screen/device in its surroundings;
+     angular distortion, keystone, glare, etc. are fine.
 
 There's no limit on how many times you can run this — submit as many
 different real captures as you want, whenever you have them ready. The only
@@ -12,9 +17,10 @@ submission — duplicates are filtered out and penalised.
 
 What it does:
   1. Finds the two image files you placed in inbox/ (next to this script) —
-     two different angles/positions of the same on-screen capture. Phone
-     HEIC/HEIF dumps are auto-converted to JPEG in place first, so you can
-     drop files straight from an iPhone.
+     one face close-up and one environment shot of the same on-screen
+     capture. Phone HEIC/HEIF dumps are auto-converted to JPEG in place
+     first, so you can drop files straight from an iPhone. You will be asked
+     which file is which (or pass --face / --env).
   2. Asks a few quick questions about the capture (camera used, device the
      seed image was displayed on, which visual cues are visible) — unless
      you already answered them via CLI flags.
@@ -35,6 +41,7 @@ Usage:
 
     # Or answer everything up front (no prompts):
     python MIID/miner/real_image_miner_guide/submit_real_photo.py \
+        --face closeup.jpg --env wide.jpg \
         --camera "iPhone 15 Pro" --device phone \
         --moire --glare --keystone --gamma --edge-crop
 
@@ -173,13 +180,13 @@ def convert_heic_in_inbox() -> None:
 
 
 def find_inbox_photos() -> tuple[Path, Path]:
-    """Return the two image files (two angles of the same capture) sitting in
-    inbox/, or exit with an error.
+    """Return the two image files sitting in inbox/, or exit with an error.
 
-    A screen-replay submission needs exactly two photos of the same capture
-    (two different angles) as basic proof it's a real physical photo. Fewer
-    than two isn't enough; more than two is ambiguous about which pair
-    belongs together, so both cases are treated as errors.
+    A screen-replay submission needs exactly two photos of the same capture:
+    a face close-up and an environment shot. Fewer than two isn't enough;
+    more than two is ambiguous about which pair belongs together, so both
+    cases are treated as errors. Role assignment (which file is which)
+    happens in assign_photo_roles().
 
     Phone HEIC/HEIF dumps are converted to JPEG first (see convert_heic_in_inbox).
     """
@@ -194,8 +201,8 @@ def find_inbox_photos() -> tuple[Path, Path]:
         _log("ERROR", f"Found {len(candidates)} image(s) in {INBOX_DIR}, need exactly 2.")
         _log(
             "ERROR",
-            "Drop TWO photos (two different angles of the same on-screen capture) "
-            "in that folder and re-run.",
+            "Drop TWO photos of the same on-screen capture in that folder "
+            "(1 face close-up + 1 environment shot) and re-run.",
         )
         sys.exit(1)
 
@@ -203,12 +210,74 @@ def find_inbox_photos() -> tuple[Path, Path]:
         _log(
             "ERROR",
             f"Found {len(candidates)} images in {INBOX_DIR}, expected exactly 2 "
-            "(two angles of ONE capture). Remove the extras so only the matching "
-            "pair remains, then re-run.",
+            "(face close-up + environment of ONE capture). Remove the extras so "
+            "only the matching pair remains, then re-run.",
         )
         sys.exit(1)
 
     return candidates[0], candidates[1]
+
+
+def _resolve_inbox_name(name: str, candidates: list[Path]) -> Path:
+    """Match a --face/--env argument to an inbox file (by name or path)."""
+    needle = Path(name)
+    by_name = {p.name: p for p in candidates}
+    if needle.name in by_name:
+        return by_name[needle.name]
+    # Absolute / relative path that lands on one of the candidates
+    try:
+        resolved = needle.resolve()
+    except Exception:
+        resolved = None
+    for p in candidates:
+        if resolved is not None and p.resolve() == resolved:
+            return p
+    _log(
+        "ERROR",
+        f"'{name}' is not one of the two inbox images: "
+        f"{', '.join(p.name for p in candidates)}",
+    )
+    sys.exit(1)
+
+
+def assign_photo_roles(
+    photo_a: Path,
+    photo_b: Path,
+    face_name: str | None = None,
+    env_name: str | None = None,
+) -> tuple[Path, Path]:
+    """Decide which inbox file is the face close-up vs the environment shot.
+
+    Returns (face_closeup_path, environment_path).
+    """
+    candidates = [photo_a, photo_b]
+
+    if face_name and env_name:
+        face = _resolve_inbox_name(face_name, candidates)
+        env = _resolve_inbox_name(env_name, candidates)
+        if face == env:
+            _log("ERROR", "--face and --env must refer to two different inbox files.")
+            sys.exit(1)
+        return face, env
+
+    if face_name or env_name:
+        _log("ERROR", "Pass both --face and --env, or neither (you'll be prompted).")
+        sys.exit(1)
+
+    print("\nAssign roles for the two inbox photos:")
+    print("  FACE CLOSE-UP = face dominant + centered, minimal angular distortion")
+    print("  ENVIRONMENT   = whole screen/device in its surroundings (distortion OK)")
+    print(f"  1. {photo_a.name}")
+    print(f"  2. {photo_b.name}")
+    while True:
+        entered = input(
+            "Which file is the FACE CLOSE-UP? Enter 1 or 2: "
+        ).strip()
+        if entered == "1":
+            return photo_a, photo_b
+        if entered == "2":
+            return photo_b, photo_a
+        print("  Please enter 1 or 2.")
 
 
 def validate_image(path: Path) -> None:
@@ -331,6 +400,14 @@ def main() -> int:
         "--seed-image",
         help="Filename of the fixed_image/ pool image you randomly picked and photographed",
     )
+    parser.add_argument(
+        "--face",
+        help="Inbox filename of the FACE CLOSE-UP (centered, minimal angular distortion)",
+    )
+    parser.add_argument(
+        "--env",
+        help="Inbox filename of the ENVIRONMENT shot (whole screen/device in surroundings)",
+    )
     parser.add_argument("--camera", help="Camera/phone used to take the photo, e.g. 'iPhone 15 Pro'")
     parser.add_argument("--device", choices=DEVICE_TYPES, help="Device the seed image was displayed on")
     parser.add_argument("--date", help="Capture date YYYY-MM-DD (UTC). Defaults to today.")
@@ -341,7 +418,10 @@ def main() -> int:
     parser.add_argument("--edge-crop", action="store_true", dest="edge_crop", help="Screen edge/bezel/crop cues visible")
     args = parser.parse_args()
 
-    photo_path, photo_path_2 = find_inbox_photos()
+    photo_a, photo_b = find_inbox_photos()
+    photo_path, photo_path_2 = assign_photo_roles(
+        photo_a, photo_b, face_name=args.face, env_name=args.env
+    )
     validate_image(photo_path)
     validate_image(photo_path_2)
     photo_bytes = photo_path.read_bytes()
@@ -349,11 +429,23 @@ def main() -> int:
 
     if hashlib.sha256(photo_bytes).hexdigest() == hashlib.sha256(photo_bytes_2).hexdigest():
         _log("ERROR", f"'{photo_path.name}' and '{photo_path_2.name}' are byte-for-byte identical.")
-        _log("ERROR", "A submission needs TWO DIFFERENT angles of the same capture, not the same file twice.")
+        _log(
+            "ERROR",
+            "Need TWO DIFFERENT photos: a face close-up AND an environment shot, "
+            "not the same file twice.",
+        )
         sys.exit(1)
 
-    _log("OK", f"Found photo (angle 1): {photo_path.name} ({len(photo_bytes)} bytes)")
-    _log("OK", f"Found photo (angle 2): {photo_path_2.name} ({len(photo_bytes_2)} bytes)")
+    _log(
+        "OK",
+        f"Face close-up (photo 1): {photo_path.name} ({len(photo_bytes)} bytes) "
+        "— centered face, minimal angular distortion",
+    )
+    _log(
+        "OK",
+        f"Environment (photo 2): {photo_path_2.name} ({len(photo_bytes_2)} bytes) "
+        "— whole screen/device in surroundings",
+    )
 
     seed_image = prompt_seed_image(args.seed_image)
     _log("OK", f"Seed image: {seed_image}")
@@ -361,7 +453,11 @@ def main() -> int:
     device_photographed = prompt_device(args.device)
     date = args.date or _dt.datetime.now(_dt.timezone.utc).strftime("%Y-%m-%d")
 
-    print("\nWhich visual cues are clearly visible in your photos? (report honestly — it's fine if none apply)")
+    print(
+        "\nWhich visual cues are clearly visible across your photos? "
+        "(report honestly — it's fine if none apply; keystone/glare/moire "
+        "are more common on the environment shot)"
+    )
     moire = prompt_bool_if_missing(args.moire, "  Moiré / pixel grid interference")
     glare = prompt_bool_if_missing(args.glare, "  Screen glare hotspots")
     keystone = prompt_bool_if_missing(args.keystone, "  Perspective / keystone distortion")
@@ -372,8 +468,8 @@ def main() -> int:
     # for the next submission and the miner process has stable local paths
     # to read from (drand encryption needs the raw bytes at query time).
     STAGED_DIR.mkdir(parents=True, exist_ok=True)
-    staged_name = f"{date}_{photo_path.stem}{photo_path.suffix}"
-    staged_name_2 = f"{date}_{photo_path_2.stem}{photo_path_2.suffix}"
+    staged_name = f"{date}_face_{photo_path.stem}{photo_path.suffix}"
+    staged_name_2 = f"{date}_env_{photo_path_2.stem}{photo_path_2.suffix}"
     staged_path = STAGED_DIR / staged_name
     staged_path_2 = STAGED_DIR / staged_name_2
     shutil.move(str(photo_path), str(staged_path))
@@ -408,9 +504,10 @@ def main() -> int:
     _log(
         "DONE",
         "Want to submit again? There's no daily limit — just drop a NEW pair of photos "
-        "(a genuinely new capture) in inbox/ and run this script again. Never resubmit "
-        "the same capture twice. If your previous capture hasn't been sent yet, it's "
-        "queued automatically and won't be lost — it'll go out right after this one.",
+        "(face close-up + environment of a genuinely new capture) in inbox/ and run "
+        "this script again. Never resubmit the same capture twice. If your previous "
+        "capture hasn't been sent yet, it's queued automatically and won't be lost — "
+        "it'll go out right after this one.",
     )
     return 0
 

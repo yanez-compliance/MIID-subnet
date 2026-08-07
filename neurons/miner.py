@@ -409,11 +409,11 @@ class Miner(BaseMinerNeuron):
 
         Reads screen_replay.json (MIID/miner/real_image_miner_guide/). Miners
         (or the helper script submit_real_photo.py in that same folder) fill
-        in TWO photo paths (two different angles of the same capture) +
-        metadata and flip "ready" to true. This runs on every validator
-        query — since the axon is always listening, this is effectively a
-        background check — so as soon as "ready" is true the next query
-        submits both photos as one screen_replay submission. After a
+        in TWO photo paths (face close-up + environment shot of the same
+        capture) + metadata and flip "ready" to true. This runs on every
+        validator query — since the axon is always listening, this is
+        effectively a background check — so as soon as "ready" is true the
+        next query submits both photos as one screen_replay submission. After a
         successful upload the whole file is reset back to its blank/not-ready
         state so it won't accidentally re-submit the exact same capture again
         (that would be a duplicate). There's no limit on how many *different*
@@ -442,14 +442,16 @@ class Miner(BaseMinerNeuron):
         if not photo_path or not os.path.exists(photo_path):
             bt.logging.warning(
                 f"screen_replay.json: ready=true but photo_path is missing/invalid "
-                f"('{photo_path}'). Leaving ready=true and will retry next round."
+                f"('{photo_path}'). Expected the FACE CLOSE-UP path. "
+                f"Leaving ready=true and will retry next round."
             )
             return None
         if not photo_path_2 or not os.path.exists(photo_path_2):
             bt.logging.warning(
-                f"screen_replay.json: ready=true but photo_path_2 (second angle) is "
+                f"screen_replay.json: ready=true but photo_path_2 (environment shot) is "
                 f"missing/invalid ('{photo_path_2}'). A screen-replay submission needs "
-                f"TWO photos of the same capture. Leaving ready=true and will retry next round."
+                f"TWO photos of the same capture (face close-up + environment). "
+                f"Leaving ready=true and will retry next round."
             )
             return None
 
@@ -490,8 +492,8 @@ class Miner(BaseMinerNeuron):
             if image_hash == image_hash_2:
                 bt.logging.warning(
                     "screen_replay.json: both photos hash identically (same file "
-                    "submitted twice) — a screen-replay submission needs two DIFFERENT "
-                    "angles. Rejecting locally; take a second, distinct photo."
+                    "submitted twice) — need a FACE CLOSE-UP and a distinct "
+                    "ENVIRONMENT shot. Rejecting locally; take a second, distinct photo."
                 )
                 return None
 
@@ -526,7 +528,7 @@ class Miner(BaseMinerNeuron):
                 seed_image_name=seed_name,
             )
             if not s3_key:
-                bt.logging.warning("screen_replay.json: S3 upload failed (angle 1)")
+                bt.logging.warning("screen_replay.json: S3 upload failed (face close-up)")
                 return None
 
             s3_key_2 = upload_to_s3(
@@ -541,7 +543,7 @@ class Miner(BaseMinerNeuron):
                 seed_image_name=seed_name,
             )
             if not s3_key_2:
-                bt.logging.warning("screen_replay.json: S3 upload failed (angle 2)")
+                bt.logging.warning("screen_replay.json: S3 upload failed (environment shot)")
                 return None
 
             uav = ScreenReplayUAV(
@@ -580,7 +582,9 @@ class Miner(BaseMinerNeuron):
             # sitting untouched. Oldest first.
             self._promote_next_queued_screen_replay()
 
-            bt.logging.info(f"Screen-replay submitted (2 angles): {s3_key} + {s3_key_2}")
+            bt.logging.info(
+                f"Screen-replay submitted (face + environment): {s3_key} + {s3_key_2}"
+            )
             return S3Submission(
                 s3_key=s3_key,
                 image_hash=image_hash,
