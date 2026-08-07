@@ -533,14 +533,16 @@ async def forward(self):
                         uav_dict = dict(sub.screen_replay_uav)
 
                 if sub.variation_type == "screen_replay":
-                    # Every screen_replay submission carries 2 photos of the
-                    # same capture — face close-up (primary) + environment
-                    # shot (*_angle2). Miners may send as many non-duplicate
-                    # captures as they want; there's no daily cap.
+                    # Every screen_replay submission carries 2 media files of
+                    # the same capture — face close-up photo/video (primary) +
+                    # environment still (*_angle2), with capture_variant in UAV.
+                    # Miners may send as many non-duplicate captures as they
+                    # want; there's no daily cap.
                     bt.logging.info(
                         f"Miner UID {uid} screen_replay received "
                         f"(face_hash={sub.image_hash[:12]}…, "
                         f"env_hash={(sub.image_hash_angle2 or 'MISSING')[:12]}…, "
+                        f"variant={(uav_dict or {}).get('capture_variant', '?')}, "
                         f"uav={'present' if uav_dict else 'MISSING'})"
                     )
 

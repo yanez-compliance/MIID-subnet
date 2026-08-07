@@ -85,7 +85,8 @@ def upload_to_s3(
     challenge_id: str,
     variation_type: str,
     path_signature: str,
-    seed_image_name: str
+    seed_image_name: str,
+    source_ext: str = ".png",
 ) -> Optional[str]:
     """Upload encrypted image to S3 (or local storage as fallback).
 
@@ -107,6 +108,8 @@ def upload_to_s3(
         path_signature: Unique path component derived from miner's signature
                        Format: sign(challenge_id:miner_hotkey)[:16]
         seed_image_name: Name of the base image (e.g., "0ad9417fe84e_m_doc")
+        source_ext: Original media extension (e.g. ".png", ".jpg", ".mp4")
+                    used in the stored object name before ".tlock".
 
     Returns:
         S3 key (path) if successful, None if failed
@@ -118,7 +121,13 @@ def upload_to_s3(
     # the metadata below so the grading API can still match it correctly.
     timestamp = int(time.time())
     safe_variation_type = variation_type.replace("+", "_")
-    s3_key = f"submissions/{challenge_id}/{miner_hotkey}/{path_signature}/{seed_image_name}/{safe_variation_type}_{timestamp}.png.tlock"
+    ext = (source_ext or ".png").lower()
+    if not ext.startswith("."):
+        ext = f".{ext}"
+    s3_key = (
+        f"submissions/{challenge_id}/{miner_hotkey}/{path_signature}/"
+        f"{seed_image_name}/{safe_variation_type}_{timestamp}{ext}.tlock"
+    )
 
     # Prepare metadata
     metadata = {
@@ -131,7 +140,8 @@ def upload_to_s3(
         "path_signature": path_signature,
         "seed_image_name": seed_image_name,
         "timestamp": str(timestamp),
-        "size_bytes": str(len(encrypted_data))
+        "size_bytes": str(len(encrypted_data)),
+        "source_ext": ext,
     }
 
     # Try S3 upload if configured

@@ -1,49 +1,43 @@
-r"""Real screen-replay photo submitter.
+r"""Real screen-replay photo/video submitter.
 
-This is the ONE file miners run after dropping TWO real photos of the SAME
-capture into inbox/. See README.md in this folder for the full walkthrough.
+This is the ONE file miners run after dropping a face close-up + environment
+pair into inbox/. See README.md in this folder for the full walkthrough.
 
-Photo roles (important):
-  1. FACE CLOSE-UP — face on screen is dominant and centered, with as little
-     angular/perspective distortion as possible (near head-on to the display).
-  2. ENVIRONMENT — wider shot of the whole screen/device in its surroundings;
-     angular distortion, keystone, glare, etc. are fine.
+Photo / video roles (important):
+  1. FACE CLOSE-UP — face on screen dominant and centered, minimal angular
+     distortion (near head-on). Still photo for variants 1–3, or a short
+     video for synthetic_video_expression.
+  2. ENVIRONMENT — always a still photo of the whole screen/device in its
+     surroundings; angular distortion, keystone, glare, etc. are fine.
+
+Capture variants (pick one per submission — see --variant):
+  1. device_camera — seed as-is; vary screen and/or camera when you can
+  2. synthetic_eyes_closed — synthesize eyes-closed seed, then real capture
+  3. synthetic_smiling — synthesize smiling seed, then real capture
+  4. synthetic_video_expression — synthesize smile/blink seed video, then
+     real screen-replay VIDEO + environment still
 
 There's no limit on how many times you can run this — submit as many
 different real captures as you want, whenever you have them ready. The only
 rule is that each one must be a genuinely new capture: never re-run this on
-the same two photos twice, and never reuse a photo from a previous
-submission — duplicates are filtered out and penalised.
-
-What it does:
-  1. Finds the two image files you placed in inbox/ (next to this script) —
-     one face close-up and one environment shot of the same on-screen
-     capture. Phone HEIC/HEIF dumps are auto-converted to JPEG in place
-     first, so you can drop files straight from an iPhone. You will be asked
-     which file is which (or pass --face / --env).
-  2. Asks a few quick questions about the capture (camera used, device the
-     seed image was displayed on, which visual cues are visible) — unless
-     you already answered them via CLI flags.
-  3. Moves both photos into staged/ (so inbox/ is free for next time) and
-     rewrites screen_replay.json with both photo paths + your answers, then
-     flips "ready" to true.
-  4. That's it. The miner process (neurons/miner.py) is always running and
-     checks screen_replay.json on every validator query. As soon as it sees
-     "ready": true it takes over: encrypts both photos, uploads them to S3
-     under the real submission path (this is the ONLY S3 upload that
-     happens — no separate/duplicate raw upload here), sends them to the
-     validator as one submission, and automatically flips "ready" back to
-     false so it won't resubmit the same capture again. Take a fresh pair of
-     photos any time you want to submit again.
+the same media twice, and never reuse a file from a previous submission —
+duplicates are filtered out and penalised.
 
 Usage:
     python MIID/miner/real_image_miner_guide/submit_real_photo.py
 
-    # Or answer everything up front (no prompts):
+    # Photo variant, non-interactive:
     python MIID/miner/real_image_miner_guide/submit_real_photo.py \
+        --variant synthetic_smiling \
         --face closeup.jpg --env wide.jpg \
         --camera "iPhone 15 Pro" --device phone \
-        --moire --glare --keystone --gamma --edge-crop
+        --moire --glare
+
+    # Video variant:
+    python MIID/miner/real_image_miner_guide/submit_real_photo.py \
+        --variant synthetic_video_expression --video-expression blinking \
+        --face replay.mp4 --env wide.jpg \
+        --camera "iPhone 15 Pro" --device laptop
 
 Run from the project root or directly (this script fixes up sys.path itself).
 """
@@ -65,10 +59,19 @@ if str(PROJECT_ROOT) not in sys.path:
 
 import json  # noqa: E402
 
-# Must match SCREEN_REPLAY_DEVICE_TYPES in MIID/validator/image_variations.py
+# Must match constants in MIID/validator/image_variations.py
 DEVICE_TYPES = ["phone", "tablet", "laptop", "monitor", "tv"]
+CAPTURE_VARIANTS = [
+    "device_camera",
+    "synthetic_eyes_closed",
+    "synthetic_smiling",
+    "synthetic_video_expression",
+]
+VIDEO_EXPRESSIONS = ["smiling", "blinking"]
+VIDEO_VARIANT = "synthetic_video_expression"
 
 IMAGE_EXTENSIONS = {".png", ".jpg", ".jpeg", ".webp", ".bmp"}
+VIDEO_EXTENSIONS = {".mp4", ".mov", ".webm", ".m4v"}
 # Phone camera "High Efficiency" formats — converted to JPEG on drop so the
 # rest of the pipeline (validate / stage / encrypt) only ever sees common formats.
 HEIC_EXTENSIONS = {".heic", ".heif"}
@@ -88,6 +91,22 @@ QUEUE_DIR = HERE / "queue"
 # now (see VALIDATOR_SENDS_SEED_IMAGE in MIID/validator/fixed_images.py).
 FIXED_IMAGE_POOL_DIR = PROJECT_ROOT / "MIID" / "validator" / "fixed_image"
 
+VARIANT_HELP = {
+    "device_camera": (
+        "Photograph the seed as-is. Vary display device and/or camera when you can."
+    ),
+    "synthetic_eyes_closed": (
+        "Synthesize an eyes-closed seed (keep identity), display it, then real-capture."
+    ),
+    "synthetic_smiling": (
+        "Synthesize a smiling seed (keep identity), display it, then real-capture."
+    ),
+    "synthetic_video_expression": (
+        "Synthesize a smile/blink seed video, play it on screen, record a real "
+        "screen-replay VIDEO + environment still."
+    ),
+}
+
 
 def _log(level: str, msg: str) -> None:
     print(f"[{level}] {msg}", flush=True)
@@ -95,7 +114,6 @@ def _log(level: str, msg: str) -> None:
 
 def _convert_heic_to_jpeg(src: Path, dest: Path) -> None:
     """Decode one HEIC/HEIF file to JPEG. Tries pillow-heif, then CLI tools."""
-    # 1) pillow-heif (preferred — pure Python dep once installed)
     try:
         from pillow_heif import register_heif_opener
         from PIL import Image
@@ -111,7 +129,6 @@ def _convert_heic_to_jpeg(src: Path, dest: Path) -> None:
         _log("ERROR", f"Failed to convert '{src.name}' with pillow-heif: {e}")
         sys.exit(1)
 
-    # 2) ImageMagick (`magick` or legacy `convert`)
     for cmd in (
         ["magick", str(src), str(dest)],
         ["convert", str(src), str(dest)],
@@ -125,7 +142,6 @@ def _convert_heic_to_jpeg(src: Path, dest: Path) -> None:
                 _log("ERROR", f"Failed to convert '{src.name}' with {cmd[0]}: {e}")
                 sys.exit(1)
 
-    # 3) libheif's heif-convert
     if shutil.which("heif-convert"):
         try:
             subprocess.run(
@@ -151,12 +167,7 @@ def _convert_heic_to_jpeg(src: Path, dest: Path) -> None:
 
 
 def convert_heic_in_inbox() -> None:
-    """Convert any .heic/.heif files in inbox/ to JPEG, then remove the originals.
-
-    iPhones often drop High Efficiency (HEIC) files. Converting in place keeps
-    the "drop two photos + run this script" UX, and leaves inbox/ with only
-    formats the rest of this script already understands.
-    """
+    """Convert any .heic/.heif files in inbox/ to JPEG, then remove the originals."""
     INBOX_DIR.mkdir(parents=True, exist_ok=True)
     heic_files = sorted(
         p for p in INBOX_DIR.iterdir()
@@ -179,43 +190,67 @@ def convert_heic_in_inbox() -> None:
         _log("OK", f"Converted phone HEIC → JPEG: {src.name} → {dest.name}")
 
 
-def find_inbox_photos() -> tuple[Path, Path]:
-    """Return the two image files sitting in inbox/, or exit with an error.
-
-    A screen-replay submission needs exactly two photos of the same capture:
-    a face close-up and an environment shot. Fewer than two isn't enough;
-    more than two is ambiguous about which pair belongs together, so both
-    cases are treated as errors. Role assignment (which file is which)
-    happens in assign_photo_roles().
-
-    Phone HEIC/HEIF dumps are converted to JPEG first (see convert_heic_in_inbox).
-    """
+def _list_inbox_media() -> tuple[list[Path], list[Path]]:
+    """Return (image_files, video_files) currently in inbox/."""
     INBOX_DIR.mkdir(parents=True, exist_ok=True)
     convert_heic_in_inbox()
-    candidates = sorted(
+    images = sorted(
         p for p in INBOX_DIR.iterdir()
         if p.is_file() and p.suffix.lower() in IMAGE_EXTENSIONS
     )
+    videos = sorted(
+        p for p in INBOX_DIR.iterdir()
+        if p.is_file() and p.suffix.lower() in VIDEO_EXTENSIONS
+    )
+    return images, videos
 
-    if len(candidates) < 2:
-        _log("ERROR", f"Found {len(candidates)} image(s) in {INBOX_DIR}, need exactly 2.")
+
+def find_inbox_pair(variant: str) -> tuple[Path, Path]:
+    """Find the primary + environment files for this variant, or exit."""
+    images, videos = _list_inbox_media()
+
+    if variant == VIDEO_VARIANT:
+        if len(videos) != 1 or len(images) != 1:
+            _log(
+                "ERROR",
+                f"Variant '{variant}' needs exactly 1 video + 1 environment image in "
+                f"{INBOX_DIR} (found {len(videos)} video(s), {len(images)} image(s)).",
+            )
+            _log(
+                "ERROR",
+                f"Accepted video extensions: {', '.join(sorted(VIDEO_EXTENSIONS))}",
+            )
+            sys.exit(1)
+        # Primary = video, env = image (roles fixed by media type)
+        return videos[0], images[0]
+
+    if videos:
         _log(
             "ERROR",
-            "Drop TWO photos of the same on-screen capture in that folder "
+            f"Found video file(s) in inbox/ but variant '{variant}' expects two still "
+            "photos. Use --variant synthetic_video_expression for video, or remove "
+            "the video from inbox/.",
+        )
+        sys.exit(1)
+
+    if len(images) < 2:
+        _log("ERROR", f"Found {len(images)} image(s) in {INBOX_DIR}, need exactly 2.")
+        _log(
+            "ERROR",
+            "Drop TWO photos of the same on-screen capture "
             "(1 face close-up + 1 environment shot) and re-run.",
         )
         sys.exit(1)
 
-    if len(candidates) > 2:
+    if len(images) > 2:
         _log(
             "ERROR",
-            f"Found {len(candidates)} images in {INBOX_DIR}, expected exactly 2 "
-            "(face close-up + environment of ONE capture). Remove the extras so "
-            "only the matching pair remains, then re-run.",
+            f"Found {len(images)} images in {INBOX_DIR}, expected exactly 2 "
+            "(face close-up + environment of ONE capture). Remove the extras.",
         )
         sys.exit(1)
 
-    return candidates[0], candidates[1]
+    return images[0], images[1]
 
 
 def _resolve_inbox_name(name: str, candidates: list[Path]) -> Path:
@@ -224,7 +259,6 @@ def _resolve_inbox_name(name: str, candidates: list[Path]) -> Path:
     by_name = {p.name: p for p in candidates}
     if needle.name in by_name:
         return by_name[needle.name]
-    # Absolute / relative path that lands on one of the candidates
     try:
         resolved = needle.resolve()
     except Exception:
@@ -234,7 +268,7 @@ def _resolve_inbox_name(name: str, candidates: list[Path]) -> Path:
             return p
     _log(
         "ERROR",
-        f"'{name}' is not one of the two inbox images: "
+        f"'{name}' is not one of the inbox files: "
         f"{', '.join(p.name for p in candidates)}",
     )
     sys.exit(1)
@@ -245,11 +279,17 @@ def assign_photo_roles(
     photo_b: Path,
     face_name: str | None = None,
     env_name: str | None = None,
+    *,
+    primary_is_video: bool = False,
 ) -> tuple[Path, Path]:
-    """Decide which inbox file is the face close-up vs the environment shot.
+    """Decide which file is the face close-up vs the environment shot.
 
     Returns (face_closeup_path, environment_path).
     """
+    if primary_is_video:
+        # find_inbox_pair already returned (video, image)
+        return photo_a, photo_b
+
     candidates = [photo_a, photo_b]
 
     if face_name and env_name:
@@ -290,6 +330,29 @@ def validate_image(path: Path) -> None:
         sys.exit(1)
 
 
+def validate_video(path: Path) -> None:
+    """Lightweight video check: non-empty + recognizable container magic when possible."""
+    try:
+        raw = path.read_bytes()
+    except Exception as e:
+        _log("ERROR", f"Cannot read video '{path}': {e}")
+        sys.exit(1)
+    if len(raw) < 32:
+        _log("ERROR", f"'{path.name}' is too small to be a video.")
+        sys.exit(1)
+    # MP4/MOV/M4V usually contain 'ftyp' near the start; WebM starts with EBML (0x1A45DFA3)
+    head = raw[:64]
+    if path.suffix.lower() in {".mp4", ".mov", ".m4v"} and b"ftyp" not in head:
+        _log(
+            "ERROR",
+            f"'{path.name}' does not look like an MP4/MOV container (missing 'ftyp').",
+        )
+        sys.exit(1)
+    if path.suffix.lower() == ".webm" and not head.startswith(b"\x1a\x45\xdf\xa3"):
+        _log("ERROR", f"'{path.name}' does not look like a WebM container.")
+        sys.exit(1)
+
+
 def prompt_if_missing(value: str | None, prompt: str, default: str = "") -> str:
     if value:
         return value
@@ -301,7 +364,7 @@ def prompt_device(value: str | None) -> str:
     if value and value in DEVICE_TYPES:
         return value
     while True:
-        entered = input(f"Device the seed image was displayed on ({'/'.join(DEVICE_TYPES)}): ").strip().lower()
+        entered = input(f"Device the seed was displayed on ({'/'.join(DEVICE_TYPES)}): ").strip().lower()
         if entered in DEVICE_TYPES:
             return entered
         print(f"  Please enter one of: {', '.join(DEVICE_TYPES)}")
@@ -312,6 +375,41 @@ def prompt_bool_if_missing(flag_value: bool, prompt: str) -> bool:
         return True
     entered = input(f"{prompt} [y/N]: ").strip().lower()
     return entered in ("y", "yes")
+
+
+def prompt_capture_variant(value: str | None) -> str:
+    if value and value in CAPTURE_VARIANTS:
+        return value
+    if value:
+        _log("ERROR", f"Unknown --variant '{value}'. Choose one of: {', '.join(CAPTURE_VARIANTS)}")
+        sys.exit(1)
+
+    print("\nWhich capture variant is this submission?")
+    for i, key in enumerate(CAPTURE_VARIANTS, 1):
+        print(f"  {i}. {key}")
+        print(f"     {VARIANT_HELP[key]}")
+    while True:
+        entered = input(f"Enter a number (1-{len(CAPTURE_VARIANTS)}) or the variant name: ").strip()
+        if entered.isdigit() and 1 <= int(entered) <= len(CAPTURE_VARIANTS):
+            return CAPTURE_VARIANTS[int(entered) - 1]
+        if entered in CAPTURE_VARIANTS:
+            return entered
+        print(f"  Please enter 1-{len(CAPTURE_VARIANTS)}, or one of: {', '.join(CAPTURE_VARIANTS)}")
+
+
+def prompt_video_expression(value: str | None) -> str:
+    if value and value in VIDEO_EXPRESSIONS:
+        return value
+    if value:
+        _log("ERROR", f"Unknown --video-expression '{value}'. Choose: {', '.join(VIDEO_EXPRESSIONS)}")
+        sys.exit(1)
+    while True:
+        entered = input(
+            f"Video seed expression ({'/'.join(VIDEO_EXPRESSIONS)}): "
+        ).strip().lower()
+        if entered in VIDEO_EXPRESSIONS:
+            return entered
+        print(f"  Please enter one of: {', '.join(VIDEO_EXPRESSIONS)}")
 
 
 def list_pool_images() -> list[str]:
@@ -325,13 +423,7 @@ def list_pool_images() -> list[str]:
 
 
 def prompt_seed_image(value: str | None) -> str:
-    """Get which fixed_image/ pool file the miner used as their screen-replay seed.
-
-    Sandbox mode: the validator doesn't send a seed image right now, so the
-    miner must have picked one themselves (at random) from the shared pool
-    and report which one here. If flag_value is already a valid pool
-    filename, use it directly (no prompt) — handy for scripting.
-    """
+    """Get which fixed_image/ pool file the miner used as their screen-replay seed."""
     pool = list_pool_images()
 
     if value:
@@ -347,7 +439,7 @@ def prompt_seed_image(value: str | None) -> str:
         ).strip()
         return entered
 
-    print(f"\nWhich fixed_image/ pool image did you randomly pick and photograph?")
+    print(f"\nWhich fixed_image/ pool image did you randomly pick (base seed)?")
     for i, name in enumerate(pool, 1):
         print(f"  {i}. {name}")
     while True:
@@ -360,17 +452,7 @@ def prompt_seed_image(value: str | None) -> str:
 
 
 def queue_existing_pending_capture() -> None:
-    """Back up a still-pending capture into queue/ instead of overwriting it.
-
-    screen_replay.json only has ONE "active" slot at a time. If you run this
-    script again before the always-running miner process (neurons/miner.py)
-    has had a chance to pick up and submit the previous capture (it still
-    has "ready": true), overwriting screen_replay.json here would silently
-    drop that earlier capture. Instead, copy it into queue/ first — the miner
-    process drains queue/ automatically (oldest first) every time it finishes
-    submitting the active capture, so nothing you submit is ever lost; extra
-    captures just wait their turn and go out on later validator queries.
-    """
+    """Back up a still-pending capture into queue/ instead of overwriting it."""
     if not SCREEN_REPLAY_JSON.exists():
         return
     try:
@@ -382,8 +464,6 @@ def queue_existing_pending_capture() -> None:
         return  # nothing pending — safe to overwrite
 
     QUEUE_DIR.mkdir(parents=True, exist_ok=True)
-    # Timestamp-based name so files sort in submission order (oldest first)
-    # when the miner process drains the queue later.
     queued_name = f"queued_{_dt.datetime.now(_dt.timezone.utc).strftime('%Y%m%dT%H%M%S%f')}.json"
     shutil.copy(str(SCREEN_REPLAY_JSON), str(QUEUE_DIR / queued_name))
     _log(
@@ -397,16 +477,27 @@ def queue_existing_pending_capture() -> None:
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument(
+        "--variant",
+        choices=CAPTURE_VARIANTS,
+        help="Capture variety track for this submission",
+    )
+    parser.add_argument(
+        "--video-expression",
+        choices=VIDEO_EXPRESSIONS,
+        dest="video_expression",
+        help="Required for synthetic_video_expression: smiling or blinking",
+    )
+    parser.add_argument(
         "--seed-image",
         help="Filename of the fixed_image/ pool image you randomly picked and photographed",
     )
     parser.add_argument(
         "--face",
-        help="Inbox filename of the FACE CLOSE-UP (centered, minimal angular distortion)",
+        help="Inbox filename of the FACE CLOSE-UP (photo or video)",
     )
     parser.add_argument(
         "--env",
-        help="Inbox filename of the ENVIRONMENT shot (whole screen/device in surroundings)",
+        help="Inbox filename of the ENVIRONMENT still photo",
     )
     parser.add_argument("--camera", help="Camera/phone used to take the photo, e.g. 'iPhone 15 Pro'")
     parser.add_argument("--device", choices=DEVICE_TYPES, help="Device the seed image was displayed on")
@@ -418,12 +509,37 @@ def main() -> int:
     parser.add_argument("--edge-crop", action="store_true", dest="edge_crop", help="Screen edge/bezel/crop cues visible")
     args = parser.parse_args()
 
-    photo_a, photo_b = find_inbox_photos()
+    capture_variant = prompt_capture_variant(args.variant)
+    _log("OK", f"Capture variant: {capture_variant} — {VARIANT_HELP[capture_variant]}")
+
+    video_expression = None
+    if capture_variant == VIDEO_VARIANT:
+        video_expression = prompt_video_expression(args.video_expression)
+        _log("OK", f"Video expression: {video_expression}")
+    elif args.video_expression:
+        _log(
+            "ERROR",
+            "--video-expression is only valid with --variant synthetic_video_expression",
+        )
+        sys.exit(1)
+
+    primary_is_video = capture_variant == VIDEO_VARIANT
+    media_a, media_b = find_inbox_pair(capture_variant)
     photo_path, photo_path_2 = assign_photo_roles(
-        photo_a, photo_b, face_name=args.face, env_name=args.env
+        media_a,
+        media_b,
+        face_name=args.face,
+        env_name=args.env,
+        primary_is_video=primary_is_video,
     )
-    validate_image(photo_path)
-    validate_image(photo_path_2)
+
+    if primary_is_video:
+        validate_video(photo_path)
+        validate_image(photo_path_2)
+    else:
+        validate_image(photo_path)
+        validate_image(photo_path_2)
+
     photo_bytes = photo_path.read_bytes()
     photo_bytes_2 = photo_path_2.read_bytes()
 
@@ -431,15 +547,15 @@ def main() -> int:
         _log("ERROR", f"'{photo_path.name}' and '{photo_path_2.name}' are byte-for-byte identical.")
         _log(
             "ERROR",
-            "Need TWO DIFFERENT photos: a face close-up AND an environment shot, "
+            "Need TWO DIFFERENT files: a face close-up AND an environment shot, "
             "not the same file twice.",
         )
         sys.exit(1)
 
+    primary_label = "Face close-up VIDEO (primary)" if primary_is_video else "Face close-up (photo 1)"
     _log(
         "OK",
-        f"Face close-up (photo 1): {photo_path.name} ({len(photo_bytes)} bytes) "
-        "— centered face, minimal angular distortion",
+        f"{primary_label}: {photo_path.name} ({len(photo_bytes)} bytes)",
     )
     _log(
         "OK",
@@ -449,12 +565,12 @@ def main() -> int:
 
     seed_image = prompt_seed_image(args.seed_image)
     _log("OK", f"Seed image: {seed_image}")
-    camera_used = prompt_if_missing(args.camera, "Camera/phone used to take the photos (e.g. 'iPhone 15 Pro')")
+    camera_used = prompt_if_missing(args.camera, "Camera/phone used to take the capture (e.g. 'iPhone 15 Pro')")
     device_photographed = prompt_device(args.device)
     date = args.date or _dt.datetime.now(_dt.timezone.utc).strftime("%Y-%m-%d")
 
     print(
-        "\nWhich visual cues are clearly visible across your photos? "
+        "\nWhich visual cues are clearly visible across your capture? "
         "(report honestly — it's fine if none apply; keystone/glare/moire "
         "are more common on the environment shot)"
     )
@@ -464,17 +580,16 @@ def main() -> int:
     gamma = prompt_bool_if_missing(args.gamma, "  Gamma / contrast shift")
     edge_crop = prompt_bool_if_missing(args.edge_crop, "  Screen edge / bezel / crop cues")
 
-    # Move (not copy) both photos out of inbox/ into staged/ so inbox/ is free
-    # for the next submission and the miner process has stable local paths
-    # to read from (drand encryption needs the raw bytes at query time).
+    # Move (not copy) both files out of inbox/ into staged/
     STAGED_DIR.mkdir(parents=True, exist_ok=True)
-    staged_name = f"{date}_face_{photo_path.stem}{photo_path.suffix}"
+    primary_tag = "face_video" if primary_is_video else "face"
+    staged_name = f"{date}_{primary_tag}_{photo_path.stem}{photo_path.suffix}"
     staged_name_2 = f"{date}_env_{photo_path_2.stem}{photo_path_2.suffix}"
     staged_path = STAGED_DIR / staged_name
     staged_path_2 = STAGED_DIR / staged_name_2
     shutil.move(str(photo_path), str(staged_path))
     shutil.move(str(photo_path_2), str(staged_path_2))
-    _log("OK", f"Moved photos to {staged_path} and {staged_path_2}")
+    _log("OK", f"Moved media to {staged_path} and {staged_path_2}")
 
     data = {
         "ready": True,
@@ -484,6 +599,9 @@ def main() -> int:
         "date": date,
         "camera_used": camera_used,
         "device_photographed": device_photographed,
+        "capture_variant": capture_variant,
+        "video_expression": video_expression,
+        "primary_media": "video" if primary_is_video else "photo",
         "moire_pixel_grid": moire,
         "screen_glare_hotspots": glare,
         "perspective_keystone_distortion": keystone,
@@ -499,15 +617,13 @@ def main() -> int:
     _log(
         "DONE",
         "Nothing else to do — your miner process will pick this up and submit both "
-        "photos on its next validator query, then flip ready back to false automatically.",
+        "files on its next validator query, then flip ready back to false automatically.",
     )
     _log(
         "DONE",
-        "Want to submit again? There's no daily limit — just drop a NEW pair of photos "
-        "(face close-up + environment of a genuinely new capture) in inbox/ and run "
-        "this script again. Never resubmit the same capture twice. If your previous "
-        "capture hasn't been sent yet, it's queued automatically and won't be lost — "
-        "it'll go out right after this one.",
+        "Want to submit again? Drop a NEW pair (face close-up + environment) in "
+        "inbox/, pick a capture_variant, and re-run. Never resubmit the same "
+        "capture twice. Queued pending captures are preserved automatically.",
     )
     return 0
 

@@ -738,6 +738,52 @@ def get_variation_by_index(index: int) -> Dict[str, str]:
 # Device types — uniform random selection, no weights
 SCREEN_REPLAY_DEVICE_TYPES = ["phone", "tablet", "laptop", "monitor", "tv"]
 
+# Capture-variety tracks miners can use to diversify real screen-replay
+# submissions even with only one physical screen + one camera. Each
+# submission still needs a face close-up (photo or video) + an environment
+# still photo of the same physical capture.
+SCREEN_REPLAY_CAPTURE_VARIANTS: Dict[str, Dict[str, str]] = {
+    "device_camera": {
+        "label": "Device / camera variety",
+        "primary_media": "photo",
+        "summary": (
+            "Photograph the seed (as-is) on a real screen. Vary the display "
+            "device and/or the camera you shoot with when you have more than one."
+        ),
+    },
+    "synthetic_eyes_closed": {
+        "label": "Synthetic seed — eyes closed",
+        "primary_media": "photo",
+        "summary": (
+            "Synthetically generate a version of the seed with eyes closed "
+            "(keep identity), display THAT image on a real screen, then take "
+            "a real face close-up + environment photo of the screen."
+        ),
+    },
+    "synthetic_smiling": {
+        "label": "Synthetic seed — smiling",
+        "primary_media": "photo",
+        "summary": (
+            "Synthetically generate a smiling version of the seed (keep "
+            "identity), display THAT image on a real screen, then take a "
+            "real face close-up + environment photo of the screen."
+        ),
+    },
+    "synthetic_video_expression": {
+        "label": "Synthetic seed video — smile or blink",
+        "primary_media": "video",
+        "summary": (
+            "Synthetically generate a short video of the seed face smiling "
+            "or blinking (keep identity), play THAT video on a real screen, "
+            "then record a real screen-replay VIDEO (face close-up) plus a "
+            "still ENVIRONMENT photo of the whole device/scene."
+        ),
+    },
+}
+
+# Allowed video_expression values when capture_variant == synthetic_video_expression
+SCREEN_REPLAY_VIDEO_EXPRESSIONS = ["smiling", "blinking"]
+
 # Visual cues that must visibly appear in a screen-replay image (≥2 required)
 SCREEN_REPLAY_VISUAL_CUES: Dict[str, str] = {
     "moire_pixel_grid": (
@@ -806,9 +852,10 @@ def validate_screen_replay_uav(uav: Any) -> bool:
 
     Mirrors validate_variation_request() but for the UAV metadata attached to
     the screen_replay S3Submission: checks that free-text fields are present,
-    device_photographed is a recognized device, and every cue key defined in
-    SCREEN_REPLAY_VISUAL_CUES was reported as a bool (miners always report all
-    five cues, regardless of how many are actually visible).
+    device_photographed is a recognized device, capture_variant is one of the
+    four variety tracks, and every cue key defined in SCREEN_REPLAY_VISUAL_CUES
+    was reported as a bool (miners always report all five cues, regardless of
+    how many are actually visible).
 
     Accepts either a ScreenReplayUAV instance (typical, since
     S3Submission.screen_replay_uav is already parsed by pydantic) or an
@@ -834,6 +881,16 @@ def validate_screen_replay_uav(uav: Any) -> bool:
     if _get("device_photographed") not in SCREEN_REPLAY_DEVICE_TYPES:
         return False
 
+    # Older submissions may omit capture_variant — treat as device_camera.
+    capture_variant = _get("capture_variant") or "device_camera"
+    if capture_variant not in SCREEN_REPLAY_CAPTURE_VARIANTS:
+        return False
+
+    if capture_variant == "synthetic_video_expression":
+        video_expression = _get("video_expression")
+        if video_expression not in SCREEN_REPLAY_VIDEO_EXPRESSIONS:
+            return False
+
     for cue_key in SCREEN_REPLAY_VISUAL_CUES:
         if not isinstance(_get(cue_key), bool):
             return False
@@ -846,19 +903,18 @@ def validate_screen_replay_uav(uav: Any) -> bool:
 # =============================================================================
 
 REAL_SCREEN_REPLAY_REQUIREMENTS = (
-    "This is a REAL physical photograph, not an AI-generated image. Do not use "
-    "FLUX or any generator for this task — the seed image must be displayed "
-    "on an actual screen and photographed with a separate camera. "
-    "Each submission needs TWO photos of the SAME capture: "
-    "(1) FACE CLOSE-UP — face on screen is dominant and centered, with as "
-    "little angular/perspective distortion as possible (near head-on to the "
-    "display), large enough for reliable face detection and matchable to the "
-    "seed identity; keep a little screen/bezel context, don't crop the face "
-    "alone. "
-    "(2) ENVIRONMENT SHOT — wider photo of the whole screen/device in its "
-    "physical surroundings (desk, room, laptop keyboard, phone in hand, etc.). "
-    "Angular distortion, keystone, glare, and moiré are fine here; the face "
-    "should still be visible on the screen so the shot can be linked to (1)."
+    "The PHOTOGRAPH / VIDEO of the screen must be REAL (physical camera, no "
+    "screenshots). Do not submit a fully AI-generated fake of the room/device. "
+    "You MAY synthetically edit the seed itself first (eyes closed, smiling, "
+    "or a short smile/blink video) for some capture variants — then display "
+    "that edited seed on a real screen and capture it with a real camera. "
+    "Each submission needs TWO files of the SAME physical capture: "
+    "(1) FACE CLOSE-UP — photo (variants 1–3) or video (variant 4); face on "
+    "screen is dominant and centered, with as little angular/perspective "
+    "distortion as possible for stills; keep a little screen/bezel context. "
+    "(2) ENVIRONMENT SHOT — always a still photo of the whole screen/device "
+    "in its physical surroundings. Angular distortion, keystone, glare, and "
+    "moiré are fine here; the face should still be visible on the screen."
 )
 
 
@@ -871,8 +927,8 @@ def build_screen_replay_uav_template(
     The template is intentionally minimal: every field the miner must supply
     appears on its own line with a short placeholder.  The seed_image and date
     fields are pre-filled when the information is available. This checklist
-    describes ONE capture event — the two photos (face close-up + environment
-    shot) submitted for that capture share this same metadata block.
+    describes ONE capture event — the face close-up + environment shot
+    submitted for that capture share this same metadata block.
 
     Args:
         seed_filename: Filename of the validator-provided seed image, when the
@@ -890,6 +946,8 @@ def build_screen_replay_uav_template(
     import datetime as _dt
     today_utc = _dt.datetime.now(_dt.timezone.utc).strftime("%Y-%m-%d")
     device_options = "/".join(SCREEN_REPLAY_DEVICE_TYPES)
+    variant_options = "/".join(SCREEN_REPLAY_CAPTURE_VARIANTS.keys())
+    video_expr_options = "/".join(SCREEN_REPLAY_VIDEO_EXPRESSIONS)
 
     if seed_filename:
         seed_value = seed_filename
@@ -909,9 +967,11 @@ def build_screen_replay_uav_template(
         f'date:                     "{today_utc}"          # UTC capture date YYYY-MM-DD',
         'camera_used:              "YOUR_CAMERA_OR_PHONE"  # e.g. "iPhone 15 Pro"',
         f'device_photographed:      "phone"               # one of: {device_options}',
+        f'capture_variant:          "device_camera"       # one of: {variant_options}',
+        f'video_expression:         null                  # smiling/blinking if synthetic_video_expression, else null',
         "#",
-        "# Mark each cue true if clearly visible in your photo, false otherwise.",
-        "# Report honestly — graders will verify. Real photos may show 0–5 cues.",
+        "# Mark each cue true if clearly visible in your capture, false otherwise.",
+        "# Report honestly — graders will verify. Real captures may show 0–5 cues.",
         "#",
         "moire_pixel_grid:              false  # interference pattern from screen subpixels",
         "screen_glare_hotspots:         false  # specular reflections on display surface",
@@ -919,6 +979,7 @@ def build_screen_replay_uav_template(
         "gamma_contrast_shift:          false  # colour/brightness of display capture",
         "edge_crop_cues:                false  # screen borders, bezel, or cropping visible",
         "# ════════════════════════════════════════════════",
+        f"# video_expression options when needed: {video_expr_options}",
     ]
     return "\n".join(lines)
 
@@ -929,12 +990,14 @@ def format_real_screen_replay_instructions(
 ) -> str:
     """Build the miner-facing instructions for the real screen-replay task.
 
-    Explains the physical capture: display a seed image on a real device
-    screen, photograph it TWICE with a different physical camera — once as a
-    centered face-dominant close-up (minimal angular distortion), once as a
-    wider environment shot of the whole screen/device — and submit both
-    together as one screen_replay submission, with a filled-out
-    ScreenReplayUAV report attached.
+    Explains the physical capture: display a seed (or a synthetically edited
+    seed / seed-video) on a real device screen, capture it with a different
+    physical camera as a face close-up (photo or video) plus an environment
+    still, and submit both together as one screen_replay submission with a
+    filled-out ScreenReplayUAV report (including capture_variant).
+
+    Four capture_variant tracks let miners diversify even with one screen
+    and one camera — see SCREEN_REPLAY_CAPTURE_VARIANTS.
 
     Two modes, controlled by which image the seed comes from:
       - Validator-provided (seed_filename set, VALIDATOR_SENDS_SEED_IMAGE=True
@@ -967,7 +1030,7 @@ def format_real_screen_replay_instructions(
 
     if seed_filename:
         seed_line = f"Today's seed image (from the validator): {seed_filename}"
-        display_instruction = f"Display the provided seed image on a real device ({device_list})."
+        display_base = f"Start from the provided seed image"
     elif seed_pool:
         pool_list = "\n".join(f"    - {name}" for name in seed_pool)
         seed_line = (
@@ -977,10 +1040,16 @@ def format_real_screen_replay_instructions(
             "no download needed) and use it as your seed for this capture:\n"
             f"{pool_list}"
         )
-        display_instruction = f"Display your randomly-chosen pool image on a real device ({device_list})."
+        display_base = "Start from your randomly-chosen pool image"
     else:
         seed_line = "No seed image is currently configured for this task."
-        display_instruction = f"Display your seed image on a real device ({device_list})."
+        display_base = "Start from your seed image"
+
+    variant_lines = []
+    for i, (key, info) in enumerate(SCREEN_REPLAY_CAPTURE_VARIANTS.items(), 1):
+        media = info["primary_media"]
+        variant_lines.append(f"  {i}. {key}  [{media}] — {info['label']}")
+        variant_lines.append(f"     {info['summary']}")
 
     template_block = build_screen_replay_uav_template(seed_filename, seed_pool)
 
@@ -996,32 +1065,33 @@ def format_real_screen_replay_instructions(
         "",
         "Send as MANY real captures as you like — there's no daily limit.",
         "The only rule: NEVER submit a duplicate. Every submission must be a",
-        "fresh, genuinely new capture — resubmitting the same photo(s) again",
+        "fresh, genuinely new capture — resubmitting the same media again",
         "will be detected and your score WILL be penalised.",
         "",
-        "Each submission needs TWO photos of the SAME capture, not just one —",
-        "this is basic proof it's a real physical photo and not a single",
-        "static image reused twice:",
-        "  • Photo 1 (FACE CLOSE-UP): face dominant + centered, as little",
-        "    angular/perspective distortion as possible (near head-on).",
-        "  • Photo 2 (ENVIRONMENT): whole screen/device in its surroundings;",
-        "    angular distortion / keystone / glare are OK.",
+        "Capture variety — pick ONE capture_variant per submission:",
+        *variant_lines,
+        "",
+        "Every variant still needs TWO files of the SAME physical capture:",
+        "  • Primary (FACE CLOSE-UP): photo for variants 1–3, or video for",
+        "    synthetic_video_expression — face dominant + centered, minimize",
+        "    angular distortion on stills.",
+        "  • Secondary (ENVIRONMENT): always a still photo of the whole",
+        "    screen/device in its surroundings; distortion is OK.",
         "",
         "Quick steps:",
-        f"  1. {display_instruction}",
-        "  2. Photograph it TWICE with a DIFFERENT physical camera (no",
-        "     screenshots) — same on-screen capture, not two unrelated photos:",
-        "       (a) FACE CLOSE-UP — face centered and dominant, minimize",
-        "           angular distortion; keep a bit of screen/bezel context.",
-        "       (b) ENVIRONMENT — step back / reframe to show the whole",
-        "           screen and nearby surroundings; distortion is fine; face",
-        "           on screen should still be visible.",
-        "  3. Upload both as variation_type=\"screen_replay\": photo 1 (face",
-        "     close-up) in s3_key/image_hash/signature, photo 2 (environment)",
-        "     in s3_key_angle2/image_hash_angle2/signature_angle2.",
+        f"  1. {display_base}. Depending on capture_variant, either display it",
+        "     as-is or first synthesize eyes-closed / smiling / smile-or-blink",
+        f"     video, then display that result on a real device ({device_list}).",
+        "  2. Capture with a DIFFERENT physical camera (no screenshots):",
+        "       (a) FACE CLOSE-UP — photo or video per variant above.",
+        "       (b) ENVIRONMENT — still photo of whole screen + surroundings.",
+        "  3. Upload as variation_type=\"screen_replay\": primary in",
+        "     s3_key/image_hash/signature, environment in s3_key_angle2/",
+        "     image_hash_angle2/signature_angle2.",
         "  4. Fill in the template below ONCE (it describes the capture as a",
-        "     whole) and attach it as screen_replay_uav — including the exact",
-        "     seed_image filename you used.",
+        "     whole) and attach it as screen_replay_uav — including",
+        "     capture_variant (and video_expression when applicable) plus the",
+        "     exact seed_image filename you used.",
         "",
         template_block,
         "",
