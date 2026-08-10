@@ -5,17 +5,21 @@ pair into inbox/. See README.md in this folder for the full walkthrough.
 
 Photo / video roles (important):
   1. FACE CLOSE-UP — face on screen dominant and centered, minimal angular
-     distortion (near head-on). Still photo for variants 1–3, or a short
-     video for synthetic_video_expression.
+     distortion (near head-on). Still photo for the 2 photo variants, or a
+     short video for the 3 video variants.
   2. ENVIRONMENT — always a still photo of the whole screen/device in its
      surroundings; angular distortion, keystone, glare, etc. are fine.
 
 Capture variants (pick one per submission — see --variant):
-  1. device_camera — seed as-is; vary screen and/or camera when you can
-  2. synthetic_eyes_closed — synthesize eyes-closed seed, then real capture
-  3. synthetic_smiling — synthesize smiling seed, then real capture
-  4. synthetic_video_expression — synthesize smile/blink seed video, then
-     real screen-replay VIDEO + environment still
+  Photo (2):
+    1. device_camera — seed as-is; vary screen and/or camera when you can
+    2. synthetic_eyes_closed — synthesize eyes-closed seed, then real capture
+  Video (3):
+    3. synthetic_video_blinking — synthesize blink seed video, then real video
+    4. synthetic_video_smiling — synthesize smile seed video, then real video
+    5. synthetic_video_smile_and_blink — synthesize smile+blink seed video,
+       then real video
+  (Every variant also needs an environment still.)
 
 There's no limit on how many times you can run this — submit as many
 different real captures as you want, whenever you have them ready. The only
@@ -28,14 +32,14 @@ Usage:
 
     # Photo variant, non-interactive:
     python MIID/miner/real_image_miner_guide/submit_real_photo.py \
-        --variant synthetic_smiling \
+        --variant synthetic_eyes_closed \
         --face closeup.jpg --env wide.jpg \
         --camera "iPhone 15 Pro" --device phone \
         --moire --glare
 
     # Video variant:
     python MIID/miner/real_image_miner_guide/submit_real_photo.py \
-        --variant synthetic_video_expression --video-expression blinking \
+        --variant synthetic_video_blinking \
         --face replay.mp4 --env wide.jpg \
         --camera "iPhone 15 Pro" --device laptop
 
@@ -64,11 +68,15 @@ DEVICE_TYPES = ["phone", "tablet", "laptop", "monitor", "tv"]
 CAPTURE_VARIANTS = [
     "device_camera",
     "synthetic_eyes_closed",
-    "synthetic_smiling",
-    "synthetic_video_expression",
+    "synthetic_video_blinking",
+    "synthetic_video_smiling",
+    "synthetic_video_smile_and_blink",
 ]
-VIDEO_EXPRESSIONS = ["smiling", "blinking"]
-VIDEO_VARIANT = "synthetic_video_expression"
+VIDEO_VARIANTS = frozenset({
+    "synthetic_video_blinking",
+    "synthetic_video_smiling",
+    "synthetic_video_smile_and_blink",
+})
 
 IMAGE_EXTENSIONS = {".png", ".jpg", ".jpeg", ".webp", ".bmp"}
 VIDEO_EXTENSIONS = {".mp4", ".mov", ".webm", ".m4v"}
@@ -98,12 +106,17 @@ VARIANT_HELP = {
     "synthetic_eyes_closed": (
         "Synthesize an eyes-closed seed (keep identity), display it, then real-capture."
     ),
-    "synthetic_smiling": (
-        "Synthesize a smiling seed (keep identity), display it, then real-capture."
-    ),
-    "synthetic_video_expression": (
-        "Synthesize a smile/blink seed video, play it on screen, record a real "
+    "synthetic_video_blinking": (
+        "Synthesize a blink seed video, play it on screen, record a real "
         "screen-replay VIDEO + environment still."
+    ),
+    "synthetic_video_smiling": (
+        "Synthesize a smile seed video, play it on screen, record a real "
+        "screen-replay VIDEO + environment still."
+    ),
+    "synthetic_video_smile_and_blink": (
+        "Synthesize a smile-while-blinking seed video, play it on screen, "
+        "record a real screen-replay VIDEO + environment still."
     ),
 }
 
@@ -209,7 +222,7 @@ def find_inbox_pair(variant: str) -> tuple[Path, Path]:
     """Find the primary + environment files for this variant, or exit."""
     images, videos = _list_inbox_media()
 
-    if variant == VIDEO_VARIANT:
+    if variant in VIDEO_VARIANTS:
         if len(videos) != 1 or len(images) != 1:
             _log(
                 "ERROR",
@@ -228,7 +241,7 @@ def find_inbox_pair(variant: str) -> tuple[Path, Path]:
         _log(
             "ERROR",
             f"Found video file(s) in inbox/ but variant '{variant}' expects two still "
-            "photos. Use --variant synthetic_video_expression for video, or remove "
+            "photos. Use a synthetic_video_* variant for video, or remove "
             "the video from inbox/.",
         )
         sys.exit(1)
@@ -397,21 +410,6 @@ def prompt_capture_variant(value: str | None) -> str:
         print(f"  Please enter 1-{len(CAPTURE_VARIANTS)}, or one of: {', '.join(CAPTURE_VARIANTS)}")
 
 
-def prompt_video_expression(value: str | None) -> str:
-    if value and value in VIDEO_EXPRESSIONS:
-        return value
-    if value:
-        _log("ERROR", f"Unknown --video-expression '{value}'. Choose: {', '.join(VIDEO_EXPRESSIONS)}")
-        sys.exit(1)
-    while True:
-        entered = input(
-            f"Video seed expression ({'/'.join(VIDEO_EXPRESSIONS)}): "
-        ).strip().lower()
-        if entered in VIDEO_EXPRESSIONS:
-            return entered
-        print(f"  Please enter one of: {', '.join(VIDEO_EXPRESSIONS)}")
-
-
 def list_pool_images() -> list[str]:
     """List filenames in the shared fixed_image/ pool (sandbox seed images)."""
     if not FIXED_IMAGE_POOL_DIR.exists():
@@ -482,12 +480,6 @@ def main() -> int:
         help="Capture variety track for this submission",
     )
     parser.add_argument(
-        "--video-expression",
-        choices=VIDEO_EXPRESSIONS,
-        dest="video_expression",
-        help="Required for synthetic_video_expression: smiling or blinking",
-    )
-    parser.add_argument(
         "--seed-image",
         help="Filename of the fixed_image/ pool image you randomly picked and photographed",
     )
@@ -512,18 +504,7 @@ def main() -> int:
     capture_variant = prompt_capture_variant(args.variant)
     _log("OK", f"Capture variant: {capture_variant} — {VARIANT_HELP[capture_variant]}")
 
-    video_expression = None
-    if capture_variant == VIDEO_VARIANT:
-        video_expression = prompt_video_expression(args.video_expression)
-        _log("OK", f"Video expression: {video_expression}")
-    elif args.video_expression:
-        _log(
-            "ERROR",
-            "--video-expression is only valid with --variant synthetic_video_expression",
-        )
-        sys.exit(1)
-
-    primary_is_video = capture_variant == VIDEO_VARIANT
+    primary_is_video = capture_variant in VIDEO_VARIANTS
     media_a, media_b = find_inbox_pair(capture_variant)
     photo_path, photo_path_2 = assign_photo_roles(
         media_a,
@@ -600,7 +581,6 @@ def main() -> int:
         "camera_used": camera_used,
         "device_photographed": device_photographed,
         "capture_variant": capture_variant,
-        "video_expression": video_expression,
         "primary_media": "video" if primary_is_video else "photo",
         "moire_pixel_grid": moire,
         "screen_glare_hotspots": glare,

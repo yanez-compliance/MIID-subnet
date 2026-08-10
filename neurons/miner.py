@@ -484,9 +484,16 @@ class Miner(BaseMinerNeuron):
             return None
 
         capture_variant = (data.get("capture_variant") or "device_camera").strip()
-        video_expression = data.get("video_expression") or None
         primary_media = (data.get("primary_media") or "photo").strip().lower()
-        if capture_variant == "synthetic_video_expression":
+        # Prefer capture_variant over stale primary_media if they disagree.
+        video_variants = {
+            "synthetic_video_blinking",
+            "synthetic_video_smiling",
+            "synthetic_video_smile_and_blink",
+            # Legacy single-video track (pre-split); treat as video if still queued.
+            "synthetic_video_expression",
+        }
+        if capture_variant in video_variants:
             primary_media = "video"
         primary_is_video = primary_media == "video"
 
@@ -588,7 +595,6 @@ class Miner(BaseMinerNeuron):
                 camera_used=data.get("camera_used", ""),
                 device_photographed=data.get("device_photographed", "phone"),
                 capture_variant=capture_variant,
-                video_expression=video_expression if primary_is_video else None,
                 moire_pixel_grid=bool(data.get("moire_pixel_grid", False)),
                 screen_glare_hotspots=bool(data.get("screen_glare_hotspots", False)),
                 perspective_keystone_distortion=bool(data.get("perspective_keystone_distortion", False)),
@@ -609,7 +615,6 @@ class Miner(BaseMinerNeuron):
                     "camera_used": "",
                     "device_photographed": "",
                     "capture_variant": "",
-                    "video_expression": None,
                     "primary_media": "photo",
                     "moire_pixel_grid": False,
                     "screen_glare_hotspots": False,

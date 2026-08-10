@@ -12,14 +12,16 @@ hard rule is: **never submit a duplicate**.
 
 ## Capture variants (pick one per submission)
 
-Even with **one screen and one camera**, you can diversify submissions:
+Even with **one screen and one camera**, you can diversify submissions.
+**Five options total: 2 photo + 3 video.**
 
 | `#` | `capture_variant` | What you do | Primary media |
 |---|---|---|---|
 | 1 | `device_camera` | Display the seed as-is. Vary screen and/or camera when you have more than one. | Photo |
 | 2 | `synthetic_eyes_closed` | Synthesize an **eyes-closed** version of the seed (keep identity), display *that*, then real-capture. | Photo |
-| 3 | `synthetic_smiling` | Synthesize a **smiling** version of the seed, display *that*, then real-capture. | Photo |
-| 4 | `synthetic_video_expression` | Synthesize a short seed **video** (smiling or blinking), play it on screen, record a real screen-replay **video**, plus environment still. | Video |
+| 3 | `synthetic_video_blinking` | Synthesize a short seed **video of blinking**, play it on screen, record a real screen-replay **video**, plus environment still. | Video |
+| 4 | `synthetic_video_smiling` | Synthesize a short seed **video of smiling**, play it on screen, record a real screen-replay **video**, plus environment still. | Video |
+| 5 | `synthetic_video_smile_and_blink` | Synthesize a short seed **video of smiling while blinking**, play it on screen, record a real screen-replay **video**, plus environment still. | Video |
 
 Every variant still needs an **environment still photo** of the whole
 screen/device in its surroundings (distortion OK) so the capture can be
@@ -28,14 +30,14 @@ corroborated as physical.
 ## TL;DR
 
 1. Pick ONE image at random from `MIID/validator/fixed_image/`.
-2. Choose a `capture_variant` (table above). For variants 2–4, synthesize the
+2. Choose a `capture_variant` (table above). For variants 2–5, synthesize the
    edited seed / seed-video first, then display it on a real screen.
 3. Capture with a **different** physical camera (no screenshots):
    - **Primary — FACE CLOSE-UP:** face dominant + centered, minimal angular
-     distortion (photo for 1–3, video for 4).
+     distortion (photo for 1–2, video for 3–5).
    - **Secondary — ENVIRONMENT:** wider still of the whole device/scene.
-4. Drop both files into `inbox/` — exactly 2 images for variants 1–3, or
-   **1 video + 1 image** for variant 4. iPhone HEIC is auto-converted.
+4. Drop both files into `inbox/` — exactly 2 images for variants 1–2, or
+   **1 video + 1 image** for variants 3–5. iPhone HEIC is auto-converted.
 5. Run:
    ```bash
    python MIID/miner/real_image_miner_guide/submit_real_photo.py
@@ -46,7 +48,7 @@ corroborated as physical.
 ## How it works under the hood
 
 - `submit_real_photo.py` stages the media and writes `screen_replay.json`
-  with `"ready": true` (including `capture_variant` / `video_expression`).
+  with `"ready": true` (including `capture_variant`).
 - `neurons/miner.py` encrypts both files, uploads to S3, attaches
   `ScreenReplayUAV`, then resets `ready` to false.
 - Extra submissions while one is pending go into `queue/` automatically.
@@ -58,8 +60,7 @@ corroborated as physical.
 | `ready` | `true` when queued for the miner; flipped to `false` after submit. |
 | `photo_path` | Staged **FACE CLOSE-UP** (photo or video). |
 | `photo_path_2` | Staged **ENVIRONMENT** still. |
-| `capture_variant` | One of the four variety tracks above. |
-| `video_expression` | `smiling` / `blinking` when variant is `synthetic_video_expression`, else `null`. |
+| `capture_variant` | One of the five variety tracks above. |
 | `primary_media` | `photo` or `video`. |
 | `seed_image` | Pool / daily seed filename you started from. |
 | `date` | Capture date `YYYY-MM-DD` (UTC). |
@@ -70,8 +71,9 @@ corroborated as physical.
 ## Rules / good to know
 
 - **No daily limit.** Never submit a duplicate.
-- The **screen capture** must be real. Seed edits (eyes closed / smile / video)
-  may be synthetic; the photograph/video of the screen must not be.
+- The **screen capture** must be real. Seed edits (eyes closed / blink /
+  smile / smile-and-blink video) may be synthetic; the photograph/video of
+  the screen must not be.
 - Environment shot is **always** a still photo.
 - Skipping this entirely is fine.
 
@@ -80,7 +82,7 @@ corroborated as physical.
 ```bash
 # Photo variant
 python MIID/miner/real_image_miner_guide/submit_real_photo.py \
-  --variant synthetic_smiling \
+  --variant synthetic_eyes_closed \
   --face closeup.jpg --env wide.jpg \
   --seed-image 034633750981_f_doc.png \
   --camera "iPhone 15 Pro" --device phone \
@@ -88,7 +90,7 @@ python MIID/miner/real_image_miner_guide/submit_real_photo.py \
 
 # Video variant
 python MIID/miner/real_image_miner_guide/submit_real_photo.py \
-  --variant synthetic_video_expression --video-expression blinking \
+  --variant synthetic_video_blinking \
   --face replay.mp4 --env wide.jpg \
   --seed-image 034633750981_f_doc.png \
   --camera "iPhone 15 Pro" --device laptop
@@ -96,8 +98,7 @@ python MIID/miner/real_image_miner_guide/submit_real_photo.py \
 
 | Flag | Meaning |
 |---|---|
-| `--variant` | `device_camera` / `synthetic_eyes_closed` / `synthetic_smiling` / `synthetic_video_expression` |
-| `--video-expression` | `smiling` or `blinking` (video variant only) |
+| `--variant` | `device_camera` / `synthetic_eyes_closed` / `synthetic_video_blinking` / `synthetic_video_smiling` / `synthetic_video_smile_and_blink` |
 | `--face` / `--env` | Inbox filenames for primary + environment |
 | `--seed-image` | Pool / seed filename |
 | `--camera` / `--device` / `--date` | Capture metadata |
