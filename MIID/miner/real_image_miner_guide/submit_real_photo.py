@@ -5,21 +5,21 @@ pair into inbox/. See README.md in this folder for the full walkthrough.
 
 Photo / video roles (important):
   1. FACE CLOSE-UP — face on screen dominant and centered, minimal angular
-     distortion (near head-on). Still photo for the 2 photo variants, or a
+     distortion (near head-on). Still photo for the 3 photo variants, or a
      short video for the 3 video variants.
   2. ENVIRONMENT — always a still photo of the whole screen/device in its
      surroundings; angular distortion, keystone, glare, etc. are fine.
 
-Capture variants (pick one per submission — see --variant):
-  Photo (2):
-    1. device_camera — seed as-is; vary screen and/or camera when you can
-    2. synthetic_eyes_closed — synthesize eyes-closed seed, then real capture
-  Video (3):
-    3. synthetic_video_blinking — synthesize blink seed video, then real video
-    4. synthetic_video_smiling — synthesize smile seed video, then real video
-    5. synthetic_video_smile_and_blink — synthesize smile+blink seed video,
-       then real video
-  (Every variant also needs an environment still.)
+Capture variants (pick one — see --variant):
+  Photo:
+    1. seed_unchanged — seed as-is
+    2. seed_smiling — seed edited to smile
+    3. seed_eyes_closed — seed edited to eyes closed
+  Video:
+    4. seed_video_blinking — blink seed-video
+    5. seed_video_smiling — smile seed-video
+    6. seed_video_smile_and_blink — smile + blink seed-video
+  (Every variant also needs an environment still. Device/camera are asked separately.)
 
 There's no limit on how many times you can run this — submit as many
 different real captures as you want, whenever you have them ready. The only
@@ -32,14 +32,14 @@ Usage:
 
     # Photo variant, non-interactive:
     python MIID/miner/real_image_miner_guide/submit_real_photo.py \
-        --variant synthetic_eyes_closed \
+        --variant seed_smiling \
         --face closeup.jpg --env wide.jpg \
         --camera "iPhone 15 Pro" --device phone \
         --moire --glare
 
     # Video variant:
     python MIID/miner/real_image_miner_guide/submit_real_photo.py \
-        --variant synthetic_video_blinking \
+        --variant seed_video_blinking \
         --face replay.mp4 --env wide.jpg \
         --camera "iPhone 15 Pro" --device laptop
 
@@ -66,16 +66,17 @@ import json  # noqa: E402
 # Must match constants in MIID/validator/image_variations.py
 DEVICE_TYPES = ["phone", "tablet", "laptop", "monitor", "tv"]
 CAPTURE_VARIANTS = [
-    "device_camera",
-    "synthetic_eyes_closed",
-    "synthetic_video_blinking",
-    "synthetic_video_smiling",
-    "synthetic_video_smile_and_blink",
+    "seed_unchanged",
+    "seed_smiling",
+    "seed_eyes_closed",
+    "seed_video_blinking",
+    "seed_video_smiling",
+    "seed_video_smile_and_blink",
 ]
 VIDEO_VARIANTS = frozenset({
-    "synthetic_video_blinking",
-    "synthetic_video_smiling",
-    "synthetic_video_smile_and_blink",
+    "seed_video_blinking",
+    "seed_video_smiling",
+    "seed_video_smile_and_blink",
 })
 
 IMAGE_EXTENSIONS = {".png", ".jpg", ".jpeg", ".webp", ".bmp"}
@@ -100,24 +101,12 @@ QUEUE_DIR = HERE / "queue"
 FIXED_IMAGE_POOL_DIR = PROJECT_ROOT / "MIID" / "validator" / "fixed_image"
 
 VARIANT_HELP = {
-    "device_camera": (
-        "Photograph the seed as-is. Vary display device and/or camera when you can."
-    ),
-    "synthetic_eyes_closed": (
-        "Synthesize an eyes-closed seed (keep identity), display it, then real-capture."
-    ),
-    "synthetic_video_blinking": (
-        "Synthesize a blink seed video, play it on screen, record a real "
-        "screen-replay VIDEO + environment still."
-    ),
-    "synthetic_video_smiling": (
-        "Synthesize a smile seed video, play it on screen, record a real "
-        "screen-replay VIDEO + environment still."
-    ),
-    "synthetic_video_smile_and_blink": (
-        "Synthesize a smile-while-blinking seed video, play it on screen, "
-        "record a real screen-replay VIDEO + environment still."
-    ),
+    "seed_unchanged": "Seed as-is (no edit)",
+    "seed_smiling": "Seed smiling (still)",
+    "seed_eyes_closed": "Seed eyes closed (still)",
+    "seed_video_blinking": "Seed blink video",
+    "seed_video_smiling": "Seed smile video",
+    "seed_video_smile_and_blink": "Seed smile + blink video",
 }
 
 
@@ -241,7 +230,7 @@ def find_inbox_pair(variant: str) -> tuple[Path, Path]:
         _log(
             "ERROR",
             f"Found video file(s) in inbox/ but variant '{variant}' expects two still "
-            "photos. Use a synthetic_video_* variant for video, or remove "
+            "photos. Use a seed_video_* variant for video, or remove "
             "the video from inbox/.",
         )
         sys.exit(1)

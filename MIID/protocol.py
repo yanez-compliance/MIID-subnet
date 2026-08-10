@@ -59,9 +59,9 @@ class ImageRequest(BaseModel):
     as basic proof it's a real physical capture: (1) a face-dominant,
     centered, low-distortion close-up of the screen (photo for the 2 photo
     variants, or video for the 3 video variants), and (2) a wider environment
-    still of the whole device/scene. Miners pick a capture_variant to
-    diversify (device/camera, synthetic eyes-closed still, or synthetic
-    blink / smile / smile-and-blink seed-video).
+    still of the whole device/scene. Miners pick a capture_variant for how
+    the seed was prepared (unchanged, smiling, eyes closed, or blink / smile /
+    smile+blink seed-video). Device and camera are reported separately.
     """
     base_image: str           # Base64 encoded image
     image_filename: str       # Original filename for reference
@@ -112,11 +112,10 @@ class ScreenReplayUAV(BaseModel):
     device_photographed: str   # Device the seed was displayed on (phone/tablet/laptop/monitor/tv)
 
     # Which variety track this submission uses (see SCREEN_REPLAY_CAPTURE_VARIANTS).
-    # Defaults to device_camera for older submissions that omit the field.
-    # Five options: 2 photo (device_camera, synthetic_eyes_closed) + 3 video
-    # (synthetic_video_blinking, synthetic_video_smiling,
-    # synthetic_video_smile_and_blink).
-    capture_variant: str = "device_camera"
+    # Defaults to seed_unchanged for older submissions that omit the field.
+    # Six options: 3 photo (seed_unchanged, seed_smiling, seed_eyes_closed) +
+    # 3 video (seed_video_blinking, seed_video_smiling, seed_video_smile_and_blink).
+    capture_variant: str = "seed_unchanged"
 
     # Cue checklist — one bool per cue key in SCREEN_REPLAY_VISUAL_CUES
     moire_pixel_grid: bool               # Interference pattern from screen subpixels
@@ -144,9 +143,9 @@ class S3Submission(BaseModel):
     TWO media files of the same real capture as basic proof it's an actual
     physical capture and not a single static file replayed twice:
       - Primary fields (s3_key/image_hash/signature): FACE CLOSE-UP —
-        photo (device_camera / synthetic_eyes_closed) or video
-        (synthetic_video_blinking / synthetic_video_smiling /
-        synthetic_video_smile_and_blink); face dominant and centered,
+        photo (seed_unchanged / seed_smiling / seed_eyes_closed) or video
+        (seed_video_blinking / seed_video_smiling /
+        seed_video_smile_and_blink); face dominant and centered,
         minimal angular/perspective distortion for stills.
       - *_angle2 fields: ENVIRONMENT SHOT — still photo of the whole
         screen/device in its surroundings; angular distortion is fine.

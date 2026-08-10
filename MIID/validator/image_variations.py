@@ -738,60 +738,54 @@ def get_variation_by_index(index: int) -> Dict[str, str]:
 # Device types — uniform random selection, no weights
 SCREEN_REPLAY_DEVICE_TYPES = ["phone", "tablet", "laptop", "monitor", "tv"]
 
-# Capture-variety tracks miners can use to diversify real screen-replay
-# submissions even with only one physical screen + one camera. Each
-# submission still needs a face close-up (photo or video) + an environment
-# still photo of the same physical capture.
+# Capture-variety tracks: how the seed was prepared before the real screen
+# capture. Device/camera used are reported separately (camera_used /
+# device_photographed). Each submission still needs a face close-up
+# (photo or video) + an environment still of the same physical capture.
 #
-# Five options total: 2 photo tracks + 3 video tracks.
+# Six options: 3 photo + 3 video.
 SCREEN_REPLAY_CAPTURE_VARIANTS: Dict[str, Dict[str, str]] = {
-    "device_camera": {
-        "label": "Device / camera variety",
+    "seed_unchanged": {
+        "label": "Seed unchanged",
         "primary_media": "photo",
-        "summary": (
-            "Photograph the seed (as-is) on a real screen. Vary the display "
-            "device and/or the camera you shoot with when you have more than one."
-        ),
+        "summary": "Display the seed as-is, then photograph it.",
     },
-    "synthetic_eyes_closed": {
-        "label": "Synthetic seed — eyes closed",
+    "seed_smiling": {
+        "label": "Seed smiling",
         "primary_media": "photo",
-        "summary": (
-            "Synthetically generate a version of the seed with eyes closed "
-            "(keep identity), display THAT image on a real screen, then take "
-            "a real face close-up + environment photo of the screen."
-        ),
+        "summary": "Edit seed to smile, display it, then photograph it.",
     },
-    "synthetic_video_blinking": {
-        "label": "Synthetic seed video — blinking",
+    "seed_eyes_closed": {
+        "label": "Seed eyes closed",
+        "primary_media": "photo",
+        "summary": "Edit seed to eyes-closed, display it, then photograph it.",
+    },
+    "seed_video_blinking": {
+        "label": "Seed video — blink",
         "primary_media": "video",
-        "summary": (
-            "Synthetically generate a short video of the seed face blinking "
-            "(keep identity), play THAT video on a real screen, then record a "
-            "real screen-replay VIDEO (face close-up) plus a still ENVIRONMENT "
-            "photo of the whole device/scene."
-        ),
+        "summary": "Make a blink seed-video, play it, record a real screen video.",
     },
-    "synthetic_video_smiling": {
-        "label": "Synthetic seed video — smiling",
+    "seed_video_smiling": {
+        "label": "Seed video — smile",
         "primary_media": "video",
-        "summary": (
-            "Synthetically generate a short video of the seed face smiling "
-            "(keep identity), play THAT video on a real screen, then record a "
-            "real screen-replay VIDEO (face close-up) plus a still ENVIRONMENT "
-            "photo of the whole device/scene."
-        ),
+        "summary": "Make a smile seed-video, play it, record a real screen video.",
     },
-    "synthetic_video_smile_and_blink": {
-        "label": "Synthetic seed video — smiling while blinking",
+    "seed_video_smile_and_blink": {
+        "label": "Seed video — smile + blink",
         "primary_media": "video",
-        "summary": (
-            "Synthetically generate a short video of the seed face smiling "
-            "while blinking (keep identity), play THAT video on a real screen, "
-            "then record a real screen-replay VIDEO (face close-up) plus a "
-            "still ENVIRONMENT photo of the whole device/scene."
-        ),
+        "summary": "Make a smile-and-blink seed-video, play it, record a real screen video.",
     },
+}
+
+# Older capture_variant names → current keys (queued submissions / old docs).
+SCREEN_REPLAY_CAPTURE_VARIANT_ALIASES: Dict[str, str] = {
+    "device_camera": "seed_unchanged",
+    "synthetic_eyes_closed": "seed_eyes_closed",
+    "synthetic_smiling": "seed_smiling",
+    "synthetic_video_blinking": "seed_video_blinking",
+    "synthetic_video_smiling": "seed_video_smiling",
+    "synthetic_video_smile_and_blink": "seed_video_smile_and_blink",
+    "synthetic_video_expression": "seed_video_smiling",  # legacy combined track
 }
 
 # Video capture_variant keys (primary media is a screen-replay video).
@@ -802,9 +796,15 @@ SCREEN_REPLAY_VIDEO_VARIANTS = frozenset(
 )
 
 
+def normalize_capture_variant(capture_variant: Optional[str]) -> str:
+    """Map omitted/legacy capture_variant names to a current key."""
+    raw = (capture_variant or "").strip() or "seed_unchanged"
+    return SCREEN_REPLAY_CAPTURE_VARIANT_ALIASES.get(raw, raw)
+
+
 def is_screen_replay_video_variant(capture_variant: str) -> bool:
     """True when this capture_variant's primary media is a video."""
-    return capture_variant in SCREEN_REPLAY_VIDEO_VARIANTS
+    return normalize_capture_variant(capture_variant) in SCREEN_REPLAY_VIDEO_VARIANTS
 
 # Visual cues that must visibly appear in a screen-replay image (≥2 required)
 SCREEN_REPLAY_VISUAL_CUES: Dict[str, str] = {
@@ -875,7 +875,7 @@ def validate_screen_replay_uav(uav: Any) -> bool:
     Mirrors validate_variation_request() but for the UAV metadata attached to
     the screen_replay S3Submission: checks that free-text fields are present,
     device_photographed is a recognized device, capture_variant is one of the
-    five variety tracks (2 photo + 3 video), and every cue key defined in
+    six variety tracks (3 photo + 3 video), and every cue key defined in
     SCREEN_REPLAY_VISUAL_CUES was reported as a bool (miners always report all
     five cues, regardless of how many are actually visible).
 
@@ -903,8 +903,8 @@ def validate_screen_replay_uav(uav: Any) -> bool:
     if _get("device_photographed") not in SCREEN_REPLAY_DEVICE_TYPES:
         return False
 
-    # Older submissions may omit capture_variant — treat as device_camera.
-    capture_variant = _get("capture_variant") or "device_camera"
+    # Older submissions may omit capture_variant or use a legacy name.
+    capture_variant = normalize_capture_variant(_get("capture_variant"))
     if capture_variant not in SCREEN_REPLAY_CAPTURE_VARIANTS:
         return False
 
@@ -921,19 +921,15 @@ def validate_screen_replay_uav(uav: Any) -> bool:
 
 REAL_SCREEN_REPLAY_REQUIREMENTS = (
     "The PHOTOGRAPH / VIDEO of the screen must be REAL (physical camera, no "
-    "screenshots). Do not submit a fully AI-generated fake of the room/device. "
-    "You MAY synthetically edit the seed itself first (eyes-closed still, or a "
-    "short blink / smile / smile-and-blink video) for some capture variants — "
-    "then display that edited seed on a real screen and capture it with a real "
-    "camera. "
+    "screenshots). You MAY edit the seed first (smile, eyes closed, or a short "
+    "blink / smile / smile+blink video), then display it and capture with a "
+    "real camera. Device and camera are reported separately. "
     "Each submission needs TWO files of the SAME physical capture: "
-    "(1) FACE CLOSE-UP — photo for the 2 photo variants, or video for the 3 "
-    "video variants; face on screen is dominant and centered, with as little "
-    "angular/perspective distortion as possible for stills; keep a little "
-    "screen/bezel context. "
-    "(2) ENVIRONMENT SHOT — always a still photo of the whole screen/device "
-    "in its physical surroundings. Angular distortion, keystone, glare, and "
-    "moiré are fine here; the face should still be visible on the screen."
+    "(1) FACE CLOSE-UP — photo for the 3 still variants, or video for the 3 "
+    "video variants; face dominant and centered, minimal angular distortion "
+    "on stills. "
+    "(2) ENVIRONMENT SHOT — always a still of the whole screen/device in its "
+    "surroundings (distortion OK)."
 )
 
 
@@ -985,7 +981,7 @@ def build_screen_replay_uav_template(
         f'date:                     "{today_utc}"          # UTC capture date YYYY-MM-DD',
         'camera_used:              "YOUR_CAMERA_OR_PHONE"  # e.g. "iPhone 15 Pro"',
         f'device_photographed:      "phone"               # one of: {device_options}',
-        f'capture_variant:          "device_camera"       # one of: {variant_options}',
+        f'capture_variant:          "seed_unchanged"      # one of: {variant_options}',
         "#",
         "# Mark each cue true if clearly visible in your capture, false otherwise.",
         "# Report honestly — graders will verify. Real captures may show 0–5 cues.",
@@ -1012,8 +1008,8 @@ def format_real_screen_replay_instructions(
     still, and submit both together as one screen_replay submission with a
     filled-out ScreenReplayUAV report (including capture_variant).
 
-    Five capture_variant tracks (2 photo + 3 video) let miners diversify even
-    with one screen and one camera — see SCREEN_REPLAY_CAPTURE_VARIANTS.
+    Six capture_variant tracks (3 photo + 3 video) — see
+    SCREEN_REPLAY_CAPTURE_VARIANTS. Device/camera are separate UAV fields.
 
     Two modes, controlled by which image the seed comes from:
       - Validator-provided (seed_filename set, VALIDATOR_SENDS_SEED_IMAGE=True
@@ -1088,27 +1084,22 @@ def format_real_screen_replay_instructions(
         *variant_lines,
         "",
         "Every variant still needs TWO files of the SAME physical capture:",
-        "  • Primary (FACE CLOSE-UP): photo for device_camera /",
-        "    synthetic_eyes_closed; video for the three synthetic_video_*",
-        "    variants — face dominant + centered, minimize angular",
-        "    distortion on stills.",
-        "  • Secondary (ENVIRONMENT): always a still photo of the whole",
-        "    screen/device in its surroundings; distortion is OK.",
+        "  • Primary (FACE CLOSE-UP): photo for seed_unchanged / seed_smiling /",
+        "    seed_eyes_closed; video for the three seed_video_* variants.",
+        "  • Secondary (ENVIRONMENT): always a still of the whole device/scene.",
         "",
         "Quick steps:",
-        f"  1. {display_base}. Depending on capture_variant, either display it",
-        "     as-is or first synthesize eyes-closed / blink video / smile",
-        "     video / smile-and-blink video, then display that result on a",
-        f"     real device ({device_list}).",
+        f"  1. {display_base}. Optionally edit it (smile / eyes closed / blink",
+        "     video / smile video / smile+blink video), then display on a real",
+        f"     device ({device_list}).",
         "  2. Capture with a DIFFERENT physical camera (no screenshots):",
         "       (a) FACE CLOSE-UP — photo or video per variant above.",
         "       (b) ENVIRONMENT — still photo of whole screen + surroundings.",
         "  3. Upload as variation_type=\"screen_replay\": primary in",
         "     s3_key/image_hash/signature, environment in s3_key_angle2/",
         "     image_hash_angle2/signature_angle2.",
-        "  4. Fill in the template below ONCE (it describes the capture as a",
-        "     whole) and attach it as screen_replay_uav — including",
-        "     capture_variant plus the exact seed_image filename you used.",
+        "  4. Fill in the template below ONCE and attach as screen_replay_uav",
+        "     — including capture_variant and seed_image filename.",
         "",
         template_block,
         "",

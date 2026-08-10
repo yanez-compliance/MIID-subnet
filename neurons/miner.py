@@ -483,14 +483,17 @@ class Miner(BaseMinerNeuron):
             )
             return None
 
-        capture_variant = (data.get("capture_variant") or "device_camera").strip()
+        capture_variant = (data.get("capture_variant") or "seed_unchanged").strip()
         primary_media = (data.get("primary_media") or "photo").strip().lower()
         # Prefer capture_variant over stale primary_media if they disagree.
+        # Include legacy names so already-queued captures still upload as video.
         video_variants = {
+            "seed_video_blinking",
+            "seed_video_smiling",
+            "seed_video_smile_and_blink",
             "synthetic_video_blinking",
             "synthetic_video_smiling",
             "synthetic_video_smile_and_blink",
-            # Legacy single-video track (pre-split); treat as video if still queued.
             "synthetic_video_expression",
         }
         if capture_variant in video_variants:
