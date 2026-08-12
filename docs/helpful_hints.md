@@ -1,6 +1,6 @@
-# MIID Helpful Hints
+# Yanez Helpful Hints
 
-This document provides quick reference guides and helpful hints for running MIID validators and miners. For more detailed information, please refer to the full documentation files.
+This document provides quick reference guides and helpful hints for running Yanez validators and miners. For more detailed information, please refer to the full documentation files.
 
 ## Quick Links to Documentation
 

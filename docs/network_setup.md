@@ -1,8 +1,8 @@
-# Network Setup Guide for MIID Miners
+# Network Setup Guide for Yanez Miners
 
 ## Port Requirements
 
-To ensure proper connectivity with the MIID subnet, miners need to open the following ports:
+To ensure proper connectivity with the Yanez subnet, miners need to open the following ports:
 
 ### Required Ports
 - **Port 8091**: Primary miner-to-validator communication (Default port)
@@ -88,7 +88,7 @@ If running on a cloud provider (AWS, GCP, Azure, etc.), you need to:
 #### Azure Example
 - Add inbound port rule in Network Security Group:
   - Priority: 100
-  - Name: Allow-MIID-8091
+  - Name: Allow-Yanez-8091
   - Port: 8091
   - Protocol: TCP
   - Action: Allow
@@ -153,6 +153,6 @@ If the firewall is blocking connections:
 
 If you're still experiencing issues after following these steps:
 1. Check the [Discord](https://discord.com/channels/799672011265015819/1351934165964296232) for community support
-2. Contact the YANEZ-MIID team directly 
+2. Contact the Yanez team directly 
 
 Remember: Always keep your firewall rules as restrictive as possible while still allowing necessary traffic. 

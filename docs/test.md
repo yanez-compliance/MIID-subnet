@@ -1,13 +1,13 @@
 ```
 
 ```markdown:docs/testing.md
-# Testing the MIID Subnet
+# Testing the Yanez Subnet
 
-This document describes how to run tests for the MIID subnet to verify functionality.
+This document describes how to run tests for the Yanez subnet to verify functionality.
 
 ## Unit Tests
 
-The MIID codebase includes unit tests in the `tests/` directory:
+The Yanez codebase includes unit tests in the `tests/` directory:
 
 - `test_mock.py`: Tests for the mock implementation
 - `test_template_validator.py`: Tests for the validator functionality
@@ -55,13 +55,13 @@ python -c "from neurons.miner import Miner; m = Miner(); print(m.process_variati
 ```
 
 ```markdown:docs/reward_system.md
-# MIID Reward System
+# Yanez Reward System
 
-This document explains how miners are rewarded in the MIID subnet.
+This document explains how miners are rewarded in the Yanez subnet.
 
 ## Overview
 
-Miners in the MIID subnet are rewarded based on the quality and quantity of name variations they provide. The reward system evaluates:
+Miners in the Yanez subnet are rewarded based on the quality and quantity of name variations they provide. The reward system evaluates:
 
 1. Response validity
 2. Variation quantity
@@ -114,6 +114,6 @@ To maximize rewards as a miner:
 5. Respond promptly to all validator requests
 ```
 
-These documents should provide a comprehensive guide for users of your MIID subnet. They cover setup, configuration, protocol details, testing, and the reward system.
+These documents should provide a comprehensive guide for users of your Yanez subnet. They cover setup, configuration, protocol details, testing, and the reward system.
 
 Would you like me to expand on any particular section or create any additional documentation files?
