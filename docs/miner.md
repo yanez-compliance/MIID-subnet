@@ -18,10 +18,9 @@ MIID miners receive **face image variation requests** from validators:
 
 | Date | Milestone |
 |------|-----------|
-| **Mar 16 - Apr 20, 2026** | **Phase 4 Cycle 2 Execution (current stage; reward allocation live)** |
-| Mar 16, 2026 | Phase 4 Cycle 2 sandbox ends; execution phase begins |
-| Jan 22 - Mar 2, 2026 | Phase 4 Cycle 1 Execution |
-| Jan 8 - Jan 22, 2026 | Phase 4 Cycle 1 sandbox/calibration window |
+| **Aug 1 – Aug 24, 2026** | **Phase 4 Cycle 5 Sandbox (current; calibration + stability testing). Normal KAV online flow unchanged. Burn ratio 35%.** |
+| Aug 24 – Sep 24, 2026 | Phase 4 Cycle 5 Execution goes live; reward allocation begins using validated Phase 4 Cycle 4 Face Variations reputation (alongside ongoing online flow). Burn ratio stays 35%. |
+| Sep 24 – Oct 8, 2026 | Phase 4 Cycle 6 Sandbox (calibration + stability testing). Normal KAV online flow unchanged. Burn ratio 35%. |
 
 For the full roadmap and detailed architecture, see [Yanez Identity Generation Bittensor Subnet (PDF)](Yanez%20Identity%20Generation%20Bittensor%20Subnet.pdf).
 
@@ -417,7 +416,7 @@ Each validation round:
 3. Submissions go through automated pre-checks, identity preservation checks, and manual validation
 4. Validators set weights based on image variation scores
 
-**Important:** Phase 4 Cycle 2 execution runs **Mar 16 – Apr 20, 2026**. Face-variation data submitted in Cycle 2 is collected and validated for reward distribution in the next cycle.
+**Important:** Phase 4 Cycle 5 Sandbox runs **Aug 1 – Aug 24, 2026** (KAV online flow unchanged). Cycle 5 execution goes live **Aug 24 – Sep 24, 2026**, when reward allocation begins using validated Phase 4 Cycle 4 Face Variations reputation. Cycle 6 Sandbox follows **Sep 24 – Oct 8, 2026**.
 
 ### Face Variation Scoring
 
