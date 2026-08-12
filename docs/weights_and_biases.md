@@ -1,12 +1,12 @@
-# Weights & Biases Integration for MIID Validators
+# Weights & Biases Integration for Yanez Validators
 
-This guide explains how to use the built-in Weights & Biases (W&B) integration for tracking your MIID validator metrics and performance.
+This guide explains how to use the built-in Weights & Biases (W&B) integration for tracking your Yanez validator metrics and performance.
 
 ## What is Weights & Biases?
 
-[Weights & Biases](https://wandb.ai/) is a machine learning platform that provides tools for experiment tracking and visualization. For MIID validators, W&B offers an intuitive dashboard to monitor performance metrics over time.
+[Weights & Biases](https://wandb.ai/) is a machine learning platform that provides tools for experiment tracking and visualization. For Yanez validators, W&B offers an intuitive dashboard to monitor performance metrics over time.
 
-The MIID validator automatically logs metrics to the project: [MIID-dev-test/MIID](https://wandb.ai/MIID-dev-test/MIID)
+The Yanez validator automatically logs metrics to the project: [MIID-dev-test/MIID](https://wandb.ai/MIID-dev-test/MIID)
 
 ## Setup Instructions
 
@@ -69,7 +69,7 @@ The validator code already handles all configurations for W&B, including:
 - Metrics logging
 - Data organization
 
-Simply run your validator as normal, and metrics will automatically be logged to the [MIID Subnet W&B Dashboard](https://wandb.ai/MIID-dev-test/MIID).
+Simply run your validator as normal, and metrics will automatically be logged to the [Yanez Subnet W&B Dashboard](https://wandb.ai/MIID-dev-test/MIID).
 
 ```bash
 python neurons/validator.py --netuid 54 --wallet.name your_wallet_name --wallet.hotkey your_hotkey --subtensor.network finney
@@ -77,7 +77,7 @@ python neurons/validator.py --netuid 54 --wallet.name your_wallet_name --wallet.
 
 ## Tracked Metrics
 
-The MIID validator automatically tracks the following metrics in W&B:
+The Yanez validator automatically tracks the following metrics in W&B:
 
 ### Core Metrics
 - Uptime and blocks processed
@@ -121,5 +121,5 @@ Navigate to [MIID-dev-test/MIID](https://wandb.ai/MIID-dev-test/MIID-mainnet) to
 
 If you encounter issues not covered here:
 - Check the [W&B documentation](https://docs.wandb.ai/)
-- Visit the [MIID Discord channel](https://discord.com/channels/799672011265015819/1351934165964296232)
-- Open an issue on the [MIID GitHub repository](https://github.com/yanez-compliance/MIID-subnet) 
+- Visit the [Yanez Discord channel](https://discord.com/channels/799672011265015819/1351934165964296232)
+- Open an issue on the [Yanez GitHub repository](https://github.com/yanez-compliance/MIID-subnet) 

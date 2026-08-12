@@ -1,6 +1,6 @@
-# Running MIID Miners in the Background
+# Running Yanez Miners in the Background
 
-This guide provides step-by-step instructions for running your MIID miner in the background using either tmux or pm2. This is useful for keeping your miner running even when you're not connected to the server.
+This guide provides step-by-step instructions for running your Yanez miner in the background using either tmux or pm2. This is useful for keeping your miner running even when you're not connected to the server.
 
 > **Note**: Before following this guide, make sure you have completed the full setup using the [Miner Guide](miner.md) (Steps 1-12). This includes:
 > - Cloning the repository and installing all dependencies

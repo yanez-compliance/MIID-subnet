@@ -1,6 +1,6 @@
 # Logging Setup and Management
 
-This document explains how to set up and manage logs for both MIID validators and miners. Proper logging is essential for monitoring, debugging, and maintaining your MIID nodes.
+This document explains how to set up and manage logs for both Yanez validators and miners. Proper logging is essential for monitoring, debugging, and maintaining your Yanez nodes.
 
 ## Basic Logging
 

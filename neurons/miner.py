@@ -287,6 +287,18 @@ class Miner(BaseMinerNeuron):
         except Exception:
             return False
 
+    def is_valid_video_bytes(self, video_bytes: bytes, suffix: str = "") -> bool:
+        """Lightweight check that bytes look like a short screen-replay video."""
+        if not video_bytes or len(video_bytes) < 32:
+            return False
+        head = video_bytes[:64]
+        ext = (suffix or "").lower()
+        if ext in (".mp4", ".mov", ".m4v"):
+            return b"ftyp" in head
+        if ext == ".webm":
+            return head.startswith(b"\x1a\x45\xdf\xa3")
+        return b"ftyp" in head or head.startswith(b"\x1a\x45\xdf\xa3")
+
     def process_image_request(self, synapse: IdentitySynapse) -> List[S3Submission]:
         """
         Process an image variation request end-to-end.
@@ -409,11 +421,12 @@ class Miner(BaseMinerNeuron):
 
         Reads screen_replay.json (MIID/miner/real_image_miner_guide/). Miners
         (or the helper script submit_real_photo.py in that same folder) fill
-        in TWO photo paths (two different angles of the same capture) +
-        metadata and flip "ready" to true. This runs on every validator
-        query — since the axon is always listening, this is effectively a
-        background check — so as soon as "ready" is true the next query
-        submits both photos as one screen_replay submission. After a
+        in TWO media paths (face close-up photo/video + environment still of
+        the same capture) + metadata (including capture_variant) and flip
+        "ready" to true. This runs on every validator query — since the axon
+        is always listening, this is effectively a background check — so as
+        soon as "ready" is true the next query submits both as one
+        screen_replay submission. After a
         successful upload the whole file is reset back to its blank/not-ready
         state so it won't accidentally re-submit the exact same capture again
         (that would be a duplicate). There's no limit on how many *different*
@@ -442,14 +455,16 @@ class Miner(BaseMinerNeuron):
         if not photo_path or not os.path.exists(photo_path):
             bt.logging.warning(
                 f"screen_replay.json: ready=true but photo_path is missing/invalid "
-                f"('{photo_path}'). Leaving ready=true and will retry next round."
+                f"('{photo_path}'). Expected the FACE CLOSE-UP path. "
+                f"Leaving ready=true and will retry next round."
             )
             return None
         if not photo_path_2 or not os.path.exists(photo_path_2):
             bt.logging.warning(
-                f"screen_replay.json: ready=true but photo_path_2 (second angle) is "
+                f"screen_replay.json: ready=true but photo_path_2 (environment shot) is "
                 f"missing/invalid ('{photo_path_2}'). A screen-replay submission needs "
-                f"TWO photos of the same capture. Leaving ready=true and will retry next round."
+                f"TWO files of the same capture (face close-up + environment). "
+                f"Leaving ready=true and will retry next round."
             )
             return None
 
@@ -468,18 +483,47 @@ class Miner(BaseMinerNeuron):
             )
             return None
 
+        capture_variant = (data.get("capture_variant") or "seed_unchanged").strip()
+        primary_media = (data.get("primary_media") or "photo").strip().lower()
+        # Prefer capture_variant over stale primary_media if they disagree.
+        # Include legacy names so already-queued captures still upload as video.
+        video_variants = {
+            "seed_video_blinking",
+            "seed_video_smiling",
+            "seed_video_smile_and_blink",
+            "synthetic_video_blinking",
+            "synthetic_video_smiling",
+            "synthetic_video_smile_and_blink",
+            "synthetic_video_expression",
+        }
+        if capture_variant in video_variants:
+            primary_media = "video"
+        primary_is_video = primary_media == "video"
+
         try:
             photo_bytes = open(photo_path, "rb").read()
             photo_bytes_2 = open(photo_path_2, "rb").read()
         except Exception as e:
-            bt.logging.warning(f"screen_replay.json: cannot read photo(s): {e}")
+            bt.logging.warning(f"screen_replay.json: cannot read media: {e}")
             return None
 
-        if not self.is_valid_image_bytes(photo_bytes):
-            bt.logging.warning(f"screen_replay.json: '{photo_path}' is not a valid image")
-            return None
+        if primary_is_video:
+            suffix = os.path.splitext(photo_path)[1]
+            if not self.is_valid_video_bytes(photo_bytes, suffix=suffix):
+                bt.logging.warning(
+                    f"screen_replay.json: '{photo_path}' is not a valid video "
+                    f"(variant={capture_variant})"
+                )
+                return None
+        else:
+            if not self.is_valid_image_bytes(photo_bytes):
+                bt.logging.warning(f"screen_replay.json: '{photo_path}' is not a valid image")
+                return None
+
         if not self.is_valid_image_bytes(photo_bytes_2):
-            bt.logging.warning(f"screen_replay.json: '{photo_path_2}' is not a valid image")
+            bt.logging.warning(
+                f"screen_replay.json: '{photo_path_2}' is not a valid environment image"
+            )
             return None
 
         try:
@@ -489,9 +533,9 @@ class Miner(BaseMinerNeuron):
 
             if image_hash == image_hash_2:
                 bt.logging.warning(
-                    "screen_replay.json: both photos hash identically (same file "
-                    "submitted twice) — a screen-replay submission needs two DIFFERENT "
-                    "angles. Rejecting locally; take a second, distinct photo."
+                    "screen_replay.json: both files hash identically (same file "
+                    "submitted twice) — need a FACE CLOSE-UP and a distinct "
+                    "ENVIRONMENT shot. Rejecting locally; take a second, distinct capture."
                 )
                 return None
 
@@ -513,6 +557,8 @@ class Miner(BaseMinerNeuron):
                 encrypted_data_2 = photo_bytes_2
 
             seed_name = chosen_seed_image.rsplit(".", 1)[0]
+            primary_ext = os.path.splitext(photo_path)[1] or (".mp4" if primary_is_video else ".png")
+            env_ext = os.path.splitext(photo_path_2)[1] or ".png"
 
             s3_key = upload_to_s3(
                 encrypted_data=encrypted_data,
@@ -524,9 +570,10 @@ class Miner(BaseMinerNeuron):
                 variation_type="screen_replay",
                 path_signature=path_signature,
                 seed_image_name=seed_name,
+                source_ext=primary_ext,
             )
             if not s3_key:
-                bt.logging.warning("screen_replay.json: S3 upload failed (angle 1)")
+                bt.logging.warning("screen_replay.json: S3 upload failed (face close-up)")
                 return None
 
             s3_key_2 = upload_to_s3(
@@ -539,9 +586,10 @@ class Miner(BaseMinerNeuron):
                 variation_type="screen_replay_angle2",
                 path_signature=path_signature,
                 seed_image_name=seed_name,
+                source_ext=env_ext,
             )
             if not s3_key_2:
-                bt.logging.warning("screen_replay.json: S3 upload failed (angle 2)")
+                bt.logging.warning("screen_replay.json: S3 upload failed (environment shot)")
                 return None
 
             uav = ScreenReplayUAV(
@@ -549,6 +597,7 @@ class Miner(BaseMinerNeuron):
                 date=data.get("date", ""),
                 camera_used=data.get("camera_used", ""),
                 device_photographed=data.get("device_photographed", "phone"),
+                capture_variant=capture_variant,
                 moire_pixel_grid=bool(data.get("moire_pixel_grid", False)),
                 screen_glare_hotspots=bool(data.get("screen_glare_hotspots", False)),
                 perspective_keystone_distortion=bool(data.get("perspective_keystone_distortion", False)),
@@ -568,6 +617,8 @@ class Miner(BaseMinerNeuron):
                     "date": "",
                     "camera_used": "",
                     "device_photographed": "",
+                    "capture_variant": "",
+                    "primary_media": "photo",
                     "moire_pixel_grid": False,
                     "screen_glare_hotspots": False,
                     "perspective_keystone_distortion": False,
@@ -580,7 +631,11 @@ class Miner(BaseMinerNeuron):
             # sitting untouched. Oldest first.
             self._promote_next_queued_screen_replay()
 
-            bt.logging.info(f"Screen-replay submitted (2 angles): {s3_key} + {s3_key_2}")
+            media_note = "video + environment" if primary_is_video else "face + environment"
+            bt.logging.info(
+                f"Screen-replay submitted ({media_note}, variant={capture_variant}): "
+                f"{s3_key} + {s3_key_2}"
+            )
             return S3Submission(
                 s3_key=s3_key,
                 image_hash=image_hash,

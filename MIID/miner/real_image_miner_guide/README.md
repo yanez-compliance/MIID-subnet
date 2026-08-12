@@ -1,63 +1,107 @@
 # Real Screen-Replay Photo Submission
 
-This folder is where you submit a **real, physical photograph** — not an
-AI-generated one — of a seed image displayed on a real screen. This is
-completely **optional** and is not required every round. There is **no
-daily limit** — submit as many different real captures as you want, as
-often as you like. The only hard rule is: **never submit a duplicate**
-(the same capture/photos again) — that's filtered out and penalised. It's
-also fine to skip this entirely, or only submit occasionally.
+This folder is where you submit a **real, physical capture** — photograph or
+video of a seed displayed on a real screen. Optional; **no daily limit**;
+**never submit a duplicate**.
 
-> **Sandbox mode (current):** the validator isn't sending you a seed image
-> right now. Instead, pick any ONE image yourself, at random, from
-> `MIID/validator/fixed_image/` — a small pool that ships with this repo (no
-> download needed). This lets you practice the flow before the validator
-> resumes pushing a seed image every round.
+> **Sandbox mode (current):** pick one image at random from
+> `MIID/validator/fixed_image/`.
+
+## Capture variants (pick one)
+
+How you prepared the **seed** before photographing/recording the screen.
+Device and camera are asked separately.
+
+| `#` | `capture_variant` | Meaning | Primary |
+|---|---|---|---|
+| 1 | `seed_unchanged` | Seed as-is | Photo |
+| 2 | `seed_smiling` | Seed edited to smile | Photo |
+| 3 | `seed_eyes_closed` | Seed edited to eyes closed | Photo |
+| 4 | `seed_video_blinking` | Blink seed-video on screen | Video |
+| 5 | `seed_video_smiling` | Smile seed-video on screen | Video |
+| 6 | `seed_video_smile_and_blink` | Smile + blink seed-video on screen | Video |
+
+Every variant also needs an **environment still** of the whole device/scene.
+
+## How the two files are reviewed (cross-view consistency)
+
+Manual review / automated flags check that close-up + environment are the
+**same physical capture**:
+
+- Same identity / seed face on the screen in both shots
+- Same device / bezel geometry
+- Roughly the same lighting and glare direction
+- Distinct file hashes (do not upload the same file twice)
+
+Capture both back-to-back of the same setup. Do not pair unrelated photos
+or paste a new seed into an old capture shell.
 
 ## TL;DR
 
-1. Pick ONE image at random from `MIID/validator/fixed_image/` in this repo.
-2. Take TWO photos of the SAME capture, from two different angles/positions:
-   display that image on a real screen (phone, tablet, laptop, monitor, or
-   TV) and photograph it twice with a **different** physical camera (no
-   screenshots). Two angles of one capture, not two unrelated photos.
-3. Drop both photo files into `inbox/` (this folder) — exactly 2 images.
+1. Pick a pool seed; optionally edit it per variant above.
+2. Display it on a real screen; capture with a different camera:
+   - **FACE CLOSE-UP** — photo (1–3) or video (4–6)
+   - **ENVIRONMENT** — wider still
+3. Drop into `inbox/` (2 images, or 1 video + 1 image for video variants).
 4. Run:
    ```bash
    python MIID/miner/real_image_miner_guide/submit_real_photo.py
    ```
-5. Answer the few questions it asks you (which pool image you used, camera
-   used, which device you photographed, which visual cues are visible).
-   That's it — nothing else to do. Your miner process picks it up
-   automatically and submits both photos as one submission the next time a
+5. Answer the prompts (variant, which pool image, camera, device photographed,
+   which visual cues are visible). That's it — your miner picks it up
+   automatically and submits both files as one submission the next time a
    validator queries you.
 6. Want to submit again? Pick a (possibly different) pool image, take a
-   brand-new pair of photos, and re-run the script — as many times as you
-   like, whenever you're ready. Just make sure each pair is a genuinely new
-   capture, never the same photos reused. If your previous capture hasn't
-   gone out yet, it's queued automatically (see "Submitting more than one at
-   a time" below) — nothing is ever lost or overwritten.
+   brand-new pair, and re-run the script — as many times as you like. Each
+   pair must be a genuinely new capture, never the same media reused. If a
+   previous capture hasn't gone out yet, it's queued automatically (see
+   "Submitting more than one at a time" below).
 
 You do **not** need to restart your miner. `neurons/miner.py` checks
 `screen_replay.json` on every incoming validator request, so as soon as the
-script above finishes, the very next query will submit your photo.
+script finishes, the very next query will submit your capture.
+
+## Command-line examples
+
+```bash
+python MIID/miner/real_image_miner_guide/submit_real_photo.py \
+  --variant seed_smiling \
+  --face closeup.jpg --env wide.jpg \
+  --seed-image 034633750981_f_doc.png \
+  --camera "iPhone 15 Pro" --device phone
+
+python MIID/miner/real_image_miner_guide/submit_real_photo.py \
+  --variant seed_video_blinking \
+  --face replay.mp4 --env wide.jpg \
+  --seed-image 034633750981_f_doc.png \
+  --camera "iPhone 15 Pro" --device laptop
+```
+
+| Flag | Meaning |
+|---|---|
+| `--variant` | One of the six keys above |
+| `--face` / `--env` | Inbox filenames for primary + environment |
+| `--seed-image` | Pool / seed filename |
+| `--camera` / `--device` / `--date` | Capture metadata |
+| `--moire` / `--glare` / `--keystone` / `--gamma` / `--edge-crop` | Cue checklist |
 
 ## How it works under the hood
 
-- `submit_real_photo.py` finds the two images you placed in `inbox/`, moves
-  them into `staged/` (so `inbox/` is free for next time), and rewrites
-  `screen_replay.json` with both photos' local paths + your answers, ending
-  with `"ready": true`. It does **not** upload anything to S3 itself —
+- `submit_real_photo.py` finds the face close-up + environment pair in
+  `inbox/`, moves them into `staged/` (so `inbox/` is free for next time),
+  and rewrites `screen_replay.json` with both local paths + your answers,
+  ending with `"ready": true`. It does **not** upload anything to S3 itself —
   that only happens once, below, at the real submission step.
 - Your always-running miner process (`neurons/miner.py`) checks
   `screen_replay.json` every time it handles a validator request. When it
   sees `"ready": true`, it:
-  1. Reads both photos from `photo_path` and `photo_path_2`.
+  1. Reads both files from `photo_path` (face close-up photo or video) and
+     `photo_path_2` (environment still).
   2. Encrypts each with drand timelock (same as every other submission).
-  3. Uploads both **encrypted** photos to the real S3 submissions path (the
+  3. Uploads both **encrypted** files to the real S3 submissions path (the
      only S3 uploads in this whole flow).
   4. Sends both references, as one submission, to the validator that
-     queried it.
+     queried it (including `capture_variant` and cue metadata).
   5. Resets `screen_replay.json` back to a blank, `"ready": false` state so
      it won't accidentally resubmit the same capture again. You're free to
      queue up a brand-new capture right away.
@@ -80,7 +124,7 @@ had a chance to pick up and send the previous capture (i.e. `ready` is still
    into the now-empty active slot, ready to go out on the next validator
    query.
 3. This repeats until `queue/` is empty — so you can queue up as many
-   captures back-to-back as you want (take photos, run the script, repeat)
+   captures back-to-back as you want (take captures, run the script, repeat)
    and each one will eventually be sent, in the order you submitted them.
 
 You don't need to do anything special to use this — it kicks in
@@ -93,20 +137,23 @@ look inside it.
 | Field | Meaning |
 |---|---|
 | `ready` | Set to `true` by `submit_real_photo.py` when a capture is queued. The miner flips it back to `false` after submitting. **You shouldn't normally need to edit this by hand.** |
-| `photo_path` | Absolute path to the staged photo file (angle 1). |
-| `photo_path_2` | Absolute path to the staged photo file (angle 2 — a different angle of the same capture). |
+| `photo_path` | Absolute path to the staged face close-up (photo for variants 1–3, video for 4–6). |
+| `photo_path_2` | Absolute path to the staged environment still of the same capture. |
 | `seed_image` | Filename of the `MIID/validator/fixed_image/` pool image you randomly picked and photographed (sandbox mode). |
 | `date` | Capture date, `YYYY-MM-DD` (UTC). Defaults to today. |
-| `camera_used` | The camera/phone you used to take the photos, e.g. `"iPhone 15 Pro"`. |
-| `device_photographed` | Which device displayed the seed image: one of `phone`, `tablet`, `laptop`, `monitor`, `tv`. |
+| `camera_used` | The camera/phone you used to take the capture, e.g. `"iPhone 15 Pro"`. |
+| `device_photographed` | Which device displayed the seed: one of `phone`, `tablet`, `laptop`, `monitor`, `tv`. |
+| `capture_variant` | One of the six variant keys above. |
+| `primary_media` | `photo` or `video` — set automatically from the variant. |
 | `moire_pixel_grid` | `true`/`false` — is a moiré/pixel-grid interference pattern visible? |
 | `screen_glare_hotspots` | `true`/`false` — are specular glare hotspots visible? |
 | `perspective_keystone_distortion` | `true`/`false` — is there off-angle/keystone distortion? |
 | `gamma_contrast_shift` | `true`/`false` — is there a colour/brightness shift typical of a display capture? |
 | `edge_crop_cues` | `true`/`false` — are screen borders/bezel/cropping visible? |
 
-Report the cue checklist honestly — reviewers verify it, and a real photo
-may legitimately show anywhere from 0 to 5 of these cues.
+Report the cue checklist honestly — reviewers verify it, and a real capture
+may legitimately show anywhere from 0 to 5 of these cues. Keystone / glare /
+moiré are often more obvious on the environment shot.
 
 ## Rules / good to know
 
@@ -114,38 +161,19 @@ may legitimately show anywhere from 0 to 5 of these cues.
   you like; there's no cap on how many real screen-replay submissions you
   send.
 - **Never submit a duplicate.** Every submission must be a genuinely new
-  capture. Re-running the script on the same photos, or reusing photos from
-  a previous submission, will be detected and penalised.
-- **Each submission needs exactly TWO photos** — two different angles of the
-  *same* capture, not one photo and not two unrelated photos. This is basic
-  proof it's a real physical photo, not a single static image reused twice.
-- **The face must dominate both photos.** Frame so the face on the screen is
+  capture. Re-running the script on the same media, or reusing files from a
+  previous submission, will be detected and penalised.
+- **Each submission needs exactly two files** — a face close-up (photo or
+  video, depending on variant) plus a distinct environment still of the
+  *same* physical setup. Not one file, and not two unrelated captures.
+- **The face must dominate the close-up.** Frame so the face on the screen is
   the main subject — large enough for reliable face detection and still
   matchable to the seed identity. Don't crop so tight that the screen
-  disappears, and don't pull so far back that the face is tiny.
-- It's a **real physical photo**, not a screenshot and not AI-generated. Do
-  not use FLUX or any generator for this — that defeats the purpose.
-- `inbox/` must contain exactly 2 images when you run the script — the
-  script errors out if it finds fewer or more than 2, so there's no
-  ambiguity about which pair belongs together.
+  disappears, and don't pull so far back that the face is tiny. The
+  environment shot should show the whole device/scene.
+- It's a **real physical capture**, not a screenshot and not AI-generated.
+  Do not use FLUX or any generator for this — that defeats the purpose.
+- `inbox/` must contain the right pair when you run the script: **2 images**
+  for photo variants, or **1 video + 1 image** for video variants. The
+  script errors out if the count/types don't match.
 - Skipping this entirely is fine. It's optional, not scored every round.
-
-## Command-line flags (optional, for scripting/automation)
-
-You can skip all the interactive prompts by passing flags up front:
-
-```bash
-python MIID/miner/real_image_miner_guide/submit_real_photo.py \
-  --seed-image 034633750981_f_doc.png \
-  --camera "iPhone 15 Pro" \
-  --device phone \
-  --moire --glare
-```
-
-| Flag | Meaning |
-|---|---|
-| `--seed-image TEXT` | Filename of the `fixed_image/` pool image you used |
-| `--camera TEXT` | Camera/phone used to take the photo |
-| `--device {phone,tablet,laptop,monitor,tv}` | Device the seed image was displayed on |
-| `--date YYYY-MM-DD` | Capture date (defaults to today, UTC) |
-| `--moire` / `--glare` / `--keystone` / `--gamma` / `--edge-crop` | Mark a visual cue as visible (omit if not visible) |

@@ -28,7 +28,8 @@ Implements the forward function that drives each validation round:
 3. Build an ImageRequest (5 synthetic variations: 2 background, 3 combined edits;
    plus the daily fixed seed image + instructions for the REAL screen-replay task —
    miners may send as many non-duplicate real captures as they want, each one
-   bundling 2 photos/angles of the same capture as basic proof it's real).
+   bundling a face close-up + environment shot of the same capture as basic
+   proof it's real).
 4. Send the request to miners in batches; collect S3 submission references.
 5. Grade submissions via the external grading API (KAV) using
    get_image_variation_rewards().
@@ -88,13 +89,14 @@ _pending_allocations: List[Dict] = []
 _pending_file_path: Optional[Path] = None
 
 # NOTE: Screen-replay policy is "send as many non-duplicate real captures as
-# you want" — there is no daily cap. Each submission must carry 2 photos
-# (2 angles of the same capture; see S3Submission.s3_key_angle2 in
-# MIID/protocol.py). Actual duplicate-detection (dedup by image hash across
-# a miner's submission history) is intentionally not implemented yet — not
-# needed while this task is still experimental. Miners can be advised
-# informally not to resubmit the same capture; a real check can be added
-# here later once manual review volume becomes a concern.
+# you want" — there is no daily cap. Each submission must carry 2 photos of
+# the same capture: (1) face close-up in primary fields, (2) environment
+# shot in s3_key_angle2 (see S3Submission in MIID/protocol.py). Actual
+# duplicate-detection (dedup by image hash across a miner's submission
+# history) is intentionally not implemented yet — not needed while this
+# task is still experimental. Miners can be advised informally not to
+# resubmit the same capture; a real check can be added here later once
+# manual review volume becomes a concern.
 
 # =============================================================================
 # Phase 4: Image Cycling State
@@ -272,8 +274,8 @@ async def forward(self):
         combined edits; plus the daily fixed seed image + real screen-replay
         instructions — that task is a physical capture miners may submit as
         many non-duplicate times as they want (no daily cap), each one
-        bundling 2 photos/angles of the same capture, independent of this
-        request/response cycle).
+        bundling a face close-up + environment shot of the same capture,
+        independent of this request/response cycle).
     4.  Query miners in batches; collect S3 submission references.
     5.  Compute KAV rewards via get_image_variation_rewards() (calls grading API).
     6.  Optionally combine with UAV via apply_reputation_rewards().
@@ -531,14 +533,16 @@ async def forward(self):
                         uav_dict = dict(sub.screen_replay_uav)
 
                 if sub.variation_type == "screen_replay":
-                    # Every screen_replay submission carries 2 photos (2 angles
-                    # of the same capture) — angle 2 rides on the *_angle2
-                    # fields below. Miners may send as many non-duplicate
-                    # captures as they want; there's no daily cap.
+                    # Every screen_replay submission carries 2 media files of
+                    # the same capture — face close-up photo/video (primary) +
+                    # environment still (*_angle2), with capture_variant in UAV.
+                    # Miners may send as many non-duplicate captures as they
+                    # want; there's no daily cap.
                     bt.logging.info(
                         f"Miner UID {uid} screen_replay received "
-                        f"(angle1_hash={sub.image_hash[:12]}…, "
-                        f"angle2_hash={(sub.image_hash_angle2 or 'MISSING')[:12]}…, "
+                        f"(face_hash={sub.image_hash[:12]}…, "
+                        f"env_hash={(sub.image_hash_angle2 or 'MISSING')[:12]}…, "
+                        f"variant={(uav_dict or {}).get('capture_variant', '?')}, "
                         f"uav={'present' if uav_dict else 'MISSING'})"
                     )
 

@@ -5,7 +5,7 @@
     <img src="YanezSubnetLogo.png" width="300">
 </picture>
 
-# **MIID Subnet 54 - Identity Testing Network**
+# **Yanez Subnet 54 - Identity Testing Network**
 [![Discord Chat](https://img.shields.io/discord/308323056592486420.svg)](https://discord.com/channels/799672011265015819/1351934165964296232)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) 
 [![Helpful Hints](https://img.shields.io/badge/Helpful-Hints-blue)](docs/helpful_hints.md)
@@ -16,17 +16,17 @@
 
 ---
 
-## 🔍 What is MIID?
+## 🔍 What is Yanez?
 
-**MIID** (Multimodal Inorganic Identity Dataset) is a next-generation **identity testing** and **identity data generation** subnet designed to enhance fraud detection, KYC systems, and biometric verification. Our goal is to provide **financial institutions, security systems, and AI researchers** with a robust dataset of **identity-preserving face image variations** that help identify deepfake and presentation-attack evasion techniques.
+**Yanez** is a next-generation **identity testing** and **identity data generation** subnet designed to enhance fraud detection, KYC systems, and biometric verification. Our goal is to provide **financial institutions, security systems, and AI researchers** with a robust dataset of **identity-preserving face image variations** that help identify deepfake and presentation-attack evasion techniques.
 
-By incentivizing **miners** to create high-quality face image variations, **MIID** serves as a critical tool in financial crime prevention, identity resolution, and security intelligence.
+By incentivizing **miners** to create high-quality face image variations, **Yanez** serves as a critical tool in financial crime prevention, identity resolution, and security intelligence.
 
-## 🎯 Why MIID Matters
+## 🎯 Why Yanez Matters
 
 Fraudsters use **identity manipulation techniques** to evade detection — including deepfakes, screen replays, and biometric spoofing. **Sanctioned individuals**, **high-risk entities**, and **money launderers** exploit weaknesses in KYC and IDV systems.
 
-MIID **tests and enhances these systems** by:
+Yanez **tests and enhances these systems** by:
 - ✅ **Simulating Face-Based Adversarial Scenarios** for KYC and biometric screening
 - ✅ **Evaluating Identity-Preserving Image Transformations**
 - ✅ **Providing Adversarial Face Data for Model Training**
@@ -98,7 +98,7 @@ For detailed instructions, check our **[Mining Guide](docs/miner.md)** and **[Va
 
 ---
 
-## 🔥 Why Join MIID?
+## 🔥 Why Join Yanez?
 
 ### 🔐 **Be Part of the Future of Digital Identity Security**
 - Help **banks, fintech, and law enforcement agencies** strengthen KYC and biometric fraud detection.
@@ -110,13 +110,13 @@ For detailed instructions, check our **[Mining Guide](docs/miner.md)** and **[Va
 - **Validators**: Gain influence in network security and reward distribution.
 
 ### 🌎 **Real-World Impact**
-MIID is not just another AI dataset—it's a **live, evolving system** that **challenges and improves** real-world fraud detection models. Every contribution makes financial systems **safer and more secure**.
+Yanez is not just another AI dataset—it's a **live, evolving system** that **challenges and improves** real-world fraud detection models. Every contribution makes financial systems **safer and more secure**.
 
 ---
 ## 🛣️ Roadmap
 
 ### Phase 1: Initial Launch & Name-Based Threat Scenarios (June 2025) [Read more details here](docs/Yanez%20Identity%20Generation%20Bittensor%20Subnet.pdf)
-- Deploy MIID subnet on Bittensor mainnet. 
+- Deploy Yanez subnet on Bittensor mainnet. 
 - Enable validators to test known threat scenarios against miner responses.
 - Introduce name-based execution vectors: phonetic, orthographic, and rule-based variations.
 
@@ -152,7 +152,7 @@ MIID is not just another AI dataset—it's a **live, evolving system** that **ch
 
 ## 🌍 Future Plans
 
-We are continuously improving MIID to:
+We are continuously improving Yanez to:
 - Expand **face-based adversarial data generation** for enhanced AI benchmarking.
 - Integrate **more complex biometric attack families** (document spoofing, voice, 3D avatars).
 - Improve **fraud detection AI** using multi-modal data sources.
@@ -170,4 +170,4 @@ This project is licensed under the **MIT License** - see the LICENSE file for de
 
 ---
 
-_Built with ❤️ by the YANEZ-MIID Team_
+_Built with ❤️ by the Yanez Team_

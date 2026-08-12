@@ -1,17 +1,17 @@
-# MIID Validator
+# Yanez Validator
 
-This document explains how to run a MIID validator on the Bittensor network. The MIID subnet (Subnet 54) focuses on **identity-preserving face image variations** for KYC and fraud-detection research.
+This document explains how to run a Yanez validator on the Bittensor network. The Yanez subnet (Subnet 54) focuses on **identity-preserving face image variations** for KYC and fraud-detection research.
 
 ## Overview
 
-MIID validators:
-1. Download base face images from the MIID images API (signed request)
+Yanez validators:
+1. Download base face images from the Yanez images API (signed request)
 2. Build an `ImageRequest` with **6 standard variations** (indoor/outdoor background, screen-replay, and combined edits)
 3. Query a random sample of miners in batches; miners return **S3 submission references** (encrypted until drand reveal)
 4. Wait for the **drand timelock** (~40 minutes) so submissions can be decrypted
 5. Grade submissions via the **external grading API** (KAV — image quality / identity preservation)
 6. Optionally combine KAV with **UAV** (reputation) and apply emission burn / partner allocation
-7. Update scores, set weights, and upload results to the MIID server
+7. Update scores, set weights, and upload results to the Yanez server
 
 Validators do **not** run local LLMs or generate images. Scoring is handled by the external grading API; miners do the GPU-heavy image generation.
 
@@ -20,7 +20,7 @@ Validators do **not** run local LLMs or generate images. Scoring is handled by t
 - Python 3.10 or higher
 - Git
 - A Bittensor wallet with TAO for staking
-- Reliable internet connection (MIID API, grading API, drand, Bittensor network)
+- Reliable internet connection (Yanez API, grading API, drand, Bittensor network)
 - Weights & Biases account and API key (optional; disabled by default — see [Weights & Biases Guide](weights_and_biases.md))
 - Sufficient disk for temporary results and wandb folders (minimum **20GB** free recommended)
 
@@ -42,7 +42,7 @@ Each forward pass is a long session (~**1 hour** wall clock): miner queries in b
 
 ### Option 1: Automated Setup (Recommended)
 
-1. Clone the MIID repository:
+1. Clone the Yanez repository:
 ```bash
 git clone https://github.com/yanez-compliance/MIID-subnet.git
 cd MIID-subnet
@@ -56,7 +56,7 @@ bash scripts/validator/setup.sh
 This script will:
 - Install system dependencies
 - Create a Python virtual environment (`validator_env`)
-- Install Python requirements, the MIID package, and Bittensor
+- Install Python requirements, the Yanez package, and Bittensor
 - **Not** install Ollama (validators no longer use a local LLM)
 
 3. Activate the virtual environment:
@@ -87,7 +87,7 @@ python3 -m venv validator_env
 source validator_env/bin/activate
 ```
 
-3. Install dependencies and the MIID package:
+3. Install dependencies and the Yanez package:
 ```bash
 python -m pip install -r requirements.txt
 python -m pip install -e .
@@ -99,7 +99,7 @@ python -m pip install bittensor
 - **For beginners**: Use the automated setup script (Option 1).
 - **For production**:
   - Run under systemd, supervisor, or pm2 for continuous operation
-  - Monitor uptime and outbound connectivity to the MIID / grading APIs
+  - Monitor uptime and outbound connectivity to the Yanez / grading APIs
   - Keep wallet keys backed up securely
   - Ensure outbound access to the images server, grading API, and drand endpoints
 
@@ -117,7 +117,7 @@ python neurons/validator.py --netuid 54 --wallet.name your_wallet_name --wallet.
 
 On startup the validator:
 - Loads state and (unless disabled) prepares wandb
-- Downloads fresh **base images** via a signed POST to the MIID images API into `MIID/validator/base_images/`
+- Downloads fresh **base images** via a signed POST to the Yanez images API into `MIID/validator/base_images/`
 - Resets Phase 4 cycle state (`validator_results/phase4_state.json`)
 
 For logging details see the [Logging Guide](logging.md). For wandb see the [Weights & Biases Integration Guide](weights_and_biases.md).
@@ -166,20 +166,20 @@ rm -rf ./wandb/run-*
 find ./wandb -name "run-*" -type d -mtime +7 -exec rm -rf {} \;
 ```
 
-On mainnet, local `validator_results` JSON is deleted after a successful upload to the MIID server. On testnet, results files are kept for review and upload is skipped.
+On mainnet, local `validator_results` JSON is deleted after a successful upload to the Yanez server. On testnet, results files are kept for review and upload is skipped.
 
 ## How It Works
 
 ### Startup
 
 1. Connect to the subnet metagraph and load validator state
-2. Fetch base face images from the MIID images server (`MIID_IMAGES_SERVER`, signed by the validator hotkey)
+2. Fetch base face images from the Yanez images server (`MIID_IMAGES_SERVER`, signed by the validator hotkey)
 3. Reset Phase 4 image-cycle state for a clean start
 
 ### Challenge construction (each forward pass)
 
 1. Select up to `sample_size` random miner UIDs
-2. Fetch a base face image from the MIID API
+2. Fetch a base face image from the Yanez API
 3. Build a standard **6-variation** challenge via `build_standard_challenge_variations()`:
    1. `background_edit` (indoor)
    2. `background_edit` (outdoor)
@@ -216,7 +216,7 @@ After reveal, `get_image_variation_rewards()` POSTs signed challenge + S3 submis
 ### Scoring and emissions
 
 - **KAV (10% of miner share by default):** Online image quality / compliance from the grading API
-- **UAV (90% of miner share by default):** Reputation from the MIID server snapshot returned on successful upload (when `--neuron.UAV_grading` is enabled)
+- **UAV (90% of miner share by default):** Reputation from the Yanez server snapshot returned on successful upload (when `--neuron.UAV_grading` is enabled)
 - **Burn (~30%):** Routed to burn UID when miners qualify
 - **Partner pool (~35%):** Commercial partner hotkey on mainnet when present; otherwise burned
 
@@ -235,7 +235,7 @@ Each forward pass writes a results JSON under the logging directory (`validator_
 - `metagraph_scores` — current score vector
 - `reward_allocation` — pending UAV allocation snapshots (when UAV grading is on)
 
-The payload is signed and uploaded to the MIID server (`/upload_data`). Successful uploads refresh the reputation cache for the next pass and clear pending allocations. Failed uploads keep pending allocations for retry.
+The payload is signed and uploaded to the Yanez server (`/upload_data`). Successful uploads refresh the reputation cache for the next pass and clear pending allocations. Failed uploads keep pending allocations for retry.
 
 ## Advanced Configuration
 

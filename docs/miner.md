@@ -1,10 +1,10 @@
-# MIID Miner
+# Yanez Miner
 
-This document explains how to run a MIID miner on the Bittensor network. The MIID subnet (Subnet 54) focuses on **identity-preserving face image variations** for KYC and fraud-detection research.
+This document explains how to run a Yanez miner on the Bittensor network. The Yanez subnet (Subnet 54) focuses on **identity-preserving face image variations** for KYC and fraud-detection research.
 
 ## Overview
 
-MIID miners receive **face image variation requests** from validators:
+Yanez miners receive **face image variation requests** from validators:
 
 - Receive a base face image and variation requirements
 - **Variation types (Phase 4 Cycle 2):** pose_edit, lighting_edit, expression_edit, background_edit, and **screen_replay**
@@ -18,10 +18,9 @@ MIID miners receive **face image variation requests** from validators:
 
 | Date | Milestone |
 |------|-----------|
-| **Mar 16 - Apr 20, 2026** | **Phase 4 Cycle 2 Execution (current stage; reward allocation live)** |
-| Mar 16, 2026 | Phase 4 Cycle 2 sandbox ends; execution phase begins |
-| Jan 22 - Mar 2, 2026 | Phase 4 Cycle 1 Execution |
-| Jan 8 - Jan 22, 2026 | Phase 4 Cycle 1 sandbox/calibration window |
+| **Aug 1 – Aug 24, 2026** | **Phase 4 Cycle 5 Sandbox (current; calibration + stability testing). Normal KAV online flow unchanged. Burn ratio 35%.** |
+| Aug 24 – Sep 24, 2026 | Phase 4 Cycle 5 Execution goes live; reward allocation begins using validated Phase 4 Cycle 4 Face Variations reputation (alongside ongoing online flow). Burn ratio stays 35%. |
+| Sep 24 – Oct 8, 2026 | Phase 4 Cycle 6 Sandbox (calibration + stability testing). Normal KAV online flow unchanged. Burn ratio 35%. |
 
 For the full roadmap and detailed architecture, see [Yanez Identity Generation Bittensor Subnet (PDF)](Yanez%20Identity%20Generation%20Bittensor%20Subnet.pdf).
 
@@ -96,7 +95,7 @@ You should see `Phase 4 image generation: ENABLED` in the logs. If you see `DISA
 ### First-time setup: run on testnet first
 
 For first-time setup, testnet is the safest place to validate your miner end-to-end before running on mainnet.  
-Our MIID testnet netuid is **`322`**.
+Our Yanez testnet netuid is **`322`**.
 
 ```bash
 export HF_TOKEN="hf_YOUR_TOKEN_HERE"
@@ -104,13 +103,13 @@ export FLUX_DEVICE="cuda"
 python neurons/miner.py --netuid 322 --subtensor.network test --subtensor.chain_endpoint wss://test.finney.opentensor.ai:443 --wallet.name miner_wallet --wallet.hotkey miner_hotkey --logging.debug --axon.port <YOUR_OPEN_PORT> --axon.ip 0.0.0.0 --axon.external_ip <YOUR_PUBLIC_IP> --axon.external_port <YOUR_PUBLIC_PORT>
 ```
 
-View your testnet results on [Weights & Biases (MIID subnet 322)](https://wandb.ai/MIID-dev-test/subnet322-test/table?nw=nwuseraromanhigh).
+View your testnet results on [Weights & Biases (Yanez subnet 322)](https://wandb.ai/MIID-dev-test/subnet322-test/table?nw=nwuseraromanhigh).
 
 Optional walkthrough video (different subnet, but setup flow is very similar): [YouTube guide](https://www.youtube.com/watch?v=UH_sOZSIk10&list=PLqsRtfujbWUklHVRqOAHQ7tzXYZ8OAZlR).
 
 Flag breakdown for the command above:
 
-- `--netuid 322`: selects the subnet to join; use `322` for MIID testnet.
+- `--netuid 322`: selects the subnet to join; use `322` for Yanez testnet.
 - `--subtensor.network test`: points Bittensor to the test network instead of finney/mainnet.
 - `--subtensor.chain_endpoint wss://test.finney.opentensor.ai:443`: sets the websocket RPC endpoint for chain communication.
 - `--wallet.name miner_wallet`: chooses the coldkey wallet name that holds your miner identity.
@@ -417,7 +416,7 @@ Each validation round:
 3. Submissions go through automated pre-checks, identity preservation checks, and manual validation
 4. Validators set weights based on image variation scores
 
-**Important:** Phase 4 Cycle 2 execution runs **Mar 16 – Apr 20, 2026**. Face-variation data submitted in Cycle 2 is collected and validated for reward distribution in the next cycle.
+**Important:** Phase 4 Cycle 5 Sandbox runs **Aug 1 – Aug 24, 2026** (KAV online flow unchanged). Cycle 5 execution goes live **Aug 24 – Sep 24, 2026**, when reward allocation begins using validated Phase 4 Cycle 4 Face Variations reputation. Cycle 6 Sandbox follows **Sep 24 – Oct 8, 2026**.
 
 ### Face Variation Scoring
 
