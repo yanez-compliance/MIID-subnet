@@ -23,6 +23,19 @@ Device and camera are asked separately.
 
 Every variant also needs an **environment still** of the whole device/scene.
 
+## How the two files are reviewed (cross-view consistency)
+
+Manual review / automated flags check that close-up + environment are the
+**same physical capture**:
+
+- Same identity / seed face on the screen in both shots
+- Same device / bezel geometry
+- Roughly the same lighting and glare direction
+- Distinct file hashes (do not upload the same file twice)
+
+Capture both back-to-back of the same setup. Do not pair unrelated photos
+or paste a new seed into an old capture shell.
+
 ## TL;DR
 
 1. Pick a pool seed; optionally edit it per variant above.

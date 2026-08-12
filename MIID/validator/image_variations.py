@@ -665,8 +665,12 @@ def build_standard_challenge_variations() -> List[Dict[str, Any]]:
     submission bundles two photos of the same capture as basic proof it's
     real: (1) a face-dominant, centered, low-distortion close-up of the
     screen, and (2) a wider environment shot of the whole device/scene.
-    See format_real_screen_replay_instructions() for the miner-facing task
-    text, and ScreenReplayUAV in MIID/protocol.py for the reported metadata.
+    Those two files are reviewed for cross-view consistency (same seed face
+    on screen in both views, same device/bezel geometry, consistent
+    lighting/glare direction, distinct hashes). See
+    format_real_screen_replay_instructions() for the miner-facing task
+    text (including that review checklist), and ScreenReplayUAV in
+    MIID/protocol.py for the reported metadata.
     """
     return [
         get_random_indoor_background_variation(),
@@ -929,7 +933,10 @@ REAL_SCREEN_REPLAY_REQUIREMENTS = (
     "video variants; face dominant and centered, minimal angular distortion "
     "on stills. "
     "(2) ENVIRONMENT SHOT — always a still of the whole screen/device in its "
-    "surroundings (distortion OK)."
+    "surroundings (distortion OK). "
+    "Both files are reviewed together for cross-view consistency (same seed "
+    "face on screen, same device/bezel, consistent lighting/glare, distinct "
+    "hashes) — see the review checklist in the task instructions."
 )
 
 
@@ -1026,6 +1033,11 @@ def format_real_screen_replay_instructions(
     resubmit the same photos (or the same capture) twice; duplicates are
     filtered out and penalised.
 
+    Instructions also disclose the cross-view consistency checks used in
+    manual review / automated flagging (same seed face on screen in both
+    views, same device/bezel geometry, consistent lighting/glare, distinct
+    hashes) so miners know what they will be graded on.
+
     Includes a ready-to-fill template block (see build_screen_replay_uav_template)
     so miners only need to change the values they know.
 
@@ -1087,6 +1099,20 @@ def format_real_screen_replay_instructions(
         "  • Primary (FACE CLOSE-UP): photo for seed_unchanged / seed_smiling /",
         "    seed_eyes_closed; video for the three seed_video_* variants.",
         "  • Secondary (ENVIRONMENT): always a still of the whole device/scene.",
+        "",
+        "How your two files will be reviewed (cross-view consistency):",
+        "  Manual review and automated flagging check that both files look like",
+        "  the SAME physical capture of the same screen at the same moment:",
+        "  • Same identity / seed face on the screen in the close-up AND in a",
+        "    crop of the screen from the environment shot",
+        "  • Same device / bezel geometry (same phone/tablet/laptop/monitor/tv",
+        "    shape and framing of the display)",
+        "  • Roughly the same lighting and glare direction across both shots",
+        "  • Distinct file hashes — primary and environment must be two",
+        "    different files (uploading the same file twice is rejected)",
+        "  Capture both shots back-to-back of the same setup so these checks",
+        "  pass. Do not pair unrelated photos or paste a new seed into an old",
+        "  capture shell.",
         "",
         "Quick steps:",
         f"  1. {display_base}. Optionally edit it (smile / eyes closed / blink",
