@@ -25,8 +25,10 @@ Validator Forward Module
 Implements the forward function that drives each validation round:
 1. Select random miners to query.
 2. Fetch a base face image from the MIID API.
-3. Build an ImageRequest (5 synthetic variations: 2 background, 3 combined edits;
-   plus the daily fixed seed image + instructions for the REAL screen-replay task —
+3. Build an ImageRequest with three images: the per-round face-variation
+   base, today's IOTD, and tomorrow's IOTD (both IOTDs from the API fixed
+   pool). 5 synthetic variations: 2 background, 3 combined edits; plus
+   the IOTD seeds + instructions for the REAL screen-replay task —
    miners may send as many non-duplicate real captures as they want, each one
    bundling a face close-up + environment shot of the same capture as basic
    proof it's real).
@@ -55,7 +57,7 @@ from MIID.utils.sign_message import sign_message
 from MIID.validator.base_images import fetch_image_from_api
 from MIID.validator.fixed_images import (
     ensure_daily_fixed_image,
-    load_fixed_image_base64,
+    load_seed_pair_base64,
     list_fixed_image_pool,
     VALIDATOR_SENDS_SEED_IMAGE,
 )
@@ -269,10 +271,11 @@ async def forward(self):
 
     Steps:
     1.  Select random miners.
-    2.  Fetch base face image from the MIID API.
-    3.  Build ImageRequest (5 synthetic variations: indoor bg, outdoor bg, 3
-        combined edits; plus the daily fixed seed image + real screen-replay
-        instructions — that task is a physical capture miners may submit as
+    2.  Fetch the per-round face-variation base from the MIID API.
+    3.  Build ImageRequest with three images (face-variation base + today's
+        IOTD + tomorrow's IOTD) and 5 synthetic variations: indoor bg,
+        outdoor bg, 3 combined edits; plus real screen-replay instructions
+        — that task is a physical capture miners may submit as
         many non-duplicate times as they want (no daily cap), each one
         bundling a face close-up + environment shot of the same capture,
         independent of this request/response cycle).
@@ -296,8 +299,8 @@ async def forward(self):
 
     request_start = time.time()
 
-    # Ensure daily fixed seed is present (empty dir on cold start, or new UTC day).
-    # Only needed when the validator itself is sending the seed image — see
+    # Ensure today's + tomorrow's IOTD are cached (empty dir on cold start, or new UTC day).
+    # Only needed when the validator itself is sending the seed images — see
     # VALIDATOR_SENDS_SEED_IMAGE in MIID/validator/fixed_images.py.
     if VALIDATOR_SENDS_SEED_IMAGE:
         ensure_daily_fixed_image(self.wallet)
@@ -346,26 +349,39 @@ async def forward(self):
                 # capture, not FLUX-generated.
                 selected_variations = build_standard_challenge_variations()
 
-                # Instructions for the REAL screen-replay task.
+                # Three images sent to miners:
+                #   1. base_image — per-round face for FLUX synthetics (from /image)
+                #   2. daily_seed_image — today's IOTD (from /fixed_image)
+                #   3. tomorrow_seed_image — tomorrow's IOTD (same endpoint, sent early)
                 #
-                # Sandbox mode (VALIDATOR_SENDS_SEED_IMAGE=False, current default):
-                # the validator does NOT fetch/send a seed image at all — miners
-                # instead pick one themselves at random from the static
-                # fixed_image/ pool (7 images, checked into git) so they can
-                # practice the flow. Flip VALIDATOR_SENDS_SEED_IMAGE back to True
-                # in MIID/validator/fixed_images.py to resume validator-driven
-                # daily seeds; this branch below reverts to that automatically.
-                daily_seed_filename, daily_seed_b64 = None, None
+                # Sandbox fallback (VALIDATOR_SENDS_SEED_IMAGE=False): the validator
+                # does NOT fetch/send IOTDs — miners pick one themselves from the
+                # static fixed_image/ pool. Flip VALIDATOR_SENDS_SEED_IMAGE in
+                # MIID/validator/fixed_images.py to restore that practice mode.
+                daily_seed_filename, daily_seed_b64, daily_seed_date = None, None, None
+                tomorrow_seed_filename, tomorrow_seed_b64, tomorrow_seed_date = None, None, None
+                seed_pool: List[str] = []
                 if VALIDATOR_SENDS_SEED_IMAGE:
-                    daily_seed = load_fixed_image_base64()
-                    if daily_seed is None:
+                    today_seed, tomorrow_seed = load_seed_pair_base64()
+                    if today_seed is None:
                         bt.logging.warning(
-                            "Phase 4: No daily fixed seed image available; "
+                            "Phase 4: No today's IOTD available; "
                             "screen-replay instructions will be sent without a seed image."
                         )
-                    daily_seed_filename, daily_seed_b64 = daily_seed if daily_seed else (None, None)
+                    else:
+                        daily_seed_filename, daily_seed_b64, daily_seed_date = today_seed
+                    if tomorrow_seed is None:
+                        bt.logging.warning(
+                            "Phase 4: No tomorrow's IOTD available; "
+                            "miners will only receive today's seed."
+                        )
+                    else:
+                        tomorrow_seed_filename, tomorrow_seed_b64, tomorrow_seed_date = tomorrow_seed
                     real_screen_replay_instructions = format_real_screen_replay_instructions(
-                        seed_filename=daily_seed_filename
+                        seed_filename=daily_seed_filename,
+                        tomorrow_seed_filename=tomorrow_seed_filename,
+                        seed_date=daily_seed_date,
+                        tomorrow_seed_date=tomorrow_seed_date,
                     )
                 else:
                     seed_pool = list_fixed_image_pool()
@@ -411,6 +427,10 @@ async def forward(self):
                     challenge_id=challenge_id,
                     daily_seed_image=daily_seed_b64,
                     daily_seed_filename=daily_seed_filename,
+                    daily_seed_date=daily_seed_date,
+                    tomorrow_seed_image=tomorrow_seed_b64,
+                    tomorrow_seed_filename=tomorrow_seed_filename,
+                    tomorrow_seed_date=tomorrow_seed_date,
                     real_screen_replay_instructions=real_screen_replay_instructions,
                 )
 
@@ -418,14 +438,18 @@ async def forward(self):
                 variation_summary = ", ".join(
                     f"{v['type']}({v['intensity']})" for v in selected_variations
                 )
-                seed_mode_log = (
-                    f"daily_seed={daily_seed_filename or 'unavailable'}"
-                    if VALIDATOR_SENDS_SEED_IMAGE
-                    else f"seed_pool_size={len(seed_pool)} (miner picks; sandbox mode)"
-                )
+                if VALIDATOR_SENDS_SEED_IMAGE:
+                    seed_mode_log = (
+                        f"today_iotd={daily_seed_filename or 'unavailable'}"
+                        f"({daily_seed_date or '?'}) "
+                        f"tomorrow_iotd={tomorrow_seed_filename or 'unavailable'}"
+                        f"({tomorrow_seed_date or '?'})"
+                    )
+                else:
+                    seed_mode_log = f"seed_pool_size={len(seed_pool)} (miner picks; sandbox mode)"
                 bt.logging.info(
-                    f"Phase 4: API image + random variation selection - "
-                    f"Image '{image_filename}', "
+                    f"Phase 4: three-image request - "
+                    f"face='{image_filename}', "
                     f"variations=[{variation_summary}], "
                     f"{seed_mode_log}, "
                     f"Total requested: {len(selected_variations)}, "
@@ -571,6 +595,10 @@ async def forward(self):
             "cycle": "Phase4-C4-Sandbox",
             "challenge_id": challenge_id,
             "base_image_filename": image_request.image_filename,
+            "daily_seed_filename": image_request.daily_seed_filename,
+            "daily_seed_date": image_request.daily_seed_date,
+            "tomorrow_seed_filename": image_request.tomorrow_seed_filename,
+            "tomorrow_seed_date": image_request.tomorrow_seed_date,
             "target_drand_round": image_request.target_drand_round,
             "reveal_timestamp": image_request.reveal_timestamp,
             "requested_variations": selected_variations,

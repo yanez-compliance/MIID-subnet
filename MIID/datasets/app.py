@@ -8,7 +8,7 @@ import time
 import threading
 from pathlib import Path
 from flask import Flask, request, jsonify
-from datetime import datetime, timezone
+from datetime import datetime, timezone, timedelta
 
 # Import configuration
 from MIID.datasets.config import (
@@ -48,9 +48,10 @@ ALLOWED_EXT    = ('.png', '.jpg', '.jpeg', '.gif', '.webp')
 _batch_lock    = threading.Lock()
 
 # Daily fixed seed image pool (screen-replay challenge).
-# Every validator that asks on the same UTC day must get the SAME image, so
-# this pool is selected deterministically by date (no move/consume like the
-# /image/<hotkey> batch pool above).
+# Every validator that asks on the same UTC day must get the SAME today+tomorrow
+# pair, so this pool is selected deterministically by date (no move/consume
+# like the /image/<hotkey> batch pool above). Tomorrow is sent early so miners
+# can prepare captures before UTC midnight.
 FIXED_IMAGE_POOL_DIR = Path("/home/ubuntu/YanezMIIDManage/api_image/fixed_image_pool")
 # Serve log — same role as BATCH_LOG for the random pool (written by
 # image_manage_fixed.py, appended on each /fixed_image serve).
@@ -450,9 +451,9 @@ def get_validator_image(hotkey):
     }), 200
 
 
-def _get_daily_fixed_image_path():
+def _get_daily_fixed_image_path(day_offset=0):
     """
-    Deterministically pick today's fixed seed image from FIXED_IMAGE_POOL_DIR.
+    Deterministically pick the fixed seed image for UTC today + day_offset.
 
     Selection is keyed off the UTC calendar date (proleptic Gregorian ordinal),
     not request order or hotkey, so every validator that calls this endpoint
@@ -460,19 +461,32 @@ def _get_daily_fixed_image_path():
     move-to-used bookkeeping needed. The pool naturally rotates to the next
     image once UTC midnight passes; a single-image pool stays "fixed" until
     an operator adds more images.
+
+    Args:
+        day_offset: 0 = today, 1 = tomorrow, etc.
+
+    Returns:
+        (path, seed_date) where seed_date is YYYY-MM-DD UTC, or (None, None).
     """
     if not FIXED_IMAGE_POOL_DIR.is_dir():
-        return None
+        return None, None
 
     pool = sorted(
         f for f in FIXED_IMAGE_POOL_DIR.iterdir()
         if f.is_file() and f.suffix.lower() in ALLOWED_EXT
     )
     if not pool:
-        return None
+        return None, None
 
-    day_index = datetime.now(timezone.utc).date().toordinal()
-    return pool[day_index % len(pool)]
+    utc_date = datetime.now(timezone.utc).date() + timedelta(days=day_offset)
+    return pool[utc_date.toordinal() % len(pool)], utc_date.strftime("%Y-%m-%d")
+
+
+def _encode_image_payload(path):
+    """Read an image file and return {filename, data_base64}."""
+    image_bytes = path.read_bytes()
+    b64 = base64.standard_b64encode(image_bytes).decode('ascii')
+    return {"filename": path.name, "data_base64": b64}
 
 
 def _log_fixed_image_serve(hotkey, filename, seed_date):
@@ -521,8 +535,13 @@ def _log_fixed_image_serve(hotkey, filename, seed_date):
         day_entry["serve_count"] = len(day_entry["validators"])
         day_entry["last_served_at"] = served_at
 
-        log["today_seed_date"] = seed_date
-        log["today_selected_filename"] = filename
+        utc_today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+        if seed_date == utc_today:
+            log["today_seed_date"] = seed_date
+            log["today_selected_filename"] = filename
+        else:
+            log["tomorrow_seed_date"] = seed_date
+            log["tomorrow_selected_filename"] = filename
 
         with open(FIXED_IMAGE_LOG, 'w', encoding='utf-8') as lf:
             json.dump(log, lf, indent=2)
@@ -533,14 +552,17 @@ def _log_fixed_image_serve(hotkey, filename, seed_date):
 @app.route('/fixed_image/<hotkey>', methods=['POST'])
 def get_fixed_image(hotkey):
     """
-    Return today's fixed seed image for the screen-replay challenge.
+    Return today's AND tomorrow's fixed seed images for the screen-replay challenge.
 
     Unlike /image/<hotkey>, this endpoint is NOT random and does NOT consume
-    the pool: the same UTC calendar day always resolves to the same file in
-    FIXED_IMAGE_POOL_DIR, regardless of which validator calls it or how many
-    times. Each successful serve is logged to FIXED_IMAGE_LOG so we can see
-    which validators received today's shared image.
-    Response includes "seed_date" (UTC) so callers can detect rollover.
+    the pool: the same UTC calendar day always resolves to the same pair of
+    files in FIXED_IMAGE_POOL_DIR, regardless of which validator calls it or
+    how many times. Each successful serve is logged to FIXED_IMAGE_LOG so we
+    can see which validators received today's shared images.
+
+    Response:
+      today / tomorrow: { seed_date, image: { filename, data_base64 } }
+      seed_date / image: backward-compat aliases for today's image.
     """
     if hotkey not in HOTKEY_TO_FOLDER:
         return jsonify({"error": "Unauthorized hotkey or no image folder for this validator"}), 403
@@ -566,23 +588,33 @@ def get_fixed_image(hotkey):
     os.remove(tmp_signature_filename)
 
     with _fixed_image_lock:
-        chosen = _get_daily_fixed_image_path()
-        if chosen is None:
+        today_path, today_date = _get_daily_fixed_image_path(0)
+        tomorrow_path, tomorrow_date = _get_daily_fixed_image_path(1)
+        if today_path is None or tomorrow_path is None:
             return jsonify({"error": "No fixed image pool configured or pool is empty"}), 404
 
         try:
-            image_bytes = chosen.read_bytes()
+            today_payload = _encode_image_payload(today_path)
+            tomorrow_payload = _encode_image_payload(tomorrow_path)
         except Exception as e:
             return jsonify({"error": f"Failed to read fixed image: {str(e)}"}), 500
 
-        seed_date = datetime.now(timezone.utc).strftime("%Y-%m-%d")
-        _log_fixed_image_serve(hotkey, chosen.name, seed_date)
+        _log_fixed_image_serve(hotkey, today_path.name, today_date)
+        _log_fixed_image_serve(hotkey, tomorrow_path.name, tomorrow_date)
 
-    b64 = base64.standard_b64encode(image_bytes).decode('ascii')
     return jsonify({
         "verified_by": hotkey,
-        "seed_date": seed_date,
-        "image": {"filename": chosen.name, "data_base64": b64},
+        # Backward-compat aliases = today (older validators only read these).
+        "seed_date": today_date,
+        "image": today_payload,
+        "today": {
+            "seed_date": today_date,
+            "image": today_payload,
+        },
+        "tomorrow": {
+            "seed_date": tomorrow_date,
+            "image": tomorrow_payload,
+        },
     }), 200
 
 

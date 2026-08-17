@@ -87,11 +87,9 @@ class Validator(BaseValidatorNeuron):
             if hasattr(self.config, 'wandb') and hasattr(self.config.wandb, 'project_name'):
                 bt.logging.info(f"Wandb project name: {self.config.wandb.project_name}")
 
-        # Daily fixed seed for screen-replay (fetch if empty / new UTC day).
-        # Only needed when the validator is sending the seed image itself —
+        # Daily + tomorrow IOTD for screen-replay (fetch if empty / new UTC day).
+        # Only needed when the validator is sending the seed images itself —
         # see VALIDATOR_SENDS_SEED_IMAGE in MIID/validator/fixed_images.py.
-        # Currently disabled: miners pick their own seed from the static
-        # fixed_image/ pool instead (sandbox practice mode).
         if VALIDATOR_SENDS_SEED_IMAGE:
             ensure_daily_fixed_image(self.wallet)
 

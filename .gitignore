@@ -251,3 +251,8 @@ MIID/miner/real_image_miner_guide/inbox/*
 !MIID/miner/real_image_miner_guide/inbox/.gitkeep
 MIID/miner/real_image_miner_guide/staged/*
 !MIID/miner/real_image_miner_guide/staged/.gitkeep
+MIID/miner/real_image_miner_guide/seeds/*
+!MIID/miner/real_image_miner_guide/seeds/.gitkeep
+
+# Validator IOTD cache (fetched from the API — not the git-tracked sandbox pool)
+MIID/validator/fixed_image_cache/*

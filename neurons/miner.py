@@ -41,6 +41,7 @@ import time
 import typing
 import io
 import gc
+import base64
 import bittensor as bt
 import os
 from typing import List, Optional
@@ -69,6 +70,13 @@ SCREEN_REPLAY_JSON = os.path.join(
 SCREEN_REPLAY_QUEUE_DIR = os.path.join(
     os.path.dirname(os.path.dirname(__file__)),
     "MIID", "miner", "real_image_miner_guide", "queue",
+)
+
+# Today's and tomorrow's IOTD, written each time a validator sends them so
+# miners can display the files for screen-replay captures.
+IOTD_SEEDS_DIR = os.path.join(
+    os.path.dirname(os.path.dirname(__file__)),
+    "MIID", "miner", "real_image_miner_guide", "seeds",
 )
 
 
@@ -243,11 +251,19 @@ class Miner(BaseMinerNeuron):
             return synapse
 
         req = synapse.image_request
-        seed_source = req.daily_seed_filename or "sandbox: miner picks from local fixed_image/ pool"
+        today_label = req.daily_seed_filename or "(none)"
+        if req.daily_seed_date:
+            today_label = f"{today_label} [{req.daily_seed_date} UTC]"
+        tomorrow_label = req.tomorrow_seed_filename or "(none)"
+        if req.tomorrow_seed_date:
+            tomorrow_label = f"{tomorrow_label} [{req.tomorrow_seed_date} UTC]"
         bt.logging.info(
-            f"Received: IMAGE 1='{req.image_filename}' | "
-            f"IMAGE 2 (screen-replay seed)='{seed_source}'"
+            f"Received 3 images: "
+            f"IMAGE 1 (face variations)='{req.image_filename}' | "
+            f"IMAGE 2 (today IOTD)='{today_label}' | "
+            f"IMAGE 3 (tomorrow IOTD)='{tomorrow_label}'"
         )
+        self._persist_iotd_seeds(req)
 
         bt.logging.info("Processing image variation request")
 
@@ -277,6 +293,82 @@ class Miner(BaseMinerNeuron):
         bt.logging.info(f"Request completed in {total_time:.2f}s of {timeout:.1f}s allowed.")
 
         return synapse
+
+    def _persist_iotd_seeds(self, image_request) -> None:
+        """Write today's and tomorrow's IOTD to disk for screen-replay captures.
+
+        Files land in MIID/miner/real_image_miner_guide/seeds/ as
+        today_<filename> and tomorrow_<filename>, plus a seeds.json index
+        that submit_real_photo.py reads.
+        """
+        slots = [
+            ("today", image_request.daily_seed_image, image_request.daily_seed_filename, image_request.daily_seed_date),
+            ("tomorrow", image_request.tomorrow_seed_image, image_request.tomorrow_seed_filename, image_request.tomorrow_seed_date),
+        ]
+        if not any(b64 for _, b64, _, _ in slots):
+            return
+
+        os.makedirs(IOTD_SEEDS_DIR, exist_ok=True)
+        meta = {}
+        for slot, b64, filename, seed_date in slots:
+            if not b64 or not filename:
+                continue
+            try:
+                raw = base64.b64decode(b64)
+            except Exception as e:
+                bt.logging.warning(f"Could not decode {slot} IOTD: {e}")
+                continue
+            ext = os.path.splitext(filename)[1] or ".png"
+            saved_name = f"{slot}_{filename}" if not filename.startswith(f"{slot}_") else filename
+            if os.path.splitext(saved_name)[1] == "":
+                saved_name = f"{saved_name}{ext}"
+            path = os.path.join(IOTD_SEEDS_DIR, saved_name)
+            try:
+                with open(path, "wb") as f:
+                    f.write(raw)
+            except Exception as e:
+                bt.logging.warning(f"Could not save {slot} IOTD to {path}: {e}")
+                continue
+            meta[slot] = {
+                "filename": filename,
+                "seed_date": seed_date,
+                "path": path,
+            }
+            bt.logging.info(
+                f"Saved {slot} IOTD: {filename} ({len(raw)} bytes) -> {path}"
+            )
+
+        # Drop stale files only for slots we just rewrote (don't wipe tomorrow
+        # just because this validator only sent today).
+        keep = {os.path.basename(info["path"]) for info in meta.values()}
+        written_slots = set(meta.keys())
+        try:
+            for name in os.listdir(IOTD_SEEDS_DIR):
+                if name in ("seeds.json", ".gitkeep") or name in keep:
+                    continue
+                slot_prefix = name.split("_", 1)[0]
+                if slot_prefix in written_slots:
+                    try:
+                        os.remove(os.path.join(IOTD_SEEDS_DIR, name))
+                    except Exception:
+                        pass
+        except Exception:
+            pass
+
+        meta_path = os.path.join(IOTD_SEEDS_DIR, "seeds.json")
+        existing = {}
+        if os.path.exists(meta_path):
+            try:
+                with open(meta_path, "r") as f:
+                    existing = json.load(f) or {}
+            except Exception:
+                existing = {}
+        existing.update(meta)
+        try:
+            with open(meta_path, "w") as f:
+                json.dump(existing, f, indent=2)
+        except Exception as e:
+            bt.logging.warning(f"Could not write seeds.json: {e}")
 
     def is_valid_image_bytes(self, image_bytes: bytes) -> bool:
         """Validate whether raw bytes represent a valid image."""
@@ -468,18 +560,15 @@ class Miner(BaseMinerNeuron):
             )
             return None
 
-        # Sandbox mode: the validator isn't sending a seed image, so the miner
-        # must self-report which pool image (MIID/validator/fixed_image/) they
-        # used — recorded by submit_real_photo.py as "seed_image". Falls back
-        # to the validator-provided filename if VALIDATOR_SENDS_SEED_IMAGE is
-        # ever flipped back on (see MIID/validator/fixed_images.py).
+        # Validator now sends today's and tomorrow's IOTD. Prefer the filename
+        # the miner recorded for this capture; fall back to today's IOTD.
         chosen_seed_image = (data.get("seed_image") or "").strip() or (image_request.daily_seed_filename or "")
         if not chosen_seed_image:
             bt.logging.warning(
                 "screen_replay.json: ready=true but 'seed_image' is missing — record "
-                "which fixed_image/ pool file you used (re-run submit_real_photo.py "
-                "with --seed-image or answer the prompt). Leaving ready=true and will "
-                "retry next round."
+                "which IOTD you photographed (today or tomorrow; re-run "
+                "submit_real_photo.py with --seed-image or answer the prompt). "
+                "Leaving ready=true and will retry next round."
             )
             return None
 
