@@ -49,12 +49,19 @@ class ImageRequest(BaseModel):
     The miner will generate variations, encrypt them with drand timelock,
     upload to S3, and return S3 references.
 
-    Also carries the daily fixed seed image (second image) used for the
-    REAL screen-replay task — a physical photograph, not a FLUX-generated
-    variation. Miners may submit as many real screen-replay captures as
-    they want (no daily cap), to any validator, whenever they've taken one
-    (not tied to this request/response cycle) — as long as each submission
-    is a genuinely new capture and never a duplicate of one already sent.
+    Carries three images:
+      1. base_image — per-round face used for the synthetic FLUX variations
+      2. daily_seed_image — today's image-of-the-day (screen-replay seed)
+      3. tomorrow_seed_image — tomorrow's image-of-the-day, sent early so
+         miners can prepare captures before UTC midnight
+
+    The two IOTD images come from the MIID API's fixed pool (same pair for
+    every miner/validator that UTC day). The REAL screen-replay task is a
+    physical photograph, not a FLUX-generated variation. Miners may submit
+    as many real screen-replay captures as they want (no daily cap), to any
+    validator, whenever they've taken one (not tied to this request/response
+    cycle) — as long as each submission is a genuinely new capture and never
+    a duplicate of one already sent.
     Each screen-replay submission bundles two media files of the same capture
     as basic proof it's a real physical capture: (1) a face-dominant,
     centered, low-distortion close-up of the screen (photo for the 2 photo
@@ -72,9 +79,16 @@ class ImageRequest(BaseModel):
     reveal_timestamp: int     # Unix timestamp when reveal occurs
     challenge_id: Optional[str] = None  # Unique identifier for this challenge
 
-    # Daily fixed seed for the REAL screen-replay task (same for every miner/validator that day)
-    daily_seed_image: Optional[str] = None       # Base64 encoded daily seed image
-    daily_seed_filename: Optional[str] = None    # Filename of the daily seed image
+    # Today's image-of-the-day (screen-replay seed; same for every miner/validator that UTC day)
+    daily_seed_image: Optional[str] = None       # Base64 encoded today's IOTD
+    daily_seed_filename: Optional[str] = None    # Filename of today's IOTD
+    daily_seed_date: Optional[str] = None        # UTC date YYYY-MM-DD for today's IOTD
+
+    # Tomorrow's image-of-the-day (sent early so miners can prepare overnight)
+    tomorrow_seed_image: Optional[str] = None    # Base64 encoded tomorrow's IOTD
+    tomorrow_seed_filename: Optional[str] = None # Filename of tomorrow's IOTD
+    tomorrow_seed_date: Optional[str] = None     # UTC date YYYY-MM-DD for tomorrow's IOTD
+
     real_screen_replay_instructions: Optional[str] = None  # Human-readable task instructions
 
     class Config:

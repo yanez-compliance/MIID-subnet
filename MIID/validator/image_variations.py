@@ -943,6 +943,9 @@ REAL_SCREEN_REPLAY_REQUIREMENTS = (
 def build_screen_replay_uav_template(
     seed_filename: Optional[str] = None,
     seed_pool: Optional[List[str]] = None,
+    tomorrow_seed_filename: Optional[str] = None,
+    seed_date: Optional[str] = None,
+    tomorrow_seed_date: Optional[str] = None,
 ) -> str:
     """Return a fill-in-the-blank ScreenReplayUAV template that miners copy-paste.
 
@@ -953,24 +956,29 @@ def build_screen_replay_uav_template(
     submitted for that capture share this same metadata block.
 
     Args:
-        seed_filename: Filename of the validator-provided seed image, when the
-            validator is sending one directly (VALIDATOR_SENDS_SEED_IMAGE=True
-            in MIID/validator/fixed_images.py). Pre-fills seed_image.
-        seed_pool: Sandbox mode only (VALIDATOR_SENDS_SEED_IMAGE=False) — list
-            of filenames from the shared fixed_image/ pool the miner picks
-            from themselves. Listed as a comment so the miner knows which
-            filename to type in.
+        seed_filename: Filename of today's validator-provided IOTD.
+        seed_pool: Sandbox mode only — list of filenames from the shared
+            fixed_image/ pool the miner picks from themselves.
+        tomorrow_seed_filename: Filename of tomorrow's IOTD, sent early.
+        seed_date: UTC date (YYYY-MM-DD) for today's IOTD.
+        tomorrow_seed_date: UTC date (YYYY-MM-DD) for tomorrow's IOTD.
 
     Returns:
         A multi-line string block the miner copies, fills in, and attaches to
         their S3Submission as screen_replay_uav.
     """
     import datetime as _dt
-    today_utc = _dt.datetime.now(_dt.timezone.utc).strftime("%Y-%m-%d")
+    today_utc = seed_date or _dt.datetime.now(_dt.timezone.utc).strftime("%Y-%m-%d")
     device_options = "/".join(SCREEN_REPLAY_DEVICE_TYPES)
     variant_options = "/".join(SCREEN_REPLAY_CAPTURE_VARIANTS.keys())
 
-    if seed_filename:
+    if seed_filename and tomorrow_seed_filename:
+        seed_value = seed_filename
+        seed_comment = (
+            f"TODAY ({today_utc}); or \"{tomorrow_seed_filename}\" "
+            f"for TOMORROW ({tomorrow_seed_date or 'UTC+1'})"
+        )
+    elif seed_filename:
         seed_value = seed_filename
         seed_comment = "DO NOT CHANGE — use the provided seed"
     elif seed_pool:
@@ -1006,6 +1014,9 @@ def build_screen_replay_uav_template(
 def format_real_screen_replay_instructions(
     seed_filename: Optional[str] = None,
     seed_pool: Optional[List[str]] = None,
+    tomorrow_seed_filename: Optional[str] = None,
+    seed_date: Optional[str] = None,
+    tomorrow_seed_date: Optional[str] = None,
 ) -> str:
     """Build the miner-facing instructions for the real screen-replay task.
 
@@ -1018,43 +1029,49 @@ def format_real_screen_replay_instructions(
     Six capture_variant tracks (3 photo + 3 video) — see
     SCREEN_REPLAY_CAPTURE_VARIANTS. Device/camera are separate UAV fields.
 
-    Two modes, controlled by which image the seed comes from:
-      - Validator-provided (seed_filename set, VALIDATOR_SENDS_SEED_IMAGE=True
-        in fixed_images.py): miners use the exact image the validator sent.
+    Modes, controlled by which image the seed comes from:
+      - Validator-provided IOTD (seed_filename set): miners use today's
+        image-of-the-day, and optionally tomorrow's (sent early so they can
+        prepare captures before UTC midnight).
       - Sandbox / miner-chosen (seed_pool set instead): the validator isn't
-        sending a seed image right now. Miners instead pick, at random,
-        any one of the images from the shared fixed_image/ pool that ships
-        with the codebase (currently 7 static images) and use that. This
-        lets miners practice the real-capture flow before the validator
-        resumes pushing a seed image every round.
+        sending a seed image. Miners pick one from the shared fixed_image/
+        pool that ships with the codebase.
 
     Miners may send as many of these submissions as they want — there is no
     daily cap — but every submission must be a genuinely new capture. Never
     resubmit the same photos (or the same capture) twice; duplicates are
     filtered out and penalised.
 
-    Instructions also disclose the cross-view consistency checks used in
-    manual review / automated flagging (same seed face on screen in both
-    views, same device/bezel geometry, consistent lighting/glare, distinct
-    hashes) so miners know what they will be graded on.
-
-    Includes a ready-to-fill template block (see build_screen_replay_uav_template)
-    so miners only need to change the values they know.
-
     Args:
-        seed_filename: Filename of the validator-provided seed image, if the
-            validator is currently sending one.
-        seed_pool: List of filenames in the shared fixed_image/ pool, when
-            miners are choosing their own seed image (sandbox mode).
+        seed_filename: Filename of today's validator-provided IOTD.
+        seed_pool: List of filenames in the shared fixed_image/ pool (sandbox).
+        tomorrow_seed_filename: Filename of tomorrow's IOTD, sent early.
+        seed_date: UTC date (YYYY-MM-DD) for today's IOTD.
+        tomorrow_seed_date: UTC date (YYYY-MM-DD) for tomorrow's IOTD.
 
     Returns:
         Formatted instructions string to send to miners alongside the request.
     """
     device_list = ", ".join(SCREEN_REPLAY_DEVICE_TYPES)
 
-    if seed_filename:
+    if seed_filename and tomorrow_seed_filename:
+        today_label = f"{seed_filename}" + (f" ({seed_date} UTC)" if seed_date else "")
+        tomorrow_label = (
+            f"{tomorrow_seed_filename}"
+            + (f" ({tomorrow_seed_date} UTC)" if tomorrow_seed_date else "")
+        )
+        seed_line = (
+            "Images of the day (from the validator — same pair for every miner today):\n"
+            f"  • TODAY:     {today_label}\n"
+            f"  • TOMORROW:  {tomorrow_label}\n"
+            "Photograph TODAY's seed for captures you submit now. Tomorrow's seed is\n"
+            "included so you can start capturing overnight / in advance — set\n"
+            "seed_image to whichever filename you actually displayed."
+        )
+        display_base = "Start from TODAY's seed (or tomorrow's if you are prepping ahead)"
+    elif seed_filename:
         seed_line = f"Today's seed image (from the validator): {seed_filename}"
-        display_base = f"Start from the provided seed image"
+        display_base = "Start from the provided seed image"
     elif seed_pool:
         pool_list = "\n".join(f"    - {name}" for name in seed_pool)
         seed_line = (
@@ -1075,7 +1092,13 @@ def format_real_screen_replay_instructions(
         variant_lines.append(f"  {i}. {key}  [{media}] — {info['label']}")
         variant_lines.append(f"     {info['summary']}")
 
-    template_block = build_screen_replay_uav_template(seed_filename, seed_pool)
+    template_block = build_screen_replay_uav_template(
+        seed_filename,
+        seed_pool,
+        tomorrow_seed_filename=tomorrow_seed_filename,
+        seed_date=seed_date,
+        tomorrow_seed_date=tomorrow_seed_date,
+    )
 
     lines = [
         "",

@@ -95,10 +95,11 @@ SCREEN_REPLAY_JSON = HERE / "screen_replay.json"
 # overwrites a pending submission. See queue_existing_pending_capture().
 QUEUE_DIR = HERE / "queue"
 
-# Sandbox mode: shared pool of fixed images (checked into git) that miners
-# choose from at random, since the validator isn't sending a seed image right
-# now (see VALIDATOR_SENDS_SEED_IMAGE in MIID/validator/fixed_images.py).
-FIXED_IMAGE_POOL_DIR = PROJECT_ROOT / "MIID" / "validator" / "fixed_image"
+# Validator-sent IOTD files (today + tomorrow), written by neurons/miner.py
+# whenever a validator query arrives. This is the ONLY seed source for miners —
+# they do not have (and must not use) MIID/validator/fixed_image/.
+IOTD_SEEDS_DIR = HERE / "seeds"
+IOTD_SEEDS_META = IOTD_SEEDS_DIR / "seeds.json"
 
 VARIANT_HELP = {
     "seed_unchanged": "Seed as-is (no edit)",
@@ -399,43 +400,81 @@ def prompt_capture_variant(value: str | None) -> str:
         print(f"  Please enter 1-{len(CAPTURE_VARIANTS)}, or one of: {', '.join(CAPTURE_VARIANTS)}")
 
 
-def list_pool_images() -> list[str]:
-    """List filenames in the shared fixed_image/ pool (sandbox seed images)."""
-    if not FIXED_IMAGE_POOL_DIR.exists():
+def list_iotd_seeds() -> list[dict]:
+    """Return [{slot, filename, seed_date, path}, ...] from the last validator query.
+
+    Source of truth is seeds.json written by the miner process after it
+    receives today's/tomorrow's IOTD on a validator request. Miners never
+    read MIID/validator/fixed_image/.
+    """
+    if not IOTD_SEEDS_META.exists():
         return []
-    return sorted(
-        p.name for p in FIXED_IMAGE_POOL_DIR.iterdir()
-        if p.is_file() and p.suffix.lower() in IMAGE_EXTENSIONS
-    )
+    try:
+        with open(IOTD_SEEDS_META, "r") as f:
+            data = json.load(f)
+    except Exception:
+        return []
+    seeds = []
+    for slot in ("today", "tomorrow"):
+        info = data.get(slot) or {}
+        filename = (info.get("filename") or "").strip()
+        if not filename:
+            continue
+        seeds.append({
+            "slot": slot,
+            "filename": filename,
+            "seed_date": info.get("seed_date") or "",
+            "path": info.get("path") or "",
+        })
+    return seeds
 
 
 def prompt_seed_image(value: str | None) -> str:
-    """Get which fixed_image/ pool file the miner used as their screen-replay seed."""
-    pool = list_pool_images()
+    """Get which received IOTD the miner photographed (today or tomorrow)."""
+    iotd = list_iotd_seeds()
+    known = [s["filename"] for s in iotd]
 
     if value:
-        if not pool or value in pool:
-            return value
-        print(f"  Warning: '{value}' isn't in the known pool ({FIXED_IMAGE_POOL_DIR}); using it anyway.")
+        if known and value not in known:
+            print(
+                f"  Warning: '{value}' is not one of the IOTDs your miner has "
+                f"received ({', '.join(known)}). Using it anyway."
+            )
+        elif not known:
+            print(
+                "  Warning: your miner has not saved any IOTDs yet "
+                f"(no {IOTD_SEEDS_META}). Using --seed-image as given."
+            )
         return value
 
-    if not pool:
-        entered = input(
-            "Filename of the seed image you displayed and photographed "
-            f"(couldn't list {FIXED_IMAGE_POOL_DIR}, type it manually): "
-        ).strip()
-        return entered
+    if iotd:
+        print("\nWhich image-of-the-day did you display and photograph?")
+        print("(These are the seeds your miner received from a validator.)")
+        for i, seed in enumerate(iotd, 1):
+            date_bit = f" ({seed['seed_date']} UTC)" if seed["seed_date"] else ""
+            print(f"  {i}. [{seed['slot'].upper()}] {seed['filename']}{date_bit}")
+            if seed.get("path"):
+                print(f"       file: {seed['path']}")
+        while True:
+            entered = input(f"Enter a number (1-{len(iotd)}) or the filename: ").strip()
+            if entered.isdigit() and 1 <= int(entered) <= len(iotd):
+                return iotd[int(entered) - 1]["filename"]
+            if any(s["filename"] == entered for s in iotd):
+                return entered
+            print(f"  Please enter 1-{len(iotd)}, or one of: {', '.join(s['filename'] for s in iotd)}")
 
-    print(f"\nWhich fixed_image/ pool image did you randomly pick (base seed)?")
-    for i, name in enumerate(pool, 1):
-        print(f"  {i}. {name}")
-    while True:
-        entered = input(f"Enter a number (1-{len(pool)}) or the filename: ").strip()
-        if entered.isdigit() and 1 <= int(entered) <= len(pool):
-            return pool[int(entered) - 1]
-        if entered in pool:
-            return entered
-        print(f"  Please enter a number 1-{len(pool)}, or one of: {', '.join(pool)}")
+    print(
+        "\nNo image-of-the-day has been received yet.\n"
+        "Keep your miner running until a validator queries it — that request\n"
+        "includes today's and tomorrow's seeds, which are saved to:\n"
+        f"  {IOTD_SEEDS_DIR}\n"
+        "Then display one of those files and re-run this script.\n"
+        "You can still type a filename now if you already photographed one."
+    )
+    entered = input("Filename of the seed image you displayed (or press Enter to abort): ").strip()
+    if not entered:
+        sys.exit(1)
+    return entered
 
 
 def queue_existing_pending_capture() -> None:
@@ -470,7 +509,7 @@ def main() -> int:
     )
     parser.add_argument(
         "--seed-image",
-        help="Filename of the fixed_image/ pool image you randomly picked and photographed",
+        help="Filename of the IOTD you photographed (today or tomorrow)",
     )
     parser.add_argument(
         "--face",

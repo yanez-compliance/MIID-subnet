@@ -4,8 +4,10 @@ This folder is where you submit a **real, physical capture** — photograph or
 video of a seed displayed on a real screen. Optional; **no daily limit**;
 **never submit a duplicate**.
 
-> **Sandbox mode (current):** pick one image at random from
-> `MIID/validator/fixed_image/`.
+> Validators send **today's and tomorrow's image-of-the-day** with every
+> query. Your miner saves them to `seeds/` (see `seeds.json`). Photograph
+> **today's** seed for captures you submit now; tomorrow's is sent early so
+> you can prepare overnight.
 
 ## Capture variants (pick one)
 
@@ -38,7 +40,8 @@ or paste a new seed into an old capture shell.
 
 ## TL;DR
 
-1. Pick a pool seed; optionally edit it per variant above.
+1. Display **today's IOTD** from `seeds/` (or tomorrow's if you are
+   prepping ahead). Optionally edit it per variant above.
 2. Display it on a real screen; capture with a different camera:
    - **FACE CLOSE-UP** — photo (1–3) or video (4–6)
    - **ENVIRONMENT** — wider still
@@ -47,13 +50,13 @@ or paste a new seed into an old capture shell.
    ```bash
    python MIID/miner/real_image_miner_guide/submit_real_photo.py
    ```
-5. Answer the prompts (variant, which pool image, camera, device photographed,
-   which visual cues are visible). That's it — your miner picks it up
-   automatically and submits both files as one submission the next time a
-   validator queries you.
-6. Want to submit again? Pick a (possibly different) pool image, take a
-   brand-new pair, and re-run the script — as many times as you like. Each
-   pair must be a genuinely new capture, never the same media reused. If a
+5. Answer the prompts (variant, which IOTD — today or tomorrow, camera,
+   device photographed, which visual cues are visible). That's it — your
+   miner picks it up automatically and submits both files as one
+   submission the next time a validator queries you.
+6. Want to submit again? Take a brand-new pair of today's (or tomorrow's)
+   seed and re-run the script — as many times as you like. Each pair must
+   be a genuinely new capture, never the same media reused. If a
    previous capture hasn't gone out yet, it's queued automatically (see
    "Submitting more than one at a time" below).
 
@@ -81,7 +84,7 @@ python MIID/miner/real_image_miner_guide/submit_real_photo.py \
 |---|---|
 | `--variant` | One of the six keys above |
 | `--face` / `--env` | Inbox filenames for primary + environment |
-| `--seed-image` | Pool / seed filename |
+| `--seed-image` | IOTD filename you photographed (today or tomorrow) |
 | `--camera` / `--device` / `--date` | Capture metadata |
 | `--moire` / `--glare` / `--keystone` / `--gamma` / `--edge-crop` | Cue checklist |
 
@@ -139,7 +142,7 @@ look inside it.
 | `ready` | Set to `true` by `submit_real_photo.py` when a capture is queued. The miner flips it back to `false` after submitting. **You shouldn't normally need to edit this by hand.** |
 | `photo_path` | Absolute path to the staged face close-up (photo for variants 1–3, video for 4–6). |
 | `photo_path_2` | Absolute path to the staged environment still of the same capture. |
-| `seed_image` | Filename of the `MIID/validator/fixed_image/` pool image you randomly picked and photographed (sandbox mode). |
+| `seed_image` | Filename of the IOTD you photographed (today or tomorrow; see `seeds/`). |
 | `date` | Capture date, `YYYY-MM-DD` (UTC). Defaults to today. |
 | `camera_used` | The camera/phone you used to take the capture, e.g. `"iPhone 15 Pro"`. |
 | `device_photographed` | Which device displayed the seed: one of `phone`, `tablet`, `laptop`, `monitor`, `tv`. |
