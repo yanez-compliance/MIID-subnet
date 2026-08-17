@@ -207,9 +207,8 @@ def load_image_by_index(index: int) -> Optional[Tuple[str, str, int]]:
 def fetch_image_from_api(wallet) -> Optional[Tuple[str, str]]:
     """Fetch a single image from the Flask API without saving to disk.
 
-    Uses the same signed-request pattern as the validator's
-    ``_download_base_images_from_api`` but returns one image directly
-    instead of persisting it.
+    Uses a signed POST to ``/image/<hotkey>`` and returns one image
+    in memory for the current forward pass.
 
     Args:
         wallet: Bittensor wallet used to sign the request.

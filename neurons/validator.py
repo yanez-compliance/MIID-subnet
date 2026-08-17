@@ -30,18 +30,12 @@ import time
 import traceback
 import datetime as dt
 import json
-import base64
 import wandb
 import os
 import shutil
 import copy
 from dotenv import load_dotenv
 from pathlib import Path
-try:
-    import requests
-    REQUESTS_AVAILABLE = True
-except ImportError:
-    REQUESTS_AVAILABLE = False
 
 load_dotenv(dotenv_path=os.path.join(os.getcwd(), 'vali.env'))
 
@@ -51,7 +45,6 @@ from MIID.base.validator import BaseValidatorNeuron
 from MIID.validator import forward
 from MIID.validator.forward import reset_phase4_state
 from MIID.validator.fixed_images import ensure_daily_fixed_image, VALIDATOR_SENDS_SEED_IMAGE
-from MIID.utils.sign_message import sign_message
 
 
 class Validator(BaseValidatorNeuron):
@@ -62,8 +55,6 @@ class Validator(BaseValidatorNeuron):
     and rewards miners based on image variation quality (KAV, 10%) and
     reputation (UAV, 90%).
     """
-
-    MIID_IMAGES_SERVER = os.environ.get("MIID_IMAGES_SERVER", "http://52.44.186.20:5000")
 
     def __init__(self, config=None):
         bt.logging.info("Initializing Validator")
@@ -96,9 +87,6 @@ class Validator(BaseValidatorNeuron):
             if hasattr(self.config, 'wandb') and hasattr(self.config.wandb, 'project_name'):
                 bt.logging.info(f"Wandb project name: {self.config.wandb.project_name}")
 
-        # Download base images from Flask API (signed request)
-        self._download_base_images_from_api()
-
         # Daily fixed seed for screen-replay (fetch if empty / new UTC day).
         # Only needed when the validator is sending the seed image itself —
         # see VALIDATOR_SENDS_SEED_IMAGE in MIID/validator/fixed_images.py.
@@ -114,87 +102,6 @@ class Validator(BaseValidatorNeuron):
         bt.logging.info("Finished initializing Validator")
         bt.logging.info("----------------------------------")
         time.sleep(1)
-
-    def _download_base_images_from_api(self):
-        """Download base images from Flask API using validator's hotkey (signed request).
-        
-        Calls POST /images/<hotkey> with a signed message (same pattern as forward.py upload).
-        Images are saved to MIID/validator/base_images directory.
-        This only runs during initialization.
-        """
-        if not REQUESTS_AVAILABLE:
-            bt.logging.warning("requests library not available. Skipping base images download.")
-            return
-
-        try:
-            # Get the base images directory path (relative to repo root)
-            repo_root = Path(__file__).parent.parent  # Go up from neurons/ to repo root
-            base_images_dir = repo_root / "MIID" / "validator" / "base_images"
-            base_images_dir.mkdir(parents=True, exist_ok=True)
-            bt.logging.info(f"Base images directory: {base_images_dir}")
-
-            # Clear existing images before downloading fresh ones
-            for path in base_images_dir.iterdir():
-                if path.is_file() or path.is_symlink():
-                    path.unlink()
-                elif path.is_dir():
-                    shutil.rmtree(path)
-            bt.logging.info("Cleared existing base images before API download")
-
-            hotkey = self.wallet.hotkey
-            hotkey_address = hotkey.ss58_address
-            bt.logging.info(f"Requesting base images for hotkey: {hotkey_address}")
-
-            # Sign message the same way as in forward.py for upload_data
-            message_to_sign = (
-                f"Hotkey: {hotkey} \n timestamp: {time.time()} \n request: base_images"
-            )
-            signed_contents = sign_message(self.wallet, message_to_sign, output_file=None)
-
-            base_url = self.MIID_IMAGES_SERVER.rstrip("/")
-            url = f"{base_url}/images/{hotkey_address}"
-            payload = {"signature": signed_contents}
-
-            response = requests.post(url, json=payload, timeout=30)
-            if response.status_code != 200:
-                bt.logging.warning(
-                    f"Base images API returned {response.status_code}: {response.text[:200]}"
-                )
-                bt.logging.warning("Validator will continue with existing base images in the directory")
-                return
-
-            data = response.json()
-            images = data.get("images") or []
-            if not images:
-                bt.logging.warning("No base images returned for this hotkey")
-                bt.logging.warning("Validator will continue with existing base images in the directory")
-                return
-
-            downloaded_count = 0
-            for item in images:
-                filename = item.get("filename")
-                b64 = item.get("data_base64")
-                if not filename or not b64:
-                    continue
-                try:
-                    raw = base64.standard_b64decode(b64)
-                    image_path = base_images_dir / filename
-                    image_path.write_bytes(raw)
-                    bt.logging.info(f"Downloaded base image: {filename} ({len(raw)} bytes)")
-                    downloaded_count += 1
-                except Exception as e:
-                    bt.logging.debug(f"Failed to save image {filename}: {e}")
-
-            if downloaded_count > 0:
-                bt.logging.info(f"Successfully downloaded {downloaded_count} base image(s) from API")
-            else:
-                bt.logging.warning("No images could be saved from API response")
-                bt.logging.warning("Validator will continue with existing base images in the directory")
-
-        except Exception as e:
-            bt.logging.error(f"Error downloading base images from API: {e}")
-            bt.logging.error(traceback.format_exc())
-            bt.logging.warning("Continuing with existing base images in directory")
 
     def manual_cleanup_wandb_runs(self):
         """Manually clean up all wandb run folders. Can be called anytime for maintenance."""
