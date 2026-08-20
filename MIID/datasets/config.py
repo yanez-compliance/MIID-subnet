@@ -24,7 +24,8 @@ ALLOWED_HOTKEYS: List[str] = [
     #"5F2CsUDVbRbVMXTh9fAzF9GacjVX7UapvRxidrxe7z8BYckQ", #Rizzo validator>>june 14
     #"5F4tQyWrhfGVcNhoqeiNsR6KjD4wMZ2kfhLj4oHYuyHbZAc3", #OTF validator>>> june14
     #"5CPR71gqPyvBT449xpezgZiLpxFaabXNLmnfcQdDw2t3BwqC", # 5CPR validator
-    "5C4qiYkqKjqGDSvzpf6YXCcnBgM6punh8BQJRP78bqMGsn54", #RT21 new HK
+    "5C4qiYkqKjqGDSvzpf6YXCcnBgM6punh8BQJRP78bqMGsn54", #RT21 previous HK
+    "5Dvgtk1bqLycAyyc2VFKvAqmpvoQf5oWsD4qnu6vqbdWSL54", #RT21 live HK
     #"5GduQSUxNJ4E3ReCDoPDtoHHgeoE4yHmnnLpUXBz9DAwmHWV", #Rizzo new HK
     #"5G3wMP3g3d775hauwmAZioYFVZYnvw6eY46wkFy8hEWD5KP3", #OTF new HK >>> june 23
     "5HK5tp6t2S59DywmHRWPBVJeJ86T61KjurYqeooqj8sREpeN",  # Tensora

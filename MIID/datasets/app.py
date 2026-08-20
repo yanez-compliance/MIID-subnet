@@ -40,10 +40,10 @@ from MIID.utils.verify_message import verify_message
 # =============================================================================
 BASE_IMAGES_DIR = Path("/home/ubuntu/YanezMIIDManage/api_image/base_images")
 
-# Batch 4 image pool config
-BATCH_DIR      = Path("/home/ubuntu/YanezMIIDManage/api_image/batch_4_4-13-2026")
-USED_DIR       = Path("/home/ubuntu/YanezMIIDManage/api_image/used_batch_4_4-13-2026")
-BATCH_LOG      = Path("/home/ubuntu/YanezMIIDManage/api_image/used_batch_4_4_13_2026.json")
+# Batch 3 image pool config
+BATCH_DIR      = Path("/home/ubuntu/YanezMIIDManage/api_image/batch_3_3-27-2026")
+USED_DIR       = Path("/home/ubuntu/YanezMIIDManage/api_image/used_images_batch_3_3-27-26")
+BATCH_LOG      = Path("/home/ubuntu/YanezMIIDManage/api_image/used_batch_3_3_27_2026.json")
 ALLOWED_EXT    = ('.png', '.jpg', '.jpeg', '.gif', '.webp')
 _batch_lock    = threading.Lock()
 
@@ -60,13 +60,24 @@ _fixed_image_lock = threading.Lock()
 HOTKEY_TO_FOLDER = {
     "5DUB7kNLvvx8Dj7D8tn54N1C7Xok6GodNPQE2WECCaL9Wgpr": "miid",
     "5GWzXSra6cBM337nuUU7YTjZQ6ewT2VakDpMj8Pw2i8v8PVs": "yuma",
-    "5C4qiYkqKjqGDSvzpf6YXCcnBgM6punh8BQJRP78bqMGsn54": "rt21",
+    "5Dvgtk1bqLycAyyc2VFKvAqmpvoQf5oWsD4qnu6vqbdWSL54": "rt21",
     "5HK5tp6t2S59DywmHRWPBVJeJ86T61KjurYqeooqj8sREpeN": "tensora",
     "5HbUFHW4XVhbQvMbSy7WDjvhHb62nuYgP1XBsmmz9E2E2K6p": "otf",
     "5GQqAhLKVHRLpdTqRg1yc3xu7y47DicJykSpggE2GuDbfs54": "rizzo",
     "5CnkkjPdfsA6jJDHv2U6QuiKiivDuvQpECC13ffdmSDbkgtt": "testnet",
     "5GMqiKcdq5WtHA4XaioRD29FL2UtJ8CW1MVQtYHyFsqzrrmM": "kraken",
 }
+
+
+# =============================================================================
+# TEMPORARY: UAV rewards + decay allowlist
+# =============================================================================
+# Only this miner receives UAV rewards (via filtered rep_cache) and can have
+# rep_score decay applied when uav_contribution > 0. All other miners keep their
+# DB scores untouched (no decay) and are omitted from rep_cache so validators
+# treat them as ineligible for UAV (KAV-only).
+# Remove / set to None to restore normal behavior for all miners.
+TEMP_UAV_ONLY_HOTKEY = "5HmzMBNbEgjTxzxzbpg42hkrM5gzvPcaApD1kKP5nEq8BE63"
 
 
 # =============================================================================
@@ -80,6 +91,23 @@ CURRENT_REP_SNAPSHOT = {
     "miners": {}
 }
 _snapshot_lock = threading.Lock()
+
+
+def _filter_rep_cache_for_temp_uav(rep_cache):
+    """
+    TEMPORARY: If TEMP_UAV_ONLY_HOTKEY is set, return a rep_cache containing
+    only that miner so validators award UAV to them alone. DB scores are
+    unchanged for everyone else.
+    """
+    if not TEMP_UAV_ONLY_HOTKEY:
+        return rep_cache
+    if TEMP_UAV_ONLY_HOTKEY in rep_cache:
+        return {TEMP_UAV_ONLY_HOTKEY: rep_cache[TEMP_UAV_ONLY_HOTKEY]}
+    print(
+        f"[WARNING] TEMP_UAV_ONLY_HOTKEY={TEMP_UAV_ONLY_HOTKEY} not in snapshot; "
+        "returning empty rep_cache (no miner UAV)"
+    )
+    return {}
 
 
 def load_reputation_snapshot():
@@ -222,17 +250,30 @@ def upload_data(hotkey):
                     }]
 
                 # Count how many pending allocations each miner earned UAV in (stack decay per cycle)
+                # TEMPORARY: only TEMP_UAV_ONLY_HOTKEY is eligible for decay / UAV reward tracking
                 decay_counts = {}  # {miner_hotkey: times to apply -0.05}
                 uav_eligible_hotkeys = []
+                skipped_decay = 0
                 for allocation in allocations:
                     for allocation_miner in allocation.get("miners", []):
                         miner_hotkey = allocation_miner.get("miner_hotkey")
                         if not miner_hotkey:
                             continue
                         if allocation_miner.get("uav_contribution", 0.0) > 0.0:
+                            # Skip decay for everyone except the temporary allowlisted miner
+                            if TEMP_UAV_ONLY_HOTKEY and miner_hotkey != TEMP_UAV_ONLY_HOTKEY:
+                                skipped_decay += 1
+                                continue
                             decay_counts[miner_hotkey] = decay_counts.get(miner_hotkey, 0) + 1
                             if miner_hotkey not in uav_eligible_hotkeys:
                                 uav_eligible_hotkeys.append(miner_hotkey)
+
+                if TEMP_UAV_ONLY_HOTKEY and skipped_decay:
+                    print(
+                        f"[INFO] {hotkey} TEMP UAV allowlist: skipped decay for "
+                        f"{skipped_decay} non-allowlisted miner allocation(s); "
+                        f"only {TEMP_UAV_ONLY_HOTKEY} is eligible"
+                    )
 
                 snapshot_miners_list = current_snapshot.get("miners", [])
                 snapshot_miners_dict = {miner.get("hotkey"): miner for miner in snapshot_miners_list}
@@ -260,13 +301,20 @@ def upload_data(hotkey):
                 print(f"[ERROR] Failed to process reward_allocation: {e}")
 
     # 13) Return a success response with rep_cache
+    # TEMPORARY: filter so only TEMP_UAV_ONLY_HOTKEY gets UAV on validators
+    filtered_rep_cache = _filter_rep_cache_for_temp_uav(rep_cache)
+    if TEMP_UAV_ONLY_HOTKEY:
+        print(
+            f"[INFO] TEMP UAV allowlist active: returning rep_cache with "
+            f"{len(filtered_rep_cache)} miner(s) (of {len(rep_cache)} in snapshot)"
+        )
     return jsonify({
         "message": "Data received and verified successfully",
         "filename": final_filename,
         # Reputation cache for next forward pass (Phase 4 - Cycle 1)
         "rep_snapshot_version": snapshot_version,
         "generated_at": generated_at,
-        "rep_cache": rep_cache  # All miners: {hotkey: {rep_score, rep_tier}, ...}
+        "rep_cache": filtered_rep_cache  # TEMP: only allowlisted miner when TEMP_UAV_ONLY_HOTKEY is set
     }), 200
 
 
