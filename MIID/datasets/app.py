@@ -40,10 +40,10 @@ from MIID.utils.verify_message import verify_message
 # =============================================================================
 BASE_IMAGES_DIR = Path("/home/ubuntu/YanezMIIDManage/api_image/base_images")
 
-# Batch 4 image pool config
-BATCH_DIR      = Path("/home/ubuntu/YanezMIIDManage/api_image/batch_4_4-13-2026")
-USED_DIR       = Path("/home/ubuntu/YanezMIIDManage/api_image/used_batch_4_4-13-2026")
-BATCH_LOG      = Path("/home/ubuntu/YanezMIIDManage/api_image/used_batch_4_4_13_2026.json")
+# Batch 1 image pool config
+BATCH_DIR      = Path("/home/ubuntu/YanezMIIDManage/api_image/batch_1_8-24-2026")
+USED_DIR       = Path("/home/ubuntu/YanezMIIDManage/api_image/used_batch_1_8-24-2026")
+BATCH_LOG      = Path("/home/ubuntu/YanezMIIDManage/api_image/used_batch_1_8_24_2026.json")
 ALLOWED_EXT    = ('.png', '.jpg', '.jpeg', '.gif', '.webp')
 _batch_lock    = threading.Lock()
 
