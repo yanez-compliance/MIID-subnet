@@ -51,6 +51,7 @@ from bittensor.core.errors import NotVerifiedException
 
 # Protocol
 from MIID.protocol import IdentitySynapse, S3Submission, ScreenReplayUAV
+from MIID.utils.media_paths import ensure_viable_media_path, sanitize_media_filename
 
 # Base miner class
 from MIID.base.miner import BaseMinerNeuron
@@ -542,8 +543,18 @@ class Miner(BaseMinerNeuron):
         if not bool(data.get("ready", False)):
             return None  # nothing queued — normal, expected most rounds
 
-        photo_path = data.get("photo_path", "").strip()
-        photo_path_2 = data.get("photo_path_2", "").strip()
+        photo_path = ensure_viable_media_path(data.get("photo_path", "").strip())
+        photo_path_2 = ensure_viable_media_path(data.get("photo_path_2", "").strip())
+        if photo_path != data.get("photo_path") or photo_path_2 != data.get("photo_path_2"):
+            data["photo_path"] = photo_path
+            data["photo_path_2"] = photo_path_2
+            try:
+                with open(SCREEN_REPLAY_JSON, "w") as f:
+                    json.dump(data, f, indent=2)
+            except Exception as e:
+                bt.logging.warning(
+                    f"screen_replay.json: could not rewrite sanitized paths: {e}"
+                )
         if not photo_path or not os.path.exists(photo_path):
             bt.logging.warning(
                 f"screen_replay.json: ready=true but photo_path is missing/invalid "
@@ -645,7 +656,7 @@ class Miner(BaseMinerNeuron):
                 encrypted_data = photo_bytes
                 encrypted_data_2 = photo_bytes_2
 
-            seed_name = chosen_seed_image.rsplit(".", 1)[0]
+            seed_name = os.path.splitext(sanitize_media_filename(chosen_seed_image))[0]
             primary_ext = os.path.splitext(photo_path)[1] or (".mp4" if primary_is_video else ".png")
             env_ext = os.path.splitext(photo_path_2)[1] or ".png"
 
@@ -687,6 +698,9 @@ class Miner(BaseMinerNeuron):
                 camera_used=data.get("camera_used", ""),
                 device_photographed=data.get("device_photographed", "phone"),
                 capture_variant=capture_variant,
+                primary_media=primary_media,
+                photo_path=photo_path,
+                photo_path_2=photo_path_2,
                 moire_pixel_grid=bool(data.get("moire_pixel_grid", False)),
                 screen_glare_hotspots=bool(data.get("screen_glare_hotspots", False)),
                 perspective_keystone_distortion=bool(data.get("perspective_keystone_distortion", False)),

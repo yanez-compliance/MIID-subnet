@@ -130,6 +130,14 @@ class ScreenReplayUAV(BaseModel):
     # Six options: 3 photo (seed_unchanged, seed_smiling, seed_eyes_closed) +
     # 3 video (seed_video_blinking, seed_video_smiling, seed_video_smile_and_blink).
     capture_variant: str = "seed_unchanged"
+    primary_media: str = "photo"  # "photo" or "video" — matches screen_replay.json
+
+    # Miner-local media paths from screen_replay.json. Must be viable paths
+    # (no spaces / unicode whitespace) so they can be stored in the validator
+    # results JSON. Validators fetch the actual files from s3_key / s3_key_angle2;
+    # these fields identify the staged files the miner uploaded.
+    photo_path: str = ""
+    photo_path_2: str = ""
 
     # Cue checklist — one bool per cue key in SCREEN_REPLAY_VISUAL_CUES
     moire_pixel_grid: bool               # Interference pattern from screen subpixels

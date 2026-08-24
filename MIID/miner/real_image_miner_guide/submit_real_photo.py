@@ -62,6 +62,7 @@ if str(PROJECT_ROOT) not in sys.path:
     sys.path.insert(0, str(PROJECT_ROOT))
 
 import json  # noqa: E402
+from MIID.utils.media_paths import sanitize_media_filename  # noqa: E402
 
 # Must match constants in MIID/validator/image_variations.py
 DEVICE_TYPES = ["phone", "tablet", "laptop", "monitor", "tv"]
@@ -589,11 +590,17 @@ def main() -> int:
     gamma = prompt_bool_if_missing(args.gamma, "  Gamma / contrast shift")
     edge_crop = prompt_bool_if_missing(args.edge_crop, "  Screen edge / bezel / crop cues")
 
-    # Move (not copy) both files out of inbox/ into staged/
+    # Move (not copy) both files out of inbox/ into staged/. Filenames are
+    # sanitized (no spaces / unicode whitespace) so the paths in
+    # screen_replay.json are viable for JSON + S3.
     STAGED_DIR.mkdir(parents=True, exist_ok=True)
     primary_tag = "face_video" if primary_is_video else "face"
-    staged_name = f"{date}_{primary_tag}_{photo_path.stem}{photo_path.suffix}"
-    staged_name_2 = f"{date}_env_{photo_path_2.stem}{photo_path_2.suffix}"
+    staged_name = sanitize_media_filename(
+        f"{date}_{primary_tag}_{photo_path.stem}{photo_path.suffix}"
+    )
+    staged_name_2 = sanitize_media_filename(
+        f"{date}_env_{photo_path_2.stem}{photo_path_2.suffix}"
+    )
     staged_path = STAGED_DIR / staged_name
     staged_path_2 = STAGED_DIR / staged_name_2
     shutil.move(str(photo_path), str(staged_path))

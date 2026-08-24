@@ -140,8 +140,8 @@ look inside it.
 | Field | Meaning |
 |---|---|
 | `ready` | Set to `true` by `submit_real_photo.py` when a capture is queued. The miner flips it back to `false` after submitting. **You shouldn't normally need to edit this by hand.** |
-| `photo_path` | Absolute path to the staged face close-up (photo for variants 1–3, video for 4–6). |
-| `photo_path_2` | Absolute path to the staged environment still of the same capture. |
+| `photo_path` | Absolute path to the staged face close-up (photo for variants 1–3, video for 4–6). **No spaces** — the submit script sanitizes the filename. |
+| `photo_path_2` | Absolute path to the staged environment still of the same capture. **No spaces.** |
 | `seed_image` | Filename of the IOTD you photographed (today or tomorrow; see `seeds/`). |
 | `date` | Capture date, `YYYY-MM-DD` (UTC). Defaults to today. |
 | `camera_used` | The camera/phone you used to take the capture, e.g. `"iPhone 15 Pro"`. |

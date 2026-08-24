@@ -6,6 +6,8 @@
 import random
 from typing import List, Dict, Any, Optional
 
+from MIID.utils.media_paths import path_has_whitespace
+
 
 # =============================================================================
 # Shared image requirement text (attached to every variation request)
@@ -950,6 +952,15 @@ def validate_screen_replay_uav(uav: Any) -> bool:
         if not isinstance(_get(cue_key), bool):
             return False
 
+    # photo_path / photo_path_2 are optional on older submissions. When present
+    # they must be viable paths (no whitespace) so they can live in the results JSON.
+    for path_field in ("photo_path", "photo_path_2"):
+        path_value = _get(path_field)
+        if not path_value:
+            continue
+        if not isinstance(path_value, str) or path_has_whitespace(path_value):
+            return False
+
     return True
 
 
@@ -1031,6 +1042,9 @@ def build_screen_replay_uav_template(
         'camera_used:              "YOUR_CAMERA_OR_PHONE"  # e.g. "iPhone 15 Pro"',
         f'device_photographed:      "phone"               # one of: {device_options}',
         f'capture_variant:          "seed_unchanged"      # one of: {variant_options}',
+        'primary_media:             "photo"               # photo or video',
+        'photo_path:                "staged/face_closeup.png"  # NO SPACES in this path',
+        'photo_path_2:              "staged/environment.png"   # NO SPACES in this path',
         "#",
         "# Mark each cue true if clearly visible in your capture, false otherwise.",
         "# Report honestly — graders will verify. Real captures may show 0–5 cues.",
