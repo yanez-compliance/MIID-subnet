@@ -742,7 +742,17 @@ def get_image_variation_rewards(
 # =============================================================================
 
 # Tier multipliers for reputation weighting (policy-based, rarely change)
+# Cutoffs (inclusive lower bound, exclusive of the next tier):
+#   Black     > 250
+#   Platinum  150 – 250
+#   Diamond    50 – 150
+#   Gold       30 –  50
+#   Silver     15 –  30
+#   Bronze      5 –  15
+#   Neutral   0.1 –   5
+#   Watch     ≤ 0.1
 TIER_MULTIPLIERS = {
+    "Black":    1.35,
     "Platinum": 1.25,
     "Diamond":  1.15,
     "Gold":     1.10,
@@ -760,8 +770,9 @@ TIER_MULTIPLIERS = {
 #   5.0  - 15.0  → 1.00 - 1.20  (Bronze)
 #   15.0 - 30.0  → 1.20 - 1.50  (Silver)
 #   30.0 - 50.0  → 1.50 - 1.80  (Gold)
-#   50.0 - 200.0 → 1.80 - 2.00  (Diamond)
-#   200.0+       → 2.00 - 3.00  (Platinum)
+#   50.0 - 150.0 → 1.80 - 2.00  (Diamond)
+#   150.0 - 250.0 → 2.00 - 2.50  (Platinum)
+#   250.0+       → 2.50 - 4.00  (Black)
 
 # Burn UID (hardcoded in existing codebase)
 BURN_UID = 59
@@ -798,7 +809,7 @@ def _get_partner_uid(metagraph) -> Optional[int]:
 
 def normalize_rep_score(rep_score: float, rep_tier: Optional[str] = None) -> float:
     """
-    Normalize rep_score to reward-friendly range (0.0 - 3.0).
+    Normalize rep_score to reward-friendly range (0.0 - 4.0).
 
     Uses actual rep_score value for normalization - NO clamping to tier boundaries.
     As rep_score decays, normalized value decreases proportionally.
@@ -809,7 +820,7 @@ def normalize_rep_score(rep_score: float, rep_tier: Optional[str] = None) -> flo
         rep_tier: Tier string (unused for normalization, kept for API compatibility)
 
     Returns:
-        Normalized rep_score in [0.0, 3.0].
+        Normalized rep_score in [0.0, 4.0].
     """
     # Zero or negative score = zero normalized (zero UAV)
     if rep_score <= 0:
@@ -822,8 +833,9 @@ def normalize_rep_score(rep_score: float, rep_tier: Optional[str] = None) -> flo
     #   5.0  - 15.0  → 1.00 - 1.20  (Bronze range)
     #   15.0 - 30.0  → 1.20 - 1.50  (Silver range)
     #   30.0 - 50.0  → 1.50 - 1.80  (Gold range)
-    #   50.0 - 200.0 → 1.80 - 2.00  (Diamond range)
-    #   200.0+       → 2.00 - 3.00  (Platinum range)
+    #   50.0 - 150.0 → 1.80 - 2.00  (Diamond range)
+    #   150.0 - 250.0 → 2.00 - 2.50  (Platinum range)
+    #   250.0+       → 2.50 - 4.00  (Black range)
 
     if rep_score < 0.1:
         # Below Watch floor: linear from 0→0.1 maps to 0→0.50
@@ -840,13 +852,16 @@ def normalize_rep_score(rep_score: float, rep_tier: Optional[str] = None) -> flo
     elif rep_score <= 50.0:
         # Gold range: 30.0→50.0 maps to 1.50→1.80
         normalized = 1.50 + (rep_score - 30.0) * (1.80 - 1.50) / (50.0 - 30.0)
-    elif rep_score <= 200.0:
-        # Diamond range: 50.0→200.0 maps to 1.80→2.00
-        normalized = 1.80 + (rep_score - 50.0) * (2.00 - 1.80) / (200.0 - 50.0)
+    elif rep_score <= 150.0:
+        # Diamond range: 50.0→150.0 maps to 1.80→2.00
+        normalized = 1.80 + (rep_score - 50.0) * (2.00 - 1.80) / (150.0 - 50.0)
+    elif rep_score <= 250.0:
+        # Platinum range: 150.0→250.0 maps to 2.00→2.50
+        normalized = 2.00 + (rep_score - 150.0) * (2.50 - 2.00) / (250.0 - 150.0)
     else:
-        # Platinum range: 200.0→9999.0 maps to 2.00→3.00
-        normalized = 2.00 + (rep_score - 200.0) * (3.00 - 2.00) / (9999.0 - 200.0)
-        normalized = min(3.00, normalized)  # Cap at 3.00
+        # Black range: 250.0→9999.0 maps to 2.50→4.00
+        normalized = 2.50 + (rep_score - 250.0) * (4.00 - 2.50) / (9999.0 - 250.0)
+        normalized = min(4.00, normalized)  # Cap at 4.00
 
     return round(normalized, 3)
 

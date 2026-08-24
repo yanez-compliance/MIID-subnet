@@ -69,6 +69,7 @@ BURN_UID = 59
 # Tier multipliers for reputation weighting
 # Higher tiers get bonus multipliers on their UAV portion
 TIER_MULTIPLIERS = {
+    "Black": 1.35,
     "Platinum": 1.25,
     "Diamond": 1.15,
     "Gold": 1.10,
@@ -83,13 +84,14 @@ TIER_MULTIPLIERS = {
 # These values are for reference only - must match reputation-policy-v1.md
 # Watch tier: assigned when rep_score goes negative, but DB clamps to 0.1 floor
 TIER_BOUNDARIES = {
-    "Platinum": (200.0, 9999.0),  # rep_score >= 200.0
-    "Diamond":  (50.0, 199.999),  # rep_score 50.0 - 199.999
-    "Gold":     (30.0, 49.999),   # rep_score 30.0 - 49.999
-    "Silver":   (15.0, 29.999),   # rep_score 15.0 - 29.999
-    "Bronze":   (5.001, 14.999),  # rep_score >5.0 - 14.999
-    "Neutral":  (0.10, 5.00),     # rep_score 0.1 - 5.0 (baseline miners)
-    "Watch":    (0.0, 0.099),     # rep_score < 0.1 (penalized, clamped to 0.1 but decay can push to 0)
+    "Black":    (250.001, 9999.0),  # rep_score > 250.0
+    "Platinum": (150.0, 250.0),     # rep_score 150.0 - 250.0
+    "Diamond":  (50.0, 149.999),    # rep_score 50.0 - 149.999
+    "Gold":     (30.0, 49.999),     # rep_score 30.0 - 49.999
+    "Silver":   (15.0, 29.999),     # rep_score 15.0 - 29.999
+    "Bronze":   (5.001, 14.999),    # rep_score >5.0 - 14.999
+    "Neutral":  (0.10, 5.00),       # rep_score 0.1 - 5.0 (baseline miners)
+    "Watch":    (0.0, 0.099),       # rep_score < 0.1 (penalized, clamped to 0.1 but decay can push to 0)
 }
 
 # Normalization (for reference - validator uses continuous function based on actual rep_score)
@@ -100,6 +102,7 @@ TIER_BOUNDARIES = {
 #   5.0  - 15.0  → 1.00 - 1.20  (Bronze)
 #   15.0 - 30.0  → 1.20 - 1.50  (Silver)
 #   30.0 - 50.0  → 1.50 - 1.80  (Gold)
-#   50.0 - 200.0 → 1.80 - 2.00  (Diamond)
-#   200.0+       → 2.00 - 3.00  (Platinum)
+#   50.0 - 150.0 → 1.80 - 2.00  (Diamond)
+#   150.0 - 250.0 → 2.00 - 2.50  (Platinum)
+#   250.0+       → 2.50 - 4.00  (Black)
 # When rep_score = 0, miner gets zero UAV (only KAV)
