@@ -593,7 +593,7 @@ async def forward(self):
     phase4_image_data: Optional[Dict] = None
     if PHASE4_ENABLED and image_request is not None and selected_variations:
         phase4_image_data = {
-            "cycle": "Phase4-C5-Sandbox",
+            "cycle": "Phase4-C5-Execution",
             "challenge_id": challenge_id,
             "base_image_filename": image_request.image_filename,
             "daily_seed_filename": image_request.daily_seed_filename,
@@ -719,7 +719,7 @@ async def forward(self):
         "timestamp": timestamp,
         "phase4_image_data": {
             **(phase4_image_data or {}),
-            "note": "Sandbox image variations with S3 uploads for YANEZ Sandbox testing",
+            "note": "Phase 4 Cycle 5 Execution: image variations with S3 uploads for YANEZ execution scoring",
             "enabled": PHASE4_ENABLED and image_request is not None,
             "s3_bucket": "yanez-miid-sn54",
             # Fallbacks for when image_request was unavailable (phase4_image_data is None)
@@ -877,7 +877,7 @@ async def forward(self):
             )
 
             # ==========================================================================
-            # Cache rep_data from response for NEXT forward pass (Phase 4 - Cycle 5 Sandbox)
+            # Cache rep_data from response for NEXT forward pass (Phase 4 - Cycle 5 Execution)
             # ==========================================================================
             if uav_grading_enabled:
                 if upload_response and upload_response.get("rep_cache"):
