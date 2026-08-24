@@ -27,7 +27,8 @@ Implements the forward function that drives each validation round:
 2. Fetch a base face image from the MIID API.
 3. Build an ImageRequest with three images: the per-round face-variation
    base, today's IOTD, and tomorrow's IOTD (both IOTDs from the API fixed
-   pool). 5 synthetic variations: 2 background, 3 combined edits; plus
+   pool). 5 synthetic variations: background_in, background_out, 3 combined
+   edits; plus
    the IOTD seeds + instructions for the REAL screen-replay task —
    miners may send as many non-duplicate real captures as they want, each one
    bundling a face close-up + environment shot of the same capture as basic
@@ -343,7 +344,7 @@ async def forward(self):
                 image_filename, base64_image = image_result
 
                 # Always request (5 synthetic variations):
-                # 1–2) background_edit: indoor + outdoor
+                # 1–2) background_in (indoor) + background_out (outdoor)
                 # 3–5) combined edits: lighting+expression, lighting+pose, pose+expression
                 # screen_replay is NOT included here — it's a real physical
                 # capture, not FLUX-generated.

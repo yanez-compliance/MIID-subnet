@@ -28,7 +28,7 @@ returns S3 references back to the validator.
 
 The miner pipeline:
 1. Receive ImageRequest (base image + VariationRequest list)
-2. Generate face variations using FLUX (pose, lighting, expression, background, screen_replay)
+2. Generate face variations using FLUX (pose, lighting, expression, background_in, background_out, screen_replay)
 3. Validate face identity is preserved (AdaFace similarity check)
 4. Encrypt each variation with drand timelock
 5. Upload encrypted images to S3

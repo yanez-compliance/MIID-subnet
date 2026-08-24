@@ -33,7 +33,7 @@ class VariationRequest(BaseModel):
     Specifies what kind of variation to generate and at what intensity level.
     Used as a guideline for miners; post-validation will judge compliance.
     """
-    type: str        # Variation type: pose_edit, lighting_edit, expression_edit, background_edit, screen_replay
+    type: str        # Variation type: pose_edit, lighting_edit, expression_edit, background_in, background_out, combined (type+type), screen_replay
     intensity: str   # Intensity level: light, medium, far
     description: str = ""   # Human-readable description of the type
     detail: str = ""        # Intensity-specific detail/guideline

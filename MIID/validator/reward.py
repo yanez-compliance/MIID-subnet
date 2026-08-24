@@ -494,9 +494,10 @@ def get_image_variation_rewards(
 
     # The API samples exactly one variation slot and returns only that one
     # submission per miner.  sampled_variation is an aux_type (e.g.
-    # "background_in", "screen_replay_1", "lighting_edit_expression_edit_1")
-    # which is NOT a member of requested_types (base types like "background_edit"),
-    # so membership checks are never used.  We detect sampled-only mode by
+    # "background_in", "background_out", "screen_replay_1",
+    # "lighting_edit_expression_edit_1"). Background slots use those names
+    # in requested_types as well; combined/replay aux labels may still differ.
+    # We detect sampled-only mode by
     # whether the API call succeeded and a sampled_variation was returned.
     score_sampled_only = bool(sampled_variation and api_succeeded)
     if not api_succeeded:

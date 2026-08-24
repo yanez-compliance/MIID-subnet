@@ -134,6 +134,26 @@ BACKGROUND_ENVIRONMENT_TYPES = {
     }
 }
 
+# S3 / request type names for the two background slots. Never emit a bare
+# "background" or "background_edit" type — miners upload
+# .../{background_in|background_out}_{timestamp}.png.tlock
+BACKGROUND_INDOOR_TYPE = "background_in"
+BACKGROUND_OUTDOOR_TYPE = "background_out"
+BACKGROUND_SLOT_TYPES = (BACKGROUND_INDOOR_TYPE, BACKGROUND_OUTDOOR_TYPE)
+
+
+def background_type_for_environment(environment_key: str) -> str:
+    """Map indoor/outdoor to the miner-facing variation type used in S3 keys."""
+    if environment_key == "outdoor":
+        return BACKGROUND_OUTDOOR_TYPE
+    return BACKGROUND_INDOOR_TYPE
+
+
+def is_background_variation_type(var_type: str) -> bool:
+    """True for indoor/outdoor background slots (and legacy background_edit)."""
+    return var_type in BACKGROUND_SLOT_TYPES or var_type == "background_edit"
+
+
 # Accessory types with weighted selection
 HEADPHONES_STYLE_OPTIONS = [
     "over-ear headphones",
@@ -333,13 +353,15 @@ def select_random_variations(
             intensity_info = get_background_variation_info(intensity)
             description = f"{type_info['description']}. {intensity_info['environment_description']}"
             detail = intensity_info["detail"]
+            emitted_type = background_type_for_environment(intensity_info["environment_type"])
         else:
             intensity_info = type_info["intensities"][intensity]
             description = type_info["description"]
             detail = intensity_info["detail"]
+            emitted_type = var_type
 
         variations.append({
-            "type": var_type,
+            "type": emitted_type,
             "intensity": intensity,
             "description": description,
             "detail": detail
@@ -354,8 +376,8 @@ def format_variation_requirements(variations: List[Dict[str, str]]) -> str:
     Creates a human-readable description of the requested variations
     to be appended to the query template sent to miners.
     
-    If background_edit is included, automatically adds a random accessory
-    to the background variation prompt.
+    If a background_in / background_out slot is included without an accessory
+    already in the detail, automatically adds a random accessory.
 
     Args:
         variations: List of variation dicts from select_random_variations()
@@ -369,7 +391,7 @@ def format_variation_requirements(variations: List[Dict[str, str]]) -> str:
 
         1. pose_edit (medium): ±30° rotation (clear head turn, profile partially visible)
         2. expression_edit (light): Neutral to slight smile, minor brow movement
-        3. background_edit (far): Move to a clearly different indoor setting with distinct interior design and scene depth (e.g., office, lobby, studio, gallery), while keeping the background fully indoors with no outdoor elements. Additionally, include: Religious head covering (hijab, turban, kippah, taqiyah, etc.) appropriate to subject
+        3. background_in (far): Move to a clearly different indoor setting with distinct interior design and scene depth (e.g., office, lobby, studio, gallery), while keeping the background fully indoors with no outdoor elements. Additionally, include: Religious head covering (hijab, turban, kippah, taqiyah, etc.) appropriate to subject
 
         IMPORTANT: The subject's face must remain recognizable across all variations.
     """
@@ -384,7 +406,7 @@ def format_variation_requirements(variations: List[Dict[str, str]]) -> str:
     # This avoids "double-randomizing" when background_edit was produced by get_variation_by_index()
     # or by our dedicated helpers.
     needs_accessory = any(
-        (var.get("type") == "background_edit")
+        is_background_variation_type(var.get("type", ""))
         and ("Additionally, include:" not in var.get("detail", ""))
         for var in variations
     )
@@ -392,8 +414,8 @@ def format_variation_requirements(variations: List[Dict[str, str]]) -> str:
 
     for i, var in enumerate(variations, 1):
         detail = var['detail']
-        # If this is background_edit and detail doesn't already include accessory (e.g. from get_variation_by_index), add it once
-        if var['type'] == 'background_edit' and accessory and "Additionally, include:" not in detail:
+        # If this is a background slot and detail doesn't already include accessory, add it once
+        if is_background_variation_type(var['type']) and accessory and "Additionally, include:" not in detail:
             detail = f"{detail}. Additionally, include: {accessory['detail']}"
         lines.append(
             f"{i}. {var['type']} ({var['intensity']}): {detail}"
@@ -429,14 +451,16 @@ def get_variation_type_info(var_type: str, intensity: str) -> Dict[str, Any]:
         description = f"{type_info['description']}. {intensity_info['environment_description']}"
         detail = intensity_info["detail"]
         label = intensity_info["label"]
+        emitted_type = background_type_for_environment(intensity_info["environment_type"])
     else:
         intensity_info = type_info["intensities"][intensity]
         description = type_info["description"]
         detail = intensity_info["detail"]
         label = intensity_info["label"]
+        emitted_type = var_type
 
     return {
-        "type": var_type,
+        "type": emitted_type,
         "intensity": intensity,
         "description": description,
         "label": label,
@@ -461,7 +485,10 @@ def validate_variation_request(variations: List[Dict[str, str]]) -> bool:
             return False
         if "type" not in var or "intensity" not in var:
             return False
-        if var["type"] not in ALL_VARIATION_TYPES:
+        if (
+            var["type"] not in ALL_VARIATION_TYPES
+            and var["type"] not in BACKGROUND_SLOT_TYPES
+        ):
             return False
         if var["intensity"] not in ALL_INTENSITIES:
             return False
@@ -487,7 +514,7 @@ def get_total_non_background_variation_combinations() -> int:
 
 
 def get_random_background_variation() -> Dict[str, str]:
-    """Get a `background_edit` variation with random intensity + weighted accessory."""
+    """Get a background_in or background_out variation (from the indoor/outdoor draw) + accessory."""
     intensity = random.choice(ALL_INTENSITIES)
 
     type_info = IMAGE_VARIATION_TYPES["background_edit"]
@@ -501,7 +528,7 @@ def get_random_background_variation() -> Dict[str, str]:
     detail = f"{intensity_info['detail']}. Additionally, include: {accessory['detail']}"
 
     return {
-        "type": "background_edit",
+        "type": background_type_for_environment(intensity_info["environment_type"]),
         "intensity": intensity,
         "description": description,
         "detail": detail,
@@ -509,7 +536,7 @@ def get_random_background_variation() -> Dict[str, str]:
 
 
 def get_random_indoor_background_variation() -> Dict[str, str]:
-    """Get a ``background_edit`` variation constrained to indoor settings + weighted accessory."""
+    """Get a ``background_in`` variation constrained to indoor settings + weighted accessory."""
     intensity = random.choice(ALL_INTENSITIES)
     type_info = IMAGE_VARIATION_TYPES["background_edit"]
     intensity_info = get_background_variation_info_for_environment(intensity, "indoor")
@@ -522,7 +549,7 @@ def get_random_indoor_background_variation() -> Dict[str, str]:
     detail = f"{intensity_info['detail']}. Additionally, include: {accessory['detail']}"
 
     return {
-        "type": "background_edit",
+        "type": BACKGROUND_INDOOR_TYPE,
         "intensity": intensity,
         "description": description,
         "detail": detail,
@@ -530,7 +557,7 @@ def get_random_indoor_background_variation() -> Dict[str, str]:
 
 
 def get_random_outdoor_background_variation() -> Dict[str, str]:
-    """Get a ``background_edit`` variation constrained to outdoor settings + weighted accessory."""
+    """Get a ``background_out`` variation constrained to outdoor settings + weighted accessory."""
     intensity = random.choice(ALL_INTENSITIES)
     type_info = IMAGE_VARIATION_TYPES["background_edit"]
     intensity_info = get_background_variation_info_for_environment(intensity, "outdoor")
@@ -543,7 +570,7 @@ def get_random_outdoor_background_variation() -> Dict[str, str]:
     detail = f"{intensity_info['detail']}. Additionally, include: {accessory['detail']}"
 
     return {
-        "type": "background_edit",
+        "type": BACKGROUND_OUTDOOR_TYPE,
         "intensity": intensity,
         "description": description,
         "detail": detail,
@@ -580,6 +607,12 @@ def get_random_non_background_variation() -> Dict[str, str]:
 
 def get_random_variation_by_type(var_type: str) -> Dict[str, str]:
     """Get one random-intensity variation for a specific type."""
+    if var_type == "background_edit" or var_type in BACKGROUND_SLOT_TYPES:
+        if var_type == BACKGROUND_INDOOR_TYPE:
+            return get_random_indoor_background_variation()
+        if var_type == BACKGROUND_OUTDOOR_TYPE:
+            return get_random_outdoor_background_variation()
+        return get_random_background_variation()
     intensity = random.choice(ALL_INTENSITIES)
     type_info = IMAGE_VARIATION_TYPES[var_type]
     intensity_info = type_info["intensities"][intensity]
@@ -650,8 +683,8 @@ def build_standard_challenge_variations() -> List[Dict[str, Any]]:
     """Build the standard 5-variation synthetic (FLUX-generated) challenge set.
 
     Order:
-    1. background_edit (indoor)
-    2. background_edit (outdoor)
+    1. background_in (indoor)
+    2. background_out (outdoor)
     3. lighting_edit + expression_edit
     4. lighting_edit + pose_edit
     5. pose_edit + expression_edit
@@ -721,11 +754,12 @@ def get_variation_by_index(index: int) -> Dict[str, str]:
         detail = intensity_info["detail"]
         description = type_info["description"]
 
-    # For background_edit only: append a random accessory (weighted) to description and detail
+    # For background slots only: append a random accessory (weighted) to description and detail
     if var_type == "background_edit":
         accessory = select_random_accessory()
         description = f"{description}. {accessory['description']}"
         detail = f"{detail}. Additionally, include: {accessory['detail']}"
+        var_type = background_type_for_environment(intensity_info["environment_type"])
 
     return {
         "type": var_type,
@@ -1178,12 +1212,14 @@ def get_all_variation_combinations() -> List[Dict[str, str]]:
                 intensity_info = get_background_variation_info(intensity)
                 description = f"{type_info['description']}. {intensity_info['environment_description']}"
                 detail = intensity_info["detail"]
+                emitted_type = background_type_for_environment(intensity_info["environment_type"])
             else:
                 intensity_info = type_info["intensities"][intensity]
                 description = type_info["description"]
                 detail = intensity_info["detail"]
+                emitted_type = var_type
             combinations.append({
-                "type": var_type,
+                "type": emitted_type,
                 "intensity": intensity,
                 "description": description,
                 "detail": detail

@@ -116,9 +116,9 @@ def upload_to_s3(
     """
     # Generate S3 key path with path_signature for security.
     # Replace '+' with '_' in the filename — '+' in a URL path can be
-    # misinterpreted as a space by S3, causing the object to be stored under
-    # the wrong key.  The original variation_type (with '+') is preserved in
-    # the metadata below so the grading API can still match it correctly.
+    # misinterpreted as a space by S3. Background slots use background_in /
+    # background_out (never a bare "background" name). Combined types keep
+    # the original variation_type (with '+') in metadata below.
     timestamp = int(time.time())
     safe_variation_type = variation_type.replace("+", "_")
     ext = (source_ext or ".png").lower()
