@@ -221,18 +221,16 @@ def upload_data(hotkey):
                         "miners": reward_allocation_data.get("miners")
                     }]
 
-                # Count how many pending allocations each miner earned UAV in (stack decay per cycle)
+                # Count how many pending allocations each miner has a reward slot in
+                # (stack -0.02 per cycle). Decay anyone in the honored snapshot who
+                # was queried and listed in allocation miners — even if UAV is 0.
                 decay_counts = {}  # {miner_hotkey: times to apply -0.02}
-                uav_eligible_hotkeys = []
                 for allocation in allocations:
                     for allocation_miner in allocation.get("miners", []):
                         miner_hotkey = allocation_miner.get("miner_hotkey")
                         if not miner_hotkey:
                             continue
-                        if allocation_miner.get("uav_contribution", 0.0) > 0.0:
-                            decay_counts[miner_hotkey] = decay_counts.get(miner_hotkey, 0) + 1
-                            if miner_hotkey not in uav_eligible_hotkeys:
-                                uav_eligible_hotkeys.append(miner_hotkey)
+                        decay_counts[miner_hotkey] = decay_counts.get(miner_hotkey, 0) + 1
 
                 snapshot_miners_list = current_snapshot.get("miners", [])
                 snapshot_miners_dict = {miner.get("hotkey"): miner for miner in snapshot_miners_list}
