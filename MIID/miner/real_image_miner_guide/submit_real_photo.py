@@ -22,10 +22,14 @@ Capture variants (pick one — see --variant):
   (Every variant also needs an environment still. Device/camera are asked separately.)
 
 There's no limit on how many times you can run this — submit as many
-different real captures as you want, whenever you have them ready. The only
-rule is that each one must be a genuinely new capture: never re-run this on
-the same media twice, and never reuse a file from a previous submission —
-duplicates are filtered out and penalised.
+different real captures as you want, whenever you have them ready. Captures
+are sent FIFO (oldest first). If you photograph TOMORROW's image-of-the-day,
+the `date` field is set to tomorrow and the miner will NOT upload until that
+UTC day arrives.
+
+The only rule is that each one must be a genuinely new capture: never re-run
+this on the same media twice, and never reuse a file from a previous
+submission — duplicates are filtered out and penalised.
 
 Usage:
     python MIID/miner/real_image_miner_guide/submit_real_photo.py
@@ -430,10 +434,24 @@ def list_iotd_seeds() -> list[dict]:
     return seeds
 
 
-def prompt_seed_image(value: str | None) -> str:
-    """Get which received IOTD the miner photographed (today or tomorrow)."""
+def utc_today() -> str:
+    return _dt.datetime.now(_dt.timezone.utc).strftime("%Y-%m-%d")
+
+
+def prompt_seed_image(value: str | None) -> dict:
+    """Return {filename, seed_date, slot} for the IOTD the miner photographed."""
     iotd = list_iotd_seeds()
     known = [s["filename"] for s in iotd]
+
+    def _match(filename: str) -> dict:
+        for seed in iotd:
+            if seed["filename"] == filename:
+                return {
+                    "filename": seed["filename"],
+                    "seed_date": seed.get("seed_date") or "",
+                    "slot": seed.get("slot") or "",
+                }
+        return {"filename": filename, "seed_date": "", "slot": ""}
 
     if value:
         if known and value not in known:
@@ -446,7 +464,7 @@ def prompt_seed_image(value: str | None) -> str:
                 "  Warning: your miner has not saved any IOTDs yet "
                 f"(no {IOTD_SEEDS_META}). Using --seed-image as given."
             )
-        return value
+        return _match(value)
 
     if iotd:
         print("\nWhich image-of-the-day did you display and photograph?")
@@ -459,9 +477,14 @@ def prompt_seed_image(value: str | None) -> str:
         while True:
             entered = input(f"Enter a number (1-{len(iotd)}) or the filename: ").strip()
             if entered.isdigit() and 1 <= int(entered) <= len(iotd):
-                return iotd[int(entered) - 1]["filename"]
+                chosen = iotd[int(entered) - 1]
+                return {
+                    "filename": chosen["filename"],
+                    "seed_date": chosen.get("seed_date") or "",
+                    "slot": chosen.get("slot") or "",
+                }
             if any(s["filename"] == entered for s in iotd):
-                return entered
+                return _match(entered)
             print(f"  Please enter 1-{len(iotd)}, or one of: {', '.join(s['filename'] for s in iotd)}")
 
     print(
@@ -475,30 +498,29 @@ def prompt_seed_image(value: str | None) -> str:
     entered = input("Filename of the seed image you displayed (or press Enter to abort): ").strip()
     if not entered:
         sys.exit(1)
-    return entered
+    return _match(entered)
 
 
-def queue_existing_pending_capture() -> None:
-    """Back up a still-pending capture into queue/ instead of overwriting it."""
+def enqueue_capture(data: dict, reason: str) -> Path:
+    """Append this capture to queue/ without touching the active slot (FIFO)."""
+    QUEUE_DIR.mkdir(parents=True, exist_ok=True)
+    queued_name = f"queued_{_dt.datetime.now(_dt.timezone.utc).strftime('%Y%m%dT%H%M%S%f')}.json"
+    path = QUEUE_DIR / queued_name
+    with open(path, "w") as f:
+        json.dump(data, f, indent=2)
+    _log("OK", f"{reason} Saved as queue/{queued_name}.")
+    return path
+
+
+def active_slot_is_occupied() -> bool:
     if not SCREEN_REPLAY_JSON.exists():
-        return
+        return False
     try:
         with open(SCREEN_REPLAY_JSON, "r") as f:
             existing = json.load(f)
     except Exception:
-        return
-    if not bool(existing.get("ready", False)):
-        return  # nothing pending — safe to overwrite
-
-    QUEUE_DIR.mkdir(parents=True, exist_ok=True)
-    queued_name = f"queued_{_dt.datetime.now(_dt.timezone.utc).strftime('%Y%m%dT%H%M%S%f')}.json"
-    shutil.copy(str(SCREEN_REPLAY_JSON), str(QUEUE_DIR / queued_name))
-    _log(
-        "OK",
-        f"A previous capture was still waiting to be sent — queued it as "
-        f"queue/{queued_name}. Your miner will submit it automatically right "
-        f"after this new one. This new capture takes the active slot now.",
-    )
+        return False
+    return bool(existing.get("ready", False))
 
 
 def main() -> int:
@@ -522,7 +544,7 @@ def main() -> int:
     )
     parser.add_argument("--camera", help="Camera/phone used to take the photo, e.g. 'iPhone 15 Pro'")
     parser.add_argument("--device", choices=DEVICE_TYPES, help="Device the seed image was displayed on")
-    parser.add_argument("--date", help="Capture date YYYY-MM-DD (UTC). Defaults to today.")
+    parser.add_argument("--date", help="IOTD date YYYY-MM-DD (UTC). Defaults to the selected seed's date (tomorrow's IOTD uses tomorrow).")
     parser.add_argument("--moire", action="store_true", help="Moiré / pixel grid interference visible")
     parser.add_argument("--glare", action="store_true", help="Screen glare hotspots visible")
     parser.add_argument("--keystone", action="store_true", help="Perspective / keystone distortion visible")
@@ -573,11 +595,20 @@ def main() -> int:
         "— whole screen/device in surroundings",
     )
 
-    seed_image = prompt_seed_image(args.seed_image)
-    _log("OK", f"Seed image: {seed_image}")
+    seed_info = prompt_seed_image(args.seed_image)
+    seed_image = seed_info["filename"]
+    seed_date = (seed_info.get("seed_date") or "").strip()
+    seed_slot = (seed_info.get("slot") or "").strip()
+    _log("OK", f"Seed image: {seed_image}" + (f" [{seed_slot} {seed_date} UTC]" if seed_slot or seed_date else ""))
     camera_used = prompt_if_missing(args.camera, "Camera/phone used to take the capture (e.g. 'iPhone 15 Pro')")
     device_photographed = prompt_device(args.device)
-    date = args.date or _dt.datetime.now(_dt.timezone.utc).strftime("%Y-%m-%d")
+    date = args.date or seed_date or utc_today()
+    if seed_slot == "tomorrow" or (seed_date and seed_date > utc_today()):
+        _log(
+            "OK",
+            f"This is tomorrow's IOTD — date={date}. The miner will HOLD the "
+            f"upload until that UTC day (it will not send it tonight).",
+        )
 
     print(
         "\nWhich visual cues are clearly visible across your capture? "
@@ -613,6 +644,7 @@ def main() -> int:
         "photo_path_2": str(staged_path_2.resolve()),
         "seed_image": seed_image,
         "date": date,
+        "seed_slot": seed_slot,
         "camera_used": camera_used,
         "device_photographed": device_photographed,
         "capture_variant": capture_variant,
@@ -623,12 +655,37 @@ def main() -> int:
         "gamma_contrast_shift": gamma,
         "edge_crop_cues": edge_crop,
     }
-    queue_existing_pending_capture()
+
+    occupied = active_slot_is_occupied()
+    is_due = date <= utc_today()
+    if occupied or not is_due:
+        if occupied and not is_due:
+            reason = (
+                f"Active slot is still waiting, and this capture is for {date} — "
+                "queued behind it (FIFO). Miner will not upload until that UTC day."
+            )
+        elif occupied:
+            reason = (
+                "Active slot is still waiting to send — queued this capture behind "
+                "it (FIFO: oldest goes first)."
+            )
+        else:
+            reason = (
+                f"Tomorrow's IOTD ({date}) — queued until that UTC day so it does "
+                "not occupy the active slot."
+            )
+        enqueue_capture(data, reason)
+        _log(
+            "DONE",
+            "Nothing else to do — the miner sends the oldest *due* capture on "
+            "each validator query. Tomorrow's IOTD stays queued until that day.",
+        )
+        return 0
 
     with open(SCREEN_REPLAY_JSON, "w") as f:
         json.dump(data, f, indent=2)
 
-    _log("DONE", f"Wrote {SCREEN_REPLAY_JSON} with ready=true.")
+    _log("DONE", f"Wrote {SCREEN_REPLAY_JSON} with ready=true (active slot, FIFO oldest).")
     _log(
         "DONE",
         "Nothing else to do — your miner process will pick this up and submit both "
@@ -637,8 +694,8 @@ def main() -> int:
     _log(
         "DONE",
         "Want to submit again? Drop a NEW pair (face close-up + environment) in "
-        "inbox/, pick a capture_variant, and re-run. Never resubmit the same "
-        "capture twice. Queued pending captures are preserved automatically.",
+        "inbox/, pick a capture_variant, and re-run. New captures go to the back "
+        "of the queue. Never resubmit the same capture twice.",
     )
     return 0
 

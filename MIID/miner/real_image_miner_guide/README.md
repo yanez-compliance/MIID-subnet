@@ -113,27 +113,23 @@ python MIID/miner/real_image_miner_guide/submit_real_photo.py \
 
 ## Submitting more than one at a time (the `queue/` folder)
 
-`screen_replay.json` only has **one active slot**. If you run
-`submit_real_photo.py` again before your always-running miner process has
-had a chance to pick up and send the previous capture (i.e. `ready` is still
-`true`), nothing is lost:
+`screen_replay.json` only has **one active slot**. Captures are sent **FIFO
+(oldest first)**:
 
-1. `submit_real_photo.py` notices the active slot is still occupied, copies
-   that pending capture into `queue/` (named with a timestamp so order is
-   preserved), and writes your **new** capture into `screen_replay.json` —
-   your new one takes the active slot immediately.
-2. Every time the miner process finishes sending the active capture, it
-   checks `queue/` and automatically promotes the **oldest** queued capture
-   into the now-empty active slot, ready to go out on the next validator
-   query.
-3. This repeats until `queue/` is empty — so you can queue up as many
-   captures back-to-back as you want (take captures, run the script, repeat)
-   and each one will eventually be sent, in the order you submitted them.
+1. The first capture occupies `screen_replay.json` until the miner sends it.
+2. If you run `submit_real_photo.py` again while that slot is still `ready`,
+   the **new** capture is appended to `queue/` (timestamped). The waiting
+   capture in `screen_replay.json` is not bumped.
+3. After each successful send, the miner promotes the oldest **due** queued
+   capture into the active slot.
 
-You don't need to do anything special to use this — it kicks in
-automatically whenever you submit while a previous capture is still
-pending. `queue/` is just a holding area; you shouldn't normally need to
-look inside it.
+**Tomorrow's image-of-the-day:** if you photograph tomorrow's seed, `date`
+is set to tomorrow's UTC date and `seed_slot` is `"tomorrow"`. The miner
+will **not** upload that capture until that UTC day. It stays in `queue/`
+(or is skipped in the active slot) so today's captures can still go out.
+
+You don't need to do anything special — queueing and the date hold kick in
+automatically. `queue/` is just a holding area.
 
 ## `screen_replay.json` fields
 
@@ -143,7 +139,8 @@ look inside it.
 | `photo_path` | Absolute path to the staged face close-up (photo for variants 1–3, video for 4–6). **No spaces** — the submit script sanitizes the filename. |
 | `photo_path_2` | Absolute path to the staged environment still of the same capture. **No spaces.** |
 | `seed_image` | Filename of the IOTD you photographed (today or tomorrow; see `seeds/`). |
-| `date` | Capture date, `YYYY-MM-DD` (UTC). Defaults to today. |
+| `date` | IOTD date, `YYYY-MM-DD` (UTC). **Tomorrow's seed uses tomorrow's date** — the miner will not upload until that day. |
+| `seed_slot` | `today` or `tomorrow`, from the seed you picked. |
 | `camera_used` | The camera/phone you used to take the capture, e.g. `"iPhone 15 Pro"`. |
 | `device_photographed` | Which device displayed the seed: one of `phone`, `tablet`, `laptop`, `monitor`, `tv`. |
 | `capture_variant` | One of the six variant keys above. |
