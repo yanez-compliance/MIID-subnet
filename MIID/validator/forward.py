@@ -186,51 +186,33 @@ def _collect_screen_replay_data(
 
     for uid_str, miner_block in s3_submissions_by_miner.items():
         sr_subs = []
+        miner_has_env = False
+        miner_has_uav = False
+        miner_has_valid_uav = False
         for sub in miner_block.get("submissions", []):
             if sub.get("variation_type") != "screen_replay":
                 continue
             uav = sub.get("screen_replay_uav")
-            uav_dict = uav if isinstance(uav, dict) else {}
-            has_env = bool(sub.get("s3_key_angle2") and sub.get("image_hash_angle2"))
-            has_uav = uav is not None
-            uav_valid = bool(has_uav and validate_screen_replay_uav(uav))
-            s3_key = sub.get("s3_key")
-            s3_key_2 = sub.get("s3_key_angle2")
+            uav_valid = bool(uav is not None and validate_screen_replay_uav(uav))
+            if sub.get("s3_key_angle2"):
+                miner_has_env = True
+            if uav is not None:
+                miner_has_uav = True
+            if uav_valid:
+                miner_has_valid_uav = True
             sr_subs.append({
-                # Where validators look up the uploaded media
-                "s3_key": s3_key,
-                "s3_key_angle2": s3_key_2,
-                "s3_uri": f"s3://yanez-miid-sn54/{s3_key}" if s3_key else None,
-                "s3_uri_angle2": f"s3://yanez-miid-sn54/{s3_key_2}" if s3_key_2 else None,
-                "image_hash": sub.get("image_hash"),
-                "image_hash_angle2": sub.get("image_hash_angle2"),
-                "has_environment_shot": has_env,
-                "has_uav": has_uav,
+                "s3_key": sub.get("s3_key"),
+                "s3_key_angle2": sub.get("s3_key_angle2"),
                 "uav_valid": uav_valid,
-                # Every field the miner filled in screen_replay.json
-                "photo_path": uav_dict.get("photo_path"),
-                "photo_path_2": uav_dict.get("photo_path_2"),
-                "seed_image": uav_dict.get("seed_image"),
-                "date": uav_dict.get("date"),
-                "camera_used": uav_dict.get("camera_used"),
-                "device_photographed": uav_dict.get("device_photographed"),
-                "capture_variant": uav_dict.get("capture_variant"),
-                "primary_media": uav_dict.get("primary_media"),
-                "moire_pixel_grid": uav_dict.get("moire_pixel_grid"),
-                "screen_glare_hotspots": uav_dict.get("screen_glare_hotspots"),
-                "perspective_keystone_distortion": uav_dict.get("perspective_keystone_distortion"),
-                "gamma_contrast_shift": uav_dict.get("gamma_contrast_shift"),
-                "edge_crop_cues": uav_dict.get("edge_crop_cues"),
-                "screen_replay_uav": uav,
             })
         if not sr_subs:
             continue
         total_submissions += len(sr_subs)
-        if any(s["has_environment_shot"] for s in sr_subs):
+        if miner_has_env:
             miners_with_env += 1
-        if any(s["has_uav"] for s in sr_subs):
+        if miner_has_uav:
             miners_with_uav += 1
-        if any(s["uav_valid"] for s in sr_subs):
+        if miner_has_valid_uav:
             miners_with_valid_uav += 1
         rejected += sum(1 for s in sr_subs if not s["uav_valid"])
         by_miner[uid_str] = {

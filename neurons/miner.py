@@ -797,8 +797,6 @@ class Miner(BaseMinerNeuron):
                 device_photographed=data.get("device_photographed", "phone"),
                 capture_variant=capture_variant,
                 primary_media=primary_media,
-                photo_path=photo_path,
-                photo_path_2=photo_path_2,
                 moire_pixel_grid=bool(data.get("moire_pixel_grid", False)),
                 screen_glare_hotspots=bool(data.get("screen_glare_hotspots", False)),
                 perspective_keystone_distortion=bool(data.get("perspective_keystone_distortion", False)),
