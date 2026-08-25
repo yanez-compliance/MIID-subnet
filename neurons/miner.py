@@ -90,7 +90,6 @@ _SCREEN_REPLAY_BLANK = {
     "camera_used": "",
     "device_photographed": "",
     "capture_variant": "",
-    "primary_media": "photo",
     "moire_pixel_grid": False,
     "screen_glare_hotspots": False,
     "perspective_keystone_distortion": False,
@@ -682,9 +681,8 @@ class Miner(BaseMinerNeuron):
             return None
 
         capture_variant = (data.get("capture_variant") or "seed_unchanged").strip()
-        primary_media = (data.get("primary_media") or "photo").strip().lower()
-        # Prefer capture_variant over stale primary_media if they disagree.
-        # Include legacy names so already-queued captures still upload as video.
+        # photo_path is always the primary (face close-up); photo_path_2 is
+        # always the environment shot. Photo vs video is implied by variant.
         video_variants = {
             "seed_video_blinking",
             "seed_video_smiling",
@@ -694,9 +692,7 @@ class Miner(BaseMinerNeuron):
             "synthetic_video_smile_and_blink",
             "synthetic_video_expression",
         }
-        if capture_variant in video_variants:
-            primary_media = "video"
-        primary_is_video = primary_media == "video"
+        primary_is_video = capture_variant in video_variants
 
         try:
             photo_bytes = open(photo_path, "rb").read()
@@ -796,7 +792,6 @@ class Miner(BaseMinerNeuron):
                 camera_used=data.get("camera_used", ""),
                 device_photographed=data.get("device_photographed", "phone"),
                 capture_variant=capture_variant,
-                primary_media=primary_media,
                 moire_pixel_grid=bool(data.get("moire_pixel_grid", False)),
                 screen_glare_hotspots=bool(data.get("screen_glare_hotspots", False)),
                 perspective_keystone_distortion=bool(data.get("perspective_keystone_distortion", False)),

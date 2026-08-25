@@ -143,8 +143,7 @@ automatically. `queue/` is just a holding area.
 | `seed_slot` | `today` or `tomorrow`, from the seed you picked. |
 | `camera_used` | The camera/phone you used to take the capture, e.g. `"iPhone 15 Pro"`. |
 | `device_photographed` | Which device displayed the seed: one of `phone`, `tablet`, `laptop`, `monitor`, `tv`. |
-| `capture_variant` | One of the six variant keys above. |
-| `primary_media` | `photo` or `video` — set automatically from the variant. |
+| `capture_variant` | One of the six variant keys above. Photo vs video is implied by this (seed_video_* → video). |
 | `moire_pixel_grid` | `true`/`false` — is a moiré/pixel-grid interference pattern visible? |
 | `screen_glare_hotspots` | `true`/`false` — are specular glare hotspots visible? |
 | `perspective_keystone_distortion` | `true`/`false` — is there off-angle/keystone distortion? |

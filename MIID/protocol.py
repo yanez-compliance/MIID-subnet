@@ -130,7 +130,6 @@ class ScreenReplayUAV(BaseModel):
     # Six options: 3 photo (seed_unchanged, seed_smiling, seed_eyes_closed) +
     # 3 video (seed_video_blinking, seed_video_smiling, seed_video_smile_and_blink).
     capture_variant: str = "seed_unchanged"
-    primary_media: str = "photo"  # "photo" or "video" — matches screen_replay.json
 
     # Cue checklist — one bool per cue key in SCREEN_REPLAY_VISUAL_CUES
     moire_pixel_grid: bool               # Interference pattern from screen subpixels

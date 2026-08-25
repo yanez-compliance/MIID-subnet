@@ -1031,7 +1031,6 @@ def build_screen_replay_uav_template(
         'camera_used:              "YOUR_CAMERA_OR_PHONE"  # e.g. "iPhone 15 Pro"',
         f'device_photographed:      "phone"               # one of: {device_options}',
         f'capture_variant:          "seed_unchanged"      # one of: {variant_options}',
-        'primary_media:             "photo"               # photo or video',
         "#",
         "# Mark each cue true if clearly visible in your capture, false otherwise.",
         "# Report honestly — graders will verify. Real captures may show 0–5 cues.",

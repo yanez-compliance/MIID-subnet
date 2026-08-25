@@ -648,7 +648,6 @@ def main() -> int:
         "camera_used": camera_used,
         "device_photographed": device_photographed,
         "capture_variant": capture_variant,
-        "primary_media": "video" if primary_is_video else "photo",
         "moire_pixel_grid": moire,
         "screen_glare_hotspots": glare,
         "perspective_keystone_distortion": keystone,
