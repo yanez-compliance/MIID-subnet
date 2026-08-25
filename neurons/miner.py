@@ -28,7 +28,7 @@ returns S3 references back to the validator.
 
 The miner pipeline:
 1. Receive ImageRequest (base image + VariationRequest list)
-2. Generate face variations using FLUX (pose, lighting, expression, background, screen_replay)
+2. Generate face variations using FLUX (pose, lighting, expression, background_in, background_out, screen_replay)
 3. Validate face identity is preserved (AdaFace similarity check)
 4. Encrypt each variation with drand timelock
 5. Upload encrypted images to S3
@@ -44,13 +44,15 @@ import gc
 import base64
 import bittensor as bt
 import os
-from typing import List, Optional
+from datetime import datetime, timezone
+from typing import List, Optional, Tuple
 from PIL import Image
 
 from bittensor.core.errors import NotVerifiedException
 
 # Protocol
 from MIID.protocol import IdentitySynapse, S3Submission, ScreenReplayUAV
+from MIID.utils.media_paths import ensure_viable_media_path, sanitize_media_filename
 
 # Base miner class
 from MIID.base.miner import BaseMinerNeuron
@@ -64,9 +66,8 @@ SCREEN_REPLAY_JSON = os.path.join(
 )
 
 # Holds extra captures submitted (via submit_real_photo.py) while a previous
-# one was still pending — see queue_existing_pending_capture() there. Drained
-# oldest-first, one per successful screen-replay submission, so a miner can
-# queue up several captures back-to-back without any of them being dropped.
+# one was still pending, plus tomorrow-IOTD captures waiting for that UTC
+# day. FIFO: oldest due capture in the active slot goes out first.
 SCREEN_REPLAY_QUEUE_DIR = os.path.join(
     os.path.dirname(os.path.dirname(__file__)),
     "MIID", "miner", "real_image_miner_guide", "queue",
@@ -78,6 +79,27 @@ IOTD_SEEDS_DIR = os.path.join(
     os.path.dirname(os.path.dirname(__file__)),
     "MIID", "miner", "real_image_miner_guide", "seeds",
 )
+
+_SCREEN_REPLAY_BLANK = {
+    "ready": False,
+    "photo_path": "",
+    "photo_path_2": "",
+    "seed_image": "",
+    "date": "",
+    "seed_slot": "",
+    "camera_used": "",
+    "device_photographed": "",
+    "capture_variant": "",
+    "moire_pixel_grid": False,
+    "screen_glare_hotspots": False,
+    "perspective_keystone_distortion": False,
+    "gamma_contrast_shift": False,
+    "edge_crop_cues": False,
+}
+
+
+def _utc_today_str() -> str:
+    return datetime.now(timezone.utc).strftime("%Y-%m-%d")
 
 
 def _free_gpu_memory(stage: str = "") -> None:
@@ -282,7 +304,8 @@ class Miner(BaseMinerNeuron):
             bt.logging.error(f"Phase 4: Failed to process image request: {e}")
             s3_submissions = []
 
-        # Try to attach a real screen-replay submission from screen_replay.json
+        # Try to attach a real screen-replay submission (active slot, or a
+        # due capture from queue/ if the active one is for tomorrow).
         sr_sub = self._try_screen_replay_submission(req)
         if sr_sub is not None:
             s3_submissions.append(sr_sub)
@@ -508,42 +531,127 @@ class Miner(BaseMinerNeuron):
                 pass
             _free_gpu_memory("after_request")
 
-    def _try_screen_replay_submission(self, image_request) -> Optional[S3Submission]:
-        """Submit a real screen-replay capture if screen_replay.json says it's ready.
+    def _screen_replay_is_due(self, data: dict, image_request) -> bool:
+        """True if this capture's IOTD is allowed to upload on today's UTC date.
 
-        Reads screen_replay.json (MIID/miner/real_image_miner_guide/). Miners
-        (or the helper script submit_real_photo.py in that same folder) fill
-        in TWO media paths (face close-up photo/video + environment still of
-        the same capture) + metadata (including capture_variant) and flip
-        "ready" to true. This runs on every validator query — since the axon
-        is always listening, this is effectively a background check — so as
-        soon as "ready" is true the next query submits both as one
-        screen_replay submission. After a
-        successful upload the whole file is reset back to its blank/not-ready
-        state so it won't accidentally re-submit the exact same capture again
-        (that would be a duplicate). There's no limit on how many *different*
-        captures a miner can queue up and submit over time — just never the
-        same one twice.
-
-        If "ready" is false (the normal/default state), this is a no-op —
-        real screen-replay submissions are optional and not expected every
-        round.
+        Tomorrow's seed is held until that seed's date (or until a later
+        validator request presents the same file as today's IOTD).
         """
-        if not os.path.exists(SCREEN_REPLAY_JSON):
-            return None
+        today = _utc_today_str()
+        seed = (data.get("seed_image") or "").strip()
+        date = (data.get("date") or "").strip()
+        slot = (data.get("seed_slot") or "").strip().lower()
 
+        today_fn = (getattr(image_request, "daily_seed_filename", None) or "").strip()
+        tomorrow_fn = (getattr(image_request, "tomorrow_seed_filename", None) or "").strip()
+        tomorrow_date = (getattr(image_request, "tomorrow_seed_date", None) or "").strip()
+
+        if seed and today_fn and seed == today_fn:
+            return True
+
+        if seed and tomorrow_fn and seed == tomorrow_fn:
+            target = tomorrow_date or date
+            if target:
+                return today >= target
+            return False
+
+        if slot == "tomorrow":
+            target = date or tomorrow_date
+            if target:
+                return today >= target
+            return False
+
+        if date:
+            return date <= today
+        return True
+
+    def _iter_queued_screen_replays(self) -> List[Tuple[str, str, dict]]:
+        """Oldest-first (filename timestamp) queued captures."""
+        if not os.path.isdir(SCREEN_REPLAY_QUEUE_DIR):
+            return []
         try:
-            with open(SCREEN_REPLAY_JSON, "r") as f:
-                data = json.load(f)
+            names = sorted(
+                f for f in os.listdir(SCREEN_REPLAY_QUEUE_DIR)
+                if f.endswith(".json")
+            )
         except Exception as e:
-            bt.logging.warning(f"screen_replay.json: could not read: {e}")
+            bt.logging.warning(f"screen_replay queue: could not list: {e}")
+            return []
+        out = []
+        for name in names:
+            path = os.path.join(SCREEN_REPLAY_QUEUE_DIR, name)
+            try:
+                with open(path, "r") as f:
+                    data = json.load(f)
+            except Exception as e:
+                bt.logging.warning(f"screen_replay queue: could not read {path}: {e}")
+                continue
+            out.append((name, path, data))
+        return out
+
+    def _pick_due_screen_replay(
+        self, image_request
+    ) -> Optional[Tuple[str, str, dict]]:
+        """Return (kind, path, data) for the oldest due capture, or None.
+
+        kind is "active" (screen_replay.json) or "queue".
+        """
+        active = None
+        if os.path.exists(SCREEN_REPLAY_JSON):
+            try:
+                with open(SCREEN_REPLAY_JSON, "r") as f:
+                    active = json.load(f)
+            except Exception as e:
+                bt.logging.warning(f"screen_replay.json: could not read: {e}")
+                active = None
+
+        if active and bool(active.get("ready", False)):
+            if self._screen_replay_is_due(active, image_request):
+                return ("active", SCREEN_REPLAY_JSON, active)
+            bt.logging.info(
+                f"screen_replay.json: holding until {active.get('date') or 'seed date'} "
+                f"(seed={active.get('seed_image') or '?'}, slot={active.get('seed_slot') or '?'}) "
+                f"— not uploading tomorrow's IOTD early"
+            )
+
+        for name, path, data in self._iter_queued_screen_replays():
+            if not bool(data.get("ready", False)):
+                continue
+            if self._screen_replay_is_due(data, image_request):
+                bt.logging.info(
+                    f"screen_replay queue: submitting due capture {name} "
+                    f"(seed={data.get('seed_image')}, date={data.get('date')})"
+                )
+                return ("queue", path, data)
+
+        return None
+
+    def _try_screen_replay_submission(self, image_request) -> Optional[S3Submission]:
+        """Submit one due screen-replay capture (active slot, else oldest due in queue).
+
+        Tomorrow-IOTD captures stay queued until that UTC day. Today's due
+        captures in queue/ are not blocked by a not-yet-due active slot.
+        After a successful active-slot upload the file is reset and the
+        oldest *due* queued capture is promoted. Queue files are deleted
+        after they themselves are uploaded.
+        """
+        picked = self._pick_due_screen_replay(image_request)
+        if picked is None:
             return None
+        source_kind, source_path, data = picked
 
-        if not bool(data.get("ready", False)):
-            return None  # nothing queued — normal, expected most rounds
-
-        photo_path = data.get("photo_path", "").strip()
-        photo_path_2 = data.get("photo_path_2", "").strip()
+        photo_path = ensure_viable_media_path(data.get("photo_path", "").strip())
+        photo_path_2 = ensure_viable_media_path(data.get("photo_path_2", "").strip())
+        if photo_path != data.get("photo_path") or photo_path_2 != data.get("photo_path_2"):
+            data["photo_path"] = photo_path
+            data["photo_path_2"] = photo_path_2
+            try:
+                with open(source_path, "w") as f:
+                    json.dump(data, f, indent=2)
+            except Exception as e:
+                bt.logging.warning(
+                    f"screen_replay: could not rewrite sanitized paths: {e}"
+                )
         if not photo_path or not os.path.exists(photo_path):
             bt.logging.warning(
                 f"screen_replay.json: ready=true but photo_path is missing/invalid "
@@ -573,9 +681,8 @@ class Miner(BaseMinerNeuron):
             return None
 
         capture_variant = (data.get("capture_variant") or "seed_unchanged").strip()
-        primary_media = (data.get("primary_media") or "photo").strip().lower()
-        # Prefer capture_variant over stale primary_media if they disagree.
-        # Include legacy names so already-queued captures still upload as video.
+        # photo_path is always the primary (face close-up); photo_path_2 is
+        # always the environment shot. Photo vs video is implied by variant.
         video_variants = {
             "seed_video_blinking",
             "seed_video_smiling",
@@ -585,9 +692,7 @@ class Miner(BaseMinerNeuron):
             "synthetic_video_smile_and_blink",
             "synthetic_video_expression",
         }
-        if capture_variant in video_variants:
-            primary_media = "video"
-        primary_is_video = primary_media == "video"
+        primary_is_video = capture_variant in video_variants
 
         try:
             photo_bytes = open(photo_path, "rb").read()
@@ -645,7 +750,7 @@ class Miner(BaseMinerNeuron):
                 encrypted_data = photo_bytes
                 encrypted_data_2 = photo_bytes_2
 
-            seed_name = chosen_seed_image.rsplit(".", 1)[0]
+            seed_name = os.path.splitext(sanitize_media_filename(chosen_seed_image))[0]
             primary_ext = os.path.splitext(photo_path)[1] or (".mp4" if primary_is_video else ".png")
             env_ext = os.path.splitext(photo_path_2)[1] or ".png"
 
@@ -694,31 +799,18 @@ class Miner(BaseMinerNeuron):
                 edge_crop_cues=bool(data.get("edge_crop_cues", False)),
             )
 
-            # Reset to a blank/not-ready state so we don't re-submit this exact
-            # capture again (that would be a duplicate) — miners are free to
-            # queue up a brand-new capture right away for the next submission.
-            with open(SCREEN_REPLAY_JSON, "w") as f:
-                json.dump({
-                    "ready": False,
-                    "photo_path": "",
-                    "photo_path_2": "",
-                    "seed_image": "",
-                    "date": "",
-                    "camera_used": "",
-                    "device_photographed": "",
-                    "capture_variant": "",
-                    "primary_media": "photo",
-                    "moire_pixel_grid": False,
-                    "screen_glare_hotspots": False,
-                    "perspective_keystone_distortion": False,
-                    "gamma_contrast_shift": False,
-                    "edge_crop_cues": False,
-                }, f, indent=2)
-
-            # The active slot just freed up — pull in the next queued capture
-            # (if any) so it goes out on a later validator query instead of
-            # sitting untouched. Oldest first.
-            self._promote_next_queued_screen_replay()
+            # Drop this capture so it is not sent twice. Active slot is
+            # reset; a queued file is deleted. Then promote the next *due*
+            # queued capture (tomorrow's IOTD stays in queue until that day).
+            if source_kind == "active":
+                with open(SCREEN_REPLAY_JSON, "w") as f:
+                    json.dump(_SCREEN_REPLAY_BLANK, f, indent=2)
+                self._promote_next_queued_screen_replay(image_request)
+            else:
+                try:
+                    os.remove(source_path)
+                except Exception as e:
+                    bt.logging.warning(f"screen_replay queue: could not remove {source_path}: {e}")
 
             media_note = "video + environment" if primary_is_video else "face + environment"
             bt.logging.info(
@@ -741,57 +833,29 @@ class Miner(BaseMinerNeuron):
             bt.logging.error(f"screen_replay.json: submission failed: {e}")
             return None
 
-    def _promote_next_queued_screen_replay(self) -> None:
-        """Promote the oldest queued capture (if any) into the active slot.
+    def _promote_next_queued_screen_replay(self, image_request=None) -> None:
+        """Promote the oldest *due* queued capture into the active slot.
 
-        submit_real_photo.py queues extra captures in SCREEN_REPLAY_QUEUE_DIR
-        when screen_replay.json is already occupied (ready=true) — see
-        queue_existing_pending_capture() there. Called right after resetting
-        screen_replay.json back to blank following a successful submission,
-        so a miner can queue up several captures back-to-back and have each
-        one sent out automatically, one per subsequent validator query,
-        without any of them being dropped or overwritten.
+        Tomorrow-IOTD files stay in queue/ until their UTC day. Called after
+        a successful active-slot submission so today's captures keep flowing.
         """
-        if not os.path.isdir(SCREEN_REPLAY_QUEUE_DIR):
-            return
-
-        try:
-            queued_files = sorted(
-                f for f in os.listdir(SCREEN_REPLAY_QUEUE_DIR)
-                if f.endswith(".json")
-            )
-        except Exception as e:
-            bt.logging.warning(f"screen_replay queue: could not list {SCREEN_REPLAY_QUEUE_DIR}: {e}")
-            return
-
-        if not queued_files:
-            return
-
-        # Filenames are timestamp-based (queued_YYYYMMDDTHHMMSSffffff.json),
-        # so a plain sort gives FIFO order — oldest capture goes out first.
-        next_file = os.path.join(SCREEN_REPLAY_QUEUE_DIR, queued_files[0])
-        try:
-            with open(next_file, "r") as f:
-                queued_data = json.load(f)
-        except Exception as e:
-            bt.logging.warning(f"screen_replay queue: could not read {next_file}: {e}, discarding it")
+        for name, path, data in self._iter_queued_screen_replays():
+            if image_request is not None and not self._screen_replay_is_due(data, image_request):
+                continue
             try:
-                os.remove(next_file)
-            except Exception:
-                pass
+                with open(SCREEN_REPLAY_JSON, "w") as f:
+                    json.dump(data, f, indent=2)
+                os.remove(path)
+                remaining = sum(
+                    1 for n, _, _ in self._iter_queued_screen_replays()
+                )
+                bt.logging.info(
+                    f"Screen-replay queue: promoted {name} to active slot "
+                    f"({remaining} still queued)."
+                )
+            except Exception as e:
+                bt.logging.warning(f"screen_replay queue: failed to promote {path}: {e}")
             return
-
-        try:
-            with open(SCREEN_REPLAY_JSON, "w") as f:
-                json.dump(queued_data, f, indent=2)
-            os.remove(next_file)
-            remaining = len(queued_files) - 1
-            bt.logging.info(
-                f"Screen-replay queue: promoted {queued_files[0]} to active slot "
-                f"({remaining} still queued)."
-            )
-        except Exception as e:
-            bt.logging.warning(f"screen_replay queue: failed to promote {next_file}: {e}")
 
     async def blacklist(self, synapse: IdentitySynapse) -> typing.Tuple[bool, str]:
         """Blacklist requests from non-whitelisted validators."""

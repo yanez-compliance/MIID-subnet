@@ -11,6 +11,8 @@ import bittensor as bt
 from pathlib import Path
 from typing import Optional
 
+from MIID.utils.media_paths import sanitize_media_filename
+
 # Miner uploads use a public write-only S3 bucket via HTTP PUT, so no AWS
 # credentials and no boto3 client are needed here.
 try:
@@ -116,17 +118,20 @@ def upload_to_s3(
     """
     # Generate S3 key path with path_signature for security.
     # Replace '+' with '_' in the filename — '+' in a URL path can be
-    # misinterpreted as a space by S3, causing the object to be stored under
-    # the wrong key.  The original variation_type (with '+') is preserved in
-    # the metadata below so the grading API can still match it correctly.
+    # misinterpreted as a space by S3. Background slots use background_in /
+    # background_out (never a bare "background" name). Combined types keep
+    # the original variation_type (with '+') in metadata below.
     timestamp = int(time.time())
     safe_variation_type = variation_type.replace("+", "_")
+    safe_seed_name = sanitize_media_filename(seed_image_name or "seed")
+    # seed_image_name is a stem (no extension); drop any leftover suffix
+    safe_seed_name = os.path.splitext(safe_seed_name)[0] or "seed"
     ext = (source_ext or ".png").lower()
     if not ext.startswith("."):
         ext = f".{ext}"
     s3_key = (
         f"submissions/{challenge_id}/{miner_hotkey}/{path_signature}/"
-        f"{seed_image_name}/{safe_variation_type}_{timestamp}{ext}.tlock"
+        f"{safe_seed_name}/{safe_variation_type}_{timestamp}{ext}.tlock"
     )
 
     # Prepare metadata
@@ -291,7 +296,13 @@ def generate_s3_key(
         timestamp = int(time.time())
 
     safe_variation_type = variation_type.replace("+", "_")
-    return f"submissions/{challenge_id}/{miner_hotkey}/{path_signature}/{seed_image_name}/{safe_variation_type}_{timestamp}.png.tlock"
+    safe_seed_name = os.path.splitext(
+        sanitize_media_filename(seed_image_name or "seed")
+    )[0] or "seed"
+    return (
+        f"submissions/{challenge_id}/{miner_hotkey}/{path_signature}/"
+        f"{safe_seed_name}/{safe_variation_type}_{timestamp}.png.tlock"
+    )
 
 
 def list_local_submissions(challenge_id: Optional[str] = None) -> list:

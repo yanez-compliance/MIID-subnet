@@ -27,7 +27,8 @@ Implements the forward function that drives each validation round:
 2. Fetch a base face image from the MIID API.
 3. Build an ImageRequest with three images: the per-round face-variation
    base, today's IOTD, and tomorrow's IOTD (both IOTDs from the API fixed
-   pool). 5 synthetic variations: 2 background, 3 combined edits; plus
+   pool). 5 synthetic variations: background_in, background_out, 3 combined
+   edits; plus
    the IOTD seeds + instructions for the REAL screen-replay task —
    miners may send as many non-duplicate real captures as they want, each one
    bundling a face close-up + environment shot of the same capture as basic
@@ -71,6 +72,7 @@ from MIID.validator.image_variations import (
     build_standard_challenge_variations,
     format_variation_requirements,
     format_real_screen_replay_instructions,
+    validate_screen_replay_uav,
     IMAGE_VARIATION_REQUIREMENTS,
 )
 
@@ -159,6 +161,100 @@ def _save_pending_allocations(file_path: Path, pending: List[Dict]):
 def _clear_pending_allocations(file_path: Path):
     """Clear pending after successful send (overwrite with empty array)."""
     _save_pending_allocations(file_path, [])
+
+
+def _collect_screen_replay_data(
+    requested: bool,
+    instructions: Optional[str],
+    image_request: Optional[ImageRequest],
+    seed_pool: List[str],
+    miner_uids: List[int],
+    s3_submissions_by_miner: Dict[str, Any],
+) -> Dict[str, Any]:
+    """Build the top-level screen_replay_data block for the results JSON.
+
+    Mirrors the old Phase-3 `uav_data` shape: record that we asked for the
+    task, which image-of-the-day was the seed, how many miners uploaded, and
+    the per-miner payloads.
+    """
+    by_miner: Dict[str, Any] = {}
+    total_submissions = 0
+    miners_with_env = 0
+    miners_with_uav = 0
+    miners_with_valid_uav = 0
+    rejected = 0
+
+    for uid_str, miner_block in s3_submissions_by_miner.items():
+        sr_subs = []
+        miner_has_env = False
+        miner_has_uav = False
+        miner_has_valid_uav = False
+        for sub in miner_block.get("submissions", []):
+            if sub.get("variation_type") != "screen_replay":
+                continue
+            uav = sub.get("screen_replay_uav")
+            uav_valid = bool(uav is not None and validate_screen_replay_uav(uav))
+            if sub.get("s3_key_angle2"):
+                miner_has_env = True
+            if uav is not None:
+                miner_has_uav = True
+            if uav_valid:
+                miner_has_valid_uav = True
+            sr_subs.append({
+                "s3_key": sub.get("s3_key"),
+                "s3_key_angle2": sub.get("s3_key_angle2"),
+                "uav_valid": uav_valid,
+            })
+        if not sr_subs:
+            continue
+        total_submissions += len(sr_subs)
+        if miner_has_env:
+            miners_with_env += 1
+        if miner_has_uav:
+            miners_with_uav += 1
+        if miner_has_valid_uav:
+            miners_with_valid_uav += 1
+        rejected += sum(1 for s in sr_subs if not s["uav_valid"])
+        by_miner[uid_str] = {
+            "hotkey": miner_block.get("hotkey"),
+            "submission_count": len(sr_subs),
+            "submissions": sr_subs,
+        }
+
+    today = {
+        "filename": image_request.daily_seed_filename if image_request else None,
+        "date": image_request.daily_seed_date if image_request else None,
+    }
+    tomorrow = {
+        "filename": image_request.tomorrow_seed_filename if image_request else None,
+        "date": image_request.tomorrow_seed_date if image_request else None,
+    }
+
+    return {
+        "requested": requested,
+        "cycle": "Phase4-C5-Execution",
+        "note": (
+            "Real screen-replay is requested every round (physical capture, "
+            "not a FLUX synthetic). Miners may upload as many non-duplicate "
+            "captures as they want; this block records what we asked and who uploaded."
+        ),
+        "instructions": instructions,
+        "image_of_the_day": {
+            "today": today,
+            "tomorrow": tomorrow,
+            "seed_pool": list(seed_pool) if seed_pool else [],
+        },
+        "miners_queried": len(miner_uids),
+        "summary": {
+            "total_miners_with_screen_replay": len(by_miner),
+            "total_screen_replays_collected": total_submissions,
+            "miners_with_environment_shot": miners_with_env,
+            "miners_with_uav": miners_with_uav,
+            "miners_with_valid_uav": miners_with_valid_uav,
+            "rejected_screen_replays": rejected,
+        },
+        "by_miner": by_miner,
+    }
 
 # =============================================================================
 
@@ -332,6 +428,8 @@ async def forward(self):
     image_request = None
     challenge_id = None
     selected_variations = None  # Track what variations were requested
+    real_screen_replay_instructions = None
+    seed_pool: List[str] = []
 
     if PHASE4_ENABLED:
         try:
@@ -343,7 +441,7 @@ async def forward(self):
                 image_filename, base64_image = image_result
 
                 # Always request (5 synthetic variations):
-                # 1–2) background_edit: indoor + outdoor
+                # 1–2) background_in (indoor) + background_out (outdoor)
                 # 3–5) combined edits: lighting+expression, lighting+pose, pose+expression
                 # screen_replay is NOT included here — it's a real physical
                 # capture, not FLUX-generated.
@@ -587,12 +685,34 @@ async def forward(self):
                 "submission_count": len(s3_data),
             }
 
+    # Screen-replay summary for the results JSON (same idea as the old
+    # Phase-3 `uav_data` block). Always present, even when nobody uploaded.
+    screen_replay_requested = bool(real_screen_replay_instructions)
+    screen_replay_data = _collect_screen_replay_data(
+        requested=screen_replay_requested,
+        instructions=real_screen_replay_instructions,
+        image_request=image_request,
+        seed_pool=seed_pool,
+        miner_uids=miner_uids,
+        s3_submissions_by_miner=s3_submissions_by_miner,
+    )
+    sr_summary = screen_replay_data["summary"]
+    today_iotd = screen_replay_data["image_of_the_day"]["today"]
+    bt.logging.info(
+        f"Screen-replay: requested={screen_replay_requested}, "
+        f"today_iotd={today_iotd.get('filename') or 'unavailable'}"
+        f"({today_iotd.get('date') or '?'}), "
+        f"miners_uploaded={sr_summary['total_miners_with_screen_replay']}/"
+        f"{screen_replay_data['miners_queried']} queried, "
+        f"submissions={sr_summary['total_screen_replays_collected']}"
+    )
+
     # Build phase4_image_data for the grading API — mirrors the structure used
     # in validator_api_test.py so the signing and payload format match exactly.
     phase4_image_data: Optional[Dict] = None
     if PHASE4_ENABLED and image_request is not None and selected_variations:
         phase4_image_data = {
-            "cycle": "Phase4-C5-Sandbox",
+            "cycle": "Phase4-C5-Execution",
             "challenge_id": challenge_id,
             "base_image_filename": image_request.image_filename,
             "daily_seed_filename": image_request.daily_seed_filename,
@@ -718,7 +838,7 @@ async def forward(self):
         "timestamp": timestamp,
         "phase4_image_data": {
             **(phase4_image_data or {}),
-            "note": "Sandbox image variations with S3 uploads for YANEZ Sandbox testing",
+            "note": "Phase 4 Cycle 5 Execution: image variations with S3 uploads for YANEZ execution scoring",
             "enabled": PHASE4_ENABLED and image_request is not None,
             "s3_bucket": "yanez-miid-sn54",
             # Fallbacks for when image_request was unavailable (phase4_image_data is None)
@@ -731,7 +851,11 @@ async def forward(self):
             "variation_types":  [v["type"] for v in selected_variations] if selected_variations else [],
             "variation_intensities": [v["intensity"] for v in selected_variations] if selected_variations else [],
             "s3_submissions_by_miner": s3_submissions_by_miner,
+            "screen_replay_requested": screen_replay_requested,
         },
+        # Same role as the old Phase-3 `uav_data` block: what we asked, the
+        # image of the day, and who actually uploaded a screen-replay.
+        "screen_replay_data": screen_replay_data,
         "responses": {},
         "rewards": {},
     }
@@ -839,6 +963,11 @@ async def forward(self):
     wandb_extra_data = {
         "variation_count":  len(selected_variations) if selected_variations else 0,
         "dendrite_timeout": request_timeout,
+        "screen_replay_requested": screen_replay_requested,
+        "screen_replay_miners_uploaded": sr_summary["total_miners_with_screen_replay"],
+        "screen_replay_submissions": sr_summary["total_screen_replays_collected"],
+        "daily_seed_filename": today_iotd.get("filename"),
+        "daily_seed_date": today_iotd.get("date"),
     }
 
     # Upload to MIID server
@@ -876,7 +1005,7 @@ async def forward(self):
             )
 
             # ==========================================================================
-            # Cache rep_data from response for NEXT forward pass (Phase 4 - Cycle 5 Sandbox)
+            # Cache rep_data from response for NEXT forward pass (Phase 4 - Cycle 5 Execution)
             # ==========================================================================
             if uav_grading_enabled:
                 if upload_response and upload_response.get("rep_cache"):

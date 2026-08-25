@@ -382,6 +382,24 @@ def _get_pipeline(model_key: str) -> Any:
 # =============================================================================
 
 
+def _canonical_background_type(req: Any, var_type: str) -> str:
+    """Use background_in / background_out in S3 keys; never a bare background type."""
+    if var_type in ("background_in", "background_out"):
+        return var_type
+    if var_type not in ("background_edit", "background"):
+        return var_type
+    description = getattr(req, "description", None) or (
+        req.get("description") if isinstance(req, dict) else None
+    ) or ""
+    detail = getattr(req, "detail", None) or (
+        req.get("detail") if isinstance(req, dict) else None
+    ) or ""
+    blob = f"{description} {detail}".lower()
+    if "outdoor" in blob:
+        return "background_out"
+    return "background_in"
+
+
 def _get_type_and_intensity(req: Any) -> Tuple[str, str]:
     """Extract .type and .intensity from a VariationRequest-like object or dict."""
     var_type = getattr(req, "type", None) or (req.get("type") if isinstance(req, dict) else None)
@@ -390,7 +408,7 @@ def _get_type_and_intensity(req: Any) -> Tuple[str, str]:
         raise ValueError("variation_requests entry missing 'type'")
     if intensity not in ("light", "medium", "far"):
         intensity = DEFAULT_INTENSITY
-    return (var_type, intensity)
+    return (_canonical_background_type(req, var_type), intensity)
 
 
 def _get_prompt_from_request(req: Any, var_type: str, intensity: str) -> str:
