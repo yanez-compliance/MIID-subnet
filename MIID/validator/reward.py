@@ -739,6 +739,11 @@ def get_image_variation_rewards(
 #   - Miners not in rep_data (snapshot) get ZERO UAV rewards
 #   - They only receive KAV (online quality) rewards
 #   - Must contribute validated UAVs to build reputation first
+#
+# Unqueried miners (not sampled for this round's KAV challenge):
+#   - Still receive UAV rewards from their snapshot reputation
+#   - KAV portion is 0 (they were not graded this round)
+#   - Still listed in combined_metrics so Flask applies the -0.02 decay
 # =============================================================================
 
 # Tier multipliers for reputation weighting (policy-based, rarely change)
@@ -866,6 +871,42 @@ def normalize_rep_score(rep_score: float, rep_tier: Optional[str] = None) -> flo
     return round(normalized, 3)
 
 
+def collect_uav_reward_uids(
+    queried_uids: List[int],
+    metagraph,
+    rep_data: Dict[str, Dict],
+) -> List[int]:
+    """
+    Build the UID list that should receive UAV rewards this round.
+
+    Queried miners (the KAV sample) come first so their KAV scores stay aligned.
+    Then every other metagraph UID whose hotkey is in the reputation snapshot is
+    appended with KAV=0 — they still earn UAV and still get the per-cycle decay.
+    Burn UID is omitted here; it is appended later in apply_reputation_rewards().
+    """
+    queried = [int(u) for u in queried_uids]
+    queried_set = set(queried)
+    extra: List[int] = []
+
+    if metagraph is None or not rep_data:
+        return queried
+
+    n_val = metagraph.n.item() if hasattr(metagraph.n, "item") else metagraph.n
+    n_val = int(n_val)
+    n_hotkeys = len(metagraph.hotkeys) if getattr(metagraph, "hotkeys", None) is not None else 0
+
+    for uid in range(n_val):
+        if uid in queried_set or uid == BURN_UID:
+            continue
+        if uid >= n_hotkeys:
+            continue
+        hotkey = metagraph.hotkeys[uid]
+        if hotkey and hotkey in rep_data:
+            extra.append(uid)
+
+    return queried + extra
+
+
 def apply_reputation_rewards(
     kav_rewards: np.ndarray,
     uids: List[int],
@@ -885,13 +926,15 @@ def apply_reputation_rewards(
       ~35% → commercial partner pool (PARTNER_HOTKEY, if on mainnet; else burned)
 
     Pipeline:
-    1. Calculate KAV portions (kav_weight × Q) and UAV portions (uav_weight × R×T)
+    1. Expand the UID list so miners that were not sampled for this round's
+       KAV challenge still receive UAV from their snapshot reputation (KAV=0).
+    2. Calculate KAV portions (kav_weight × Q) and UAV portions (uav_weight × R×T)
        separately for each miner.
-    2. Rescale KAV and UAV portions independently so they hit exact target totals:
+    3. Rescale KAV and UAV portions independently so they hit exact target totals:
          KAV target = miner_fraction × kav_weight   (e.g. 0.35 × 0.10 = 0.035)
          UAV target = miner_fraction × uav_weight   (e.g. 0.35 × 0.90 = 0.315)
        where miner_fraction = 1.0 - burn_fraction - PARTNER_FRACTION = 0.35
-    3. Combine rescaled portions per miner, append burn UID 59 and (if on
+    4. Combine rescaled portions per miner, append burn UID 59 and (if on
        mainnet) the partner UID.
 
     This ensures that after burn, exactly kav_weight% of kept rewards go to KAV
@@ -899,8 +942,8 @@ def apply_reputation_rewards(
     Miner rewards are NOT affected by whether the partner is on mainnet.
 
     Args:
-        kav_rewards: KAV quality scores (Q) from get_name_variation_rewards()
-        uids: List of miner UIDs
+        kav_rewards: KAV quality scores (Q) from get_image_variation_rewards()
+        uids: List of queried miner UIDs (the KAV sample for this round)
         rep_data: Dict mapping hotkey -> {rep_score, rep_tier} from Flask
         metagraph: Bittensor metagraph for hotkey lookup
         burn_fraction: Fraction to burn (default 0.30; partner gets PARTNER_FRACTION)
@@ -914,6 +957,27 @@ def apply_reputation_rewards(
             - final_uids: np.ndarray including burn UID [+ partner UID]
             - combined_metrics: List of dicts with full breakdown per miner
     """
+    queried_uids = [int(u) for u in uids]
+    queried_set = set(queried_uids)
+    if not rep_data:
+        rep_data = {}
+    kav_by_uid = {
+        int(uid): float(kav_rewards[i])
+        for i, uid in enumerate(queried_uids)
+        if i < len(kav_rewards)
+    }
+
+    uids = collect_uav_reward_uids(queried_uids, metagraph, rep_data)
+    kav_rewards = np.array([kav_by_uid.get(uid, 0.0) for uid in uids], dtype=float)
+
+    n_unqueried = len(uids) - len(queried_uids)
+    if n_unqueried > 0:
+        bt.logging.info(
+            f"UAV rewards expanded to unqueried miners: "
+            f"{len(queried_uids)} queried + {n_unqueried} snapshot miners "
+            f"not sampled this round (KAV=0, UAV from reputation)."
+        )
+
     # Separate arrays for KAV and UAV portions
     kav_portions = np.zeros(len(uids))
     uav_portions = np.zeros(len(uids))
@@ -921,6 +985,7 @@ def apply_reputation_rewards(
 
     # --- Step 1: Calculate KAV and UAV portions separately ---
     new_miner_count = 0
+    unqueried_count = 0
     for i, uid in enumerate(uids):
         hotkey = metagraph.hotkeys[uid]
         Q = kav_rewards[i]  # KAV quality score
@@ -963,13 +1028,22 @@ def apply_reputation_rewards(
         kav_portions[i] = kav_portion_raw
         uav_portions[i] = uav_portion_raw
 
-        # Build metrics - merge KAV details with reputation metrics
-        kav_info = kav_metrics[i] if kav_metrics and i < len(kav_metrics) else {}
+        was_queried = uid in queried_set
+        if not was_queried:
+            unqueried_count += 1
+
+        # Build metrics - merge KAV details with reputation metrics.
+        # kav_metrics is aligned with the original queried UID list (queried miners
+        # are first after expansion), so only index it for queried miners.
+        kav_info = (
+            kav_metrics[i] if was_queried and kav_metrics and i < len(kav_metrics) else {}
+        )
 
         is_new_miner = rep is None
         metric_entry = {
             "uid": uid,
             "miner_hotkey": hotkey,
+            "was_queried": was_queried,  # False = UAV-only this round (not in KAV sample)
             "is_new_miner": is_new_miner,  # True if miner not in rep_data (zero UAV)
             # KAV details
             "quality_score": float(Q),
@@ -1157,7 +1231,9 @@ def apply_reputation_rewards(
 
     if partner_uid is not None and actual_partner > 0:
         bt.logging.info(
-            f"Dual Incentive applied for {len(uids)} miners ({new_miner_count} new, KAV-only). "
+            f"Dual Incentive applied for {len(uids)} miners "
+            f"({len(queried_uids)} queried, {unqueried_count} unqueried UAV-only, "
+            f"{new_miner_count} new/KAV-only). "
             f"KAV: {kav_weight}, UAV: {uav_weight}, "
             f"Burn: {applied_burn:.2%} (UID {BURN_UID}), "
             f"Partner: {actual_partner:.2%} (UID {partner_uid}), "
@@ -1165,7 +1241,9 @@ def apply_reputation_rewards(
         )
     else:
         bt.logging.info(
-            f"Applied reputation rewards for {len(uids)} miners ({new_miner_count} new, KAV-only). "
+            f"Applied reputation rewards for {len(uids)} miners "
+            f"({len(queried_uids)} queried, {unqueried_count} unqueried UAV-only, "
+            f"{new_miner_count} new/KAV-only). "
             f"KAV: {kav_weight}, UAV: {uav_weight}, "
             f"Burn: {applied_burn:.2%} (UID {BURN_UID}) [partner not on mainnet], "
             f"mode={burn_mode}."

@@ -36,7 +36,8 @@ Implements the forward function that drives each validation round:
 4. Send the request to miners in batches; collect S3 submission references.
 5. Grade submissions via the external grading API (KAV) using
    get_image_variation_rewards().
-6. Combine KAV scores with reputation (UAV) via apply_reputation_rewards().
+6. Combine KAV scores with reputation (UAV) via apply_reputation_rewards()
+   — unqueried miners still receive UAV and are listed for reputation decay.
 7. Update miner weights and upload results to the MIID server.
 """
 
@@ -790,7 +791,8 @@ async def forward(self):
         )
 
         bt.logging.info(
-            f"Applied reputation rewards: {len(miner_uids_list)} miners, "
+            f"Applied reputation rewards: {len(combined_metrics)} metric entries "
+            f"(queried KAV sample={len(miner_uids_list)}), "
             f"using rep_snapshot_version={_cached_rep_version or 'None (first run)'}"
         )
     else:
@@ -808,14 +810,19 @@ async def forward(self):
         combined_metrics = detailed_metrics
 
     # Verify UID-reward mapping before updating scores
+    queried_uid_set = set(int(u) for u in miner_uids)
     bt.logging.info("=== UID-REWARD MAPPING VERIFICATION ===")
     for i, uid in enumerate(updated_uids):
         reward = rewards[i] if i < len(rewards) else 0.0
         if uid == 59:
             bt.logging.info(f"UID {uid}: IS BURNED EVENT. NO REWARD OR RESPONSE.")
         else:
-            has_response = uid_response_map.get(uid) is not None
-            bt.logging.info(f"UID {uid}: Reward={reward:.4f}, HasResponse={has_response}")
+            has_response = uid_response_map.get(int(uid)) is not None
+            was_queried = int(uid) in queried_uid_set
+            bt.logging.info(
+                f"UID {uid}: Reward={reward:.4f}, HasResponse={has_response}, "
+                f"WasQueried={was_queried}"
+            )
     bt.logging.info("=== END UID-REWARD MAPPING VERIFICATION ===")
 
     self.update_scores(rewards, updated_uids)
@@ -860,6 +867,14 @@ async def forward(self):
         "rewards": {},
     }
 
+    # rewards/updated_uids are aligned and may include unqueried miners (UAV-only)
+    # plus burn/partner UIDs. Do not index rewards by miner_uids position.
+    reward_by_uid = {
+        int(updated_uids[i]): float(rewards[i])
+        for i in range(len(updated_uids))
+    }
+    queried_uid_set = set(int(u) for u in miner_uids)
+
     for i, uid in enumerate(miner_uids):
         # Get the response for this specific UID from our mapping
         response = uid_response_map.get(uid)
@@ -876,6 +891,7 @@ async def forward(self):
         response_data = {
             "uid":            int(uid),
             "hotkey":         str(self.metagraph.axons[uid].hotkey),
+            "was_queried":    True,
             "axon":           axon_data,
             "response_time":  response.process_time if response else None,
             "s3_submissions": s3_submissions_by_miner.get(str(uid), {}),
@@ -893,8 +909,31 @@ async def forward(self):
                 response_data["error"] = {"message": "Empty or invalid response"}
 
         results["responses"][str(uid)] = response_data
-        results["rewards"][str(uid)] = float(rewards[i]) if i < len(rewards) else 0.0
-    
+        results["rewards"][str(uid)] = reward_by_uid.get(int(uid), 0.0)
+
+    # Record UAV-only rewards for miners that were not sampled this round
+    # (and burn/partner UIDs) so the upload JSON matches set_weights.
+    for uid_int, reward_val in reward_by_uid.items():
+        uid_str = str(uid_int)
+        if uid_str in results["rewards"]:
+            continue
+        results["rewards"][uid_str] = reward_val
+        if uid_int in queried_uid_set:
+            continue
+        if uid_int >= len(self.metagraph.axons):
+            continue
+        axon = self.metagraph.axons[uid_int]
+        results["responses"][uid_str] = {
+            "uid": int(uid_int),
+            "hotkey": str(axon.hotkey),
+            "was_queried": False,
+            "note": (
+                "Not sampled for this round's KAV challenge; "
+                "received UAV-only reward from reputation snapshot."
+            ),
+            "s3_submissions": {},
+            "scoring_details": {},
+        } 
     # logging the spec_version before setting weights
     bt.logging.info(f"Spec version for setting weights: {self.spec_version}")
     (success, uint_uids, uint_weights) = self.set_weights()
@@ -1035,11 +1074,14 @@ async def forward(self):
     wandb_extra_data["upload_success"] = upload_success
 
     # Call log_step from the Validator instance AFTER the upload attempt
+    log_uids = (
+        updated_uids.tolist() if hasattr(updated_uids, "tolist") else list(updated_uids)
+    )
     self.log_step(
-        uids=miner_uids, # Pass the list of uids
-        metrics=detailed_metrics, # Pass the detailed metrics list
-        rewards=rewards, # Pass the numpy array of rewards
-        extra_data=wandb_extra_data # Pass additional context
+        uids=log_uids,
+        metrics=combined_metrics if uav_grading_enabled else detailed_metrics,
+        rewards=rewards,
+        extra_data=wandb_extra_data
     )
     
     # Delete JSON file and directories ONLY after successful upload (keep on testnet for review)
