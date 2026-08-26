@@ -221,18 +221,21 @@ def upload_data(hotkey):
                         "miners": reward_allocation_data.get("miners")
                     }]
 
-                # Count how many pending allocations each miner has a reward slot in
-                # (stack -0.02 per cycle). Decay anyone in the honored snapshot who
-                # was queried and listed in allocation miners — even if UAV is 0.
+                # Decay every miner in the honored snapshot once per pending
+                # allocation (stack -0.02 per cycle) — including miners the
+                # validator did not query this round. UAV reputation is
+                # independent of the KAV sample. New miners who appear only
+                # in allocation.miners (not yet in the snapshot) have no
+                # reputation to decay.
                 decay_counts = {}  # {miner_hotkey: times to apply -0.02}
+                snapshot_miners_list = current_snapshot.get("miners", [])
                 for allocation in allocations:
-                    for allocation_miner in allocation.get("miners", []):
-                        miner_hotkey = allocation_miner.get("miner_hotkey")
+                    for snapshot_miner in snapshot_miners_list:
+                        miner_hotkey = snapshot_miner.get("hotkey")
                         if not miner_hotkey:
                             continue
                         decay_counts[miner_hotkey] = decay_counts.get(miner_hotkey, 0) + 1
 
-                snapshot_miners_list = current_snapshot.get("miners", [])
                 snapshot_miners_dict = {miner.get("hotkey"): miner for miner in snapshot_miners_list}
 
                 updated_hotkeys = []
