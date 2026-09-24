@@ -233,7 +233,7 @@ def _collect_screen_replay_data(
 
     return {
         "requested": requested,
-        "cycle": "Phase4-C5-Execution",
+        "cycle": "Phase4-C6-Sandbox",
         "note": (
             "Real screen-replay is requested every round (physical capture, "
             "not a FLUX synthetic). Miners may upload as many non-duplicate "
@@ -713,7 +713,7 @@ async def forward(self):
     phase4_image_data: Optional[Dict] = None
     if PHASE4_ENABLED and image_request is not None and selected_variations:
         phase4_image_data = {
-            "cycle": "Phase4-C5-Execution",
+            "cycle": "Phase4-C6-Sandbox",
             "challenge_id": challenge_id,
             "base_image_filename": image_request.image_filename,
             "daily_seed_filename": image_request.daily_seed_filename,
@@ -845,7 +845,7 @@ async def forward(self):
         "timestamp": timestamp,
         "phase4_image_data": {
             **(phase4_image_data or {}),
-            "note": "Phase 4 Cycle 5 Execution: image variations with S3 uploads for YANEZ execution scoring",
+            "note": "Phase 4 Cycle 6 Sandbox: image variations with S3 uploads for YANEZ sandbox testing",
             "enabled": PHASE4_ENABLED and image_request is not None,
             "s3_bucket": "yanez-miid-sn54",
             # Fallbacks for when image_request was unavailable (phase4_image_data is None)
@@ -1044,7 +1044,7 @@ async def forward(self):
             )
 
             # ==========================================================================
-            # Cache rep_data from response for NEXT forward pass (Phase 4 - Cycle 5 Execution)
+            # Cache rep_data from response for NEXT forward pass (Phase 4 - Cycle 6 Sandbox)
             # ==========================================================================
             if uav_grading_enabled:
                 if upload_response and upload_response.get("rep_cache"):
