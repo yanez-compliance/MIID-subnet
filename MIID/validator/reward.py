@@ -51,6 +51,10 @@ Reward allocation (SN54 Dual Incentive Mechanism — effective July 1):
   The partner pool is funded by reducing the burn from 65% → 30%, NOT by
   reducing miner rewards.  If PARTNER_HOTKEY is absent from the metagraph the
   35% partner fraction is added to the burn (total burn reverts to 65%).
+
+  If there is no UAV data this round but the partner is on mainnet, the unused
+  UAV share (~31.5%) is rerouted to the partner (partner > 35%) instead of
+  being burned.  If the partner is absent, unused UAV still burns.
 """
 
 import numpy as np
@@ -937,9 +941,15 @@ def apply_reputation_rewards(
     4. Combine rescaled portions per miner, append burn UID 59 and (if on
        mainnet) the partner UID.
 
+    If there is no UAV data this round and the partner is on mainnet, the unused
+    UAV share is added to the partner allocation (partner > 35%) instead of
+    being burned. Unused KAV still burns. If the partner is absent, unused UAV
+    still burns.
+
     This ensures that after burn, exactly kav_weight% of kept rewards go to KAV
-    and uav_weight% go to UAV, regardless of the raw score distributions.
-    Miner rewards are NOT affected by whether the partner is on mainnet.
+    and uav_weight% go to UAV, regardless of the raw score distributions
+    (when both are available). Miner KAV rewards are NOT affected by whether
+    the partner is on mainnet.
 
     Args:
         kav_rewards: KAV quality scores (Q) from get_image_variation_rewards()
@@ -1086,17 +1096,18 @@ def apply_reputation_rewards(
     # Every branch must satisfy:
     #   applied_burn + actual_partner + target_kav_total + target_uav_total == 1.0
     #
-    # Unused miner weight (missing KAV or UAV) always flows to burn.
+    # Unused KAV weight still flows to burn.
+    # Unused UAV weight reroutes to the partner when present; otherwise burns.
     # Missing partner always adds PARTNER_FRACTION to burn.
     #
     # Case | KAV | UAV | Partner | burn   | partner | kav    | uav
     # -----|-----|-----|---------|--------|---------|--------|-------
     #  1   |  ✗  |  ✗  |   ✗    | 1.000  | 0.000   | 0.000  | 0.000
-    #  2   |  ✗  |  ✗  |   ✓    | 0.650  | 0.350   | 0.000  | 0.000
+    #  2   |  ✗  |  ✗  |   ✓    | 0.335  | 0.665   | 0.000  | 0.000  (UAV→partner)
     #  3   |  ✗  |  ✓  |   ✗    | 0.685  | 0.000   | 0.000  | 0.315
     #  4   |  ✓  |  ✗  |   ✗    | 0.965  | 0.000   | 0.035  | 0.000
     #  5   |  ✗  |  ✓  |   ✓    | 0.335  | 0.350   | 0.000  | 0.315
-    #  6   |  ✓  |  ✗  |   ✓    | 0.615  | 0.350   | 0.035  | 0.000
+    #  6   |  ✓  |  ✗  |   ✓    | 0.300  | 0.665   | 0.035  | 0.000  (UAV→partner)
     #  7   |  ✓  |  ✓  |   ✗    | 0.650  | 0.000   | 0.035  | 0.315
     #  8   |  ✓  |  ✓  |   ✓    | 0.300  | 0.350   | 0.035  | 0.315
 
@@ -1109,12 +1120,13 @@ def apply_reputation_rewards(
         actual_partner = 0.0
 
     elif not has_kav and not has_uav:
-        # Case 2 — no miner output, but partner present → partner keeps 35%, rest burns
+        # Case 2 — no miner output, but partner present → unused UAV share
+        # reroutes to partner; unused KAV share still burns
         burn_mode      = "no_kav_no_uav"
         target_kav_total = 0.0
         target_uav_total = 0.0
-        applied_burn   = burn_fraction + miner_fraction  # 0.30 + 0.35 = 0.65
-        actual_partner = PARTNER_FRACTION                # 0.35
+        applied_burn   = burn_fraction + _kav_share              # 0.30 + 0.035 = 0.335
+        actual_partner = PARTNER_FRACTION + _uav_share           # 0.35 + 0.315 = 0.665
 
     elif not has_kav and not has_partner:
         # Case 3 — no KAV, no partner → unused KAV share + partner fraction go to burn
@@ -1141,12 +1153,13 @@ def apply_reputation_rewards(
         actual_partner = PARTNER_FRACTION               # 0.35
 
     elif not has_uav:
-        # Case 6 — no UAV, but KAV + partner present → unused UAV share goes to burn
+        # Case 6 — no UAV, but KAV + partner present → unused UAV share
+        # reroutes to partner (partner gets 35% + ~31.5%) instead of burning
         burn_mode      = "no_uav"
         target_kav_total = _kav_share                   # 0.035
         target_uav_total = 0.0
-        applied_burn   = burn_fraction + _uav_share     # 0.30 + 0.315 = 0.615
-        actual_partner = PARTNER_FRACTION               # 0.35
+        applied_burn   = burn_fraction                  # 0.30
+        actual_partner = PARTNER_FRACTION + _uav_share  # 0.35 + 0.315 = 0.665
 
     elif not has_partner:
         # Case 7 — KAV + UAV present, but partner not registered → partner fraction burns
