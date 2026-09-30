@@ -1,7 +1,7 @@
 # Sign a Bittensor Message
 
 Use this to sign a short message with your **miner hotkey** or **coldkey**.  
-Copy any of the scripts below into a `.py` file and run it — no need for this repo.
+Paste either block below into your terminal — no need for this repo.
 
 ## Requirements
 
@@ -13,63 +13,63 @@ You need a local wallet under `~/.bittensor/wallets/`.
 
 ---
 
-## Sign with a miner hotkey
+## Copy & paste into terminal (hotkey)
 
-Replace `WALLET_NAME`, `HOTKEY_NAME`, and `YOUR_MESSAGE`.
+Paste this **entire block** into your terminal. It will ask for wallet name, hotkey name, and the message.
 
-```python
+```bash
+cat > /tmp/sign_hotkey.py <<'EOF'
 from datetime import datetime
 import bittensor
 
-WALLET_NAME = "my_wallet"
-HOTKEY_NAME = "my_hotkey"
-MESSAGE = "YOUR_MESSAGE"
+wallet_name = input("Wallet name: ").strip()
+hotkey_name = input("Hotkey name: ").strip()
+message = input("Message to sign: ").strip()
 
+timestamp = datetime.now()
+timezone_name = timestamp.astimezone().tzname() or "UTC"
+signed_message = f"<Bytes>On {timestamp} {timezone_name} {message}</Bytes>"
 
-def sign(message_text: str, keypair) -> str:
-    timestamp = datetime.now()
-    timezone_name = timestamp.astimezone().tzname() or "UTC"
-    signed_message = f"<Bytes>On {timestamp} {timezone_name} {message_text}</Bytes>"
-    signature = keypair.sign(data=signed_message)
-    return (
-        f"{signed_message}\n"
-        f"\tSigned by: {keypair.ss58_address}\n"
-        f"\tSignature: {signature.hex()}"
-    )
+wallet = bittensor.Wallet(name=wallet_name, hotkey=hotkey_name)
+signature = wallet.hotkey.sign(data=signed_message)
 
-
-wallet = bittensor.Wallet(name=WALLET_NAME, hotkey=HOTKEY_NAME)
-print(sign(MESSAGE, wallet.hotkey))
+print(
+    f"{signed_message}\n"
+    f"\tSigned by: {wallet.hotkey.ss58_address}\n"
+    f"\tSignature: {signature.hex()}"
+)
+EOF
+python /tmp/sign_hotkey.py
 ```
 
 ---
 
-## Sign with a coldkey
+## Copy & paste into terminal (coldkey)
 
-Replace `WALLET_NAME` and `YOUR_MESSAGE`. You may be prompted for the coldkey password.
+Paste this **entire block** into your terminal. It will ask for wallet name and the message. You may be prompted for the coldkey password.
 
-```python
+```bash
+cat > /tmp/sign_coldkey.py <<'EOF'
 from datetime import datetime
 import bittensor
 
-WALLET_NAME = "my_wallet"
-MESSAGE = "YOUR_MESSAGE"
+wallet_name = input("Wallet name: ").strip()
+message = input("Message to sign: ").strip()
 
+timestamp = datetime.now()
+timezone_name = timestamp.astimezone().tzname() or "UTC"
+signed_message = f"<Bytes>On {timestamp} {timezone_name} {message}</Bytes>"
 
-def sign(message_text: str, keypair) -> str:
-    timestamp = datetime.now()
-    timezone_name = timestamp.astimezone().tzname() or "UTC"
-    signed_message = f"<Bytes>On {timestamp} {timezone_name} {message_text}</Bytes>"
-    signature = keypair.sign(data=signed_message)
-    return (
-        f"{signed_message}\n"
-        f"\tSigned by: {keypair.ss58_address}\n"
-        f"\tSignature: {signature.hex()}"
-    )
+wallet = bittensor.Wallet(name=wallet_name)
+signature = wallet.coldkey.sign(data=signed_message)
 
-
-wallet = bittensor.Wallet(name=WALLET_NAME)
-print(sign(MESSAGE, wallet.coldkey))
+print(
+    f"{signed_message}\n"
+    f"\tSigned by: {wallet.coldkey.ss58_address}\n"
+    f"\tSignature: {signature.hex()}"
+)
+EOF
+python /tmp/sign_coldkey.py
 ```
 
 ---
