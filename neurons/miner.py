@@ -611,7 +611,7 @@ class Miner(BaseMinerNeuron):
                 bt.logging.warning("Voice: Generation returned empty bytes")
                 return []
 
-            if not validate_voice_identity(base_wav, generated_wav, min_similarity=0.25):
+            if not validate_voice_identity(base_wav, generated_wav, min_similarity=0.4):
                 bt.logging.warning("Voice: Skipping — speaker identity not preserved")
                 return []
 

@@ -23,7 +23,8 @@ import bittensor as bt
 SPEECHBRAIN_MODEL_ID = "speechbrain/spkrec-ecapa-voxceleb"
 
 # Default cosine-similarity threshold once real embeddings are wired
-DEFAULT_MIN_SIMILARITY = 0.25
+# (AdaFace uses 0.7; voice ECAPA scores sit a bit lower so default is 0.6)
+DEFAULT_MIN_SIMILARITY = 0.6
 
 
 def validate_voice_identity(
@@ -40,7 +41,7 @@ def validate_voice_identity(
     Args:
         base_wav: Reference speaker WAV bytes.
         generated_wav: Miner-generated WAV bytes.
-        min_similarity: Minimum cosine similarity (unused in stub).
+        min_similarity: Minimum cosine similarity (default 0.6; unused in stub).
         model: Optional preloaded encoder (unused in stub).
 
     Returns:
