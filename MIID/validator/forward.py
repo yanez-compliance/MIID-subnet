@@ -51,12 +51,14 @@ from typing import List, Dict, Any, Optional
 from datetime import datetime
 from pathlib import Path
 
-from MIID.protocol import IdentitySynapse, ImageRequest, VariationRequest
+from MIID.protocol import IdentitySynapse, ImageRequest, VariationRequest, VoiceRequest
 from MIID.validator.reward import get_image_variation_rewards, apply_reputation_rewards
 from MIID.utils.uids import get_random_uids
 from MIID.utils.sign_message import sign_message
 
 from MIID.validator.base_images import fetch_image_from_api
+from MIID.validator.base_voices import fetch_voice_from_api
+from MIID.validator.voice_words import generate
 from MIID.validator.fixed_images import (
     ensure_daily_fixed_image,
     load_seed_pair_base64,
@@ -296,7 +298,9 @@ async def dendrite_with_retries(
     def create_default_response():
         return IdentitySynapse(
             image_request=synapse.image_request,
+            voice_request=synapse.voice_request,
             s3_submissions=[],
+            voice_s3_submissions=[],
             process_time=None,
         )
     
@@ -562,12 +566,70 @@ async def forward(self):
             image_request = None
             selected_variations = None
 
+    # 3b) Build VoiceRequest (UAV post-graded only — no KAV)
+    voice_request = None
+    target_words: List[str] = []
+    karaoke_payload: Optional[Dict[str, Any]] = None
+    try:
+        voice_result = fetch_voice_from_api(self.wallet)
+        if voice_result is None:
+            bt.logging.warning("Voice challenge skipped: Could not fetch voice from API")
+        else:
+            voice_filename, voice_b64, voice_language, voice_transcript = voice_result
+            karaoke = generate(voice_language)
+            target_words = list(karaoke.words)
+            karaoke_payload = karaoke.to_dict()
+
+            # Reuse image challenge drand timing when available; else compute independently
+            if image_request is not None:
+                voice_target_round = image_request.target_drand_round
+                voice_reveal_timestamp = image_request.reveal_timestamp
+                voice_challenge_id = challenge_id
+            else:
+                reveal_delay = calculate_reveal_buffer(
+                    getattr(self.config.neuron, "reveal_delay_seconds", REVEAL_DELAY_SECONDS)
+                )
+                voice_target_round, voice_reveal_timestamp = calculate_target_round(reveal_delay)
+                voice_challenge_id = (
+                    challenge_id
+                    or f"challenge_{int(time.time())}_{self.wallet.hotkey.ss58_address[:8]}"
+                )
+                if challenge_id is None:
+                    challenge_id = voice_challenge_id
+
+            voice_request = VoiceRequest(
+                base_voice=voice_b64,
+                voice_filename=voice_filename,
+                language=voice_language,
+                target_words=target_words,
+                reference_transcript=voice_transcript,
+                target_drand_round=voice_target_round,
+                reveal_timestamp=voice_reveal_timestamp,
+                challenge_id=voice_challenge_id,
+            )
+            bt.logging.info(
+                f"Voice challenge: file='{voice_filename}', lang={voice_language}, "
+                f"tts_text='{karaoke.text}', "
+                f"duration≈{karaoke.record_duration_seconds()}s, "
+                f"drand round {voice_target_round}"
+            )
+    except Exception as e:
+        bt.logging.warning(f"Voice challenge: Could not create voice request: {e}")
+        import traceback
+        bt.logging.debug(f"Voice error traceback: {traceback.format_exc()}")
+        voice_request = None
+        karaoke_payload = None
+
     # 4) Prepare synapse
     request_synapse = IdentitySynapse(
         timeout=request_timeout,
         image_request=image_request,
+        voice_request=voice_request,
     )
-    bt.logging.info(f"Querying {len(miner_uids)} miners with image variation request")
+    bt.logging.info(
+        f"Querying {len(miner_uids)} miners "
+        f"(image={'yes' if image_request else 'no'}, voice={'yes' if voice_request else 'no'})"
+    )
     await asyncio.sleep(3)
 
     # 5) Query miners in batches
@@ -611,6 +673,15 @@ async def forward(self):
                 bt.logging.warning(f"Miner {uid}: returned empty s3_submissions.")
             else:
                 bt.logging.info(f"Miner {uid}: returned {len(response.s3_submissions)} S3 submissions.")
+
+            voice_subs = getattr(response, "voice_s3_submissions", None)
+            if voice_request is not None:
+                if not voice_subs:
+                    bt.logging.warning(f"Miner {uid}: returned empty voice_s3_submissions.")
+                else:
+                    bt.logging.info(
+                        f"Miner {uid}: returned {len(voice_subs)} voice S3 submissions."
+                    )
 
         if i + batch_size < len(miner_uids):
             sleep_time = 2
@@ -686,6 +757,27 @@ async def forward(self):
                 "submission_count": len(s3_data),
             }
 
+    # Collect voice S3 submissions for UAV post-grading (no KAV path).
+    voice_s3_submissions_by_miner: Dict[str, Any] = {}
+    for uid, response in uid_response_map.items():
+        voice_subs = getattr(response, "voice_s3_submissions", None)
+        if voice_request is not None and voice_subs:
+            miner_hotkey = str(self.metagraph.axons[uid].hotkey)
+            voice_data = []
+            for sub in voice_subs:
+                voice_data.append({
+                    "s3_key":         sub.s3_key,
+                    "image_hash":     sub.image_hash,
+                    "signature":      sub.signature,
+                    "variation_type": sub.variation_type,
+                    "path_signature": sub.path_signature,
+                })
+            voice_s3_submissions_by_miner[str(uid)] = {
+                "hotkey":           miner_hotkey,
+                "submissions":      voice_data,
+                "submission_count": len(voice_data),
+            }
+
     # Screen-replay summary for the results JSON (same idea as the old
     # Phase-3 `uav_data` block). Always present, even when nobody uploaded.
     screen_replay_requested = bool(real_screen_replay_instructions)
@@ -727,6 +819,28 @@ async def forward(self):
             "variation_types": [v["type"] for v in selected_variations],
             "variation_intensities": [v["intensity"] for v in selected_variations],
             "s3_submissions_by_miner": s3_submissions_by_miner,
+        }
+
+    # Voice payload for UAV post-grading only (never sent to KAV /grade_v2).
+    phase_voice_data: Optional[Dict] = None
+    if voice_request is not None:
+        phase_voice_data = {
+            "cycle": "Voice-UAV-Stub",
+            "note": (
+                "Voice clone challenge: submissions collected for UAV post-grading only. "
+                "No KAV / live grading API call for voice."
+            ),
+            "enabled": True,
+            "challenge_id": voice_request.challenge_id,
+            "voice_filename": voice_request.voice_filename,
+            "language": voice_request.language,
+            "target_words": list(voice_request.target_words),
+            "karaoke": karaoke_payload,
+            "reference_transcript": voice_request.reference_transcript,
+            "target_drand_round": voice_request.target_drand_round,
+            "reveal_timestamp": voice_request.reveal_timestamp,
+            "s3_bucket": "yanez-miid-sn54",
+            "voice_s3_submissions_by_miner": voice_s3_submissions_by_miner,
         }
 
     # Wait for drand reveal before grading — images stay encrypted until T+40 min
@@ -863,6 +977,11 @@ async def forward(self):
         # Same role as the old Phase-3 `uav_data` block: what we asked, the
         # image of the day, and who actually uploaded a screen-replay.
         "screen_replay_data": screen_replay_data,
+        # Voice clone submissions for UAV post-grading (no local/KAV rewards).
+        "phase_voice_data": phase_voice_data or {
+            "enabled": False,
+            "note": "No voice request in this round",
+        },
         "responses": {},
         "rewards": {},
     }
@@ -895,6 +1014,7 @@ async def forward(self):
             "axon":           axon_data,
             "response_time":  response.process_time if response else None,
             "s3_submissions": s3_submissions_by_miner.get(str(uid), {}),
+            "voice_s3_submissions": voice_s3_submissions_by_miner.get(str(uid), {}),
             "scoring_details": detailed_metrics[i] if i < len(detailed_metrics) else {},
         }
         if response is None:

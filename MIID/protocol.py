@@ -188,30 +188,59 @@ class S3Submission(BaseModel):
 
 
 # =============================================================================
-# Main Synapse: Image Variation Protocol
+# Voice Clone Challenge Types
+# =============================================================================
+
+class VoiceRequest(BaseModel):
+    """Voice clone request from validator to miner.
+
+    Contains a ~30s reference WAV (English or Spanish) and a list of target
+    words the miner must generate in the same speaker identity. The miner
+    generates a WAV, encrypts it with drand timelock, uploads to S3, and
+    returns S3 references. Graded via UAV post-validation only (no KAV).
+    """
+    base_voice: str              # Base64 encoded reference WAV (~30s)
+    voice_filename: str          # Original filename for reference
+    language: str                # "en" | "es"
+    target_words: List[str] = Field(default_factory=list)  # Words miner must speak
+    reference_transcript: str = ""  # What the reference clip says (from API)
+    target_drand_round: int      # Drand round when decryption becomes possible
+    reveal_timestamp: int        # Unix timestamp when reveal occurs
+    challenge_id: Optional[str] = None  # Unique identifier for this challenge
+
+    class Config:
+        arbitrary_types_allowed = True
+
+
+# =============================================================================
+# Main Synapse: Image Variation + Voice Protocol
 # =============================================================================
 
 class IdentitySynapse(bt.Synapse):
     """
-    Protocol for requesting face image variations from miners.
+    Protocol for requesting face image variations and/or voice clones from miners.
 
-    The validator sends a base image with variation parameters; the miner
-    generates encrypted image variations, uploads them to S3, and returns
+    The validator sends a base image with variation parameters and/or a voice
+    request; the miner generates encrypted media, uploads to S3, and returns
     S3 submission references.
 
     Attributes:
-        image_request:   Validator → Miner. Base image + variation parameters.
-        s3_submissions:  Miner → Validator. S3 paths + hashes (no actual images).
-        process_time:    Optional timing metadata attached by the validator.
+        image_request:          Validator → Miner. Base image + variation parameters.
+        s3_submissions:         Miner → Validator. Image S3 paths + hashes.
+        voice_request:          Validator → Miner. Reference voice + target words.
+        voice_s3_submissions:   Miner → Validator. Voice S3 paths + hashes.
+        process_time:           Optional timing metadata attached by the validator.
     """
 
     timeout: float = 120.0
 
     # Request (validator → miner)
     image_request: Optional[ImageRequest] = None
+    voice_request: Optional[VoiceRequest] = None
 
     # Response (miner → validator)
     s3_submissions: Optional[List[S3Submission]] = None
+    voice_s3_submissions: Optional[List[S3Submission]] = None
 
     # Timing metadata (attached by the validator dendrite)
     process_time: Optional[float] = None

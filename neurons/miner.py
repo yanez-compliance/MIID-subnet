@@ -136,6 +136,20 @@ try:
 except ImportError as _phase4_err:
     PHASE4_AVAILABLE = False
 
+# Voice challenge stubs (optional — same encrypt/upload stack as Phase 4)
+try:
+    from MIID.miner.voice_generator import (
+        decode_base_voice,
+        generate_voice_clone,
+        hash_voice_bytes,
+    )
+    from MIID.miner.speech_brain_compare import validate_voice_identity
+    from MIID.miner.drand_encrypt import encrypt_image_for_drand, is_timelock_available
+    from MIID.miner.s3_upload import upload_to_s3
+    VOICE_AVAILABLE = True
+except ImportError as _voice_err:
+    VOICE_AVAILABLE = False
+
 
 class Miner(BaseMinerNeuron):
     """
@@ -205,7 +219,14 @@ class Miner(BaseMinerNeuron):
                     "Missing Hugging Face token. Set HF_TOKEN or HUGGINGFACE_TOKEN in your "
                     'environment, e.g. export HF_TOKEN="hf_..."'
                 )
+        if VOICE_AVAILABLE:
+            bt.logging.info("Voice clone challenge: ENABLED (stub generator + SpeechBrain stub)")
         else:
+            bt.logging.warning(
+                "Voice clone challenge: DISABLED (missing packages)."
+            )
+
+        if not PHASE4_AVAILABLE:
             bt.logging.warning(
                 "Phase 4 image generation: DISABLED (missing packages). "
                 "Install with: pip install -r requirements-miner.txt  "
@@ -251,66 +272,91 @@ class Miner(BaseMinerNeuron):
 
     async def forward(self, synapse: IdentitySynapse) -> IdentitySynapse:
         """
-        Process an image variation request.
+        Process image variation and/or voice clone requests.
 
-        Generates face image variations, encrypts with drand timelock,
-        uploads to S3, and returns S3 submission references.
+        Generates face image variations and/or a voice-cloned WAV, encrypts
+        with drand timelock, uploads to S3, and returns S3 submission refs.
 
         Args:
-            synapse: IdentitySynapse containing image_request
+            synapse: IdentitySynapse containing image_request and/or voice_request
 
         Returns:
-            The synapse with s3_submissions populated
+            The synapse with s3_submissions and/or voice_s3_submissions populated
         """
         run_id = int(time.time())
         timeout = getattr(synapse, 'timeout', 120.0)
         start_time = time.time()
         bt.logging.info(f"Starting run {run_id}, timeout={timeout:.1f}s")
 
-        if synapse.image_request is None:
-            bt.logging.warning("Received synapse with no image_request; returning empty response.")
-            synapse.s3_submissions = []
-            return synapse
+        synapse.s3_submissions = []
+        synapse.voice_s3_submissions = []
 
-        req = synapse.image_request
-        today_label = req.daily_seed_filename or "(none)"
-        if req.daily_seed_date:
-            today_label = f"{today_label} [{req.daily_seed_date} UTC]"
-        tomorrow_label = req.tomorrow_seed_filename or "(none)"
-        if req.tomorrow_seed_date:
-            tomorrow_label = f"{tomorrow_label} [{req.tomorrow_seed_date} UTC]"
-        bt.logging.info(
-            f"Received 3 images: "
-            f"IMAGE 1 (face variations)='{req.image_filename}' | "
-            f"IMAGE 2 (today IOTD)='{today_label}' | "
-            f"IMAGE 3 (tomorrow IOTD)='{tomorrow_label}'"
-        )
-        self._persist_iotd_seeds(req)
-
-        bt.logging.info("Processing image variation request")
-
-        if not PHASE4_AVAILABLE:
+        if synapse.image_request is None and synapse.voice_request is None:
             bt.logging.warning(
-                "Phase 4: Received image request but packages are not installed. "
-                "Install with: pip install -r requirements-miner.txt"
+                "Received synapse with no image_request and no voice_request; "
+                "returning empty response."
             )
-            synapse.s3_submissions = []
             return synapse
 
-        try:
-            s3_submissions = self.process_image_request(synapse)
-            bt.logging.info(f"Phase 4: Generated {len(s3_submissions)} S3 submissions")
-        except Exception as e:
-            bt.logging.error(f"Phase 4: Failed to process image request: {e}")
-            s3_submissions = []
+        # --- Image path (unchanged when image_request present) ---
+        if synapse.image_request is not None:
+            req = synapse.image_request
+            today_label = req.daily_seed_filename or "(none)"
+            if req.daily_seed_date:
+                today_label = f"{today_label} [{req.daily_seed_date} UTC]"
+            tomorrow_label = req.tomorrow_seed_filename or "(none)"
+            if req.tomorrow_seed_date:
+                tomorrow_label = f"{tomorrow_label} [{req.tomorrow_seed_date} UTC]"
+            bt.logging.info(
+                f"Received 3 images: "
+                f"IMAGE 1 (face variations)='{req.image_filename}' | "
+                f"IMAGE 2 (today IOTD)='{today_label}' | "
+                f"IMAGE 3 (tomorrow IOTD)='{tomorrow_label}'"
+            )
+            self._persist_iotd_seeds(req)
 
-        # Try to attach a real screen-replay submission (active slot, or a
-        # due capture from queue/ if the active one is for tomorrow).
-        sr_sub = self._try_screen_replay_submission(req)
-        if sr_sub is not None:
-            s3_submissions.append(sr_sub)
+            bt.logging.info("Processing image variation request")
 
-        synapse.s3_submissions = s3_submissions
+            if not PHASE4_AVAILABLE:
+                bt.logging.warning(
+                    "Phase 4: Received image request but packages are not installed. "
+                    "Install with: pip install -r requirements-miner.txt"
+                )
+            else:
+                try:
+                    s3_submissions = self.process_image_request(synapse)
+                    bt.logging.info(f"Phase 4: Generated {len(s3_submissions)} S3 submissions")
+                except Exception as e:
+                    bt.logging.error(f"Phase 4: Failed to process image request: {e}")
+                    s3_submissions = []
+
+                # Try to attach a real screen-replay submission (active slot, or a
+                # due capture from queue/ if the active one is for tomorrow).
+                sr_sub = self._try_screen_replay_submission(req)
+                if sr_sub is not None:
+                    s3_submissions.append(sr_sub)
+
+                synapse.s3_submissions = s3_submissions
+
+        # --- Voice path (stub generation + SpeechBrain gate + S3) ---
+        if synapse.voice_request is not None:
+            bt.logging.info(
+                f"Processing voice request: file='{synapse.voice_request.voice_filename}', "
+                f"lang={synapse.voice_request.language}, "
+                f"words={synapse.voice_request.target_words}"
+            )
+            if not VOICE_AVAILABLE:
+                bt.logging.warning(
+                    "Voice: Received voice request but voice packages are not available."
+                )
+            else:
+                try:
+                    voice_subs = self.process_voice_request(synapse)
+                    bt.logging.info(f"Voice: Generated {len(voice_subs)} S3 submissions")
+                    synapse.voice_s3_submissions = voice_subs
+                except Exception as e:
+                    bt.logging.error(f"Voice: Failed to process voice request: {e}")
+                    synapse.voice_s3_submissions = []
 
         total_time = time.time() - start_time
         bt.logging.info(f"Request completed in {total_time:.2f}s of {timeout:.1f}s allowed.")
@@ -530,6 +576,100 @@ class Miner(BaseMinerNeuron):
             except Exception:
                 pass
             _free_gpu_memory("after_request")
+
+    def process_voice_request(self, synapse: IdentitySynapse) -> List[S3Submission]:
+        """
+        Process a voice clone request end-to-end.
+
+        Decodes the reference WAV, generates a clone speaking target_words
+        (stub), optionally checks speaker identity with SpeechBrain (stub),
+        encrypts with drand, uploads to S3, and returns S3Submission refs.
+
+        Args:
+            synapse: IdentitySynapse with voice_request
+
+        Returns:
+            List of S3Submission objects (variation_type="voice")
+        """
+        voice_request = synapse.voice_request
+        if not voice_request:
+            return []
+
+        if not VOICE_AVAILABLE:
+            return []
+
+        try:
+            bt.logging.info(f"Voice: Decoding base voice: {voice_request.voice_filename}")
+            base_wav = decode_base_voice(voice_request.base_voice)
+
+            generated_wav = generate_voice_clone(
+                base_wav_bytes=base_wav,
+                target_words=list(voice_request.target_words or []),
+                language=voice_request.language or "en",
+            )
+            if not generated_wav:
+                bt.logging.warning("Voice: Generation returned empty bytes")
+                return []
+
+            if not validate_voice_identity(base_wav, generated_wav, min_similarity=0.25):
+                bt.logging.warning("Voice: Skipping — speaker identity not preserved")
+                return []
+
+            voice_hash = hash_voice_bytes(generated_wav)
+            challenge_id = voice_request.challenge_id or "sandbox_test"
+            target_round = voice_request.target_drand_round
+
+            path_message = f"{challenge_id}:{self.wallet.hotkey.ss58_address}"
+            path_signature = self.wallet.hotkey.sign(path_message.encode()).hex()[:16]
+
+            message = f"challenge:{challenge_id}:hash:{voice_hash}"
+            signature = self.wallet.hotkey.sign(message.encode()).hex()
+
+            if is_timelock_available():
+                encrypted_data = encrypt_image_for_drand(generated_wav, target_round)
+                if encrypted_data is None:
+                    bt.logging.warning("Voice: Encryption failed")
+                    return []
+            else:
+                bt.logging.warning("Voice: Timelock not available, using raw bytes (SANDBOX ONLY)")
+                encrypted_data = generated_wav
+
+            seed_name = voice_request.voice_filename
+            for ext in (".wav", ".mp3", ".flac", ".ogg"):
+                if seed_name.lower().endswith(ext):
+                    seed_name = seed_name[: -len(ext)]
+                    break
+
+            s3_key = upload_to_s3(
+                encrypted_data=encrypted_data,
+                miner_hotkey=self.wallet.hotkey.ss58_address,
+                signature=signature,
+                image_hash=voice_hash,
+                target_round=target_round,
+                challenge_id=challenge_id,
+                variation_type="voice",
+                path_signature=path_signature,
+                seed_image_name=seed_name,
+                source_ext=".wav",
+            )
+
+            if not s3_key:
+                bt.logging.warning("Voice: S3 upload failed")
+                return []
+
+            submission = S3Submission(
+                s3_key=s3_key,
+                image_hash=voice_hash,
+                signature=signature,
+                variation_type="voice",
+                path_signature=path_signature,
+            )
+            bt.logging.info(f"Voice: Created submission s3_key={s3_key}")
+            return [submission]
+
+        except Exception as e:
+            bt.logging.error(f"Voice: Error in process_voice_request: {e}")
+            return []
 
     def _screen_replay_is_due(self, data: dict, image_request) -> bool:
         """True if this capture's IOTD is allowed to upload on today's UTC date.
