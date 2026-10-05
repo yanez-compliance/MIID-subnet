@@ -1,29 +1,24 @@
 # MIID/miner/speech_brain_compare.py
 #
-# Speaker identity comparison stub using SpeechBrain (planned).
+# Optional speaker-identity check for miners who implement voice generation.
 #
-# Intended model (when wired):
+# Same role as AdaFace for faces: if you generate a voice clone, you can gate
+# it here before encrypt/upload. Default miner path does not generate voice,
+# so this is unused until you opt in.
+#
+# Suggested model when implementing:
 #   speechbrain/spkrec-ecapa-voxceleb
-#   — ECAPA-TDNN speaker embeddings; cosine similarity between reference
-#     and generated WAVs, analogous to AdaFace for faces.
-#
-# Prerequisites (when implementing for real):
 #   pip install speechbrain torchaudio
-#   # model downloads on first use from HuggingFace
 #
-# For now this module always returns True so the miner encrypt/upload path
-# can run end-to-end. UAV post-grading will judge identity later.
+# Default thresholds (once wired):
+#   module default 0.6; miner call site often uses 0.4 (same pattern as AdaFace).
 
 from typing import Optional
 
 import bittensor as bt
 
 
-# Planned SpeechBrain model id (document only until stub is filled)
 SPEECHBRAIN_MODEL_ID = "speechbrain/spkrec-ecapa-voxceleb"
-
-# Default cosine-similarity threshold once real embeddings are wired
-# (AdaFace uses 0.7; voice ECAPA scores sit a bit lower so default is 0.6)
 DEFAULT_MIN_SIMILARITY = 0.6
 
 
@@ -35,23 +30,24 @@ def validate_voice_identity(
 ) -> bool:
     """Check that generated audio preserves the reference speaker identity.
 
-    STUB: always returns True. Replace with SpeechBrain ECAPA embeddings
-    and cosine similarity >= ``min_similarity``.
+    Default: returns True (no model loaded). Wire SpeechBrain ECAPA when you
+    want a local pre-check before upload; UAV post-grading is the real score.
 
     Args:
         base_wav: Reference speaker WAV bytes.
         generated_wav: Miner-generated WAV bytes.
-        min_similarity: Minimum cosine similarity (default 0.6; unused in stub).
-        model: Optional preloaded encoder (unused in stub).
+        min_similarity: Minimum cosine similarity (default 0.6).
+        model: Optional preloaded encoder.
 
     Returns:
         True if identity is considered preserved.
     """
-    bt.logging.warning(
-        "SpeechBrain stub: validate_voice_identity always returns True. "
-        f"TODO: load {SPEECHBRAIN_MODEL_ID} and compare embeddings "
-        f"(threshold={min_similarity})."
-    )
     if not base_wav or not generated_wav:
-        bt.logging.warning("SpeechBrain stub: empty wav bytes; still returning True")
+        bt.logging.warning("Voice identity: empty wav bytes")
+        return False
+    # No model downloaded by default (same idea as AdaFace being optional until set up).
+    bt.logging.debug(
+        f"Voice identity: no SpeechBrain model loaded; accepting submission "
+        f"(planned model={SPEECHBRAIN_MODEL_ID}, threshold={min_similarity})"
+    )
     return True

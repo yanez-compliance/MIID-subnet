@@ -1,6 +1,6 @@
 # Yanez Miner
 
-This document explains how to run a Yanez miner on the Bittensor network. The Yanez subnet (Subnet 54) focuses on **identity-preserving face image variations** for KYC and fraud-detection research.
+This document explains how to run a Yanez miner on the Bittensor network. The Yanez subnet (Subnet 54) focuses on **identity-preserving face image variations** for KYC and fraud-detection research, with an optional **voice clone** challenge collected for UAV post-grading.
 
 ## Overview
 
@@ -12,15 +12,17 @@ Yanez miners receive **face image variation requests** from validators:
 - Encrypt and upload results to S3
 - Return signed submission references to the validator
 
-**Image generation is the only scored task.** Validators score miners exclusively on face image variation quality. There is no separate CPU-only or name-variation mining path — you need a GPU and the full image-generation stack to earn rewards.
+Validators may also attach a **voice request** in the same round (reference WAV + target speech text). Voice is **optional**: the stock miner returns no voice submission until you implement `generate_voice_clone` in `MIID/miner/voice_generator.py`. Voice is UAV post-graded only (not part of live KAV image rewards).
+
+**Image generation is the KAV-scored task.** You need a GPU and the image-generation stack to earn live image rewards. Voice does not replace that path.
 
 ## Subnet Phases & Timeline
 
 | Date | Milestone |
 |------|-----------|
-| **Aug 1 – Aug 24, 2026** | **Phase 4 Cycle 5 Sandbox (current; calibration + stability testing). Normal KAV online flow unchanged. Burn ratio 35%.** |
+| Aug 1 – Aug 24, 2026 | Phase 4 Cycle 5 Sandbox (calibration + stability testing). Normal KAV online flow unchanged. Burn ratio 35%. |
 | Aug 24 – Sep 24, 2026 | Phase 4 Cycle 5 Execution goes live; reward allocation begins using validated Phase 4 Cycle 4 Face Variations reputation (alongside ongoing online flow). Burn ratio stays 35%. |
-| Sep 24 – Oct 8, 2026 | Phase 4 Cycle 6 Sandbox (calibration + stability testing). Normal KAV online flow unchanged. Burn ratio 35%. |
+| **Oct 5, 2026 onward** | **Phase 5 Cycle 1 (current). First official Phase 5 cycle: optional voice clone challenge (UAV post-graded only) + continued face image KAV path. Burn ratio 35%.** |
 
 For the full roadmap and detailed architecture, see [Yanez Identity Generation Bittensor Subnet (PDF)](Yanez%20Identity%20Generation%20Bittensor%20Subnet.pdf).
 
@@ -354,6 +356,15 @@ python neurons/miner.py --netuid 54 --wallet.name your_wallet_name --wallet.hotk
 
 3. The miner returns signed S3 submission references to the validator.
 
+### Voice Clone (Phase 5 Cycle 1, optional)
+
+Same round as images when the validator attaches a `voice_request`:
+
+1. Validator fetches a reference WAV from the MIID API and draws target speech text (English or Spanish), e.g. `target_text = "three orange six two nine apple table one"` (also sent as `target_words` list).
+2. Stock miner **does nothing** and returns `voice_s3_submissions = []`.
+3. If you opt in, implement `MIID/miner/voice_generator.generate_voice_clone` to synthesize a WAV with the same speaker identity speaking `target_text`, then the existing encrypt → S3 → `S3Submission(variation_type="voice")` path runs.
+4. Voice is collected for **UAV post-grading only** (no live KAV grade for voice).
+
 **Variation types and intensities (Cycle 2):**
 
 | Type | Light | Medium | Far |
@@ -416,7 +427,7 @@ Each validation round:
 3. Submissions go through automated pre-checks, identity preservation checks, and manual validation
 4. Validators set weights based on image variation scores
 
-**Important:** Phase 4 Cycle 5 Sandbox runs **Aug 1 – Aug 24, 2026** (KAV online flow unchanged). Cycle 5 execution goes live **Aug 24 – Sep 24, 2026**, when reward allocation begins using validated Phase 4 Cycle 4 Face Variations reputation. Cycle 6 Sandbox follows **Sep 24 – Oct 8, 2026**.
+**Important:** Phase 4 Cycle 5 Sandbox runs **Aug 1 – Aug 24, 2026** (KAV online flow unchanged). Cycle 5 execution goes live **Aug 24 – Sep 24, 2026**, when reward allocation begins using validated Phase 4 Cycle 4 Face Variations reputation. **Phase 5 Cycle 1** starts **Oct 5, 2026** (optional voice clone for UAV post-grading + continued face image KAV path).
 
 ### Face Variation Scoring
 

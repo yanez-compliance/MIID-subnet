@@ -59,7 +59,7 @@ FIXED_IMAGE_LOG = Path("/home/ubuntu/YanezMIIDManage/api_image/used_fixed_image_
 _fixed_image_lock = threading.Lock()
 
 # Voice batch pool (reference WAVs for voice-clone challenges).
-# Prefer the production path when present; fall back to the in-repo stub pool.
+# Prefer the production path when present; fall back to the in-repo pool dir.
 _VOICE_BATCH_PROD = Path("/home/ubuntu/YanezMIIDManage/api_voice/voice_batch")
 _VOICE_BATCH_LOCAL = Path(__file__).resolve().parent / "voice_batch"
 VOICE_BATCH_DIR = _VOICE_BATCH_PROD if _VOICE_BATCH_PROD.is_dir() else _VOICE_BATCH_LOCAL
@@ -461,39 +461,13 @@ def get_validator_image(hotkey):
     }), 200
 
 
-def _make_silent_wav_bytes(duration_sec: float = 1.0, sample_rate: int = 16000) -> bytes:
-    """Build a minimal silent PCM WAV (16-bit mono) for empty-pool fallback."""
-    import struct
-
-    n_samples = int(duration_sec * sample_rate)
-    data_size = n_samples * 2
-    header = struct.pack(
-        "<4sI4s4sIHHIIHH4sI",
-        b"RIFF",
-        36 + data_size,
-        b"WAVE",
-        b"fmt ",
-        16,
-        1,  # PCM
-        1,  # mono
-        sample_rate,
-        sample_rate * 2,
-        2,
-        16,
-        b"data",
-        data_size,
-    )
-    return header + (b"\x00\x00" * n_samples)
-
-
 @app.route('/voice/<hotkey>', methods=['POST'])
 def get_validator_voice(hotkey):
     """
     Serve a reference voice clip for the voice-clone challenge.
 
-    Picks a random WAV from VOICE_BATCH_DIR when available; otherwise returns
-    a short silent stub WAV so the validator/miner flow can still run.
-    Language is randomly "en" or "es".
+    Same pattern as ``/image/<hotkey>``: pick a random WAV from VOICE_BATCH_DIR.
+    If the pool is empty, return 404 (no silent stub). Language is ``en`` or ``es``.
     """
     if hotkey not in HOTKEY_TO_FOLDER:
         return jsonify({"error": "Unauthorized hotkey or no folder for this validator"}), 403
@@ -519,9 +493,9 @@ def get_validator_voice(hotkey):
     os.remove(tmp_signature_filename)
 
     language = random.choice(["en", "es"])
-    stub_transcripts = {
-        "en": "This is a stub English reference voice for the MIID voice challenge.",
-        "es": "Esta es una voz de referencia en español para el desafío de voz MIID.",
+    default_transcripts = {
+        "en": "English reference voice for the MIID voice challenge.",
+        "es": "Voz de referencia en español para el desafío de voz MIID.",
     }
 
     with _voice_batch_lock:
@@ -532,34 +506,32 @@ def get_validator_voice(hotkey):
                 if f.is_file() and f.suffix.lower() in VOICE_ALLOWED_EXT
             ]
 
-        if available:
-            chosen = random.choice(available)
+        if not available:
+            return jsonify({
+                "error": f"No voices left in batch pool ({VOICE_BATCH_DIR})",
+            }), 404
+
+        chosen = random.choice(available)
+        try:
+            voice_bytes = chosen.read_bytes()
+        except Exception as e:
+            return jsonify({"error": f"Failed to read voice: {str(e)}"}), 500
+        filename = chosen.name
+        # Optional sidecar: <name>.meta.json with language/transcript
+        meta_path = chosen.with_suffix(chosen.suffix + ".meta.json")
+        if not meta_path.is_file():
+            meta_path = chosen.with_suffix(".meta.json")
+        transcript = default_transcripts[language]
+        if meta_path.is_file():
             try:
-                voice_bytes = chosen.read_bytes()
+                with open(meta_path, 'r', encoding='utf-8') as mf:
+                    meta = json.load(mf)
+                language = meta.get("language", language)
+                if language not in ("en", "es"):
+                    language = random.choice(["en", "es"])
+                transcript = meta.get("transcript", default_transcripts.get(language, ""))
             except Exception as e:
-                return jsonify({"error": f"Failed to read voice: {str(e)}"}), 500
-            filename = chosen.name
-            # Optional sidecar: <name>.meta.json with language/transcript
-            meta_path = chosen.with_suffix(chosen.suffix + ".meta.json")
-            if not meta_path.is_file():
-                meta_path = chosen.with_suffix(".meta.json")
-            transcript = stub_transcripts[language]
-            if meta_path.is_file():
-                try:
-                    with open(meta_path, 'r', encoding='utf-8') as mf:
-                        meta = json.load(mf)
-                    language = meta.get("language", language)
-                    if language not in ("en", "es"):
-                        language = random.choice(["en", "es"])
-                    transcript = meta.get("transcript", stub_transcripts.get(language, ""))
-                except Exception as e:
-                    print(f"[WARNING] Failed to read voice meta {meta_path}: {e}")
-        else:
-            # Empty pool fallback — silent WAV so the flow does not hard-fail
-            voice_bytes = _make_silent_wav_bytes(duration_sec=1.0)
-            filename = f"stub_silent_{language}.wav"
-            transcript = stub_transcripts[language]
-            print(f"[WARNING] Voice batch empty at {VOICE_BATCH_DIR}; serving silent stub")
+                print(f"[WARNING] Failed to read voice meta {meta_path}: {e}")
 
     b64 = base64.standard_b64encode(voice_bytes).decode('ascii')
     return jsonify({

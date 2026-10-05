@@ -235,7 +235,7 @@ def _collect_screen_replay_data(
 
     return {
         "requested": requested,
-        "cycle": "Phase4-C6-Sandbox",
+        "cycle": "Phase5-C1",
         "note": (
             "Real screen-replay is requested every round (physical capture, "
             "not a FLUX synthetic). Miners may upload as many non-duplicate "
@@ -602,6 +602,7 @@ async def forward(self):
                 voice_filename=voice_filename,
                 language=voice_language,
                 target_words=target_words,
+                target_text=karaoke.text,
                 reference_transcript=voice_transcript,
                 target_drand_round=voice_target_round,
                 reveal_timestamp=voice_reveal_timestamp,
@@ -805,7 +806,7 @@ async def forward(self):
     phase4_image_data: Optional[Dict] = None
     if PHASE4_ENABLED and image_request is not None and selected_variations:
         phase4_image_data = {
-            "cycle": "Phase4-C6-Sandbox",
+            "cycle": "Phase5-C1",
             "challenge_id": challenge_id,
             "base_image_filename": image_request.image_filename,
             "daily_seed_filename": image_request.daily_seed_filename,
@@ -825,16 +826,17 @@ async def forward(self):
     phase_voice_data: Optional[Dict] = None
     if voice_request is not None:
         phase_voice_data = {
-            "cycle": "Voice-UAV-Stub",
+            "cycle": "Phase5-C1",
             "note": (
-                "Voice clone challenge: submissions collected for UAV post-grading only. "
-                "No KAV / live grading API call for voice."
+                "Phase 5 Cycle 1 voice clone: submissions collected for UAV post-grading only. "
+                "No KAV / live grading API call for voice. Miners may return empty submissions."
             ),
             "enabled": True,
             "challenge_id": voice_request.challenge_id,
             "voice_filename": voice_request.voice_filename,
             "language": voice_request.language,
             "target_words": list(voice_request.target_words),
+            "target_text": voice_request.target_text,
             "karaoke": karaoke_payload,
             "reference_transcript": voice_request.reference_transcript,
             "target_drand_round": voice_request.target_drand_round,
@@ -959,7 +961,7 @@ async def forward(self):
         "timestamp": timestamp,
         "phase4_image_data": {
             **(phase4_image_data or {}),
-            "note": "Phase 4 Cycle 6 Sandbox: image variations with S3 uploads for YANEZ sandbox testing",
+            "note": "Phase 5 Cycle 1: image variations with S3 uploads (face KAV path continues)",
             "enabled": PHASE4_ENABLED and image_request is not None,
             "s3_bucket": "yanez-miid-sn54",
             # Fallbacks for when image_request was unavailable (phase4_image_data is None)
@@ -1164,7 +1166,7 @@ async def forward(self):
             )
 
             # ==========================================================================
-            # Cache rep_data from response for NEXT forward pass (Phase 4 - Cycle 6 Sandbox)
+            # Cache rep_data from response for NEXT forward pass (Phase 5 Cycle 1)
             # ==========================================================================
             if uav_grading_enabled:
                 if upload_response and upload_response.get("rep_cache"):

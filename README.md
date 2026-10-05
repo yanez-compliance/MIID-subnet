@@ -131,18 +131,23 @@ Yanez is not just another AI dataset—it's a **live, evolving system** that **c
 - Establish post-validation workflows and LDS V1 (beta → full) to separate signal from noise.
 - Use validated UAV quality to build a reputation signal that carries into future cycles.
 
-### Phase 4: Deepfake / Face-Based Adversarial Testing for KYC (Q1 2026) — **Current**
+### Phase 4: Deepfake / Face-Based Adversarial Testing for KYC (Q1–Q3 2026)
 - Validator-provided seed face images and deepfake-style transformation families.
 - Cycle 1: pose_edit, lighting_edit, expression_edit, background_edit. Cycle 2 adds screen_replay.
-- **Image generation is the sole scored miner task** in the current cycle.
+- Image generation remains the KAV-scored miner task and continues into Phase 5.
+
+### Phase 5 Cycle 1: Voice Clone + Continued Face Variations (Oct 2026 onward) — **Current**
+- First official Phase 5 cycle (replaces the former “Phase 4 Cycle 6” slot).
+- **Voice clone:** validators send a reference voice + target speech text; miners may optionally return a cloned WAV (UAV post-graded only; not required for image rewards).
+- Face image variation path continues unchanged (KAV + UAV reputation).
 
 ### Phase 5–11 (2026–2027): Identity Realism & Simulation
-- Expand biometric attack families beyond Cycle 1 (e.g., swap/recapture/morphing) (Q1 2026)
+- Expand biometric attack families beyond face/voice (e.g., swap/recapture/morphing) (Q1 2026)
 - Generate and validate synthetic documents (Q2 2026)
 - Simulate digital presence and interactions (Q3 2026)
 - Introduce financial transaction modeling (Q4 2026)
 - Build 3D identity avatars (Q2 2027)
-- Add voice and conversational AI support
+- Expand conversational AI beyond Cycle 1 voice collection
 
 ### Final Phase: Unified Identity Representation
 - Train a comprehensive model for identity screening.

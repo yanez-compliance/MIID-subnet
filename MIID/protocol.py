@@ -194,15 +194,15 @@ class S3Submission(BaseModel):
 class VoiceRequest(BaseModel):
     """Voice clone request from validator to miner.
 
-    Contains a ~30s reference WAV (English or Spanish) and a list of target
-    words the miner must generate in the same speaker identity. The miner
-    generates a WAV, encrypts it with drand timelock, uploads to S3, and
-    returns S3 references. Graded via UAV post-validation only (no KAV).
+    Contains a ~30s reference WAV (English or Spanish) and the text the miner
+    should speak in that speaker identity. Graded via UAV post-validation only
+    (no KAV). Miners may skip voice and return an empty voice_s3_submissions list.
     """
     base_voice: str              # Base64 encoded reference WAV (~30s)
     voice_filename: str          # Original filename for reference
     language: str                # "en" | "es"
-    target_words: List[str] = Field(default_factory=list)  # Words miner must speak
+    target_words: List[str] = Field(default_factory=list)  # Tokens to speak
+    target_text: str = ""        # Same tokens joined for TTS, e.g. "three apple ..."
     reference_transcript: str = ""  # What the reference clip says (from API)
     target_drand_round: int      # Drand round when decryption becomes possible
     reveal_timestamp: int        # Unix timestamp when reveal occurs

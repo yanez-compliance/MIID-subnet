@@ -1,19 +1,18 @@
 # MIID/miner/voice_generator.py
 #
-# Voice clone generation stub for miners.
+# Optional voice-clone hook for miners.
 #
-# TODO: Plug in your TTS / voice-clone model here. The validator sends a
-# reference WAV (~30s, English or Spanish) plus target_words; you must return
-# a WAV that preserves speaker identity and speaks those words.
+# Default behavior: return None (no voice submission). Image mining still works.
+# To opt in, replace generate_voice_clone() with your TTS / voice-clone model:
+#   - Input: reference WAV (base_wav_bytes) + prompt text (target_text / target_words)
+#   - Output: WAV bytes that keep the same speaker identity and speak the prompt
 #
-# Suggested approach (miner-chosen):
-#   - XTTS / Tortoise / YourTTS / OpenVoice / CosyVoice / etc.
-#   - Condition on base_wav_bytes as the speaker reference
-#   - Synthesize target_words joined into a short phrase in `language`
+# Prompt text is already joined for you as target_text, e.g.
+#   "three orange six two nine apple table one"
+# (same as " ".join(target_words)).
 
 import base64
 import hashlib
-import struct
 from typing import List, Optional
 
 import bittensor as bt
@@ -24,60 +23,34 @@ def decode_base_voice(base64_voice: str) -> bytes:
     return base64.b64decode(base64_voice)
 
 
-def _make_silent_wav_bytes(duration_sec: float = 1.0, sample_rate: int = 16000) -> bytes:
-    """Minimal silent PCM WAV (16-bit mono) used by the blank stub."""
-    n_samples = int(duration_sec * sample_rate)
-    data_size = n_samples * 2
-    header = struct.pack(
-        "<4sI4s4sIHHIIHH4sI",
-        b"RIFF",
-        36 + data_size,
-        b"WAVE",
-        b"fmt ",
-        16,
-        1,  # PCM
-        1,  # mono
-        sample_rate,
-        sample_rate * 2,
-        2,
-        16,
-        b"data",
-        data_size,
-    )
-    return header + (b"\x00\x00" * n_samples)
-
-
 def generate_voice_clone(
     base_wav_bytes: bytes,
     target_words: List[str],
     language: str,
+    target_text: str = "",
 ) -> Optional[bytes]:
-    """Generate a voice-cloned WAV speaking ``target_words``.
+    """Generate a voice-cloned WAV speaking the target prompt.
 
-    STUB: returns a short silent WAV (or a copy of the reference if present)
-    so the encrypt/upload path can run. Replace this body with a real model.
+    Default: returns None so the miner sends no voice submission.
+    Implement your own model here when you want to participate in voice.
 
     Args:
         base_wav_bytes: Reference speaker WAV bytes from the validator.
-        target_words: Words the generated audio must contain.
+        target_words: Token list the generated audio should contain.
         language: ``"en"`` or ``"es"``.
+        target_text: Ready-to-speak prompt string (preferred for TTS).
+            Falls back to ``" ".join(target_words)`` if empty.
 
     Returns:
-        Generated WAV bytes, or None on failure.
+        Generated WAV bytes, or None to skip voice (default).
     """
-    words_preview = " ".join(target_words[:8])
-    bt.logging.warning(
-        "Voice stub: generate_voice_clone is not wired to a real model. "
-        f"language={language}, words=[{words_preview}]. "
-        "TODO: plug in your TTS/voice-clone model."
+    prompt = (target_text or " ".join(target_words or [])).strip()
+    bt.logging.info(
+        "Voice: generate_voice_clone not implemented — skipping voice submission "
+        f"(lang={language}, prompt={prompt!r}). "
+        "Implement this function to opt in."
     )
-
-    # Prefer returning the reference clip so downstream identity stubs have
-    # real audio to hash; fall back to silence if the reference is empty.
-    if base_wav_bytes and len(base_wav_bytes) > 44:
-        return base_wav_bytes
-
-    return _make_silent_wav_bytes(duration_sec=1.0)
+    return None
 
 
 def hash_voice_bytes(wav_bytes: bytes) -> str:

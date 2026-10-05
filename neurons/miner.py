@@ -220,10 +220,13 @@ class Miner(BaseMinerNeuron):
                     'environment, e.g. export HF_TOKEN="hf_..."'
                 )
         if VOICE_AVAILABLE:
-            bt.logging.info("Voice clone challenge: ENABLED (stub generator + SpeechBrain stub)")
+            bt.logging.info(
+                "Voice challenge: OPTIONAL (default returns no voice submission; "
+                "implement generate_voice_clone to opt in)"
+            )
         else:
-            bt.logging.warning(
-                "Voice clone challenge: DISABLED (missing packages)."
+            bt.logging.info(
+                "Voice challenge: helpers unavailable — will return no voice submissions."
             )
 
         if not PHASE4_AVAILABLE:
@@ -338,21 +341,27 @@ class Miner(BaseMinerNeuron):
 
                 synapse.s3_submissions = s3_submissions
 
-        # --- Voice path (stub generation + SpeechBrain gate + S3) ---
+        # --- Voice path (optional; default = no submission) ---
         if synapse.voice_request is not None:
             bt.logging.info(
-                f"Processing voice request: file='{synapse.voice_request.voice_filename}', "
+                f"Received voice request: file='{synapse.voice_request.voice_filename}', "
                 f"lang={synapse.voice_request.language}, "
-                f"words={synapse.voice_request.target_words}"
+                f"text={synapse.voice_request.target_text!r}"
             )
             if not VOICE_AVAILABLE:
-                bt.logging.warning(
-                    "Voice: Received voice request but voice packages are not available."
+                bt.logging.info(
+                    "Voice: helper modules unavailable — returning no voice submission."
                 )
             else:
                 try:
                     voice_subs = self.process_voice_request(synapse)
-                    bt.logging.info(f"Voice: Generated {len(voice_subs)} S3 submissions")
+                    if voice_subs:
+                        bt.logging.info(f"Voice: Generated {len(voice_subs)} S3 submissions")
+                    else:
+                        bt.logging.info(
+                            "Voice: no submission (default). "
+                            "Implement MIID/miner/voice_generator.generate_voice_clone to opt in."
+                        )
                     synapse.voice_s3_submissions = voice_subs
                 except Exception as e:
                     bt.logging.error(f"Voice: Failed to process voice request: {e}")
@@ -606,9 +615,12 @@ class Miner(BaseMinerNeuron):
                 base_wav_bytes=base_wav,
                 target_words=list(voice_request.target_words or []),
                 language=voice_request.language or "en",
+                target_text=getattr(voice_request, "target_text", "") or "",
             )
             if not generated_wav:
-                bt.logging.warning("Voice: Generation returned empty bytes")
+                bt.logging.info(
+                    "Voice: generate_voice_clone returned None — no voice submission"
+                )
                 return []
 
             if not validate_voice_identity(base_wav, generated_wav, min_similarity=0.4):
