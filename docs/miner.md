@@ -20,9 +20,9 @@ Validators may also attach a **voice request** in the same round (reference WAV 
 
 | Date | Milestone |
 |------|-----------|
-| Aug 1 – Aug 24, 2026 | Phase 4 Cycle 5 Sandbox (calibration + stability testing). Normal KAV online flow unchanged. Burn ratio 35%. |
-| Aug 24 – Sep 24, 2026 | Phase 4 Cycle 5 Execution goes live; reward allocation begins using validated Phase 4 Cycle 4 Face Variations reputation (alongside ongoing online flow). Burn ratio stays 35%. |
-| **Oct 5, 2026 onward** | **Phase 5 Cycle 1 (current). First official Phase 5 cycle: optional voice clone challenge (UAV post-graded only) + continued face image KAV path. Burn ratio 35%.** |
+| **Sep 24 – Oct 8, 2026** | **Phase 5 Cycle 1 Sandbox (current; first official Phase 5 cycle). Calibration + stability testing. Optional voice clone challenge (UAV post-graded only) + continued face image KAV path. Burn ratio 35%.** |
+| Oct 8 – Nov 8, 2026 | Phase 5 Cycle 1 Execution goes live (~1 month). Reward allocation uses validated reputation alongside the ongoing online flow. Burn ratio stays 35%. |
+| Nov 8 – Nov 22, 2026 | Phase 5 Cycle 2 Sandbox (calibration + stability testing). Normal KAV online flow unchanged. Burn ratio 35%. |
 
 For the full roadmap and detailed architecture, see [Yanez Identity Generation Bittensor Subnet (PDF)](Yanez%20Identity%20Generation%20Bittensor%20Subnet.pdf).
 
@@ -427,7 +427,7 @@ Each validation round:
 3. Submissions go through automated pre-checks, identity preservation checks, and manual validation
 4. Validators set weights based on image variation scores
 
-**Important:** Phase 4 Cycle 5 Sandbox runs **Aug 1 – Aug 24, 2026** (KAV online flow unchanged). Cycle 5 execution goes live **Aug 24 – Sep 24, 2026**, when reward allocation begins using validated Phase 4 Cycle 4 Face Variations reputation. **Phase 5 Cycle 1** starts **Oct 5, 2026** (optional voice clone for UAV post-grading + continued face image KAV path).
+**Important:** Phase 5 Cycle 1 Sandbox runs **Sep 24 – Oct 8, 2026** (optional voice clone for UAV post-grading + continued face image KAV path). Cycle 1 Execution goes live **Oct 8 – Nov 8, 2026**. Phase 5 Cycle 2 Sandbox follows **Nov 8 – Nov 22, 2026**.
 
 ### Face Variation Scoring
 
