@@ -137,7 +137,7 @@ Yanez is not just another AI dataset—it's a **live, evolving system** that **c
 - Image generation remains the KAV-scored miner task and continues into Phase 5.
 
 ### Phase 5 Cycle 1: Voice Clone + Continued Face Variations (Oct 2026 onward) — **Current**
-- First official Phase 5 cycle (replaces the former “Phase 4 Cycle 6” slot).
+- First official Phase 5 cycle 1 (replaces the former “Phase 4 Cycle 6” slot).
 - **Voice clone:** validators send a reference voice + target speech text; miners may optionally return a cloned WAV (UAV post-graded only; not required for image rewards).
 - Face image variation path continues unchanged (KAV + UAV reputation).
 
