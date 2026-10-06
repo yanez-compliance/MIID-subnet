@@ -680,7 +680,7 @@ def get_random_combined_variation(var_types: List[str]) -> Dict[str, Any]:
 
 
 def build_standard_challenge_variations() -> List[Dict[str, Any]]:
-    """Build the standard 5-variation synthetic (FLUX-generated) challenge set.
+    """Build the standard 6-variation synthetic (FLUX-generated) challenge set.
 
     Order:
     1. background_in (indoor)
@@ -688,22 +688,12 @@ def build_standard_challenge_variations() -> List[Dict[str, Any]]:
     3. lighting_edit + expression_edit
     4. lighting_edit + pose_edit
     5. pose_edit + expression_edit
+    6. screen_replay (device named + ≥2 visual cues; aim to break PL v3)
 
-    NOTE: screen_replay is intentionally NOT part of this set anymore. It is
-    no longer a synthetic/FLUX-generated variation requested every round —
-    it is a REAL physical screen capture using the daily fixed seed image.
-    Miners may submit as many of these real captures as they want, whenever
-    ready (no daily cap) — the only rule is that every submission must be a
-    genuinely new capture (never a duplicate of one already sent), and each
-    submission bundles two photos of the same capture as basic proof it's
-    real: (1) a face-dominant, centered, low-distortion close-up of the
-    screen, and (2) a wider environment shot of the whole device/scene.
-    Those two files are reviewed for cross-view consistency (same seed face
-    on screen in both views, same device/bezel geometry, consistent
-    lighting/glare direction, distinct hashes). See
-    format_real_screen_replay_instructions() for the miner-facing task
-    text (including that review checklist), and ScreenReplayUAV in
-    MIID/protocol.py for the reported metadata.
+    Real physical IOTD screen-replay is paused (commented out in protocol /
+    forward / miner). The sixth slot is a synthetic FLUX screen_replay via
+    select_screen_replay_variation(). KAV still receives it; the grading API
+    ignores screen-replay scores server-side.
     """
     return [
         get_random_indoor_background_variation(),
@@ -711,6 +701,7 @@ def build_standard_challenge_variations() -> List[Dict[str, Any]]:
         get_random_combined_variation(["lighting_edit", "expression_edit"]),
         get_random_combined_variation(["lighting_edit", "pose_edit"]),
         get_random_combined_variation(["pose_edit", "expression_edit"]),
+        select_screen_replay_variation(),
     ]
 
 

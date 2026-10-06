@@ -180,18 +180,17 @@ On mainnet, local `validator_results` JSON is deleted after a successful upload 
 
 1. Select up to `sample_size` random miner UIDs
 2. Fetch a base face image from the Yanez API
-3. Build a standard **6-variation** challenge via `build_standard_challenge_variations()`:
-   1. `background_edit` (indoor)
-   2. `background_edit` (outdoor)
-   3. `screen_replay` (device + visual cues)
-   4. Combined: lighting + expression
-   5. Combined: lighting + pose
-   6. Combined: pose + expression
+3. Build a standard **6-variation** synthetic challenge via `build_standard_challenge_variations()`:
+   1. `background_in` (indoor)
+   2. `background_out` (outdoor)
+   3. Combined: lighting + expression
+   4. Combined: lighting + pose
+   5. Combined: pose + expression
+   6. `screen_replay` (device named + ≥2 visual cues; FLUX synthetic; PL v3)
 4. Attach a **drand target round** / reveal timestamp (~T+40 minutes)
 5. Wrap into an `IdentitySynapse` with an `ImageRequest` (base image + variation requests + challenge ID)
 
-Images are expected as professional passport-style portraits (3:4, head-and-shoulders; recommended ~1015×1350).
-
+Synthetic face slots expect professional passport-style portraits (3:4, head-and-shoulders; recommended ~1015×1350). The `screen_replay` slot uses its own device/cue instructions instead. Fixed IOTD seeds and real physical screen-replay are paused.
 ### Miner querying
 
 1. Query miners in batches of `batch_size`
