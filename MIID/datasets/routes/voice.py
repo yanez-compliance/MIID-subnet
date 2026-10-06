@@ -1,6 +1,10 @@
 """
 Voice endpoints for validators:
-  POST /voice/<hotkey> — random reference WAV from en/ or es/ pool
+  POST /voice/<hotkey> — random reference WAV
+
+Pool selection (language always random en|es):
+  - HOTKEY_TO_FOLDER[hotkey] == "testnet" → test_net_en/ or test_net_es/
+  - otherwise → synthethic-voices-english/ or synthethic-voices-spanish/
 """
 
 import base64
@@ -21,6 +25,8 @@ from media_pools.config import (
     VOICE_ALLOWED_EXT,
     VOICE_TRANSCRIPTS,
     VOICE_GENDER_BY_PREFIX,
+    VOICE_POOL_BY_LANGUAGE,
+    VOICE_TESTNET_POOL_BY_LANGUAGE,
 )
 
 voice_bp = Blueprint("voice", __name__)
@@ -39,14 +45,32 @@ def _gender_from_filename(filename: str):
     return VOICE_GENDER_BY_PREFIX.get(prefix)
 
 
+def _select_pool(hotkey: str):
+    """
+    Return (language, pool_dir) for this validator.
+
+    Language is chosen uniformly at random (en or es). Testnet validators
+    draw from test_net_en/test_net_es; everyone else from the synthetic pools.
+    """
+    language = random.choice(["en", "es"])
+    folder = HOTKEY_TO_FOLDER.get(hotkey)
+    pools = (
+        VOICE_TESTNET_POOL_BY_LANGUAGE
+        if folder == "testnet"
+        else VOICE_POOL_BY_LANGUAGE
+    )
+    return language, VOICE_BATCH_DIR / pools[language]
+
+
 @voice_bp.route("/voice/<hotkey>", methods=["POST"])
 def get_validator_voice(hotkey):
     """
     Serve a reference voice clip for the voice-clone challenge.
 
     Picks language uniformly at random (en or es), then a random WAV from
-    VOICE_BATCH_DIR/<language>/. Transcript is the fixed challenge text for
-    that language. Gender is inferred from M1/M3 (male) vs M2/M4 (female).
+    the matching pool (testnet: test_net_*; mainnet: synthethic-voices-*).
+    Transcript is the fixed challenge text for that language. Gender is
+    inferred from M1/M3 (male) vs M2/M4 (female).
     """
     if hotkey not in HOTKEY_TO_FOLDER:
         return (
@@ -58,8 +82,7 @@ def get_validator_voice(hotkey):
     if err_resp is not None:
         return err_resp, err_status
 
-    language = random.choice(["en", "es"])
-    lang_dir = VOICE_BATCH_DIR / language
+    language, lang_dir = _select_pool(hotkey)
 
     with _voice_batch_lock:
         available = []
