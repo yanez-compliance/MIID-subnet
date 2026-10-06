@@ -27,12 +27,16 @@ the requested variations, encrypts them with drand timelock, uploads to S3, and
 returns S3 references back to the validator.
 
 The miner pipeline:
-1. Receive ImageRequest (base image + VariationRequest list)
-2. Generate face variations using FLUX (pose, lighting, expression, background_in, background_out, screen_replay)
+1. Receive ImageRequest (base image + VariationRequest list — 6 synthetics)
+2. Generate face variations using FLUX (background_in/out, combined edits,
+   and synthetic screen_replay with device + visual cues; aim to break PL v3)
 3. Validate face identity is preserved (AdaFace similarity check)
 4. Encrypt each variation with drand timelock
 5. Upload encrypted images to S3
 6. Return S3Submission references to the validator
+
+# PAUSED: real IOTD seeds + physical screen-replay (screen_replay.json path).
+# Uncomment related blocks below and protocol fields to restore.
 """
 
 import hashlib
@@ -51,30 +55,46 @@ from PIL import Image
 from bittensor.core.errors import NotVerifiedException
 
 # Protocol
-from MIID.protocol import IdentitySynapse, S3Submission, ScreenReplayUAV
+from MIID.protocol import IdentitySynapse, S3Submission
+# from MIID.protocol import ScreenReplayUAV  # PAUSED: real screen-replay UAV
 from MIID.utils.media_paths import ensure_viable_media_path, sanitize_media_filename
 
 # Base miner class
 from MIID.base.miner import BaseMinerNeuron
 
-# screen_replay.json lives under MIID/miner/real_image_miner_guide/. Miners fill
-# it in (or run the helper submit_real_photo.py) to queue a real screen-replay
-# submission. See MIID/miner/real_image_miner_guide/README.md.
+# # --- PAUSED: real screen-replay paths (restore later) ---
+# # screen_replay.json lives under MIID/miner/real_image_miner_guide/. Miners fill
+# # it in (or run the helper submit_real_photo.py) to queue a real screen-replay
+# # submission. See MIID/miner/real_image_miner_guide/README.md.
+# SCREEN_REPLAY_JSON = os.path.join(
+#     os.path.dirname(os.path.dirname(__file__)),
+#     "MIID", "miner", "real_image_miner_guide", "screen_replay.json",
+# )
+#
+# # Holds extra captures submitted (via submit_real_photo.py) while a previous
+# # one was still pending, plus tomorrow-IOTD captures waiting for that UTC
+# # day. FIFO: oldest due capture in the active slot goes out first.
+# SCREEN_REPLAY_QUEUE_DIR = os.path.join(
+#     os.path.dirname(os.path.dirname(__file__)),
+#     "MIID", "miner", "real_image_miner_guide", "queue",
+# )
+#
+# # Today's and tomorrow's IOTD, written each time a validator sends them so
+# # miners can display the files for screen-replay captures.
+# IOTD_SEEDS_DIR = os.path.join(
+#     os.path.dirname(os.path.dirname(__file__)),
+#     "MIID", "miner", "real_image_miner_guide", "seeds",
+# )
+
+# Stubs so paused helpers below still parse if left uncommented later.
 SCREEN_REPLAY_JSON = os.path.join(
     os.path.dirname(os.path.dirname(__file__)),
     "MIID", "miner", "real_image_miner_guide", "screen_replay.json",
 )
-
-# Holds extra captures submitted (via submit_real_photo.py) while a previous
-# one was still pending, plus tomorrow-IOTD captures waiting for that UTC
-# day. FIFO: oldest due capture in the active slot goes out first.
 SCREEN_REPLAY_QUEUE_DIR = os.path.join(
     os.path.dirname(os.path.dirname(__file__)),
     "MIID", "miner", "real_image_miner_guide", "queue",
 )
-
-# Today's and tomorrow's IOTD, written each time a validator sends them so
-# miners can display the files for screen-replay captures.
 IOTD_SEEDS_DIR = os.path.join(
     os.path.dirname(os.path.dirname(__file__)),
     "MIID", "miner", "real_image_miner_guide", "seeds",
@@ -304,19 +324,24 @@ class Miner(BaseMinerNeuron):
         # --- Image path (unchanged when image_request present) ---
         if synapse.image_request is not None:
             req = synapse.image_request
-            today_label = req.daily_seed_filename or "(none)"
-            if req.daily_seed_date:
-                today_label = f"{today_label} [{req.daily_seed_date} UTC]"
-            tomorrow_label = req.tomorrow_seed_filename or "(none)"
-            if req.tomorrow_seed_date:
-                tomorrow_label = f"{tomorrow_label} [{req.tomorrow_seed_date} UTC]"
+            # # --- PAUSED: IOTD seed logging + persist (restore later) ---
+            # today_label = req.daily_seed_filename or "(none)"
+            # if req.daily_seed_date:
+            #     today_label = f"{today_label} [{req.daily_seed_date} UTC]"
+            # tomorrow_label = req.tomorrow_seed_filename or "(none)"
+            # if req.tomorrow_seed_date:
+            #     tomorrow_label = f"{tomorrow_label} [{req.tomorrow_seed_date} UTC]"
+            # bt.logging.info(
+            #     f"Received 3 images: "
+            #     f"IMAGE 1 (face variations)='{req.image_filename}' | "
+            #     f"IMAGE 2 (today IOTD)='{today_label}' | "
+            #     f"IMAGE 3 (tomorrow IOTD)='{tomorrow_label}'"
+            # )
+            # self._persist_iotd_seeds(req)
             bt.logging.info(
-                f"Received 3 images: "
-                f"IMAGE 1 (face variations)='{req.image_filename}' | "
-                f"IMAGE 2 (today IOTD)='{today_label}' | "
-                f"IMAGE 3 (tomorrow IOTD)='{tomorrow_label}'"
+                f"Received image request: face='{req.image_filename}', "
+                f"variations={len(req.variation_requests)}"
             )
-            self._persist_iotd_seeds(req)
 
             bt.logging.info("Processing image variation request")
 
@@ -333,11 +358,12 @@ class Miner(BaseMinerNeuron):
                     bt.logging.error(f"Phase 4: Failed to process image request: {e}")
                     s3_submissions = []
 
-                # Try to attach a real screen-replay submission (active slot, or a
-                # due capture from queue/ if the active one is for tomorrow).
-                sr_sub = self._try_screen_replay_submission(req)
-                if sr_sub is not None:
-                    s3_submissions.append(sr_sub)
+                # # --- PAUSED: real screen-replay submission (restore later) ---
+                # # Try to attach a real screen-replay submission (active slot, or a
+                # # due capture from queue/ if the active one is for tomorrow).
+                # sr_sub = self._try_screen_replay_submission(req)
+                # if sr_sub is not None:
+                #     s3_submissions.append(sr_sub)
 
                 synapse.s3_submissions = s3_submissions
 

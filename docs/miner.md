@@ -7,11 +7,12 @@ This document explains how to run a Yanez miner on the Bittensor network. The Ya
 Yanez miners receive **face image variation requests** from validators:
 
 - Receive a base face image and variation requirements
-- **Variation types (Phase 4 Cycle 2):** pose_edit, lighting_edit, expression_edit, background_edit, and **screen_replay**
+- **Variation types (current):** `background_in`, `background_out`, three combined edits (`lighting_edit+expression_edit`, `lighting_edit+pose_edit`, `pose_edit+expression_edit`), and synthetic **`screen_replay`** (device named + ≥2 visual cues; iterate against Passive Liveness v3 `/is_live`)
 - Generate identity-preserving image variations using a diffusion model
 - Encrypt and upload results to S3
 - Return signed submission references to the validator
 
+Real IOTD / physical screen-replay is paused for this cycle (protocol fields commented out).
 Validators may also attach a **voice request** in the same round (reference WAV + target speech text). Voice is **optional**: the stock miner returns no voice submission until you implement `generate_voice_clone` in `MIID/miner/voice_generator.py`. Voice is UAV post-graded only (not part of live KAV image rewards).
 
 **Image generation is the KAV-scored task.** You need a GPU and the image-generation stack to earn live image rewards. Voice does not replace that path.

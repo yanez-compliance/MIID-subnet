@@ -41,9 +41,9 @@ This network helps **governments, financial institutions, and researchers** impr
 Miners process image variation requests from validators and return **identity-preserving face image variations**.
 
 - Receive base face images and variation requirements from validators
-- Generate variations using diffusion models: **pose_edit**, **lighting_edit**, **expression_edit**, **background_edit**, and **screen_replay** (Cycle 2)
+- Generate **6 synthetic** FLUX variations: **background_in**, **background_out**, three combined edits (lighting/expression/pose), and **screen_replay** (device named + ≥2 visual cues; aim to break Passive Liveness v3 via `/is_live`)
 - Encrypt and upload results to S3; return signed submission references
-- **Image generation is the only scored task** — a GPU and the full image stack are required to earn rewards
+- **Image generation is the only scored task** — a GPU and the full image stack are required to earn rewards (remote KAV ignores screen_replay scores)
 
 ### 🧑‍🏫 **Validators: Evaluate & Score Miners**
 Validators ensure the dataset maintains **high-quality** and **real-world relevance**.
@@ -133,13 +133,13 @@ Yanez is not just another AI dataset—it's a **live, evolving system** that **c
 
 ### Phase 4: Deepfake / Face-Based Adversarial Testing for KYC (Q1–Q3 2026)
 - Validator-provided seed face images and deepfake-style transformation families.
-- Cycle 1: pose_edit, lighting_edit, expression_edit, background_edit. Cycle 2 adds screen_replay.
-- Image generation remains the KAV-scored miner task and continues into Phase 5.
+- Current live set: 6 synthetics (`background_in`/`out`, 3 combined edits, synthetic `screen_replay` with device + cues). Real IOTD / physical screen-replay paused.
+- Image generation remains the KAV-scored miner task and continues into Phase 5 (remote API ignores screen_replay scores).
 
 ### Phase 5 Cycle 1: Voice Clone + Continued Face Variations (Oct 2026 onward) — **Current**
 - First official Phase 5 cycle 1 (replaces the former “Phase 4 Cycle 6” slot).
 - **Voice clone:** validators send a reference voice + target speech text; miners may optionally return a cloned WAV (UAV post-graded only; not required for image rewards).
-- Face image variation path continues unchanged (KAV + UAV reputation).
+- Face image path: 6 synthetic FLUX variations including screen_replay (break PL v3 via `/is_live`).
 
 ### Phase 5–11 (2026–2027): Identity Realism & Simulation
 - Expand biometric attack families beyond face/voice (e.g., swap/recapture/morphing) (Q1 2026)
