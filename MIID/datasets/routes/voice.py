@@ -3,7 +3,7 @@ Voice endpoints for validators:
   POST /voice/<hotkey> — random reference WAV
 
 Pool selection (language always random en|es):
-  - HOTKEY_TO_FOLDER[hotkey] == "testnet" → test_net_en/ or test_net_es/
+  - HOTKEY_TO_FOLDER[hotkey] == "testnet" OR VOICE_USE_TEST_POOL → test_net_en/ or test_net_es/
   - otherwise → synthethic-voices-english/ or synthethic-voices-spanish/
 """
 
@@ -27,6 +27,7 @@ from media_pools.config import (
     VOICE_GENDER_BY_PREFIX,
     VOICE_POOL_BY_LANGUAGE,
     VOICE_TESTNET_POOL_BY_LANGUAGE,
+    VOICE_USE_TEST_POOL,
 )
 
 voice_bp = Blueprint("voice", __name__)
@@ -50,13 +51,14 @@ def _select_pool(hotkey: str):
     Return (language, pool_dir) for this validator.
 
     Language is chosen uniformly at random (en or es). Testnet validators
-    draw from test_net_en/test_net_es; everyone else from the synthetic pools.
+    and sandbox (VOICE_USE_TEST_POOL) draw from test_net_en/test_net_es;
+    everyone else from the synthetic pools.
     """
     language = random.choice(["en", "es"])
     folder = HOTKEY_TO_FOLDER.get(hotkey)
     pools = (
         VOICE_TESTNET_POOL_BY_LANGUAGE
-        if folder == "testnet"
+        if folder == "testnet" or VOICE_USE_TEST_POOL
         else VOICE_POOL_BY_LANGUAGE
     )
     return language, VOICE_BATCH_DIR / pools[language]
@@ -68,7 +70,7 @@ def get_validator_voice(hotkey):
     Serve a reference voice clip for the voice-clone challenge.
 
     Picks language uniformly at random (en or es), then a random WAV from
-    the matching pool (testnet: test_net_*; mainnet: synthethic-voices-*).
+    the matching pool (testnet or sandbox: test_net_*; else synthethic-voices-*).
     Transcript is the fixed challenge text for that language. Gender is
     inferred from M1/M3 (male) vs M2/M4 (female).
     """
