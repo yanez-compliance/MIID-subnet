@@ -1,12 +1,11 @@
 # MIID/miner/speech_brain_compare.py
 #
-# Optional speaker-identity check for miners who implement voice generation.
+# Speaker-identity check for voice generation.
 #
-# Same role as AdaFace for faces: if you generate a voice clone, you can gate
-# it here before encrypt/upload. Default miner path does not generate voice,
-# so this is unused until you opt in.
+# Same role as AdaFace for faces: gate a generated voice clone here before
+# encrypt/upload.
 #
-# Suggested model when implementing:
+# Suggested model:
 #   speechbrain/spkrec-ecapa-voxceleb
 #   pip install speechbrain torchaudio
 #
@@ -45,7 +44,7 @@ def validate_voice_identity(
     if not base_wav or not generated_wav:
         bt.logging.warning("Voice identity: empty wav bytes")
         return False
-    # No model downloaded by default (same idea as AdaFace being optional until set up).
+    # No model downloaded until SpeechBrain is wired (same pattern as AdaFace).
     bt.logging.debug(
         f"Voice identity: no SpeechBrain model loaded; accepting submission "
         f"(planned model={SPEECHBRAIN_MODEL_ID}, threshold={min_similarity})"

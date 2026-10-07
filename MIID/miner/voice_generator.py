@@ -1,9 +1,8 @@
 # MIID/miner/voice_generator.py
 #
-# Optional voice-clone hook for miners.
+# Voice-clone hook for miners.
 #
-# Default behavior: return None (no voice submission). Image mining still works.
-# To opt in, replace generate_voice_clone() with your TTS / voice-clone model:
+# Implement generate_voice_clone() with your TTS / voice-clone model:
 #   - Input: reference WAV (base_wav_bytes) + prompt text (target_text / target_words)
 #   - Output: WAV bytes that keep the same speaker identity and speak the prompt
 #
@@ -31,8 +30,7 @@ def generate_voice_clone(
 ) -> Optional[bytes]:
     """Generate a voice-cloned WAV speaking the target prompt.
 
-    Default: returns None so the miner sends no voice submission.
-    Implement your own model here when you want to participate in voice.
+    Replace this stub with your TTS / voice-clone model.
 
     Args:
         base_wav_bytes: Reference speaker WAV bytes from the validator.
@@ -42,13 +40,13 @@ def generate_voice_clone(
             Falls back to ``" ".join(target_words)`` if empty.
 
     Returns:
-        Generated WAV bytes, or None to skip voice (default).
+        Generated WAV bytes, or None if generation failed.
     """
     prompt = (target_text or " ".join(target_words or [])).strip()
     bt.logging.info(
-        "Voice: generate_voice_clone not implemented — skipping voice submission "
+        "Voice: generate_voice_clone not implemented — no voice submission "
         f"(lang={language}, prompt={prompt!r}). "
-        "Implement this function to opt in."
+        "Implement this function to submit voice clones."
     )
     return None
 

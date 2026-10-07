@@ -156,7 +156,7 @@ try:
 except ImportError as _phase4_err:
     PHASE4_AVAILABLE = False
 
-# Voice challenge stubs (optional — same encrypt/upload stack as Phase 4)
+# Voice challenge (same encrypt/upload stack as Phase 4)
 try:
     from MIID.miner.voice_generator import (
         decode_base_voice,
@@ -241,8 +241,8 @@ class Miner(BaseMinerNeuron):
                 )
         if VOICE_AVAILABLE:
             bt.logging.info(
-                "Voice challenge: OPTIONAL (default returns no voice submission; "
-                "implement generate_voice_clone to opt in)"
+                "Voice challenge: enabled — implement generate_voice_clone "
+                "in MIID/miner/voice_generator.py"
             )
         else:
             bt.logging.info(
@@ -367,7 +367,7 @@ class Miner(BaseMinerNeuron):
 
                 synapse.s3_submissions = s3_submissions
 
-        # --- Voice path (optional; default = no submission) ---
+        # --- Voice path ---
         if synapse.voice_request is not None:
             bt.logging.info(
                 f"Received voice request: file='{synapse.voice_request.voice_filename}', "
@@ -385,8 +385,8 @@ class Miner(BaseMinerNeuron):
                         bt.logging.info(f"Voice: Generated {len(voice_subs)} S3 submissions")
                     else:
                         bt.logging.info(
-                            "Voice: no submission (default). "
-                            "Implement MIID/miner/voice_generator.generate_voice_clone to opt in."
+                            "Voice: no submission. "
+                            "Implement MIID/miner/voice_generator.generate_voice_clone."
                         )
                     synapse.voice_s3_submissions = voice_subs
                 except Exception as e:
@@ -616,8 +616,8 @@ class Miner(BaseMinerNeuron):
         """
         Process a voice clone request end-to-end.
 
-        Decodes the reference WAV, generates a clone speaking target_words
-        (stub), optionally checks speaker identity with SpeechBrain (stub),
+        Decodes the reference WAV, generates a clone speaking target_words,
+        checks speaker identity with SpeechBrain when available,
         encrypts with drand, uploads to S3, and returns S3Submission refs.
 
         Args:

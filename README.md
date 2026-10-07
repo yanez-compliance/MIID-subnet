@@ -138,7 +138,7 @@ Yanez is not just another AI dataset—it's a **live, evolving system** that **c
 
 ### Phase 5 Cycle 1: Voice Clone + Continued Face Variations (Oct 2026 onward) — **Current**
 - First official Phase 5 cycle 1 (replaces the former “Phase 4 Cycle 6” slot).
-- **Voice clone:** validators send a reference voice + target speech text; miners may optionally return a cloned WAV (UAV post-graded only; not required for image rewards).
+- **Voice clone:** validators send a reference voice + target speech text; miners return a cloned WAV (UAV post-graded only; image path remains the live KAV reward).
 - Face image path: 6 synthetic FLUX variations including screen_replay (break PL v3 via `/is_live`).
 
 ### Phase 5–11 (2026–2027): Identity Realism & Simulation
