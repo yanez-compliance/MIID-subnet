@@ -1,623 +1,95 @@
-import os
-import base64
-import json
-import random
-import secrets
-import shutil
-import time
-import threading
-from pathlib import Path
-from flask import Flask, request, jsonify
-from datetime import datetime, timezone, timedelta
+"""
+MIID datasets Flask API.
 
-# Import configuration
+Gunicorn:
+  gunicorn MIID.datasets.app:app --bind 0.0.0.0:5000 --workers 4
+
+Routes:
+  POST /upload_data/<hotkey>   — validator result upload + reputation decay
+  POST /images/<hotkey>        — base images (image blueprint)
+  POST /image/<hotkey>         — random batch image (image blueprint)
+  POST /fixed_image/<hotkey>   — daily fixed seeds (image blueprint)
+  POST /voice/<hotkey>         — reference WAV (voice blueprint)
+"""
+
+import json
+import os
+import secrets
+import sys
+
+from datetime import datetime
+from flask import Flask, request, jsonify
+
 from MIID.datasets.config import (
     HOST,
     PORT,
     DEBUG,
     DATA_DIR,
     ALLOWED_HOTKEYS,
-    REPUTATION_SNAPSHOT_PATH,
-    REWARDS_DIR,
 )
+from MIID.datasets.signature_auth import verify_request_signature
+from MIID.datasets.reputation import (
+    load_reputation_snapshot,
+    process_reward_allocation,
+)
+from MIID.datasets.routes.images import image_bp
+from MIID.datasets.routes.voice import voice_bp
 
-# Import methods from db_machine
-import sys
-sys.path.insert(0, '/home/ubuntu/YanezMIIDManage')
+sys.path.insert(0, "/home/ubuntu/YanezMIIDManage")
 from db_machine import get_snapshot, reward_allocation
 
 # Use fake calls for testing (reads from JSON file instead of database)
 # from MIID.datasets.fake_calls import get_snapshot, reward_allocation
 
-
-# Import verify_message function
-from MIID.utils.verify_message import verify_message
-
-## gunicorn MIID.datasets.app:app --bind 0.0.0.0:5000 --workers 4
-
-# =============================================================================
-# Validator base images (hotkey -> folder under base_images)
-# =============================================================================
-BASE_IMAGES_DIR = Path("/home/ubuntu/YanezMIIDManage/api_image/base_images")
-
-# Batch 1 image pool config
-BATCH_DIR      = Path("/home/ubuntu/YanezMIIDManage/api_image/batch_1_8-24-2026")
-USED_DIR       = Path("/home/ubuntu/YanezMIIDManage/api_image/used_batch_1_8-24-2026")
-BATCH_LOG      = Path("/home/ubuntu/YanezMIIDManage/api_image/used_batch_1_8_24_2026.json")
-ALLOWED_EXT    = ('.png', '.jpg', '.jpeg', '.gif', '.webp')
-_batch_lock    = threading.Lock()
-
-# Daily fixed seed image pool (screen-replay challenge).
-# Every validator that asks on the same UTC day must get the SAME today+tomorrow
-# pair, so this pool is selected deterministically by date (no move/consume
-# like the /image/<hotkey> batch pool above). Tomorrow is sent early so miners
-# can prepare captures before UTC midnight.
-FIXED_IMAGE_POOL_DIR = Path("/home/ubuntu/YanezMIIDManage/api_image/fixed_image_pool")
-# Serve log — same role as BATCH_LOG for the random pool (written by
-# image_manage_fixed.py, appended on each /fixed_image serve).
-FIXED_IMAGE_LOG = Path("/home/ubuntu/YanezMIIDManage/api_image/used_fixed_image_pool.json")
-_fixed_image_lock = threading.Lock()
-HOTKEY_TO_FOLDER = {
-    "5DUB7kNLvvx8Dj7D8tn54N1C7Xok6GodNPQE2WECCaL9Wgpr": "miid",
-    "5GWzXSra6cBM337nuUU7YTjZQ6ewT2VakDpMj8Pw2i8v8PVs": "yuma",
-    "5Dvgtk1bqLycAyyc2VFKvAqmpvoQf5oWsD4qnu6vqbdWSL54": "rt21",
-    "5HK5tp6t2S59DywmHRWPBVJeJ86T61KjurYqeooqj8sREpeN": "tensora",
-    "5HbUFHW4XVhbQvMbSy7WDjvhHb62nuYgP1XBsmmz9E2E2K6p": "otf",
-    "5GQqAhLKVHRLpdTqRg1yc3xu7y47DicJykSpggE2GuDbfs54": "rizzo",
-    "5CnkkjPdfsA6jJDHv2U6QuiKiivDuvQpECC13ffdmSDbkgtt": "testnet",
-    "5GMqiKcdq5WtHA4XaioRD29FL2UtJ8CW1MVQtYHyFsqzrrmM": "kraken",
-}
-
-
-# =============================================================================
-# Reputation Snapshot Cache (Phase 4 - Cycle 1)
-# =============================================================================
-
-# Global reputation snapshot cache (thread-safe)
-CURRENT_REP_SNAPSHOT = {
-    "version": None,
-    "generated_at": None,
-    "miners": {}
-}
-_snapshot_lock = threading.Lock()
-
-
-def load_reputation_snapshot():
-    """
-    Load reputation snapshot from JSON file into memory.
-
-    Called at Flask startup and can be called to reload the snapshot.
-    Thread-safe using _snapshot_lock.
-    """
-    global CURRENT_REP_SNAPSHOT
-
-    if not os.path.exists(REPUTATION_SNAPSHOT_PATH):
-        print(f"[WARNING] Reputation snapshot not found at {REPUTATION_SNAPSHOT_PATH}. Using empty snapshot.")
-        return
-
-    try:
-        with open(REPUTATION_SNAPSHOT_PATH, 'r', encoding='utf-8') as f:
-            data = json.load(f)
-
-        with _snapshot_lock:
-            CURRENT_REP_SNAPSHOT = {
-                "version": data.get("version"),
-                "generated_at": data.get("generated_at"),
-                "miners": data.get("miners", {})
-            }
-        print(f"[INFO] Loaded reputation snapshot version: {CURRENT_REP_SNAPSHOT['version']} with {len(CURRENT_REP_SNAPSHOT['miners'])} miners")
-    except Exception as e:
-        print(f"[ERROR] Failed to load reputation snapshot: {e}")
-
-
 # Load snapshot on module import (Flask startup)
 load_reputation_snapshot()
 
-# =============================================================================
-
 app = Flask(__name__)
-
-# Ensure the data directory exists
 os.makedirs(DATA_DIR, exist_ok=True)
 
-@app.route('/upload_data/<hotkey>', methods=['POST'])
+app.register_blueprint(image_bp)
+app.register_blueprint(voice_bp)
+
+
+@app.route("/upload_data/<hotkey>", methods=["POST"])
 def upload_data(hotkey):
-    # Check if the hotkey is allowed
     if hotkey not in ALLOWED_HOTKEYS:
         return jsonify({"error": "Unauthorized hotkey"}), 403
 
-    # 2) Check that the incoming request body is JSON
-    if not request.is_json:
-        return jsonify({"error": "Request body must be JSON"}), 400
-    
-    # 3) Get the JSON payload
+    err_resp, err_status = verify_request_signature(tmp_prefix="tmp_signature")
+    if err_resp is not None:
+        return err_resp, err_status
+
     data = request.get_json()
 
-    # 4) The "signature" field in the payload must contain the lines
-    #    generated by sign_message (the <Bytes>... block, plus
-    #    "Signed by:" and "Signature:" lines).
-    signature_text = data.get("signature")
-    if not signature_text:
-        return jsonify({"error": "Missing 'signature' in JSON payload"}), 400
-
-    # 5) Create a temporary file to hold just the signature text.
-    #    verify_message() expects to read this file and parse it.
-    tmp_signature_filename = os.path.join(DATA_DIR, f"tmp_signature_{time.time()}.txt")
-    with open(tmp_signature_filename, 'w', encoding='utf-8') as tmp_file:
-        tmp_file.write(signature_text)
-
-    # 6) Attempt to verify the signature. If it fails, remove the temporary file and reject.
-    try:
-        verify_message(tmp_signature_filename)
-        # If no ValueError was raised, the signature is valid.
-    except ValueError as e:
-        os.remove(tmp_signature_filename)
-        return jsonify({"error": f"Signature verification failed: {str(e)}"}), 400
-
-    # 7) Verification succeeded, remove the temporary file (optional to keep or discard).
-    os.remove(tmp_signature_filename)
-
-    # 8) Create a folder for this hotkey if it doesn't exist
     hotkey_folder = os.path.join(DATA_DIR, hotkey)
     os.makedirs(hotkey_folder, exist_ok=True)
-    
-    # 9) Create a unique filename for storing the full JSON data:
+
     timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
     random_hex = secrets.token_hex(4)
     final_filename = f"{hotkey}.{timestamp}.{random_hex}.json"
     filepath = os.path.join(hotkey_folder, final_filename)
 
-    # 10) Save the entire JSON data (including the signature) to disk.
-    with open(filepath, 'w', encoding='utf-8') as f:
+    with open(filepath, "w", encoding="utf-8") as f:
         json.dump(data, f, indent=2)
 
-    # ==========================================================================
-    # 11) Get current snapshot from database (used for both reward processing and response)
-    # Thread-safe: Lock to prevent race conditions when multiple requests process rewards
-    # ==========================================================================
-    snapshot_version = None
-    generated_at = None
-    rep_cache = {}
-    current_snapshot = None
-    
-    with _snapshot_lock:
-        try:
-            current_snapshot = get_snapshot()
-            
-            snapshot_version = current_snapshot.get("version")
-            generated_at = current_snapshot.get("generated_at")
-            
-            # Convert miners list to dict keyed by hotkey for rep_cache response
-            # The JSON has miners as a list: [{hotkey, rep_score, rep_tier, ...}, ...]
-            miners_list = current_snapshot.get("miners", [])
-            for miner in miners_list:
-                hotkey_key = miner.get("hotkey")
-                if hotkey_key:
-                    rep_cache[hotkey_key] = {
-                        "rep_score": miner.get("rep_score", 0),
-                        "rep_tier": miner.get("rep_tier", "Unknown")
-                    }
-            
-            print(f"[INFO] Retrieved snapshot from get_snapshot(): version={snapshot_version}, miners={len(rep_cache)}")
-
-        except Exception as e:
-            print(f"[ERROR] Failed to get snapshot from get_snapshot(): {e}")
-
-        # ==========================================================================
-        # 12) Process reward_allocation if present (Phase 4 - Cycle 1)
-        # Update miners with rewards and send to database
-        # ==========================================================================
-        reward_allocation_data = data.get("reward_allocation")
-        if reward_allocation_data and current_snapshot:
-            try:
-                # Handle allocations array (may contain multiple pending allocations)
-                allocations = reward_allocation_data.get("allocations", [])
-
-                # If no allocations array, check for legacy "miners" field (backwards compatibility)
-                if not allocations and reward_allocation_data.get("miners"):
-                    allocations = [{
-                        "timestamp": reward_allocation_data.get("rep_snapshot_version"),
-                        "rep_snapshot_version": reward_allocation_data.get("rep_snapshot_version"),
-                        "miners": reward_allocation_data.get("miners")
-                    }]
-
-                # Decay every miner in the honored snapshot once per pending
-                # allocation (stack -0.02 per cycle) — including miners the
-                # validator did not query this round. UAV reputation is
-                # independent of the KAV sample. New miners who appear only
-                # in allocation.miners (not yet in the snapshot) have no
-                # reputation to decay.
-                decay_counts = {}  # {miner_hotkey: times to apply -0.02}
-                snapshot_miners_list = current_snapshot.get("miners", [])
-                for allocation in allocations:
-                    for snapshot_miner in snapshot_miners_list:
-                        miner_hotkey = snapshot_miner.get("hotkey")
-                        if not miner_hotkey:
-                            continue
-                        decay_counts[miner_hotkey] = decay_counts.get(miner_hotkey, 0) + 1
-
-                snapshot_miners_dict = {miner.get("hotkey"): miner for miner in snapshot_miners_list}
-
-                updated_hotkeys = []
-                for miner_hotkey, decay_times in decay_counts.items():
-                    if miner_hotkey in snapshot_miners_dict:
-                        snapshot_miner = snapshot_miners_dict[miner_hotkey]
-                        current_score = snapshot_miner.get("rep_score", 0.0)
-                        snapshot_miner["rep_score"] = max(0.0, current_score - (0.02 * decay_times))
-                        if miner_hotkey in rep_cache:
-                            rep_cache[miner_hotkey]["rep_score"] = snapshot_miner["rep_score"]
-                        updated_hotkeys.append(miner_hotkey)
-
-                updated_miners_count = len(updated_hotkeys)
-
-                # Send updated snapshot to database using reward_allocation
-                if updated_miners_count > 0:
-                    result = reward_allocation(current_snapshot)
-                    print(f"[INFO] {hotkey} Applied decay (-0.02) to {updated_miners_count} miner(s) and sent to database via reward_allocation()")
-                else:
-                    print(f"[INFO] {hotkey} No miners to update in reward allocation")
-
-            except Exception as e:
-                print(f"[ERROR] Failed to process reward_allocation: {e}")
-
-    # 13) Return a success response with rep_cache
-    return jsonify({
-        "message": "Data received and verified successfully",
-        "filename": final_filename,
-        # Reputation cache for next forward pass (Phase 4 - Cycle 1)
-        "rep_snapshot_version": snapshot_version,
-        "generated_at": generated_at,
-        "rep_cache": rep_cache  # All miners: {hotkey: {rep_score, rep_tier}, ...}
-    }), 200
-
-
-@app.route('/images/<hotkey>', methods=['POST'])
-def get_validator_images(hotkey):
-    """
-    Return all base images for this validator (that hotkey's folder under base_images).
-    Only hotkeys in HOTKEY_TO_FOLDER can call this endpoint (validators with image folders).
-    Request body: JSON with "signature" (signed message from that hotkey).
-    Response: { "validator_folder", "verified_by", "images": [{ "filename", "data_base64" }, ...], "count" }.
-    """
-    if hotkey not in HOTKEY_TO_FOLDER:
-        return jsonify({"error": "Unauthorized hotkey or no image folder for this validator"}), 403
-
-    if not request.is_json:
-        return jsonify({"error": "Request body must be JSON"}), 400
-
-    data = request.get_json()
-    signature_text = data.get("signature")
-    if not signature_text:
-        return jsonify({"error": "Missing 'signature' in JSON payload"}), 400
-
-    tmp_signature_filename = os.path.join(DATA_DIR, f"tmp_signature_images_{time.time()}.txt")
-    with open(tmp_signature_filename, 'w', encoding='utf-8') as tmp_file:
-        tmp_file.write(signature_text)
-
-    try:
-        verify_message(tmp_signature_filename)
-    except ValueError as e:
-        os.remove(tmp_signature_filename)
-        return jsonify({"error": f"Signature verification failed: {str(e)}"}), 400
-
-    os.remove(tmp_signature_filename)
-
-    folder_name = HOTKEY_TO_FOLDER.get(hotkey)
-    if not folder_name:
-        return jsonify({"error": "No image folder configured for this validator"}), 404
-
-    images_dir = BASE_IMAGES_DIR / folder_name
-    if not images_dir.is_dir():
-        return jsonify({"error": f"Image folder not found: {folder_name}"}), 404
-
-    images = []
-    allowed_ext = ('.png', '.jpg', '.jpeg', '.gif', '.webp')
-    for f in sorted(images_dir.iterdir()):
-        if f.is_file() and f.suffix.lower() in allowed_ext:
-            try:
-                b64 = base64.standard_b64encode(f.read_bytes()).decode('ascii')
-                images.append({"filename": f.name, "data_base64": b64})
-            except Exception:
-                pass
-
-    return jsonify({
-        "validator_folder": folder_name,
-        "verified_by": hotkey,
-        "images": images,
-        "count": len(images),
-    }), 200
-
-
-def _recycle_if_empty():
-    """
-    Called inside _batch_lock. If BATCH_DIR has no images remaining, move every
-    image from USED_DIR back to BATCH_DIR so the pool restarts, and record the
-    event in BATCH_LOG.
-    """
-    batch_images = [f for f in BATCH_DIR.iterdir() if f.is_file() and f.suffix.lower() in ALLOWED_EXT]
-    if batch_images:
-        return  # still images left, nothing to do
-
-    used_images = [f for f in USED_DIR.iterdir() if f.is_file() and f.suffix.lower() in ALLOWED_EXT] if USED_DIR.is_dir() else []
-    if not used_images:
-        return  # nothing to recycle either
-
-    recycled_names = []
-    errors = []
-    for f in used_images:
-        dest = BATCH_DIR / f.name
-        try:
-            shutil.move(str(f), str(dest))
-            recycled_names.append(f.name)
-        except Exception as e:
-            errors.append({"filename": f.name, "error": str(e)})
-            print(f"[ERROR] Failed to recycle {f.name}: {e}")
-
-    print(f"[INFO] Batch pool recycled: moved {len(recycled_names)} images from USED_DIR back to BATCH_DIR")
-
-    try:
-        with open(BATCH_LOG, 'r', encoding='utf-8') as lf:
-            log = json.load(lf)
-
-        log.setdefault("recycle_events", []).append({
-            "recycled_at": datetime.now(timezone.utc).isoformat(),
-            "images_recycled": len(recycled_names),
-            "recycled_filenames": recycled_names,
-            "errors": errors,
-        })
-        log["images_remaining"] = len(recycled_names)
-        log["recycle_count"] = log.get("recycle_count", 0) + 1
-
-        with open(BATCH_LOG, 'w', encoding='utf-8') as lf:
-            json.dump(log, lf, indent=2)
-    except Exception as e:
-        print(f"[ERROR] Failed to log recycle event: {e}")
-
-
-@app.route('/image/<hotkey>', methods=['POST'])
-def get_validator_image(hotkey):
-    """
-    Pick a random image from BATCH_DIR, move it to USED_DIR, log the move,
-    and return the image to the requesting validator.
-    """
-    if hotkey not in HOTKEY_TO_FOLDER:
-        return jsonify({"error": "Unauthorized hotkey or no image folder for this validator"}), 403
-
-    if not request.is_json:
-        return jsonify({"error": "Request body must be JSON"}), 400
-
-    data = request.get_json()
-    signature_text = data.get("signature")
-    if not signature_text:
-        return jsonify({"error": "Missing 'signature' in JSON payload"}), 400
-
-    tmp_signature_filename = os.path.join(DATA_DIR, f"tmp_signature_image_{time.time()}.txt")
-    with open(tmp_signature_filename, 'w', encoding='utf-8') as tmp_file:
-        tmp_file.write(signature_text)
-
-    try:
-        verify_message(tmp_signature_filename)
-    except ValueError as e:
-        os.remove(tmp_signature_filename)
-        return jsonify({"error": f"Signature verification failed: {str(e)}"}), 400
-
-    os.remove(tmp_signature_filename)
-
-    with _batch_lock:
-        # If BATCH_DIR is empty, recycle all images from USED_DIR back before serving
-        _recycle_if_empty()
-        
-        # Get available images from batch dir
-        available = [f for f in BATCH_DIR.iterdir() if f.is_file() and f.suffix.lower() in ALLOWED_EXT]
-        if not available:
-            return jsonify({"error": "No images left in batch pool"}), 404
-
-        chosen = random.choice(available)
-
-        # Read image before moving
-        try:
-            image_bytes = chosen.read_bytes()
-        except Exception as e:
-            return jsonify({"error": f"Failed to read image: {str(e)}"}), 500
-
-        # Move to used dir
-        USED_DIR.mkdir(parents=True, exist_ok=True)
-        dest = USED_DIR / chosen.name
-        shutil.move(str(chosen), str(dest))
-
-        # Update the log JSON
-        try:
-            with open(BATCH_LOG, 'r', encoding='utf-8') as lf:
-                log = json.load(lf)
-
-            log["images_moved_to_used_count"] = log.get("images_moved_to_used_count", 0) + 1
-            log["images_remaining"] = len(available) - 1  # already moved one
-
-            log.setdefault("moves_to_used_images", []).append({
-                "filename": chosen.name,
-                "moved_at": datetime.now(timezone.utc).isoformat(),
-                "validator_hotkey": hotkey,
-                "dest_path": str(dest),
-            })
-
-            with open(BATCH_LOG, 'w', encoding='utf-8') as lf:
-                json.dump(log, lf, indent=2)
-        except Exception as e:
-            print(f"[ERROR] Failed to update batch log: {e}")
-
-    b64 = base64.standard_b64encode(image_bytes).decode('ascii')
-    return jsonify({
-        "verified_by": hotkey,
-        "image": {"filename": chosen.name, "data_base64": b64},
-    }), 200
-
-
-def _get_daily_fixed_image_path(day_offset=0):
-    """
-    Deterministically pick the fixed seed image for UTC today + day_offset.
-
-    Selection is keyed off the UTC calendar date (proleptic Gregorian ordinal),
-    not request order or hotkey, so every validator that calls this endpoint
-    on the same UTC day resolves to the exact same file — no locking or
-    move-to-used bookkeeping needed. The pool naturally rotates to the next
-    image once UTC midnight passes; a single-image pool stays "fixed" until
-    an operator adds more images.
-
-    Args:
-        day_offset: 0 = today, 1 = tomorrow, etc.
-
-    Returns:
-        (path, seed_date) where seed_date is YYYY-MM-DD UTC, or (None, None).
-    """
-    if not FIXED_IMAGE_POOL_DIR.is_dir():
-        return None, None
-
-    pool = sorted(
-        f for f in FIXED_IMAGE_POOL_DIR.iterdir()
-        if f.is_file() and f.suffix.lower() in ALLOWED_EXT
+    rep = process_reward_allocation(
+        hotkey, data, get_snapshot, reward_allocation
     )
-    if not pool:
-        return None, None
 
-    utc_date = datetime.now(timezone.utc).date() + timedelta(days=day_offset)
-    return pool[utc_date.toordinal() % len(pool)], utc_date.strftime("%Y-%m-%d")
-
-
-def _encode_image_payload(path):
-    """Read an image file and return {filename, data_base64}."""
-    image_bytes = path.read_bytes()
-    b64 = base64.standard_b64encode(image_bytes).decode('ascii')
-    return {"filename": path.name, "data_base64": b64}
-
-
-def _log_fixed_image_serve(hotkey, filename, seed_date):
-    """
-    Append a serve record to FIXED_IMAGE_LOG (used_fixed_image_pool.json).
-
-    Analogous to updating BATCH_LOG on /image/<hotkey>, except we do NOT move
-    the file — every validator on the same UTC day gets the same filename.
-    Also updates daily_assignments so operators can see at a glance which
-    validators received today's shared seed.
-    Must be called under _fixed_image_lock.
-    """
-    try:
-        if FIXED_IMAGE_LOG.is_file():
-            with open(FIXED_IMAGE_LOG, 'r', encoding='utf-8') as lf:
-                log = json.load(lf)
-        else:
-            log = {
-                "initialized_at": datetime.now(timezone.utc).isoformat(),
-                "pool_dir": str(FIXED_IMAGE_POOL_DIR),
-                "endpoint": "/fixed_image/<hotkey>",
-                "serves_to_validators": [],
-                "daily_assignments": {},
-                "manifest": [],
+    return (
+        jsonify(
+            {
+                "message": "Data received and verified successfully",
+                "filename": final_filename,
+                "rep_snapshot_version": rep["snapshot_version"],
+                "generated_at": rep["generated_at"],
+                "rep_cache": rep["rep_cache"],
             }
-
-        served_at = datetime.now(timezone.utc).isoformat()
-        log.setdefault("serves_to_validators", []).append({
-            "filename": filename,
-            "seed_date": seed_date,
-            "served_at": served_at,
-            "validator_hotkey": hotkey,
-            "note": "same image for all validators on this UTC day",
-        })
-        log["serves_to_validators_count"] = len(log["serves_to_validators"])
-
-        assignments = log.setdefault("daily_assignments", {})
-        day_entry = assignments.setdefault(seed_date, {
-            "filename": filename,
-            "validators": [],
-            "serve_count": 0,
-        })
-        day_entry["filename"] = filename
-        if hotkey not in day_entry["validators"]:
-            day_entry["validators"].append(hotkey)
-        day_entry["serve_count"] = len(day_entry["validators"])
-        day_entry["last_served_at"] = served_at
-
-        utc_today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
-        if seed_date == utc_today:
-            log["today_seed_date"] = seed_date
-            log["today_selected_filename"] = filename
-        else:
-            log["tomorrow_seed_date"] = seed_date
-            log["tomorrow_selected_filename"] = filename
-
-        with open(FIXED_IMAGE_LOG, 'w', encoding='utf-8') as lf:
-            json.dump(log, lf, indent=2)
-    except Exception as e:
-        print(f"[ERROR] Failed to update fixed image serve log: {e}")
+        ),
+        200,
+    )
 
 
-@app.route('/fixed_image/<hotkey>', methods=['POST'])
-def get_fixed_image(hotkey):
-    """
-    Return today's AND tomorrow's fixed seed images for the screen-replay challenge.
-
-    Unlike /image/<hotkey>, this endpoint is NOT random and does NOT consume
-    the pool: the same UTC calendar day always resolves to the same pair of
-    files in FIXED_IMAGE_POOL_DIR, regardless of which validator calls it or
-    how many times. Each successful serve is logged to FIXED_IMAGE_LOG so we
-    can see which validators received today's shared images.
-
-    Response:
-      today / tomorrow: { seed_date, image: { filename, data_base64 } }
-      seed_date / image: backward-compat aliases for today's image.
-    """
-    if hotkey not in HOTKEY_TO_FOLDER:
-        return jsonify({"error": "Unauthorized hotkey or no image folder for this validator"}), 403
-
-    if not request.is_json:
-        return jsonify({"error": "Request body must be JSON"}), 400
-
-    data = request.get_json()
-    signature_text = data.get("signature")
-    if not signature_text:
-        return jsonify({"error": "Missing 'signature' in JSON payload"}), 400
-
-    tmp_signature_filename = os.path.join(DATA_DIR, f"tmp_signature_fixed_image_{time.time()}.txt")
-    with open(tmp_signature_filename, 'w', encoding='utf-8') as tmp_file:
-        tmp_file.write(signature_text)
-
-    try:
-        verify_message(tmp_signature_filename)
-    except ValueError as e:
-        os.remove(tmp_signature_filename)
-        return jsonify({"error": f"Signature verification failed: {str(e)}"}), 400
-
-    os.remove(tmp_signature_filename)
-
-    with _fixed_image_lock:
-        today_path, today_date = _get_daily_fixed_image_path(0)
-        tomorrow_path, tomorrow_date = _get_daily_fixed_image_path(1)
-        if today_path is None or tomorrow_path is None:
-            return jsonify({"error": "No fixed image pool configured or pool is empty"}), 404
-
-        try:
-            today_payload = _encode_image_payload(today_path)
-            tomorrow_payload = _encode_image_payload(tomorrow_path)
-        except Exception as e:
-            return jsonify({"error": f"Failed to read fixed image: {str(e)}"}), 500
-
-        _log_fixed_image_serve(hotkey, today_path.name, today_date)
-        _log_fixed_image_serve(hotkey, tomorrow_path.name, tomorrow_date)
-
-    return jsonify({
-        "verified_by": hotkey,
-        # Backward-compat aliases = today (older validators only read these).
-        "seed_date": today_date,
-        "image": today_payload,
-        "today": {
-            "seed_date": today_date,
-            "image": today_payload,
-        },
-        "tomorrow": {
-            "seed_date": tomorrow_date,
-            "image": tomorrow_payload,
-        },
-    }), 200
-
-
-if __name__ == '__main__':
+if __name__ == "__main__":
     app.run(host=HOST, port=PORT, debug=DEBUG)

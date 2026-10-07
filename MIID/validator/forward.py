@@ -25,20 +25,18 @@ Validator Forward Module
 Implements the forward function that drives each validation round:
 1. Select random miners to query.
 2. Fetch a base face image from the MIID API.
-3. Build an ImageRequest with three images: the per-round face-variation
-   base, today's IOTD, and tomorrow's IOTD (both IOTDs from the API fixed
-   pool). 5 synthetic variations: background_in, background_out, 3 combined
-   edits; plus
-   the IOTD seeds + instructions for the REAL screen-replay task —
-   miners may send as many non-duplicate real captures as they want, each one
-   bundling a face close-up + environment shot of the same capture as basic
-   proof it's real).
+3. Build an ImageRequest with the per-round face base and 6 synthetic
+   FLUX variations: background_in, background_out, 3 combined edits, and
+   screen_replay (device named + ≥2 visual cues; aim to break PL v3).
 4. Send the request to miners in batches; collect S3 submission references.
 5. Grade submissions via the external grading API (KAV) using
-   get_image_variation_rewards().
+   get_image_variation_rewards() — remote API ignores screen_replay scores.
 6. Combine KAV scores with reputation (UAV) via apply_reputation_rewards()
    — unqueried miners still receive UAV and are listed for reputation decay.
 7. Update miner weights and upload results to the MIID server.
+
+# PAUSED: fixed IOTD seeds + real physical screen-replay (see commented
+# blocks below and in MIID/protocol.py). Restore by uncommenting.
 """
 
 import time
@@ -51,18 +49,21 @@ from typing import List, Dict, Any, Optional
 from datetime import datetime
 from pathlib import Path
 
-from MIID.protocol import IdentitySynapse, ImageRequest, VariationRequest
+from MIID.protocol import IdentitySynapse, ImageRequest, VariationRequest, VoiceRequest
 from MIID.validator.reward import get_image_variation_rewards, apply_reputation_rewards
 from MIID.utils.uids import get_random_uids
 from MIID.utils.sign_message import sign_message
 
 from MIID.validator.base_images import fetch_image_from_api
-from MIID.validator.fixed_images import (
-    ensure_daily_fixed_image,
-    load_seed_pair_base64,
-    list_fixed_image_pool,
-    VALIDATOR_SENDS_SEED_IMAGE,
-)
+from MIID.validator.base_voices import fetch_voice_from_api
+from MIID.validator.voice_words import generate
+# # --- PAUSED: fixed IOTD / real screen-replay (restore later) ---
+# from MIID.validator.fixed_images import (
+#     ensure_daily_fixed_image,
+#     load_seed_pair_base64,
+#     list_fixed_image_pool,
+#     VALIDATOR_SENDS_SEED_IMAGE,
+# )
 from MIID.validator.drand_utils import (
     calculate_target_round,
     calculate_reveal_buffer,
@@ -72,8 +73,8 @@ from MIID.validator.drand_utils import (
 from MIID.validator.image_variations import (
     build_standard_challenge_variations,
     format_variation_requirements,
-    format_real_screen_replay_instructions,
-    validate_screen_replay_uav,
+    # format_real_screen_replay_instructions,  # PAUSED: real screen-replay
+    # validate_screen_replay_uav,              # PAUSED: real screen-replay
     IMAGE_VARIATION_REQUIREMENTS,
 )
 
@@ -93,15 +94,19 @@ _cached_rep_version: Optional[str] = None
 _pending_allocations: List[Dict] = []
 _pending_file_path: Optional[Path] = None
 
-# NOTE: Screen-replay policy is "send as many non-duplicate real captures as
-# you want" — there is no daily cap. Each submission must carry 2 photos of
-# the same capture: (1) face close-up in primary fields, (2) environment
-# shot in s3_key_angle2 (see S3Submission in MIID/protocol.py). Actual
-# duplicate-detection (dedup by image hash across a miner's submission
-# history) is intentionally not implemented yet — not needed while this
-# task is still experimental. Miners can be advised informally not to
-# resubmit the same capture; a real check can be added here later once
-# manual review volume becomes a concern.
+# # --- PAUSED: real screen-replay policy notes (restore later) ---
+# # NOTE: Screen-replay policy is "send as many non-duplicate real captures as
+# # you want" — there is no daily cap. Each submission must carry 2 photos of
+# # the same capture: (1) face close-up in primary fields, (2) environment
+# # shot in s3_key_angle2 (see S3Submission in MIID/protocol.py). Actual
+# # duplicate-detection (dedup by image hash across a miner's submission
+# # history) is intentionally not implemented yet — not needed while this
+# # task is still experimental. Miners can be advised informally not to
+# # resubmit the same capture; a real check can be added here later once
+# # manual review volume becomes a concern.
+
+# Live: screen_replay is a synthetic FLUX VariationRequest (6th slot).
+# Real physical IOTD captures are paused.
 
 # =============================================================================
 # Phase 4: Image Cycling State
@@ -164,98 +169,99 @@ def _clear_pending_allocations(file_path: Path):
     _save_pending_allocations(file_path, [])
 
 
-def _collect_screen_replay_data(
-    requested: bool,
-    instructions: Optional[str],
-    image_request: Optional[ImageRequest],
-    seed_pool: List[str],
-    miner_uids: List[int],
-    s3_submissions_by_miner: Dict[str, Any],
-) -> Dict[str, Any]:
-    """Build the top-level screen_replay_data block for the results JSON.
-
-    Mirrors the old Phase-3 `uav_data` shape: record that we asked for the
-    task, which image-of-the-day was the seed, how many miners uploaded, and
-    the per-miner payloads.
-    """
-    by_miner: Dict[str, Any] = {}
-    total_submissions = 0
-    miners_with_env = 0
-    miners_with_uav = 0
-    miners_with_valid_uav = 0
-    rejected = 0
-
-    for uid_str, miner_block in s3_submissions_by_miner.items():
-        sr_subs = []
-        miner_has_env = False
-        miner_has_uav = False
-        miner_has_valid_uav = False
-        for sub in miner_block.get("submissions", []):
-            if sub.get("variation_type") != "screen_replay":
-                continue
-            uav = sub.get("screen_replay_uav")
-            uav_valid = bool(uav is not None and validate_screen_replay_uav(uav))
-            if sub.get("s3_key_angle2"):
-                miner_has_env = True
-            if uav is not None:
-                miner_has_uav = True
-            if uav_valid:
-                miner_has_valid_uav = True
-            sr_subs.append({
-                "s3_key": sub.get("s3_key"),
-                "s3_key_angle2": sub.get("s3_key_angle2"),
-                "uav_valid": uav_valid,
-            })
-        if not sr_subs:
-            continue
-        total_submissions += len(sr_subs)
-        if miner_has_env:
-            miners_with_env += 1
-        if miner_has_uav:
-            miners_with_uav += 1
-        if miner_has_valid_uav:
-            miners_with_valid_uav += 1
-        rejected += sum(1 for s in sr_subs if not s["uav_valid"])
-        by_miner[uid_str] = {
-            "hotkey": miner_block.get("hotkey"),
-            "submission_count": len(sr_subs),
-            "submissions": sr_subs,
-        }
-
-    today = {
-        "filename": image_request.daily_seed_filename if image_request else None,
-        "date": image_request.daily_seed_date if image_request else None,
-    }
-    tomorrow = {
-        "filename": image_request.tomorrow_seed_filename if image_request else None,
-        "date": image_request.tomorrow_seed_date if image_request else None,
-    }
-
-    return {
-        "requested": requested,
-        "cycle": "Phase4-C6-Sandbox",
-        "note": (
-            "Real screen-replay is requested every round (physical capture, "
-            "not a FLUX synthetic). Miners may upload as many non-duplicate "
-            "captures as they want; this block records what we asked and who uploaded."
-        ),
-        "instructions": instructions,
-        "image_of_the_day": {
-            "today": today,
-            "tomorrow": tomorrow,
-            "seed_pool": list(seed_pool) if seed_pool else [],
-        },
-        "miners_queried": len(miner_uids),
-        "summary": {
-            "total_miners_with_screen_replay": len(by_miner),
-            "total_screen_replays_collected": total_submissions,
-            "miners_with_environment_shot": miners_with_env,
-            "miners_with_uav": miners_with_uav,
-            "miners_with_valid_uav": miners_with_valid_uav,
-            "rejected_screen_replays": rejected,
-        },
-        "by_miner": by_miner,
-    }
+# # --- PAUSED: real screen-replay results collector (restore later) ---
+# def _collect_screen_replay_data(
+#     requested: bool,
+#     instructions: Optional[str],
+#     image_request: Optional[ImageRequest],
+#     seed_pool: List[str],
+#     miner_uids: List[int],
+#     s3_submissions_by_miner: Dict[str, Any],
+# ) -> Dict[str, Any]:
+#     """Build the top-level screen_replay_data block for the results JSON.
+#
+#     Mirrors the old Phase-3 `uav_data` shape: record that we asked for the
+#     task, which image-of-the-day was the seed, how many miners uploaded, and
+#     the per-miner payloads.
+#     """
+#     by_miner: Dict[str, Any] = {}
+#     total_submissions = 0
+#     miners_with_env = 0
+#     miners_with_uav = 0
+#     miners_with_valid_uav = 0
+#     rejected = 0
+#
+#     for uid_str, miner_block in s3_submissions_by_miner.items():
+#         sr_subs = []
+#         miner_has_env = False
+#         miner_has_uav = False
+#         miner_has_valid_uav = False
+#         for sub in miner_block.get("submissions", []):
+#             if sub.get("variation_type") != "screen_replay":
+#                 continue
+#             uav = sub.get("screen_replay_uav")
+#             uav_valid = bool(uav is not None and validate_screen_replay_uav(uav))
+#             if sub.get("s3_key_angle2"):
+#                 miner_has_env = True
+#             if uav is not None:
+#                 miner_has_uav = True
+#             if uav_valid:
+#                 miner_has_valid_uav = True
+#             sr_subs.append({
+#                 "s3_key": sub.get("s3_key"),
+#                 "s3_key_angle2": sub.get("s3_key_angle2"),
+#                 "uav_valid": uav_valid,
+#             })
+#         if not sr_subs:
+#             continue
+#         total_submissions += len(sr_subs)
+#         if miner_has_env:
+#             miners_with_env += 1
+#         if miner_has_uav:
+#             miners_with_uav += 1
+#         if miner_has_valid_uav:
+#             miners_with_valid_uav += 1
+#         rejected += sum(1 for s in sr_subs if not s["uav_valid"])
+#         by_miner[uid_str] = {
+#             "hotkey": miner_block.get("hotkey"),
+#             "submission_count": len(sr_subs),
+#             "submissions": sr_subs,
+#         }
+#
+#     today = {
+#         "filename": image_request.daily_seed_filename if image_request else None,
+#         "date": image_request.daily_seed_date if image_request else None,
+#     }
+#     tomorrow = {
+#         "filename": image_request.tomorrow_seed_filename if image_request else None,
+#         "date": image_request.tomorrow_seed_date if image_request else None,
+#     }
+#
+#     return {
+#         "requested": requested,
+#         "cycle": "Phase5-C1-Sandbox",
+#         "note": (
+#             "Real screen-replay is requested every round (physical capture, "
+#             "not a FLUX synthetic). Miners may upload as many non-duplicate "
+#             "captures as they want; this block records what we asked and who uploaded."
+#         ),
+#         "instructions": instructions,
+#         "image_of_the_day": {
+#             "today": today,
+#             "tomorrow": tomorrow,
+#             "seed_pool": list(seed_pool) if seed_pool else [],
+#         },
+#         "miners_queried": len(miner_uids),
+#         "summary": {
+#             "total_miners_with_screen_replay": len(by_miner),
+#             "total_screen_replays_collected": total_submissions,
+#             "miners_with_environment_shot": miners_with_env,
+#             "miners_with_uav": miners_with_uav,
+#             "miners_with_valid_uav": miners_with_valid_uav,
+#             "rejected_screen_replays": rejected,
+#         },
+#         "by_miner": by_miner,
+#     }
 
 # =============================================================================
 
@@ -296,7 +302,9 @@ async def dendrite_with_retries(
     def create_default_response():
         return IdentitySynapse(
             image_request=synapse.image_request,
+            voice_request=synapse.voice_request,
             s3_submissions=[],
+            voice_s3_submissions=[],
             process_time=None,
         )
     
@@ -369,15 +377,11 @@ async def forward(self):
     Steps:
     1.  Select random miners.
     2.  Fetch the per-round face-variation base from the MIID API.
-    3.  Build ImageRequest with three images (face-variation base + today's
-        IOTD + tomorrow's IOTD) and 5 synthetic variations: indoor bg,
-        outdoor bg, 3 combined edits; plus real screen-replay instructions
-        — that task is a physical capture miners may submit as
-        many non-duplicate times as they want (no daily cap), each one
-        bundling a face close-up + environment shot of the same capture,
-        independent of this request/response cycle).
+    3.  Build ImageRequest with base face + 6 synthetic variations
+        (indoor/outdoor bg, 3 combined edits, synthetic screen_replay).
     4.  Query miners in batches; collect S3 submission references.
-    5.  Compute KAV rewards via get_image_variation_rewards() (calls grading API).
+    5.  Compute KAV rewards via get_image_variation_rewards() (calls grading API;
+        remote API ignores screen_replay scores).
     6.  Optionally combine with UAV via apply_reputation_rewards().
     7.  Update scores and set weights.
     8.  Upload results to the MIID server.
@@ -396,11 +400,12 @@ async def forward(self):
 
     request_start = time.time()
 
-    # Ensure today's + tomorrow's IOTD are cached (empty dir on cold start, or new UTC day).
-    # Only needed when the validator itself is sending the seed images — see
-    # VALIDATOR_SENDS_SEED_IMAGE in MIID/validator/fixed_images.py.
-    if VALIDATOR_SENDS_SEED_IMAGE:
-        ensure_daily_fixed_image(self.wallet)
+    # # --- PAUSED: fixed IOTD cache refresh (restore later) ---
+    # # Ensure today's + tomorrow's IOTD are cached (empty dir on cold start, or new UTC day).
+    # # Only needed when the validator itself is sending the seed images — see
+    # # VALIDATOR_SENDS_SEED_IMAGE in MIID/validator/fixed_images.py.
+    # if VALIDATOR_SENDS_SEED_IMAGE:
+    #     ensure_daily_fixed_image(self.wallet)
 
     is_testnet = (
         self.config.netuid == 322
@@ -429,8 +434,9 @@ async def forward(self):
     image_request = None
     challenge_id = None
     selected_variations = None  # Track what variations were requested
-    real_screen_replay_instructions = None
-    seed_pool: List[str] = []
+    # # --- PAUSED: real screen-replay locals (restore later) ---
+    # real_screen_replay_instructions = None
+    # seed_pool: List[str] = []
 
     if PHASE4_ENABLED:
         try:
@@ -441,57 +447,57 @@ async def forward(self):
             else:
                 image_filename, base64_image = image_result
 
-                # Always request (5 synthetic variations):
+                # Always request 6 synthetic variations:
                 # 1–2) background_in (indoor) + background_out (outdoor)
                 # 3–5) combined edits: lighting+expression, lighting+pose, pose+expression
-                # screen_replay is NOT included here — it's a real physical
-                # capture, not FLUX-generated.
+                # 6) screen_replay (device + ≥2 cues; FLUX synthetic; PL v3)
                 selected_variations = build_standard_challenge_variations()
 
-                # Three images sent to miners:
-                #   1. base_image — per-round face for FLUX synthetics (from /image)
-                #   2. daily_seed_image — today's IOTD (from /fixed_image)
-                #   3. tomorrow_seed_image — tomorrow's IOTD (same endpoint, sent early)
-                #
-                # Sandbox fallback (VALIDATOR_SENDS_SEED_IMAGE=False): the validator
-                # does NOT fetch/send IOTDs — miners pick one themselves from the
-                # static fixed_image/ pool. Flip VALIDATOR_SENDS_SEED_IMAGE in
-                # MIID/validator/fixed_images.py to restore that practice mode.
-                daily_seed_filename, daily_seed_b64, daily_seed_date = None, None, None
-                tomorrow_seed_filename, tomorrow_seed_b64, tomorrow_seed_date = None, None, None
-                seed_pool: List[str] = []
-                if VALIDATOR_SENDS_SEED_IMAGE:
-                    today_seed, tomorrow_seed = load_seed_pair_base64()
-                    if today_seed is None:
-                        bt.logging.warning(
-                            "Phase 4: No today's IOTD available; "
-                            "screen-replay instructions will be sent without a seed image."
-                        )
-                    else:
-                        daily_seed_filename, daily_seed_b64, daily_seed_date = today_seed
-                    if tomorrow_seed is None:
-                        bt.logging.warning(
-                            "Phase 4: No tomorrow's IOTD available; "
-                            "miners will only receive today's seed."
-                        )
-                    else:
-                        tomorrow_seed_filename, tomorrow_seed_b64, tomorrow_seed_date = tomorrow_seed
-                    real_screen_replay_instructions = format_real_screen_replay_instructions(
-                        seed_filename=daily_seed_filename,
-                        tomorrow_seed_filename=tomorrow_seed_filename,
-                        seed_date=daily_seed_date,
-                        tomorrow_seed_date=tomorrow_seed_date,
-                    )
-                else:
-                    seed_pool = list_fixed_image_pool()
-                    if not seed_pool:
-                        bt.logging.warning(
-                            "Phase 4: fixed_image/ pool is empty; screen-replay "
-                            "instructions will be sent without a seed pool."
-                        )
-                    real_screen_replay_instructions = format_real_screen_replay_instructions(
-                        seed_pool=seed_pool
-                    )
+                # # --- PAUSED: IOTD seeds + real screen-replay instructions ---
+                # # Three images sent to miners:
+                # #   1. base_image — per-round face for FLUX synthetics (from /image)
+                # #   2. daily_seed_image — today's IOTD (from /fixed_image)
+                # #   3. tomorrow_seed_image — tomorrow's IOTD (same endpoint, sent early)
+                # #
+                # # Sandbox fallback (VALIDATOR_SENDS_SEED_IMAGE=False): the validator
+                # # does NOT fetch/send IOTDs — miners pick one themselves from the
+                # # static fixed_image/ pool. Flip VALIDATOR_SENDS_SEED_IMAGE in
+                # # MIID/validator/fixed_images.py to restore that practice mode.
+                # daily_seed_filename, daily_seed_b64, daily_seed_date = None, None, None
+                # tomorrow_seed_filename, tomorrow_seed_b64, tomorrow_seed_date = None, None, None
+                # seed_pool: List[str] = []
+                # if VALIDATOR_SENDS_SEED_IMAGE:
+                #     today_seed, tomorrow_seed = load_seed_pair_base64()
+                #     if today_seed is None:
+                #         bt.logging.warning(
+                #             "Phase 4: No today's IOTD available; "
+                #             "screen-replay instructions will be sent without a seed image."
+                #         )
+                #     else:
+                #         daily_seed_filename, daily_seed_b64, daily_seed_date = today_seed
+                #     if tomorrow_seed is None:
+                #         bt.logging.warning(
+                #             "Phase 4: No tomorrow's IOTD available; "
+                #             "miners will only receive today's seed."
+                #         )
+                #     else:
+                #         tomorrow_seed_filename, tomorrow_seed_b64, tomorrow_seed_date = tomorrow_seed
+                #     real_screen_replay_instructions = format_real_screen_replay_instructions(
+                #         seed_filename=daily_seed_filename,
+                #         tomorrow_seed_filename=tomorrow_seed_filename,
+                #         seed_date=daily_seed_date,
+                #         tomorrow_seed_date=tomorrow_seed_date,
+                #     )
+                # else:
+                #     seed_pool = list_fixed_image_pool()
+                #     if not seed_pool:
+                #         bt.logging.warning(
+                #             "Phase 4: fixed_image/ pool is empty; screen-replay "
+                #             "instructions will be sent without a seed pool."
+                #         )
+                #     real_screen_replay_instructions = format_real_screen_replay_instructions(
+                #         seed_pool=seed_pool
+                #     )
 
                 # Drand unlock at T+40 min (batch1 20m + batch2 20m); grading window T+40–60m
                 reveal_delay = calculate_reveal_buffer(
@@ -511,12 +517,16 @@ async def forward(self):
                         type=v["type"],
                         intensity=v["intensity"],
                         description=v["description"],
-                        detail=f"{v['detail']}. {IMAGE_VARIATION_REQUIREMENTS}",
+                        detail=(
+                            v["detail"]
+                            if v["type"] == "screen_replay"
+                            else f"{v['detail']}. {IMAGE_VARIATION_REQUIREMENTS}"
+                        ),
                     )
                     for v in selected_variations
                 ]
 
-                # Create image request
+                # Create image request (base face + 6 synthetics only)
                 image_request = ImageRequest(
                     base_image=base64_image,
                     image_filename=image_filename,
@@ -524,33 +534,24 @@ async def forward(self):
                     target_drand_round=target_round,
                     reveal_timestamp=reveal_timestamp,
                     challenge_id=challenge_id,
-                    daily_seed_image=daily_seed_b64,
-                    daily_seed_filename=daily_seed_filename,
-                    daily_seed_date=daily_seed_date,
-                    tomorrow_seed_image=tomorrow_seed_b64,
-                    tomorrow_seed_filename=tomorrow_seed_filename,
-                    tomorrow_seed_date=tomorrow_seed_date,
-                    real_screen_replay_instructions=real_screen_replay_instructions,
+                    # # --- PAUSED: IOTD seeds + real instructions (restore later) ---
+                    # daily_seed_image=daily_seed_b64,
+                    # daily_seed_filename=daily_seed_filename,
+                    # daily_seed_date=daily_seed_date,
+                    # tomorrow_seed_image=tomorrow_seed_b64,
+                    # tomorrow_seed_filename=tomorrow_seed_filename,
+                    # tomorrow_seed_date=tomorrow_seed_date,
+                    # real_screen_replay_instructions=real_screen_replay_instructions,
                 )
 
                 # Log what was selected
                 variation_summary = ", ".join(
                     f"{v['type']}({v['intensity']})" for v in selected_variations
                 )
-                if VALIDATOR_SENDS_SEED_IMAGE:
-                    seed_mode_log = (
-                        f"today_iotd={daily_seed_filename or 'unavailable'}"
-                        f"({daily_seed_date or '?'}) "
-                        f"tomorrow_iotd={tomorrow_seed_filename or 'unavailable'}"
-                        f"({tomorrow_seed_date or '?'})"
-                    )
-                else:
-                    seed_mode_log = f"seed_pool_size={len(seed_pool)} (miner picks; sandbox mode)"
                 bt.logging.info(
-                    f"Phase 4: three-image request - "
+                    f"Phase 4: six-variation request - "
                     f"face='{image_filename}', "
                     f"variations=[{variation_summary}], "
-                    f"{seed_mode_log}, "
                     f"Total requested: {len(selected_variations)}, "
                     f"drand round {target_round}"
                 )
@@ -562,12 +563,71 @@ async def forward(self):
             image_request = None
             selected_variations = None
 
+    # 3b) Build VoiceRequest (UAV post-graded only — no KAV)
+    voice_request = None
+    target_words: List[str] = []
+    karaoke_payload: Optional[Dict[str, Any]] = None
+    try:
+        voice_result = fetch_voice_from_api(self.wallet)
+        if voice_result is None:
+            bt.logging.warning("Voice challenge skipped: Could not fetch voice from API")
+        else:
+            voice_filename, voice_b64, voice_language, voice_transcript = voice_result
+            karaoke = generate(voice_language)
+            target_words = list(karaoke.words)
+            karaoke_payload = karaoke.to_dict()
+
+            # Reuse image challenge drand timing when available; else compute independently
+            if image_request is not None:
+                voice_target_round = image_request.target_drand_round
+                voice_reveal_timestamp = image_request.reveal_timestamp
+                voice_challenge_id = challenge_id
+            else:
+                reveal_delay = calculate_reveal_buffer(
+                    getattr(self.config.neuron, "reveal_delay_seconds", REVEAL_DELAY_SECONDS)
+                )
+                voice_target_round, voice_reveal_timestamp = calculate_target_round(reveal_delay)
+                voice_challenge_id = (
+                    challenge_id
+                    or f"challenge_{int(time.time())}_{self.wallet.hotkey.ss58_address[:8]}"
+                )
+                if challenge_id is None:
+                    challenge_id = voice_challenge_id
+
+            voice_request = VoiceRequest(
+                base_voice=voice_b64,
+                voice_filename=voice_filename,
+                language=voice_language,
+                target_words=target_words,
+                target_text=karaoke.text,
+                reference_transcript=voice_transcript,
+                target_drand_round=voice_target_round,
+                reveal_timestamp=voice_reveal_timestamp,
+                challenge_id=voice_challenge_id,
+            )
+            bt.logging.info(
+                f"Voice challenge: file='{voice_filename}', lang={voice_language}, "
+                f"tts_text='{karaoke.text}', "
+                f"duration≈{karaoke.record_duration_seconds()}s, "
+                f"drand round {voice_target_round}"
+            )
+    except Exception as e:
+        bt.logging.warning(f"Voice challenge: Could not create voice request: {e}")
+        import traceback
+        bt.logging.debug(f"Voice error traceback: {traceback.format_exc()}")
+        voice_request = None
+        karaoke_payload = None
+
     # 4) Prepare synapse
     request_synapse = IdentitySynapse(
         timeout=request_timeout,
         image_request=image_request,
+        voice_request=voice_request,
     )
-    bt.logging.info(f"Querying {len(miner_uids)} miners with image variation request")
+    bt.logging.info(
+        f"Querying {len(miner_uids)} miners "
+        f"(image={'yes' if image_request else 'no'}, voice={'yes' if voice_request else 'no'})"
+    )
     await asyncio.sleep(3)
 
     # 5) Query miners in batches
@@ -612,6 +672,15 @@ async def forward(self):
             else:
                 bt.logging.info(f"Miner {uid}: returned {len(response.s3_submissions)} S3 submissions.")
 
+            voice_subs = getattr(response, "voice_s3_submissions", None)
+            if voice_request is not None:
+                if not voice_subs:
+                    bt.logging.warning(f"Miner {uid}: returned empty voice_s3_submissions.")
+                else:
+                    bt.logging.info(
+                        f"Miner {uid}: returned {len(voice_subs)} voice S3 submissions."
+                    )
+
         if i + batch_size < len(miner_uids):
             sleep_time = 2
             bt.logging.info(f"Sleeping for {sleep_time}s before next batch")
@@ -629,10 +698,7 @@ async def forward(self):
     )
     bt.logging.info(f"Received {valid_count} valid responses out of {len(all_responses)}")
 
-    # Build s3_submissions_by_miner for grading. Screen-replay submissions are
-    # passed through as-is for now (miners may send as many non-duplicate
-    # captures as they want; actual dedup checking isn't implemented yet —
-    # see note near the top of this file).
+    # Build s3_submissions_by_miner for grading.
     s3_submissions_by_miner: Dict[str, Any] = {}
 
     for uid, response in uid_response_map.items():
@@ -640,34 +706,33 @@ async def forward(self):
             miner_hotkey = str(self.metagraph.axons[uid].hotkey)
             s3_data = []
             for sub in response.s3_submissions:
-                # screen_replay_uav (date/camera/device/cue-checklist) arrives
-                # already parsed on sub — the miner sent it directly over the
-                # wire, no separate JSON file or S3 upload involved. We don't
-                # use it for KAV grading; we just carry it through into
-                # results/s3_submissions_by_miner so it ends up in the final
-                # JSON uploaded to the MIID server (Flask app) below.
-                uav_dict = None
-                if sub.screen_replay_uav is not None:
-                    if hasattr(sub.screen_replay_uav, "model_dump"):
-                        uav_dict = sub.screen_replay_uav.model_dump()
-                    elif hasattr(sub.screen_replay_uav, "dict"):
-                        uav_dict = sub.screen_replay_uav.dict()
-                    else:
-                        uav_dict = dict(sub.screen_replay_uav)
-
-                if sub.variation_type == "screen_replay":
-                    # Every screen_replay submission carries 2 media files of
-                    # the same capture — face close-up photo/video (primary) +
-                    # environment still (*_angle2), with capture_variant in UAV.
-                    # Miners may send as many non-duplicate captures as they
-                    # want; there's no daily cap.
-                    bt.logging.info(
-                        f"Miner UID {uid} screen_replay received "
-                        f"(face_hash={sub.image_hash[:12]}…, "
-                        f"env_hash={(sub.image_hash_angle2 or 'MISSING')[:12]}…, "
-                        f"variant={(uav_dict or {}).get('capture_variant', '?')}, "
-                        f"uav={'present' if uav_dict else 'MISSING'})"
-                    )
+                # # --- PAUSED: real screen-replay UAV / angle2 pass-through ---
+                # # screen_replay_uav (date/camera/device/cue-checklist) arrives
+                # # already parsed on sub — the miner sent it directly over the
+                # # wire, no separate JSON file or S3 upload involved. We don't
+                # # use it for KAV grading; we just carry it through into
+                # # results/s3_submissions_by_miner so it ends up in the final
+                # # JSON uploaded to the MIID server (Flask app) below.
+                # uav_dict = None
+                # if sub.screen_replay_uav is not None:
+                #     if hasattr(sub.screen_replay_uav, "model_dump"):
+                #         uav_dict = sub.screen_replay_uav.model_dump()
+                #     elif hasattr(sub.screen_replay_uav, "dict"):
+                #         uav_dict = sub.screen_replay_uav.dict()
+                #     else:
+                #         uav_dict = dict(sub.screen_replay_uav)
+                #
+                # if sub.variation_type == "screen_replay":
+                #     # Every screen_replay submission carries 2 media files of
+                #     # the same capture — face close-up photo/video (primary) +
+                #     # environment still (*_angle2), with capture_variant in UAV.
+                #     bt.logging.info(
+                #         f"Miner UID {uid} screen_replay received "
+                #         f"(face_hash={sub.image_hash[:12]}…, "
+                #         f"env_hash={(sub.image_hash_angle2 or 'MISSING')[:12]}…, "
+                #         f"variant={(uav_dict or {}).get('capture_variant', '?')}, "
+                #         f"uav={'present' if uav_dict else 'MISSING'})"
+                #     )
 
                 s3_data.append({
                     "s3_key":       sub.s3_key,
@@ -675,10 +740,11 @@ async def forward(self):
                     "signature":    sub.signature,
                     "variation_type": sub.variation_type,
                     "path_signature": sub.path_signature,
-                    "s3_key_angle2":     sub.s3_key_angle2,
-                    "image_hash_angle2": sub.image_hash_angle2,
-                    "signature_angle2":  sub.signature_angle2,
-                    "screen_replay_uav": uav_dict,
+                    # # --- PAUSED: real dual-file + UAV fields (restore later) ---
+                    # "s3_key_angle2":     sub.s3_key_angle2,
+                    # "image_hash_angle2": sub.image_hash_angle2,
+                    # "signature_angle2":  sub.signature_angle2,
+                    # "screen_replay_uav": uav_dict,
                 })
             s3_submissions_by_miner[str(uid)] = {
                 "hotkey":           miner_hotkey,
@@ -686,40 +752,72 @@ async def forward(self):
                 "submission_count": len(s3_data),
             }
 
-    # Screen-replay summary for the results JSON (same idea as the old
-    # Phase-3 `uav_data` block). Always present, even when nobody uploaded.
-    screen_replay_requested = bool(real_screen_replay_instructions)
-    screen_replay_data = _collect_screen_replay_data(
-        requested=screen_replay_requested,
-        instructions=real_screen_replay_instructions,
-        image_request=image_request,
-        seed_pool=seed_pool,
-        miner_uids=miner_uids,
-        s3_submissions_by_miner=s3_submissions_by_miner,
-    )
+    # Collect voice S3 submissions for UAV post-grading (no KAV path).
+    voice_s3_submissions_by_miner: Dict[str, Any] = {}
+    for uid, response in uid_response_map.items():
+        voice_subs = getattr(response, "voice_s3_submissions", None)
+        if voice_request is not None and voice_subs:
+            miner_hotkey = str(self.metagraph.axons[uid].hotkey)
+            voice_data = []
+            for sub in voice_subs:
+                voice_data.append({
+                    "s3_key":         sub.s3_key,
+                    "image_hash":     sub.image_hash,
+                    "signature":      sub.signature,
+                    "variation_type": sub.variation_type,
+                    "path_signature": sub.path_signature,
+                })
+            voice_s3_submissions_by_miner[str(uid)] = {
+                "hotkey":           miner_hotkey,
+                "submissions":      voice_data,
+                "submission_count": len(voice_data),
+            }
+
+    # # --- PAUSED: real screen-replay summary for results JSON (restore later) ---
+    # screen_replay_requested = bool(real_screen_replay_instructions)
+    # screen_replay_data = _collect_screen_replay_data(
+    #     requested=screen_replay_requested,
+    #     instructions=real_screen_replay_instructions,
+    #     image_request=image_request,
+    #     seed_pool=seed_pool,
+    #     miner_uids=miner_uids,
+    #     s3_submissions_by_miner=s3_submissions_by_miner,
+    # )
+    # sr_summary = screen_replay_data["summary"]
+    # today_iotd = screen_replay_data["image_of_the_day"]["today"]
+    # bt.logging.info(
+    #     f"Screen-replay: requested={screen_replay_requested}, "
+    #     f"today_iotd={today_iotd.get('filename') or 'unavailable'}"
+    #     f"({today_iotd.get('date') or '?'}), "
+    #     f"miners_uploaded={sr_summary['total_miners_with_screen_replay']}/"
+    #     f"{screen_replay_data['miners_queried']} queried, "
+    #     f"submissions={sr_summary['total_screen_replays_collected']}"
+    # )
+    screen_replay_requested = False
+    screen_replay_data = {
+        "requested": False,
+        "note": "Real IOTD screen-replay paused; synthetic screen_replay is a FLUX VariationRequest",
+        "summary": {
+            "total_miners_with_screen_replay": 0,
+            "total_screen_replays_collected": 0,
+        },
+        "image_of_the_day": {"today": {}, "tomorrow": {}, "seed_pool": []},
+    }
     sr_summary = screen_replay_data["summary"]
-    today_iotd = screen_replay_data["image_of_the_day"]["today"]
-    bt.logging.info(
-        f"Screen-replay: requested={screen_replay_requested}, "
-        f"today_iotd={today_iotd.get('filename') or 'unavailable'}"
-        f"({today_iotd.get('date') or '?'}), "
-        f"miners_uploaded={sr_summary['total_miners_with_screen_replay']}/"
-        f"{screen_replay_data['miners_queried']} queried, "
-        f"submissions={sr_summary['total_screen_replays_collected']}"
-    )
 
     # Build phase4_image_data for the grading API — mirrors the structure used
     # in validator_api_test.py so the signing and payload format match exactly.
     phase4_image_data: Optional[Dict] = None
     if PHASE4_ENABLED and image_request is not None and selected_variations:
         phase4_image_data = {
-            "cycle": "Phase4-C6-Sandbox",
+            "cycle": "Phase5-C1-Sandbox",
             "challenge_id": challenge_id,
             "base_image_filename": image_request.image_filename,
-            "daily_seed_filename": image_request.daily_seed_filename,
-            "daily_seed_date": image_request.daily_seed_date,
-            "tomorrow_seed_filename": image_request.tomorrow_seed_filename,
-            "tomorrow_seed_date": image_request.tomorrow_seed_date,
+            # # --- PAUSED: IOTD seed metadata (restore later) ---
+            # "daily_seed_filename": image_request.daily_seed_filename,
+            # "daily_seed_date": image_request.daily_seed_date,
+            # "tomorrow_seed_filename": image_request.tomorrow_seed_filename,
+            # "tomorrow_seed_date": image_request.tomorrow_seed_date,
             "target_drand_round": image_request.target_drand_round,
             "reveal_timestamp": image_request.reveal_timestamp,
             "requested_variations": selected_variations,
@@ -727,6 +825,29 @@ async def forward(self):
             "variation_types": [v["type"] for v in selected_variations],
             "variation_intensities": [v["intensity"] for v in selected_variations],
             "s3_submissions_by_miner": s3_submissions_by_miner,
+        }
+
+    # Voice payload for UAV post-grading only (never sent to KAV /grade_v2).
+    phase_voice_data: Optional[Dict] = None
+    if voice_request is not None:
+        phase_voice_data = {
+            "cycle": "Phase5-C1-Sandbox",
+            "note": (
+                "Phase 5 Cycle 1 Sandbox voice clone: submissions collected for UAV post-grading only. "
+                "No KAV / live grading API call for voice. Miners may return empty submissions."
+            ),
+            "enabled": True,
+            "challenge_id": voice_request.challenge_id,
+            "voice_filename": voice_request.voice_filename,
+            "language": voice_request.language,
+            "target_words": list(voice_request.target_words),
+            "target_text": voice_request.target_text,
+            "karaoke": karaoke_payload,
+            "reference_transcript": voice_request.reference_transcript,
+            "target_drand_round": voice_request.target_drand_round,
+            "reveal_timestamp": voice_request.reveal_timestamp,
+            "s3_bucket": "yanez-miid-sn54",
+            "voice_s3_submissions_by_miner": voice_s3_submissions_by_miner,
         }
 
     # Wait for drand reveal before grading — images stay encrypted until T+40 min
@@ -845,7 +966,7 @@ async def forward(self):
         "timestamp": timestamp,
         "phase4_image_data": {
             **(phase4_image_data or {}),
-            "note": "Phase 4 Cycle 6 Sandbox: image variations with S3 uploads for YANEZ sandbox testing",
+            "note": "Phase 5: 6 synthetic FLUX variations (incl. screen_replay); real IOTD path paused",
             "enabled": PHASE4_ENABLED and image_request is not None,
             "s3_bucket": "yanez-miid-sn54",
             # Fallbacks for when image_request was unavailable (phase4_image_data is None)
@@ -863,6 +984,11 @@ async def forward(self):
         # Same role as the old Phase-3 `uav_data` block: what we asked, the
         # image of the day, and who actually uploaded a screen-replay.
         "screen_replay_data": screen_replay_data,
+        # Voice clone submissions for UAV post-grading (no local/KAV rewards).
+        "phase_voice_data": phase_voice_data or {
+            "enabled": False,
+            "note": "No voice request in this round",
+        },
         "responses": {},
         "rewards": {},
     }
@@ -895,6 +1021,7 @@ async def forward(self):
             "axon":           axon_data,
             "response_time":  response.process_time if response else None,
             "s3_submissions": s3_submissions_by_miner.get(str(uid), {}),
+            "voice_s3_submissions": voice_s3_submissions_by_miner.get(str(uid), {}),
             "scoring_details": detailed_metrics[i] if i < len(detailed_metrics) else {},
         }
         if response is None:
@@ -1005,8 +1132,9 @@ async def forward(self):
         "screen_replay_requested": screen_replay_requested,
         "screen_replay_miners_uploaded": sr_summary["total_miners_with_screen_replay"],
         "screen_replay_submissions": sr_summary["total_screen_replays_collected"],
-        "daily_seed_filename": today_iotd.get("filename"),
-        "daily_seed_date": today_iotd.get("date"),
+        # # --- PAUSED: IOTD wandb fields (restore later) ---
+        # "daily_seed_filename": today_iotd.get("filename"),
+        # "daily_seed_date": today_iotd.get("date"),
     }
 
     # Upload to MIID server
@@ -1044,7 +1172,7 @@ async def forward(self):
             )
 
             # ==========================================================================
-            # Cache rep_data from response for NEXT forward pass (Phase 4 - Cycle 6 Sandbox)
+            # Cache rep_data from response for NEXT forward pass (Phase 5 Cycle 1 Sandbox)
             # ==========================================================================
             if uav_grading_enabled:
                 if upload_response and upload_response.get("rep_cache"):

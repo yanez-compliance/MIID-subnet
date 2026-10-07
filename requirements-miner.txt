@@ -17,3 +17,8 @@ pillow-heif>=0.13.0 # for HEIC image support
 # Drand timelock encryption is provided by bittensor itself via
 # `bittensor.timelock` (backed by the `bittensor_drand` Rust extension that
 # ships with bittensor>=9). No separate `timelock` package is required.
+
+# Voice identity (SpeechBrain ECAPA) — install when wiring speaker
+# verification in MIID/miner/speech_brain_compare.py:
+#   speechbrain
+#   torchaudio

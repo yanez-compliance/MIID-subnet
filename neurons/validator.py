@@ -44,7 +44,8 @@ import bittensor as bt
 from MIID.base.validator import BaseValidatorNeuron
 from MIID.validator import forward
 from MIID.validator.forward import reset_phase4_state
-from MIID.validator.fixed_images import ensure_daily_fixed_image, VALIDATOR_SENDS_SEED_IMAGE
+# # --- PAUSED: fixed IOTD fetch on startup (restore later) ---
+# from MIID.validator.fixed_images import ensure_daily_fixed_image, VALIDATOR_SENDS_SEED_IMAGE
 
 
 class Validator(BaseValidatorNeuron):
@@ -87,11 +88,12 @@ class Validator(BaseValidatorNeuron):
             if hasattr(self.config, 'wandb') and hasattr(self.config.wandb, 'project_name'):
                 bt.logging.info(f"Wandb project name: {self.config.wandb.project_name}")
 
-        # Daily + tomorrow IOTD for screen-replay (fetch if empty / new UTC day).
-        # Only needed when the validator is sending the seed images itself —
-        # see VALIDATOR_SENDS_SEED_IMAGE in MIID/validator/fixed_images.py.
-        if VALIDATOR_SENDS_SEED_IMAGE:
-            ensure_daily_fixed_image(self.wallet)
+        # # --- PAUSED: fixed IOTD fetch on startup (restore later) ---
+        # # Daily + tomorrow IOTD for screen-replay (fetch if empty / new UTC day).
+        # # Only needed when the validator is sending the seed images itself —
+        # # see VALIDATOR_SENDS_SEED_IMAGE in MIID/validator/fixed_images.py.
+        # if VALIDATOR_SENDS_SEED_IMAGE:
+        #     ensure_daily_fixed_image(self.wallet)
 
         # Reset Phase 4 cycle state on startup
         phase4_state_path = Path(self.config.logging.logging_dir) / "validator_results" / "phase4_state.json"
