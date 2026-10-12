@@ -361,7 +361,7 @@ python neurons/miner.py --netuid 54 --wallet.name your_wallet_name --wallet.hotk
 
 Same round as images when the validator attaches a `voice_request`:
 
-1. Validator fetches a reference WAV from the MIID API and draws target speech text (English or Spanish), e.g. `target_text = "three orange six two nine apple table one"` (also sent as `target_words` list).
+1. Validator fetches a reference WAV from the MIID API and draws target speech text (English or Spanish): **5 digit-words + 10 pool words = 15 tokens**, e.g. `target_text = "three orange six book two nine apple table one door light music phone school"` (also sent as `target_words` list). Clip length is not fixed — speak the prompt naturally.
 2. Implement `MIID/miner/voice_generator.generate_voice_clone` to synthesize a WAV with the same speaker identity speaking `target_text`.
 3. The existing encrypt → S3 → `S3Submission(variation_type="voice")` path runs and fills `voice_s3_submissions`.
 4. Voice is collected for **UAV post-grading only** (no live KAV grade for voice).

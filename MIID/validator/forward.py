@@ -608,7 +608,6 @@ async def forward(self):
             bt.logging.info(
                 f"Voice challenge: file='{voice_filename}', lang={voice_language}, "
                 f"tts_text='{karaoke.text}', "
-                f"duration≈{karaoke.record_duration_seconds()}s, "
                 f"drand round {voice_target_round}"
             )
     except Exception as e:

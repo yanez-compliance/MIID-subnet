@@ -4,12 +4,10 @@
 #
 # Each challenge draws tokens a synthetic voice model must speak:
 #   - 5 digit words (e.g. "three", "seis") — never zero
-#   - 3 words from a language word pool
-# The 8 tokens are shuffled into one sequence, then joined into a single
-# TTS prompt string (e.g. "three orange six two nine apple table one").
-#
-# Timing helpers assume a short lead-in, then one token every few seconds at
-# 16 kHz — useful for windowing audio during post-grading. Only "en" / "es".
+#   - 10 words from a language word pool
+# The 15 tokens are shuffled into one sequence, then joined into a single
+# TTS prompt string. Clip length is not prescribed — miners speak the prompt
+# at a natural pace. Only "en" / "es".
 #
 # Public helpers:
 #   generate(language)            -> KaraokeChallenge (.text, .words)
@@ -22,12 +20,9 @@ from dataclasses import dataclass
 from enum import Enum
 from typing import List, Optional
 
-# --- counts and timing ---
+# --- counts ---
 KARAOKE_DIGIT_COUNT = 5
-KARAOKE_WORD_COUNT = 3
-KARAOKE_LEAD_IN_SECONDS = 1
-KARAOKE_SECONDS_PER_TOKEN = 2
-SAMPLE_RATE = 16_000
+KARAOKE_WORD_COUNT = 10
 
 
 class SpeechLanguage(str, Enum):
@@ -52,6 +47,21 @@ ENGLISH_WORDS = [
     "market",
     "river",
     "silver",
+    "book",
+    "door",
+    "light",
+    "music",
+    "phone",
+    "school",
+    "street",
+    "summer",
+    "train",
+    "yellow",
+    "bread",
+    "cloud",
+    "flower",
+    "forest",
+    "mountain",
 ]
 
 SPANISH_DIGITS = ["uno", "dos", "tres", "cuatro", "cinco", "seis", "siete", "ocho", "nueve"]
@@ -66,11 +76,26 @@ SPANISH_WORDS = [
     "papel",
     "reloj",
     "ventana",
-    "jardin",
+    "jardín",
     "naranja",
     "mercado",
-    "rio",
+    "río",
     "plata",
+    "libro",
+    "puerta",
+    "luz",
+    "música",
+    "teléfono",
+    "escuela",
+    "calle",
+    "verano",
+    "tren",
+    "amarillo",
+    "pan",
+    "nube",
+    "flor",
+    "bosque",
+    "montaña",
 ]
 
 POOLS: dict[SpeechLanguage, tuple[list[str], list[str]]] = {
@@ -85,8 +110,6 @@ class KaraokeChallenge:
 
     words: list[str]
     language: SpeechLanguage
-    lead_in_seconds: int = KARAOKE_LEAD_IN_SECONDS
-    seconds_per_token: int = KARAOKE_SECONDS_PER_TOKEN
 
     @property
     def text(self) -> str:
@@ -97,21 +120,11 @@ class KaraokeChallenge:
     def token_count(self) -> int:
         return len(self.words)
 
-    def record_duration_seconds(self) -> int:
-        return self.lead_in_seconds + self.token_count * self.seconds_per_token
-
-    def window_start_sample(self, token_index: int, sample_rate: int = SAMPLE_RATE) -> int:
-        return (self.lead_in_seconds + token_index * self.seconds_per_token) * sample_rate
-
-    def window_end_sample(self, token_index: int, sample_rate: int = SAMPLE_RATE) -> int:
-        return (self.lead_in_seconds + (token_index + 1) * self.seconds_per_token) * sample_rate
-
     def to_dict(self) -> dict:
         return {
             "language": self.language.value,
             "text": self.text,
             "words": list(self.words),
-            "record_duration_seconds": self.record_duration_seconds(),
         }
 
 
@@ -130,7 +143,7 @@ def generate(
     language: SpeechLanguage | str,
     rng: Optional[random.Random] = None,
 ) -> KaraokeChallenge:
-    """Draw a passcode: 5 digit-words + 3 words, then shuffle into TTS text."""
+    """Draw a passcode: 5 digit-words + 10 words, then shuffle into TTS text."""
     rng = rng or random.Random()
     if not isinstance(language, SpeechLanguage):
         language = _parse_language(str(language))
@@ -141,10 +154,10 @@ def generate(
     return KaraokeChallenge(words=tokens, language=language)
 
 
-def generate_target_words(language: str, count: int = 8) -> List[str]:
+def generate_target_words(language: str, count: int = 15) -> List[str]:
     """Spoken tokens for ``VoiceRequest.target_words``.
 
-    Always draws the standard set (5 digit-words + 3 words = 8 tokens).
+    Always draws the standard set (5 digit-words + 10 words = 15 tokens).
     ``count`` is accepted for call-site compatibility but ignored.
     """
     _ = count  # fixed size
