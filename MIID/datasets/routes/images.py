@@ -23,6 +23,7 @@ import sys
 sys.path.insert(0, "/home/ubuntu/YanezMIIDManage")
 from media_pools.config import (
     BASE_IMAGES_DIR,
+    BASE_IMAGES_MANIFEST,
     BATCH_DIR,
     USED_DIR,
     BATCH_LOG,
@@ -38,11 +39,52 @@ _batch_lock = threading.Lock()
 # _fixed_image_lock = threading.Lock()  # fixed_image endpoint disabled
 
 
+def _load_base_image_filenames(folder_name: str) -> list[str]:
+    """Filenames for a validator folder from manifest, else legacy base_images dir."""
+    if BASE_IMAGES_MANIFEST.is_file():
+        try:
+            with open(BASE_IMAGES_MANIFEST, encoding="utf-8") as f:
+                doc = json.load(f)
+            names = (doc.get("validators") or {}).get(folder_name) or []
+            if names:
+                return list(names)
+        except Exception as e:
+            print(f"[WARN] Failed to read base_images_manifest: {e}")
+
+    images_dir = BASE_IMAGES_DIR / folder_name
+    if not images_dir.is_dir():
+        return []
+    return sorted(
+        f.name
+        for f in images_dir.iterdir()
+        if f.is_file() and f.suffix.lower() in ALLOWED_EXT
+    )
+
+
+def _resolve_pool_image(filename: str):
+    """Find filename in the consolidated pool (available or used), else base_images."""
+    for root in (BATCH_DIR, USED_DIR):
+        if root.is_dir():
+            candidate = root / filename
+            if candidate.is_file():
+                return candidate
+    if BASE_IMAGES_DIR.is_dir():
+        for sub in BASE_IMAGES_DIR.iterdir():
+            if not sub.is_dir():
+                continue
+            candidate = sub / filename
+            if candidate.is_file():
+                return candidate
+    return None
+
+
 @image_bp.route("/images/<hotkey>", methods=["POST"])
 def get_validator_images(hotkey):
     """
-    Return all base images for this validator (that hotkey's folder under base_images).
-    Only hotkeys in HOTKEY_TO_FOLDER can call this endpoint.
+    Return all base images for this validator.
+    Filenames come from base_images_manifest.json; bytes are read from the
+    consolidated pool (all_images / used_all_images), with legacy base_images/
+    as fallback until that folder is archived.
     """
     if hotkey not in HOTKEY_TO_FOLDER:
         return (
@@ -62,18 +104,20 @@ def get_validator_images(hotkey):
     if not folder_name:
         return jsonify({"error": "No image folder configured for this validator"}), 404
 
-    images_dir = BASE_IMAGES_DIR / folder_name
-    if not images_dir.is_dir():
+    filenames = _load_base_image_filenames(folder_name)
+    if not filenames:
         return jsonify({"error": f"Image folder not found: {folder_name}"}), 404
 
     images = []
-    for f in sorted(images_dir.iterdir()):
-        if f.is_file() and f.suffix.lower() in ALLOWED_EXT:
-            try:
-                b64 = base64.standard_b64encode(f.read_bytes()).decode("ascii")
-                images.append({"filename": f.name, "data_base64": b64})
-            except Exception:
-                pass
+    for name in filenames:
+        path = _resolve_pool_image(name)
+        if path is None:
+            continue
+        try:
+            b64 = base64.standard_b64encode(path.read_bytes()).decode("ascii")
+            images.append({"filename": name, "data_base64": b64})
+        except Exception:
+            pass
 
     return (
         jsonify(
