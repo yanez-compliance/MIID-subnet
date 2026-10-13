@@ -203,12 +203,15 @@ def _recycle_if_empty():
 @image_bp.route("/image/<hotkey>", methods=["POST"])
 def get_validator_image(hotkey):
     """
-    Pick an image from BATCH_DIR (preferring regen-pending when enabled),
-    move it to USED_DIR, optionally attach forced variation queries, and
-    return the image to the requesting validator.
+    Pick an image from BATCH_DIR in place (no move to USED_DIR).
 
-    In REGEN_MODE=test, forced queries are attached but the pending queue
-    is not drained. In maintenance, a forced hit moves pending → completed.
+    Selection is JSON-driven while the regen pending queue has work:
+      1) random among pending filenames that exist in BATCH_DIR
+      2) else random among all BATCH_DIR images
+
+    Forced variation fields are attached when the chosen file is still
+    pending. In REGEN_MODE=test the pending queue is unchanged; in
+    maintenance a forced hit pops pending → completed.
     """
     if hotkey not in HOTKEY_TO_FOLDER:
         return (
@@ -225,8 +228,6 @@ def get_validator_image(hotkey):
         return err_resp, err_status
 
     with _batch_lock:
-        _recycle_if_empty()
-
         available = [
             f
             for f in BATCH_DIR.iterdir()
@@ -249,32 +250,32 @@ def get_validator_image(hotkey):
         except Exception as e:
             return jsonify({"error": f"Failed to read image: {str(e)}"}), 500
 
-        USED_DIR.mkdir(parents=True, exist_ok=True)
-        dest = USED_DIR / chosen.name
-        shutil.move(str(chosen), str(dest))
-
+        # Files stay in BATCH_DIR; regen completion is JSON-only.
         regen_fields = build_regen_response_fields(chosen.name, hotkey)
 
         try:
             with open(BATCH_LOG, "r", encoding="utf-8") as lf:
                 log = json.load(lf)
 
-            log["images_moved_to_used_count"] = (
-                log.get("images_moved_to_used_count", 0) + 1
-            )
-            log["images_remaining"] = len(available) - 1
+            log["images_served_count"] = log.get("images_served_count", 0) + 1
+            # Legacy counter kept for older dashboards; no longer means a move.
+            log["images_moved_to_used_count"] = log.get(
+                "images_moved_to_used_count", 0
+            ) + 1
+            log["images_remaining"] = len(available)
 
-            move_record = {
+            serve_record = {
                 "filename": chosen.name,
-                "moved_at": datetime.now(timezone.utc).isoformat(),
+                "served_at": datetime.now(timezone.utc).isoformat(),
                 "validator_hotkey": hotkey,
-                "dest_path": str(dest),
+                "in_place": True,
+                "source_path": str(chosen),
                 "use_forced_query": regen_fields.get("use_forced_query", False),
             }
             if regen_fields.get("forced_variations"):
-                move_record["forced_variations"] = regen_fields["forced_variations"]
+                serve_record["forced_variations"] = regen_fields["forced_variations"]
             if regen_fields.get("regen"):
-                move_record["regen"] = {
+                serve_record["regen"] = {
                     "mode": regen_fields["regen"].get("mode"),
                     "marked_complete": regen_fields["regen"].get("marked_complete"),
                     "pending_remaining": regen_fields["regen"].get(
@@ -282,7 +283,15 @@ def get_validator_image(hotkey):
                     ),
                 }
 
-            log.setdefault("moves_to_used_images", []).append(move_record)
+            log.setdefault("serves", []).append(serve_record)
+            # Keep legacy key populated for continuity with older log readers.
+            log.setdefault("moves_to_used_images", []).append(
+                {
+                    **serve_record,
+                    "moved_at": serve_record["served_at"],
+                    "dest_path": str(chosen),
+                }
+            )
 
             with open(BATCH_LOG, "w", encoding="utf-8") as lf:
                 json.dump(log, lf, indent=2)
