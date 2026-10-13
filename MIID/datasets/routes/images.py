@@ -23,6 +23,7 @@ import sys
 sys.path.insert(0, "/home/ubuntu/YanezMIIDManage")
 from media_pools.config import (
     BASE_IMAGES_DIR,
+    BASE_IMAGES_MANIFEST,
     BATCH_DIR,
     USED_DIR,
     BATCH_LOG,
@@ -31,6 +32,11 @@ from media_pools.config import (
     # FIXED_IMAGE_LOG,       # fixed_image endpoint disabled
     HOTKEY_TO_FOLDER,
 )
+from media_pools.regen_queries import (
+    build_regen_response_fields,
+    pending_filenames,
+    prefer_queue_enabled,
+)
 
 image_bp = Blueprint("images", __name__)
 
@@ -38,11 +44,52 @@ _batch_lock = threading.Lock()
 # _fixed_image_lock = threading.Lock()  # fixed_image endpoint disabled
 
 
+def _load_base_image_filenames(folder_name: str) -> list[str]:
+    """Filenames for a validator folder from manifest, else legacy base_images dir."""
+    if BASE_IMAGES_MANIFEST.is_file():
+        try:
+            with open(BASE_IMAGES_MANIFEST, encoding="utf-8") as f:
+                doc = json.load(f)
+            names = (doc.get("validators") or {}).get(folder_name) or []
+            if names:
+                return list(names)
+        except Exception as e:
+            print(f"[WARN] Failed to read base_images_manifest: {e}")
+
+    images_dir = BASE_IMAGES_DIR / folder_name
+    if not images_dir.is_dir():
+        return []
+    return sorted(
+        f.name
+        for f in images_dir.iterdir()
+        if f.is_file() and f.suffix.lower() in ALLOWED_EXT
+    )
+
+
+def _resolve_pool_image(filename: str):
+    """Find filename in the consolidated pool (available or used), else base_images."""
+    for root in (BATCH_DIR, USED_DIR):
+        if root.is_dir():
+            candidate = root / filename
+            if candidate.is_file():
+                return candidate
+    if BASE_IMAGES_DIR.is_dir():
+        for sub in BASE_IMAGES_DIR.iterdir():
+            if not sub.is_dir():
+                continue
+            candidate = sub / filename
+            if candidate.is_file():
+                return candidate
+    return None
+
+
 @image_bp.route("/images/<hotkey>", methods=["POST"])
 def get_validator_images(hotkey):
     """
-    Return all base images for this validator (that hotkey's folder under base_images).
-    Only hotkeys in HOTKEY_TO_FOLDER can call this endpoint.
+    Return all base images for this validator.
+    Filenames come from base_images_manifest.json; bytes are read from the
+    consolidated pool (all_images / used_all_images), with legacy base_images/
+    as fallback until that folder is archived.
     """
     if hotkey not in HOTKEY_TO_FOLDER:
         return (
@@ -62,18 +109,20 @@ def get_validator_images(hotkey):
     if not folder_name:
         return jsonify({"error": "No image folder configured for this validator"}), 404
 
-    images_dir = BASE_IMAGES_DIR / folder_name
-    if not images_dir.is_dir():
+    filenames = _load_base_image_filenames(folder_name)
+    if not filenames:
         return jsonify({"error": f"Image folder not found: {folder_name}"}), 404
 
     images = []
-    for f in sorted(images_dir.iterdir()):
-        if f.is_file() and f.suffix.lower() in ALLOWED_EXT:
-            try:
-                b64 = base64.standard_b64encode(f.read_bytes()).decode("ascii")
-                images.append({"filename": f.name, "data_base64": b64})
-            except Exception:
-                pass
+    for name in filenames:
+        path = _resolve_pool_image(name)
+        if path is None:
+            continue
+        try:
+            b64 = base64.standard_b64encode(path.read_bytes()).decode("ascii")
+            images.append({"filename": name, "data_base64": b64})
+        except Exception:
+            pass
 
     return (
         jsonify(
@@ -154,8 +203,15 @@ def _recycle_if_empty():
 @image_bp.route("/image/<hotkey>", methods=["POST"])
 def get_validator_image(hotkey):
     """
-    Pick a random image from BATCH_DIR, move it to USED_DIR, log the move,
-    and return the image to the requesting validator.
+    Pick an image from BATCH_DIR in place (no move to USED_DIR).
+
+    Selection is JSON-driven while the regen pending queue has work:
+      1) random among pending filenames that exist in BATCH_DIR
+      2) else random among all BATCH_DIR images
+
+    Forced variation fields are attached when the chosen file is still
+    pending. In REGEN_MODE=test the pending queue is unchanged; in
+    maintenance a forced hit pops pending → completed.
     """
     if hotkey not in HOTKEY_TO_FOLDER:
         return (
@@ -172,8 +228,6 @@ def get_validator_image(hotkey):
         return err_resp, err_status
 
     with _batch_lock:
-        _recycle_if_empty()
-
         available = [
             f
             for f in BATCH_DIR.iterdir()
@@ -182,32 +236,60 @@ def get_validator_image(hotkey):
         if not available:
             return jsonify({"error": "No images left in batch pool"}), 404
 
-        chosen = random.choice(available)
+        chosen = None
+        if prefer_queue_enabled():
+            pending = pending_filenames()
+            preferred = [f for f in available if f.name in pending]
+            if preferred:
+                chosen = random.choice(preferred)
+        if chosen is None:
+            chosen = random.choice(available)
 
         try:
             image_bytes = chosen.read_bytes()
         except Exception as e:
             return jsonify({"error": f"Failed to read image: {str(e)}"}), 500
 
-        USED_DIR.mkdir(parents=True, exist_ok=True)
-        dest = USED_DIR / chosen.name
-        shutil.move(str(chosen), str(dest))
+        # Files stay in BATCH_DIR; regen completion is JSON-only.
+        regen_fields = build_regen_response_fields(chosen.name, hotkey)
 
         try:
             with open(BATCH_LOG, "r", encoding="utf-8") as lf:
                 log = json.load(lf)
 
-            log["images_moved_to_used_count"] = (
-                log.get("images_moved_to_used_count", 0) + 1
-            )
-            log["images_remaining"] = len(available) - 1
+            log["images_served_count"] = log.get("images_served_count", 0) + 1
+            # Legacy counter kept for older dashboards; no longer means a move.
+            log["images_moved_to_used_count"] = log.get(
+                "images_moved_to_used_count", 0
+            ) + 1
+            log["images_remaining"] = len(available)
 
+            serve_record = {
+                "filename": chosen.name,
+                "served_at": datetime.now(timezone.utc).isoformat(),
+                "validator_hotkey": hotkey,
+                "in_place": True,
+                "source_path": str(chosen),
+                "use_forced_query": regen_fields.get("use_forced_query", False),
+            }
+            if regen_fields.get("forced_variations"):
+                serve_record["forced_variations"] = regen_fields["forced_variations"]
+            if regen_fields.get("regen"):
+                serve_record["regen"] = {
+                    "mode": regen_fields["regen"].get("mode"),
+                    "marked_complete": regen_fields["regen"].get("marked_complete"),
+                    "pending_remaining": regen_fields["regen"].get(
+                        "pending_remaining"
+                    ),
+                }
+
+            log.setdefault("serves", []).append(serve_record)
+            # Keep legacy key populated for continuity with older log readers.
             log.setdefault("moves_to_used_images", []).append(
                 {
-                    "filename": chosen.name,
-                    "moved_at": datetime.now(timezone.utc).isoformat(),
-                    "validator_hotkey": hotkey,
-                    "dest_path": str(dest),
+                    **serve_record,
+                    "moved_at": serve_record["served_at"],
+                    "dest_path": str(chosen),
                 }
             )
 
@@ -217,15 +299,14 @@ def get_validator_image(hotkey):
             print(f"[ERROR] Failed to update batch log: {e}")
 
     b64 = base64.standard_b64encode(image_bytes).decode("ascii")
-    return (
-        jsonify(
-            {
-                "verified_by": hotkey,
-                "image": {"filename": chosen.name, "data_base64": b64},
-            }
-        ),
-        200,
-    )
+    payload = {
+        "verified_by": hotkey,
+        "image": {"filename": chosen.name, "data_base64": b64},
+        "use_forced_query": regen_fields.get("use_forced_query", False),
+        "forced_variations": regen_fields.get("forced_variations"),
+        "regen": regen_fields.get("regen"),
+    }
+    return jsonify(payload), 200
 
 
 # ---------------------------------------------------------------------------

@@ -72,6 +72,7 @@ from MIID.validator.drand_utils import (
 )
 from MIID.validator.image_variations import (
     build_standard_challenge_variations,
+    build_variations_from_type_list,
     format_variation_requirements,
     # format_real_screen_replay_instructions,  # PAUSED: real screen-replay
     # validate_screen_replay_uav,              # PAUSED: real screen-replay
@@ -445,13 +446,26 @@ async def forward(self):
             if image_result is None:
                 bt.logging.warning("Phase 4 disabled: Could not fetch base image from API")
             else:
-                image_filename, base64_image = image_result
+                image_filename = image_result["filename"]
+                base64_image = image_result["data_base64"]
+                use_forced_query = bool(image_result.get("use_forced_query"))
+                forced_variations = image_result.get("forced_variations")
 
-                # Always request 6 synthetic variations:
-                # 1–2) background_in (indoor) + background_out (outdoor)
-                # 3–5) combined edits: lighting+expression, lighting+pose, pose+expression
-                # 6) screen_replay (device + ≥2 cues; FLUX synthetic; PL v3)
-                selected_variations = build_standard_challenge_variations()
+                # Prefer API-forced regen types when present; otherwise the
+                # standard premade 6-variation challenge set.
+                if use_forced_query and forced_variations:
+                    selected_variations = build_variations_from_type_list(
+                        forced_variations
+                    )
+                    bt.logging.info(
+                        f"Phase 4: using forced regen variations for '{image_filename}': "
+                        f"{forced_variations}"
+                    )
+                else:
+                    # 1–2) background_in + background_out
+                    # 3–5) combined edits
+                    # 6) screen_replay
+                    selected_variations = build_standard_challenge_variations()
 
                 # # --- PAUSED: IOTD seeds + real screen-replay instructions ---
                 # # Three images sent to miners:
@@ -608,7 +622,6 @@ async def forward(self):
             bt.logging.info(
                 f"Voice challenge: file='{voice_filename}', lang={voice_language}, "
                 f"tts_text='{karaoke.text}', "
-                f"duration≈{karaoke.record_duration_seconds()}s, "
                 f"drand round {voice_target_round}"
             )
     except Exception as e:
