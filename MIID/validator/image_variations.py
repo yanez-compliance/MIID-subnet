@@ -705,6 +705,45 @@ def build_standard_challenge_variations() -> List[Dict[str, Any]]:
     ]
 
 
+def build_variations_from_type_list(types: List[str]) -> List[Dict[str, Any]]:
+    """Expand API-provided variation type strings into full challenge dicts.
+
+    Accepts the same vocabulary as seed_regeneration_queries.csv:
+      - atomic: pose_edit, lighting_edit, expression_edit, background_in, background_out
+      - combined: lighting_edit+expression_edit (etc.)
+      - screen_replay
+
+    Intensities / detail text are chosen locally via the existing helpers.
+    """
+    if not types:
+        raise ValueError("forced variation type list is empty")
+
+    out: List[Dict[str, Any]] = []
+    for raw in types:
+        var_type = (raw or "").strip()
+        if not var_type:
+            raise ValueError("empty variation type in forced list")
+
+        if var_type == "screen_replay":
+            out.append(select_screen_replay_variation())
+            continue
+
+        if COMBINED_VARIATION_SEPARATOR in var_type:
+            parts = [
+                p.strip()
+                for p in var_type.split(COMBINED_VARIATION_SEPARATOR)
+                if p.strip()
+            ]
+            if len(parts) < 2:
+                raise ValueError(f"Invalid combined variation type: {var_type}")
+            out.append(get_random_combined_variation(parts))
+            continue
+
+        out.append(get_random_variation_by_type(var_type))
+
+    return out
+
+
 def get_variation_by_index(index: int) -> Dict[str, str]:
     """Get a single variation type + intensity by index.
 

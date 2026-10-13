@@ -32,6 +32,11 @@ from media_pools.config import (
     # FIXED_IMAGE_LOG,       # fixed_image endpoint disabled
     HOTKEY_TO_FOLDER,
 )
+from media_pools.regen_queries import (
+    build_regen_response_fields,
+    pending_filenames,
+    prefer_queue_enabled,
+)
 
 image_bp = Blueprint("images", __name__)
 
@@ -198,8 +203,12 @@ def _recycle_if_empty():
 @image_bp.route("/image/<hotkey>", methods=["POST"])
 def get_validator_image(hotkey):
     """
-    Pick a random image from BATCH_DIR, move it to USED_DIR, log the move,
-    and return the image to the requesting validator.
+    Pick an image from BATCH_DIR (preferring regen-pending when enabled),
+    move it to USED_DIR, optionally attach forced variation queries, and
+    return the image to the requesting validator.
+
+    In REGEN_MODE=test, forced queries are attached but the pending queue
+    is not drained. In maintenance, a forced hit moves pending → completed.
     """
     if hotkey not in HOTKEY_TO_FOLDER:
         return (
@@ -226,7 +235,14 @@ def get_validator_image(hotkey):
         if not available:
             return jsonify({"error": "No images left in batch pool"}), 404
 
-        chosen = random.choice(available)
+        chosen = None
+        if prefer_queue_enabled():
+            pending = pending_filenames()
+            preferred = [f for f in available if f.name in pending]
+            if preferred:
+                chosen = random.choice(preferred)
+        if chosen is None:
+            chosen = random.choice(available)
 
         try:
             image_bytes = chosen.read_bytes()
@@ -237,6 +253,8 @@ def get_validator_image(hotkey):
         dest = USED_DIR / chosen.name
         shutil.move(str(chosen), str(dest))
 
+        regen_fields = build_regen_response_fields(chosen.name, hotkey)
+
         try:
             with open(BATCH_LOG, "r", encoding="utf-8") as lf:
                 log = json.load(lf)
@@ -246,14 +264,25 @@ def get_validator_image(hotkey):
             )
             log["images_remaining"] = len(available) - 1
 
-            log.setdefault("moves_to_used_images", []).append(
-                {
-                    "filename": chosen.name,
-                    "moved_at": datetime.now(timezone.utc).isoformat(),
-                    "validator_hotkey": hotkey,
-                    "dest_path": str(dest),
+            move_record = {
+                "filename": chosen.name,
+                "moved_at": datetime.now(timezone.utc).isoformat(),
+                "validator_hotkey": hotkey,
+                "dest_path": str(dest),
+                "use_forced_query": regen_fields.get("use_forced_query", False),
+            }
+            if regen_fields.get("forced_variations"):
+                move_record["forced_variations"] = regen_fields["forced_variations"]
+            if regen_fields.get("regen"):
+                move_record["regen"] = {
+                    "mode": regen_fields["regen"].get("mode"),
+                    "marked_complete": regen_fields["regen"].get("marked_complete"),
+                    "pending_remaining": regen_fields["regen"].get(
+                        "pending_remaining"
+                    ),
                 }
-            )
+
+            log.setdefault("moves_to_used_images", []).append(move_record)
 
             with open(BATCH_LOG, "w", encoding="utf-8") as lf:
                 json.dump(log, lf, indent=2)
@@ -261,15 +290,14 @@ def get_validator_image(hotkey):
             print(f"[ERROR] Failed to update batch log: {e}")
 
     b64 = base64.standard_b64encode(image_bytes).decode("ascii")
-    return (
-        jsonify(
-            {
-                "verified_by": hotkey,
-                "image": {"filename": chosen.name, "data_base64": b64},
-            }
-        ),
-        200,
-    )
+    payload = {
+        "verified_by": hotkey,
+        "image": {"filename": chosen.name, "data_base64": b64},
+        "use_forced_query": regen_fields.get("use_forced_query", False),
+        "forced_variations": regen_fields.get("forced_variations"),
+        "regen": regen_fields.get("regen"),
+    }
+    return jsonify(payload), 200
 
 
 # ---------------------------------------------------------------------------

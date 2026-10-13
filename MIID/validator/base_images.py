@@ -9,7 +9,7 @@ import random
 import time
 import bittensor as bt
 from pathlib import Path
-from typing import List, Tuple, Optional
+from typing import Any, Dict, List, Tuple, Optional
 
 try:
     import requests
@@ -204,17 +204,23 @@ def load_image_by_index(index: int) -> Optional[Tuple[str, str, int]]:
     return None
 
 
-def fetch_image_from_api(wallet) -> Optional[Tuple[str, str]]:
+def fetch_image_from_api(wallet) -> Optional[Dict[str, Any]]:
     """Fetch a single image from the Flask API without saving to disk.
 
     Uses a signed POST to ``/image/<hotkey>`` and returns one image
-    in memory for the current forward pass.
+    in memory for the current forward pass, plus optional forced-query
+    fields when the API is filling regeneration coverage gaps.
 
     Args:
         wallet: Bittensor wallet used to sign the request.
 
     Returns:
-        Tuple of (filename, base64_encoded_image) or None on failure.
+        Dict with keys:
+          - filename (str)
+          - data_base64 (str)
+          - use_forced_query (bool)
+          - forced_variations (list[str] | None)
+        or None on failure.
     """
     if not REQUESTS_AVAILABLE:
         bt.logging.warning("requests library not available. Cannot fetch image from API.")
@@ -252,8 +258,26 @@ def fetch_image_from_api(wallet) -> Optional[Tuple[str, str]]:
             bt.logging.warning("API image entry missing filename or data_base64")
             return None
 
-        bt.logging.debug(f"Fetched image from API: {filename}")
-        return filename, b64
+        use_forced_query = bool(data.get("use_forced_query"))
+        forced_variations = data.get("forced_variations")
+        if use_forced_query and not isinstance(forced_variations, list):
+            bt.logging.warning(
+                "API set use_forced_query but forced_variations missing/invalid; "
+                "falling back to premade challenge set"
+            )
+            use_forced_query = False
+            forced_variations = None
+
+        bt.logging.debug(
+            f"Fetched image from API: {filename} "
+            f"use_forced_query={use_forced_query}"
+        )
+        return {
+            "filename": filename,
+            "data_base64": b64,
+            "use_forced_query": use_forced_query,
+            "forced_variations": forced_variations,
+        }
 
     except Exception as e:
         bt.logging.error(f"Error fetching image from API: {e}")
