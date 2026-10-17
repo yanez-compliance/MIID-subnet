@@ -56,7 +56,7 @@ from MIID.utils.sign_message import sign_message
 
 from MIID.validator.base_images import fetch_image_from_api
 from MIID.validator.base_voices import fetch_voice_from_api
-from MIID.validator.voice_words import generate
+from MIID.validator.voice_words import generate, with_hotkey
 # # --- PAUSED: fixed IOTD / real screen-replay (restore later) ---
 # from MIID.validator.fixed_images import (
 #     ensure_daily_fixed_image,
@@ -578,9 +578,13 @@ async def forward(self):
             selected_variations = None
 
     # 3b) Build VoiceRequest (UAV post-graded only — no KAV)
+    # Base karaoke is shared (3 digit-words + 7 pool words). Each miner is
+    # queried with a personalized copy that wraps their hotkey[:4] / hotkey[-4:].
     voice_request = None
+    karaoke = None
     target_words: List[str] = []
     karaoke_payload: Optional[Dict[str, Any]] = None
+    per_miner_voice_targets: Dict[str, Dict[str, Any]] = {}
     try:
         voice_result = fetch_voice_from_api(self.wallet)
         if voice_result is None:
@@ -621,7 +625,8 @@ async def forward(self):
             )
             bt.logging.info(
                 f"Voice challenge: file='{voice_filename}', lang={voice_language}, "
-                f"tts_text='{karaoke.text}', "
+                f"base_tts_text='{karaoke.text}', "
+                f"(+ per-miner hotkey chars as individual tokens), "
                 f"drand round {voice_target_round}"
             )
     except Exception as e:
@@ -629,6 +634,7 @@ async def forward(self):
         import traceback
         bt.logging.debug(f"Voice error traceback: {traceback.format_exc()}")
         voice_request = None
+        karaoke = None
         karaoke_payload = None
 
     # 4) Prepare synapse
@@ -658,22 +664,50 @@ async def forward(self):
 
         bt.logging.info(f"Processing batch {i//batch_size + 1}/{total_batches} with {len(batch_uids)} miners")
         batch_start_time = time.time()
-        
-        batch_responses = await dendrite_with_retries(
-            dendrite=self.dendrite,
-            axons=batch_axons,
-            synapse=request_synapse,
-            deserialize=False,
-            timeout=request_timeout,
-            cnt_attempts=3,
+
+        async def _query_one(uid: int, axon) -> tuple:
+            """Query one miner; personalize voice prompt with their hotkey bookends."""
+            synapse = request_synapse
+            if voice_request is not None and karaoke is not None:
+                miner_hotkey = str(axon.hotkey)
+                personalized = with_hotkey(karaoke, miner_hotkey)
+                miner_voice = voice_request.model_copy(
+                    update={
+                        "target_words": list(personalized.words),
+                        "target_text": personalized.text,
+                    }
+                )
+                synapse = IdentitySynapse(
+                    timeout=request_timeout,
+                    image_request=image_request,
+                    voice_request=miner_voice,
+                )
+                per_miner_voice_targets[str(uid)] = {
+                    "hotkey": miner_hotkey,
+                    "hotkey_prefix_chars": list(personalized.words[:4]),
+                    "hotkey_suffix_chars": list(personalized.words[-4:]),
+                    "target_words": list(personalized.words),
+                    "target_text": personalized.text,
+                }
+            resps = await dendrite_with_retries(
+                dendrite=self.dendrite,
+                axons=[axon],
+                synapse=synapse,
+                deserialize=False,
+                timeout=request_timeout,
+                cnt_attempts=3,
+            )
+            return uid, resps[0]
+
+        batch_results = await asyncio.gather(
+            *[_query_one(uid, axon) for uid, axon in zip(batch_uids, batch_axons)]
         )
-        
+
         batch_duration = time.time() - batch_start_time
         bt.logging.info(f"Batch {i//batch_size + 1} completed in {batch_duration:.1f}s")
 
         # Map each response to its corresponding UID
-        for idx_resp, response in enumerate(batch_responses):
-            uid = batch_uids[idx_resp]
+        for uid, response in batch_results:
             uid_response_map[uid] = response
 
             if not hasattr(response, 's3_submissions'):
@@ -853,9 +887,11 @@ async def forward(self):
             "challenge_id": voice_request.challenge_id,
             "voice_filename": voice_request.voice_filename,
             "language": voice_request.language,
+            # Base passcode (3 digits + 7 words). Per-miner prompts add hotkey bookends.
             "target_words": list(voice_request.target_words),
             "target_text": voice_request.target_text,
             "karaoke": karaoke_payload,
+            "per_miner_voice_targets": per_miner_voice_targets,
             "reference_transcript": voice_request.reference_transcript,
             "target_drand_round": voice_request.target_drand_round,
             "reveal_timestamp": voice_request.reveal_timestamp,
