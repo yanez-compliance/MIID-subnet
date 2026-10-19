@@ -56,7 +56,9 @@ def upload_data(hotkey):
     if hotkey not in ALLOWED_HOTKEYS:
         return jsonify({"error": "Unauthorized hotkey"}), 403
 
-    err_resp, err_status = verify_request_signature(tmp_prefix="tmp_signature")
+    err_resp, err_status = verify_request_signature(
+        tmp_prefix="tmp_signature", expected_hotkey=hotkey
+    )
     if err_resp is not None:
         return err_resp, err_status
 
