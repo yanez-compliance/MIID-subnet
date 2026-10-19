@@ -69,7 +69,6 @@ BURN_UID = 59
 # Tier multipliers for reputation weighting
 # Higher tiers get bonus multipliers on their UAV portion
 TIER_MULTIPLIERS = {
-    "Royal": 1.45,
     "Black": 1.35,
     "Platinum": 1.25,
     "Diamond": 1.15,
@@ -85,8 +84,7 @@ TIER_MULTIPLIERS = {
 # These values are for reference only - must match reputation-policy-v1.md
 # Watch tier: assigned when rep_score goes negative, but DB clamps to 0.1 floor
 TIER_BOUNDARIES = {
-    "Royal":    (350.001, 9999.0),  # rep_score > 350.0
-    "Black":    (250.001, 350.0),   # rep_score > 250.0 - 350.0
+    "Black":    (250.001, 9999.0),  # rep_score > 250.0
     "Platinum": (150.0, 250.0),     # rep_score 150.0 - 250.0
     "Diamond":  (50.0, 149.999),    # rep_score 50.0 - 149.999
     "Gold":     (30.0, 49.999),     # rep_score 30.0 - 49.999
@@ -106,6 +104,5 @@ TIER_BOUNDARIES = {
 #   30.0 - 50.0  → 1.50 - 1.80  (Gold)
 #   50.0 - 150.0 → 1.80 - 2.00  (Diamond)
 #   150.0 - 250.0 → 2.00 - 2.50  (Platinum)
-#   250.0 - 350.0 → 2.50 - 3.25  (Black)
-#   350.0+       → 3.25 - 4.00  (Royal)
+#   250.0+       → 2.50 - 4.00  (Black)
 # When rep_score = 0, miner gets zero UAV (only KAV)

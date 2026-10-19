@@ -752,8 +752,7 @@ def get_image_variation_rewards(
 
 # Tier multipliers for reputation weighting (policy-based, rarely change)
 # Cutoffs (inclusive lower bound, exclusive of the next tier):
-#   Royal     > 350
-#   Black     250 – 350
+#   Black     > 250
 #   Platinum  150 – 250
 #   Diamond    50 – 150
 #   Gold       30 –  50
@@ -762,7 +761,6 @@ def get_image_variation_rewards(
 #   Neutral   0.1 –   5
 #   Watch     ≤ 0.1
 TIER_MULTIPLIERS = {
-    "Royal":    1.45,
     "Black":    1.35,
     "Platinum": 1.25,
     "Diamond":  1.15,
@@ -783,8 +781,7 @@ TIER_MULTIPLIERS = {
 #   30.0 - 50.0  → 1.50 - 1.80  (Gold)
 #   50.0 - 150.0 → 1.80 - 2.00  (Diamond)
 #   150.0 - 250.0 → 2.00 - 2.50  (Platinum)
-#   250.0 - 350.0 → 2.50 - 3.25  (Black)
-#   350.0+       → 3.25 - 4.00  (Royal)
+#   250.0+       → 2.50 - 4.00  (Black)
 
 # Burn UID (hardcoded in existing codebase)
 BURN_UID = 59
@@ -847,8 +844,7 @@ def normalize_rep_score(rep_score: float, rep_tier: Optional[str] = None) -> flo
     #   30.0 - 50.0  → 1.50 - 1.80  (Gold range)
     #   50.0 - 150.0 → 1.80 - 2.00  (Diamond range)
     #   150.0 - 250.0 → 2.00 - 2.50  (Platinum range)
-    #   250.0 - 350.0 → 2.50 - 3.25  (Black range)
-    #   350.0+       → 3.25 - 4.00  (Royal range)
+    #   250.0+       → 2.50 - 4.00  (Black range)
 
     if rep_score < 0.1:
         # Below Watch floor: linear from 0→0.1 maps to 0→0.50
@@ -871,12 +867,9 @@ def normalize_rep_score(rep_score: float, rep_tier: Optional[str] = None) -> flo
     elif rep_score <= 250.0:
         # Platinum range: 150.0→250.0 maps to 2.00→2.50
         normalized = 2.00 + (rep_score - 150.0) * (2.50 - 2.00) / (250.0 - 150.0)
-    elif rep_score <= 350.0:
-        # Black range: 250.0→350.0 maps to 2.50→3.25
-        normalized = 2.50 + (rep_score - 250.0) * (3.25 - 2.50) / (350.0 - 250.0)
     else:
-        # Royal range: 350.0→9999.0 maps to 3.25→4.00
-        normalized = 3.25 + (rep_score - 350.0) * (4.00 - 3.25) / (9999.0 - 350.0)
+        # Black range: 250.0→9999.0 maps to 2.50→4.00
+        normalized = 2.50 + (rep_score - 250.0) * (4.00 - 2.50) / (9999.0 - 250.0)
         normalized = min(4.00, normalized)  # Cap at 4.00
 
     return round(normalized, 3)
