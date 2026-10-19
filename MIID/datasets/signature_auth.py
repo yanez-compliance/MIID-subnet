@@ -10,9 +10,15 @@ from MIID.datasets.config import DATA_DIR
 from MIID.utils.verify_message import verify_message
 
 
-def verify_request_signature(tmp_prefix: str = "tmp_signature"):
+def verify_request_signature(
+    tmp_prefix: str = "tmp_signature",
+    expected_hotkey: Optional[str] = None,
+):
     """
     Verify the JSON body has a valid ``signature`` field.
+
+    When ``expected_hotkey`` is set, the verified signer must equal that
+    hotkey (URL path identity binding).
 
     Returns:
         (None, None) on success.
@@ -33,16 +39,32 @@ def verify_request_signature(tmp_prefix: str = "tmp_signature"):
         tmp_file.write(signature_text)
 
     try:
-        verify_message(tmp_signature_filename)
+        verified_signer = verify_message(tmp_signature_filename)
     except ValueError as e:
         os.remove(tmp_signature_filename)
         return jsonify({"error": f"Signature verification failed: {str(e)}"}), 400
 
     os.remove(tmp_signature_filename)
+
+    if expected_hotkey is not None and verified_signer != expected_hotkey:
+        return (
+            jsonify(
+                {
+                    "error": "Signature signer does not match hotkey",
+                    "expected": expected_hotkey,
+                    "signer": verified_signer,
+                }
+            ),
+            403,
+        )
+
     return None, None
 
 
-def get_json_after_auth(tmp_prefix: str = "tmp_signature") -> Tuple[Optional[dict], Optional[tuple]]:
+def get_json_after_auth(
+    tmp_prefix: str = "tmp_signature",
+    expected_hotkey: Optional[str] = None,
+) -> Tuple[Optional[dict], Optional[tuple]]:
     """
     Verify signature and return the request JSON.
 
@@ -50,7 +72,9 @@ def get_json_after_auth(tmp_prefix: str = "tmp_signature") -> Tuple[Optional[dic
         (data, None) on success.
         (None, (response, status_code)) on failure.
     """
-    err_resp, err_status = verify_request_signature(tmp_prefix=tmp_prefix)
+    err_resp, err_status = verify_request_signature(
+        tmp_prefix=tmp_prefix, expected_hotkey=expected_hotkey
+    )
     if err_resp is not None:
         return None, (err_resp, err_status)
     return request.get_json(), None

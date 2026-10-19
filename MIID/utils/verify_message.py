@@ -1,16 +1,19 @@
 from binascii import unhexlify
 from bittensor_wallet import Keypair
 
-def verify_message(file_path: str) -> None:
+def verify_message(file_path: str) -> str:
     """
     Verifies a signed message from a file using the address and signature contained within.
-    
+
     Args:
         file_path (str): Path to the file containing the message, signer address, and signature.
-    
+
+    Returns:
+        str: The verified signer ss58 address from the proof.
+
     Raises:
         ValueError: If the signature is invalid or the message is not properly formatted.
-    
+
     Example File Format:
         <Bytes>On 2025-01-01 CST My test message</Bytes>
             Signed by: 5Dw7zQR4s2mZ7N9TMSqtc1Vj41E8ervu57Gh4HMVJ19KQ8Qh
@@ -18,10 +21,10 @@ def verify_message(file_path: str) -> None:
 
     Usage:
         from my_verify_module import verify_message
-        
+
         try:
-            verify_message("message_and_signature.txt")
-            print("Signature is valid!")
+            signer = verify_message("message_and_signature.txt")
+            print(f"Signature is valid! Signed by {signer}")
         except ValueError as e:
             print(f"Invalid signature: {e}")
     """
@@ -59,5 +62,6 @@ def verify_message(file_path: str) -> None:
     # 5) Verify
     if not keypair.verify(data=message, signature=real_signature):
         raise ValueError(f"Invalid signature for address={address}")
-    else:
-        print(f"Signature verified, signed by {address}")
+
+    print(f"Signature verified, signed by {address}")
+    return address
