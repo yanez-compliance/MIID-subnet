@@ -240,7 +240,7 @@ def _clear_pending_allocations(file_path: Path):
 #
 #     return {
 #         "requested": requested,
-#         "cycle": "Phase5-C1-Sandbox",
+#         "cycle": "Phase5-C1-Execution",
 #         "note": (
 #             "Real screen-replay is requested every round (physical capture, "
 #             "not a FLUX synthetic). Miners may upload as many non-duplicate "
@@ -857,7 +857,7 @@ async def forward(self):
     phase4_image_data: Optional[Dict] = None
     if PHASE4_ENABLED and image_request is not None and selected_variations:
         phase4_image_data = {
-            "cycle": "Phase5-C1-Sandbox",
+            "cycle": "Phase5-C1-Execution",
             "challenge_id": challenge_id,
             "base_image_filename": image_request.image_filename,
             # # --- PAUSED: IOTD seed metadata (restore later) ---
@@ -878,9 +878,9 @@ async def forward(self):
     phase_voice_data: Optional[Dict] = None
     if voice_request is not None:
         phase_voice_data = {
-            "cycle": "Phase5-C1-Sandbox",
+            "cycle": "Phase5-C1-Execution",
             "note": (
-                "Phase 5 Cycle 1 Sandbox voice clone: submissions collected for UAV post-grading only. "
+                "Phase 5 Cycle 1 Execution voice clone: submissions collected for UAV post-grading only. "
                 "No KAV / live grading API call for voice. Miners may return empty submissions."
             ),
             "enabled": True,
@@ -1015,7 +1015,7 @@ async def forward(self):
         "timestamp": timestamp,
         "phase4_image_data": {
             **(phase4_image_data or {}),
-            "note": "Phase 5: 6 synthetic FLUX variations (incl. screen_replay); real IOTD path paused",
+            "note": "Phase 5 Cycle 1 Execution: 6 synthetic FLUX variations (incl. screen_replay); real IOTD path paused; reputation used in reward allocation",
             "enabled": PHASE4_ENABLED and image_request is not None,
             "s3_bucket": "yanez-miid-sn54",
             # Fallbacks for when image_request was unavailable (phase4_image_data is None)
@@ -1221,7 +1221,7 @@ async def forward(self):
             )
 
             # ==========================================================================
-            # Cache rep_data from response for NEXT forward pass (Phase 5 Cycle 1 Sandbox)
+            # Cache rep_data from response for NEXT forward pass (Phase 5 Cycle 1 Execution)
             # ==========================================================================
             if uav_grading_enabled:
                 if upload_response and upload_response.get("rep_cache"):
