@@ -10,7 +10,7 @@ Yanez validators:
 3. Query a random sample of miners in batches; miners return **S3 submission references** (encrypted until drand reveal)
 4. Wait for the **drand timelock** (~40 minutes) so submissions can be decrypted
 5. Grade submissions via the **external grading API** (KAV — image quality / identity preservation)
-6. Optionally combine KAV with **UAV** (reputation) and apply emission burn / partner allocation
+6. Optionally combine KAV with **UAV** (reputation) and apply dual-incentive partner allocation (burn removed at defaults)
 7. Update scores, set weights, and upload results to the Yanez server
 
 Validators do **not** run local LLMs or generate images. Scoring is handled by the external grading API; miners do the GPU-heavy image generation.
@@ -135,7 +135,7 @@ Common command-line arguments (defaults from `MIID/utils/config.py`):
 | `--neuron.UAV_grading` | `True` | Combine KAV with UAV reputation scoring |
 | `--neuron.kav_weight` | `0.10` | Weight of image-quality (KAV) in miner share |
 | `--neuron.uav_weight` | `0.90` | Weight of reputation (UAV) in miner share |
-| `--neuron.burn_fraction` | `0.30` | Emission burn fraction when miners qualify |
+| `--neuron.burn_fraction` | `0.0` | Emission burn fraction when miners qualify (default 0 — burn removed) |
 | `--neuron.top_miner_cap` | `50` | Cap on top miners for blended ranking rewards |
 | `--neuron.quality_threshold` | `0.6` | Min avg identity preservation to qualify |
 | `--wandb.disable` | `True` | Disable wandb (pass flag to change behavior per argparse) |
@@ -214,12 +214,14 @@ After reveal, `get_image_variation_rewards()` POSTs signed challenge + S3 submis
 
 ### Scoring and emissions
 
-- **KAV (10% of miner share by default):** Online image quality / compliance from the grading API
-- **UAV (90% of miner share by default):** Reputation from the Yanez server snapshot returned on successful upload (when `--neuron.UAV_grading` is enabled)
-- **Burn (~30%):** Routed to burn UID when miners qualify
-- **Partner pool (~35%):** Commercial partner hotkey on mainnet when present; otherwise burned
+- **KAV (10% of miner share ≈ 5% of total):** Online image quality / compliance from the grading API
+- **UAV (90% of miner share ≈ 45% of total):** Reputation from the Yanez server snapshot returned on successful upload (when `--neuron.UAV_grading` is enabled)
+- **Burn (~0%):** Removed at defaults; burn UID only as fallback / unused KAV
+- **Partner pool (~50%):** Dual-incentive partner hotkey (UID 14) on mainnet when present; otherwise falls back to burn UID
 
-If UAV grading is disabled, the validator uses KAV-only scoring with burn applied directly.
+> Miner rewards are **not** cut by this change — see the emission announcement in [Cycle Scoring](scoring.md). Subnet cut moves toward 18% owner / 49% validator / 33% miner while weight split goes 50% data-gen / 50% partner / 0% burn, which slightly **raises** effective data-gen miner take of total emissions.
+
+If UAV grading is disabled, the validator uses KAV-only scoring with partner (and optional burn) applied directly.
 
 Scores are updated with a moving average, then weights are set on-chain.
 

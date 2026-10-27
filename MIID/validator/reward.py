@@ -41,20 +41,26 @@ UAV (Unknown Address Variation / reputation score):
     the MIID server on each successful upload.
   - Handled entirely by apply_reputation_rewards() — unchanged from Phase 3.
 
-Reward allocation (SN54 Dual Incentive Mechanism — effective July 1):
-  - Data-generation miners: ~35%     (KAV + UAV, unchanged)
-  - Burn fraction: ~30%              (--neuron.burn_fraction, default 0.30)
-  - Commercial partner pool: ~35%    (routes to PARTNER_HOTKEY if on mainnet, else burned)
+Reward allocation (SN54 Dual Incentive — zero burn):
+  - Data-generation miners: ~50%     (KAV + UAV)
+  - Burn fraction: ~0%               (--neuron.burn_fraction, default 0.0)
+  - Dual-incentive / partner pool: ~50%  (PARTNER_HOTKEY / UID 14 if on mainnet;
+                                         else falls back to burn UID)
   - KAV weight: 10% of miner share   (--neuron.kav_weight, default 0.10)
+                                         → ~5% of total emissions
   - UAV weight: 90% of miner share   (--neuron.uav_weight, default 0.90)
+                                         → ~45% of total emissions
 
-  The partner pool is funded by reducing the burn from 65% → 30%, NOT by
-  reducing miner rewards.  If PARTNER_HOTKEY is absent from the metagraph the
-  35% partner fraction is added to the burn (total burn reverts to 65%).
+  Context: subnet emission cut is moving from 18% owner / 41% validator / 41%
+  miner to 18% owner / 49% validator / 33% miner. Combined with zero burn and
+  a 50/50 miner↔partner weight split, data-generation miner take of total
+  emissions rises slightly (41%×35% ≈ 14.35% → 33%×50% = 16.5%). The goal is
+  lowering burn, not cutting miner rewards.
 
-  If there is no UAV data this round but the partner is on mainnet, the unused
-  UAV share (~31.5%) is rerouted to the partner (partner > 35%) instead of
-  being burned.  If the partner is absent, unused UAV still burns.
+  If PARTNER_HOTKEY is absent from the metagraph the 50% partner fraction is
+  added to the burn UID as a fallback. If there is no UAV data this round but
+  the partner is on mainnet, unused UAV (~45%) is rerouted to the partner
+  instead of being burned. If the partner is absent, unused UAV still burns.
 """
 
 import numpy as np
@@ -395,11 +401,12 @@ def get_image_variation_rewards(
          (``quality_threshold``) are eligible for a reward.
        • Eligible miners are re-ranked; reward = blend of exp(-decay*rank)
          and original score.
-    4. Apply burn:
-       • skip_burn=True  → no burn appended (burn applied later in
+    4. Apply dual-incentive allocation (when skip_burn=False):
+       • skip_burn=True  → no burn/partner appended (applied later in
          apply_reputation_rewards when UAV grading is enabled).
-       • skip_burn=False → miner rewards are rescaled to keep_fraction and
-         burn UID 59 is appended with weight burn_fraction.
+       • skip_burn=False → miner rewards are rescaled to miner_fraction
+         (~50%); partner (~50%) is appended; burn UID only if burn_fraction > 0
+         or partner is absent.
 
     Args:
         self:                    Validator instance (metagraph, config, wallet).
@@ -619,7 +626,7 @@ def get_image_variation_rewards(
         })
 
     # ── 3. Blended ranking with identity preservation threshold ───────────────
-    burn_fraction = getattr(self.config.neuron, "burn_fraction", 0.30)
+    burn_fraction = getattr(self.config.neuron, "burn_fraction", 0.0)
     top_miner_cap = getattr(self.config.neuron, "top_miner_cap", 50)
     # quality_threshold repurposed as identity_preservation minimum (default 0.6)
     identity_threshold = getattr(self.config.neuron, "quality_threshold", 0.6)
@@ -649,7 +656,7 @@ def get_image_variation_rewards(
 
     if not is_100_percent_burn:
         if BURN_UID not in uids_array:
-            # Miners always receive (1 - burn_fraction - PARTNER_FRACTION) = 35%
+            # Miners receive (1 - burn_fraction - PARTNER_FRACTION) = 50% at defaults
             miner_fraction = 1.0 - burn_fraction - PARTNER_FRACTION
             total_reward_sum = float(np.sum(rewards))
 
@@ -659,28 +666,29 @@ def get_image_variation_rewards(
             # Dual incentive: route PARTNER_FRACTION to partner if on mainnet
             partner_uid = _get_partner_uid(self.metagraph)
             if partner_uid is not None:
-                actual_burn = burn_fraction            # 30%
-                actual_partner = PARTNER_FRACTION      # 35%
+                actual_burn = burn_fraction            # 0% at default
+                actual_partner = PARTNER_FRACTION      # 50%
             else:
-                actual_burn = burn_fraction + PARTNER_FRACTION  # 65% (reverts to old behaviour)
+                actual_burn = burn_fraction + PARTNER_FRACTION  # partner → burn fallback
                 actual_partner = 0.0
 
-            uids_array = np.append(uids_array, BURN_UID)
-            rewards = np.append(rewards, actual_burn)
-            detailed_metrics.append({
-                "uid": BURN_UID,
-                "is_burn": True,
-                "burn_type": f"{int(actual_burn * 100)}_percent",
-                "ranking_info": {
-                    "initial_reward": 0.0,
-                    "global_rank": -1,
-                    "within_top_cap": False,
-                    "avg_identity_preservation": 0.0,
-                    "meets_identity_threshold": False,
-                    "is_qualified_for_ranking": False,
-                    "final_blended_reward": actual_burn,
-                },
-            })
+            if actual_burn > 0:
+                uids_array = np.append(uids_array, BURN_UID)
+                rewards = np.append(rewards, actual_burn)
+                detailed_metrics.append({
+                    "uid": BURN_UID,
+                    "is_burn": True,
+                    "burn_type": f"{int(actual_burn * 100)}_percent",
+                    "ranking_info": {
+                        "initial_reward": 0.0,
+                        "global_rank": -1,
+                        "within_top_cap": False,
+                        "avg_identity_preservation": 0.0,
+                        "meets_identity_threshold": False,
+                        "is_qualified_for_ranking": False,
+                        "final_blended_reward": actual_burn,
+                    },
+                })
 
             if partner_uid is not None:
                 uids_array = np.append(uids_array, partner_uid)
@@ -701,7 +709,8 @@ def get_image_variation_rewards(
                     },
                 })
                 bt.logging.info(
-                    f"Dual Incentive applied: burn={actual_burn:.0%} (UID {BURN_UID}), "
+                    f"Dual Incentive applied: burn={actual_burn:.0%} "
+                    f"{'(UID ' + str(BURN_UID) + '), ' if actual_burn > 0 else ''}"
                     f"partner={actual_partner:.0%} (UID {partner_uid}), "
                     f"miners={miner_fraction:.0%}."
                 )
@@ -724,7 +733,7 @@ def get_image_variation_rewards(
 
     bt.logging.info(
         f"get_image_variation_rewards complete: {len(rewards)} entries "
-        f"(including burn UID). api_succeeded={api_succeeded}."
+        f"(miners + optional burn/partner UIDs). api_succeeded={api_succeeded}."
     )
     return rewards, uids_array, detailed_metrics
 
@@ -786,20 +795,20 @@ TIER_MULTIPLIERS = {
 # Burn UID (hardcoded in existing codebase)
 BURN_UID = 59
 
-# ── Dual Incentive Mechanism (SN54, July 1) ───────────────────────────────────
-# Vetted commercial partner hotkey that receives the partner pool allocation.
-# If this hotkey is not registered on mainnet the full PARTNER_FRACTION is
-# redirected to burn (total burn reverts to 65% as before).
+# ── Dual Incentive Mechanism (SN54 — zero burn) ───────────────────────────────
+# Vetted commercial partner hotkey that receives the partner pool allocation
+# (currently registered as UID 14 on mainnet). If this hotkey is not registered
+# the full PARTNER_FRACTION is redirected to the burn UID as a fallback.
 PARTNER_HOTKEY = "5Dw7tYMwTBxc3BgapjJ2omvP5TGFSDe3UsV414aHHcpRKh2V"
-PARTNER_FRACTION = 0.35  # 35% of total emissions → commercial partner pool
+PARTNER_FRACTION = 0.50  # 50% of total emissions → dual-incentive / partner pool
 
 
 def _get_partner_uid(metagraph) -> Optional[int]:
     """
     Return the UID of PARTNER_HOTKEY in the metagraph, or None if not present.
 
-    A return value of None causes the partner fraction to be redirected to burn
-    so that total miner rewards remain unchanged.
+    A return value of None causes the partner fraction to be redirected to the
+    burn UID as a fallback so miner rewards stay at miner_fraction.
     """
     if metagraph is None:
         return None
@@ -811,7 +820,7 @@ def _get_partner_uid(metagraph) -> Optional[int]:
             return uid_idx
     bt.logging.warning(
         f"Dual Incentive: partner hotkey {PARTNER_HOTKEY} not found in metagraph. "
-        "Partner fraction (35%) will be added to burn."
+        f"Partner fraction ({PARTNER_FRACTION:.0%}) will be added to burn."
     )
     return None
 
@@ -916,18 +925,20 @@ def apply_reputation_rewards(
     uids: List[int],
     rep_data: Dict[str, Dict],
     metagraph,
-    burn_fraction: float = 0.30,
+    burn_fraction: float = 0.0,
     kav_weight: float = 0.10,
     uav_weight: float = 0.90,
     kav_metrics: List[Dict] = None,
 ) -> Tuple[np.ndarray, np.ndarray, List[Dict]]:
     """
-    Apply reputation weighting to KAV rewards, combine with UAV, and apply burn.
+    Apply reputation weighting to KAV rewards, combine with UAV, and allocate
+    dual-incentive / optional burn weights.
 
-    Dual Incentive Mechanism (SN54, July 1):
-      ~35% → data-generation miners  (KAV + UAV, unchanged)
-      ~30% → burn (UID 59)           (reduced from 65%)
-      ~35% → commercial partner pool (PARTNER_HOTKEY, if on mainnet; else burned)
+    Dual Incentive Mechanism (SN54 — zero burn):
+      ~50% → data-generation miners  (KAV + UAV; ~5% KAV / ~45% UAV of total)
+      ~0%  → burn (UID 59)           (removed; only used as fallback / unused KAV)
+      ~50% → dual-incentive partner  (PARTNER_HOTKEY / UID 14 if on mainnet;
+                                      else falls back to burn UID)
 
     Pipeline:
     1. Expand the UID list so miners that were not sampled for this round's
@@ -935,19 +946,19 @@ def apply_reputation_rewards(
     2. Calculate KAV portions (kav_weight × Q) and UAV portions (uav_weight × R×T)
        separately for each miner.
     3. Rescale KAV and UAV portions independently so they hit exact target totals:
-         KAV target = miner_fraction × kav_weight   (e.g. 0.35 × 0.10 = 0.035)
-         UAV target = miner_fraction × uav_weight   (e.g. 0.35 × 0.90 = 0.315)
-       where miner_fraction = 1.0 - burn_fraction - PARTNER_FRACTION = 0.35
-    4. Combine rescaled portions per miner, append burn UID 59 and (if on
-       mainnet) the partner UID.
+         KAV target = miner_fraction × kav_weight   (e.g. 0.50 × 0.10 = 0.05)
+         UAV target = miner_fraction × uav_weight   (e.g. 0.50 × 0.90 = 0.45)
+       where miner_fraction = 1.0 - burn_fraction - PARTNER_FRACTION = 0.50
+    4. Combine rescaled portions per miner, append burn UID only when
+       applied_burn > 0, and (if on mainnet) the partner UID.
 
     If there is no UAV data this round and the partner is on mainnet, the unused
-    UAV share is added to the partner allocation (partner > 35%) instead of
+    UAV share is added to the partner allocation (partner > 50%) instead of
     being burned. Unused KAV still burns. If the partner is absent, unused UAV
     still burns.
 
-    This ensures that after burn, exactly kav_weight% of kept rewards go to KAV
-    and uav_weight% go to UAV, regardless of the raw score distributions
+    This ensures that exactly kav_weight% of the miner pool goes to KAV and
+    uav_weight% goes to UAV, regardless of the raw score distributions
     (when both are available). Miner KAV rewards are NOT affected by whether
     the partner is on mainnet.
 
@@ -956,15 +967,15 @@ def apply_reputation_rewards(
         uids: List of queried miner UIDs (the KAV sample for this round)
         rep_data: Dict mapping hotkey -> {rep_score, rep_tier} from Flask
         metagraph: Bittensor metagraph for hotkey lookup
-        burn_fraction: Fraction to burn (default 0.30; partner gets PARTNER_FRACTION)
+        burn_fraction: Fraction to burn (default 0.0; partner gets PARTNER_FRACTION)
         kav_weight: Weight for KAV online quality (default 0.10 = 10%)
         uav_weight: Weight for UAV reputation-based (default 0.90 = 90%)
         kav_metrics: Optional detailed metrics from KAV calculation
 
     Returns:
         Tuple of:
-            - final_rewards: np.ndarray including burn UID [+ partner UID]
-            - final_uids: np.ndarray including burn UID [+ partner UID]
+            - final_rewards: np.ndarray including optional burn UID [+ partner UID]
+            - final_uids: np.ndarray including optional burn UID [+ partner UID]
             - combined_metrics: List of dicts with full breakdown per miner
     """
     queried_uids = [int(u) for u in uids]
@@ -1074,9 +1085,9 @@ def apply_reputation_rewards(
         combined_metrics.append(metric_entry)
 
     # --- Step 2: Calculate totals and rescale separately to guarantee proportions ---
-    # Miners always receive miner_fraction (35%) — independent of partner routing.
+    # Miners receive miner_fraction (50% at defaults) — independent of partner routing.
     # Partner fraction goes to PARTNER_HOTKEY if on mainnet, otherwise to burn.
-    miner_fraction = 1.0 - burn_fraction - PARTNER_FRACTION  # 1.0 - 0.30 - 0.35 = 0.35
+    miner_fraction = 1.0 - burn_fraction - PARTNER_FRACTION  # 1.0 - 0.0 - 0.50 = 0.50
     total_kav = np.sum(kav_portions)
     total_uav = np.sum(uav_portions)
 
@@ -1088,9 +1099,9 @@ def apply_reputation_rewards(
     has_partner = partner_uid is not None
 
     # Shorthands (keep expressions readable and tied to constants)
-    _kav_share = miner_fraction * kav_weight   # 0.35 * 0.10 = 0.035
-    _uav_share = miner_fraction * uav_weight   # 0.35 * 0.90 = 0.315
-    _base_burn_no_partner = burn_fraction + PARTNER_FRACTION  # 0.30 + 0.35 = 0.65
+    _kav_share = miner_fraction * kav_weight   # 0.50 * 0.10 = 0.05
+    _uav_share = miner_fraction * uav_weight   # 0.50 * 0.90 = 0.45
+    _base_burn_no_partner = burn_fraction + PARTNER_FRACTION  # 0.0 + 0.50 = 0.50
 
     # ── 8-way dispatch: all combinations of KAV / UAV / partner availability ──
     # Every branch must satisfy:
@@ -1100,16 +1111,17 @@ def apply_reputation_rewards(
     # Unused UAV weight reroutes to the partner when present; otherwise burns.
     # Missing partner always adds PARTNER_FRACTION to burn.
     #
+    # Defaults: burn=0, partner=0.50, miner=0.50 (kav=0.05, uav=0.45)
     # Case | KAV | UAV | Partner | burn   | partner | kav    | uav
     # -----|-----|-----|---------|--------|---------|--------|-------
     #  1   |  ✗  |  ✗  |   ✗    | 1.000  | 0.000   | 0.000  | 0.000
-    #  2   |  ✗  |  ✗  |   ✓    | 0.335  | 0.665   | 0.000  | 0.000  (UAV→partner)
-    #  3   |  ✗  |  ✓  |   ✗    | 0.685  | 0.000   | 0.000  | 0.315
-    #  4   |  ✓  |  ✗  |   ✗    | 0.965  | 0.000   | 0.035  | 0.000
-    #  5   |  ✗  |  ✓  |   ✓    | 0.335  | 0.350   | 0.000  | 0.315
-    #  6   |  ✓  |  ✗  |   ✓    | 0.300  | 0.665   | 0.035  | 0.000  (UAV→partner)
-    #  7   |  ✓  |  ✓  |   ✗    | 0.650  | 0.000   | 0.035  | 0.315
-    #  8   |  ✓  |  ✓  |   ✓    | 0.300  | 0.350   | 0.035  | 0.315
+    #  2   |  ✗  |  ✗  |   ✓    | 0.050  | 0.950   | 0.000  | 0.000  (UAV→partner)
+    #  3   |  ✗  |  ✓  |   ✗    | 0.550  | 0.000   | 0.000  | 0.450
+    #  4   |  ✓  |  ✗  |   ✗    | 0.950  | 0.000   | 0.050  | 0.000
+    #  5   |  ✗  |  ✓  |   ✓    | 0.050  | 0.500   | 0.000  | 0.450
+    #  6   |  ✓  |  ✗  |   ✓    | 0.000  | 0.950   | 0.050  | 0.000  (UAV→partner)
+    #  7   |  ✓  |  ✓  |   ✗    | 0.500  | 0.000   | 0.050  | 0.450
+    #  8   |  ✓  |  ✓  |   ✓    | 0.000  | 0.500   | 0.050  | 0.450
 
     if not has_kav and not has_uav and not has_partner:
         # Case 1 — no miners produced output AND partner not registered → full burn
@@ -1125,57 +1137,57 @@ def apply_reputation_rewards(
         burn_mode      = "no_kav_no_uav"
         target_kav_total = 0.0
         target_uav_total = 0.0
-        applied_burn   = burn_fraction + _kav_share              # 0.30 + 0.035 = 0.335
-        actual_partner = PARTNER_FRACTION + _uav_share           # 0.35 + 0.315 = 0.665
+        applied_burn   = burn_fraction + _kav_share              # 0.0 + 0.05 = 0.05
+        actual_partner = PARTNER_FRACTION + _uav_share           # 0.50 + 0.45 = 0.95
 
     elif not has_kav and not has_partner:
         # Case 3 — no KAV, no partner → unused KAV share + partner fraction go to burn
         burn_mode      = "no_kav_no_partner"
         target_kav_total = 0.0
-        target_uav_total = _uav_share                   # 0.315
-        applied_burn   = _base_burn_no_partner + _kav_share  # 0.65 + 0.035 = 0.685
+        target_uav_total = _uav_share                   # 0.45
+        applied_burn   = _base_burn_no_partner + _kav_share  # 0.50 + 0.05 = 0.55
         actual_partner = 0.0
 
     elif not has_uav and not has_partner:
         # Case 4 — no UAV, no partner → unused UAV share + partner fraction go to burn
         burn_mode      = "no_uav_no_partner"
-        target_kav_total = _kav_share                   # 0.035
+        target_kav_total = _kav_share                   # 0.05
         target_uav_total = 0.0
-        applied_burn   = _base_burn_no_partner + _uav_share  # 0.65 + 0.315 = 0.965
+        applied_burn   = _base_burn_no_partner + _uav_share  # 0.50 + 0.45 = 0.95
         actual_partner = 0.0
 
     elif not has_kav:
         # Case 5 — no KAV, but UAV + partner present → unused KAV share goes to burn
         burn_mode      = "no_kav"
         target_kav_total = 0.0
-        target_uav_total = _uav_share                   # 0.315
-        applied_burn   = burn_fraction + _kav_share     # 0.30 + 0.035 = 0.335
-        actual_partner = PARTNER_FRACTION               # 0.35
+        target_uav_total = _uav_share                   # 0.45
+        applied_burn   = burn_fraction + _kav_share     # 0.0 + 0.05 = 0.05
+        actual_partner = PARTNER_FRACTION               # 0.50
 
     elif not has_uav:
         # Case 6 — no UAV, but KAV + partner present → unused UAV share
-        # reroutes to partner (partner gets 35% + ~31.5%) instead of burning
+        # reroutes to partner (partner gets 50% + ~45%) instead of burning
         burn_mode      = "no_uav"
-        target_kav_total = _kav_share                   # 0.035
+        target_kav_total = _kav_share                   # 0.05
         target_uav_total = 0.0
-        applied_burn   = burn_fraction                  # 0.30
-        actual_partner = PARTNER_FRACTION + _uav_share  # 0.35 + 0.315 = 0.665
+        applied_burn   = burn_fraction                  # 0.0
+        actual_partner = PARTNER_FRACTION + _uav_share  # 0.50 + 0.45 = 0.95
 
     elif not has_partner:
         # Case 7 — KAV + UAV present, but partner not registered → partner fraction burns
         burn_mode      = "no_partner"
-        target_kav_total = _kav_share                   # 0.035
-        target_uav_total = _uav_share                   # 0.315
-        applied_burn   = _base_burn_no_partner          # 0.65
+        target_kav_total = _kav_share                   # 0.05
+        target_uav_total = _uav_share                   # 0.45
+        applied_burn   = _base_burn_no_partner          # 0.50
         actual_partner = 0.0
 
     else:
         # Case 8 — all present: KAV + UAV + partner → normal dual-incentive operation
         burn_mode      = "configured"
-        target_kav_total = _kav_share                   # 0.035
-        target_uav_total = _uav_share                   # 0.315
-        applied_burn   = burn_fraction                  # 0.30
-        actual_partner = PARTNER_FRACTION               # 0.35
+        target_kav_total = _kav_share                   # 0.05
+        target_uav_total = _uav_share                   # 0.45
+        applied_burn   = burn_fraction                  # 0.0
+        actual_partner = PARTNER_FRACTION               # 0.50
 
     # Rescale KAV and UAV portions separately to their target totals
     if total_kav > 0 and target_kav_total > 0:
@@ -1214,17 +1226,19 @@ def apply_reputation_rewards(
         metric["partner_fraction"] = float(actual_partner)
         metric["burn_mode"] = burn_mode
 
-    # --- Step 3: Add burn UID and (if on mainnet) partner UID ---
-    final_rewards = np.append(final_rewards, applied_burn)
-    final_uids = np.append(np.array(uids), BURN_UID)
+    # --- Step 3: Add burn UID (only if > 0) and (if on mainnet) partner UID ---
+    final_uids = np.array(uids)
 
-    combined_metrics.append({
-        "uid": BURN_UID,
-        "is_burn": True,
-        "burn_type": f"{int(applied_burn * 100)}_percent",
-        "burn_mode": burn_mode,
-        "final_reward": float(applied_burn),
-    })
+    if applied_burn > 0:
+        final_rewards = np.append(final_rewards, applied_burn)
+        final_uids = np.append(final_uids, BURN_UID)
+        combined_metrics.append({
+            "uid": BURN_UID,
+            "is_burn": True,
+            "burn_type": f"{int(applied_burn * 100)}_percent",
+            "burn_mode": burn_mode,
+            "final_reward": float(applied_burn),
+        })
 
     if actual_partner > 0 and partner_uid is not None:
         final_rewards = np.append(final_rewards, actual_partner)
@@ -1243,12 +1257,17 @@ def apply_reputation_rewards(
         metric["final_reward"] = float(final_rewards[i])
 
     if partner_uid is not None and actual_partner > 0:
+        burn_msg = (
+            f"Burn: {applied_burn:.2%} (UID {BURN_UID}), "
+            if applied_burn > 0
+            else "Burn: 0%, "
+        )
         bt.logging.info(
             f"Dual Incentive applied for {len(uids)} miners "
             f"({len(queried_uids)} queried, {unqueried_count} unqueried UAV-only, "
             f"{new_miner_count} new/KAV-only). "
             f"KAV: {kav_weight}, UAV: {uav_weight}, "
-            f"Burn: {applied_burn:.2%} (UID {BURN_UID}), "
+            f"{burn_msg}"
             f"Partner: {actual_partner:.2%} (UID {partner_uid}), "
             f"mode={burn_mode}."
         )

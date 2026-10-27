@@ -21,9 +21,9 @@ Validators may also attach a **voice request** in the same round (reference WAV 
 
 | Date | Milestone |
 |------|-----------|
-| Sep 24 – Oct 19, 2026 | Phase 5 Cycle 1 Sandbox (first official Phase 5 cycle). Calibration + stability testing. Optional voice clone challenge (UAV post-graded only) + continued face image KAV path. Burn ratio 35%. |
-| **Oct 19 – Nov 19, 2026** | **Phase 5 Cycle 1 Execution (current; ~1 month). Reward allocation uses validated reputation alongside the ongoing online flow. Burn ratio stays 35%.** |
-| Nov 19 – Dec 3, 2026 | Phase 5 Cycle 2 Sandbox (calibration + stability testing). Normal KAV online flow unchanged. Burn ratio 35%. |
+| Sep 24 – Oct 19, 2026 | Phase 5 Cycle 1 Sandbox (first official Phase 5 cycle). Calibration + stability testing. Optional voice clone challenge (UAV post-graded only) + continued face image KAV path. |
+| **Oct 19 – Nov 19, 2026** | **Phase 5 Cycle 1 Execution (current; ~1 month). Reward allocation uses validated reputation alongside the ongoing online flow. Weight split: ~50% data-gen miners / ~50% dual-incentive (UID 14) / 0% burn (~5% KAV / ~45% UAV of total). Miner rewards slightly up overall — see [scoring](scoring.md).** |
+| Nov 19 – Dec 3, 2026 | Phase 5 Cycle 2 Sandbox (calibration + stability testing). Normal KAV online flow unchanged. Same 50/50 / zero-burn allocation. |
 
 For the full roadmap and detailed architecture, see [Yanez Identity Generation Bittensor Subnet (PDF)](Yanez%20Identity%20Generation%20Bittensor%20Subnet.pdf).
 
