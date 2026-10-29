@@ -62,7 +62,7 @@ Primary bands reviewers use. Cases outside these bands (failed identity, missing
 
 Five images. Each can earn **up to 5 points**. Sum them for a total **out of 25**.
 
-Scored on how well the requested variation was applied and how well **identity** is preserved — not on beating a deepfake detector.
+Scored on how well the requested variation was applied and how well **identity** is preserved.
 
 Covers the non–screen-replay slots (`background_in` / `background_out`, combined lighting / expression / pose edits, and any forced-query mix):
 
