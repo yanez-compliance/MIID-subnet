@@ -31,14 +31,14 @@ UAV scores are built from **manual / post-validation review**, not from the live
 
 | Block | Points | Notes |
 |-------|--------|--------|
-| **Face variations** (5 images) | **Out of 30** | Up to **6 points** each |
+| **Face variations** (5 images) | **Out of 25** | Up to **5 points** each |
 | **Screen replay** (1 image) | **Out of 6** | Up to **6 points** |
 | **Voice** (1 clip) | **Out of 5** | Up to **5 points** |
 
 ### Pipeline
 
 ```
-face_variations  → out of 30  → apply delta → face_var'
+face_variations  → out of 25  → apply delta → face_var'
 screen_replay    → out of 6   → apply delta → screen'
 face_UAV         ← average( face_var' , screen' )
 
@@ -58,9 +58,11 @@ New miners with no reputation snapshot receive **KAV only** until they build UAV
 
 Primary bands reviewers use. Cases outside these bands (failed identity, missing cues, wrong device, empty/corrupt audio, etc.) are scored below the partial band or rejected.
 
-### Face variations — out of 30
+### Face variations — out of 25
 
-Five images. Each can earn **up to 6 points**. Sum them for a total **out of 30**.
+Five images. Each can earn **up to 5 points**. Sum them for a total **out of 25**.
+
+Scored on how well the requested variation was applied and how well **identity** is preserved — not on beating a deepfake detector.
 
 Covers the non–screen-replay slots (`background_in` / `background_out`, combined lighting / expression / pose edits, and any forced-query mix):
 
@@ -72,20 +74,12 @@ Covers the non–screen-replay slots (`background_in` / `background_out`, combin
 | `lighting_edit+pose_edit` | Lighting and pose together |
 | `pose_edit+expression_edit` | Pose and expression together |
 
-| Points (per image) | Breaks deepfake detector (`/is_ai`)? | Identity preserved? | Prompt followed? |
-|-------------------:|:------------------------------------:|:-------------------:|:----------------:|
-| **6** | Yes | Yes | Yes |
-| **3** | No | Yes | Yes |
-
-**Checklist (all required for 6 or 3 on that image):**
+**Checklist (per image):**
 
 - [ ] **Identity** is preserved relative to the seed
 - [ ] The **prompted edit** was actually applied (right type / intensity, no extra unintended changes that break the ask)
-- [ ] Then: did it **break the deepfake detector**?
-  - Yes → **6 points**
-  - No → **3 points** (half)
 
-> Five images × 6 = **30** max. Five × 3 = **15** if every image hits the partial band. That score out of 30, then delta, is **half** of face UAV.
+> Five images × 5 = **25** max. That score out of 25, then delta, is **half** of face UAV.
 
 ### Screen replay — out of 6
 
@@ -235,15 +229,14 @@ Emissions (weights)
 └── ~0% burn (removed)
 
 Point totals
-├── Face variations  → out of 30  (5 images × up to 6 points each)
+├── Face variations  → out of 25  (5 images × up to 5 points each)
 ├── Screen replay    → out of 6   (1 image × up to 6 points)
 └── Voice            → out of 5   (up to 5 points)
 
 This cycle UAV prediction (P5C1 Execution)
 ├── 50% face UAV
-│     ├── 50% → face variations (out of 30) → apply delta
-│     │     ├── 6 pts/image if breaks deepfake detector + identity + prompt followed
-│     │     └── 3 pts/image if does NOT break detector + identity + prompt followed
+│     ├── 50% → face variations (out of 25) → apply delta
+│     │     └── up to 5 pts/image on variation quality + identity preserved
 │     ├── 50% → screen replay (out of 6) → apply delta
 │     │     ├── 6 pts if breaks PL v3 + correct cues + correct device + identity
 │     │     └── 3 pts if does NOT break PL v3 + correct cues + correct device + identity
