@@ -3,9 +3,9 @@
 # Target passcode text for voice-clone challenges (English / Spanish).
 #
 # Each challenge draws tokens a synthetic voice model must speak:
-#   - 3 digit words (e.g. "three", "seis") — never zero
-#   - 7 words from a language word pool
-# The 10 tokens are shuffled into one sequence. When a miner hotkey is
+#   - 2 digit words (e.g. "three", "seis") — never zero
+#   - 10 words from a language word pool (word_pools/en.txt or es.txt)
+# The 12 tokens are shuffled into one sequence. When a miner hotkey is
 # supplied, the first 4 and last 4 characters of that SS58 address are
 # each emitted as separate tokens (uppercase letters) and wrapped around
 # the sequence, e.g.:
@@ -27,16 +27,19 @@ from __future__ import annotations
 import random
 from dataclasses import dataclass
 from enum import Enum
+from pathlib import Path
 from typing import List, Optional, Tuple
 
 # --- counts ---
-KARAOKE_DIGIT_COUNT = 3
-KARAOKE_WORD_COUNT = 7
+KARAOKE_DIGIT_COUNT = 2
+KARAOKE_WORD_COUNT = 10
 HOTKEY_PREFIX_LEN = 4
 HOTKEY_SUFFIX_LEN = 4
 # Base passcode size (no hotkey). With hotkey: +8 single-character tokens.
 KARAOKE_BASE_TOKEN_COUNT = KARAOKE_DIGIT_COUNT + KARAOKE_WORD_COUNT
 KARAOKE_HOTKEY_CHAR_COUNT = HOTKEY_PREFIX_LEN + HOTKEY_SUFFIX_LEN
+
+_WORD_POOL_DIR = Path(__file__).resolve().parent / "word_pools"
 
 
 class SpeechLanguage(str, Enum):
@@ -45,72 +48,38 @@ class SpeechLanguage(str, Enum):
 
 
 ENGLISH_DIGITS = ["one", "two", "three", "four", "five", "six", "seven", "eight", "nine"]
-ENGLISH_WORDS = [
-    "blue",
-    "chair",
-    "apple",
-    "table",
-    "green",
-    "house",
-    "water",
-    "paper",
-    "clock",
-    "window",
-    "garden",
-    "orange",
-    "market",
-    "river",
-    "silver",
-    "book",
-    "door",
-    "light",
-    "music",
-    "phone",
-    "school",
-    "street",
-    "summer",
-    "train",
-    "yellow",
-    "bread",
-    "cloud",
-    "flower",
-    "forest",
-    "mountain",
-]
-
 SPANISH_DIGITS = ["uno", "dos", "tres", "cuatro", "cinco", "seis", "siete", "ocho", "nueve"]
-SPANISH_WORDS = [
-    "azul",
-    "silla",
-    "mano",
-    "mesa",
-    "verde",
-    "casa",
-    "agua",
-    "papel",
-    "reloj",
-    "ventana",
-    "jardín",
-    "naranja",
-    "mercado",
-    "río",
-    "plata",
-    "libro",
-    "puerta",
-    "luz",
-    "música",
-    "teléfono",
-    "escuela",
-    "calle",
-    "verano",
-    "tren",
-    "amarillo",
-    "pan",
-    "nube",
-    "flor",
-    "bosque",
-    "montaña",
-]
+
+
+def _load_word_pool(filename: str) -> List[str]:
+    """Load a one-word-per-line pool; skip blanks and ``#`` comment lines."""
+    path = _WORD_POOL_DIR / filename
+    if not path.is_file():
+        raise FileNotFoundError(f"karaoke word pool missing: {path}")
+
+    words: List[str] = []
+    seen: set[str] = set()
+    for raw in path.read_text(encoding="utf-8").splitlines():
+        line = raw.strip()
+        if not line or line.startswith("#"):
+            continue
+        # One token per line; ignore accidental multi-word entries.
+        token = line.split()[0].lower()
+        if token in seen:
+            continue
+        seen.add(token)
+        words.append(token)
+
+    if len(words) < KARAOKE_WORD_COUNT:
+        raise ValueError(
+            f"karaoke word pool {path.name} has {len(words)} words; "
+            f"need at least {KARAOKE_WORD_COUNT}"
+        )
+    return words
+
+
+ENGLISH_WORDS = _load_word_pool("en.txt")
+SPANISH_WORDS = _load_word_pool("es.txt")
 
 POOLS: dict[SpeechLanguage, tuple[list[str], list[str]]] = {
     SpeechLanguage.ENGLISH: (ENGLISH_DIGITS, ENGLISH_WORDS),
@@ -190,7 +159,7 @@ def generate(
     rng: Optional[random.Random] = None,
     hotkey: Optional[str] = None,
 ) -> KaraokeChallenge:
-    """Draw a passcode: 3 digit-words + 7 words, shuffle, optionally add hotkey chars.
+    """Draw a passcode: 2 digit-words + 10 words, shuffle, optionally add hotkey chars.
 
     When ``hotkey`` is set, the spoken sequence is:
       ``<c1> <c2> <c3> <c4> <shuffled passcode...> <c5> <c6> <c7> <c8>``
@@ -216,7 +185,7 @@ def generate_target_words(
 ) -> List[str]:
     """Spoken tokens for ``VoiceRequest.target_words``.
 
-    Always draws the standard set (3 digit-words + 7 words = 10 tokens),
+    Always draws the standard set (2 digit-words + 10 words = 12 tokens),
     plus 8 single-character hotkey bookends when ``hotkey`` is provided.
     ``count`` is accepted for call-site compatibility but ignored.
     """
