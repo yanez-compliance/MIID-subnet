@@ -1,80 +1,71 @@
-"""Shared signature verification for Flask media / upload routes."""
+"""Verify validator request proofs and reject reuse across API workers."""
 
 import os
+import re
+import sqlite3
 import time
-from typing import Optional, Tuple
+from contextlib import closing
 
-from flask import jsonify, request
+from bittensor_wallet import Keypair
+from flask import current_app, jsonify, request
 
 from MIID.datasets.config import DATA_DIR
-from MIID.utils.verify_message import verify_message
+from MIID.utils.validator_requests import PROOF_HEADER, request_message
+
+MAX_PROOF_AGE = 120
+MAX_CLOCK_SKEW = 15
+PROOF_PATTERN = re.compile(r"1\.([0-9]{1,12})\.([0-9a-f]{32})\.([0-9a-f]{128})")
 
 
-def verify_request_signature(
-    tmp_prefix: str = "tmp_signature",
-    expected_hotkey: Optional[str] = None,
-):
-    """
-    Verify the JSON body has a valid ``signature`` field.
+def _consume_nonce(hotkey, nonce, now, expires_at):
+    path = os.path.join(DATA_DIR, "validator_request_nonces.sqlite3")
+    with closing(sqlite3.connect(path, timeout=5)) as db, db:
+        db.execute(
+            "CREATE TABLE IF NOT EXISTS request_nonces ("
+            "hotkey TEXT NOT NULL, nonce TEXT NOT NULL, expires_at INTEGER NOT NULL, "
+            "PRIMARY KEY (hotkey, nonce))"
+        )
+        db.execute("DELETE FROM request_nonces WHERE expires_at < ?", (now,))
+        cursor = db.execute(
+            "INSERT OR IGNORE INTO request_nonces VALUES (?, ?, ?)",
+            (hotkey, nonce, expires_at),
+        )
+        return cursor.rowcount == 1
 
-    When ``expected_hotkey`` is set, the verified signer must equal that
-    hotkey (URL path identity binding).
 
-    Returns:
-        (None, None) on success.
-        (response, status_code) on failure — caller should ``return response, status_code``.
-    """
-    if not request.is_json:
-        return jsonify({"error": "Request body must be JSON"}), 400
+def verify_request_signature(expected_hotkey):
+    if not request.is_json or request.query_string:
+        return jsonify({"error": "Expected a JSON request without query parameters"}), 400
 
-    data = request.get_json()
-    signature_text = data.get("signature") if data else None
-    if not signature_text:
-        return jsonify({"error": "Missing 'signature' in JSON payload"}), 400
+    proof = PROOF_PATTERN.fullmatch(request.headers.get(PROOF_HEADER, ""))
+    if proof is None:
+        return jsonify({"error": "Missing or invalid validator request proof"}), 401
 
-    tmp_signature_filename = os.path.join(
-        DATA_DIR, f"{tmp_prefix}_{time.time()}.txt"
+    timestamp_text, nonce, signature = proof.groups()
+    timestamp = int(timestamp_text)
+    now = int(time.time())
+    if not now - MAX_PROOF_AGE <= timestamp <= now + MAX_CLOCK_SKEW:
+        return jsonify({"error": "Validator request proof expired or not yet valid"}), 401
+
+    message = request_message(
+        request.method, request.path, request.get_data(), timestamp, nonce
     )
-    with open(tmp_signature_filename, "w", encoding="utf-8") as tmp_file:
-        tmp_file.write(signature_text)
+    try:
+        key = Keypair(ss58_address=expected_hotkey, ss58_format=42)
+        valid = key.verify(data=message, signature=bytes.fromhex(signature))
+    except (TypeError, ValueError):
+        valid = False
+    if not valid:
+        return jsonify({"error": "Invalid signature for validator request"}), 403
+
+    if not isinstance(request.get_json(silent=True), dict):
+        return jsonify({"error": "Expected a JSON object"}), 400
 
     try:
-        verified_signer = verify_message(tmp_signature_filename)
-    except ValueError as e:
-        os.remove(tmp_signature_filename)
-        return jsonify({"error": f"Signature verification failed: {str(e)}"}), 400
-
-    os.remove(tmp_signature_filename)
-
-    if expected_hotkey is not None and verified_signer != expected_hotkey:
-        return (
-            jsonify(
-                {
-                    "error": "Signature signer does not match hotkey",
-                    "expected": expected_hotkey,
-                    "signer": verified_signer,
-                }
-            ),
-            403,
-        )
+        if not _consume_nonce(expected_hotkey, nonce, now, timestamp + MAX_PROOF_AGE):
+            return jsonify({"error": "Validator request proof already used"}), 409
+    except sqlite3.Error:
+        current_app.logger.exception("Could not record validator request nonce")
+        return jsonify({"error": "Validator request verification unavailable"}), 503
 
     return None, None
-
-
-def get_json_after_auth(
-    tmp_prefix: str = "tmp_signature",
-    expected_hotkey: Optional[str] = None,
-) -> Tuple[Optional[dict], Optional[tuple]]:
-    """
-    Verify signature and return the request JSON.
-
-    Returns:
-        (data, None) on success.
-        (None, (response, status_code)) on failure.
-    """
-    err_resp, err_status = verify_request_signature(
-        tmp_prefix=tmp_prefix, expected_hotkey=expected_hotkey
-    )
-    if err_resp is not None:
-        return None, (err_resp, err_status)
-    return request.get_json(), None

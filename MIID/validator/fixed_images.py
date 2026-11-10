@@ -6,8 +6,6 @@
 
 import base64
 import json
-import os
-import time
 from datetime import datetime, timezone, timedelta
 from pathlib import Path
 from typing import List, Optional, Tuple
@@ -161,18 +159,10 @@ def _fetch_seed_pair_from_api(wallet) -> Optional[Tuple[Tuple[str, bytes, str], 
         return None
 
     try:
-        from MIID.utils.sign_message import sign_message
+        from MIID.utils.validator_requests import post_validator_request
 
         hotkey = wallet.hotkey
-        hotkey_address = hotkey.ss58_address
-        message_to_sign = (
-            f"Hotkey: {hotkey} \n timestamp: {time.time()} \n request: fixed_image"
-        )
-        signed_contents = sign_message(wallet, message_to_sign, output_file=None)
-
-        server_url = os.environ.get("MIID_IMAGES_SERVER", "http://52.44.186.20:5000")
-        url = f"{server_url.rstrip('/')}/fixed_image/{hotkey_address}"
-        response = requests.post(url, json={"signature": signed_contents}, timeout=30)
+        response = post_validator_request(f"/fixed_image/{hotkey.ss58_address}", hotkey, {})
 
         if response.status_code != 200:
             bt.logging.warning(

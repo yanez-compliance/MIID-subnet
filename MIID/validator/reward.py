@@ -63,6 +63,9 @@ Reward allocation (SN54 Dual Incentive — zero burn):
   instead of being burned. If the partner is absent, unused UAV still burns.
 """
 
+import os
+from urllib.parse import urlsplit
+
 import numpy as np
 import time
 from typing import List, Dict, Tuple, Any, Optional
@@ -77,11 +80,16 @@ from MIID.validator.image_variations import format_variation_requirements
 # KAV: Image Variation Grading (via external API)
 # =============================================================================
 
-# External grading API — submit to /grade_v2 (async ack), then poll /grade_results.
-# Update GRADING_API_BASE to match the current grading server before deployment.
-GRADING_API_BASE = "http://98.90.28.118:5000"
-GRADING_API_URL = f"{GRADING_API_BASE}/grade_v2"
-GRADING_RESULTS_URL = f"{GRADING_API_BASE}/grade_results"
+# The grading service remains authoritative; authenticate its transport with
+# normal TLS certificate verification. There is no plaintext fallback.
+def _grading_api_urls():
+    base = os.environ.get("MIID_GRADING_API_URL", "")
+    parsed = urlsplit(base)
+    if (parsed.scheme != "https" or not parsed.hostname or parsed.username is not None
+            or parsed.password is not None or parsed.query or parsed.fragment):
+        raise ValueError("Set MIID_GRADING_API_URL to the HTTPS grading service base URL")
+    return base.rstrip("/") + "/grade_v2", base.rstrip("/") + "/grade_results"
+
 
 # Submit: short timeout — server should ack immediately and grade in background.
 GRADING_SUBMIT_TIMEOUT_SECONDS = 60
@@ -121,26 +129,33 @@ def _submit_and_poll_grading_api(
     Returns the inner ``result`` dict once status is "completed".
     Raises on submit failure (after retries) or if polling times out.
     """
+    submit_url, results_url = _grading_api_urls()
+
     # ── 1. Submit to /grade_v2 (expect immediate 200 + status processing) ────
     last_submit_exc: Optional[Exception] = None
     for attempt in range(GRADING_RETRY_ATTEMPTS):
         try:
             bt.logging.info(
-                f"Submitting grading job to {GRADING_API_URL} "
+                f"Submitting grading job to {submit_url} "
                 f"for challenge {challenge_id} "
                 f"(attempt {attempt + 1}/{GRADING_RETRY_ATTEMPTS})."
             )
             resp = requests.post(
-                GRADING_API_URL,
+                submit_url,
                 json=payload,
                 timeout=GRADING_SUBMIT_TIMEOUT_SECONDS,
+                allow_redirects=False,
             )
             resp.raise_for_status()
+            if resp.status_code != 200:
+                raise ValueError("Grading service must return HTTP 200 without redirects")
             submit_json = resp.json() if resp.content else {}
+            if not isinstance(submit_json, dict) or submit_json.get("status") != "processing":
+                raise ValueError("Grading service did not acknowledge the job")
             bt.logging.info(
                 f"Grading job accepted (HTTP {resp.status_code}, "
                 f"status={submit_json.get('status')!r}) for challenge "
-                f"{challenge_id}. Will poll {GRADING_RESULTS_URL}."
+                f"{challenge_id}. Will poll {results_url}."
             )
             last_submit_exc = None
             break
@@ -198,15 +213,18 @@ def _submit_and_poll_grading_api(
         poll_attempt += 1
         try:
             bt.logging.info(
-                f"Polling grading results at {GRADING_RESULTS_URL} "
+                f"Polling grading results at {results_url} "
                 f"for challenge {challenge_id} (poll #{poll_attempt})."
             )
             resp = requests.post(
-                GRADING_RESULTS_URL,
+                results_url,
                 json=results_payload,
                 timeout=GRADING_RESULTS_TIMEOUT_SECONDS,
+                allow_redirects=False,
             )
             resp.raise_for_status()
+            if resp.status_code != 200:
+                raise ValueError("Grading service must return HTTP 200 without redirects")
             api_json = resp.json() if resp.content else {}
             status = str(api_json.get("status", "")).lower()
 
@@ -219,6 +237,8 @@ def _submit_and_poll_grading_api(
 
             if status == "completed":
                 result = api_json.get("result")
+                if isinstance(result, dict) and result.get("challenge_id") != challenge_id:
+                    raise ValueError("Grading result does not match the requested challenge")
                 if not isinstance(result, dict):
                     raise ValueError(
                         f"/grade_results returned status=completed but missing "
@@ -236,7 +256,8 @@ def _submit_and_poll_grading_api(
                 f"for challenge {challenge_id}: keys={list(api_json.keys())}. "
                 f"Treating as processing."
             )
-        except TimeoutError:
+        except (TimeoutError, ValueError):
+            # Invalid or mismatched results are not transient processing states.
             raise
         except Exception as exc:
             bt.logging.warning(
@@ -897,7 +918,10 @@ def collect_uav_reward_uids(
     appended with KAV=0 — they still earn UAV and still get the per-cycle decay.
     Burn UID is omitted here; it is appended later in apply_reputation_rewards().
     """
-    queried = [int(u) for u in queried_uids]
+    # Reserve destinations are appended separately. Including them in the
+    # miner pool would produce duplicate UIDs and overwrite rewards downstream.
+    reserved = {BURN_UID, _get_partner_uid(metagraph)}
+    queried = list(dict.fromkeys(int(u) for u in queried_uids if int(u) not in reserved))
     queried_set = set(queried)
     extra: List[int] = []
 
@@ -909,7 +933,7 @@ def collect_uav_reward_uids(
     n_hotkeys = len(metagraph.hotkeys) if getattr(metagraph, "hotkeys", None) is not None else 0
 
     for uid in range(n_val):
-        if uid in queried_set or uid == BURN_UID:
+        if uid in queried_set or uid in reserved:
             continue
         if uid >= n_hotkeys:
             continue
@@ -991,7 +1015,7 @@ def apply_reputation_rewards(
     uids = collect_uav_reward_uids(queried_uids, metagraph, rep_data)
     kav_rewards = np.array([kav_by_uid.get(uid, 0.0) for uid in uids], dtype=float)
 
-    n_unqueried = len(uids) - len(queried_uids)
+    n_unqueried = sum(uid not in queried_set for uid in uids)
     if n_unqueried > 0:
         bt.logging.info(
             f"UAV rewards expanded to unqueried miners: "
