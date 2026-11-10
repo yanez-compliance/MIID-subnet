@@ -7,8 +7,8 @@
 #   - Output: WAV bytes that keep the same speaker identity and speak the prompt
 #
 # Prompt text is already joined for you as target_text, e.g.
-#   "three orange six two nine apple table one"
-# (same as " ".join(target_words)).
+#   "5 G U P three orange book apple table door light music phone school six K V D U"
+# (same as " ".join(target_words); includes hotkey bookends when present).
 
 import base64
 import hashlib

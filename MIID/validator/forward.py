@@ -578,7 +578,7 @@ async def forward(self):
             selected_variations = None
 
     # 3b) Build VoiceRequest (UAV post-graded only — no KAV)
-    # Base karaoke is shared (3 digit-words + 7 pool words). Each miner is
+    # Base karaoke is shared (2 digit-words + 10 pool words). Each miner is
     # queried with a personalized copy that wraps their hotkey[:4] / hotkey[-4:].
     voice_request = None
     karaoke = None
@@ -887,7 +887,7 @@ async def forward(self):
             "challenge_id": voice_request.challenge_id,
             "voice_filename": voice_request.voice_filename,
             "language": voice_request.language,
-            # Base passcode (3 digits + 7 words). Per-miner prompts add hotkey bookends.
+            # Base passcode (2 digits + 10 words). Per-miner prompts add hotkey bookends.
             "target_words": list(voice_request.target_words),
             "target_text": voice_request.target_text,
             "karaoke": karaoke_payload,
