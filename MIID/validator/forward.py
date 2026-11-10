@@ -44,6 +44,7 @@ import shutil
 import bittensor as bt
 import json
 import os
+from tempfile import NamedTemporaryFile
 import asyncio
 from typing import List, Dict, Any, Optional
 from datetime import datetime
@@ -52,7 +53,7 @@ from pathlib import Path
 from MIID.protocol import IdentitySynapse, ImageRequest, VariationRequest, VoiceRequest
 from MIID.validator.reward import get_image_variation_rewards, apply_reputation_rewards
 from MIID.utils.uids import get_random_uids
-from MIID.utils.sign_message import sign_message
+from MIID.utils.validator_requests import MAX_ALLOCATION_BATCH
 
 from MIID.validator.base_images import fetch_image_from_api
 from MIID.validator.base_voices import fetch_voice_from_api
@@ -82,6 +83,7 @@ from MIID.validator.image_variations import (
 
 # Import your new upload_data function here
 from MIID.utils.misc import upload_data
+from MIID.utils.submission_integrity import verify_commitment
 
 # =============================================================================
 # Reputation Cache (persists across forward passes)
@@ -161,13 +163,43 @@ def _load_pending_allocations(file_path: Path) -> List[Dict]:
 def _save_pending_allocations(file_path: Path, pending: List[Dict]):
     """Save pending allocations to disk."""
     file_path.parent.mkdir(parents=True, exist_ok=True)
-    with open(file_path, 'w') as f:
-        json.dump(pending, f, indent=2)
+    with NamedTemporaryFile(mode="w", dir=file_path.parent, delete=False) as file:
+        temporary_path = Path(file.name)
+        try:
+            json.dump(pending, file, indent=2)
+            file.flush()
+            os.fsync(file.fileno())
+            file.close()
+            temporary_path.replace(file_path)
+        finally:
+            temporary_path.unlink(missing_ok=True)
 
 
-def _clear_pending_allocations(file_path: Path):
-    """Clear pending after successful send (overwrite with empty array)."""
-    _save_pending_allocations(file_path, [])
+def _filter_valid_commitment_submissions(
+    submissions_by_miner: Dict[str, Any],
+) -> Dict[str, Any]:
+    """Keep only commitment_valid submissions for KAV grading.
+
+    Invalid submissions remain in the full map for results JSON / Flask audit.
+    Miners with zero valid submissions are omitted from the grading map.
+    """
+    filtered: Dict[str, Any] = {}
+    for uid_str, miner_block in submissions_by_miner.items():
+        if not isinstance(miner_block, dict):
+            continue
+        valid_subs = [
+            sub
+            for sub in miner_block.get("submissions", [])
+            if isinstance(sub, dict) and sub.get("commitment_valid") is True
+        ]
+        if not valid_subs:
+            continue
+        filtered[uid_str] = {
+            **miner_block,
+            "submissions": valid_subs,
+            "submission_count": len(valid_subs),
+        }
+    return filtered
 
 
 # # --- PAUSED: real screen-replay results collector (restore later) ---
@@ -267,7 +299,6 @@ def _clear_pending_allocations(file_path: Path):
 # =============================================================================
 
 EPOCH_MIN_TIME = 360  # seconds
-MIID_SERVER = "http://52.44.186.20:5000/upload_data"
 UPLOAD_RETRY_ATTEMPTS = 3
 UPLOAD_RETRY_DELAY_SECONDS = 60
 
@@ -753,6 +784,18 @@ async def forward(self):
             miner_hotkey = str(self.metagraph.axons[uid].hotkey)
             s3_data = []
             for sub in response.s3_submissions:
+                commitment_valid = True
+                commitment_error = None
+                try:
+                    verify_commitment(image_request.challenge_id, miner_hotkey, sub.image_hash,
+                                      sub.signature, sub.s3_key, sub.path_signature)
+                except ValueError as exc:
+                    commitment_valid = False
+                    commitment_error = str(exc)
+                    bt.logging.warning(
+                        f"Miner {uid}: invalid image commitment; recording as invalid "
+                        f"({commitment_error})"
+                    )
                 # # --- PAUSED: real screen-replay UAV / angle2 pass-through ---
                 # # screen_replay_uav (date/camera/device/cue-checklist) arrives
                 # # already parsed on sub — the miner sent it directly over the
@@ -781,18 +824,22 @@ async def forward(self):
                 #         f"uav={'present' if uav_dict else 'MISSING'})"
                 #     )
 
-                s3_data.append({
+                entry = {
                     "s3_key":       sub.s3_key,
                     "image_hash":   sub.image_hash,
                     "signature":    sub.signature,
                     "variation_type": sub.variation_type,
                     "path_signature": sub.path_signature,
+                    "commitment_valid": commitment_valid,
                     # # --- PAUSED: real dual-file + UAV fields (restore later) ---
                     # "s3_key_angle2":     sub.s3_key_angle2,
                     # "image_hash_angle2": sub.image_hash_angle2,
                     # "signature_angle2":  sub.signature_angle2,
                     # "screen_replay_uav": uav_dict,
-                })
+                }
+                if commitment_error is not None:
+                    entry["commitment_error"] = commitment_error
+                s3_data.append(entry)
             s3_submissions_by_miner[str(uid)] = {
                 "hotkey":           miner_hotkey,
                 "submissions":      s3_data,
@@ -807,18 +854,40 @@ async def forward(self):
             miner_hotkey = str(self.metagraph.axons[uid].hotkey)
             voice_data = []
             for sub in voice_subs:
-                voice_data.append({
+                commitment_valid = True
+                commitment_error = None
+                try:
+                    verify_commitment(voice_request.challenge_id, miner_hotkey, sub.image_hash,
+                                      sub.signature, sub.s3_key, sub.path_signature)
+                except ValueError as exc:
+                    commitment_valid = False
+                    commitment_error = str(exc)
+                    bt.logging.warning(
+                        f"Miner {uid}: invalid voice commitment; recording as invalid "
+                        f"({commitment_error})"
+                    )
+                entry = {
                     "s3_key":         sub.s3_key,
                     "image_hash":     sub.image_hash,
                     "signature":      sub.signature,
                     "variation_type": sub.variation_type,
                     "path_signature": sub.path_signature,
-                })
+                    "commitment_valid": commitment_valid,
+                }
+                if commitment_error is not None:
+                    entry["commitment_error"] = commitment_error
+                voice_data.append(entry)
             voice_s3_submissions_by_miner[str(uid)] = {
                 "hotkey":           miner_hotkey,
                 "submissions":      voice_data,
                 "submission_count": len(voice_data),
             }
+
+    # Full maps (including invalid flags) go to results JSON / Flask.
+    # Valid-only maps are used for KAV grading so bad commitments earn no KAV.
+    s3_submissions_by_miner_for_grading = _filter_valid_commitment_submissions(
+        s3_submissions_by_miner
+    )
 
     # # --- PAUSED: real screen-replay summary for results JSON (restore later) ---
     # screen_replay_requested = bool(real_screen_replay_instructions)
@@ -871,10 +940,11 @@ async def forward(self):
             "variation_count": len(selected_variations),
             "variation_types": [v["type"] for v in selected_variations],
             "variation_intensities": [v["intensity"] for v in selected_variations],
-            "s3_submissions_by_miner": s3_submissions_by_miner,
+            "s3_submissions_by_miner": s3_submissions_by_miner_for_grading,
         }
 
     # Voice payload for UAV post-grading only (never sent to KAV /grade_v2).
+    # Keep the full voice map (including invalid flags) for Flask audit.
     phase_voice_data: Optional[Dict] = None
     if voice_request is not None:
         phase_voice_data = {
@@ -900,7 +970,7 @@ async def forward(self):
         }
 
     # Wait for drand reveal before grading — images stay encrypted until T+40 min
-    if PHASE4_ENABLED and image_request is not None and s3_submissions_by_miner:
+    if PHASE4_ENABLED and image_request is not None and s3_submissions_by_miner_for_grading:
         reveal_ready = wait_until_reveal(
             target_round=image_request.target_drand_round,
             reveal_timestamp=image_request.reveal_timestamp,
@@ -918,7 +988,7 @@ async def forward(self):
         kav_rewards, kav_uids, detailed_metrics = get_image_variation_rewards(
             self,
             challenge_id=challenge_id or "",
-            s3_submissions_by_miner=s3_submissions_by_miner,
+            s3_submissions_by_miner=s3_submissions_by_miner_for_grading,
             miner_uids=miner_uids,
             selected_variations=selected_variations or [],
             skip_burn=True,
@@ -971,7 +1041,7 @@ async def forward(self):
         rewards, updated_uids, detailed_metrics = get_image_variation_rewards(
             self,
             challenge_id=challenge_id or "",
-            s3_submissions_by_miner=s3_submissions_by_miner,
+            s3_submissions_by_miner=s3_submissions_by_miner_for_grading,
             miner_uids=miner_uids,
             selected_variations=selected_variations or [],
             skip_burn=False,
@@ -1153,12 +1223,13 @@ async def forward(self):
         if not is_testnet:
             _save_pending_allocations(_pending_file_path, _pending_allocations)
 
-        # Build reward_allocation with ALL pending allocations (for retry on previous failures)
+        # Send the oldest pending events first and keep the rest on disk.
+        submitted_allocations = _pending_allocations[:MAX_ALLOCATION_BATCH]
         results["reward_allocation"] = {
             "rep_snapshot_version": _cached_rep_version,
             "cycle_id":             f"cycle_{timestamp}",
-            "pending_count":        len(_pending_allocations),
-            "allocations":          _pending_allocations,
+            "pending_count":        len(submitted_allocations),
+            "allocations":          submitted_allocations,
         }
         bt.logging.info(f"Added reward_allocation: {len(_pending_allocations)} pending allocation(s)")
     else:
@@ -1187,10 +1258,7 @@ async def forward(self):
     }
 
     # Upload to MIID server
-    hotkey             = self.wallet.hotkey
-    message_to_sign    = f"Hotkey: {hotkey} \n timestamp: {timestamp}"
-    signed_contents    = sign_message(self.wallet, message_to_sign, output_file=None)
-    results["signature"] = signed_contents
+    hotkey = self.wallet.hotkey
 
     upload_success = False
     upload_response = None
@@ -1201,9 +1269,8 @@ async def forward(self):
             bt.logging.info("Testnet detected — skipping upload to MIID server")
             upload_success = True
         else:
-            bt.logging.info(f"Uploading data to: {MIID_SERVER}")
             for attempt in range(UPLOAD_RETRY_ATTEMPTS):
-                upload_response = upload_data(MIID_SERVER, hotkey, results)
+                upload_response = upload_data(hotkey, results)
                 if upload_response is not None:
                     upload_success = True
                     break
@@ -1232,11 +1299,11 @@ async def forward(self):
                         f"miners={len(_cached_rep_data)}"
                     )
 
-                # Clear pending allocations after successful upload (mainnet only)
-                _pending_allocations.clear()
+                remaining = _pending_allocations[len(submitted_allocations):]
                 if not is_testnet:
-                    _clear_pending_allocations(_pending_file_path)
-                bt.logging.info("Cleared pending allocations after successful upload")
+                    _save_pending_allocations(_pending_file_path, remaining)
+                _pending_allocations[:] = remaining
+                bt.logging.info(f"Remaining pending allocations: {len(_pending_allocations)}")
             # ==========================================================================
         else:
             bt.logging.error("Failed to upload data to external server")

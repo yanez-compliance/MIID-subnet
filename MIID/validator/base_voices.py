@@ -2,8 +2,6 @@
 #
 # Voice challenge: fetch a reference WAV from the MIID API for miners to clone.
 
-import os
-import time
 import bittensor as bt
 from typing import Optional, Tuple
 
@@ -32,22 +30,11 @@ def fetch_voice_from_api(wallet) -> Optional[Tuple[str, str, str, str]]:
         return None
 
     try:
-        from MIID.utils.sign_message import sign_message
+        from MIID.utils.validator_requests import post_validator_request
 
         hotkey = wallet.hotkey
-        hotkey_address = hotkey.ss58_address
+        response = post_validator_request(f"/voice/{hotkey.ss58_address}", hotkey, {})
 
-        message_to_sign = (
-            f"Hotkey: {hotkey} \n timestamp: {time.time()} \n request: base_voices"
-        )
-        signed_contents = sign_message(wallet, message_to_sign, output_file=None)
-
-        server_url = os.environ.get("MIID_IMAGES_SERVER", "http://52.44.186.20:5000")
-        base_url = server_url.rstrip("/")
-        url = f"{base_url}/voice/{hotkey_address}"
-        payload = {"signature": signed_contents}
-
-        response = requests.post(url, json=payload, timeout=30)
         if response.status_code != 200:
             bt.logging.warning(
                 f"Voice API returned {response.status_code}: {response.text[:200]}"

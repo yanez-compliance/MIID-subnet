@@ -173,7 +173,7 @@ On mainnet, local `validator_results` JSON is deleted after a successful upload 
 ### Startup
 
 1. Connect to the subnet metagraph and load validator state
-2. Fetch base face images from the Yanez images server (`MIID_IMAGES_SERVER`, signed by the validator hotkey)
+2. Fetch base face images from the Yanez images server (`MIID_VALIDATOR_API_URL`, signed by the validator hotkey)
 3. Reset Phase 4 image-cycle state for a clean start
 
 ### Challenge construction (each forward pass)
@@ -248,3 +248,23 @@ Relevant modules:
 - `MIID/validator/reward.py` — KAV grading API + UAV reputation rewards
 - `MIID/validator/drand_utils.py` — timelock reveal timing
 - `MIID/validator/base_images.py` — local base-image helpers / API fetch
+
+### Validator data API configuration
+
+Set `MIID_VALIDATOR_API_URL` to the HTTPS origin for validator uploads, images, and
+voice. Deploy matching client and server versions together. The API accepts the
+new request proof format only. The proxy must forward the original request path
+without rewriting it and must preserve the proof header and exact body bytes.
+For separate environments, set a distinct `MIID_VALIDATOR_AUDIENCE` on both the
+client and server.
+
+Keep the Gunicorn listener on a private interface behind the TLS proxy. All
+Gunicorn workers must share the same writable local `DATA_DIR` for nonce storage.
+For multiple API hosts, use a shared transactional nonce store before enabling
+the new verifier across replicas.
+
+### Grading service configuration
+
+Set `MIID_GRADING_API_URL` to the grading service's HTTPS base URL. Both job
+submission and polling reject redirects, and completed results must match the
+requested challenge. Configure TLS ingress before deploying the validator.

@@ -101,9 +101,7 @@ def get_validator_images(hotkey):
             403,
         )
 
-    err_resp, err_status = verify_request_signature(
-        tmp_prefix="tmp_signature_images", expected_hotkey=hotkey
-    )
+    err_resp, err_status = verify_request_signature(hotkey)
     if err_resp is not None:
         return err_resp, err_status
 
@@ -225,9 +223,7 @@ def get_validator_image(hotkey):
             403,
         )
 
-    err_resp, err_status = verify_request_signature(
-        tmp_prefix="tmp_signature_image", expected_hotkey=hotkey
-    )
+    err_resp, err_status = verify_request_signature(hotkey)
     if err_resp is not None:
         return err_resp, err_status
 

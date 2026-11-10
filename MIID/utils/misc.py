@@ -116,47 +116,22 @@ def ttl_get_block(self) -> int:
     return self.subtensor.get_current_block()
 
 
-def upload_data(endpoint_base: str, hotkey: str, payload: dict):
-    """
-    Upload the generated JSON data to the given Flask endpoint.
+def upload_data(hotkey, payload: dict):
+    """Return the API's acknowledgement, or None so the caller keeps the batch."""
+    from MIID.utils.validator_requests import post_validator_request
 
-    Args:
-        endpoint_base (str): Base URL of the upload endpoint (e.g., http://52.44.186.20:5000/upload_data).
-        hotkey (str): The hotkey or other unique identifier appended to the endpoint path.
-        payload (dict): The JSON data to be posted to the endpoint.
-
-    Returns:
-        dict: Flask response JSON on success (includes rep_cache for reputation system)
-        None: If request fails
-    """
-    # Ensure endpoint_base doesn't end with a slash
-    endpoint_base = endpoint_base.rstrip('/')
-
-    # Extract the hotkey address if it's a Keypair object
-    if hasattr(hotkey, 'ss58_address'):
-        hotkey = hotkey.ss58_address
-
-    full_url = f"{endpoint_base}/{hotkey}"
-    bt.logging.info(f"Uploading results to {full_url} ...")
-    print(f"Uploading results to {full_url} ...")
     try:
-        response = requests.post(full_url, json=payload)
-        if response.status_code == 200:
-            bt.logging.info(f"Successfully uploaded data. Server response.")
-            # Return full response JSON instead of True (Phase 3 - Cycle 2)
-            result = response.json()
-            # Log rep_cache info if present
-            if result.get("rep_cache"):
-                bt.logging.info(
-                    f"Received rep_cache: version={result.get('rep_snapshot_version')}, "
-                    f"miners={len(result.get('rep_cache', {}))}"
-                )
-            return result  # Return full response for rep_cache extraction
-        else:
-            bt.logging.error(
-                f"Failed to upload data. Status code: {response.status_code})"
-            )
-            return None  # Changed from False to None
-    except Exception as e:
-        bt.logging.error(f"Exception occurred during upload: {e}")
-        return None  # Changed from False to None
+        response = post_validator_request(
+            f"/upload_data/{hotkey.ss58_address}", hotkey, payload
+        )
+        if response.status_code != 200:
+            bt.logging.error(f"Validator upload failed with HTTP {response.status_code}")
+            return None
+
+        result = response.json()
+        if isinstance(result, dict) and result.get("allocation_committed") is True:
+            return result
+        bt.logging.error("Validator upload did not acknowledge the batch")
+    except (requests.RequestException, ValueError) as exc:
+        bt.logging.error(f"Validator upload failed: {exc}")
+    return None

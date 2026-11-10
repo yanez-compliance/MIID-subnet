@@ -35,9 +35,6 @@ def sign_message(wallet: bittensor.Wallet, message_text: str, output_file: str =
         f"\tSignature: {signature.hex()}"
     )
 
-    # Print to console
-    print(file_contents)
-
     # Write to file if output_file is specified
     if output_file:
         with open(output_file, "w", encoding="utf-8") as f:

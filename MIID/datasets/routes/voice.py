@@ -217,9 +217,7 @@ def get_validator_voice(hotkey):
             403,
         )
 
-    err_resp, err_status = verify_request_signature(
-        tmp_prefix="tmp_signature_voice", expected_hotkey=hotkey
-    )
+    err_resp, err_status = verify_request_signature(hotkey)
     if err_resp is not None:
         return err_resp, err_status
 

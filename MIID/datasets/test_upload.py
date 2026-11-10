@@ -2,16 +2,11 @@ import sys
 import os
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../..")))
 
-import json
-import requests
-from MIID.utils.sign_message import sign_message
 from MIID.utils.misc import upload_data
-from bittensor_wallet import Keypair
 import bittensor
 
 # === CONFIGURATION ===
 HOTKEY = "5CnkkjPdfsA6jJDHv2U6QuiKiivDuvQpECC13ffdmSDbkgtt"  # Replace with your test hotkey
-MIID_SERVER = "http://52.44.186.20:5000/upload_data"  # MIID server endpoint
 MESSAGE = {"test_data": "hello from auto-signed client"}
 
 # === STEP 1: Load or generate a wallet ===
@@ -46,17 +41,11 @@ test_results = {
     "test_message": MESSAGE
 }
 
-# === STEP 3: Sign the message ===
-message_to_sign = f"Hotkey: {wallet.hotkey} \n timestamp: {test_results['timestamp']} \n query_template: {test_results['query_template']} \n query_labels: {test_results['query_labels']}"
-signed_contents = sign_message(wallet, message_to_sign, output_file=None)
-test_results["signature"] = signed_contents
-
-# === STEP 4: Upload to external endpoint (following forward.py pattern) ===
+# === STEP 3: Upload to the configured HTTPS endpoint ===
 upload_success = False
 # If for some reason uploading the data fails, we should just log it and continue. Server might go down but should not be a unique point of failure for the subnet
 try:
-    print(f"@@@@@@@@@@@@@@@@@@@@@@@@@@@Uploading data to: {MIID_SERVER}@@@@@@@@@@@@@@@@@@@@@@@@@@@")
-    upload_success = upload_data(MIID_SERVER, wallet.hotkey, test_results) 
+    upload_success = upload_data(wallet.hotkey, test_results)
     if upload_success:
         print("Data uploaded successfully to external server")
     else:
