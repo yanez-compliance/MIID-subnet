@@ -12,6 +12,9 @@ import requests
 PROOF_HEADER = "X-MIID-Request-Proof"
 MAX_ALLOCATION_BATCH = 32
 
+# Production validator data API (TLS on :5000; gunicorn is local behind proxy).
+DEFAULT_VALIDATOR_API_URL = "https://api.yanez.ai:5000"
+
 
 def request_message(method, path, body, timestamp, nonce):
     return json.dumps(
@@ -29,8 +32,10 @@ def request_message(method, path, body, timestamp, nonce):
 
 
 def post_validator_request(path, hotkey, payload):
-    base_url = os.environ.get("MIID_VALIDATOR_API_URL") or os.environ.get(
-        "MIID_IMAGES_SERVER", ""
+    base_url = (
+        os.environ.get("MIID_VALIDATOR_API_URL")
+        or os.environ.get("MIID_IMAGES_SERVER")
+        or DEFAULT_VALIDATOR_API_URL
     )
     url = urlsplit(base_url)
     if (
