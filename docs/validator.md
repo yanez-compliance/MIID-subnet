@@ -251,12 +251,12 @@ Relevant modules:
 
 ### Validator data API configuration
 
-Set `MIID_VALIDATOR_API_URL` to the HTTPS origin for validator uploads, images, and
-voice. Deploy matching client and server versions together. The API accepts the
-new request proof format only. The proxy must forward the original request path
-without rewriting it and must preserve the proof header and exact body bytes.
-For separate environments, set a distinct `MIID_VALIDATOR_AUDIENCE` on both the
-client and server.
+Default API origin is `https://api.yanez.ai:5000`. Override with
+`MIID_VALIDATOR_API_URL` if needed. Deploy matching client and server versions
+together. The API accepts the new request proof format only. The proxy must
+forward the original request path without rewriting it and must preserve the
+proof header and exact body bytes. For separate environments, set a distinct
+`MIID_VALIDATOR_AUDIENCE` on both the client and server.
 
 Keep the Gunicorn listener on a private interface behind the TLS proxy. All
 Gunicorn workers must share the same writable local `DATA_DIR` for nonce storage.
@@ -265,6 +265,7 @@ the new verifier across replicas.
 
 ### Grading service configuration
 
-Set `MIID_GRADING_API_URL` to the grading service's HTTPS base URL. Both job
-submission and polling reject redirects, and completed results must match the
-requested challenge. Configure TLS ingress before deploying the validator.
+Default grading origin is also `https://api.yanez.ai:5000` (this host proxies
+`/grade_v2` and `/grade_results` to the grading server). Override with
+`MIID_GRADING_API_URL` if needed. Both job submission and polling reject
+redirects, and completed results must match the requested challenge.
