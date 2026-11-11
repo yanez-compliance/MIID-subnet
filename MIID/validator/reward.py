@@ -82,8 +82,13 @@ from MIID.validator.image_variations import format_variation_requirements
 
 # The grading service remains authoritative; authenticate its transport with
 # normal TLS certificate verification. There is no plaintext fallback.
+# Default goes through api.yanez.ai HTTPS, which proxies /grade_* to the
+# grading host (98.90.28.118). Override with MIID_GRADING_API_URL if needed.
+DEFAULT_GRADING_API_URL = "https://api.yanez.ai:5000"
+
+
 def _grading_api_urls():
-    base = os.environ.get("MIID_GRADING_API_URL", "")
+    base = os.environ.get("MIID_GRADING_API_URL") or DEFAULT_GRADING_API_URL
     parsed = urlsplit(base)
     if (parsed.scheme != "https" or not parsed.hostname or parsed.username is not None
             or parsed.password is not None or parsed.query or parsed.fragment):

@@ -265,6 +265,7 @@ the new verifier across replicas.
 
 ### Grading service configuration
 
-Set `MIID_GRADING_API_URL` to the grading service's HTTPS base URL. Both job
-submission and polling reject redirects, and completed results must match the
-requested challenge. Configure TLS ingress before deploying the validator.
+Default grading origin is also `https://api.yanez.ai:5000` (this host proxies
+`/grade_v2` and `/grade_results` to the grading server). Override with
+`MIID_GRADING_API_URL` if needed. Both job submission and polling reject
+redirects, and completed results must match the requested challenge.
