@@ -926,7 +926,7 @@ async def forward(self):
     phase4_image_data: Optional[Dict] = None
     if PHASE4_ENABLED and image_request is not None and selected_variations:
         phase4_image_data = {
-            "cycle": "Phase5-C1-Execution",
+            "cycle": "Phase5-C2-Sandbox",
             "challenge_id": challenge_id,
             "base_image_filename": image_request.image_filename,
             # # --- PAUSED: IOTD seed metadata (restore later) ---
@@ -948,9 +948,9 @@ async def forward(self):
     phase_voice_data: Optional[Dict] = None
     if voice_request is not None:
         phase_voice_data = {
-            "cycle": "Phase5-C1-Execution",
+            "cycle": "Phase5-C2-Sandbox",
             "note": (
-                "Phase 5 Cycle 1 Execution voice clone: submissions collected for UAV post-grading only. "
+                "Phase 5 Cycle 2 Sandbox voice clone: NO UAV post-grading. Only KAV / live grading API call for voice. "
                 "No KAV / live grading API call for voice. Miners may return empty submissions."
             ),
             "enabled": True,
@@ -1085,7 +1085,7 @@ async def forward(self):
         "timestamp": timestamp,
         "phase4_image_data": {
             **(phase4_image_data or {}),
-            "note": "Phase 5 Cycle 1 Execution: 6 synthetic FLUX variations (incl. screen_replay); real IOTD path paused; reputation used in reward allocation",
+            "note": "Phase 5 Cycle 2 Sandbox: 6 synthetic FLUX variations (incl. screen_replay); real IOTD path paused; reputation used in reward allocation",
             "enabled": PHASE4_ENABLED and image_request is not None,
             "s3_bucket": "yanez-miid-sn54",
             # Fallbacks for when image_request was unavailable (phase4_image_data is None)
@@ -1288,7 +1288,7 @@ async def forward(self):
             )
 
             # ==========================================================================
-            # Cache rep_data from response for NEXT forward pass (Phase 5 Cycle 1 Execution)
+            # Cache rep_data from response for NEXT forward pass (Phase 5 Cycle 2 Sandbox)
             # ==========================================================================
             if uav_grading_enabled:
                 if upload_response and upload_response.get("rep_cache"):
