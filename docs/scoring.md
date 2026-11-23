@@ -1,147 +1,108 @@
 # Cycle Scoring — KAV, UAV & Rewards
 
-This document explains how miner scoring and emissions work on the Yanez subnet (Subnet 54): the **Sandbox / Execution** cycle structure, **KAV vs UAV**, and how **Phase 5 Cycle 1 Execution** builds UAV prediction scores from face variations, screen replays, and voice — including the point totals and primary grade bands reviewers use.
+**Goal for Phase 5 Cycle 2:** find vulnerabilities in **deepfake detection** and **passive liveness**, and break them, so those models can be improved.
+
+Face variations are aimed at deepfake detection. Screen replay is aimed at passive liveness. Face grade (`POST /face_grade`) and Screen replay grade (`POST /screen_replay_grade`) tell a miner whether the image broke and what the grade is.
+
+The live validator grade is `POST /grade_v3`. What you send and what comes back is the same shape as `/grade_v2`: one random face slot, then a validation score and an identity score. The score and the comment inside that result are the new rubric on this page. Screen replay is stored with the round and is not part of that live sample.
+
+**This section is Sandbox** (Nov 19, 2026 onward; Phase 5 started Sep 24, 2026). Sandbox does **not** collect UAV. Rewards are **KAV only**. Reviewers can still finish UAV from the previous cycle. The mix below is how UAV is scored once it is collected.
 
 ---
 
-## Current cycle: Phase 5, Cycle 1 — Execution
+## Current cycle: Phase 5, Cycle 2 — Sandbox
 
-**Status:** Phase 5, Cycle 1 is in the **Execution** section (Oct 19 – Nov 19, 2026).
-
-### What we’re looking for this round
-
-The main focus this round is **voice**. UAV prediction scoring for this cycle is split evenly:
-
-| Component | Share of final UAV score | Notes |
-|-----------|--------------------------|--------|
-| **Voice clones** | **50%** | Primary focus — identity preservation + spoken-word match |
-| **Face UAV** | **50%** | Split evenly inside face: **50%** variation edits + **50%** screen replay (~25% + ~25% of final UAV) |
-
-Live **KAV** continues to grade face image submissions online (as in previous cycles). Voice is collected for **UAV post-grading only** — it does not receive a live KAV grade.
-
-Finalized UAV rewards from the previous cycle (Phase 4, Cycle 5) are distributed during this Execution section, while UAV prediction scores accumulate for Phase 5, Cycle 1.
+Live **KAV** grades one sampled face image each round. Voice and screen replay are stored with the round. They are not part of the Sandbox reward.
 
 ---
 
-## How UAV prediction scoring works (this cycle)
+## What a round asks for
 
-UAV scores are built from **manual / post-validation review**, not from the live KAV grading API. Reviewers score submissions, apply a **delta** against the live prediction, and fold the result into your UAV reputation (age factors may also apply).
+| Piece | Count | Share of UAV |
+|-------|------:|-------------:|
+| Face variations | 5 | **50%** (10% each) |
+| Screen replay | 1 | **25%** |
+| Voice clips | 5 | **25%** (one average) |
 
-### Point totals
+Face types, always: `background_in`, `background_out`, `lighting_edit+expression_edit`, `lighting_edit+pose_edit`, `pose_edit+expression_edit`.
 
-| Block | Points | Notes |
-|-------|--------|--------|
-| **Face variations** (5 images) | **Out of 25** | Up to **5 points** each |
-| **Screen replay** (1 image) | **Out of 6** | Up to **6 points** |
-| **Voice** (1 clip) | **Out of 5** | Up to **5 points** |
+Voice types, always: `neutral`, `surprised`, `excited`, `angry`, `whisper`. Each clip also gets a random background-noise level: `none`, `light`, or `high`. The emotion is not scaled. Every clip speaks the same challenge text.
 
-### Pipeline
+Screen replay is one image aimed at Passive Liveness v3, with the named device and the requested cues.
+
+---
+
+## How the UAV score is built
+
+Faces are no longer averaged into one number. Each face keeps its own score and its own delta, so one image that breaks Deepfake V1 is not lost in the other four.
 
 ```
-face_variations  → out of 25  → apply delta → face_var'
-screen_replay    → out of 6   → apply delta → screen'
-face_UAV         ← average( face_var' , screen' )
-
-voice            → out of 5   → apply delta → voice_UAV
-
-final_UAV        ≈ average( face_UAV , voice_UAV )
-                   (* age and other factors)
+each face        → score 0–5 → that slot's delta → 10% of UAV
+screen replay    → score 0–5 → one delta         → 25% of UAV
+five voice clips → average   → one delta         → 25% of UAV
 ```
 
-Face UAV is **50%** of final UAV (half variations / half screen ≈ 25% + 25%). Voice is the other **50%**.
+A face or a screen replay scores **5** only when the detector breaks and the ask was met (identity held, the edit or the device and cues are there). If the detector holds, that score stops at **3**.
 
-New miners with no reputation snapshot receive **KAV only** until they build UAV through validated submissions.
+Voice has no gate. Each clip is scored out of 5 (tokens match the prompt, SpeechBrain similarity at least 0.6, and the named style is what you hear). The five scores are averaged, rounded half up, and that one number is looked up in the delta table.
+
+### Delta
+
+| Score | When | Δrep |
+|------:|------|-----:|
+| +5 | Breaks the detector, and the ask was met | +0.10 |
+| +4 | Breaks, but the edit or the match is only near perfect | +0.04 |
+| +3 | Best score if the detector holds | +0.03 |
+| +2 | Okay | +0.02 |
+| +1 | Decent | +0.01 |
+| 0 | Unclear | 0.00 |
+| −1 | Partial spam | −0.05 |
+| −2 | Misleading | −0.08 |
+| −3 | Duplicate | −0.10 |
+| −4 | Not enough info | −0.25 |
+| −5 | Cheat | −0.50 |
+
+Nothing scores 6. The old +0.15 row is unused.
+
+### Voice background noise
+
+Picked at random per clip, the same way a face variation gets an intensity (`light`, `medium`, or `far`).
+
+| Level | What you hear |
+|-------|----------------|
+| `none` | No background noise |
+| `light` | Light background noise, speech still easy to hear |
+| `high` | High background noise, speech still intelligible |
 
 ---
 
-## Grade bands
+## Preview your score
 
-Primary bands reviewers use. Cases outside these bands (failed identity, missing cues, wrong device, empty/corrupt audio, etc.) are scored below the partial band or rejected.
+Two calls, both at `https://api.yanez.ai:5000`. The response is `breaks`, a `score` from -5 to 5, and a `comment`.
 
-### Face variations — out of 25
+| What you want | Run | Send |
+|---------------|-----|------|
+| Did it break? | `miner_api/miner_api.py` | The picture only |
+| Exact grade | `miner_api/exact_grade.py` | The picture, the seed, and the prompt |
 
-Five images. Each can earn **up to 5 points**. Sum them for a total **out of 25**.
+| Call | Detector | Exact-grade prompt |
+|------|----------|--------------------|
+| `POST /face_grade` | Deepfake | Variation type and intensity |
+| `POST /screen_replay_grade` | Passive Liveness | The cues the challenge asked for |
 
-Scored on how well the requested variation was applied and how well **identity** is preserved.
-
-Covers the non–screen-replay slots (`background_in` / `background_out`, combined lighting / expression / pose edits, and any forced-query mix):
-
-| Variation | What it changes |
-|-----------|-----------------|
-| `background_in` | Indoor background swap |
-| `background_out` | Outdoor background swap |
-| `lighting_edit+expression_edit` | Lighting and expression together |
-| `lighting_edit+pose_edit` | Lighting and pose together |
-| `pose_edit+expression_edit` | Pose and expression together |
-
-**Checklist (per image):**
-
-- [ ] **Identity** is preserved relative to the seed
-- [ ] The **prompted edit** was actually applied (right type / intensity, no extra unintended changes that break the ask)
-
-> Five images × 5 = **25** max. That score out of 25, then delta, is **half** of face UAV.
-
-### Screen replay — out of 6
-
-One image. **Up to 6 points**. Screen replay is the other **half** of face UAV on its own.
-
-Must be a face shown on a device screen (as requested), with the named device and required visual cues, and identity preserved vs the seed.
-
-| Points | Breaks PL v3 (`/is_live`)? | Cues present? | Device correct? | Identity preserved? |
-|-------:|:--------------------------:|:-------------:|:---------------:|:-------------------:|
-| **6** | Yes | Yes | Yes | Yes |
-| **3** | No | Yes | Yes | Yes |
-
-**Checklist (all required for 6 or 3):**
-
-- [ ] Visual **cues** we asked for are clearly present
-- [ ] **Device** matches what was requested
-- [ ] **Identity** is preserved relative to the seed
-- [ ] Then: did it **break Passive Liveness v3**?
-  - Yes → **6 points**
-  - No → **3 points** (half)
-
-> Breaking PL v3 is what separates full points from half. Cues, device, and identity alone are not enough for 6.
-
-### Voice — out of 5
-
-One clip. **Up to 5 points**. Based on speaker identity vs the reference (SpeechBrain) and spoken-token match to the prompt.
-
-| Points | Token match | Identity (SpeechBrain) |
-|-------:|-------------|------------------------|
-| **5** | Spoken tokens **match** the prompt tokens | Similarity **≥ 0.6** |
-| **3** | A **couple** of tokens mismatched | Identity still **preserved** |
-
-**Checklist:**
-
-- [ ] Clip speaks the challenge text (language `en` or `es`, including hotkey bookends when present)
-- [ ] Speaker still matches the reference voice
-- [ ] Then:
-  - Tokens match **and** SpeechBrain ≥ **0.6** → **5 points**
-  - A couple of tokens off, but identity still held → **3 points**
+Client and request shape: [miner_api/api_white_paper.md](../miner_api/api_white_paper.md).
 
 ---
 
 ## Emission breakdown
 
-> **Announcement — burn removed; miner rewards slightly up.**
-> We are changing the subnet emission cut from **18% owner / 41% validator / 41% miner** to **18% owner / 49% validator / 33% miner**, and at the same time removing burn from the weight split (see below). This does **not** cut data-generation miner rewards — overall they rise slightly. The point of the change is lowering our burn rate.
->
-> | | Old | New |
-> |-|-----|-----|
-> | Subnet cut (miner share of total emissions) | 41% | 33% |
-> | Weight to data-gen miners | 35% of miner emissions | 50% of miner emissions |
-> | Effective data-gen take of **total** emissions | 41% × 35% ≈ **14.35%** | 33% × 50% = **16.5%** |
->
-> Same story for the dual-incentive partner pool (also 14.35% → 16.5% of total). Former burn (~12.3% of total) goes to zero.
-
 Normal weight split (what validators set on-chain):
 
 | Destination | Share | Notes |
 |-------------|-------|--------|
-| Data-generation miners (KAV + UAV) | **~50%** | Up from ~35%; burn removed |
+| Data-generation miners (KAV + UAV) | **~50%** | Burn removed |
 | Dual-incentive / partner pool | **~50%** | Partner hotkey (UID **14** on mainnet) |
-| Burn | **~0%** | Removed (burn UID only as fallback / unused KAV) |
+| Burn | **~0%** | Burn UID only as fallback / unused KAV |
 
 Within the **50% miner share**:
 
@@ -150,71 +111,40 @@ Within the **50% miner share**:
 | **KAV** (live image quality) | **10%** | **~5%** |
 | **UAV** (reputation / post-validation) | **90%** | **~45%** |
 
-So the majority of miner rewards still come from **UAV**, not from live KAV.
+With the defaults shipped in this repo, most of the miner share still comes from the **existing reputation cache**, not from this round's new voice or screen-replay files.
 
-If unused UAV weight has nowhere to go during Sandbox (scores depleted / not yet accumulating), that unused UAV share can be **rerouted to the dual-incentive partner** instead of being burned — which can temporarily make partner / dual-incentive share look larger until Execution restores the normal mix. If the partner hotkey is absent from the metagraph, the 50% partner fraction falls back to the burn UID.
+If the reputation cache is empty, that UAV share is rerouted to the dual-incentive partner. If the partner hotkey is absent from the metagraph, the 50% partner fraction falls back to the burn UID.
 
 ---
 
 ## KAV vs UAV
 
-| | **KAV** (Known Attack Vector) | **UAV** (Unknown Attack Vector) |
-|---|-------------------------------|----------------------------------|
+| | **KAV** | **UAV** |
+|---|---------|---------|
 | **What it is** | Live, per-round image quality score | Reputation from post-validation |
 | **When paid** | Continuously on-chain during the cycle | Finalized after review; paid especially in **Execution** |
-| **What is graded** | Face image variations (grading API) | Face + screen replay + voice (manual / policy review) |
+| **What is graded** | One sampled face image (`/grade_v3`, same shape as `/grade_v2`) | Each face, the screen replay, and the voice average |
 | **Weight** | 10% of miner share | 90% of miner share |
-| **Nature** | Provisional prediction of post-validation | Settled ground truth for reputation |
 
-Live KAV is a **prediction** of what post-validation will confirm. UAV is where scores are finalized and where most rewards land.
+Live KAV grades **one** of the five face-variation slots, chosen at random that round, via `/grade_v3`. The request and the result match `/grade_v2`. The score and comment use the new rubric above. Identity preservation is still the tiebreaker and a gate (**≥ 0.6** among the top 50). Screen replay and voice are not part of live KAV.
 
-### How live KAV works (validator / `reward.py`)
-
-Miners still submit all five face variations, one screen replay, and a voice clip — but **live KAV only grades images**, and only **one** of the five face-variation slots, chosen at random that round.
-
-1. That single sampled variation is graded live via `/grade_v2` (validation score + how well **identity** was preserved).
-2. Ranking is driven mainly by that validation score; identity preservation is the tiebreaker and a gate (**≥ 0.6** among the top 50).
-3. Qualified miners get a blended exponential-decay reward; everyone else gets **0** KAV for the round.
-
-Screen replay and voice are **not** part of live KAV — they feed UAV post-grading instead.
-
-### How UAV feeds on-chain weights
-
-When UAV grading is enabled, the validator combines:
-
-- `kav_weight × Q` (online quality)
-- `uav_weight × (normalized_rep_score × tier_multiplier)`
-
-then rescales so the miner pool hits the configured KAV/UAV targets after partner allocation (and any residual burn). Unqueried miners (not sampled for that round’s KAV challenge) can still receive **UAV-only** rewards from their reputation snapshot; new miners not in the snapshot get **KAV only**.
+When UAV grading is enabled, the validator combines `kav_weight × Q` with `uav_weight × (normalized_rep_score × tier_multiplier)`, then rescales so the miner pool hits the configured targets. Unqueried miners can still receive UAV-only rewards from their reputation snapshot. New miners not in the snapshot get KAV only.
 
 ---
 
-## Cycle structure: Sandbox and Execution
+## Sandbox and Execution
 
-Every cycle has two sections: **Sandbox** and **Execution**. Rewards are always conceptually split into **KAV** and **UAV**, but **what gets paid when** differs by section.
+### Sandbox (this section)
 
-### Sandbox
-
-- Miners **experiment** — try new variation types, voice, liveness attacks, etc., and figure out the problem.
-- There is **no UAV** for the current cycle: prediction scores do **not** increase, and no new UAV rewards accumulate or pay out.
-- Reviewers use this time to **finalize grades for the previous cycle** (settling that cycle’s UAV).
-- Live **KAV** may still run, but Sandbox is practice / calibration — not the UAV payout window.
+- Miners try to break deepfake detection and passive liveness, and try the five voice styles and noise levels.
+- Rewards are **KAV only**. UAV for this cycle is not collected, and prediction scores do not increase.
+- Reviewers use this time to finish grades from the previous cycle.
 
 ### Execution
 
-- **Finalized UAV** from the previous cycle is distributed.
-- **UAV prediction scores begin accumulating** for the **current** cycle (face + voice review pipeline above).
-- Live **KAV** continues as usual.
-- Emission mix returns toward the normal **50% miners / 50% dual incentive / 0% burn** picture once UAV is paying again alongside KAV.
-
-### Example (Phase 5, Cycle 1)
-
-| Section | What happens |
-|---------|----------------|
-| **Sandbox** | Experiment / calibrate; no current-cycle UAV; reviewers finalize **Phase 4 Cycle 5** UAV grades |
-| **Execution** (current) | Pay finalized **P4C5 UAV**; accumulate **P5C1** UAV prediction scores (voice 50% + face/screen 50%); KAV continues live |
-
-Sandbox is for figuring things out. Execution is when current-cycle UAV prediction builds and previous-cycle UAV pays.
+- Finalized UAV from the previous cycle is distributed.
+- UAV prediction for the current cycle accumulates.
+- Live KAV continues.
 
 ---
 
@@ -224,39 +154,47 @@ Sandbox is for figuring things out. Execution is when current-cycle UAV predicti
 Emissions (weights)
 ├── ~50% data-generation miners
 │     ├── 10% KAV  → ~5% of total  (live image grading each round)
-│     └── 90% UAV  → ~45% of total (post-validation reputation; most of miner rewards)
+│     └── 90% UAV  → ~45% of total (post-validation reputation; not collected in Sandbox)
 ├── ~50% dual-incentive / partner pool (UID 14)
-└── ~0% burn (removed)
+└── ~0% burn
 
-Point totals
-├── Face variations  → out of 25  (5 images × up to 5 points each)
-├── Screen replay    → out of 6   (1 image × up to 6 points)
-└── Voice            → out of 5   (up to 5 points)
+Sandbox (now)
+└── KAV only
+      └── one sampled face image via /grade_v3
+            same result shape as /grade_v2
+            score and comment use the new rubric
+            identity gate ≥ 0.6 among the top 50
 
-This cycle UAV prediction (P5C1 Execution)
-├── 50% face UAV
-│     ├── 50% → face variations (out of 25) → apply delta
-│     │     └── up to 5 pts/image on variation quality + identity preserved
-│     ├── 50% → screen replay (out of 6) → apply delta
-│     │     ├── 6 pts if breaks PL v3 + correct cues + correct device + identity
-│     │     └── 3 pts if does NOT break PL v3 + correct cues + correct device + identity
-│     └── face UAV ← average( face_var , screen )
-│           (≈ 25% + 25% of final UAV)
-└── 50% voice UAV
-      ├── voice (out of 5) → apply delta
-      │     ├── 5 pts if tokens match prompt + SpeechBrain identity ≥ 0.6
-      │     └── 3 pts if a couple of token mismatches + identity still preserved
-      └── voice UAV prediction
+UAV mix (scored once UAV is collected)
+├── 50% faces — five slots, each with its own delta
+│     ├── 10% background_in
+│     ├── 10% background_out
+│     ├── 10% lighting + expression
+│     ├── 10% lighting + pose
+│     └── 10% pose + expression
+│           score 0–5
+│           5 only if Deepfake breaks, identity held, and the edit is there
+│           otherwise at most 3
+├── 25% screen replay → one delta
+│     └── score 0–5
+│           5 only if Passive Liveness breaks (device, cues, identity)
+│           otherwise at most 3
+└── 25% voice → average the five clips, round half up, one delta
+      ├── neutral, surprised, excited, angry, whisper
+      ├── each clip: random noise none / light / high
+      └── each clip out of 5 (tokens, SpeechBrain ≥ 0.6, named style)
+            no break gate
 
-final_UAV ≈ average(face_UAV, voice_UAV)
-            (* age and other factors)
+Goal
+├── Face variations  → break deepfake detection
+└── Screen replay    → break passive liveness
 ```
 
 ---
 
 ## Related docs
 
-- [Miner guide](miner.md) — setup, variation types, voice clone challenge
-- [Validator guide](validator.md) — how validators query and set weights
-- Miner API: `POST /is_live` (PL v3), `POST /is_ai` (deepfake / face)
-- Implementation: `MIID/validator/reward.py` (`get_image_variation_rewards`, `apply_reputation_rewards`)
+- [Miner guide](miner.md)
+- [Validator guide](validator.md)
+- [Example score sheet](uav-score.html)
+- Implementation: `MIID/validator/reward.py`, `MIID/validator/voice_variations.py`, `MIID/validator/forward.py`

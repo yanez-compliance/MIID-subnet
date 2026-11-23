@@ -27,10 +27,15 @@ def generate_voice_clone(
     target_words: List[str],
     language: str,
     target_text: str = "",
+    variation_type: str = "",
+    noise: str = "",
+    variation_detail: str = "",
 ) -> Optional[bytes]:
     """Generate a voice-cloned WAV speaking the target prompt.
 
-    Replace this stub with your TTS / voice-clone model.
+    Replace this stub with your TTS / voice-clone model. A round asks for
+    five clips. Each call is one clip: same speaker and same words, with the
+    style and background-noise level in variation_detail.
 
     Args:
         base_wav_bytes: Reference speaker WAV bytes from the validator.
@@ -38,14 +43,20 @@ def generate_voice_clone(
         language: ``"en"`` or ``"es"``.
         target_text: Ready-to-speak prompt string (preferred for TTS).
             Falls back to ``" ".join(target_words)`` if empty.
+        variation_type: ``neutral``, ``surprised``, ``excited``, ``angry``,
+            or ``whisper``.
+        noise: ``none``, ``light``, or ``high``.
+        variation_detail: Style prompt plus noise prompt for this clip.
 
     Returns:
         Generated WAV bytes, or None if generation failed.
     """
-    prompt = (target_text or " ".join(target_words or [])).strip()
+    spoken = (target_text or " ".join(target_words or [])).strip()
+    prompt = f"{variation_detail} Speak: {spoken}".strip() if variation_detail else spoken
     bt.logging.info(
         "Voice: generate_voice_clone not implemented — no voice submission "
-        f"(lang={language}, prompt={prompt!r}). "
+        f"(type={variation_type or 'voice'}, noise={noise or 'n/a'}, "
+        f"lang={language}, prompt={prompt!r}). "
         "Implement this function to submit voice clones."
     )
     return None

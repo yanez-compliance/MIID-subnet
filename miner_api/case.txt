@@ -1,0 +1,48 @@
+# Exact grade. This file is for exact_grade.py.
+#
+# You need the picture, the seed, and the prompt.
+#   Face prompt:   variation type and intensity.
+#   Screen prompt: the cues the challenge asked for.
+#
+# Fill this in, then:  python exact_grade.py
+# Leave it blank and the script will ask.
+#
+# To only check if a picture breaks a detector, run miner_api.py.
+# That one does not use this file.
+#
+# Wallet name and hotkey stay at the top of exact_grade.py.
+# Put the picture you made in variation/. Put the original face in seed/.
+# A file name is enough: image = gamma
+#
+# Or skip this file and the questions:
+#   python exact_grade.py --face gamma --seed original --type 2 --intensity medium
+#   python exact_grade.py --screen replay --seed original --cue1 --cue2
+
+# face    or    screen
+grade =
+
+# The picture you made, in variation/. The name is enough: gamma
+image =
+
+# The original seed face, in seed/. The name is enough: original
+seed =
+
+# --- Face prompt. Leave these blank for a screen replay. ---
+#   1  background_in                     indoor background
+#   2  background_out                    outdoor background
+#   3  lighting_edit+expression_edit     lighting and expression
+#   4  lighting_edit+pose_edit           lighting and pose
+#   5  pose_edit+expression_edit         pose and expression
+variation_type =
+
+# How far the edit goes. One of:  light    medium    far
+intensity =
+
+# --- Screen prompt. Leave this blank for a face. ---
+# The cues the challenge said should be visible. Commas between them.
+#   1  moire_pixel_grid
+#   2  screen_glare_hotspots
+#   3  perspective_keystone_distortion
+#   4  gamma_contrast_shift
+#   5  edge_crop_cues
+cues =
