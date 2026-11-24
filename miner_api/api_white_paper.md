@@ -4,20 +4,24 @@
 
 The goal is to **break the detectors**.
 
-- **Face grade** — break **deepfake detection** (Deepfake V1).
-- **Screen replay grade** — break **passive liveness** (Passive Liveness v3).
+- **Face** — break **deepfake detection** (Deepfake V1).
+- **Screen** — break **passive liveness** (Passive Liveness v3).
 
-Miners can do either of two things. Both use the same two calls, and both
-return whether it **broke**, a **score from -5 to 5**, and a short **comment**.
+Four calls. `is_ai` and `is_screen` send the picture only. `grade face` and
+`grade screen` also send the seed and the prompt. All four return whether it
+**broke**, a **score from -5 to 5**, and a short **comment**.
 
-1. **Break check** — `python miner_api.py`. Send the picture only. Pick face
-   to see if deepfake detection breaks, or screen to see if passive liveness
-   breaks. No seed. No prompt.
-2. **Exact grade** — `python exact_grade.py`. Say whether it is a face
-   variation or a screen replay, and send the seed plus the prompt. The face
-   prompt is the variation type and the intensity. The screen prompt is the
-   cues the challenge asked for. Fill in `case.txt`, or leave it blank and
-   answer the questions.
+| Call | What it answers | Endpoint | You send | Run |
+| ---- | --------------- | -------- | -------- | --- |
+| **is_ai** | Did this picture break deepfake detection? | `POST /face_grade` | The picture | `python miner_api.py --face` |
+| **is_screen** | Did this picture break passive liveness? | `POST /screen_replay_grade` | The picture | `python miner_api.py --screen` |
+| **grade face** | The exact face grade | `POST /face_grade` | Picture, seed, variation type, intensity | `python exact_grade.py --face` |
+| **grade screen** | The exact screen grade | `POST /screen_replay_grade` | Picture, seed, and the cues | `python exact_grade.py --screen` |
+
+`is_ai` and `is_screen` are the break check. No seed. No prompt. `grade face`
+and `grade screen` are the exact grade. The face prompt is the variation type
+and the intensity. The screen prompt is the cues the challenge asked for.
+Fill in `case.txt`, or leave it blank and answer the questions.
 
 Per-cue metrics, fusion logic, and device classification are not exposed.
 
