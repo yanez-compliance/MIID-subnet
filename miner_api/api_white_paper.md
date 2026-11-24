@@ -1,15 +1,29 @@
-# Passive Liveness (PL) API Documentation
+# Miner grade API
 
 ## Overview
 
-The Passive Liveness (PL) API provides **screen replay detection** for identity
-and liveness workflows. The system analyzes a submitted image and determines
-whether it is likely a photo of a screen (for example, a face shown on a phone,
-tablet, laptop, monitor, or TV) rather than a direct capture of a real person.
+The goal is to **break the detectors**.
 
-The PL API validates images through an internal detection pipeline and returns a
-pass/fail decision plus an overall confidence score. Per-cue metrics, fusion
-logic, and device classification are **not** exposed in API responses.
+- **Face** — break **deepfake detection** (Deepfake V1).
+- **Screen** — break **passive liveness** (Passive Liveness v3).
+
+Four calls. `is_ai` and `is_screen` send the picture only. `grade face` and
+`grade screen` also send the seed and the prompt. All four return whether it
+**broke**, a **score from -5 to 5**, and a short **comment**.
+
+| Call | What it answers | Endpoint | You send | Run |
+| ---- | --------------- | -------- | -------- | --- |
+| **is_ai** | Did this picture break deepfake detection? | `POST /face_grade` | The picture | `python miner_api.py --face` |
+| **is_screen** | Did this picture break passive liveness? | `POST /screen_replay_grade` | The picture | `python miner_api.py --screen` |
+| **grade face** | The exact face grade | `POST /face_grade` | Picture, seed, variation type, intensity | `python exact_grade.py --face` |
+| **grade screen** | The exact screen grade | `POST /screen_replay_grade` | Picture, seed, and the cues | `python exact_grade.py --screen` |
+
+`is_ai` and `is_screen` are the break check. No seed. No prompt. `grade face`
+and `grade screen` are the exact grade. The face prompt is the variation type
+and the intensity. The screen prompt is the cues the challenge asked for.
+Fill in `case.txt`, or leave it blank and answer the questions.
+
+Per-cue metrics, fusion logic, and device classification are not exposed.
 
 There is a rate limit because we do not want miners spamming the PL API. We want
 carefully thought-out Unknown Attack Vectors (UAVs) that can attack our system.
@@ -26,7 +40,7 @@ your hotkey identity.
 
 **Rate Limiting:**
 
-- One request per hotkey every **5 minutes (300 seconds)**
+- One request per hotkey every **1 minute (60 seconds)**
 - Rate limits are enforced per hotkey address
 - Use the `/rate-limit/status` endpoint to check your current status
 
@@ -36,20 +50,22 @@ the request is rejected with a `429` error.
 
 ## API Endpoints
 
-| Method | Endpoint              | Auth | Rate limited | Purpose                                         |
-| ------ | --------------------- | ---- | ------------ | ----------------------------------------------- |
-| POST   | `/is_live`            | Yes  | Yes          | Screen replay / liveness check                  |
-| POST   | `/is_ai`              | Yes  | Yes          | Face variations / AI-generated face detection   |
-| POST   | `/rate-limit/status`  | Yes  | No           | Check your rate limit status (no quota used)    |
-| GET    | `/health`             | No   | No           | Health check                                    |
+| Method | Endpoint                 | Auth | Rate limited | Purpose                                      |
+| ------ | ------------------------ | ---- | ------------ | -------------------------------------------- |
+| POST   | `/face_grade`            | Yes  | Yes          | Face grade. Goal: break deepfake detection.  |
+| POST   | `/screen_replay_grade`   | Yes  | Yes          | Screen replay grade. Goal: break passive liveness. |
+| POST   | `/rate-limit/status`     | Yes  | No           | Check your rate limit status (no quota used) |
+| GET    | `/health`                | No   | No           | Health check                                 |
 
-> **Migration note:** The old `/validate` endpoint has been replaced by
-> **`/is_live`**. It takes the same request payload and returns the same
-> response format.
+Base URL: `https://api.yanez.ai:5000`
 
-### 1. `POST /is_live`
+### 1. `POST /face_grade`
 
-Validate a single image for screen replay (liveness check).
+**Goal: break deepfake detection.**
+
+- Break check: send the picture.
+- Exact grade: also send the seed, `variation_type`, and `intensity`
+  (`light`, `medium`, or `far`).
 
 ```python
 import base64
@@ -61,9 +77,9 @@ import bittensor
 wallet_name = "miner"
 wallet_hotkey = "m"
 
-# Path to the image to validate
-image_path = "capture.png"
-api_url = "http://98.90.28.118:5001/is_live"
+# Break check: the picture is enough.
+image_path = "image/my_variation.png"
+api_url = "https://api.yanez.ai:5000/face_grade"
 
 
 def sign_message(wallet):
@@ -93,20 +109,35 @@ payload = {
     "signature": sign_message(wallet),
 }
 
+# Exact grade adds the seed and the face prompt:
+# payload["seed_image"] = encode_image("image/seed.png")
+# payload["variation_type"] = "background_out"
+# payload["intensity"] = "medium"
+
 # Send request
 response = requests.post(api_url, json=payload)
 print(response.status_code)
 print(response.json())
 ```
 
-### 2. `POST /is_ai`
+### 2. `POST /screen_replay_grade`
 
-The **BitMind** face-variations AI checker. Detects whether a submitted face
-image is AI-generated (synthetic) rather than a real capture. When a miner sends
-an image, they get back a **`true`/`false`** decision plus a **confidence score**
-indicating how likely the image is to be AI-generated.
+**Goal: break passive liveness.** A break check sends the picture. An exact
+grade also sends the seed and the cue prompt.
 
-Takes the same request payload as `/is_live` (see below).
+```json
+{
+  "image": "<base64 of the screen replay>",
+  "seed_image": "<base64 of the seed face>",
+  "cues": ["screen_glare_hotspots", "moire_pixel_grid"],
+  "signature": "<signed message>"
+}
+```
+
+Leave out `seed_image` and `cues` when you only want the break check.
+
+Cue names: `moire_pixel_grid`, `screen_glare_hotspots`,
+`perspective_keystone_distortion`, `gamma_contrast_shift`, `edge_crop_cues`.
 
 ### 3. `POST /rate-limit/status`
 
@@ -118,20 +149,27 @@ Check your current rate limit status **without** consuming your quota.
   "can_request": true,
   "last_request": 1735689600.0,
   "seconds_until_allowed": 0,
-  "rate_limit_seconds": 300
+  "rate_limit_seconds": 60
 }
 ```
 
 ## Request Format
 
-**Required Fields:**
+**Break check** needs:
 
 - `signature`: A signed message block from your hotkey.
-- `image`: Base64-encoded image bytes (PNG, JPEG, etc.). A
-  `data:image/png;base64,` prefix is optional and will be stripped
-  automatically.
+- `image`: Base64-encoded picture (PNG, JPEG, and so on). A
+  `data:image/png;base64,` prefix is optional and will be stripped.
 
-**Example Request:**
+**Exact grade** adds:
+
+- `seed_image`: Base64-encoded seed face.
+- Face prompt: `variation_type` (`background_in`, `background_out`,
+  `lighting_edit+expression_edit`, `lighting_edit+pose_edit`, or
+  `pose_edit+expression_edit`) and `intensity` (`light`, `medium`, or `far`).
+- Screen prompt: `cues`, the cue names the challenge asked for.
+
+**Break check:**
 
 ```json
 {
@@ -140,101 +178,111 @@ Check your current rate limit status **without** consuming your quota.
 }
 ```
 
+**Exact face grade:**
+
+```json
+{
+  "signature": "<Bytes>On 2025-01-01 CST My test message</Bytes>\n\tSigned by: YOUR_HOTKEY\n\tSignature: YOUR_SIGNATURE",
+  "image": "iVBORw0KGgoAAAANSUhEUgAA...",
+  "seed_image": "iVBORw0KGgoAAAANSUhEUgAA...",
+  "variation_type": "background_out",
+  "intensity": "medium"
+}
+```
+
 ## Response Format
 
-### `/is_live`
+Both `/face_grade` and `/screen_replay_grade` return the same fields.
 
-| Field                | Type    | Meaning                                                                                            |
-| -------------------- | ------- | ------------------------------------------------------------------------------------------------- |
-| `is_screen_replay`   | boolean | `true` if the image is classified as a likely screen replay; `false` otherwise. Use for pass/fail. |
-| `overall_confidence` | number  | Confidence score in `[0, 1]`. `0.0` when no screen replay is detected.                             |
+| Field     | Type    | Meaning                                                                 |
+| --------- | ------- | ----------------------------------------------------------------------- |
+| `breaks`  | boolean | `true` when the detector rejects the image. Face: deepfake. Screen: passive liveness. |
+| `score`   | number  | From **-5** to **5**.                                                   |
+| `comment` | string  | Why the image got that score.                                           |
 
-Example (screen replay detected):
+Example (face breaks deepfake detection):
 
 ```json
 {
-  "is_screen_replay": true,
-  "overall_confidence": 0.785
+  "breaks": true,
+  "score": 5,
+  "comment": "Deepfake detection rejects this image. Identity held and the requested edit is present."
 }
 ```
 
-Example (not a screen replay):
+Example (screen replay does not break passive liveness):
 
 ```json
 {
-  "is_screen_replay": false,
-  "overall_confidence": 0.0
-}
-```
-
-```json
-{
-  "is_screen_replay": true,
-  "overall_confidence": 0.0
-}
-```
-
-
-### `/is_ai`
-
-| Field                | Type    | Meaning                                                                             |
-| -------------------- | ------- | ----------------------------------------------------------------------------------- |
-| `is_ai`              | boolean | `true` if the image is detected as AI-generated (synthetic); `false` otherwise.      |
-| `overall_confidence` | number  | Confidence score in `[0, 1]` for how likely the image is to be AI-generated.         |
-
-Example (AI-generated detected):
-
-```json
-{
-  "is_ai": true,
-  "overall_confidence": 0.83
-}
-```
-
-Example (not AI-generated):
-
-```json
-{
-  "is_ai": false,
-  "overall_confidence": 0.12
+  "breaks": false,
+  "score": 3,
+  "comment": "Passive liveness still accepts this image. The asked-for cues are present and identity held."
 }
 ```
 
 ## Process Overview
 
-When you submit an image to the PL system, the following high-level process
-occurs:
-
-1. **Authentication** — Your request is authenticated using hotkey signature
-   verification.
-2. **Rate limiting** — Quota is checked (one call per hotkey every 5 minutes).
-3. **Image ingestion** — Base64 is decoded; the image is validated and converted
-   to RGB PNG.
-4. **Detection** — The image is analyzed by the internal detection pipeline
-   (screen-replay for `/is_live`, AI/face-variation for `/is_ai`).
-5. **Response** — You receive the decision flag and `overall_confidence` only.
+1. **Authentication** — Your request is authenticated using hotkey signature verification.
+2. **Rate limiting** — Quota is checked (one call per hotkey every 1 minute).
+3. **Image ingestion** — Base64 is decoded; the image is validated and converted to RGB PNG.
+4. **Grade** — Face grade checks deepfake detection. Screen replay grade checks passive liveness. A break check uses the picture. An exact grade also uses the seed and the prompt.
+5. **Response** — You receive `breaks`, `score` (from -5 to 5), and `comment`.
 
 ## Error Responses
 
 - **400 Bad Request:** Missing required fields or invalid request format.
 - **401 Unauthorized:** Signature verification failed.
 - **403 Forbidden:** Hotkey not authorized to use the API.
-- **429 Too Many Requests:** Rate limit exceeded (wait 5 minutes between requests).
+- **429 Too Many Requests:** Rate limit exceeded (wait 1 minute between requests).
 
 ---
 
-## Client Script: `miner_call_PL.py`
+## Two client scripts
 
-This repo includes a ready-to-use command-line client that handles signing,
-image loading, and endpoint selection for you.
+| You want | Run | You provide |
+| -------- | --- | ----------- |
+| Did this picture break deepfake, or passive liveness? | `python miner_api.py` | The picture |
+| The exact grade for a face variation or a screen replay | `python exact_grade.py` | The picture, the seed, and the prompt (`case.txt`) |
 
-### What it does
+Put the picture you made in `variation/`. Put the original face in `seed/`.
+`image/` has been renamed to `variation/`.
 
-1. Prompts you to choose a check: **`is_live`** or **`is_ai`**.
-2. Loads the first image found in the local `image/` folder.
-3. Signs a request message with your Bittensor wallet hotkey.
-4. Sends the base64-encoded image plus the signature to the selected endpoint.
-5. Prints the JSON response.
+`miner_api.py` asks which detector and which picture. If `variation/` has one
+picture, it uses that file. Skip the questions:
+
+```bash
+python miner_api.py --face gamma
+python miner_api.py --screen gamma
+```
+
+`exact_grade.py` reads `case.txt`. Fill it in and the script runs. Leave a
+line blank and it asks for that part, then saves the answers. One picture in
+`variation/` and one picture in `seed/` are picked automatically. Skip the
+questions:
+
+```bash
+python exact_grade.py --face gamma --seed original --type 2 --intensity medium
+python exact_grade.py --screen replay --seed original --cue1 --cue2
+```
+
+`--type 1` through `5` is the face variation. `--cue1` through `--cue5` are
+moiré, glare, perspective, gamma/contrast, and edge/crop.
+
+### What you fill in for the exact grade
+
+| Blank | Face variation | Screen replay |
+| ----- | -------------- | ------------- |
+| `grade` | `face` | `screen` |
+| `image` | The variation you made | The screen replay you made |
+| `seed` | The original seed face | The original seed face |
+| `variation_type` | The face prompt | leave blank |
+| `intensity` | `light`, `medium`, or `far` | leave blank |
+| `cues` | leave blank | The screen prompt |
+
+You can type the number from the comment in `case.txt` instead of the long name.
+`1` for a face is an indoor background. `1, 2` for cues is moiré and screen glare.
+
+Both scripts print whether it broke, the score from -5 to 5, and the comment.
 
 ### Requirements
 
@@ -248,52 +296,79 @@ pip install bittensor requests
 
 ### Configuration
 
-Edit these variables at the top of `miner_call_PL.py`:
+Edit these variables at the top of `miner_api.py` and again at the top of
+`exact_grade.py`. Each script has its own copy.
 
-| Variable        | Description                             | Default                    |
-| --------------- | --------------------------------------- | -------------------------- |
-| `wallet_name`   | Your Bittensor wallet (coldkey) name    | `"miner"`                  |
-| `wallet_hotkey` | Your hotkey name                        | `"m"`                      |
-| `api_base_url`  | Base URL of the API (no endpoint path)  | `http://98.90.28.118:5001` |
-| `image_dir`     | Folder scanned for the image to send    | `./image`                  |
+| Variable        | Description                             | Default                      |
+| --------------- | --------------------------------------- | ---------------------------- |
+| `wallet_name`   | Your Bittensor wallet (coldkey) name    | `"miner"`                    |
+| `wallet_hotkey` | Your hotkey name                        | `"m"`                        |
+| `api_base_url`  | Base URL of the API (no endpoint path)  | `https://api.yanez.ai:5000`  |
+| `variation_dir` | Folder for the picture you made         | `./variation`                |
+| `seed_dir`      | Folder for the original seed face. `exact_grade.py` only. | `./seed`     |
+| `case_path`     | Exact-grade fill-in file. `exact_grade.py` only. | `./case.txt`          |
 
-Supported image formats: `.png`, `.jpg`, `.jpeg`, `.webp`, `.bmp`. The **first**
-image (alphabetically) in `image_dir` is used.
+Supported image formats: `.png`, `.jpg`, `.jpeg`, `.webp`, `.bmp`.
 
 ### Usage
 
-1. Put one image in the `image/` folder next to the script:
+1. Put the picture you made in `variation/`. For an exact grade, put the seed in `seed/`.
 
 ```
-passive_liveness/
-├── miner_call_PL.py
-└── image/
-    └── my_photo.png
+miner_api/
+├── miner_api.py
+├── exact_grade.py
+├── case.txt
+├── variation/
+│   └── gamma.jpg
+└── seed/
+    └── original.png
 ```
 
-2. Run the script:
+2. Break check. One picture is enough. The name skips the question:
 
 ```bash
-python miner_call_PL.py
+python miner_api.py --face gamma
 ```
 
-3. When prompted, pick the check to run:
+3. Exact grade. A face in `case.txt` looks like this:
 
 ```
-Which check do you want to run?
-  1) is_live  - Screen replay / liveness check
-  2) is_ai    - Face variations / AI-generated face detection
-Enter 1 or 2 (or 'is_live'/'is_ai'):
+grade = face
+image = gamma
+seed = original
+variation_type = 2
+intensity = medium
+cues =
 ```
 
-You can type `1` / `2`, or the endpoint name (`is_live` / `is_ai`) directly.
+A screen replay looks like this:
+
+```
+grade = screen
+image = replay
+seed = original
+variation_type =
+intensity =
+cues = 1, 2
+```
+
+The same screen replay on the command line:
+
+```bash
+python exact_grade.py --screen replay --seed original --cue1 --cue2
+```
+
+If `case.txt` is blank and you pass no flags, `exact_grade.py` asks which kind
+of picture, which file is the variation, which file is the seed, and then the
+prompt. Your answers are written into `case.txt`.
 
 ### Troubleshooting
 
 | Symptom                             | Likely cause / fix                                            |
 | ----------------------------------- | ------------------------------------------------------------ |
-| `Image directory not found`         | Create the `image/` folder next to the script.               |
-| `No image found in ...`             | Add a supported image file to `image/`.                      |
+| `Could not find ... in variation/`  | Put the picture you made in `variation/`, or pass its name.  |
+| `Could not find ... in seed/`       | Put the original face in `seed/`.                            |
 | `401 Signature verification failed` | Wrong wallet/hotkey, or signature format mismatch.           |
 | `403 Unauthorized hotkey`           | Your hotkey is not on the API allow-list.                    |
 | `429 Rate limit exceeded`           | Wait for the indicated number of seconds before retrying.    |

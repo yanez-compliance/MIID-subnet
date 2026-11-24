@@ -25,12 +25,13 @@ KAV (Known Address Variation / online image quality score):
     image variations for quality, identity preservation, and variation
     compliance.
   - Async flow (avoids long-lived HTTP connections):
-      1. POST /grade_v2 — returns 200 + status "processing"; grading runs
-         in the background.
+      1. POST /grade_v3 — returns 200 + status "processing"; grading runs
+         in the background. Same request and result shape as /grade_v2.
+         The score and comment use the new face rubric.
       2. Poll /grade_results after 15 min, then 5 min later, then every 1 min.
          status "completed" returns the grade payload under "result";
          status "processing" means poll again.
-  - The /grade_v2 payload mirrors the format used by validator_api_test.py:
+  - The /grade_v3 payload mirrors the format used by validator_api_test.py:
       { "signature": <signed message>, "phase4_image_data": { ... } }
   - Miners are ranked by avg validation score (primary) and avg identity
     preservation (tiebreaker); top 50 with avg_identity_preservation >= 0.6
@@ -93,7 +94,7 @@ def _grading_api_urls():
     if (parsed.scheme != "https" or not parsed.hostname or parsed.username is not None
             or parsed.password is not None or parsed.query or parsed.fragment):
         raise ValueError("Set MIID_GRADING_API_URL to the HTTPS grading service base URL")
-    return base.rstrip("/") + "/grade_v2", base.rstrip("/") + "/grade_results"
+    return base.rstrip("/") + "/grade_v3", base.rstrip("/") + "/grade_results"
 
 
 # Submit: short timeout — server should ack immediately and grade in background.
@@ -119,10 +120,10 @@ def _submit_and_poll_grading_api(
     challenge_id: str,
 ) -> Dict[str, Any]:
     """
-    Submit a grading job to /grade_v2, then poll /grade_results until ready.
+    Submit a grading job to /grade_v3, then poll /grade_results until ready.
 
     Server contract:
-      POST /grade_v2        → 200 { "status": "processing" }
+      POST /grade_v3        → 200 { "status": "processing" }
       POST /grade_results   → 200 { "status": "processing" }
                             → 200 { "status": "completed", "result": { ... } }
 
@@ -136,7 +137,7 @@ def _submit_and_poll_grading_api(
     """
     submit_url, results_url = _grading_api_urls()
 
-    # ── 1. Submit to /grade_v2 (expect immediate 200 + status processing) ────
+    # ── 1. Submit to /grade_v3 (expect immediate 200 + status processing) ────
     last_submit_exc: Optional[Exception] = None
     for attempt in range(GRADING_RETRY_ATTEMPTS):
         try:
@@ -401,7 +402,7 @@ def get_image_variation_rewards(
     Compute KAV rewards for each miner based on their image variation submissions.
 
     Grading pipeline:
-    1. Sign and POST the challenge data to the external grading API /grade_v2
+    1. Sign and POST the challenge data to the external grading API /grade_v3
        (GRADING_API_URL).  Payload format mirrors validator_api_test.py:
            { "signature": <signed_message>, "phase4_image_data": { ... } }
        The server returns 200 + status "processing" immediately and grades

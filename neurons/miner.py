@@ -372,7 +372,8 @@ class Miner(BaseMinerNeuron):
             bt.logging.info(
                 f"Received voice request: file='{synapse.voice_request.voice_filename}', "
                 f"lang={synapse.voice_request.language}, "
-                f"text={synapse.voice_request.target_text!r}"
+                f"text={synapse.voice_request.target_text!r}, "
+                f"variations={len(synapse.voice_request.variation_requests or [])}"
             )
             if not VOICE_AVAILABLE:
                 bt.logging.info(
@@ -624,7 +625,7 @@ class Miner(BaseMinerNeuron):
             synapse: IdentitySynapse with voice_request
 
         Returns:
-            List of S3Submission objects (variation_type="voice")
+            List of S3Submission objects, one per requested voice variation.
         """
         voice_request = synapse.voice_request
         if not voice_request:
@@ -637,40 +638,14 @@ class Miner(BaseMinerNeuron):
             bt.logging.info(f"Voice: Decoding base voice: {voice_request.voice_filename}")
             base_wav = decode_base_voice(voice_request.base_voice)
 
-            generated_wav = generate_voice_clone(
-                base_wav_bytes=base_wav,
-                target_words=list(voice_request.target_words or []),
-                language=voice_request.language or "en",
-                target_text=getattr(voice_request, "target_text", "") or "",
-            )
-            if not generated_wav:
-                bt.logging.info(
-                    "Voice: generate_voice_clone returned None — no voice submission"
-                )
-                return []
+            variation_requests = list(voice_request.variation_requests or [])
+            if not variation_requests:
+                variation_requests = [None]
 
-            if not validate_voice_identity(base_wav, generated_wav, min_similarity=0.4):
-                bt.logging.warning("Voice: Skipping — speaker identity not preserved")
-                return []
-
-            voice_hash = hash_voice_bytes(generated_wav)
             challenge_id = voice_request.challenge_id or "sandbox_test"
             target_round = voice_request.target_drand_round
-
             path_message = f"{challenge_id}:{self.wallet.hotkey.ss58_address}"
             path_signature = self.wallet.hotkey.sign(path_message.encode()).hex()[:16]
-
-            message = f"challenge:{challenge_id}:hash:{voice_hash}"
-            signature = self.wallet.hotkey.sign(message.encode()).hex()
-
-            if is_timelock_available():
-                encrypted_data = encrypt_image_for_drand(generated_wav, target_round)
-                if encrypted_data is None:
-                    bt.logging.warning("Voice: Encryption failed")
-                    return []
-            else:
-                bt.logging.warning("Voice: Timelock not available, using raw bytes (SANDBOX ONLY)")
-                encrypted_data = generated_wav
 
             seed_name = voice_request.voice_filename
             for ext in (".wav", ".mp3", ".flac", ".ogg"):
@@ -678,32 +653,75 @@ class Miner(BaseMinerNeuron):
                     seed_name = seed_name[: -len(ext)]
                     break
 
-            s3_key = upload_to_s3(
-                encrypted_data=encrypted_data,
-                miner_hotkey=self.wallet.hotkey.ss58_address,
-                signature=signature,
-                image_hash=voice_hash,
-                target_round=target_round,
-                challenge_id=challenge_id,
-                variation_type="voice",
-                path_signature=path_signature,
-                seed_image_name=seed_name,
-                source_ext=".wav",
-            )
+            submissions = []
+            for variation in variation_requests:
+                variation_type = getattr(variation, "type", None) or "voice"
+                noise = getattr(variation, "noise", "") or ""
+                detail = getattr(variation, "detail", "") or ""
+                generated_wav = generate_voice_clone(
+                    base_wav_bytes=base_wav,
+                    target_words=list(voice_request.target_words or []),
+                    language=voice_request.language or "en",
+                    target_text=getattr(voice_request, "target_text", "") or "",
+                    variation_type=variation_type,
+                    noise=noise,
+                    variation_detail=detail,
+                )
+                if not generated_wav:
+                    bt.logging.info(
+                        f"Voice: generate_voice_clone returned None for {variation_type}"
+                    )
+                    continue
 
-            if not s3_key:
-                bt.logging.warning("Voice: S3 upload failed")
-                return []
+                if not validate_voice_identity(base_wav, generated_wav, min_similarity=0.4):
+                    bt.logging.warning(
+                        f"Voice: Skipping {variation_type} — speaker identity not preserved"
+                    )
+                    continue
 
-            submission = S3Submission(
-                s3_key=s3_key,
-                image_hash=voice_hash,
-                signature=signature,
-                variation_type="voice",
-                path_signature=path_signature,
-            )
-            bt.logging.info(f"Voice: Created submission s3_key={s3_key}")
-            return [submission]
+                voice_hash = hash_voice_bytes(generated_wav)
+                message = f"challenge:{challenge_id}:hash:{voice_hash}"
+                signature = self.wallet.hotkey.sign(message.encode()).hex()
+
+                if is_timelock_available():
+                    encrypted_data = encrypt_image_for_drand(generated_wav, target_round)
+                    if encrypted_data is None:
+                        bt.logging.warning(f"Voice: Encryption failed for {variation_type}")
+                        continue
+                else:
+                    bt.logging.warning(
+                        "Voice: Timelock not available, using raw bytes (SANDBOX ONLY)"
+                    )
+                    encrypted_data = generated_wav
+
+                s3_key = upload_to_s3(
+                    encrypted_data=encrypted_data,
+                    miner_hotkey=self.wallet.hotkey.ss58_address,
+                    signature=signature,
+                    image_hash=voice_hash,
+                    target_round=target_round,
+                    challenge_id=challenge_id,
+                    variation_type=variation_type,
+                    path_signature=path_signature,
+                    seed_image_name=seed_name,
+                    source_ext=".wav",
+                )
+                if not s3_key:
+                    bt.logging.warning(f"Voice: S3 upload failed for {variation_type}")
+                    continue
+
+                submissions.append(S3Submission(
+                    s3_key=s3_key,
+                    image_hash=voice_hash,
+                    signature=signature,
+                    variation_type=variation_type,
+                    path_signature=path_signature,
+                ))
+                bt.logging.info(
+                    f"Voice: Created {variation_type} submission s3_key={s3_key}"
+                )
+
+            return submissions
 
         except Exception as e:
             bt.logging.error(f"Voice: Error in process_voice_request: {e}")

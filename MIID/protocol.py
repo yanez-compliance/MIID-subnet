@@ -51,9 +51,9 @@ class ImageRequest(BaseModel):
 
     Live challenge: one base_image (per-round face) plus six synthetic FLUX
     VariationRequests — five face edits and one screen_replay (device named
-    + ≥2 visual cues in the variation text). Screen_replay is graded as a
-    KAV slot but the remote API ignores its score; miners should aim to
-    break Passive Liveness v3 (/is_live).
+    + ≥2 visual cues in the variation text). The live grade samples one face
+    slot and does not score screen_replay. Miners should still aim to break
+    Passive Liveness. Preview that image with POST /screen_replay_grade.
 
     # --- PAUSED: fixed IOTD seeds + real physical screen-replay ---
     # Uncomment the fields below (and matching validator/miner code) to
@@ -178,12 +178,28 @@ class S3Submission(BaseModel):
 # Voice Clone Challenge Types
 # =============================================================================
 
+class VoiceVariationRequest(BaseModel):
+    """One voice clip: a fixed style plus a random background-noise level.
+
+    The five types are always requested. Noise is none, light, or high.
+    description and detail are the prompt, same role as a face VariationRequest.
+    """
+    type: str
+    noise: str
+    description: str = ""
+    detail: str = ""
+
+    class Config:
+        arbitrary_types_allowed = True
+
+
 class VoiceRequest(BaseModel):
     """Voice clone request from validator to miner.
 
-    Contains a ~30s reference WAV (English or Spanish) and the text the miner
-    should speak in that speaker identity. Graded via UAV post-validation only
-    (no KAV). Miners may skip voice and return an empty voice_s3_submissions list.
+    Contains a ~30s reference WAV (English or Spanish), the text every clip
+    should speak, and five variation requests (style + noise). Graded via UAV
+    post-validation only (no KAV). Miners may skip voice and return an empty
+    voice_s3_submissions list.
     """
     base_voice: str              # Base64 encoded reference WAV (~30s)
     voice_filename: str          # Original filename for reference
@@ -191,6 +207,7 @@ class VoiceRequest(BaseModel):
     target_words: List[str] = Field(default_factory=list)  # Tokens to speak
     target_text: str = ""        # Same tokens joined for TTS, e.g. "three apple ..."
     reference_transcript: str = ""  # What the reference clip says (from API)
+    variation_requests: List[VoiceVariationRequest] = Field(default_factory=list)
     target_drand_round: int      # Drand round when decryption becomes possible
     reveal_timestamp: int        # Unix timestamp when reveal occurs
     challenge_id: Optional[str] = None  # Unique identifier for this challenge

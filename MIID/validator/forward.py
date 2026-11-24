@@ -30,7 +30,8 @@ Implements the forward function that drives each validation round:
    screen_replay (device named + ≥2 visual cues; aim to break PL v3).
 4. Send the request to miners in batches; collect S3 submission references.
 5. Grade submissions via the external grading API (KAV) using
-   get_image_variation_rewards() — remote API ignores screen_replay scores.
+   get_image_variation_rewards() — POST /grade_v3 (same shape as /grade_v2;
+   screen_replay stays out of the live sample).
 6. Combine KAV scores with reputation (UAV) via apply_reputation_rewards()
    — unqueried miners still receive UAV and are listed for reputation decay.
 7. Update miner weights and upload results to the MIID server.
@@ -50,7 +51,13 @@ from typing import List, Dict, Any, Optional
 from datetime import datetime
 from pathlib import Path
 
-from MIID.protocol import IdentitySynapse, ImageRequest, VariationRequest, VoiceRequest
+from MIID.protocol import (
+    IdentitySynapse,
+    ImageRequest,
+    VariationRequest,
+    VoiceRequest,
+    VoiceVariationRequest,
+)
 from MIID.validator.reward import get_image_variation_rewards, apply_reputation_rewards
 from MIID.utils.uids import get_random_uids
 from MIID.utils.validator_requests import MAX_ALLOCATION_BATCH
@@ -58,6 +65,7 @@ from MIID.utils.validator_requests import MAX_ALLOCATION_BATCH
 from MIID.validator.base_images import fetch_image_from_api
 from MIID.validator.base_voices import fetch_voice_from_api
 from MIID.validator.voice_words import generate, with_hotkey
+from MIID.validator.voice_variations import build_standard_voice_variations
 # # --- PAUSED: fixed IOTD / real screen-replay (restore later) ---
 # from MIID.validator.fixed_images import (
 #     ensure_daily_fixed_image,
@@ -272,7 +280,7 @@ def _filter_valid_commitment_submissions(
 #
 #     return {
 #         "requested": requested,
-#         "cycle": "Phase5-C1-Execution",
+#         "cycle": "Phase5-C2-Sandbox",
 #         "note": (
 #             "Real screen-replay is requested every round (physical capture, "
 #             "not a FLUX synthetic). Miners may upload as many non-duplicate "
@@ -412,8 +420,8 @@ async def forward(self):
     3.  Build ImageRequest with base face + 6 synthetic variations
         (indoor/outdoor bg, 3 combined edits, synthetic screen_replay).
     4.  Query miners in batches; collect S3 submission references.
-    5.  Compute KAV rewards via get_image_variation_rewards() (calls grading API;
-        remote API ignores screen_replay scores).
+    5.  Compute KAV rewards via get_image_variation_rewards() (POST /grade_v3;
+        same result shape as /grade_v2, screen_replay stays out of the sample).
     6.  Optionally combine with UAV via apply_reputation_rewards().
     7.  Update scores and set weights.
     8.  Upload results to the MIID server.
@@ -643,6 +651,16 @@ async def forward(self):
                 if challenge_id is None:
                     challenge_id = voice_challenge_id
 
+            selected_voice_variations = build_standard_voice_variations()
+            voice_variation_requests = [
+                VoiceVariationRequest(
+                    type=v["type"],
+                    noise=v["noise"],
+                    description=v["description"],
+                    detail=v["detail"],
+                )
+                for v in selected_voice_variations
+            ]
             voice_request = VoiceRequest(
                 base_voice=voice_b64,
                 voice_filename=voice_filename,
@@ -650,12 +668,17 @@ async def forward(self):
                 target_words=target_words,
                 target_text=karaoke.text,
                 reference_transcript=voice_transcript,
+                variation_requests=voice_variation_requests,
                 target_drand_round=voice_target_round,
                 reveal_timestamp=voice_reveal_timestamp,
                 challenge_id=voice_challenge_id,
             )
+            voice_summary = ", ".join(
+                f"{v['type']}({v['noise']})" for v in selected_voice_variations
+            )
             bt.logging.info(
                 f"Voice challenge: file='{voice_filename}', lang={voice_language}, "
+                f"variations=[{voice_summary}], "
                 f"base_tts_text='{karaoke.text}', "
                 f"(+ per-miner hotkey chars as individual tokens), "
                 f"drand round {voice_target_round}"
@@ -943,8 +966,8 @@ async def forward(self):
             "s3_submissions_by_miner": s3_submissions_by_miner_for_grading,
         }
 
-    # Voice payload for UAV post-grading only (never sent to KAV /grade_v2).
-    # Keep the full voice map (including invalid flags) for Flask audit.
+    # Voice clips are stored with the round. Sandbox does not score them.
+    # This section is KAV only: no UAV is collected.
     phase_voice_data: Optional[Dict] = None
     if voice_request is not None:
         phase_voice_data = {
@@ -963,6 +986,15 @@ async def forward(self):
             "karaoke": karaoke_payload,
             "per_miner_voice_targets": per_miner_voice_targets,
             "reference_transcript": voice_request.reference_transcript,
+            "requested_variations": [
+                {
+                    "type": v.type,
+                    "noise": v.noise,
+                    "description": v.description,
+                    "detail": v.detail,
+                }
+                for v in voice_request.variation_requests
+            ],
             "target_drand_round": voice_request.target_drand_round,
             "reveal_timestamp": voice_request.reveal_timestamp,
             "s3_bucket": "yanez-miid-sn54",
